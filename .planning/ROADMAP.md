@@ -37,7 +37,7 @@
 7. All navigation links are easily tappable (minimum touch target met)
 8. Vertical spacing prevents cramped feeling on small screens
 
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 - [x] 01-foundation-01-PLAN.md — Global CSS + Mobile Navigation
 - [x] 01-foundation-02-PLAN.md — Home Page Responsive Components
@@ -105,7 +105,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/2 | Complete | 01-foundation-01, 01-foundation-02 |
+| 1. Foundation | 2/2 | Complete    | 2026-03-10 |
 | 2. Content Pages | 0/TBD | Not started | - |
 | 3. Enquiry Form | 0/TBD | Not started | - |
 | 4. Resources + Testing | 0/TBD | Not started | - |
