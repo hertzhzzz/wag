@@ -9,7 +9,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** - Home page responsive + Global navigation
+- [x] **Phase 1: Foundation** - Home page responsive + Global navigation
 - [ ] **Phase 2: Content Pages** - Services + About pages responsive
 - [ ] **Phase 3: Enquiry Form** - Mobile-optimized contact form
 - [ ] **Phase 4: Resources + Testing** - Resources page + Full validation
@@ -39,8 +39,8 @@
 
 **Plans:** 2 plans
 
-- [ ] 01-foundation-01-PLAN.md — Global CSS + Mobile Navigation
-- [ ] 01-foundation-02-PLAN.md — Home Page Responsive Components
+- [x] 01-foundation-01-PLAN.md — Global CSS + Mobile Navigation
+- [x] 01-foundation-02-PLAN.md — Home Page Responsive Components
 
 ---
 
@@ -105,7 +105,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/2 | In progress | 01-foundation-01 |
+| 1. Foundation | 2/2 | Complete | 01-foundation-01, 01-foundation-02 |
 | 2. Content Pages | 0/TBD | Not started | - |
 | 3. Enquiry Form | 0/TBD | Not started | - |
 | 4. Resources + Testing | 0/TBD | Not started | - |

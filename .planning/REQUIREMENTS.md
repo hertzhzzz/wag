@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Responsive Layout
 
-- [ ] **RESP-01**: Home page adapts to mobile screens (320px to 1920px+)
+- [x] **RESP-01**: Home page adapts to mobile screens (320px to 1920px+)
 - [ ] **RESP-02**: Services page adapts to mobile screens
 - [ ] **RESP-03**: About page adapts to mobile screens
 - [ ] **RESP-04**: Enquiry form page adapts to mobile screens
@@ -41,7 +41,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Spacing
 
-- [ ] **SPACE-01**: Adequate vertical spacing on mobile layouts
+- [x] **SPACE-01**: Adequate vertical spacing on mobile layouts
 - [x] **SPACE-02**: Padding prevents content from feeling cramped on small screens
 
 ## v2 Requirements
@@ -82,7 +82,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| RESP-01 | Phase 1 | Pending |
+| RESP-01 | Phase 1 | Complete |
 | RESP-02 | Phase 2 | Pending |
 | RESP-03 | Phase 2 | Pending |
 | RESP-04 | Phase 3 | Pending |
@@ -99,14 +99,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NAV-01 | Phase 1 | Complete |
 | NAV-02 | Phase 1 | Complete |
 | NAV-03 | Phase 1 | Complete |
-| SPACE-01 | Phase 1 | Pending |
+| SPACE-01 | Phase 1 | Complete |
 | SPACE-02 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 19 total
 - Mapped to phases: 19
-- Complete: 11
+- Complete: 13
 
 ---
 *Requirements defined: 2026-03-11*
-*Last updated: 2026-03-10 after 01-foundation-01 plan completion*
+*Last updated: 2026-03-11 after 01-foundation-02 plan completion*
