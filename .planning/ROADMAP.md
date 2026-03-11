@@ -59,7 +59,7 @@
 3. Touch targets remain adequate on Services page
 4. Touch targets remain adequate on About page
 
-**Plans:** 1/1 plan
+**Plans:** 1/1 plans complete
 
 - [x] 02-01-PLAN.md — Services + About pages responsive
 
