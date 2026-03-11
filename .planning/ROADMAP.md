@@ -59,7 +59,9 @@
 3. Touch targets remain adequate on Services page
 4. Touch targets remain adequate on About page
 
-**Plans:** TBD
+**Plans:** 1/1 plan
+
+- [x] 02-01-PLAN.md — Services + About pages responsive
 
 ---
 
@@ -106,7 +108,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-03-10 |
-| 2. Content Pages | 0/TBD | Not started | - |
+| 2. Content Pages | 1/1 | Planned | - |
 | 3. Enquiry Form | 0/TBD | Not started | - |
 | 4. Resources + Testing | 0/TBD | Not started | - |
 
