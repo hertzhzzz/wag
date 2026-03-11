@@ -10,7 +10,7 @@
 ## Phases
 
 - [x] **Phase 1: Foundation** - Home page responsive + Global navigation
-- [ ] **Phase 2: Content Pages** - Services + About pages responsive
+- [x] **Phase 2: Content Pages** - Services + About pages responsive
 - [ ] **Phase 3: Enquiry Form** - Mobile-optimized contact form
 - [ ] **Phase 4: Resources + Testing** - Resources page + Full validation
 
@@ -108,7 +108,7 @@
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-03-10 |
-| 2. Content Pages | 1/1 | Planned | - |
+| 2. Content Pages | 1/1 | Complete    | 2026-03-11 |
 | 3. Enquiry Form | 0/TBD | Not started | - |
 | 4. Resources + Testing | 0/TBD | Not started | - |
 
