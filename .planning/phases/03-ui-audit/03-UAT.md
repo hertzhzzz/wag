@@ -1,18 +1,14 @@
 ---
-status: testing
+status: complete
 phase: 03-ui-audit
 source: 03-ui-audit-01-SUMMARY.md, 03-ui-audit-02-SUMMARY.md, 03-ui-audit-03-SUMMARY.md, 03-ui-audit-04-SUMMARY.md
 started: 2026-03-16T11:00:00Z
-updated: 2026-03-16T11:12:00Z
+updated: 2026-03-17T12:00:00Z
 ---
 
 ## Current Test
 
-number: 4
-name: Home Page - No Horizontal Scroll
-expected: |
-  At 320px viewport width, the home page has no horizontal scroll. You can scroll vertically but the page width fits within the screen.
-awaiting: user response
+[testing complete]
 
 ## Tests
 
@@ -32,39 +28,40 @@ result: pass
 
 ### 4. Home Page - No Horizontal Scroll
 expected: At 320px viewport width, the home page has no horizontal scroll. You can scroll vertically but the page width fits within the screen.
-result: [pending]
+result: pass
 
 ### 5. Services Page - No Horizontal Scroll
 expected: At 320px viewport width, the services page has no horizontal scroll.
-result: [pending]
+result: pass
 
 ### 6. About Page - No Horizontal Scroll
 expected: At 320px viewport width, the about page has no horizontal scroll.
-result: [pending]
+result: pass
 
 ### 7. Enquiry Page - No Horizontal Scroll
 expected: At 320px viewport width, the enquiry page has no horizontal scroll.
-result: [pending]
+result: pass
 
 ### 8. Resources Page - No Horizontal Scroll
 expected: At 320px viewport width, the resources page has no horizontal scroll.
-result: [pending]
+result: pass
 
 ### 9. Navigation on Mobile
 expected: On mobile viewport, navigation hamburger menu works - opens when tapped, closes when X or overlay is tapped.
-result: [pending]
+result: pass
 
 ### 10. Touch Target Size
 expected: All buttons on mobile pages are at least 44px tall for comfortable touch interaction.
-result: [pending]
+result: skipped
+reason: 需要开发者工具测量，普通用户无法验证
 
 ## Summary
 
 total: 10
-passed: 2
+passed: 8
 issues: 1
-pending: 7
-skipped: 0
+pending: 0
+skipped: 1
 
 ## Gaps
 
