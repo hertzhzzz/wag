@@ -29,9 +29,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Forms
 
-- [ ] **FORM-01**: Enquiry form inputs are usable on mobile without keyboard issues
-- [ ] **FORM-02**: Form labels remain visible when input is focused on mobile
-- [ ] **FORM-03**: Submit button is easily accessible on mobile
+- [x] **FORM-01**: Enquiry form inputs are usable on mobile without keyboard issues
+- [x] **FORM-02**: Form labels remain visible when input is focused on mobile
+- [x] **FORM-03**: Submit button is easily accessible on mobile
 
 ### Navigation
 
@@ -93,9 +93,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TYPE-01 | Phase 1 | Complete |
 | TYPE-02 | Phase 1 | Complete |
 | TYPE-03 | Phase 1 | Complete |
-| FORM-01 | Phase 3 | Pending |
-| FORM-02 | Phase 3 | Pending |
-| FORM-03 | Phase 3 | Pending |
+| FORM-01 | Phase 3 | Complete |
+| FORM-02 | Phase 3 | Complete |
+| FORM-03 | Phase 3 | Complete |
 | NAV-01 | Phase 1 | Complete |
 | NAV-02 | Phase 1 | Complete |
 | NAV-03 | Phase 1 | Complete |
