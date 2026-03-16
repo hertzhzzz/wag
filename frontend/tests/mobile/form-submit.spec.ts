@@ -12,8 +12,24 @@ test.describe('FORM-03: Submit button is accessible on mobile', () => {
       await page.setViewportSize(viewport)
       await page.goto('/enquiry')
 
-      // Scroll to bottom of form
-      await page.locator('#message').scrollIntoViewIfNeeded()
+      // Scroll to the form to ensure it's visible
+      await page.locator('#fullName').scrollIntoViewIfNeeded()
+
+      // Navigate to Step 2 to access the submit button
+      await page.locator('#fullName').fill('Test User')
+      await page.locator('#email').fill('test@example.com')
+
+      // Scroll to Continue button and click it
+      const continueBtn = page.getByRole('button', { name: /continue/i })
+      await continueBtn.scrollIntoViewIfNeeded()
+      await continueBtn.click()
+      await page.waitForTimeout(500)
+
+      // Wait for Step 2 to be visible - use companyName which is first field in Step 2
+      await expect(page.locator('#companyName')).toBeVisible({ timeout: 10000 })
+
+      // Scroll to bottom of form using companyName
+      await page.locator('#companyName').scrollIntoViewIfNeeded()
 
       // Submit button should be visible without additional scrolling
       const submitButton = page.locator('button[type="submit"]')

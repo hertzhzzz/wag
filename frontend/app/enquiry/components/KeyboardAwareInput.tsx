@@ -22,8 +22,11 @@ export function KeyboardAwareInput({
       const viewport = window.visualViewport
       if (!viewport) return
 
-      // Only adjust on mobile (when viewport is significantly smaller)
-      if (viewport.height < window.innerHeight * 0.85) {
+      // Adjust on mobile: either keyboard is open (viewport shrunk) OR small viewport
+      const isMobileViewport = window.innerWidth <= 480
+      const isKeyboardOpen = viewport.height < window.innerHeight * 0.85
+
+      if (isMobileViewport || isKeyboardOpen) {
         setTimeout(() => {
           inputRef.current?.scrollIntoView({
             behavior: 'smooth',

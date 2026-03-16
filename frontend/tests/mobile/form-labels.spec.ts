@@ -27,6 +27,14 @@ test.describe('FORM-02: Form labels remain visible when input is focused', () =>
       const emailLabel = page.locator('label[for="email"]')
       await expect(emailLabel).toBeVisible()
 
+      // Navigate to Step 2
+      await page.locator('#fullName').fill('Test User')
+      await page.locator('#email').fill('test@example.com')
+      await page.getByRole('button', { name: /continue/i }).click()
+
+      // Wait for Step 2 to be visible
+      await expect(page.locator('#companyName')).toBeVisible()
+
       // Test companyName label visibility
       await page.locator('#companyName').focus()
       const companyLabel = page.locator('label[for="companyName"]')
