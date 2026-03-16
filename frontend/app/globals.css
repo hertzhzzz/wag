@@ -21,6 +21,7 @@ body {
   color: #0F2D5E;
   font-size: 16px;
   line-height: 1.6;
+  padding-top: 72px;
 }
 
 /* Prevent horizontal overflow on all elements */
