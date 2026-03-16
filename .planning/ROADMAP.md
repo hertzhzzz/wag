@@ -11,7 +11,7 @@
 
 - [x] **Phase 1: Foundation** - Home page responsive + Global navigation
 - [x] **Phase 2: Content Pages** - Services + About pages responsive
-- [ ] **Phase 3: Enquiry Form** - Mobile-optimized contact form
+- [ ] **Phase 3: Global UI Audit + Mobile Adaptation** - Comprehensive UI audit across all pages and fix mobile responsive issues
 - [ ] **Phase 4: Resources + Testing** - Resources page + Full validation
 
 ---
@@ -65,9 +65,9 @@
 
 ---
 
-### Phase 3: Enquiry Form
+### Phase 3: Global UI Audit + Mobile Adaptation
 
-**Goal:** Ensure enquiry form is fully functional and usable on mobile devices
+**Goal:** Perform comprehensive UI audit across all pages and fix mobile responsive issues
 
 **Depends on:** Phase 2
 
@@ -75,12 +75,18 @@
 
 **Success Criteria** (what must be TRUE):
 
-1. Enquiry form adapts to mobile screens (320px to 1920px+)
-2. Form inputs are usable on mobile without keyboard covering the field
-3. Form labels remain visible when input is focused on mobile
-4. Submit button is easily accessible on mobile (not hidden behind keyboard)
+1. All pages (Home, Services, About, Enquiry, Resources) have consistent mobile layout
+2. No horizontal scroll at 320px width on any page
+3. All touch targets meet 44px minimum
+4. Navigation works correctly on all mobile pages
+5. Forms are usable on mobile (keyboard doesn't cover inputs)
 
-**Plans:** TBD
+**Plans:** 1/4 plans executed
+
+- [ ] 03-ui-audit-01-PLAN.md — Test infrastructure setup (Playwright + browser-use)
+- [ ] 03-ui-audit-02-PLAN.md — Enquiry form mobile keyboard fixes
+- [ ] 03-ui-audit-03-PLAN.md — Form validation tests (FORM-01, FORM-02, FORM-03)
+- [ ] 03-ui-audit-04-PLAN.md — Comprehensive all-pages audit
 
 ---
 
@@ -109,7 +115,7 @@
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-03-10 |
 | 2. Content Pages | 1/1 | Complete    | 2026-03-11 |
-| 3. Enquiry Form | 0/TBD | Not started | - |
+| 3. Global UI Audit + Mobile Adaptation | 1/4 | In Progress|  |
 | 4. Resources + Testing | 0/TBD | Not started | - |
 
 ---
@@ -122,7 +128,7 @@ All 19 v1 requirements mapped to phases:
 |-------|--------------|
 | 1 - Foundation | RESP-01, RESP-05, TOUCH-01, TOUCH-02, TOUCH-03, TYPE-01, TYPE-02, TYPE-03, NAV-01, NAV-02, NAV-03, SPACE-01, SPACE-02 |
 | 2 - Content Pages | RESP-02, RESP-03 |
-| 3 - Enquiry Form | RESP-04, FORM-01, FORM-02, FORM-03 |
+| 3 - Global UI Audit + Mobile Adaptation | RESP-04, FORM-01, FORM-02, FORM-03 |
 | 4 - Resources + Testing | (Validation phase) |
 
 **Total:** 19/19 requirements mapped ✓
