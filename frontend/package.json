@@ -1,0 +1,53 @@
+{
+  "name": "wag",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:admin": "next dev -p 3001",
+    "build": "next build",
+    "build:admin": "next build admin",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@remotion/animation-utils": "^4.0.429",
+    "@remotion/player": "^4.0.429",
+    "autoprefixer": "^10.4.27",
+    "browser-use": "^0.5.0",
+    "csv-parse": "^6.1.0",
+    "echarts": "^6.0.0",
+    "echarts-for-react": "^3.0.6",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.575.0",
+    "next": "14.2.0",
+    "next-mdx-remote": "^6.0.0",
+    "nodemailer": "^8.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-globe.gl": "^2.37.0",
+    "remark": "^15.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-html": "^16.0.0",
+    "remotion": "^4.0.429",
+    "resend": "^6.9.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@remotion/cli": "^4.0.431",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/node": "^20",
+    "@types/nodemailer": "^7.0.11",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@next/swc-darwin-arm64": "^16.1.6"
+  }
+}
