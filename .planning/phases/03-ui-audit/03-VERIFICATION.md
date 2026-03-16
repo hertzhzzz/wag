@@ -1,17 +1,38 @@
 ---
 phase: 03-ui-audit
-verified: 2026-03-16T11:03:00Z
-status: passed
-score: 4/4 must-haves verified
-gaps: []
+verified: 2026-03-17T00:47:00Z
+status: gaps_found
+score: 4/5 must-haves verified
+re_verification: true
+  previous_status: passed
+  previous_score: 4/4
+  gaps_closed: []
+  gaps_remaining:
+    - "Mobile navbar not sticky on scroll"
+  regressions: []
+gaps:
+  - truth: "Mobile navbar stays fixed at top when scrolling"
+    status: failed
+    reason: "User reports navbar scrolls away on mobile - cannot click navbar when scrolled down, must scroll to top"
+    artifacts:
+      - path: "frontend/app/components/Navbar.tsx"
+        issue: "Has 'sticky top-0' in code (line 16), but sticky behavior not working on mobile in practice"
+    missing:
+      - "Ensure sticky positioning works on iOS Safari (may need -webkit-sticky or overflow settings)"
+      - "Verify parent containers don't break sticky (check if body/html overflow settings interfere)"
+      - "Alternative: Use 'fixed top-0' instead of 'sticky top-0' for guaranteed mobile support"
 ---
 
-# Phase 03: UI Audit Verification Report
+# Phase 03: UI Audit Verification Report (Re-verification)
 
 **Phase Goal:** Comprehensive mobile responsive validation and fixes for all pages
-**Verified:** 2026-03-16T11:03:00Z
-**Status:** PASSED
-**Score:** 4/4 must-haves verified
+**Verified:** 2026-03-17T00:47:00Z
+**Status:** GAPS_FOUND
+**Score:** 4/5 must-haves verified (previous 4/4 + 1 new gap)
+
+## Re-verification Summary
+
+Previous verification (2026-03-16) passed with 4/4 must-haves verified. However, a NEW issue was discovered from user feedback: mobile navbar does not stay sticky when scrolling.
 
 ## Goal Achievement
 
@@ -19,76 +40,66 @@ gaps: []
 
 | # | Truth | Status | Evidence |
 |---|-------|--------|----------|
-| 1 | All 5 pages have consistent mobile layout | VERIFIED | all-pages.spec.ts tests all 5 pages (/, /services, /about, /enquiry, /resources), responsive padding px-4 md:px-N applied to Navbar and ResourcesContent |
-| 2 | No horizontal scroll at 320px width on any page | VERIFIED | globals.css contains `overflow-x: hidden` on html element, all-pages.spec.ts verifies no horizontal scroll |
-| 3 | All touch targets meet 44px minimum | VERIFIED | min-h-11 class added to ResourcesContent buttons (line 138, 229) |
-| 4 | Navigation works correctly on all mobile pages | VERIFIED | all-pages.spec.ts includes navigation test with nav visibility check |
+| 1 | All 5 pages have consistent mobile layout | VERIFIED | Previous verification confirmed responsive padding and layout |
+| 2 | No horizontal scroll at 320px width on any page | VERIFIED | globals.css contains `overflow-x: hidden` on html/body |
+| 3 | All touch targets meet 44px minimum | VERIFIED | Previous verification confirmed min-h-11 on buttons |
+| 4 | Navigation works correctly on all mobile pages | VERIFIED | Hamburger menu opens/closes correctly |
+| 5 | Mobile navbar stays fixed at top when scrolling | FAILED | User reports cannot click navbar when scrolled - must scroll to top |
 
-**Score:** 4/4 truths verified
+**Score:** 4/5 truths verified
 
 ### Required Artifacts
 
 | Artifact | Expected | Status | Details |
 |----------|----------|--------|---------|
-| `frontend/playwright.config.ts` | Test configuration | VERIFIED | Mobile project configured with iPhone 14, chromium project for desktop |
-| `frontend/tests/mobile/form-keyboard.spec.ts` | Test for FORM-01 | VERIFIED | Tests input visibility on focus at 3 viewport sizes |
-| `frontend/tests/mobile/form-labels.spec.ts` | Test for FORM-02 | VERIFIED | Tests label visibility on focus |
-| `frontend/tests/mobile/form-submit.spec.ts` | Test for FORM-03 | VERIFIED | Tests submit button accessibility |
-| `frontend/tests/responsive/all-pages.spec.ts` | Comprehensive responsive test | VERIFIED | Tests all 5 pages for horizontal scroll and navigation |
-| `frontend/app/enquiry/components/KeyboardAwareInput.tsx` | Input with keyboard avoidance | VERIFIED | Uses Visual Viewport API + scrollIntoView on focus |
-| `frontend/app/enquiry/components/KeyboardAwareTextarea.tsx` | Textarea with keyboard avoidance | VERIFIED | Uses Visual Viewport API + scrollIntoView on focus |
-| `frontend/app/enquiry/page.tsx` | Form using keyboard-aware components | VERIFIED | Imports and uses both KeyboardAwareInput and KeyboardAwareTextarea |
+| `frontend/app/components/Navbar.tsx` | Sticky navbar | PARTIAL | Has `sticky top-0` in code but not working on mobile |
 
 ### Key Link Verification
 
 | From | To | Via | Status | Details |
 |------|---|-----|--------|---------|
-| KeyboardAwareInput.tsx | Visual Viewport API | useEffect event listener | WIRED | Uses `window.visualViewport` with focus event listener |
-| KeyboardAwareInput.tsx | scrollIntoView | on focus handler | WIRED | Calls `scrollIntoView({ behavior: 'smooth', block: 'center' })` |
-| enquiry/page.tsx | KeyboardAwareInput | import and use in JSX | WIRED | Imports from ./components/KeyboardAwareInput, uses for all inputs |
-| enquiry/page.tsx | KeyboardAwareTextarea | import and use in JSX | WIRED | Imports from ./components/KeyboardAwareTextarea, uses for message |
-| enquiry/page.tsx | Sticky submit button | CSS classes | WIRED | Has `fixed bottom-0 left-0 right-0 p-4 md:relative md:bottom-auto md:p-0` |
+| Navbar.tsx | Sticky positioning | className sticky top-0 | PARTIAL | Code has sticky but not functioning on mobile |
+
+### Gap Analysis
+
+**Root Cause:** The Navbar component has `sticky top-0` class which should work, but on mobile (especially iOS Safari), sticky positioning often requires additional handling.
+
+**Possible Fixes:**
+1. Use `fixed top-0` instead of `sticky top-0` - guaranteed to work on all devices
+2. Add `-webkit-sticky` to the class: `sticky top-0 -webkit-sticky`
+3. Ensure no parent container has `overflow: hidden` that breaks sticky
+4. Add specific iOS CSS handling
 
 ### Requirements Coverage
 
 | Requirement | Source Plan | Description | Status | Evidence |
 |-------------|-------------|-------------|--------|----------|
-| FORM-01 | 03-ui-audit-02 | Form inputs usable on mobile without keyboard covering them | SATISFIED | KeyboardAwareInput/Textarea components with scrollIntoView, form-keyboard.spec.ts tests pass |
-| FORM-02 | 03-ui-audit-02 | Form labels remain visible when input is focused | SATISFIED | KeyboardAwareInput renders labels with proper styling, form-labels.spec.ts tests pass |
-| FORM-03 | 03-ui-audit-02 | Submit button is accessible on mobile without scrolling | SATISFIED | Sticky submit button with `fixed bottom-0`, form-submit.spec.ts tests pass |
-| RESP-04 | 03-ui-audit-04 | All 5 pages responsive | SATISFIED | all-pages.spec.ts tests all pages, responsive padding applied, build passes |
-
-### Anti-Patterns Found
-
-| File | Line | Pattern | Severity | Impact |
-|------|------|---------|----------|--------|
-| None | - | - | - | No anti-patterns detected |
+| FORM-01 | 03-ui-audit-02 | Form inputs usable on mobile | SATISFIED | KeyboardAwareInput/Textarea components |
+| FORM-02 | 03-ui-audit-02 | Labels visible on focus | SATISFIED | Tests pass |
+| FORM-03 | 03-ui-audit-02 | Submit button accessible | SATISFIED | Sticky button implemented |
+| RESP-04 | 03-ui-audit-04 | All pages responsive | SATISFIED | all-pages.spec.ts passes |
+| (NEW) | User feedback | Mobile navbar sticky | BLOCKED | Code has sticky but not working |
 
 ### Build Verification
 
 ```
-npm run build - PASSED
+Previous build: PASSED (2026-03-16)
 ```
-- All routes compile successfully
-- No TypeScript errors
-- No lint errors
 
 ---
 
 ## Summary
 
-All must-haves verified:
+The phase previously achieved 4/4 must-haves verified. However, a new gap was discovered:
 
-1. **Test infrastructure** - Playwright installed with mobile viewport configuration
-2. **Mobile form tests** - All 3 form requirements (FORM-01, FORM-02, FORM-03) have tests
-3. **Keyboard-aware components** - KeyboardAwareInput and KeyboardAwareTextarea implemented with Visual Viewport API
-4. **Enquiry form wired** - page.tsx imports and uses both components with sticky submit button
-5. **Responsive fixes applied** - overflow-x: hidden, responsive padding px-4 md:px-N, min-h-11 on touch targets
-6. **All 5 pages audited** - Comprehensive test verifies horizontal scroll and navigation
+**New Gap:**
+- Mobile navbar scrolls away when user scrolls down page
+- User cannot click navbar menu button when scrolled - must return to top
+- Code has `sticky top-0` but sticky behavior not working on mobile
 
-**Phase goal achieved.** Mobile responsive validation and fixes are complete.
+**Recommendation:** Change Navbar from `sticky top-0` to `fixed top-0` for guaranteed mobile support, or add iOS-specific sticky handling.
 
 ---
 
-_Verified: 2026-03-16T11:03:00Z_
+_Verified: 2026-03-17T00:47:00Z_
 _Verifier: Claude (gsd-verifier)_
