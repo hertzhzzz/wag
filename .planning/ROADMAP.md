@@ -107,7 +107,11 @@
 3. All touch targets meet 44px minimum on all pages
 4. Navigation functions correctly across all pages on mobile
 
-**Plans:** TBD
+**Plans:** 3/3 plans
+
+- [ ] 04-01-PLAN.md — Resources page responsive fixes (4 issues)
+- [ ] 04-02-PLAN.md — Resources page validation test
+- [ ] 04-03-PLAN.md — Full site mobile validation
 
 ---
 
@@ -118,7 +122,7 @@
 | 1. Foundation | 2/2 | Complete    | 2026-03-10 |
 | 2. Content Pages | 1/1 | Complete    | 2026-03-11 |
 | 3. Global UI Audit + Mobile Adaptation | 6/6 | In Progress  | - |
-| 4. Resources + Testing | 0/TBD | Not started | - |
+| 4. Resources + Testing | 0/3 | Not started | - |
 
 ---
 
