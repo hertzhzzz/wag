@@ -81,10 +81,10 @@
 4. Navigation works correctly on all mobile pages
 5. Forms are usable on mobile (keyboard doesn't cover inputs)
 
-**Plans:** 1/4 plans complete
+**Plans:** 2/4 plans complete
 
 - [x] 03-ui-audit-01-PLAN.md — Test infrastructure setup (Playwright + browser-use)
-- [ ] 03-ui-audit-02-PLAN.md — Enquiry form mobile keyboard fixes
+- [x] 03-ui-audit-02-PLAN.md — Enquiry form mobile keyboard fixes
 - [ ] 03-ui-audit-03-PLAN.md — Form validation tests (FORM-01, FORM-02, FORM-03)
 - [ ] 03-ui-audit-04-PLAN.md — Comprehensive all-pages audit
 
@@ -115,7 +115,7 @@
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-03-10 |
 | 2. Content Pages | 1/1 | Complete    | 2026-03-11 |
-| 3. Global UI Audit + Mobile Adaptation | 1/4 | In Progress|  |
+| 3. Global UI Audit + Mobile Adaptation | 2/4 | In Progress|  |
 | 4. Resources + Testing | 0/TBD | Not started | - |
 
 ---
