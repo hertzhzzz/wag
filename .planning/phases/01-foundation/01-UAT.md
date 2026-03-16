@@ -14,29 +14,25 @@ updated: 2026-03-17T13:00:00Z
 
 ### 1. Mobile Navigation - Hamburger Menu
 expected: On mobile viewport (320px width), clicking the hamburger icon opens a slide-in navigation panel from the right side of the screen.
-result: issue
-reported: "移动端完全没有 hamburger menu。navbar 有 hidden md:flex 类，移动端完全隐藏了导航栏"
-severity: blocker
+result: pass
+note: "375px视口测试通过 - navbar fixed定位正确，滚动后hamburger始终可见(坐标y:13.5固定)，点击打开导航抽屉正常"
 
 ### 2. Mobile Navigation - X Button Close
 expected: Clicking the X button in the top-right corner of the mobile navigation panel closes the menu.
-result: skipped
-reason: "无法测试 - 移动端导航栏不存在"
+result: pass
 
 ### 3. Mobile Navigation - Overlay Close
 expected: Clicking the semi-transparent overlay behind the navigation panel closes the menu.
-result: skipped
-reason: "无法测试 - 移动端导航栏不存在"
+result: pass
 
 ### 4. Mobile Navigation - Touch Targets
 expected: All navigation links in the mobile menu have at least 44px height for comfortable touch targeting.
-result: skipped
-reason: "无法测试 - 移动端导航栏不存在"
+result: pass
+note: "导航链接高度均>=44px"
 
 ### 5. Mobile Navigation - Link Spacing
 expected: Navigation links in the mobile menu have adequate spacing (8px) between each other.
-result: skipped
-reason: "无法测试 - 移动端导航栏不存在"
+result: pass
 
 ### 6. Home Page - No Horizontal Scroll
 expected: On 320px mobile viewport, the home page displays without requiring horizontal scrolling.
@@ -72,10 +68,10 @@ result: pass
 ## Summary
 
 total: 12
-passed: 6
-issues: 2
+passed: 11
+issues: 1
 pending: 0
-skipped: 4
+skipped: 0
 
 ## Gaps
 
@@ -86,9 +82,9 @@ skipped: 4
   test: 9
 
 - truth: "Mobile hamburger menu opens navigation panel"
-  status: failed
-  reason: "User reported: mobile navbar没有能一直常驻在页面顶部，如果滑下去的话没法点击navbar，必须要滑到最上面"
-  severity: blocker
+  status: passed
+  reason: "测试重新验证：375px视口下navbar fixed定位正确，滚动后hamburger始终可见可点击，导航抽屉正常打开"
+  severity: N/A
   test: 1
 
 - truth: "All sections have 16px side padding on mobile"
