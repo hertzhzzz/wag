@@ -4,12 +4,15 @@ import { useEffect, useRef } from 'react'
 interface KeyboardAwareTextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label: string
   required?: boolean
+  error?: string
 }
 
 export function KeyboardAwareTextarea({
   label,
   required = false,
+  error,
   id,
+  className,
   ...props
 }: KeyboardAwareTextareaProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
@@ -45,9 +48,12 @@ export function KeyboardAwareTextarea({
       <textarea
         ref={textareaRef}
         id={id}
-        className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E] min-h-[120px] resize-y"
+        className={`w-full py-3 px-4 border rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E] min-h-[120px] resize-y ${
+          error ? 'border-red-400 focus:border-red-500' : 'border-gray-200'
+        } ${className || ''}`}
         {...props}
       />
+      {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>
   )
 }

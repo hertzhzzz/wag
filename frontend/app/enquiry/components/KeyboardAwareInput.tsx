@@ -4,12 +4,15 @@ import { useEffect, useRef } from 'react'
 interface KeyboardAwareInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string
   required?: boolean
+  error?: string
 }
 
 export function KeyboardAwareInput({
   label,
   required = false,
+  error,
   id,
+  className,
   ...props
 }: KeyboardAwareInputProps) {
   const inputRef = useRef<HTMLInputElement>(null)
@@ -46,9 +49,12 @@ export function KeyboardAwareInput({
       <input
         ref={inputRef}
         id={id}
-        className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E]"
+        className={`w-full py-3 px-4 border rounded text-[0.9375rem] text-[#0F2D5E] outline-none transition-colors ${
+          error ? 'border-red-400 focus:border-red-500' : 'border-gray-200 focus:border-[#0F2D5E]'
+        } ${className || ''}`}
         {...props}
       />
+      {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>
   )
 }
