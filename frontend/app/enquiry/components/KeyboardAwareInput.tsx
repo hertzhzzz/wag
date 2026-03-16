@@ -1,0 +1,54 @@
+'use client'
+import { useEffect, useRef } from 'react'
+
+interface KeyboardAwareInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label: string
+  required?: boolean
+}
+
+export function KeyboardAwareInput({
+  label,
+  required = false,
+  id,
+  ...props
+}: KeyboardAwareInputProps) {
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    const handleFocus = () => {
+      const viewport = window.visualViewport
+      if (!viewport) return
+
+      // Only adjust on mobile (when viewport is significantly smaller)
+      if (viewport.height < window.innerHeight * 0.85) {
+        setTimeout(() => {
+          inputRef.current?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          })
+        }, 100)
+      }
+    }
+
+    const input = inputRef.current
+    input?.addEventListener('focus', handleFocus)
+    return () => input?.removeEventListener('focus', handleFocus)
+  }, [])
+
+  return (
+    <div>
+      <label
+        htmlFor={id}
+        className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
+      >
+        {label} {required && <span className="text-[#F59E0B]">*</span>}
+      </label>
+      <input
+        ref={inputRef}
+        id={id}
+        className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E]"
+        {...props}
+      />
+    </div>
+  )
+}
