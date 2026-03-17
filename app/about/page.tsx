@@ -4,13 +4,16 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us | Winning Adventure Global - China Factory Tours for Australian Businesses',
-  description: 'Founded in Adelaide, Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. Learn about our founder Andy Liu and our mission.',
-  keywords: ['China factory tour Adelaide', 'Australian business China sourcing', 'Andy Liu China supplier', 'factory visit service Australia', 'E-E-A-T China sourcing'],
+  title: 'About Us | China Sourcing Experts Adelaide',
+  description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. Based in Adelaide, we provide factory tours, supplier verification, and procurement support.',
+  keywords: ['china sourcing adelaide', 'factory tour china', 'about china sourcing'],
   openGraph: {
-    title: 'About Us | Winning Adventure Global',
-    description: 'Founded in Adelaide, we connect Australian businesses with verified Chinese manufacturers.',
+    title: 'About Us | China Sourcing Experts Adelaide',
+    description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. Based in Adelaide, we provide factory tours, supplier verification, and procurement support.',
     url: 'https://www.winningadventure.com.au/about',
+  },
+  alternates: {
+    canonical: 'https://www.winningadventure.com.au/about',
   },
 }
 
