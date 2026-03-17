@@ -90,6 +90,8 @@ Recent decisions affecting current work:
 ### Roadmap Evolution
 
 - Phase 6.1 inserted after Phase 6: 配置 Vercel 部署中的 gmailAPP_PASSWORD 和 user 以修复 enquiry 表单 (URGENT)
+- Phase 7 added: PageSpeed 性能优化 - 优化 Mobile LCP (从 9.2s 到 <2.5s)，减少图片大小
+- Phase 8 added: Security audit - analyze and fix all security risks in the WAG website
 
 ### Pending Todos
 

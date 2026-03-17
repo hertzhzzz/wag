@@ -85,6 +85,26 @@ Plans:
 Plans:
 - [x] 06.1-01-PLAN.md — Configure Gmail credentials in Vercel
 
+### Phase 7: PageSpeed 性能优化 - 优化 Mobile LCP (从 9.2s 到 <2.5s)，减少图片大小
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 6
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 7 to break down)
+
+### Phase 8: security audit - analyze and fix all security risks in the WAG website
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 7
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 8 to break down)
+
 ---
 
 *Updated: 2026-03-18*

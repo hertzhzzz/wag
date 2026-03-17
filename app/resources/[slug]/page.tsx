@@ -131,9 +131,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#0F2D5E] pb-16 px-8">
+      <section className="bg-[#0F2D5E] py-16 px-8">
         <div className="max-w-[1100px] mx-auto">
-          <nav className="flex items-center gap-2 text-xs text-blue-300 uppercase tracking-wider mb-6">
+          <nav className="flex items-center gap-2 text-xs text-blue-300 uppercase tracking-wider mb-6 pt-2">
             <Link href="/" className="hover:text-white">Home</Link>
             <span>›</span>
             <Link href="/resources" className="hover:text-white">Resources</Link>
