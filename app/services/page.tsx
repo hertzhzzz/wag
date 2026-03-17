@@ -3,6 +3,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import { Metadata } from 'next'
+import ServiceSchema from '@/components/ServiceSchema'
 
 export const metadata: Metadata = {
   title: 'China Sourcing Services | Factory Tours & Supplier Verification',
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <ServiceSchema />
       <Navbar />
 
       {/* Hero */}
