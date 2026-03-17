@@ -5,13 +5,16 @@ import { CheckCircle } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'China Factory Tour Services | Winning Adventure Global',
-  description: 'Professional China factory tour services for Australian businesses. Visit pre-screened manufacturers in Guangdong, Shenzhen & Foshan with bilingual guides.',
-  keywords: ['China factory tour', 'factory visit China', 'supplier visit', 'manufacturing tour China', 'Guangzhou factory tour', 'Australian business China sourcing'],
+  title: 'China Sourcing Services | Factory Tours & Supplier Verification',
+  description: 'Our China sourcing services include factory tours, supplier verification, quality inspections, and procurement coordination for Australian businesses.',
+  keywords: ['china sourcing services', 'factory tour china', 'supplier verification china', 'china procurement', 'quality inspection china'],
   openGraph: {
-    title: 'China Factory Tour Services | Winning Adventure Global',
-    description: 'Professional China factory tour services for Australian businesses. Visit pre-screened manufacturers with bilingual guides.',
+    title: 'China Sourcing Services | Factory Tours & Supplier Verification',
+    description: 'Our China sourcing services include factory tours, supplier verification, quality inspections, and procurement coordination for Australian businesses.',
     url: 'https://www.winningadventure.com.au/services',
+  },
+  alternates: {
+    canonical: 'https://www.winningadventure.com.au/services',
   },
 }
 
