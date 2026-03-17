@@ -1,184 +1,134 @@
 # Project Research Summary
 
-**Project:** WAG Website Mobile Responsive Improvements
-**Domain:** Responsive Web Design (Existing Website Improvements)
-**Researched:** 2026-03-11
+**Project:** WAG Website v1.1
+**Domain:** Corporate website deployment and mobile UX improvements
+**Researched:** 2026-03-17
 **Confidence:** HIGH
 
 ## Executive Summary
 
-本项目为 WAG (Winning Adventure Global) 企业官网进行移动端响应式布局改进，基于现有 Next.js 14.2 + Tailwind CSS 3.4 技术栈。核心发现：响应式设计是移动优先架构，而非桌面端设计的缩减版本。研究明确了 MVP 阶段的 7 个 P1 功能（响应式布局、触摸目标、移动导航、可读字体、无横向滚动、功能表单、垂直间距），以及需要规避的 7 个关键陷阱（断点使用错误、触摸目标不足、导航问题、图片未响应式、字体问题、横屏忽略、真机测试缺失）。
+v1.1 里程碑聚焦于将 Winning Adventure Global 官网部署到 Vercel 生产环境并修复已发现的移动端体验问题。基于研究，核心技术栈已就绪：Next.js 14.2 + Vercel 零配置部署 + Tailwind CSS 响应式架构。主要工作包括配置自定义域名（winningadventure.com.au）、修复移动端导航栏固定定位失效问题、以及添加 Facebook 社交链接。
 
-推荐采用四阶段路线图：Phase 1 聚焦首页+导航建立响应式模式；Phase 2 服务页+关于页完善触摸交互；Phase 3 询价页表单优化；Phase 4 资源页+全站测试。每个阶段都必须包含真实设备测试，而非仅依赖 DevTools 模拟器。
+研究识别出 6 个关键陷阱，其中最需关注的是：Vercel 环境变量缺失导致构建失败、iOS Safari 中 fixed 定位失效、以及 SSL 证书配置延迟。建议采用渐进式实施策略，先完成开发环境验证，再部署到生产环境。
 
 ## Key Findings
 
 ### Recommended Stack
 
-研究确认现有技术栈适合响应式设计，无需引入新技术。
+**核心部署架构已确定：** Vercel 平台 + Next.js 14.2 App Router + Node.js 20.x。Vercel 提供原生 Next.js 支持，包含 ISR、SSR、图像优化等开箱即用功能，无需额外配置。
 
 **Core technologies:**
-- **Next.js 14.2 App Router** — Server Components 优先，仅交互组件使用 'use client'
-- **Tailwind CSS 3.4** — 移动优先断点系统，默认断点覆盖 95%+ 场景，无需自定义
-- **Next.js `<Image />` 组件** — 自动生成响应式尺寸、WebP/AVIF 格式、懒加载
-- **CSS 相对单位** — 使用 rem/em 而非 px，支持用户字体设置
+- **Vercel** — 托管与 CDN，原生 Next.js 支持，零配置部署
+- **Next.js 14.2** — 当前项目版本，App Router 架构
+- **Node.js 20.x** — Next.js 14.2 要求，在 vercel.json 中已配置
+- **Tailwind CSS 3.4** — 移动优先响应式设计，已在项目中应用
+- **Sydney 区域 (syd1)** — 距离澳大利亚用户最近的边缘节点
 
 ### Expected Features
 
 **Must have (table stakes):**
-- **响应式布局** — 所有 5 个页面适配移动端，grid-cols-1 → md:grid-cols-2 → lg:grid-cols-3
-- **触摸目标 44px+** — 所有按钮/链接最小高度 48px (h-12)，间距 >= 8px
-- **移动导航** — Hamburger 菜单支持点击外部关闭、键盘操作、z-index 正确
-- **可读字体** — 正文 >= 16px (text-base)，行高 >= 1.5 (leading-relaxed)
-- **无横向滚动** — 测试 320px 宽度，使用 w-full + max-w-*
-- **功能表单** — 询价表单移动端可用，input 类型正确 (tel/email)
-- **垂直间距** — 移动端更多留白，py-12 md:py-16 lg:py-24
+- Vercel 生产部署 — 项目已具备部署条件
+- 自定义域名配置 — winningadventure.com.au，DNS 需正确配置
+- 移动端导航栏固定定位修复 — 用户已报告此问题
+- 环境变量配置 — Supabase + Resend 凭证需在 Vercel Dashboard 配置
 
 **Should have (competitive):**
-- **Dark Mode** — 使用 Tailwind dark: 前缀 + prefers-color-scheme
-- **Reduced Motion** — 使用 prefers-reduced-motion 媒体查询
-- **图片优化** — srcset、sizes 属性、lazy loading
+- Facebook 社交链接添加 — Footer 已有 LinkedIn，参照添加 Facebook
+- SSL 证书自动签发 — Vercel 免费提供
+- 安全 headers 配置 — X-Frame-Options, X-Content-Type-Options 等
 
 **Defer (v2+):**
-- **Container Queries** — 组件级响应式，适合可复用组件库
-- **Foldable Device Support** — 折叠屏适配，复杂场景
-- **流体字体 clamp()** — 平滑缩放，需要额外配置
+- 容器查询 (Container Queries) — 组件级响应式，优先级较低
+- 折叠屏设备支持 — 18% 市场份额，高复杂度
 
 ### Architecture Approach
 
-采用三层响应式架构：页面层设置主容器 max-w-* + mx-auto；区块组件层处理 flex-col → flex-row、grid-cols-* 变换；基础组件层保证按钮/输入框触摸友好。响应式状态流推荐无状态 CSS 响应式（性能最优），仅导航菜单需要客户端状态。
+**部署架构采用分层模式：**
+- **页面层 (Page Layer)** — 布局骨架，容器控制
+- **区块组件层 (Section Components)** — 功能区块响应式
+- **基础组件层 (Primitive Components)** — 可复用 UI 元素
 
-**Major components:**
-1. **Page Layer (app/*.tsx)** — 页面容器骨架，响应式网格基础，max-w + mx-auto
-2. **Section Components** — Hero、StatsBar、Industries、FAQ 等区块，布局变换
-3. **Primitive Components** — Button、Input、Card 等基础组件，触摸目标 + 尺寸适配
-4. **Navigation** — 全局组件，桌面端 hidden md:flex，移动端 hamburger + state
+**Vercel 部署流程：** Git Push → Vercel Detect → Build (next build) → Serverless Functions → CDN
+
+**自定义域名 DNS 配置：**
+- A 记录 (@) → 76.76.21.21
+- CNAME (www) → cname.vercel-dns.com
 
 ### Critical Pitfalls
 
-1. **Tailwind 断点前缀使用顺序错误** — 默认样式针对移动端，md:/lg: 断点逐步增强。反序导致移动端直接应用桌面样式。
-
-2. **触摸目标尺寸不足** — 桌面 32-40px 按钮在移动端难以点击。必须 h-12 (48px) 最小高度，py-2 增加链接点击区域。
-
-3. **导航移动端实现不完整** — Hamburger 菜单常缺少：点击外部关闭、ESC 关闭、键盘导航、无障碍支持。
-
-4. **图片/媒体未响应式** — 固定 width/height 导致溢出。使用 w-full h-auto 或 Next.js `<Image fill />`。
-
-5. **忽略横屏模式** — 仅测试竖屏，平板横屏布局错误。使用 orientation: landscape 媒体查询。
-
-6. **仅在 DevTools 测试** — 模拟器无法复制真实触摸交互、视口行为。必须真机测试。
-
-7. **字体大小/行高不适配移动端** — 正文 < 16px 或行高 < 1.5 导致阅读困难。
+1. **SSL 证书配置失败** — 域名 DNS 未正确配置时证书处于 Pending 状态，需等待 5 分钟至 24 小时传播
+2. **环境变量在 Vercel 构建时缺失** — 仅本地 .env.local 存在，生产构建失败，需添加到 Vercel Project Settings
+3. **移动端 fixed 定位在 iOS Safari 失效** — 导航栏随页面滚动消失，建议改用 `position: sticky` 或添加 `transform: translateZ(0)`
+4. **Vercel 构建缓存导致样式未更新** — 修改 CSS 后部署仍显示旧样式，需使用 `--force` 重新部署
+5. **移动端 hamburger 菜单点击区域不足** — 按钮需最小 44x44px，当前实现已符合标准
 
 ## Implications for Roadmap
 
-基于研究，建议四阶段路线图：
+基于研究，建议采用单阶段实施策略，v1.1 聚焦于部署就绪和小修复。
 
-### Phase 1: 首页 + 导航响应式
-**Rationale:** 首页组件最多，是建立响应式模式的最佳起点。导航是全局组件，必须首批处理。
+### Phase 1: Vercel 部署与移动端修复
 
-**Delivers:**
-- 首页 (/) 响应式：Hero flex-col-reverse → flex-row、Stats grid-cols-*、Industries grid
-- 全局导航：移动端 hamburger 菜单，支持点击外部关闭、键盘操作
-- 响应式容器系统：max-w + mx-auto + px-* 基础
-
-**Addresses:** 响应式布局、可读字体、无横向滚动、移动导航
-
-**Avoids:** 断点使用错误（P1 建立正确模式）、导航问题、仅模拟器测试
-
----
-
-### Phase 2: 服务页 + 关于页
-**Rationale:** 服务卡片网格、关于页团队/时间线需要触摸友好的链接和间距。
+**Rationale:** 部署是核心目标，移动端修复是用户报告的紧急问题，Facebook 链接是简单的补充任务
 
 **Delivers:**
-- 服务页 (/services)：服务卡片 grid 响应式，间距适配触摸
-- 关于页 (/about)：团队成员 grid、timeline 响应式
-- 区块组件层完善：所有 Section 组件完成响应式
+- Vercel 生产环境部署完成
+- 自定义域名 (winningadventure.com.au) 生效
+- SSL 证书自动签发
+- 移动端导航栏固定定位修复
+- Facebook 链接添加
 
-**Addresses:** 触摸目标 44px+、垂直间距、图片响应式
+**Addresses:**
+- Responsive Layout (from FEATURES.md)
+- Mobile Navigation fix (PITFALLS.md Pitfall 3)
+- Vercel Deployment (STACK.md)
 
-**Avoids:** 触摸目标不足、字体大小问题
-
----
-
-### Phase 3: 询价页表单
-**Rationale:** 表单是业务关键路径，移动端表单体验直接影响转化。
-
-**Delivers:**
-- 询价页 (/enquiry)：表单字段移动端可用，输入类型正确，标签可见
-- 基础组件层完善：Button、Input 组件触摸友好
-
-**Addresses:** 功能表单、表单标签位置、输入类型
-
-**Avoids:** 键盘遮挡输入框（使用 min-h-screen 而非 h-screen）
-
----
-
-### Phase 4: 资源页 + 全站测试
-**Rationale:** 资源页卡片网格 + 文章布局是最后响应式页面，之后进行完整测试。
-
-**Delivers:**
-- 资源页 (/resources)：卡片 grid、文章 prose 响应式
-- 完整测试清单执行：所有页面真机测试、横屏测试
-
-**Addresses:** 性能优化（图片懒加载）、可访问性
-
-**Avoids:** 忽略横屏模式、仅模拟器测试
-
----
+**Avoids:**
+- SSL 证书 Pending — 提前配置 DNS 并等待传播
+- 环境变量缺失 — 部署前在 Vercel Dashboard 完整配置
 
 ### Phase Ordering Rationale
 
-- **依赖顺序：** 导航是全局组件必须在其他页面之前完成；基础组件（Button/Input）被页面组件依赖
-- **风险顺序：** 首页问题影响最多用户，首批修复；表单问题影响转化，最后处理但优先解决
-- **架构分组：** 页面容器 → 区块组件 → 基础组件，符合组件依赖关系
-- **陷阱规避：** 每个阶段都包含真机测试要求，避免 Phase 7 陷阱
+- **为何此顺序：** 部署是核心目标，修复移动端问题是用户痛点，添加 Facebook 是简单补充
+- **为何合并为一阶段：** 三个任务都是 P1 优先级且互不依赖，可并行处理
+- **如何避免陷阱：** 部署前完成环境变量配置，在真实 iOS 设备测试导航栏
 
 ### Research Flags
 
 Phases likely needing deeper research during planning:
-- **Phase 3 (询价页):** 表单验证规则、邮件发送集成可能需要额外研究
-- **Phase 4 (测试):** 具体测试设备清单、BrowserStack vs 真机选择
+- **无** — v1.1 任务已充分研究，有明确的实施路径
 
 Phases with standard patterns (skip research-phase):
-- **Phase 1-2 (页面响应式):** 响应式模式已被充分文档化，Tailwind 官方文档覆盖
-- **导航组件:** Hamburger 菜单有成熟模式，直接参考 STACK.md 示例
+- **Phase 1:** Vercel 部署是标准模式，Next.js + Vercel 文档完善
+- **Phase 1:** 移动端 fixed 定位修复有成熟的 CSS 解决方案
 
 ## Confidence Assessment
 
 | Area | Confidence | Notes |
 |------|------------|-------|
-| Stack | HIGH | 官方 Tailwind 文档 + 多个 2025 响应式最佳实践来源 |
-| Features | HIGH | web.dev 响应式基础 + 行业最佳实践，清晰优先级矩阵 |
-| Architecture | HIGH | Tailwind 响应式设计模式成熟，三层组件架构清晰 |
-| Pitfalls | HIGH | 多个来源汇总的常见错误，Recovery Strategies 实用 |
+| Stack | HIGH | Vercel + Next.js 官方文档完整 |
+| Features | HIGH | 部署任务明确，修复已有用户报告 |
+| Architecture | HIGH | Next.js App Router 模式成熟 |
+| Pitfalls | MEDIUM-HIGH | 已识别 6 个陷阱，有对应解决方案 |
 
 **Overall confidence:** HIGH
 
-研究基于 Tailwind CSS 官方文档、web.dev 响应式基础、多个 2025 响应式设计最佳实践，结论一致且可操作性强。
-
 ### Gaps to Address
 
-- **具体测试设备清单：** 研究建议真机测试，但未明确具体设备型号。建议规划阶段确定：iPhone SE (小屏)、iPhone 12/14 (主流)、Galaxy S 系列 (Android)、iPad (平板横屏)
-- **现有代码审计：** 研究假设从头开始，实际需先审计现有页面哪些组件已响应式、哪些需重构
+- **DNS 传播时间：** 首次配置自定义域名后 SSL 证书可能延迟，需在验证阶段耐心等待
+- **真实设备测试：** 移动端 fixed 定位问题需在真实 iOS 设备测试，模拟器可能无法复现
 
 ## Sources
 
 ### Primary (HIGH confidence)
-- [Tailwind CSS Official: Responsive Design](https://tailwindcss.com/docs/responsive-design) — 断点系统、移动优先架构
-- [Responsive Web Design Basics - web.dev](https://web.dev/articles/responsive-web-design-basics) — 响应式基础原则
-- [Tailwind CSS Official: Container Queries](https://tailwindcss.com/docs/container-queries) — 进阶响应式
+- Vercel Documentation — https://vercel.com/docs/frameworks/nextjs
+- Vercel Custom Domains — https://vercel.com/docs/domains/add-a-domain
+- Next.js Deployment — https://nextjs.org/docs/app/building-your-application/deploying
 
 ### Secondary (MEDIUM confidence)
-- [Tailwind Breakpoints: Complete 2025 Guide](https://tailkits.com/blog/tailwind-breakpoints-complete-guide/) — 断点实践
-- [Mobile-First Responsive Design Best Practices for 2025](https://www.letsgroto.com/blog/mobile-first-responsive-design-best-practices) — 2025 最佳实践
-- [Mobile UX Mistakes to Avoid - UX Matters](https://www.uxmatters.com/mt/archives/2025/08/mobile-design-mistakes-that-cost-you-customers-and-money.php) — 常见错误
-
-### Tertiary (LOW confidence)
-- [Common Mistakes in Responsive Web Design (DEV Community)](https://dev.to/dct_technology/common-mistakes-in-responsive-web-design-and-how-to-fix-them-5fo6) — 错误汇总，需验证
+- iOS Safari position:fixed Issues — Stack Overflow 社区解决方案
+- MDN: position sticky — https://developer.mozilla.org/en-US/docs/Web/CSS/position
 
 ---
 
-*Research completed: 2026-03-11*
+*Research completed: 2026-03-17*
 *Ready for roadmap: yes*

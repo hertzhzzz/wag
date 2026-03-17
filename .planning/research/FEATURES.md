@@ -148,15 +148,105 @@ From PROJECT.md:
 - Focus on layout/sizing/spacing changes, not new components
 - Test on real devices, not just DevTools
 
-## Sources
+---
 
-- [Responsive Web Design Basics - web.dev](https://web.dev/articles/responsive-web-design-basics)
-- [Mobile Website Design Best Practices for 2025 - WebStacks](https://www.webstacks.com/blog/mobile-website-design-best-practices)
-- [Touch Design for Mobile - UXPin](https://www.uxpin.com/studio/blog/responsive-design-touch-devices-key-considerations/)
-- [Tailwind Breakpoints Complete Guide 2025 - Tailkits](https://tailkits.com/blog/tailwind-breakpoints-complete-guide/)
-- [Responsive Design Best Practices 2025 - Media Plus Digital](https://mediaplusdigital.com.my/responsive-web-design-best-practices/)
-- [Mobile UX Mistakes to Avoid - UX Matters](https://www.uxmatters.com/mt/archives/2025/08/mobile-design-mistakes-that-cost-you-customers-and-money.php)
+# WAG v1.1 Deployment Features
+
+**Domain:** Corporate website deployment & minor fixes
+**Researched:** 2026-03-17
+**Confidence:** HIGH
+
+## Overview
+
+v1.1 deployment phase focuses on three targeted features: Vercel production deployment with custom domain, adding Facebook social link to Footer, and fixing mobile navbar sticky behavior. These are minor fixes, not feature development.
 
 ---
-*Feature research for: Mobile Responsive Website Improvements*
-*Researched: 2026-03-11*
+
+## Deployment Features
+
+### Vercel Deployment
+
+| Requirement | Current State | Action Needed |
+|-------------|---------------|---------------|
+| Next.js project | Ready | None - already Next.js 14.2 |
+| Build command | Configured in package.json | None |
+| Output directory | Automatic | None |
+| Environment variables | .env.local exists | Configure in Vercel dashboard |
+
+**Configuration already in place:**
+- `package.json` has `"build": "next build"`
+- `vercel.json` exists in frontend directory
+- `metadataBase` already set to `https://www.winningadventure.com.au`
+
+### Custom Domain Configuration
+
+| Step | Action | Notes |
+|------|--------|-------|
+| 1. Add domain in Vercel | Dashboard → Settings → Domains | Add winningadventure.com.au |
+| 2. Configure DNS | Update DNS records | Vercel provides instructions |
+| 3. SSL certificate | Automatic | Vercel handles Let's Encrypt |
+
+---
+
+## Social Link Features
+
+### Facebook Link Addition
+
+**Current Footer state:**
+- LinkedIn link already present (lines 17-28 in Footer.tsx)
+- Follows existing pattern with icon + text
+
+**Required addition:**
+- Facebook link in similar style to LinkedIn
+- Use Facebook icon (brand icon)
+- Place alongside LinkedIn link
+
+---
+
+## Mobile Navbar Fix
+
+### Problem Analysis
+
+**User report:** "mobile navbar cannot stay fixed when scrolling, must scroll to top to click navbar"
+
+**Current implementation (Navbar.tsx):**
+- Uses `position: fixed` with `z-[100]`
+- Listens to scroll events via `useEffect`
+- Changes appearance on scroll but maintains fixed position
+
+### Potential Issues and Solutions
+
+| Issue | Solution | Complexity |
+|-------|----------|------------|
+| Z-index conflict | Ensure no element exceeds z-[100] | LOW |
+| Parent has transform | Check parent wrappers for transform property | LOW |
+| Backdrop issues | Add `will-change-transform` | LOW |
+
+**Recommended fix:**
+```tsx
+// Add to nav element className:
+will-change-transform
+```
+
+---
+
+## v1.1 Feature Summary
+
+| Feature | Complexity | Priority |
+|---------|------------|----------|
+| Vercel deployment | LOW | P1 |
+| Custom domain (winningadventure.com.au) | LOW | P1 |
+| Fix mobile navbar sticky | LOW | P1 |
+| Add Facebook link | LOW | P2 |
+
+---
+
+## Sources
+
+- Project: Winning Adventure Global Website
+- Tech Stack: Next.js 14.2, Tailwind CSS 3.4, TypeScript
+- Deployment: Vercel (per PROJECT.md)
+- Custom domain: winningadventure.com.au (per PROJECT.md)
+
+---
+*Feature research updated: 2026-03-17*

@@ -1,303 +1,331 @@
-# Pitfalls Research
+# Domain Pitfalls: Vercel Deployment & Mobile Navbar
 
-**Domain:** Responsive Web Design (Existing Website Improvements)
-**Researched:** 2026-03-11
-**Confidence:** HIGH
+**Domain:** WAG Website v1.1 Deployment
+**Researched:** 2026-03-17
+**Confidence:** MEDIUM-HIGH
+
+---
 
 ## Executive Summary
 
-本项目为 WAG (Winning Adventure Global) 企业网站改进移动端响应式布局，使用 Next.js 14.2 + Tailwind CSS 3.4。响应式设计改进项目中常见的陷阱包括：断点使用错误、触摸目标不符合标准、导航在小屏幕上的可用性问题、以及图片/媒体未正确优化。这些陷阱在改进现有网站时尤其容易出现，因为开发者往往只在桌面端测试后就直接宣布完成。
+v1.1 里程碑聚焦于将网站部署到 Vercel 并修复移动端导航栏问题。基于 v1.0 响应式改进的研究，本阶段需要关注两类陷阱：
+
+1. **Vercel 部署陷阱**：自定义域名配置、SSL 证书、环境变量构建问题
+2. **移动端导航栏粘性陷阱**：fixed 定位在移动浏览器的兼容性问题、触摸交互问题
 
 ---
 
 ## Critical Pitfalls
 
-### Pitfall 1: Tailwind 断点前缀使用顺序错误
+### Pitfall 1: 自定义域名 SSL 证书配置失败
 
 **What goes wrong:**
-响应式类名不生效，`md:` 断点工作但 `sm:` 断点无效。在本地开发正常，生产环境失效。移动端布局直接应用桌面样式，无法按预期在较小屏幕切换。
+部署完成后，使用自定义域名（如 winningadventure.com.au）访问网站时显示 SSL 证书警告或 "Too Many Redirects" 错误。Vercel 默认提供的 SSL 证书无法正确绑定到自定义域名。
 
 **Why it happens:**
-Tailwind CSS 采用移动优先 (mobile-first) 架构。默认不带前缀的类会应用于所有屏幕尺寸，`sm:` 及以上才会覆盖。开发者习惯从大屏幕开始写，导致小屏幕样式被大屏幕样式覆盖。另一个常见原因是 `tailwind.config.js` 中自定义断点与默认断点冲突。
+- 域名 DNS 记录未正确配置（A 记录或 CNAME 指向 Vercel）
+- 首次添加域名时 SSL 证书处于 "Pending" 状态，需要时间传播
+- 域名注册商和 Vercel 的 DNS 解析存在缓存延迟
+- 同时配置了 A 记录和 CNAME 记录导致冲突
 
-**How to avoid:**
-1. 始终从移动端样式开始编写，不带前缀的类作为基础样式
-2. 使用递增断点：`class="p-4 md:p-6 lg:p-8"` 而非反序
-3. 确保 `tailwind.config.js` 未覆盖默认断点
-4. 验证视口 meta 标签存在：` <meta name="viewport" content="width=device-width, initial-scale=1">`
+**Consequences:**
+- 用户访问自定义域名时收到安全警告
+- SEO 排名下降，搜索引擎标记不安全
+- 无法启用 HSTS，影响用户体验
 
-**Warning signs:**
-- 在浏览器 DevTools 中切换到移动端视图，样式不生效
-- `sm:` 断点只在调整窗口大小后才生效（刷新后失效）
-- CSS 文件包含 `@media (max-width: ...)` 而非 `@media (min-width: ...)`
+**Prevention:**
+1. 使用 Vercel 提供的 DNS 配置指南，添加正确的 CNAME 或 A 记录
+2. 等待 SSL 证书自动签发（通常 5 分钟至 24 小时）
+3. 在域名注册商处将 TTL 设置为较低值（如 300 秒）加快传播
+4. 使用 Vercel CLI 验证域名配置：`vercel domains verify <domain>`
+
+**Detection:**
+- Vercel Dashboard 的 Domains 面板显示证书状态为 "Pending" 或 "Error"
+- 使用 `dig winningadventure.com.au` 检查 DNS 记录是否正确解析
+- 浏览器访问显示 "Your connection is not private"
 
 **Phase to address:**
-Phase 1: 首页响应式改进 — 作为首个改进页面，应建立正确的断点使用模式
+v1.1 部署阶段 — 需要在 DNS 配置后等待证书签发
 
 ---
 
-### Pitfall 2: 触摸目标尺寸不足
+### Pitfall 2: 环境变量在 Vercel 构建时缺失
 
 **What goes wrong:**
-移动端用户点击按钮、链接时经常误触相邻元素。表单提交按钮在手机上难以准确点击。导航菜单项间距过小，导致手指触碰不准确。
+本地开发正常，生产构建失败。控制台显示 "process.env.XXX is undefined" 或 Supabase/Resend 连接失败。表单提交功能在生产环境完全失效。
 
 **Why it happens:**
-桌面端设计的按钮和链接通常只有 32-40px 高度。移动端手指触控区域需要至少 44x44px (Apple) 或 48x48dp (Google Material Design) 才能舒适操作。开发者未考虑触摸交互与鼠标点击的差异。
+- 环境变量仅在本地 `.env.local` 中设置，未添加到 Vercel Project Settings
+- 环境变量名称不匹配（如本地用 `NEXT_PUBLIC_` 前缀，生产环境未加）
+- 构建时访问了客户端未暴露的服务器端环境变量
 
-**How to avoid:**
-1. 按钮最小高度：`h-12` (48px) 用于主要操作按钮
-2. 链接和导航项：确保点击区域足够大，使用 `py-2` 或 `py-3` 增加垂直内边距
-3. 表单输入框：`h-12` 或更大，确保输入区域易于触摸
-4. 间距：`gap-3` 或 `gap-4` 为触摸交互提供足够空间
-5. 使用 Tailwind 的 `touch-manipulation` 类优化触摸响应
+**Consequences:**
+- 构建失败或运行时崩溃
+- 关键功能（询价表单、Supabase 认证）不可用
+- 需要重新部署，增加上线时间
 
-**Warning signs:**
-- 用户在移动设备上反馈 "按钮太小难按"
-- DevTools 移动端模拟器中点击热图显示元素重叠
-- 链接之间间距小于 8px
+**Prevention:**
+1. 在 Vercel Dashboard → Settings → Environment Variables 中添加所有环境变量
+2. 确保客户端需要的环境变量有 `NEXT_PUBLIC_` 前缀
+3. 使用 `.env.example` 文件记录所有必需的环境变量
+4. 在本地运行 `vercel env pull` 同步环境变量到本地
+5. 部署前在 Vercel Preview 环境测试所有环境变量
+
+**Detection:**
+- Vercel Build 日志显示环境变量相关错误
+- 浏览器控制台显示 "NEXT_PUBLIC_" 相关警告
+- 特定功能（如表单）在生产环境报错，本地正常
 
 **Phase to address:**
-Phase 2-3: 服务页、关于页响应式改进 — 这些页面包含大量链接和表单元素
+v1.1 部署阶段 — 部署前必须配置完整
 
 ---
 
-### Pitfall 3: 导航在移动端不可用或体验差
+### Pitfall 3: 移动端 fixed 定位在 iOS Safari 失效
 
 **What goes wrong:**
-桌面端水平导航栏在小屏幕横向溢出，隐藏部分菜单项。移动端菜单未正确实现 hamburger 菜单，或实现后无法关闭。导航链接在小屏幕字体过小难以阅读。
+移动端滚动时导航栏随页面滚动消失，用户无法在滚动后快速点击导航菜单。需要滚动回页面顶部才能看到导航栏。
 
 **Why it happens:**
-为桌面端设计的导航结构未考虑移动端空间限制。Hamburger 菜单实现时往往忽略：无障碍支持 (aria-labels)、点击外部关闭、动画流畅性、与页面内容的层级关系 (z-index)。
+- iOS Safari 对 `position: fixed` 有特殊处理，当地址栏显示/隐藏时可能重新计算视口
+- 某些情况下 fixed 元素会变为 relative 定位
+- 页面内容滚动时 fixed 定位的参考框架可能发生偏移
 
-**How to avoid:**
-1. 桌面导航使用 `hidden md:flex`，移动端使用独立菜单组件
-2. 移动端菜单实现：点击外部关闭、ESC 键关闭、键盘导航支持
-3. 菜单项字体：`text-base` (16px) 最小值
-4. 菜单容器：`fixed inset-0 z-50` 确保覆盖整个视口
-5. 过渡动画使用 `transition-transform` 而非 `display: none` 保证动画流畅
-6. 菜单按钮固定定位：`fixed top-4 right-4 z-40`
+**Consequences:**
+- 用户无法随时访问导航，必须滚回顶部
+- 移动端用户体验严重下降
+- 违背了导航栏应始终可访问的设计原则
 
-**Warning signs:**
-- 移动端导航栏出现水平滚动
-- Hamburger 菜单点击后页面仍可滚动
-- 菜单打开/关闭无动画或动画卡顿
-- 键盘无法关闭菜单
-
-**Phase to address:**
-Phase 1-4: 所有页面 — 导航是全局组件，应在首个页面改进时一并处理
-
----
-
-### Pitfall 4: 图片和媒体未响应式优化
-
-**What goes wrong:**
-图片在小屏幕超出容器宽度导致横向滚动。图片在大屏幕拉伸变形或在小屏幕被裁剪过度。视频和嵌入内容在小屏幕溢出。
-
-**Why it happens:**
-使用固定宽度 `width="800"` 或硬编码尺寸 `<img width="800" height="600">`。未使用 `max-width: 100%` 限制图片最大宽度。未使用 Next.js 的 `<Image />` 组件进行自动优化。
-
-**How to avoid:**
-1. 图片使用响应式类：`w-full h-auto` 或 `max-w-full h-auto`
-2. 使用 Next.js `<Image />` 组件自动生成响应式尺寸
-3. 指定 `sizes` 属性帮助浏览器选择合适图片：`sizes="(max-width: 768px) 100vw, 50vw"`
-4. 视频和 iframe 使用容器包装：
-   ```html
-   <div class="relative w-full pb-[56.25%]">
-     <iframe class="absolute inset-0 w-full h-full" ... />
-   </div>
+**Prevention:**
+1. 使用 `position: sticky` 替代 `position: fixed` 作为主要方案：
+   ```css
+   position: sticky;
+   top: 0;
    ```
-5. 背景图片使用 `bg-cover bg-center bg-no-repeat`
+2. 如必须使用 fixed，添加以下 CSS 属性：
+   ```css
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   transform: translateZ(0);  /* 强制 GPU 渲染 */
+   -webkit-backface-visibility: hidden;
+   ```
+3. 为 body 添加 `-webkit-overflow-scrolling: touch` 改善滚动性能
+4. 使用 JavaScript 监听 scroll 事件作为 fallback：
+   ```javascript
+   window.addEventListener('scroll', () => {
+     if (window.scrollY > 50) {
+       document.body.classList.add('scrolled');
+     }
+   });
+   ```
 
-**Warning signs:**
-- 页面出现水平滚动条（非预期）
-- 图片在不同屏幕尺寸显示比例不一致
-- 移动端网络请求加载过大的图片
+**Detection:**
+- 在真实 iOS 设备（而非模拟器）上测试
+- 滚动页面后观察导航栏是否保持固定
+- 反复滚动多次，检查是否稳定
 
 **Phase to address:**
-Phase 1: 首页响应式改进 — 首页通常包含大量图片媒体
+v1.1 修复阶段 — 用户已报告此问题
 
 ---
 
-### Pitfall 5: 字体大小在小屏幕不可读
+### Pitfall 4: 移动端 hamburger 菜单按钮点击区域不足
 
 **What goes wrong:**
-正文文字在移动端需要缩放才能阅读。标题与正文比例失衡。行高 (line-height) 过小导致文字拥挤。
+用户点击 hamburger 菜单按钮时需要精确点击图标区域，多次尝试才能打开菜单。手指粗大的用户尤其容易误触。
 
 **Why it happens:**
-桌面端设计的正文字体通常为 16px，但在移动端相同的 16px 因视距更近反而显得过大或过小。开发者未考虑移动端阅读距离和屏幕特性。行高在桌面端设计时往往偏紧凑以节省空间。
+- 按钮仅设置了图标大小，未扩大点击热区
+- iOS Safari 不会放大 touch 目标，即使视觉上看起来足够大
+- 按钮周围的元素可能抢占点击事件
 
-**How to avoid:**
-1. 基础字体大小：Tailwind 默认 `text-base` (16px) 适用于移动端
-2. 标题缩放：`text-2xl md:text-3xl lg:text-4xl` 逐级递增
-3. 正文行高：使用 `leading-relaxed` (1.625) 或 `leading-loose` (2)
-4. 移动端优先：先确保小屏幕可读，再为大屏幕增加字号
-5. 使用 `rem` 单位而非 `px`，允许用户系统字体设置生效
+**Consequences:**
+- 用户无法顺利打开导航菜单
+- 多次点击导致菜单反复打开/关闭
+- 用户体验沮丧，可能直接离开网站
 
-**Warning signs:**
-- 移动端用户反馈文字太小
-- 在 iPhone SE 等小屏设备文字溢出容器
-- 行高小于 1.5 导致阅读困难
+**Prevention:**
+1. 确保按钮最小尺寸为 44x44px（符合 Apple HIG）：
+   ```jsx
+   <button className="min-h-11 min-w-11 ...">
+   ```
+2. 使用 `padding` 扩大点击区域：
+   ```jsx
+   className="p-2 min-h-11 min-w-11"
+   ```
+3. 添加触摸反馈（active 状态）：
+   ```css
+   .mobile-menu-btn:active {
+     background-color: rgba(0,0,0,0.1);
+   }
+   ```
+4. 确保按钮 `z-index` 高于页面其他内容
+
+**Current Status (WAG):**
+Navbar.tsx 第 60 行已设置 `min-h-11 min-w-11`，符合标准。
 
 **Phase to address:**
-Phase 1-4: 所有页面 — 字体大小是全局性问题，应建立一致的响应式排版系统
+v1.1 验证阶段 — 需在真实设备测试确认
 
 ---
 
-### Pitfall 6: 忽略横屏模式
+### Pitfall 5: Vercel 构建缓存导致样式未更新
 
 **What goes wrong:**
-用户在平板横屏模式下看到布局错误：内容过宽留白、导航位置不当、键盘弹出时布局崩溃。
+修改 Tailwind CSS 类名或样式后，Vercel 部署的页面仍显示旧样式。清除浏览器缓存后问题依旧。
 
 **Why it happens:**
-开发者仅测试竖屏移动设备，忽略横屏场景。平板横屏宽度接近甚至超过小型笔记本，但布局仍使用移动端样式。
+- Vercel 构建缓存保留了旧的 CSS 文件
+- Next.js 的 `_next/static` 目录被缓存
+- 浏览器缓存了带有旧哈希的 CSS 文件
 
-**How to avoid:**
-1. 使用媒体查询检测方向：`@media (orientation: landscape) and (min-height: 500px)`
-2. 为横屏设置额外断点：考虑 `md` (768px) 在横屏时可能需要切换到桌面布局
-3. 测试键盘弹出场景：表单输入时视口高度变化
-4. 平板横屏布局：可使用双栏布局，充分利用横屏宽度
-5. 使用 `min-h-screen` 而非 `h-screen` 避免内容被键盘遮挡
+**Consequences:**
+- 用户看不到最新的 UI 更改
+- 误以为是代码问题，反复检查
+- 延迟上线时间
 
-**Warning signs:**
-- 横屏模式下内容居中后左右留白过多
-- 键盘弹出时输入框被推出视口
-- 平板横屏访问显示移动端布局
+**Prevention:**
+1. 触发重新构建：
+   - 提交新的 commit
+   - 使用 `vercel --force` 强制重新部署
+2. 在 next.config.js 中配置正确的缓存策略：
+   ```javascript
+   module.exports = {
+     reactStrictMode: true,
+     trailingSlash: true,
+   }
+   ```
+3. 使用 Vercel 的 "Clear Cache" 按钮（在 Deployment 设置中）
+4. 确保构建命令包含清理步骤：`next build`（通常已包含）
+
+**Detection:**
+- 同一代码在本地正常，生产环境异常
+- 多次刷新后问题依旧
+- 部署历史显示使用了缓存
 
 **Phase to address:**
-Phase 3: 关于页响应式改进 — 关于页内容通常包含较多文本和图片组合
+v1.1 部署阶段 — 如遇到此问题，使用 --force 重新部署
 
 ---
 
-### Pitfall 7: 仅在开发环境测试响应式
+### Pitfall 6: 移动端滚动时触发了意外的触摸手势
 
 **What goes wrong:**
-开发时使用 Chrome DevTools 模拟移动端，发布后发现真实设备布局错误。特定设备（如 iPhone SE、三星折叠屏）显示异常。
+用户在页面滚动时意外触发了导航菜单的打开/关闭操作。滑动屏幕时手指触发了按钮的点击事件。
 
 **Why it happens:**
-DevTools 模拟器无法完全复制真实设备的触摸交互、视口行为、渲染差异。开发者依赖模拟器，未在真实设备测试。
+- 触摸事件和点击事件在移动端同时触发
+- 滚动过程中的意外触摸被误判为点击
+- 未使用 `touchstart` 事件防抖
 
-**How to avoid:**
-1. 建立真实设备测试清单：iPhone、Android 各价位设备、平板
-2. 使用 BrowserStack 等工具测试真实设备
-3. 重点测试边界设备：iPhone SE (小屏)、Galaxy Fold (折叠屏)
-4. 每次功能完成后在真实手机快速验证
-5. 收集用户设备数据，针对性测试
+**Consequences:**
+- 用户在滚动时菜单突然打开
+- 用户体验困惑和沮丧
 
-**Warning signs:**
-- 仅使用 DevTools 模拟器调整样式
-- 发布前未在真实手机打开页面
-- 未测试从未使用过的设备型号
+**Prevention:**
+1. 使用 `onPointerDown` 而非 `onClick` 捕获更精确的交互
+2. 检测滚动状态：
+   ```javascript
+   let isScrolling = false;
+   window.addEventListener('scroll', () => { isScrolling = true; });
+   window.addEventListener('scrollend', () => {
+     setTimeout(() => isScrolling = false, 100);
+   });
+   ```
+3. 或者在按钮上添加 CSS 防止意外触发：
+   ```css
+   button {
+     touch-action: manipulation;
+   }
+   ```
+
+**Current Status (WAG):**
+Navbar.tsx 使用 `onClick`，标准实现。如遇问题可考虑增强。
 
 **Phase to address:**
-Phase 1-4: 贯穿所有阶段 — 每个页面改进后都应进行真机测试
+v1.1 验证阶段 — 需在真实移动设备测试
 
 ---
 
-## Technical Debt Patterns
+## Moderate Pitfalls
 
-| Shortcut | Immediate Benefit | Long-term Cost | When Acceptable |
-|----------|-------------------|----------------|-----------------|
-| 仅测试桌面端响应式 | 节省测试时间 | 上线后移动端体验差，用户流失 | 永不 — 应视为 bug |
-| 使用 `!important` 覆盖响应式样式 | 快速解决未来样式冲突 | 难以维护，响应式逻辑混乱 | 仅作为临时调试手段 |
-| 为每个组件单独写响应式样式 | 代码组织清晰 | 样式重复，CSS 体积增大，维护成本上升 | 仅在组件确实需要独立样式时 |
-| 跳过横屏测试 | 节省测试时间 | 平板横屏用户流失 | 永不 — 平板用户占比持续增长 |
-| 使用固定 px 值而非响应式单位 | 样式精确控制 | 响应式失效，小屏幕布局崩溃 | 仅用于极细粒度的视觉微调（如 1px 边框） |
+### Pitfall 7: Vercel 默认域名与自定义域名冲突
 
----
+**What goes wrong:**
+同时通过 `xxx.vercel.app` 和 `winningadventure.com.au` 访问网站，搜索引擎可能将两者视为重复内容，导致 SEO 排名下降。
 
-## Integration Gotchas
+**Prevention:**
+1. 在 next.config.js 中配置域名重定向：
+   ```javascript
+   async redirects() {
+     return [
+       {
+         source: '/:path*',
+         destination: 'https://winningadventure.com.au/:path*',
+         permanent: true, // 301 重定向
+       },
+     ]
+   }
+   ```
+2. 在 Vercel Dashboard 设置 default 域名
 
-| Integration | Common Mistake | Correct Approach |
-|-------------|----------------|------------------|
-| Next.js `<Image />` | 未设置 `width`/`height` 导致布局偏移 | 始终设置宽高比或使用 `fill` 配合父容器 |
-| Tailwind CSS | 断点前缀顺序错误导致样式不生效 | 遵循移动优先：基础样式 → sm → md → lg → xl |
-| Google Fonts | 未使用 `swap` 显示策略导致FOIT | 使用 `display=swap` 优化加载体验 |
-| 第三方组件库 | 组件自带样式覆盖响应式类名 | 使用 Tailwind 的 `!important` 或组件的 `className` prop 完全替换 |
+### Pitfall 8: 构建日志未保存导致问题排查困难
 
----
+**What goes wrong:**
+部署失败但未保存构建日志，无法定位问题根因。
 
-## Performance Traps
-
-| Trap | Symptoms | Prevention | When It Breaks |
-|------|----------|------------|----------------|
-| 过大图片未优化 | 移动端加载超过 3 秒 | 使用 Next.js Image 组件，自动 WebP/AVIF | 移动网络用户 |
-| 每个组件单独引入字体文件 | 字体加载阻塞渲染 | 使用 Next.js `next/font` 优化 | 首次访问 |
-| 过多自定义断点 | CSS 体积增大，构建变慢 | 坚持使用 Tailwind 默认断点 | 大型项目 |
-| 响应式隐藏/显示切换 | 重复渲染，DOM 节点过多 | 条件渲染而非 CSS 显示隐藏 | 大量数据列表页面 |
-
----
-
-## Security Mistakes
-
-| Mistake | Risk | Prevention |
-|---------|------|------------|
-| 视口设置允许缩放禁用 | 视觉障碍用户无法放大 | 使用 `user-scalable=yes` 或默认不设置 |
-| 外部链接无安全属性 | 链接打开新窗口后可被钓鱼 | 使用 `rel="noopener noreferrer"` |
-| 表单无 CSRF 保护 | 请求被伪造提交 | 使用 Next.js CSRF token 机制 |
+**Prevention:**
+- 在 Vercel Dashboard 保留构建历史
+- 本地运行 `vercel build` 复现问题
 
 ---
 
-## UX Pitfalls
+## Phase-Specific Warnings
 
-| Pitfall | User Impact | Better Approach |
-|---------|-------------|-----------------|
-| 桌面端Hover状态在移动端无效 | 用户不知道可交互 | 添加触摸时的视觉反馈（如 active: 样式） |
-| 弹窗/模态框在移动端遮挡内容 | 用户无法返回 | 确保模态框可关闭，提供返回路径 |
-| 过长内容无截断或"查看更多" | 滚动过长，失去焦点 | 使用折叠/展开模式控制信息密度 |
-| 表单标签与输入框距离过远 | 移动端填完表单后不知道填了什么 | 标签置于输入框上方，间距紧凑 |
-
----
-
-## "Looks Done But Isn't" Checklist
-
-- [ ] **断点验证：** `sm:` 断点在真实移动设备 (iPhone 12 Mini) 上生效
-- [ ] **触摸目标：** 所有按钮高度 >= 48px，链接间距 >= 8px
-- [ ] **导航菜单：** 移动端 hamburger 菜单可正常打开/关闭，键盘可操作
-- [ ] **图片响应式：** 所有图片使用 `w-full` 或 Next.js `<Image />`
-- [ ] **横屏测试：** 平板横屏模式下布局正常，无溢出
-- [ ] **字体可读：** 正文 >= 16px，行高 >= 1.5
-- [ ] **水平滚动：** 页面无意外水平滚动条
-- [ ] **真机测试：** 在至少一部真实 Android 和 iOS 设备上测试
-- [ ] **性能：** 移动端 Lighthouse 性能分数 >= 80
+| Phase Topic | Likely Pitfall | Mitigation |
+|-------------|---------------|------------|
+| 自定义域名配置 | SSL 证书 Pending | 提前配置 DNS，耐心等待传播 |
+| 环境变量 | 缺失导致构建失败 | 部署前在 Preview 环境测试 |
+| 移动端导航栏 | fixed 定位 iOS 失效 | 改用 sticky 或添加 transform |
+| 表单功能 | 生产环境连接失败 | 验证所有环境变量正确配置 |
 
 ---
 
 ## Recovery Strategies
 
 | Pitfall | Recovery Cost | Recovery Steps |
-|---------|---------------|-----------------|
-| 断点不生效 | LOW | 检查类名顺序，确保基础样式无前缀；添加视口 meta 标签；清除缓存重新构建 |
-| 触摸目标过小 | LOW | 找到所有按钮/链接，增加 `h-12`、`py-2`、`gap-3` |
-| 导航菜单问题 | MEDIUM | 重构导航组件，使用状态管理控制开合，添加无障碍支持 |
-| 图片溢出 | LOW | 定位溢出元素，添加 `max-w-full overflow-hidden` |
-| 横屏布局错误 | MEDIUM | 添加横屏媒体查询，为平板设置 `lg:` 断点样式 |
+|---------|---------------|----------------|
+| SSL 证书失败 | LOW | 检查 DNS 配置，等待 24 小时，或使用 Vercel DNS |
+| 环境变量缺失 | LOW | 添加到 Vercel Settings，重新部署 |
+| iOS fixed 失效 | MEDIUM | 修改 CSS，添加 transform 或改用 sticky |
+| 构建缓存 | LOW | 使用 --force 重新部署 |
 
 ---
 
-## Pitfall-to-Phase Mapping
+## Pre-Deployment Checklist
 
-| Pitfall | Prevention Phase | Verification |
-|---------|------------------|--------------|
-| Tailwind 断点使用错误 | Phase 1 | DevTools 移动端视图验证 |
-| 触摸目标不足 | Phase 1-2 | 真实手机点击测试 |
-| 导航移动端问题 | Phase 1 | 手机打开导航操作测试 |
-| 图片未响应式 | Phase 1 | 手机屏幕截图检查溢出 |
-| 字体大小问题 | Phase 1-4 | 所有页面移动端截图对比 |
-| 忽略横屏模式 | Phase 3 | 平板横屏访问测试 |
-| 仅在模拟器测试 | Phase 1-4 | 每次完成用真机验证 |
+- [ ] 所有环境变量已添加到 Vercel Settings
+- [ ] 自定义域名 DNS 记录已配置
+- [ ] SSL 证书状态显示 "Ready"（非 Pending）
+- [ ] 在 Vercel Preview 环境测试所有页面
+- [ ] 询价表单在生产环境可正常提交
+- [ ] 移动端导航栏在 iOS 设备上测试通过
+- [ ] 运行 `npm run build` 本地通过
+- [ ] 运行 `npm run lint` 无错误
 
 ---
 
 ## Sources
 
-- [Common Mistakes in Responsive Web Design (DEV Community, 2025-04)](https://dev.to/dct_technology/common-mistakes-in-responsive-web-design-and-how-to-fix-them-5fo6)
-- [9 responsive web design mistakes to avoid (Dreamscape Design, 2025-04)](https://www.dreamscapedesign.co.uk/responsive-web-design-mistakes)
-- [Responsive Web Design Challenges in 2026 (Medium, 2026-02)](https://medium.com/@akashnagpal112/responsive-web-design-challenges-you-cant-ignore-in-2026-552d8e9d7b73)
-- [Tailwind CSS Responsive Design Documentation](https://tailwindcss.com/docs/responsive-design)
-- [How to Fix Tailwind Responsive Sm Not Working (DockUniverse, 2026-02)](https://dockuniverse.com/how-to-fix-tailwind-responsive-sm-not-working/)
-- [Website Not Responsive: 10 Most Common Issues (404 Marketing, 2025-12)](https://404marketing.co.uk/web-design/top-10-website-responsive-errors-how-to-fix-them/)
+- [Vercel Domains Documentation](https://vercel.com/docs/domains)
+- [Vercel SSL Certificate Troubleshooting](https://vercel.com/docs/domains/troubleshooting)
+- [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying)
+- [iOS Safari position:fixed Issues (Stack Overflow)](https://stackoverflow.com/questions/41540001/ios-safari-position-fixed-bugs)
+- [MDN: position sticky](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
 ---
 
-*Pitfalls research for: WAG Website Responsive Improvements*
-*Researched: 2026-03-11*
+*Pitfalls research for: WAG Website v1.1 Deployment*
+*Researched: 2026-03-17*

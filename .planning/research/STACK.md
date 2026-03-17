@@ -1,315 +1,188 @@
-# Mobile Responsive Design with Next.js + Tailwind CSS
+# Stack Research: Vercel Deployment for WAG Website
 
-**Project:** WAG Website Improvements
-**Researched:** 2026-03-11
+**Domain:** Next.js Production Deployment
+**Researched:** 2026-03-17
 **Confidence:** HIGH
 
-## Recommended Approach
+## Recommended Stack
 
-### Core Responsive Strategy: Mobile-First
+### Deployment Platform
 
-The project should use **mobile-first responsive design** with Tailwind CSS. This means:
+| Technology | Version | Purpose | Why Recommended |
+|------------|---------|---------|------------------|
+| Vercel | Platform | Hosting & CD | Native Next.js support, zero-config deployment, global CDN |
+| Next.js | 14.2.0 | Framework | Current project version, App Router |
+| Node.js | 20.x | Runtime | Required by Next.js 14.2, specified in vercel.json |
 
-1. **Default styles** apply to mobile (smallest screens)
-2. **Breakpoint prefixes** (`md:`, `lg:`, etc.) add styles for larger screens
-3. **Always test on mobile first** — fix mobile layout before expanding to desktop
+### Custom Domain Configuration
 
-**Why mobile-first:**
-- Mobile traffic dominates (70%+ of global web traffic in 2025)
-- Easier to scale up than scale down (adding complexity vs removing constraints)
-- Tailwind's default behavior aligns perfectly with this approach
+| Component | Value | Purpose |
+|-----------|-------|---------|
+| Domain | winningadventure.com.au | Primary domain for Australia-targeting site |
+| DNS Type | A record (apex) + CNAME (www) | Standard for .com.au apex domains |
+| SSL | Auto-provisioned | Vercel provides free SSL for custom domains |
 
----
+### Project Configuration Files
 
-## Tailwind CSS Breakpoints (v3.4/v4 Compatible)
-
-| Prefix | Min Width | Target | Recommended Use |
-|--------|-----------|--------|-----------------|
-| `sm` | 640px | Large phones / Small tablets | Phablets |
-| `md` | 768px | Tablets (portrait) | **Primary tablet breakpoint** |
-| `lg` | 1024px | Tablets (landscape) / Small laptops | **Primary desktop breakpoint** |
-| `xl` | 1280px | Laptops / Small desktops | Content max-width |
-| `2xl` | 1536px | Large desktops | Edge cases |
-
-**Current project is using Tailwind 3.4.0** — these breakpoints are the default and match the official docs.
-
-### Example Usage
-
-```tsx
-// WRONG: Only applies to sm and above (leaves mobile unstyled)
-<div className="sm:text-center">Hello</div>
-
-// CORRECT: Mobile default, desktop overrides
-<div className="text-center lg:text-left">Hello</div>
-
-// Stack for increasing complexity
-<div className="w-full md:w-1/2 lg:w-1/3">Content</div>
-```
+| File | Purpose | Status |
+|------|---------|--------|
+| vercel.json | Build & deployment settings | **Update needed** |
+| next.config.js | Next.js configuration | Existing |
+| .env.local | Environment variables | Existing (local only) |
 
 ---
 
-## Key Techniques for WAG Website
+## Recommended vercel.json Configuration
 
-### 1. Responsive Typography
-
-```tsx
-// Fluid typography: scales with viewport
-<h1 className="text-3xl md:text-4xl lg:text-5xl lg:leading-tight">
-  Winning Adventure Global
-</h1>
-
-// Use max-width to prevent line length issues on large screens
-<article className="prose prose-lg max-w-none md:prose-xl lg:max-w-4xl">
+```json
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "build": {
+    "env": {
+      "NODE_VERSION": "20.x"
+    }
+  },
+  "framework": "nextjs",
+  "regions": ["syd1"],
+  "functions": {
+    "app/api/**/*.ts": {
+      "runtime": "nodejs20.x",
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!api|_next/static|_next/image|favicon.ico).*)",
+      "destination": "/"
+    }
+  ]
+}
 ```
 
-### 2. Responsive Spacing
+### Configuration Explanation
 
-```tsx
-// Consistent padding
-<div className="px-4 md:px-8 lg:px-12">
-  Content
-</div>
-
-// Vertical spacing
-<section className="py-12 md:py-16 lg:py-24">
-```
-
-### 3. Responsive Grid/Flex Layouts
-
-```tsx
-// Grid that adapts
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  {/* Cards */}
-</div>
-
-// Flex stack to row
-<div className="flex flex-col md:flex-row gap-4">
-  {/* Side-by-side on desktop */}
-</div>
-```
-
-### 4. Responsive Navigation
-
-```tsx
-// Mobile: hidden by default, shown via state
-<nav className={`fixed inset-0 bg-navy z-50 ${isOpen ? 'block' : 'hidden'} md:relative md:bg-transparent md:block`}>
-
-// Mobile menu button (only visible on mobile)
-<button className="md:hidden">Menu</button>
-```
-
-### 5. Responsive Images
-
-```tsx
-// Use srcset pattern via next/image
-<Image
-  src="/hero.jpg"
-  alt="WAG Services"
-  width={800}
-  height={400}
-  className="w-full h-auto"
-  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-/>
-```
-
-### 6. Responsive Touch Targets (Critical for Mobile)
-
-```tsx
-// Minimum 44x44px touch targets
-<button className="min-h-[44px] min-w-[44px] px-4 py-2">
-  Contact Us
-</button>
-
-// Links in navigation
-<a className="block py-3 px-4 min-h-[44px]">Link</a>
-```
+| Property | Purpose | Why Needed |
+|----------|---------|------------|
+| `$schema` | IDE autocomplete | Improves DX, catches errors |
+| `framework` | Auto-detect override | Explicit for Next.js |
+| `regions` | Server location | Sydney closest to Australian users |
+| `functions` | API route config | Set timeout for form handling |
+| `headers` | Security headers | Protect against common attacks |
+| `rewrites` | SPA fallback | Ensure all routes work |
 
 ---
 
-## Container Queries (Advanced)
+## Custom Domain Setup Process
 
-**When to use:** Components that need to respond to their parent container, not viewport.
+### Step 1: Add Domain in Vercel Dashboard
 
-**WAG use case:** Reusable cards/components that appear in different page contexts (sidebar, main content, grid).
+1. Go to Vercel Dashboard > Project > Settings > Domains
+2. Click "Add Domain"
+3. Enter: `winningadventure.com.au`
+4. Vercel will show DNS records to configure
 
-```tsx
-// Parent marks itself as container
-<div className="@container">
-  {/* Child uses @-prefixed variants */}
-  <div className="flex flex-col @md:flex-row">
-    Content
-  </div>
-</div>
-```
+### Step 2: Configure DNS Records (at Domain Registrar)
 
-**Why not default:** Container queries add complexity. Use viewport-based responsive (default Tailwind) first. Add container queries only when:
-- Same component used in dramatically different container widths
-- Building reusable component library
+For apex domain `winningadventure.com.au`:
+
+| Record Type | Name | Value | TTL |
+|------------|------|-------|-----|
+| A | @ | 76.76.21.21 | Auto |
+| CNAME | www | cname.vercel-dns.com | Auto |
+
+**Note:** Replace `cname.vercel-dns.com` with the actual CNAME shown in Vercel dashboard (unique per project).
+
+### Step 3: Verify & Deploy
+
+- Vercel auto-provisions SSL certificate
+- Domain shows "Ready" when verified (may take up to 24 hours)
+- Traffic automatically routes to Vercel CDN
+
+---
+
+## Environment Variables for Production
+
+Required in Vercel Project Settings:
+
+| Variable | Current Status | Notes |
+|----------|----------------|-------|
+| NEXT_PUBLIC_SUPABASE_URL | Not set | Needed for production |
+| NEXT_PUBLIC_SUPABASE_ANON_KEY | Not set | Needed for production |
+| RESEND_API_KEY | Not set | Required for enquiry form |
+
+**Action:** Add these in Vercel Dashboard > Settings > Environment Variables before deployment.
+
+---
+
+## Alternatives Considered
+
+| Recommended | Alternative | When to Use Alternative |
+|-------------|-------------|-------------------------|
+| Vercel | Netlify | If preferring Netlify's features |
+| Vercel | Self-host (VPS) | If needing full server control |
+| A + CNAME records | Nameservers | If using Vercel DNS directly |
+
+**Why Vercel for this project:**
+- Native Next.js optimization (ISR, SSR, Image Optimization)
+- Zero-config deployments from Git
+- Free SSL with custom domains
+- Closest edge servers to Australian audience (Sydney region)
 
 ---
 
 ## What NOT to Use
 
-### 1. Desktop-First Mindset
-
-```tsx
-// AVOID: Desktop-first (wrong approach)
-<div className="lg:w-1/2 w-full">Content</div>
-
-// PREFER: Mobile-first
-<div className="w-full lg:w-1/2">Content</div>
-```
-
-**Why:** Desktop-first leads to forgotten mobile states and code duplication.
-
-### 2. Hardcoded Pixel Values
-
-```tsx
-// AVOID: px values break fluid design
-<div className="px-[320px]">
-
-// PREFER: Tailwind spacing scale
-<div className="px-4 md:px-8">
-```
-
-### 3. Fixed Heights
-
-```tsx
-// AVOID: Fixed height clips content
-<div className="h-64">
-
-// PREFER: min-height or let content dictate
-<div className="min-h-screen">
-```
-
-### 4. Ignoring Touch Targets
-
-```tsx
-// AVOID: Too small for touch
-<button className="px-2 py-1">Click</button>
-
-// PREFER: Minimum 44px touch target
-<button className="px-4 py-3">Click</button>
-```
+| Avoid | Why | Use Instead |
+|-------|-----|-------------|
+| Node.js 18 | Next.js 14.2 requires 20.x | Node.js 20.x |
+| BuildCommand override | Next.js auto-detects correctly | Remove custom buildCommand |
+| outputDirectory: "build" | Next.js uses ".next" | Let Next.js default |
 
 ---
 
-## Next.js Specific Patterns
+## Build & Deploy Commands
 
-### Server Components + Responsive
+Current package.json scripts work without modification:
 
-```tsx
-// Server component: fetch data, pass to client component
-// app/page.tsx (Server Component)
-import { ServicesGrid } from '@/components/ServicesGrid';
+```bash
+# Build (Vercel uses this automatically)
+npm run build
 
-export default function Page() {
-  const services = await getServices();
-  return <ServicesGrid services={services} />;
-}
-
-// components/ServicesGrid.tsx (Client Component - needs interactivity)
-'use client';
-import { useState } from 'react';
-
-export function ServicesGrid({ services }) {
-  // Mobile-first: default collapsed state
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.map(service => (
-        <ServiceCard key={service.id} service={service} />
-      ))}
-    </div>
-  );
-}
+# Start (not needed on Vercel - uses Next.js production)
+npm run start
 ```
 
-### Responsive Images with next/image
-
-```tsx
-import Image from 'next/image';
-
-export function HeroImage() {
-  return (
-    <div className="relative w-full aspect-video">
-      <Image
-        src="/hero.jpg"
-        alt="WAG Team"
-        fill
-        className="object-cover"
-        // Automatically serves different sizes
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        priority
-      />
-    </div>
-  );
-}
-```
-
----
-
-## Tailwind Config Recommendations
-
-The current config is minimal. **No changes needed** for responsive design — default breakpoints work well.
-
-**Optional enhancement** if custom breakpoints required:
-
-```ts
-// tailwind.config.ts (only if needed)
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: [/* existing */],
-  theme: {
-    extend: {
-      // Only add if default breakpoints don't work for your design
-      // screens: {
-      //   'xs': '480px',  // Large phones
-      //   '3xl': '1920px', // Ultra-wide
-      // },
-    },
-  },
-  plugins: [/* existing */],
-};
-export default config;
-```
-
-**Recommendation:** Keep default breakpoints. They cover 95%+ of use cases.
-
----
-
-## Priority Order for WAG Pages
-
-Based on likely mobile issues:
-
-| Priority | Page | Common Issues |
-|----------|------|---------------|
-| 1 | `/enquiry` | Form fields too small, horizontal scroll |
-| 2 | `/services` | Grid overflow, card clipping |
-| 3 | `/` | Hero text overflow, navigation menu |
-| 4 | `/about` | Content width issues on tablet |
-| 5 | `/resources` | Article readability on small screens |
-
----
-
-## Testing Checklist
-
-- [ ] Chrome DevTools Device Mode (all breakpoints)
-- [ ] Physical device testing (iOS Safari, Android Chrome)
-- [ ] Touch target minimum 44px
-- [ ] No horizontal scroll (viewport meta tag correct)
-- [ ] Text readable without zooming
-- [ ] Images load correctly at all sizes
-- [ ] Forms usable on mobile (inputs don't zoom)
+**Vercel automatically runs:** `npm run build` which executes `next build`
 
 ---
 
 ## Sources
 
-- [Tailwind CSS Official: Responsive Design](https://tailwindcss.com/docs/responsive-design) — **HIGH confidence**
-- [Tailwind CSS Official: Container Queries](https://tailwindcss.com/docs/container-queries) — **HIGH confidence**
-- [Tailwind Breakpoints: Complete 2025 Guide](https://tailkits.com/blog/tailwind-breakpoints-complete-guide/) — **MEDIUM confidence**
-- [Mobile-First Responsive Design Best Practices for 2025](https://www.letsgroto.com/blog/mobile-first-responsive-design-best-practices) — **MEDIUM confidence**
-- [9 Responsive Design Best Practices for 2025](https://nextnative.dev/blog/responsive-design-best-practices) — **MEDIUM confidence**
+- [Vercel Project Configuration](https://vercel.com/docs/project-configuration) — **HIGH confidence**
+- [Vercel Custom Domains](https://vercel.com/docs/domains/add-a-domain) — **HIGH confidence**
+- [Next.js on Vercel](https://vercel.com/docs/frameworks/nextjs) — **HIGH confidence**
+- [Vercel vercel.json Schema](https://vercel.com/docs/project-configuration/vercel-json) — **HIGH confidence**
+
+---
+
+*Stack research for: WAG Website v1.1 Deployment*
+*Researched: 2026-03-17*
