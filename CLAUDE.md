@@ -1,0 +1,130 @@
+# CLAUDE.md — WAG Website
+
+> Winning Adventure Global 官网项目
+
+## Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| Framework | Next.js 14.2 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS 3.4 |
+| Backend | Supabase (Auth + DB) |
+| Email | Resend |
+| Media | Remotion (视频动画) |
+| Charts | ECharts |
+| Content | MDX + gray-matter |
+
+## Commands
+
+```bash
+cd web/frontend
+
+npm run dev          # 开发服务器 (localhost:3000)
+npm run dev:admin   # 管理后台 (localhost:3001)
+npm run build       # 生产构建 [必须提交前通过]
+npm run lint        # ESLint 检查
+```
+
+## Project Structure
+
+```
+web/frontend/
+├── app/                    # Next.js App Router
+│   ├── page.tsx            # 首页 (/)
+│   ├── services/           # 服务页面
+│   ├── about/             # 关于页面
+│   ├── resources/         # 博客/文章 [动态: /resources/[slug]]
+│   ├── enquiry/           # 询价表单
+│   ├── api/               # API 路由
+│   └── components/        # UI 组件
+│       └── industries/    # 行业组件
+├── content/                # Markdown 博客内容
+├── lib/                    # 工具函数
+├── public/                 # 静态资源
+└── shared/                 # 共享代码
+```
+
+## Conventions
+
+| Rule | Standard |
+|------|----------|
+| Components | Server by default, `'use client'` when needed |
+| Component size | < 200 lines |
+| Naming | PascalCase (components), camelCase (utils) |
+| Styling | Tailwind utility classes |
+
+## Design System
+
+| Token | Value |
+|-------|-------|
+| Primary | `#0F2D5E` (Navy) |
+| Accent | `#F59E0B` (Amber) |
+| Fonts | IBM Plex Sans, IBM Plex Serif |
+
+## Rules
+
+- **禁止** emoji
+- **禁止** "WA" 缩写，使用 "Winning Adventure Global" 或 "WAG"
+- 提交前必须：`npm run build` && `npm run lint`
+- 5 个页面必须可访问：`/`, `/services`, `/about`, `/resources`, `/enquiry`
+
+## Env
+
+```
+web/frontend/.env.local  # Supabase + Resend 凭证
+```
+
+> 不要提交 `.env.local` 到版本控制
+
+## Validation Checklist
+
+```
+[ ] npm run build 通过
+[ ] npm run lint 无错误
+[ ] 5 个页面均可访问
+[ ] 询价表单正常工作
+```
+
+## Design Context
+
+### Users
+- **目标用户**: 害怕在 1688/Alibaba 等线上平台采购踩坑的澳大利亚企业
+- **用户痛点**: 担心质量问题、欺诈风险、沟通障碍
+- **核心需求**: 想要实地考察中国工厂，获得专业的线下服务保障
+- **使用场景**: 首次采购或已有供应链想要优化升级的企业决策者
+
+### Brand Personality
+- **品牌调性**: 高端定制 + 权威专业
+- **核心信息**: 帮助企业安全、高效地连接中国优质制造商
+- **情感目标**: 建立信任、消除焦虑、彰显专业价值
+- **品牌个性 (3词)**: 可靠、专业、专属
+
+### Aesthetic Direction
+- **视觉风格**: 综合平衡 - 大胆现代 + 精致优雅 + 务实可信
+- **优化策略**: 基于现有设计系统优化，提升专业度
+- **设计原则**:
+  1. **信任构建**: 通过专业视觉元素建立可信度
+  2. **降低焦虑**: 清晰的服务流程和成功案例
+  3. **高端质感**: 精致的排版、充足的留白、考究的细节
+  4. **行动导向**: 明确的 CTA，引导用户迈出第一步
+- **现有设计语言**: Navy (#0F2D5E) + Amber (#F59E0B)，IBM Plex 字体
+
+### Design Principles
+1. **专业感优先**: 每一处细节都要体现专业水准
+2. **信任可视化**: 成功案例、数据背书、资质展示
+3. **简化决策**: 清晰的服务介绍，降低选择难度
+4. **情感共鸣**: 理解用户担忧，提供安全感
+5. **高端不张扬**: 质感升级但不俗气
+
+---
+
+*Updated: 2026-03-17*
+
+---
+
+*Updated: 2026-03-08*
+
+
+mobile navbar没有能一直常驻在页面顶部，如果滑下去的话没法点击navbar，必须要滑到最上面
+--effor max

@@ -2,55 +2,70 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleLinkClick = () => {
     setMobileMenuOpen(false)
   }
 
   return (
-    <nav className="bg-white h-[72px] flex items-center px-4 md:px-10 border-b border-gray-200 fixed top-0 left-0 right-0 z-[100]">
-      <Link href="/" className="flex-shrink-0">
-        <Image src="/logo.png" alt="Winning Adventure Global" width={200} height={25} className="h-9 w-auto" />
-      </Link>
-
-      <ul className="hidden md:flex gap-9 list-none flex-1 justify-center">
-        <li>
-          <Link href="/" className="nav-link">Home</Link>
-        </li>
-        <li>
-          <Link href="/services" className="nav-link">Services</Link>
-        </li>
-        <li>
-          <Link href="/resources" className="nav-link">Resources</Link>
-        </li>
-        <li>
-          <Link href="/about" className="nav-link">About</Link>
-        </li>
-      </ul>
-
-      <div className="hidden md:flex">
-        <Link
-          href="/enquiry"
-          className="text-[13px] font-medium text-white px-[22px] py-[9px] flex-shrink-0 bg-gradient-to-r from-[#0F2D5E] to-[#1a3d6e] shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
-        >
-          Start Your Factory Tour →
+    <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+      scrolled
+        ? 'bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(15,45,94,0.08)] py-2'
+        : 'bg-white py-4'
+    }`}>
+      <div className="max-w-[1400px] mx-auto w-full flex items-center">
+        <Link href="/" className="flex-shrink-0 h-10 w-[200px] md:h-12 md:w-[240px] relative">
+          <Image src="/logo.png" alt="Winning Adventure Global" fill className="object-contain" priority />
         </Link>
-      </div>
 
-      <button
-        className="md:hidden ml-auto bg-transparent border-0 text-navy cursor-pointer min-h-11 min-w-11 flex items-center justify-center"
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        aria-label="Toggle navigation menu"
-        aria-expanded={mobileMenuOpen}
-        aria-controls="mobile-menu"
-      >
-        <Menu size={22} />
-      </button>
+        <ul className="hidden md:flex gap-9 list-none flex-1 justify-center">
+          <li>
+            <Link href="/" className="nav-link">Home</Link>
+          </li>
+          <li>
+            <Link href="/services" className="nav-link">Services</Link>
+          </li>
+          <li>
+            <Link href="/resources" className="nav-link">Resources</Link>
+          </li>
+          <li>
+            <Link href="/about" className="nav-link">About</Link>
+          </li>
+        </ul>
+
+        <div className="hidden md:flex">
+          <Link
+            href="/enquiry"
+            className="text-[13px] font-medium text-white px-[22px] py-[9px] flex-shrink-0 bg-gradient-to-r from-[#0F2D5E] to-[#1a3d6e] shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
+          >
+            Start Your Factory Tour →
+          </Link>
+        </div>
+
+        <button
+          className="md:hidden ml-auto bg-transparent border-0 text-navy cursor-pointer min-h-11 min-w-11 flex items-center justify-center"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
+        >
+          <Menu size={22} />
+        </button>
+      </div>
 
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
