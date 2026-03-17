@@ -131,7 +131,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#0F2D5E] py-16 px-8">
+      <section className="bg-[#0F2D5E] pb-16 px-8">
         <div className="max-w-[1100px] mx-auto">
           <nav className="flex items-center gap-2 text-xs text-blue-300 uppercase tracking-wider mb-6">
             <Link href="/" className="hover:text-white">Home</Link>
@@ -144,11 +144,21 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <h1 className="font-serif font-bold text-[clamp(1.75rem,3.5vw,2.75rem)] text-white leading-tight mb-6">
             {fm.title}
           </h1>
-          <div className="flex items-center gap-4 text-sm text-blue-200">
+          <div className="flex items-center gap-4 text-sm text-blue-200 mb-8">
             <span>By {fm.author}</span>
             <span>·</span>
             <span>{fm.readTime}</span>
           </div>
+          {/* Cover image */}
+          {fm.coverImage && (
+            <div className="mt-6 rounded-lg overflow-hidden">
+              <img
+                src={fm.coverImage}
+                alt={fm.title}
+                className="w-full h-[200px] md:h-[300px] object-cover"
+              />
+            </div>
+          )}
         </div>
       </section>
 
