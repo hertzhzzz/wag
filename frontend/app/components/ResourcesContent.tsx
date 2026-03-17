@@ -71,10 +71,10 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-[#0F2D5E] py-14 px-4 md:px-12 border-b-4 border-[#F59E0B]">
+      <div className="bg-[#0F2D5E] py-8 md:py-14 px-4 md:px-12 border-b-4 border-[#F59E0B]">
         <div className="max-w-[1200px] mx-auto">
           <p className="text-xs font-bold tracking-[2px] uppercase text-[#F59E0B] mb-3">Knowledge Hub</p>
-          <h1 className="font-serif text-white text-[42px] font-semibold leading-tight">Resources &amp; Insights</h1>
+          <h1 className="font-serif text-white text-[32px] md:text-[42px] font-semibold leading-tight">Resources &amp; Insights</h1>
           <p className="text-base text-gray-300 max-w-[560px] mt-3">
             Expert guides on China sourcing, factory visits, and cross-border trade for Australian B2B businesses.
           </p>
@@ -121,7 +121,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
             </Link>
 
             {/* Right: text */}
-            <div className="bg-white p-10 flex flex-col">
+            <div className="bg-white p-6 md:p-10 flex flex-col">
               <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-4">
                 Featured Article &nbsp;·&nbsp; {featured.date} &nbsp;·&nbsp; {featured.readTime}
               </p>
@@ -211,7 +211,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
               <p className="text-gray-300 text-[15px] mb-8">
                 Monthly insights on China sourcing, delivered to Australian importers who want an edge.
               </p>
-              <form onSubmit={handleSubscribe} className="flex max-w-[440px] mx-auto">
+              <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row gap-4 max-w-[440px] mx-auto">
                 <input
                   type="email"
                   value={email}
