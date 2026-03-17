@@ -71,8 +71,8 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Technical SEO foundation (page metadata + Service schema)
-- [ ] 06-02-PLAN.md — Content strategy (5 blog articles + internal linking)
-- [ ] 06-03-PLAN.md — Core Web Vitals + Local SEO optimization
+- [x] 06-02-PLAN.md — Content strategy (5 blog articles + internal linking)
+- [x] 06-03-PLAN.md — Core Web Vitals + Local SEO optimization
 
 ### Success Criteria
 
