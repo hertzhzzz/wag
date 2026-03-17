@@ -57,7 +57,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden ml-auto bg-transparent border-0 text-navy cursor-pointer min-h-11 min-w-11 flex items-center justify-center"
+          className="md:hidden ml-auto bg-white/90 backdrop-blur-sm border-0 text-navy cursor-pointer min-h-11 min-w-11 flex items-center justify-center rounded-lg shadow-sm"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
