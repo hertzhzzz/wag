@@ -4,7 +4,7 @@
 
 - ✅ **v1.0 MVP** — Phases 1-4 (shipped 2026-03-17)
 - ✅ **v1.1 Deployment & Minor Fixes** — Phase 5 (shipped 2026-03-17)
-- ✅ **v1.3 SEO Optimization** — Phase 6 (complete)
+- ✅ **v1.3 SEO Optimization** — Phase 6 (in progress: gap closure)
 
 ## Phases
 
@@ -29,27 +29,9 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 3. Global UI Audit | v1.0 | 6/6 | Complete |
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
-| 6. SEO Optimization | v1.3 | 3/3 | Complete |
+| 6. SEO Optimization | v1.3 | 6/6 | In Progress |
 
-**Total:** 6 phases, 18 plans, 72% complete
-
-### Phase 5: Vercel Deployment
-
-**Goal:** Deploy website to Vercel production and fix mobile navigation issues
-**Requirements**: DEPLOY-01, DEPLOY-02, DEPLOY-03, DEPLOY-04, MOBILE-01, MOBILE-02, SOCIAL-01
-**Depends on:** Phase 4
-**Plans:** 2/2 plans complete
-
-Plans:
-- [x] 05-01-PLAN.md — UI Fixes (Facebook link + mobile navbar verification)
-- [x] 05-02-PLAN.md — Vercel deployment with custom domain (in progress)
-
-### Success Criteria
-
-1. Website accessible at winningadventure.com.au
-2. HTTPS working with valid SSL certificate
-3. Mobile navbar remains visible and clickable when scrolling
-4. Facebook link visible in Footer
+**Total:** 6 phases, 24 plans (including gap closure)
 
 ---
 
@@ -67,12 +49,15 @@ Plans:
 
 **Depends on:** Phase 5
 
-**Plans:** 3/3 planned
+**Plans:** 3/3 original + 3/3 gap closure
 
 Plans:
 - [x] 06-01-PLAN.md — Technical SEO foundation (page metadata + Service schema)
 - [x] 06-02-PLAN.md — Content strategy (5 blog articles + internal linking)
 - [x] 06-03-PLAN.md — Core Web Vitals + Local SEO optimization
+- [ ] 06-04-PLAN.md — Fix enquiry form 500 error (gap closure)
+- [ ] 06-05-PLAN.md — Add cover image to blog article Hero (gap closure)
+- [ ] 06-06-PLAN.md — Verify /services link in blog articles (gap closure)
 
 ### Success Criteria
 
@@ -82,6 +67,9 @@ Plans:
 4. 5 blog articles targeting long-tail keywords created
 5. LocalBusiness schema enhanced with Adelaide address
 6. Hero images optimized with priority loading for LCP
+7. Enquiry form submits successfully without 500 error
+8. Blog articles display cover images in Hero section
+9. Blog articles contain internal links to /services
 
 ---
 
