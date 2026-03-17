@@ -1,0 +1,176 @@
+import type { Metadata } from 'next'
+import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
+import Script from 'next/script'
+import './globals.css'
+
+const ibmPlexSans = IBM_Plex_Sans({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-ibm-plex-sans',
+})
+
+const ibmPlexSerif = IBM_Plex_Serif({
+  weight: ['300', '400', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-ibm-plex-serif',
+})
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://www.winningadventure.com.au'),
+  title: {
+    template: '%s | Winning Adventure Global',
+    default: 'Winning Adventure Global — China Factory Tours for Australian Businesses',
+  },
+  description: 'We take Australian businesses directly to China\'s best manufacturers. Book your factory tour today with bilingual guides and verified suppliers.',
+  keywords: ['China factory tour', 'Australian business China sourcing', 'B2B manufacturing China', 'factory tour China', 'China procurement agent'],
+  authors: [{ name: 'Andy Liu' }],
+  creator: 'Winning Adventure Global',
+  publisher: 'Winning Adventure Global',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_AU',
+    url: 'https://www.winningadventure.com.au',
+    siteName: 'Winning Adventure Global',
+    title: 'Winning Adventure Global — China Factory Tours for Australian Businesses',
+    description: 'We take Australian businesses directly to China\'s best manufacturers. Book your factory tour today.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Winning Adventure Global - China Factory Tours',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Winning Adventure Global',
+    description: 'China factory tours for Australian businesses',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://www.winningadventure.com.au',
+    languages: {
+      en: 'https://www.winningadventure.com.au',
+    },
+  },
+  verification: {
+    google: 'G-VEGJ1YL8YR',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' },
+    ],
+  },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VEGJ1YL8YR');
+          `}
+        </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Winning Adventure Global",
+              "url": "https://www.winningadventure.com.au",
+              "logo": "https://www.winningadventure.com.au/logo.png",
+              "description": "China factory tours for Australian businesses",
+              "founder": {
+                "@type": "Person",
+                "name": "Andy Liu"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5, 54 Melbourne St",
+                "addressLocality": "North Adelaide",
+                "addressRegion": "SA",
+                "postalCode": "5006",
+                "addressCountry": "AU"
+              },
+              "telephone": "+61-416588198",
+              "abn": "30 659 034 919",
+              "areaServed": {
+                "@type": "Country",
+                "name": "Australia"
+              },
+              "serviceType": ["Factory Tour", "Procurement Support", "Supplier Verification"],
+              "priceRange": "$$$"
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Winning Adventure Global",
+              "image": "https://www.winningadventure.com.au/logo.png",
+              "url": "https://www.winningadventure.com.au",
+              "telephone": "+61-416588198",
+              "priceRange": "$$$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5, 54 Melbourne St",
+                "addressLocality": "North Adelaide",
+                "addressRegion": "SA",
+                "postalCode": "5006",
+                "addressCountry": "AU"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -34.9067,
+                "longitude": 138.5765
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }
+            })
+          }}
+        />
+      </head>
+      <body>{children}</body>
+    </html>
+  )
+}

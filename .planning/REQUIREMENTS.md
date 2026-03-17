@@ -16,12 +16,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Mobile Navigation
 
-- [ ] **MOBILE-01**: Navbar remains visible when scrolling down on mobile devices
-- [ ] **MOBILE-02**: Navbar is clickable/tappable when scrolled down on mobile
+- [x] **MOBILE-01**: Navbar remains visible when scrolling down on mobile devices
+- [x] **MOBILE-02**: Navbar is clickable/tappable when scrolled down on mobile
 
 ### Social Links
 
-- [ ] **SOCIAL-01**: Facebook link is added to Footer alongside existing LinkedIn
+- [x] **SOCIAL-01**: Facebook link is added to Footer alongside existing LinkedIn
 
 ## v2 Requirements
 
@@ -49,9 +49,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DEPLOY-02 | Phase 1 | Pending |
 | DEPLOY-03 | Phase 1 | Pending |
 | DEPLOY-04 | Phase 1 | Pending |
-| MOBILE-01 | Phase 1 | Pending |
-| MOBILE-02 | Phase 1 | Pending |
-| SOCIAL-01 | Phase 1 | Pending |
+| MOBILE-01 | Phase 1 | Complete |
+| MOBILE-02 | Phase 1 | Complete |
+| SOCIAL-01 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 7 total
