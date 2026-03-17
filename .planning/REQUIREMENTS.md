@@ -12,7 +12,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **RESP-01**: Home page adapts to mobile screens (320px to 1920px+)
 - [x] **RESP-02**: Services page adapts to mobile screens
 - [x] **RESP-03**: About page adapts to mobile screens
-- [ ] **RESP-04**: Enquiry form page adapts to mobile screens
+- [x] **RESP-04**: Enquiry form page adapts to mobile screens
 - [x] **RESP-05**: No horizontal scroll on any page at 320px width
 
 ### Touch Targets
@@ -85,7 +85,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RESP-01 | Phase 1 | Complete |
 | RESP-02 | Phase 2 | Complete |
 | RESP-03 | Phase 2 | Complete |
-| RESP-04 | Phase 3 | Pending |
+| RESP-04 | Phase 3 | Complete |
 | RESP-05 | Phase 1 | Complete |
 | TOUCH-01 | Phase 1 | Complete |
 | TOUCH-02 | Phase 1 | Complete |
