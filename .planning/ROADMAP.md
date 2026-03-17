@@ -30,7 +30,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
 | 6. SEO Optimization | 6/6 | Complete | |
-| 06.1. Vercel Gmail Config | 1/1 | Planned | |
+| 06.1. Vercel Gmail Config | 1/1 | Complete    | 2026-03-17 |
 
 **Total:** 6 phases, 24 plans (including gap closure)
 
@@ -80,7 +80,7 @@ Plans:
 
 **Goal:** Configure GMAIL_USER and GMAIL_APP_PASSWORD in Vercel production to fix enquiry form email functionality
 **Depends on:** Phase 6
-**Plans:** 1/1 plan completed
+**Plans:** 1/1 plans complete
 
 Plans:
 - [x] 06.1-01-PLAN.md — Configure Gmail credentials in Vercel
