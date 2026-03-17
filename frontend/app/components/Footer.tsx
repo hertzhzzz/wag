@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <Image src="/logo.png" alt="Winning Adventure Global" width={200} height={25} className="h-10 w-auto max-w-[200px]" />
+              <Image src="/logo-footer.png" alt="Winning Adventure Global" width={200} height={25} className="h-10 w-auto max-w-[200px]" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-[260px] mb-6">
               Connecting Australian businesses with China&apos;s finest manufacturers. Your trusted partner for factory sourcing and business travel.
