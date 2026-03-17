@@ -14,3 +14,16 @@
 
 ---
 
+## v1.1 Deployment & Minor Fixes (Shipped: 2026-03-17)
+
+**Phases completed:** 1 phase, 2 plans
+
+**Key accomplishments:**
+1. Deployment: Vercel production deployment with custom domain winningadventure.com.au
+2. GitHub Integration: Auto-deploy enabled on push to master
+3. Mobile Fix: Hamburger menu background and scroll lock fixes
+
+**Timeline:** 1 day (2026-03-17)
+
+---
+
