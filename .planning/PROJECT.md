@@ -19,7 +19,14 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 
 ### Active
 
-(Next milestone requirements to be defined)
+## Current Milestone: v1.1 Deployment & Minor Fixes
+
+**Goal:** Deploy website to production and fix remaining minor issues
+
+**Target features:**
+- Deploy to Vercel with custom domain winningadventure.com.au
+- Add Facebook social link to Footer
+- Fix mobile navbar sticky behavior (user reported: scrolls away, can't tap)
 
 ### Out of Scope
 
@@ -68,3 +75,15 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 
 ---
 *Last updated: 2026-03-17 after v1.0 milestone*
+
+## Current Milestone: v1.1 Deployment & Minor Fixes
+
+**Goal:** Deploy website to production and fix remaining minor issues
+
+**Target features:**
+- Deploy to Vercel with custom domain winningadventure.com.au
+- Add Facebook social link to Footer
+- Fix mobile navbar sticky behavior
+
+---
+*Last updated: 2026-03-17 after v1.1 milestone started*
