@@ -29,7 +29,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 3. Global UI Audit | v1.0 | 6/6 | Complete |
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
-| 6. SEO Optimization | v1.3 | 6/6 | In Progress |
+| 6. SEO Optimization | 5/6 | In Progress|  |
 
 **Total:** 6 phases, 24 plans (including gap closure)
 
@@ -49,14 +49,14 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 
 **Depends on:** Phase 5
 
-**Plans:** 3/3 original + 3/3 gap closure
+**Plans:** 5/6 plans executed
 
 Plans:
 - [x] 06-01-PLAN.md — Technical SEO foundation (page metadata + Service schema)
 - [x] 06-02-PLAN.md — Content strategy (5 blog articles + internal linking)
 - [x] 06-03-PLAN.md — Core Web Vitals + Local SEO optimization
-- [ ] 06-04-PLAN.md — Fix enquiry form 500 error (gap closure)
-- [ ] 06-05-PLAN.md — Add cover image to blog article Hero (gap closure)
+- [x] 06-04-PLAN.md — Fix enquiry form 500 error (gap closure)
+- [x] 06-05-PLAN.md — Add cover image to blog article Hero (gap closure)
 - [ ] 06-06-PLAN.md — Verify /services link in blog articles (gap closure)
 
 ### Success Criteria
