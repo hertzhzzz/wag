@@ -1,136 +1,113 @@
 # Testing Patterns
 
-**Analysis Date:** 2026-03-16
+**Analysis Date:** 2026-03-17
 
 ## Test Framework
 
-**Runner:**
-- Not configured - No test framework (Jest, Vitest, etc.) is installed
-- ESLint is configured but no test runner
-- Project uses Next.js 14.2.0 with TypeScript
+- **Framework:** Playwright v1.58.2
+- **Config:** `frontend/playwright.config.ts`
+- **Test Directory:** `frontend/tests/`
 
-**Linting Only:**
-```bash
-npm run lint    # Runs next lint (ESLint)
-npm run build   # TypeScript compilation check
-```
+## Configuration
 
-**Note:** The project does not have automated tests. Tests would need to be added.
-
-## Test File Organization
-
-**Location:**
-- Not applicable - No test files exist in the project source
-- All test files found are in `node_modules/` (library tests)
-
-**Naming:**
-- Not applicable
-
-**Structure:**
-- Not applicable
-
-## Test Structure
-
-**Suite Organization:**
-- Not applicable
-
-**Patterns:**
-- Not applicable
-
-## Mocking
-
-**Framework:** Not applicable
-
-**Patterns:**
-- Not applicable
-
-**What to Mock:**
-- Not applicable
-
-**What NOT to Mock:**
-- Not applicable
-
-## Fixtures and Factories
-
-**Test Data:**
-- Not applicable
-
-**Location:**
-- Not applicable
-
-## Coverage
-
-**Requirements:** None enforced
-
-**View Coverage:**
-- Not available - no test runner configured
-
-## Test Types
-
-**Unit Tests:**
-- Not implemented
-
-**Integration Tests:**
-- Not implemented
-
-**E2E Tests:**
-- Not used
-
-## Recommendations
-
-The project currently lacks testing infrastructure. To add tests:
-
-1. **Install Test Framework:**
-```bash
-npm install -D vitest @vitejs/plugin-react jsdom @testing-library/react @testing-library/dom
-```
-
-2. **Create vitest.config.ts:**
 ```typescript
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
-
+// playwright.config.ts
 export default defineConfig({
-  plugins: [react()],
-  test: {
-    environment: 'jsdom',
-    globals: true,
+  testDir: './tests',
+  baseURL: 'http://localhost:3001',
+  reporter: 'html',
+  use: {
+    trace: 'on-first-retry',
   },
 })
 ```
 
-3. **Add Test Scripts:**
-```json
-{
-  "test": "vitest",
-  "test:coverage": "vitest --coverage"
-}
+**Note:** baseURL points to port 3001 (admin server), not 3000 (main dev server)
+
+## Running Tests
+
+```bash
+# Run all tests
+cd frontend
+npx playwright test
+
+# Run with HTML report
+npx playwright test --reporter=html
+
+# Run specific test file
+npx playwright test tests/mobile/form-keyboard.spec.ts
 ```
 
-4. **Example Test Structure:**
-```
-app/
-├── components/
-│   ├── Navbar.tsx
-│   └── Navbar.test.tsx
-├── enquiry/
-│   ├── page.tsx
-│   └── page.test.tsx
-```
+## Test Structure
 
-5. **Example Component Test:**
+### Mobile Tests
+- Location: `frontend/tests/mobile/`
+- Tests: Form keyboard behavior, labels, submit button accessibility
+
+### Responsive Tests
+- Location: `frontend/tests/responsive/`
+- Tests: Horizontal scroll, navigation, touch targets
+
+### Viewport Configurations
+- iPhone SE: 320x568
+- iPhone 14: 375x667
+- iPhone 14 Pro: 390x844
+- iPad: 768x1024
+- Desktop: 1280x720
+
+## Test Patterns
+
+### Viewport Testing
 ```typescript
-import { render, screen } from '@testing-library/react'
-import Navbar from './Navbar'
-
-describe('Navbar', () => {
-  it('renders navigation links', () => {
-    render(<Navbar />)
-    expect(screen.getByText('Home')).toBeInTheDocument()
-  })
+test('page works on mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 568 })
+  await page.goto('/')
+  // assertions
 })
 ```
 
+### Element Visibility
+```typescript
+await expect(element).toBeVisible()
+await expect(element).toBeHidden()
+```
+
+### Accessibility
+```typescript
+// Check for focusable elements
+await expect(button).toBeFocused()
+
+// Check labels
+const label = page.getByLabel('Email')
+await expect(label).toBeVisible()
+```
+
+### Touch Targets
+```typescript
+// Verify touch target size >= 44px
+const boundingBox = await element.boundingBox()
+expect(boundingBox.height).toBeGreaterThanOrEqual(44)
+```
+
+## Current Test Coverage
+
+- Form keyboard handling on mobile
+- Form labels accessibility
+- Submit button visibility
+- Responsive layout at 320px viewport
+- Horizontal scroll detection
+- Navigation functionality
+- Touch target sizing
+
+## Missing Test Coverage
+
+- API route testing
+- Form validation testing
+- Newsletter subscription
+- Error boundary behavior
+- 404 page
+- Performance metrics
+
 ---
 
-*Testing analysis: 2026-03-16*
+*Testing analysis: 2026-03-17*

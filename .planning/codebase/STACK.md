@@ -1,114 +1,66 @@
 # Technology Stack
 
-**Analysis Date:** 2026-03-16
+**Analysis Date:** 2026-03-17
 
-## Languages
+## Languages & Runtime
 
-**Primary:**
-- TypeScript 5 - Core web application development
+- **Language:** TypeScript 5.x
+- **Runtime:** Node.js 20.x
+- **Package Manager:** npm with package-lock.json
 
-**Secondary:**
-- CSS (Tailwind) - Styling
+## Core Frameworks
 
-## Runtime
-
-**Environment:**
-- Node.js (via Next.js)
-
-**Package Manager:**
-- npm (via package-lock.json)
-- Lockfile: present at `frontend/package-lock.json`
-
-## Frameworks
-
-**Core:**
-- Next.js 14.2.0 - React framework with App Router
-- React 18 - UI library
-- Tailwind CSS 3.4.0 - Styling framework
-
-**Testing:**
-- Not detected (no test framework configured)
-
-**Build/Dev:**
-- ESLint 8.57.1 - Linting
-- TypeScript 5 - Type checking
-- PostCSS 8 - CSS processing
-- Autoprefixer 10.4.27 - CSS vendor prefixes
-- @tailwindcss/typography 0.5.19 - Prose plugin for markdown
+- **Framework:** Next.js 14.2 (App Router)
+- **Styling:** Tailwind CSS 3.4
+- **Testing:** Playwright 1.58.2
 
 ## Key Dependencies
 
-**Critical:**
-| Package | Version | Purpose |
-|---------|---------|---------|
-| next | 14.2.0 | React framework |
-| react | 18 | UI library |
-| react-dom | 18 | React DOM renderer |
-| zod | 4.3.6 | Schema validation |
-| lucide-react | 0.575.0 | Icon library |
+### UI & Components
+- `react` ^18.x - UI library
+- `lucide-react` - Icons
+- `clsx`, `tailwind-merge` - Class utilities
 
-**Media & Visualization:**
-| Package | Version | Purpose |
-|---------|---------|---------|
-| remotion | 4.0.429 | Video animations |
-| @remotion/player | 4.0.429 | Video player |
-| @remotion/animation-utils | 4.0.429 | Animation utilities |
-| echarts | 6.0.0 | Charts |
-| echarts-for-react | 3.0.6 | React ECharts wrapper |
-| react-globe.gl | 2.37.0 | 3D globe visualization |
+### Content & MDX
+- `next-mdx-remote` - MDX rendering
+- `gray-matter` - Frontmatter parsing
 
-**Content Management:**
-| Package | Version | Purpose |
-|---------|---------|---------|
-| next-mdx-remote | 6.0.0 | MDX rendering |
-| gray-matter | 4.0.3 | Frontmatter parsing |
-| remark | 15.0.0 | Markdown processor |
-| remark-gfm | 4.0.1 | GitHub Flavored Markdown |
-| remark-html | 16.0.0 | HTML output |
+### Data & Validation
+- `zod` ^4.3.6 - Schema validation (NOTE: v4.x is experimental)
+- `@supabase/supabase-js` - Database client (installed but not actively used)
 
-**Email:**
-| Package | Version | Purpose |
-|---------|---------|---------|
-| nodemailer | 8.0.1 | Email sending (Gmail SMTP) |
-| resend | 6.9.3 | Email API (installed but not actively used) |
+### Email
+- `nodemailer` - Gmail SMTP for enquiry form
+- `resend` ^6.9.3 - Email SDK (installed but not integrated)
 
-**Data:**
-| Package | Version | Purpose |
-|---------|---------|---------|
-| csv-parse | 6.1.0 | CSV parsing |
+### Visualization
+- `echarts` - Charts
+- `react-globe.gl` - 3D globe
+- `@remotion/*` - Video animation
 
-## Configuration
+### Deployment
+- `vercel` - Deployment platform
 
-**Environment:**
-- `.env.local` - Local environment variables (contains Supabase + Resend + Gmail credentials)
-- Not committed to version control (see `.gitignore`)
+## Configuration Files
 
-**Build:**
-- `frontend/next.config.js` - Next.js configuration
-- `frontend/tailwind.config.ts` - Tailwind CSS config
-- `frontend/tsconfig.json` - TypeScript config
+- `frontend/package.json` - Dependencies
+- `frontend/tsconfig.json` - TypeScript config with path aliases
+- `frontend/next.config.js` - Next.js config
+- `frontend/tailwind.config.ts` - Tailwind with navy/amber colors, IBM Plex fonts
+- `frontend/.eslintrc.json` - ESLint (extends next/core-web-vitals)
+- `frontend/playwright.config.ts` - E2E testing config
+- `frontend/vercel.json` - Vercel deployment (Node 20.x)
 - `frontend/postcss.config.js` - PostCSS config
-- `frontend/vercel.json` - Vercel deployment config
+- `frontend/.env.local` - Environment variables
 
-**Path Aliases:**
-```json
-{
-  "@/*": ["./app/*"],
-  "@/lib/*": ["./lib/*"]
-}
-```
+## Environment Variables
 
-## Platform Requirements
-
-**Development:**
-- Node.js
-- npm
-- Port 3000 (main app), 3001 (admin)
-
-**Production:**
-- Node.js runtime
-- Deployment: Vercel (configured via `vercel.json`)
+- `NEXT_PUBLIC_SUPABASE_URL` - Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Supabase anon key
+- `GMAIL_USER` - Gmail address for nodemailer
+- `GMAIL_APP_PASSWORD` - Gmail app password
+- `RESEND_API_KEY` - Resend API key (not currently used)
 
 ---
 
-*Stack analysis: 2026-03-16*
+*Stack analysis: 2026-03-17*

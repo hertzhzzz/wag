@@ -1,141 +1,126 @@
 # Architecture
 
-**Analysis Date:** 2026-03-16
+**Analysis Date:** 2026-03-17
 
 ## Pattern Overview
 
-**Overall:** Next.js 14 App Router with Server-First Component Architecture
+**Overall:** Next.js 14 App Router with Server Components
 
 **Key Characteristics:**
-- Server Components by default, client components only when interactivity required
-- File-based routing using Next.js App Router conventions
-- API routes as serverless functions via Next.js Route Handlers
-- MDX-based content management for blog/resources
+- Server-first architecture: components render on server by default, `'use client'` added only when interactivity is needed
+- File-based routing: routes defined by directory structure in `app/`
+- API routes: backend endpoints created as Route Handlers in `app/api/`
+- Static content: MDX-based blog system with `next-mdx-remote` for dynamic article rendering
 
 ## Layers
 
-**UI Layer (Pages):**
-- Purpose: Render pages and coordinate components
+### Presentation Layer (Pages)
 - Location: `frontend/app/`
-- Contains: Page components (Home, Services, About, Resources, Enquiry)
-- Depends on: Components layer
+- Contains: Route pages (`page.tsx`), layouts (`layout.tsx`), metadata exports
+- Depends on: Component layer
 - Used by: Next.js routing
 
-**Components Layer:**
-- Purpose: Reusable UI components
+### Component Layer
 - Location: `frontend/app/components/`
-- Contains: Navbar, Footer, Hero, StatsBar, FAQ, CTABand, Industries, HowItWorks, etc.
-- Depends on: Shared styles, Tailwind utilities
-- Used by: Pages
+- Contains: Reusable UI components (Navbar, Footer, Hero, FAQ, etc.)
+- Depends on: Third-party UI libraries (lucide-react), Tailwind CSS
+- Used by: Pages, layouts
 
-**API Layer:**
-- Purpose: Backend request handling
+### Data/Content Layer
+- Location: `frontend/content/blog/`, `frontend/app/data/`
+- Contains: MDX blog posts, static data arrays (faqs.ts)
+- Depends on: gray-matter (MDX parsing), fs module
+- Used by: Resource pages, components
+
+### API Layer
 - Location: `frontend/app/api/`
-- Contains: Route handlers (enquiry, newsletter)
-- Depends on: Zod validation, nodemailer
+- Contains: Route handlers for enquiry form, newsletter
+- Depends on: Zod (validation), nodemailer (email)
 - Used by: Client-side forms
 
-**Content Layer:**
-- Purpose: Blog/resource content management
-- Location: `frontend/content/blog/`
-- Contains: MDX files with frontmatter
-- Depends on: gray-matter for parsing
-- Used by: Resources pages
-
-**Configuration Layer:**
-- Purpose: Global settings and metadata
-- Location: `frontend/app/layout.tsx`, `frontend/app/*.tsx` (metadata exports)
-- Contains: Root layout, fonts, SEO metadata, schema.org markup
+### Configuration Layer
+- Location: `frontend/` root
+- Contains: next.config.js, tailwind.config.ts, tsconfig.json
+- Defines: Build configuration, design tokens, TypeScript settings
 
 ## Data Flow
 
-**Static Page Rendering:**
+### Static Page Request
+1. User requests `/about`
+2. Next.js matches route to `app/about/page.tsx`
+3. Page component (Server Component) renders
+4. Navbar and Footer components imported and render
+5. HTML returned to browser
 
-1. User requests page (e.g., `/services`)
-2. Next.js matches route to `app/services/page.tsx`
-3. Server component reads content/data
-4. Components render with Tailwind styles
-5. HTML sent to browser
-
-**Dynamic Route (Resources):**
-
-1. User requests `/resources/china-supplier-guide`
+### Dynamic Resource Request
+1. User requests `/resources/china-factory-tour-guide`
 2. Next.js matches route to `app/resources/[slug]/page.tsx`
-3. Server reads corresponding `.mdx` file from `content/blog/`
-4. Parses frontmatter with gray-matter
-5. Renders content as React components
+3. `generateStaticParams()` provides static paths at build time
+4. Server component reads MDX file from `content/blog/`
+5. `gray-matter` parses frontmatter and content
+6. `MDXRemote` renders MDX content with custom components
+7. Static HTML returned
 
-**Form Submission:**
-
-1. User submits enquiry form (client component)
-2. POST request to `/api/enquiry`
-3. Route handler validates with Zod schema
-4. HTML escaping for XSS prevention
-5. Sends email via nodemailer (Gmail SMTP)
-6. Returns JSON response to client
+### Form Submission Flow
+1. User submits enquiry form (`app/enquiry/page.tsx`)
+2. Client-side `'use client'` component handles form state
+3. POST request to `/api/enquiry`
+4. Zod validates request body
+5. HTML escaping prevents XSS
+6. nodemailer sends email via Gmail SMTP
+7. JSON response returned to client
 
 ## Key Abstractions
 
-**Server Component:**
-- Default component type in Next.js App Router
-- Examples: `app/page.tsx`, `app/services/page.tsx`, `app/about/page.tsx`
-- Pattern: Async function components without 'use client'
+### MDX Blog System
+- Purpose: Dynamic blog articles from markdown files
+- Examples: `frontend/app/resources/page.tsx`, `frontend/app/resources/[slug]/page.tsx`
+- Pattern: File-system based content with frontmatter metadata
 
-**Client Component:**
-- When interactivity required (forms, state, effects)
-- Example: `app/components/Navbar.tsx` (has mobile menu state)
-- Pattern: `'use client'` directive at top of file
+### Enquiry Form
+- Purpose: Multi-step form with validation and email notification
+- Examples: `frontend/app/enquiry/page.tsx`, `frontend/app/api/enquiry/route.ts`
+- Pattern: Client state management with API route backend
 
-**Route Handler:**
-- API endpoints in Next.js
-- Examples: `app/api/enquiry/route.ts`, `app/api/newsletter/route.ts`
-- Pattern: Export async function named after HTTP method (GET, POST)
-
-**Dynamic Route:**
-- Parameterized page routes
-- Examples: `app/resources/[slug]/page.tsx`
-- Pattern: Folder name in square brackets, `params` prop provides slug
+### Component Library
+- Purpose: Reusable UI elements with consistent styling
+- Examples: `frontend/app/components/Navbar.tsx`, `frontend/app/components/Footer.tsx`
+- Pattern: Server Components by default, `'use client'` for interactivity
 
 ## Entry Points
 
-**Root Layout:**
+### Root Layout
 - Location: `frontend/app/layout.tsx`
 - Triggers: Every page request
-- Responsibilities: HTML shell, fonts (IBM Plex Sans/Serif), metadata, SEO, schema.org JSON-LD, Google Analytics
+- Responsibilities: HTML structure, fonts (IBM Plex), Google Analytics, Schema.org JSON-LD
 
-**Home Page:**
+### Home Page
 - Location: `frontend/app/page.tsx`
-- Triggers: GET `/`
-- Responsibilities: Hero section, stats bar, industries, how it works, FAQ, CTA
+- Triggers: Request to `/`
+- Responsibilities: Compose homepage from Hero, StatsBar, Industries, HowItWorks, FAQ components
 
-**API Routes:**
-- Location: `frontend/app/api/*/route.ts`
-- Triggers: POST requests to `/api/enquiry`, `/api/newsletter`
-- Responsibilities: Form validation, email sending, error handling
+### API Routes
+- `frontend/app/api/enquiry/route.ts`: POST handler for enquiry form submissions
+- `frontend/app/api/newsletter/route.ts`: POST handler for newsletter signups
 
 ## Error Handling
 
 **Strategy:** Next.js built-in error boundaries + custom error pages
 
 **Patterns:**
-- `app/error.tsx` - React error boundary for runtime errors
-- `app/not-found.tsx` - 404 page
-- Zod validation in API routes with detailed error responses
-- Try/catch in async handlers with error logging
-- HTML escaping for XSS prevention in user input
+- `app/error.tsx`: Global error boundary for runtime errors
+- `app/not-found.tsx`: Custom 404 page
+- API routes: Try-catch with NextResponse.error() returns
+- Form validation: Zod schema validation with error responses
 
 ## Cross-Cutting Concerns
 
-**SEO/Metadata:** Exported `metadata` object in each page.tsx using Next.js Metadata API
-
-**Validation:** Zod schemas in API route handlers (`app/api/enquiry/route.ts`)
-
-**Email:** nodemailer with lazy loading to avoid SSR issues
-
-**External Scripts:** Google Analytics loaded with `next/script` using `afterInteractive` strategy
-
-**Fonts:** Google Fonts via `next/font/google` with CSS variables
+- **SEO/Metadata:** Each page exports `metadata: Metadata` object
+- **Fonts:** Google Fonts via next/font/google (IBM Plex Sans, IBM Plex Serif)
+- **Styling:** Tailwind CSS with custom design tokens (navy: #0F2D5E, amber: #F59E0B)
+- **Analytics:** Google Analytics 4 via Script component
+- **Schema.org:** Organization and LocalBusiness JSON-LD in root layout
 
 ---
 
-*Architecture analysis: 2026-03-16*
+*Architecture analysis: 2026-03-17*

@@ -1,208 +1,137 @@
-# Directory Structure
+# Codebase Structure
 
-**Analysis Date:** 2026-03-16
+**Analysis Date:** 2026-03-17
 
 ## Directory Layout
 
 ```
 wag/
-├── CLAUDE.md                    # Project instructions for Claude
-├── frontend/                   # Next.js frontend application
-│   ├── app/                    # Next.js App Router
-│   │   ├── page.tsx            # Homepage (/)
+├── frontend/                     # Next.js 14 App Router project
+│   ├── app/                     # App Router pages and components
+│   │   ├── page.tsx            # Home page (/)
 │   │   ├── layout.tsx          # Root layout
-│   │   ├── error.tsx           # Error boundary
-│   │   ├── not-found.tsx       # 404 page
-│   │   ├── sitemap.ts          # Sitemap generator
-│   │   ├── globals.css          # Global Tailwind styles
-│   │   ├── about/
-│   │   │   └── page.tsx        # About page (/about)
-│   │   ├── services/
-│   │   │   └── page.tsx        # Services page (/services)
-│   │   ├── resources/
-│   │   │   ├── page.tsx        # Blog listing (/resources)
-│   │   │   └── [slug]/
-│   │   │       └── page.tsx    # Dynamic blog post (/resources/[slug])
-│   │   ├── enquiry/
-│   │   │   ├── layout.tsx      # Enquiry layout
-│   │   │   └── page.tsx        # Contact form (/enquiry)
-│   │   ├── api/
-│   │   │   ├── enquiry/
-│   │   │   │   └── route.ts    # POST /api/enquiry
-│   │   │   └── newsletter/
-│   │   │       └── route.ts    # POST /api/newsletter
-│   │   ├── data/
-│   │   │   └── faqs.ts         # Static FAQ data
-│   │   ├── services/
-│   │   │   └── metadata.ts     # Page metadata (optional)
-│   │   └── components/         # UI components
-│   │       ├── Navbar.tsx      # Client component: mobile menu
-│   │       ├── Footer.tsx
-│   │       ├── Hero.tsx
-│   │       ├── StatsBar.tsx
-│   │       ├── HowItWorks.tsx
-│   │       ├── FAQ.tsx
-│   │       ├── CTABand.tsx
-│   │       ├── Coverage.tsx
-│   │       ├── FoundingClients.tsx
-│   │       ├── CalendlyEmbed.tsx
-│   │       ├── FAQSchema.tsx
-│   │       ├── ResourcesContent.tsx
-│   │       └── industries/
-│   │           ├── index.tsx
-│   │           ├── IndustryCard.tsx
-│   │           ├── FeaturedPanel.tsx
-│   │           ├── MoreIndustries.tsx
-│   │           └── types.ts
-│   ├── content/
-│   │   └── blog/              # MDX blog posts
-│   │       ├── australia-china-sourcing-guide.mdx
-│   │       ├── bulk-procurement-china-guide.mdx
-│   │       ├── china-business-travel-guide-2026.mdx
-│   │       ├── china-factory-tour-guide.mdx
-│   │       ├── how-to-inspect-factories-china.mdx
-│   │       └── verify-chinese-supplier.mdx
-│   ├── public/                 # Static assets (images, favicon)
-│   ├── shared/                 # Shared code (currently empty)
-│   │   ├── components/
-│   │   ├── lib/
-│   │   └── styles/
-│   ├── lib/                    # Utility functions (currently empty)
-│   ├── scripts/                # Build scripts
-│   │   └── compile-hero.sh
-│   ├── package.json            # Dependencies
-│   ├── tsconfig.json           # TypeScript config
-│   ├── tailwind.config.ts      # Tailwind config
-│   ├── next.config.js          # Next.js config
-│   ├── postcss.config.js       # PostCSS config
-│   ├── vercel.json             # Vercel deployment config
-│   ├── .env.local              # Environment variables (secret)
-│   └── README.md
-└── docs/                       # Documentation
+│   │   ├── error.tsx          # Error boundary
+│   │   ├── not-found.tsx      # 404 page
+│   │   ├── sitemap.ts         # Dynamic sitemap
+│   │   ├── about/             # About page (/about)
+│   │   │   ├── page.tsx
+│   │   │   └── metadata.ts
+│   │   ├── services/          # Services page (/services)
+│   │   │   ├── page.tsx
+│   │   │   └── metadata.ts
+│   │   ├── resources/        # Blog listing (/resources)
+│   │   │   ├── page.tsx
+│   │   │   ├── metadata.ts
+│   │   │   └── [slug]/       # Dynamic blog posts
+│   │   │       └── page.tsx
+│   │   ├── enquiry/          # Enquiry form (/enquiry)
+│   │   │   ├── page.tsx      # 'use client' form
+│   │   │   ├── layout.tsx
+│   │   │   ├── metadata.ts
+│   │   │   └── components/   # Form-specific components
+│   │   │       ├── KeyboardAwareInput.tsx
+│   │   │       └── KeyboardAwareTextarea.tsx
+│   │   ├── api/              # API Route Handlers
+│   │   │   ├── enquiry/route.ts
+│   │   │   └── newsletter/route.ts
+│   │   ├── components/       # Shared components
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Hero.tsx
+│   │   │   ├── StatsBar.tsx
+│   │   │   ├── FAQ.tsx
+│   │   │   ├── CTABand.tsx
+│   │   │   ├── HowItWorks.tsx
+│   │   │   ├── Coverage.tsx
+│   │   │   ├── AnnouncementBar.tsx
+│   │   │   ├── CalendlyEmbed.tsx
+│   │   │   ├── FAQSchema.tsx
+│   │   │   ├── FoundingClients.tsx
+│   │   │   ├── ResourcesContent.tsx
+│   │   │   └── industries/    # Industry-specific components
+│   │   │       ├── index.tsx
+│   │   │       ├── IndustryCard.tsx
+│   │   │       ├── FeaturedPanel.tsx
+│   │   │       ├── MoreIndustries.tsx
+│   │   │       └── types.ts
+│   │   └── data/             # Static data
+│   │       └── faqs.ts
+│   ├── content/              # MDX blog content
+│   │   └── blog/
+│   │       └── *.mdx         # Blog articles
+│   ├── public/               # Static assets
+│   ├── lib/                  # Utility libraries (empty)
+│   ├── shared/               # Shared code (empty)
+│   ├── tests/                # Test files
+│   ├── scripts/              # Build/maintenance scripts
+│   ├── next.config.js       # Next.js config
+│   ├── tailwind.config.ts   # Tailwind config
+│   ├── tsconfig.json        # TypeScript config
+│   ├── package.json
+│   └── postcss.config.js
+├── config/                   # Project configuration
+├── docs/                     # Documentation
+└── .planning/                # GSD planning documents
 ```
 
 ## Directory Purposes
 
-**app/ (Next.js App Router):**
-- Purpose: All routes and pages
-- Contains: page.tsx files for each route, layout.tsx, API routes, components
-- Key files: `layout.tsx`, `page.tsx`, `error.tsx`, `not-found.tsx`
-
-**app/components/ (Page Components):**
-- Purpose: Reusable UI components used by pages
-- Contains: Navbar, Footer, Hero, StatsBar, FAQ, CTABand, HowItWorks, Coverage, FoundingClients, CalendlyEmbed, FAQSchema, ResourcesContent
-- Key files: `Navbar.tsx`, `Footer.tsx`, `Hero.tsx`, `FAQ.tsx`
-
-**app/components/industries/ (Industry Components):**
-- Purpose: Industry-specific UI components
-- Contains: Components for different industry verticals
-- Types: `types.ts` defines TypeScript interfaces
-
-**app/api/ (API Routes):**
-- Purpose: Server-side API endpoints
-- Contains: Route handlers for enquiry and newsletter
-- Key files: `app/api/enquiry/route.ts`, `app/api/newsletter/route.ts`
-
-**app/about/, app/services/, app/resources/, app/enquiry/ (Page Routes):**
-- Purpose: Individual page routes
-- Contains: page.tsx for each route
-
-**content/blog/ (MDX Content):**
-- Purpose: Blog posts and articles
-- Contains: `.mdx` files with frontmatter
-- Pattern: Filename = URL slug, frontmatter = metadata
+- **frontend/app/:** Next.js App Router - all pages, layouts, API routes, and components
+- **frontend/app/components/:** Reusable UI components - Navbar, Footer, Hero, etc.
+- **frontend/app/api/:** API Route Handlers - backend endpoints for forms
+- **frontend/content/blog/:** MDX blog posts - markdown content files with frontmatter
+- **frontend/public/:** Static assets - images, fonts, favicons
 
 ## Key File Locations
 
-**Entry Points:**
-- `frontend/app/layout.tsx`: Root HTML layout with fonts, metadata, analytics
-- `frontend/app/page.tsx`: Home page
+### Entry Points
+- `frontend/app/layout.tsx`: Root layout, HTML structure, fonts, analytics
+- `frontend/app/page.tsx`: Homepage
 
-**Configuration:**
-- `frontend/app/layout.tsx`: Global layout and metadata
-- `frontend/tailwind.config.ts`: Tailwind CSS configuration
+### Configuration
 - `frontend/next.config.js`: Next.js configuration
-- `frontend/tsconfig.json`: TypeScript configuration
+- `frontend/tailwind.config.ts`: Design tokens (navy, amber colors)
+- `frontend/package.json`: Dependencies
 
-**Core Logic:**
-- `frontend/app/api/enquiry/route.ts`: Enquiry form API handler with Zod validation
-- `frontend/app/resources/page.tsx`: Blog listing with gray-matter parsing
-- `frontend/app/enquiry/page.tsx`: Contact form with validation
+### Core Logic
+- `frontend/app/api/enquiry/route.ts`: Enquiry form handler with Zod validation
+- `frontend/app/api/newsletter/route.ts`: Newsletter subscription (stub)
+- `frontend/app/enquiry/page.tsx`: Multi-step form with validation
+- `frontend/app/resources/[slug]/page.tsx`: MDX blog post renderer
 
-**Components:**
-- `frontend/app/components/Navbar.tsx`: Navigation bar (client component)
-- `frontend/app/components/Footer.tsx`: Footer
-- `frontend/app/components/Hero.tsx`: Hero section
-- `frontend/app/components/FAQ.tsx`: FAQ accordion
+### Testing
+- `frontend/tests/`: Playwright test files
 
 ## Naming Conventions
 
-**Files:**
-- Components: PascalCase (`Navbar.tsx`, `Hero.tsx`, `FAQ.tsx`)
-- Pages: `page.tsx`, `layout.tsx`, `error.tsx`, `not-found.tsx`
-- API Routes: `route.ts`
-- Dynamic Routes: `[slug]/page.tsx`
-- Styles: `globals.css`
-- Config: camelCase/kebab-case (`tailwind.config.ts`, `next.config.js`)
+### Files
+- PascalCase: Components (Navbar.tsx, FAQ.tsx)
+- kebab-case: Pages with dynamic routes ([slug]/page.tsx)
+- camelCase: Utilities, hooks
 
-**Directories:**
-- Routes: kebab-case (`services`, `about`, `resources`, `enquiry`)
-- Components: PascalCase or kebab-case depending on usage
-- API: kebab-case (`enquiry`, `newsletter`)
-
-**Types/Variables:**
-- Functions: camelCase (`getArticles`, `handleSubmit`, `validateStep1`)
-- Constants: PascalCase for components, UPPER_SNAKE for env vars
+### Directories
+- kebab-case: Page routes (about/, services/, resources/)
+- camelCase: Component groups (components/, api/)
 
 ## Where to Add New Code
 
-**New Feature Page:**
-- Implementation: `frontend/app/[feature]/page.tsx`
-- Components: `frontend/app/components/` or co-located
+### New Page
+- Create directory in `frontend/app/[pagename]/`
+- Add `page.tsx` with default export
+- Optional: Add `metadata.ts` for page metadata
 
-**New Component:**
-- Reusable: `frontend/app/components/ComponentName.tsx`
-- Page-specific: `frontend/app/[page]/components/ComponentName.tsx`
+### New Component
+- Add to appropriate location in `frontend/app/components/`
+- Server Component by default, `'use client'` only if needed
 
-**New API Endpoint:**
-- Implementation: `frontend/app/api/[endpoint]/route.ts`
-- Validation: Use Zod schema
-- Error handling: Try/catch with appropriate responses
+### New API Endpoint
+- Create route file in `frontend/app/api/[endpoint]/route.ts`
+- Export handlers (GET, POST, etc.)
 
-**New Blog Post:**
-- Content: `frontend/content/blog/[slug].mdx`
-- Frontmatter: title, date, category, description, author
-
-**Utilities/Lib Functions:**
-- Location: `frontend/lib/` (currently empty)
-- Pattern: Export utility functions, import with `@/lib/*`
-
-## Special Directories
-
-**content/blog/:**
-- Purpose: MDX blog posts
-- Generated: No (manually authored)
-- Committed: Yes (version controlled)
-
-**public/:**
-- Purpose: Static assets (images, favicon)
-- Generated: No
-- Committed: Yes
-
-**.next/:**
-- Purpose: Next.js build output
-- Generated: Yes (on build)
-- Committed: No (.gitignored)
-
-**node_modules/:**
-- Purpose: Dependencies
-- Generated: Yes (npm install)
-- Committed: No (.gitignored)
-
-**shared/:**
-- Purpose: Intended for shared code but currently empty
-- Contains: `components/`, `lib/`, `styles/` subdirectories (all empty)
+### New Blog Post
+- Add MDX file to `frontend/content/blog/[slug].mdx`
+- Include frontmatter (title, description, date, category)
 
 ---
 
-*Structure analysis: 2026-03-16*
+*Structure analysis: 2026-03-17*

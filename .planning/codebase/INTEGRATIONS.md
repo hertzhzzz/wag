@@ -1,95 +1,57 @@
 # External Integrations
 
-**Analysis Date:** 2026-03-16
+**Analysis Date:** 2026-03-17
 
-## APIs & External Services
+## Email Services
 
-**Content Management:**
-- MDX + gray-matter - Local file-based blog/content system
-  - Content stored in: `frontend/content/blog/`
-  - Frontmatter parsing via gray-matter 4.0.3
-  - Rendering via next-mdx-remote 6.0.0
-  - Markdown processing via remark + remark-gfm
+### Gmail SMTP (Active)
+- **Purpose:** Enquiry form submissions
+- **Implementation:** `frontend/app/api/enquiry/route.ts` uses nodemailer
+- **Status:** Working - sends emails via Gmail SMTP
+- **Credentials:** Uses `GMAIL_USER` and `GMAIL_APP_PASSWORD` env vars
 
-**Email:**
-- Gmail (via nodemailer) - Transactional email for enquiry form
-  - Implementation: `frontend/app/api/enquiry/route.ts`
-  - Auth: `GMAIL_USER`, `GMAIL_APP_PASSWORD` env vars
-  - Note: resend package is installed but not actively used
-  - Newsletter: `frontend/app/api/newsletter/route.ts` (stub, logs to console)
+### Resend (Installed but not integrated)
+- **Purpose:** Email sending (alternative to Gmail)
+- **Status:** Not actively used - SDK installed but no integration
+- **Location:** `frontend/package.json` line 33: `"resend": "^6.9.3"`
+- **Note:** Should integrate for better deliverability
 
-**Visualization:**
-- Unsplash - Image hosting for Next.js Image component
-  - Configuration: `frontend/next.config.js`
-  - Domain: images.unsplash.com
+### Newsletter (Stub)
+- **Purpose:** Newsletter subscription
+- **Implementation:** `frontend/app/api/newsletter/route.ts`
+- **Status:** Not functional - only logs to console, TODO comment for integration
+- **Fix:** Integrate with Mailchimp, ConvertKit, or Resend
 
-## Data Storage
+## Database
 
-**Database:**
-- Supabase (PostgreSQL) - For chinafactory sub-project
-  - Connection: `NEXT_PUBLIC_SUPABASE_URL` env var
-  - Auth key: `NEXT_PUBLIC_SUPABASE_ANON_KEY` env var
-  - Client: @supabase/supabase-js (installed but not in frontend package.json)
-  - Implementation: `web/chinafactory/lib/supabase.ts`
+### Supabase
+- **Status:** SDK installed but not actively used
+- **Packages:** `@supabase/supabase-js`
+- **Env Vars:** `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- **Note:** Could be used for form submissions storage, user auth, etc.
 
-**Database Schema (chinafactory):**
-- factories - Factory information table
-- quote_requests - Quote request tracking
-- industries - Industry lookup table
-- certifications - Certification lookup table
+## Third-Party Services
 
-**File Storage:**
-- Local filesystem only
-- No cloud storage integration detected
+### Calendly
+- **Purpose:** Scheduling meetings
+- **Implementation:** Embedded in enquiry page
+- **URL:** `https://calendly.com/mark-winningadventure/`
+- **Location:** `frontend/app/enquiry/page.tsx` line 33
+- **Note:** Hardcoded - should move to env variable
 
-**Caching:**
-- None detected
+### Google Analytics
+- **Purpose:** Website analytics
+- **Implementation:** GA4 script in root layout
+- **Location:** `frontend/app/layout.tsx`
 
-## Authentication & Identity
+## Content
 
-**Auth Provider:**
-- Supabase Auth
-  - Implementation: via @supabase/supabase-js
-  - Env vars: NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY
-  - Used by: chinafactory sub-project
-
-## Monitoring & Observability
-
-**Error Tracking:**
-- None detected
-
-**Logs:**
-- console.error for errors in API routes
-
-## CI/CD & Deployment
-
-**Hosting:**
-- Vercel - configured via `frontend/vercel.json`
-
-**CI Pipeline:**
-- None detected (using Vercel's built-in CI)
-
-## Environment Configuration
-
-**Required env vars:**
-- `GMAIL_USER` - Gmail account for sending enquiry emails
-- `GMAIL_APP_PASSWORD` - Gmail app password for SMTP auth
-- `NEXT_PUBLIC_SUPABASE_URL` - Supabase project URL (chinafactory)
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Supabase anon key (chinafactory)
-
-**Secrets location:**
-- `frontend/.env.local` - Frontend env vars
-- `.telegram_bot/.env` - Telegram bot credentials
-
-## Webhooks & Callbacks
-
-**Incoming:**
-- None detected
-
-**Outgoing:**
-- Enquiry form submission: POST to `/api/enquiry`
-  - Sends HTML email via Gmail SMTP
+### MDX Blog System
+- **Purpose:** Blog/resource articles
+- **Implementation:** MDX files in `frontend/content/blog/` + `next-mdx-remote`
+- **Parsing:** `gray-matter` for frontmatter
+- **Status:** Working - 4 blog posts currently
 
 ---
 
-*Integration audit: 2026-03-16*
+*Integrations analysis: 2026-03-17*
