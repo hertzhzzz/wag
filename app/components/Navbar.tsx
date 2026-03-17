@@ -90,7 +90,7 @@ export default function Navbar() {
       {/* Mobile slide-in menu */}
       <div
         id="mobile-menu"
-        className={`fixed right-0 top-0 h-full w-64 bg-white z-50 transform transition-transform duration-300 ${
+        className={`fixed right-0 top-0 min-h-screen w-64 bg-white z-50 transform transition-transform duration-300 ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
