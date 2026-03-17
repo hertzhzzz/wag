@@ -28,10 +28,10 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 2. Content Pages | v1.0 | 1/1 | Complete |
 | 3. Global UI Audit | v1.0 | 6/6 | Complete |
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
-| 5. Vercel Deployment | v1.1 | Complete | 2026-03-17 |
-| 6. SEO Optimization | v1.3 | 3/3 | Planned |
+| 5. Vercel Deployment | v1.1 | 2/2 | Complete |
+| 6. SEO Optimization | v1.3 | 1/3 | In Progress |
 
-**Total:** 6 phases, 17 plans, 0% complete
+**Total:** 6 phases, 18 plans, 67% complete
 
 ### Phase 5: Vercel Deployment
 
@@ -70,7 +70,7 @@ Plans:
 **Plans:** 3/3 planned
 
 Plans:
-- [ ] 06-01-PLAN.md — Technical SEO foundation (page metadata + Service schema)
+- [x] 06-01-PLAN.md — Technical SEO foundation (page metadata + Service schema)
 - [ ] 06-02-PLAN.md — Content strategy (5 blog articles + internal linking)
 - [ ] 06-03-PLAN.md — Core Web Vitals + Local SEO optimization
 

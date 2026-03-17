@@ -1,19 +1,17 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.1
-milestone_name: Deployment & Minor Fixes
-status: Completed
-stopped_at: v1.1 milestone complete - all tasks finished
-last_updated: "2026-03-17T12:10:00.000Z"
-last_activity: 2026-03-17 — v1.1 complete: Vercel deployment, custom domain, hamburger fix
-current_phase: 05-vercel-deployment
-current_plan: "02"
+milestone: v1.3
+milestone_name: SEO Optimization
+status: In progress
+stopped_at: 06-seo-optimization-01 complete - Technical SEO foundation implemented (page metadata + Service schema)
+last_updated: "2026-03-17T14:35:00.000Z"
+last_activity: 2026-03-17 — SEO Optimization phase in progress
 progress:
-  total_phases: 5
+  total_phases: 6
   completed_phases: 5
-  total_plans: 16
-  completed_plans: 8
-  percent: 50
+  total_plans: 18
+  completed_plans: 12
+  percent: 67
 ---
 
 # Project State
@@ -27,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 
 ## Current Position
 
-Phase: Not started (defining requirements)
-Plan: —
-Status: Defining requirements
-Last activity: 2026-03-17 — Started v1.1 milestone
+Phase: 06-seo-optimization (SEO Optimization)
+Plan: 02 (of 3)
+Status: In progress
+Last activity: 2026-03-17 — Completed 06-01: Technical SEO foundation
 
-Progress: [░░░░░░░░░░░░] 0%
+Progress: [█████████░░░] 67%
 
 ## Performance Metrics
 
@@ -84,6 +82,7 @@ Recent decisions affecting current work:
 - [04-resources-testing-02]: Created 320px viewport test for Resources page with horizontal scroll, navigation, and 44px touch target checks
 - [04-resources-testing-02]: Tests detect touch target issues (filter buttons, newsletter input, article links < 44px) - requires component fix in future phase
 - [04-resources-testing-03]: All 5 pages pass horizontal scroll test at 320px, touch targets remain deferred from 04-02, navbar sticky verified as working
+- [06-seo-optimization-01]: Extracted EnquiryForm to client component to allow metadata export from server page.tsx (standard Next.js 14 pattern)
 
 ### Pending Todos
 
@@ -95,8 +94,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T12:00:00.000Z
-Stopped at: 05-vercel-deployment-02 complete - Vercel deployment successful, GitHub auto-deploy configured
+Last session: 2026-03-17T14:35:00.000Z
+Stopped at: 06-seo-optimization-01 complete - Technical SEO foundation implemented (page metadata + Service schema)
 Resume file: None
 
 ## Deployment Status (v1.1)
