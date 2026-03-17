@@ -74,3 +74,13 @@ Plans:
 ---
 
 *Updated: 2026-03-18*
+
+### Phase 06.1: 配置 Vercel 部署中的 gmailAPP_PASSWORD 和 user 以修复 enquiry 表单 (INSERTED)
+
+**Goal:** [Urgent work - to be planned]
+**Requirements**: TBD
+**Depends on:** Phase 6
+**Plans:** 6/6 plans complete
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 06.1 to break down)
