@@ -18,32 +18,59 @@
 ## Commands
 
 ```bash
-cd web/frontend
-
+# 开发
 npm run dev          # 开发服务器 (localhost:3000)
 npm run dev:admin   # 管理后台 (localhost:3001)
+
+# 构建
 npm run build       # 生产构建 [必须提交前通过]
 npm run lint        # ESLint 检查
+
+# 部署
+git push origin master  # GitHub 自动部署到 Vercel
 ```
 
 ## Project Structure
 
 ```
-web/frontend/
-├── app/                    # Next.js App Router
-│   ├── page.tsx            # 首页 (/)
-│   ├── services/           # 服务页面
-│   ├── about/             # 关于页面
-│   ├── resources/         # 博客/文章 [动态: /resources/[slug]]
-│   ├── enquiry/           # 询价表单
-│   ├── api/               # API 路由
-│   └── components/        # UI 组件
-│       └── industries/    # 行业组件
-├── content/                # Markdown 博客内容
-├── lib/                    # 工具函数
-├── public/                 # 静态资源
-└── shared/                 # 共享代码
+wag/                      # 项目根目录 (已从 web/frontend 迁移)
+├── app/                  # Next.js App Router
+│   ├── page.tsx          # 首页 (/)
+│   ├── services/         # 服务页面
+│   ├── about/            # 关于页面
+│   ├── resources/        # 博客/文章 [动态: /resources/[slug]]
+│   ├── enquiry/          # 询价表单
+│   ├── api/              # API 路由
+│   └── components/       # UI 组件
+├── content/              # Markdown 博客内容
+├── lib/                  # 工具函数
+├── public/               # 静态资源
+├── .next/                # 构建输出 (gitignore)
+└── vercel.json           # Vercel 配置
 ```
+
+## Deployment
+
+| Item | Value |
+|------|-------|
+| **Production URL** | https://www.winningadventure.com.au |
+| **GitHub Repo** | https://github.com/hertzhzzz/wag |
+| **Auto-deploy** | Enabled (push to master triggers Vercel) |
+
+**部署方式**：推送到 GitHub master 分支自动触发部署
+```bash
+git add .
+git commit -m "描述改动"
+git push origin master
+```
+
+**手动部署**（如需立即部署）：
+```bash
+vercel --prod
+```
+
+**自定义域名配置**：
+- ✅ 已配置 `winningadventure.com.au`
 
 ## Conventions
 
@@ -72,7 +99,7 @@ web/frontend/
 ## Env
 
 ```
-web/frontend/.env.local  # Supabase + Resend 凭证
+.env.local  # Supabase + Resend 凭证
 ```
 
 > 不要提交 `.env.local` 到版本控制
@@ -120,11 +147,3 @@ web/frontend/.env.local  # Supabase + Resend 凭证
 ---
 
 *Updated: 2026-03-17*
-
----
-
-*Updated: 2026-03-08*
-
-
-mobile navbar没有能一直常驻在页面顶部，如果滑下去的话没法点击navbar，必须要滑到最上面
---effor max
