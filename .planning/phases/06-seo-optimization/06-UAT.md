@@ -61,9 +61,12 @@ skipped: 0
   reason: "User reported: Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
   severity: blocker
   test: 4
-  root_cause: ""
-  artifacts: []
-  missing: []
+  root_cause: "The API route uses Gmail SMTP for sending emails. The 500 error is caused by missing or incorrect environment variables GMAIL_USER and GMAIL_APP_PASSWORD. The code at lines 10-11 in route.ts references process.env.GMAIL_USER and process.env.GMAIL_APP_PASSWORD - if these are missing or incorrect, getTransporter() fails when creating SMTP transport, causing email sending to fail with 500 error."
+  artifacts:
+    - "app/api/enquiry/route.ts (lines 5-14, 62)"
+  missing:
+    - "Environment variables in .env.local: GMAIL_USER (Gmail address)"
+    - "Environment variable: GMAIL_APP_PASSWORD (Gmail App Password, not regular password)"
   debug_session: ""
 
 - truth: "Blog article displays with correct template image"
@@ -71,9 +74,12 @@ skipped: 0
   reason: "User reported: 文章加载正确，但是article的配图错误了没有按照我们的模板进行配图"
   severity: cosmetic
   test: 5
-  root_cause: ""
-  artifacts: []
-  missing: []
+  root_cause: "The article page Hero section (lines 134-153 in page.tsx) does NOT render the cover image in the page content. It only displays title and metadata text. The coverImage defined in frontmatter is only used in OpenGraph metadata (generateMetadata), but not displayed on the actual page as a hero image."
+  artifacts:
+    - "app/resources/[slug]/page.tsx (Hero section lines 134-153)"
+    - "content/blog/china-sourcing-risks.mdx (coverImage: defined in frontmatter line 29)"
+  missing:
+    - "Cover image component in the Hero section that displays fm.coverImage"
   debug_session: ""
 
 - truth: "Blog article contains internal link to /services"
@@ -81,7 +87,11 @@ skipped: 0
   reason: "User reported: 没有链接到/services"
   severity: major
   test: 6
-  root_cause: ""
-  artifacts: []
-  missing: []
+  root_cause: "The /services link EXISTS in the MDX source (line 47 in china-vs-alibaba.mdx: '[build direct factory relationships](/services)'). The link is present in the markdown content, so the issue is likely that: (1) The MDX is not rendering links correctly, OR (2) The user may have tested a cached/older version. Note: Both china-sourcing-risks.mdx and china-vs-alibaba.mdx contain /services links in their content."
+  artifacts:
+    - "content/blog/china-vs-alibaba.mdx (line 47 contains /services link)"
+    - "content/blog/china-sourcing-risks.mdx (line 46 contains /services link)"
+    - "app/resources/[slug]/page.tsx (MDXRemote component for rendering)"
+  missing:
+    - "Verify link is rendering correctly in browser (check if <a> or <Link> tag is present)"
   debug_session: ""
