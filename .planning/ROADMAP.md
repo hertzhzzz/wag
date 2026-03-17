@@ -29,7 +29,8 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 3. Global UI Audit | v1.0 | 6/6 | Complete |
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
-| 6. SEO Optimization | 6/6 | Complete |  |
+| 6. SEO Optimization | 6/6 | Complete | |
+| 06.1. Vercel Gmail Config | 1/1 | Planned | |
 
 **Total:** 6 phases, 24 plans (including gap closure)
 
@@ -77,10 +78,13 @@ Plans:
 
 ### Phase 06.1: 配置 Vercel 部署中的 gmailAPP_PASSWORD 和 user 以修复 enquiry 表单 (INSERTED)
 
-**Goal:** [Urgent work - to be planned]
-**Requirements**: TBD
+**Goal:** Configure GMAIL_USER and GMAIL_APP_PASSWORD in Vercel production to fix enquiry form email functionality
 **Depends on:** Phase 6
-**Plans:** 6/6 plans complete
+**Plans:** 1/1 plan created
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 06.1 to break down)
+- [ ] 06.1-01-PLAN.md — Configure Gmail credentials in Vercel
+
+---
+
+*Updated: 2026-03-18*
