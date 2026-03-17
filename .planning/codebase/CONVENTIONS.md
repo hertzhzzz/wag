@@ -1,6 +1,6 @@
 # Coding Conventions
 
-**Analysis Date:** 2026-03-11
+**Analysis Date:** 2026-03-16
 
 ## Naming Patterns
 
@@ -11,16 +11,16 @@
 - camelCase for utility files: Not present (lib/ is empty)
 
 **Functions:**
-- camelCase: `function Navbar()`, `function handleSubmit()`, `function getArticles()`
+- camelCase: `function handleSubmit()`, `function getArticles()`
 - PascalCase for component functions: `export default function Hero()`, `export default function EnquiryPage()`
 - Async functions: `async function POST(request: Request)`
 
 **Variables:**
-- camelCase: `formData`, `mobileMenuOpen`, `errors`, `parseResult`
+- camelCase: `formData`, `mobileMenuOpen`, `errors`, `activeIndex`
 - camelCase with descriptive names: `fullName`, `companyName`, `lookingFor`
 
 **Types:**
-- PascalCase: `Industry`, `MoreIndustryCategory`, `Metadata`
+- PascalCase: `Industry`, `MoreIndustryCategory`, `Metadata`, `IndustryCardProps`
 - Inline type annotations for props and function parameters
 
 ## Code Style
@@ -31,6 +31,7 @@
 - Tailwind custom colors defined in `tailwind.config.ts`:
   - Primary: `navy` (#0F2D5E)
   - Accent: `amber` (#F59E0B)
+- Fonts: IBM Plex Sans, IBM Plex Serif (configured in Tailwind)
 
 **Linting:**
 - Tool: ESLint 8.57.1 with `eslint-config-next` 14.2.0
@@ -48,9 +49,9 @@
 **Order (as observed in source files):**
 1. Next.js built-in imports: `import Link from 'next/link'`, `import Image from 'next/image'`, `import { NextResponse } from 'next/server'`
 2. React imports: `import { useState, useEffect } from 'react'`
-3. Third-party library imports: `import { z } from 'zod'`, `import { Menu } from 'lucide-react'`, `import matter from 'gray-matter'`
+3. Third-party library imports: `import { z } from 'zod'`, `import { Menu, X } from 'lucide-react'`, `import matter from 'gray-matter'`
 4. Local component imports: `import Navbar from '@/components/Navbar'`
-5. CSS imports: `import './globals.css'`
+5. Local relative imports: `import Hero from './components/Hero'`
 
 **Path Aliases:**
 - `@/*` - Application code in `app/` directory
@@ -87,10 +88,8 @@
 ## Comments
 
 **When to Comment:**
-- TODO comments for incomplete features: `// TODO: Integrate with email service`
-- Lazy loading notes: `// Lazy load nodemailer to avoid SSR issues`
-- Security notes: `// HTML escape function to prevent XSS`
 - Section markers in large files: `// Video Background - Full Width`
+- Inline styles for dynamic values: `// Mobile menu overlay`
 
 **JSDoc/TSDoc:**
 - Not used in codebase
@@ -103,7 +102,7 @@
 - Large components split into sub-components
 
 **Parameters:**
-- Destructured in function signature: `function Error({ error, reset }: {...})`
+- Destructured in function signature: `function IndustryCard({ industry, isActive, onClick }: IndustryCardProps)`
 - Type annotations for props and return values
 - Optional parameters marked with `?`
 
@@ -117,6 +116,7 @@
 **Exports:**
 - Default exports for page components and single-purpose modules
 - Named exports for types: `export type { Industry, MoreIndustryCategory }`
+- Named exports for data arrays: `export const featured: Industry[]`, `export const moreIndustries`
 
 **Barrel Files:**
 - Industry components use `index.tsx` for main component: `app/components/industries/index.tsx`
@@ -135,7 +135,8 @@
 - Tailwind utility classes exclusively
 - Inline styles for dynamic values only (e.g., `style={{ minWidth: '280px', height: '600px' }}`)
 - CSS-in-JS via `<style jsx>` for complex animations in Navbar
+- Design tokens from tailwind.config.ts: `navy`, `amber`, `font-sans`, `font-serif`
 
 ---
 
-*Convention analysis: 2026-03-11*
+*Convention analysis: 2026-03-16*

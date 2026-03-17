@@ -1,6 +1,6 @@
 # Architecture
 
-**Analysis Date:** 2026-03-11
+**Analysis Date:** 2026-03-16
 
 ## Pattern Overview
 
@@ -16,35 +16,35 @@
 
 **UI Layer (Pages):**
 - Purpose: Render pages and coordinate components
-- Location: `web/frontend/app/`
+- Location: `frontend/app/`
 - Contains: Page components (Home, Services, About, Resources, Enquiry)
 - Depends on: Components layer
 - Used by: Next.js routing
 
 **Components Layer:**
 - Purpose: Reusable UI components
-- Location: `web/frontend/app/components/`
+- Location: `frontend/app/components/`
 - Contains: Navbar, Footer, Hero, StatsBar, FAQ, CTABand, Industries, HowItWorks, etc.
 - Depends on: Shared styles, Tailwind utilities
 - Used by: Pages
 
 **API Layer:**
 - Purpose: Backend request handling
-- Location: `web/frontend/app/api/`
+- Location: `frontend/app/api/`
 - Contains: Route handlers (enquiry, newsletter)
 - Depends on: Zod validation, nodemailer
 - Used by: Client-side forms
 
 **Content Layer:**
 - Purpose: Blog/resource content management
-- Location: `web/frontend/content/blog/`
+- Location: `frontend/content/blog/`
 - Contains: MDX files with frontmatter
 - Depends on: gray-matter for parsing
 - Used by: Resources pages
 
 **Configuration Layer:**
 - Purpose: Global settings and metadata
-- Location: `web/frontend/app/layout.tsx`, `web/frontend/app/*.tsx` (metadata exports)
+- Location: `frontend/app/layout.tsx`, `frontend/app/*.tsx` (metadata exports)
 - Contains: Root layout, fonts, SEO metadata, schema.org markup
 
 ## Data Flow
@@ -83,7 +83,7 @@
 
 **Client Component:**
 - When interactivity required (forms, state, effects)
-- Examples: `app/enquiry/page.tsx` (has form state), `app/components/CalendlyEmbed.tsx` (uses useEffect)
+- Example: `app/components/Navbar.tsx` (has mobile menu state)
 - Pattern: `'use client'` directive at top of file
 
 **Route Handler:**
@@ -99,17 +99,17 @@
 ## Entry Points
 
 **Root Layout:**
-- Location: `web/frontend/app/layout.tsx`
+- Location: `frontend/app/layout.tsx`
 - Triggers: Every page request
 - Responsibilities: HTML shell, fonts (IBM Plex Sans/Serif), metadata, SEO, schema.org JSON-LD, Google Analytics
 
 **Home Page:**
-- Location: `web/frontend/app/page.tsx`
+- Location: `frontend/app/page.tsx`
 - Triggers: GET `/`
 - Responsibilities: Hero section, stats bar, industries, how it works, FAQ, CTA
 
 **API Routes:**
-- Location: `web/frontend/app/api/*/route.ts`
+- Location: `frontend/app/api/*/route.ts`
 - Triggers: POST requests to `/api/enquiry`, `/api/newsletter`
 - Responsibilities: Form validation, email sending, error handling
 
@@ -138,4 +138,4 @@
 
 ---
 
-*Architecture analysis: 2026-03-11*
+*Architecture analysis: 2026-03-16*
