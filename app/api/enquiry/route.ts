@@ -3,6 +3,9 @@ import { z } from 'zod'
 
 // Lazy load nodemailer to avoid SSR issues
 async function getTransporter() {
+  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+    throw new Error('Gmail credentials not configured. Please set GMAIL_USER and GMAIL_APP_PASSWORD in .env.local')
+  }
   const nodemailer = await import('nodemailer')
   return nodemailer.default.createTransport({
     service: 'gmail',
@@ -109,9 +112,12 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true })
   } catch (error) {
-    console.error('Email error:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    console.error('Email error:', errorMessage)
     return NextResponse.json(
-      { error: 'Failed to send email. Please try again.' },
+      { error: errorMessage.includes('credentials not configured')
+        ? 'Email service not configured. Please contact the administrator.'
+        : 'Failed to send email. Please try again.' },
       { status: 500 }
     )
   }
