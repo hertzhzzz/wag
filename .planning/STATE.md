@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.3
 milestone_name: SEO Optimization
 status: In progress
-stopped_at: 06-seo-optimization-01 complete - Technical SEO foundation implemented (page metadata + Service schema)
-last_updated: "2026-03-17T14:35:00.000Z"
-last_activity: 2026-03-17 — SEO Optimization phase in progress
+stopped_at: 06-seo-optimization-03 complete - Enhanced LocalBusiness schema, LCP optimization, and local SEO keywords implemented
+last_updated: "2026-03-18T00:02:00.000Z"
+last_activity: 2026-03-18 — SEO Optimization phase in progress
 progress:
   total_phases: 6
   completed_phases: 5
   total_plans: 18
-  completed_plans: 12
-  percent: 67
+  completed_plans: 13
+  percent: 72
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 ## Current Position
 
 Phase: 06-seo-optimization (SEO Optimization)
-Plan: 02 (of 3)
-Status: In progress
-Last activity: 2026-03-17 — Completed 06-01: Technical SEO foundation
+Plan: 03 (of 3)
+Status: Completed
+Last activity: 2026-03-18 — Completed 06-03: Core Web Vitals and local SEO optimization
 
-Progress: [█████████░░░] 67%
+Progress: [██████████░░] 72%
 
 ## Performance Metrics
 
@@ -83,6 +83,7 @@ Recent decisions affecting current work:
 - [04-resources-testing-02]: Tests detect touch target issues (filter buttons, newsletter input, article links < 44px) - requires component fix in future phase
 - [04-resources-testing-03]: All 5 pages pass horizontal scroll test at 320px, touch targets remain deferred from 04-02, navbar sticky verified as working
 - [06-seo-optimization-01]: Extracted EnquiryForm to client component to allow metadata export from server page.tsx (standard Next.js 14 pattern)
+- [06-seo-optimization-03]: Enhanced LocalBusiness schema with South Australia areaServed and AUD price range for local SEO
 
 ### Pending Todos
 

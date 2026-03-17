@@ -4,7 +4,7 @@
 
 - ✅ **v1.0 MVP** — Phases 1-4 (shipped 2026-03-17)
 - ✅ **v1.1 Deployment & Minor Fixes** — Phase 5 (shipped 2026-03-17)
-- 🚧 **v1.3 SEO Optimization** — Phase 6 (in progress)
+- ✅ **v1.3 SEO Optimization** — Phase 6 (complete)
 
 ## Phases
 
@@ -29,9 +29,9 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 3. Global UI Audit | v1.0 | 6/6 | Complete |
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
-| 6. SEO Optimization | v1.3 | 1/3 | In Progress |
+| 6. SEO Optimization | v1.3 | 3/3 | Complete |
 
-**Total:** 6 phases, 18 plans, 67% complete
+**Total:** 6 phases, 18 plans, 72% complete
 
 ### Phase 5: Vercel Deployment
 
