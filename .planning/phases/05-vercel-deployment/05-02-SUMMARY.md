@@ -37,7 +37,7 @@ Vercel deployment complete at frontend-markhz.vercel.app, awaiting env vars and 
 |------|------|--------|--------|
 | 1 | Deploy to Vercel production | DONE | b48c6fc4 |
 | 2 | Read environment variables from .env.local | DONE | - |
-| 3 | Configure environment variables in Vercel | PENDING | - |
+| 3 | Configure environment variables in Vercel | SKIPPED | - |
 | 4 | Configure custom domain winningadventure.com.au | PENDING | - |
 
 ## Task Details
@@ -55,11 +55,8 @@ Vercel deployment complete at frontend-markhz.vercel.app, awaiting env vars and 
   - GMAIL_APP_PASSWORD
 
 ### Task 3: Configure environment variables in Vercel
-- **Status:** PENDING (human action required)
-- **Required variables (NOT in .env.local):**
-  - NEXT_PUBLIC_SUPABASE_URL
-  - NEXT_PUBLIC_SUPABASE_ANON_KEY
-  - RESEND_API_KEY
+- **Status:** SKIPPED (user chose to skip - not needed for static deployment)
+- **Note:** User decided to deploy without backend environment variables
 
 ### Task 4: Configure custom domain and SSL
 - **Status:** PENDING (human action required)
@@ -83,6 +80,8 @@ Vercel deployment complete at frontend-markhz.vercel.app, awaiting env vars and 
 1. Supabase credentials (if using Supabase backend)
 2. Resend API key (for email functionality)
 
+**User Decision:** Skipped environment variables - deploying as static site without backend integration.
+
 **Options:**
 1. Provide these values from existing Supabase/Resend accounts
 2. Create new accounts at supabase.com and resend.com
@@ -99,5 +98,4 @@ Vercel deployment complete at frontend-markhz.vercel.app, awaiting env vars and 
 ## Next Steps
 
 Awaiting user to:
-1. Configure environment variables in Vercel dashboard (Task 3)
-2. Configure custom domain winningadventure.com.au (Task 4)
+1. Configure custom domain winningadventure.com.au (Task 4)
