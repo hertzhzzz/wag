@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Us | China Sourcing Experts Adelaide',
   description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. Based in Adelaide, we provide factory tours, supplier verification, and procurement support.',
-  keywords: ['china sourcing adelaide', 'factory tour china', 'about china sourcing'],
+  keywords: ['china sourcing adelaide', 'south australia sourcing', 'adelaide sourcing company', 'australian business china', 'factory tour china', 'about china sourcing'],
   openGraph: {
     title: 'About Us | China Sourcing Experts Adelaide',
     description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. Based in Adelaide, we provide factory tours, supplier verification, and procurement support.',

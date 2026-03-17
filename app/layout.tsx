@@ -146,7 +146,7 @@ export default function RootLayout({
               "image": "https://www.winningadventure.com.au/logo.png",
               "url": "https://www.winningadventure.com.au",
               "telephone": "+61-416588198",
-              "priceRange": "$$$",
+              "priceRange": "AUD $2,000 - $50,000+",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "5, 54 Melbourne St",
@@ -154,6 +154,20 @@ export default function RootLayout({
                 "addressRegion": "SA",
                 "postalCode": "5006",
                 "addressCountry": "AU"
+              },
+              "areaServed": [
+                {
+                  "@type": "State",
+                  "name": "South Australia"
+                },
+                {
+                  "@type": "Country",
+                  "name": "Australia"
+                }
+              ],
+              "serviceArea": {
+                "@type": "Country",
+                "name": "Australia"
               },
               "geo": {
                 "@type": "GeoCoordinates",

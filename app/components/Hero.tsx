@@ -1,10 +1,23 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
     <section className="relative min-h-[60vh] md:min-h-[720px] flex items-center overflow-hidden">
-      {/* Video Background - Full Width */}
+      {/* Hero Image - Priority loaded for LCP optimization */}
       <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80"
+          alt="Chinese manufacturing facility with Australian business team"
+          fill
+          priority={true}
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+
+      {/* Video Background - Full Width */}
+      <div className="absolute inset-0" aria-hidden="true">
         <video
           autoPlay
           muted
