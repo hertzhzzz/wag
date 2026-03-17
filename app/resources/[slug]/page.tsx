@@ -149,16 +149,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             <span>·</span>
             <span>{fm.readTime}</span>
           </div>
-          {/* Cover image */}
-          {fm.coverImage && (
-            <div className="mt-6 rounded-lg overflow-hidden">
-              <img
-                src={fm.coverImage}
-                alt={fm.title}
-                className="w-full h-[200px] md:h-[300px] object-cover"
-              />
-            </div>
-          )}
         </div>
       </section>
 
