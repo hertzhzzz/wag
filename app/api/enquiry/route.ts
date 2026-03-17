@@ -1,6 +1,29 @@
 import { NextResponse } from 'next/server'
 import { z } from 'zod'
 
+// Simple in-memory rate limiting (resets on server restart)
+// For production, use Vercel KV or Redis
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
+const RATE_LIMIT = 3 // max requests
+const RATE_WINDOW = 60 * 1000 // 1 minute in ms
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now()
+  const record = rateLimitMap.get(ip)
+
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_WINDOW })
+    return true
+  }
+
+  if (record.count >= RATE_LIMIT) {
+    return false
+  }
+
+  record.count++
+  return true
+}
+
 // Lazy load nodemailer to avoid SSR issues
 async function getTransporter() {
   if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
@@ -38,6 +61,18 @@ function escapeHtml(str: string): string {
 }
 
 export async function POST(request: Request) {
+  // Rate limiting - get IP from headers or fallback
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    || request.headers.get('x-real-ip')
+    || 'unknown'
+
+  if (!checkRateLimit(ip)) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429 }
+    )
+  }
+
   // Parse and validate request body
   const parseResult = enquirySchema.safeParse(await request.json())
 
