@@ -12,14 +12,14 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 
 ### Validated
 
-(None yet - ship to validate)
+- [x] Improve responsive layout for Home page on mobile devices — v1.0
+- [x] Improve responsive layout for Services page on mobile devices — v1.0
+- [x] Improve responsive layout for About page on mobile devices — v1.0
+- [x] Improve responsive layout for Enquiry form on mobile devices — v1.0
 
 ### Active
 
-- [ ] Improve responsive layout for Home page on mobile devices
-- [ ] Improve responsive layout for Services page on mobile devices
-- [ ] Improve responsive layout for About page on mobile devices
-- [ ] Improve responsive layout for Enquiry form on mobile devices
+(Next milestone requirements to be defined)
 
 ### Out of Scope
 
@@ -42,10 +42,15 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 - Resources/Blog (/resources)
 - Enquiry form (/enquiry)
 
-**Mobile Considerations:**
-- Tailwind already configured with responsive prefixes (md:, lg:, etc.)
-- Current layout may have issues with touch targets, spacing, or content overflow on small screens
-- Need to ensure all interactive elements are accessible on mobile
+**Mobile Status (v1.0 Complete):**
+- All 5 pages verified working on 320px viewport
+- Touch targets meet 44px minimum
+- Navbar sticky behavior verified
+- Horizontal scroll eliminated on all pages
+
+**User Feedback:**
+- Navbar sticky issue resolved (user confirmed)
+- Touch target improvements applied
 
 ## Constraints
 
@@ -57,7 +62,9 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Focus on responsive layout | Mobile-first approach ensures best experience | — Pending |
+| Focus on responsive layout | Mobile-first approach ensures best experience | ✅ All 19 requirements satisfied |
+| 320px minimum viewport | Covers smallest mobile devices | ✅ Verified via Playwright tests |
+| Tailwind utility classes | Maintain existing patterns | ✅ Consistent across all pages |
 
 ---
-*Last updated: 2026-03-11 after project initialization*
+*Last updated: 2026-03-17 after v1.0 milestone*
