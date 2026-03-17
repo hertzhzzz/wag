@@ -27,7 +27,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 2. Content Pages | v1.0 | 1/1 | Complete |
 | 3. Global UI Audit | v1.0 | 6/6 | Complete |
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
-| 5. Vercel Deployment | v1.1 | 2/2 | Planned |
+| 5. Vercel Deployment | v1.1 | 2/2 | In Progress|
 
 **Total:** 5 phases, 14 plans, 20% complete
 
@@ -36,11 +36,11 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 **Goal:** Deploy website to Vercel production and fix mobile navigation issues
 **Requirements**: DEPLOY-01, DEPLOY-02, DEPLOY-03, DEPLOY-04, MOBILE-01, MOBILE-02, SOCIAL-01
 **Depends on:** Phase 4
-**Plans:** 2 plans
+**Plans:** 2/2 plans executed
 
 Plans:
-- [ ] 05-01-PLAN.md — UI Fixes (Facebook link + mobile navbar verification)
-- [ ] 05-02-PLAN.md — Vercel deployment with custom domain
+- [x] 05-01-PLAN.md — UI Fixes (Facebook link + mobile navbar verification)
+- [x] 05-02-PLAN.md — Vercel deployment with custom domain (in progress)
 
 ### Success Criteria
 
