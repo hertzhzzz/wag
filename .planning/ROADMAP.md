@@ -1,4 +1,4 @@
-# WAG Website Responsive Improvements Roadmap
+# WAG Website SEO Automation Roadmap
 
 ## Milestones
 
@@ -6,131 +6,136 @@
 - ✅ **v1.1 Deployment & Minor Fixes** — Phase 5 (shipped 2026-03-17)
 - ✅ **v1.3 SEO Optimization** — Phase 6 (complete)
 - ✅ **v1.4 Security Audit** — Phase 8 (shipped 2026-03-18)
-- ✅ **v1.5 PageSpeed** — Phase 7 (in progress)
+- ✅ **v1.5 PageSpeed** — Phase 7 (shipped 2026-03-18)
+- 🚧 **v1.1 SEO Automation** — Phases 9-12 (in progress)
+
+---
 
 ## Phases
 
-<details>
-<summary>✅ v1.0 MVP (Phases 1-4) — SHIPPED 2026-03-17</summary>
-
-- [x] Phase 1: Foundation (2/2 plans) — completed 2026-03-10
-- [x] Phase 2: Content Pages (1/1 plan) — completed 2026-03-11
-- [x] Phase 3: Global UI Audit + Mobile Adaptation (6/6 plans) — completed 2026-03-17
-- [x] Phase 4: Resources + Testing (4/4 plans) — completed 2026-03-17
-
-See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md)
-
-</details>
-
-## Progress
-
-| Phase | Milestone | Plans | Status |
-|-------|-----------|-------|--------|
-| 1. Foundation | v1.0 | 2/2 | Complete |
-| 2. Content Pages | v1.0 | 1/1 | Complete |
-| 3. Global UI Audit | v1.0 | 6/6 | Complete |
-| 4. Resources + Testing | v1.0 | 4/4 | Complete |
-| 5. Vercel Deployment | v1.1 | 2/2 | Complete |
-| 6. SEO Optimization | 6/6 | Complete |
-| 06.1. Vercel Gmail Config | 1/1 | Complete | 2026-03-17 |
-| 7. PageSpeed Mobile LCP | 5/7 | Complete    | 2026-03-18 |
-| 8. Security Audit | 5/5 | Complete | 2026-03-18 |
-
-**Total:** 6 phases, 25 plans (including gap closure)
+- [ ] **Phase 9: Technical SEO Foundation** - Fix LCP and implement technical SEO infrastructure
+- [ ] **Phase 10: Content Strategy** - Create blog content and FAQ section
+- [ ] **Phase 11: Local SEO & Authority** - Build local presence and backlinks
+- [ ] **Phase 12: Analytics & Optimization** - Set up monitoring and measure success
 
 ---
 
-*See [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md) for archived phase details*
+## Phase Details
 
-### Phase 6: SEO Optimization
+### Phase 9: Technical SEO Foundation
 
-**Goal:** Optimize website for "china sourcing" keyword ranking in Australia. Implement technical SEO, content strategy, and structured data to achieve top rankings.
+**Goal:** Fix LCP performance and implement technical SEO infrastructure to meet search engine requirements
 
-**Target Keywords:**
-- Primary: china sourcing, china sourcing australia
-- Secondary: factory visit china, china sourcing adelaide, sourcing trip china, china factory tour
+**Depends on:** Nothing (first phase of this milestone)
 
-**Requirements:** SEO-01, SEO-02, SEO-03, SEO-04, SEO-05
+**Requirements:** TECH-01, TECH-02, TECH-03, TECH-04, TECH-05, MON-01
 
-**Depends on:** Phase 5
+**Success Criteria** (what must be TRUE):
 
-**Plans:** 6/6 plans executed
+1. Mobile LCP performance measures <2.5s in PageSpeed Insights (user can verify)
+2. XML sitemap accessible at /sitemap.xml (user can visit URL)
+3. robots.txt configured and accessible (user can visit URL)
+4. Schema.org Organization + LocalBusiness markup present in page source (user can verify via inspect)
+5. Canonical URLs present on all 5 main pages (user can view page source)
+6. Google Search Console shows site as indexed and tracked (user can see data in GSC)
 
-Plans:
-- [x] 06-01-PLAN.md — Technical SEO foundation (page metadata + Service schema)
-- [x] 06-02-PLAN.md — Content strategy (5 blog articles + internal linking)
-- [x] 06-03-PLAN.md — Core Web Vitals + Local SEO optimization
-- [x] 06-04-PLAN.md — Fix enquiry form 500 error (gap closure)
-- [x] 06-05-PLAN.md — Add cover image to blog article Hero (gap closure)
-- [ ] 06-06-PLAN.md — Verify /services link in blog articles (gap closure)
-
-### Success Criteria
-
-1. Homepage metadata includes primary keywords: "china sourcing", "china sourcing australia"
-2. All 5 pages have unique metadata
-3. Services page renders ServiceSchema with valid JSON-LD
-4. 5 blog articles targeting long-tail keywords created
-5. LocalBusiness schema enhanced with Adelaide address
-6. Hero images optimized with priority loading for LCP
-7. Enquiry form submits successfully without 500 error
-8. Blog articles display cover images in Hero section
-9. Blog articles contain internal links to /services
+**Plans:** TBD
 
 ---
 
-*Updated: 2026-03-18*
+### Phase 10: Content Strategy
 
-### Phase 06.1: 配置 Vercel 部署中的 gmailAPP_PASSWORD 和 user 以修复 enquiry 表单 (INSERTED)
+**Goal:** Create high-quality blog content to compete with Epic Sourcing and ChinaDirect
 
-**Goal:** Configure GMAIL_USER and GMAIL_APP_PASSWORD in Vercel production to fix enquiry form email functionality
-**Depends on:** Phase 6
-**Plans:** 1/1 plans complete
+**Depends on:** Phase 9
 
-Plans:
-- [x] 06.1-01-PLAN.md — Configure Gmail credentials in Vercel
+**Requirements:** CONT-01, CONT-02, CONT-03, CONT-04, CONT-05
 
-### Phase 7: PageSpeed 性能优化 - 优化 Mobile LCP (从 9.2s 到 <2.5s)，减少图片大小
+**Success Criteria** (what must be TRUE):
 
-**Goal:** Optimize mobile LCP from 9.2s to <2.5s by fixing video blocking, enabling sharp image optimization, and ensuring proper priority loading
-**Requirements**: LCP-01, LCP-02, LCP-03
-**Depends on:** Phase 6
-**Plans:** 5/5 plans complete
+1. "How to Import from China" guide published at /resources and searchable (user can find via site search)
+2. "China Supplier Verification" guide published at /resources (user can find via site search)
+3. "Australia Import Tips" guide published at /resources (user can find via site search)
+4. FAQ section visible on website with valid FAQPage schema (user can see FAQ content)
+5. Service pages contain target keywords in headings and content (user can verify via page inspection)
 
-Plans:
-- [x] 07-01-PLAN.md — Fix Hero LCP (video hidden on mobile)
-- [x] 07-02-PLAN.md — Video preload fix + fetchpriority (CRITICAL: fix preload="none" + add fetchpriority="high")
-- [x] 07-03-PLAN.md — Calendly dynamic import (SKIP - already works)
-- [x] 07-04-PLAN.md — Install sharp (SKIP - already installed v0.34.5)
-- [x] 07-05-PLAN.md — Bundle analysis
-- [x] 07-06-PLAN.md — SVG optimization (N/A - no SVG files in project)
-- [ ] 07-07-PLAN.md — Final verification (checkpoint: human-verify)
-
-### Phase 8: security audit - analyze and fix all security risks in the Wag website
-
-**Goal:** Comprehensive security audit to identify and fix vulnerabilities. Includes dependency scanning, API route security, security headers, and hardening measures.
-
-**Requirements:** SEC-01, SEC-02, SEC-03, SEC-04, SEC-05, SEC-06, SEC-07
-
-**Depends on:** Phase 7
-
-**Plans:** 5/5 plans (complete)
-
-Plans:
-- [x] 08-01-PLAN.md — Dependency security (npm audit, npm outdated, upgrade Next.js)
-- [x] 08-02-PLAN.md — Security headers & CORS configuration
-- [x] 08-03-PLAN.md — Rate limiting & API hardening
-- [x] 08-04-PLAN.md — CI/CD security workflow
-- [x] 08-05-PLAN.md — Fix npm audit vulnerabilities (gap closure)
-
-### Success Criteria
-
-1. npm audit shows no critical or high vulnerabilities
-2. Next.js upgraded to 14.2.25+ to fix CVE-2025-29927
-3. Security headers present (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy)
-4. CORS configured for API routes (only allowed origins)
-5. Rate limiting implemented with persistent Redis storage
-6. Security scanning workflow runs in CI/CD
+**Plans:** TBD
 
 ---
 
-*Updated: 2026-03-18*
+### Phase 11: Local SEO & Authority
+
+**Goal:** Establish local presence in Australian market and build domain authority through backlinks
+
+**Depends on:** Phase 10
+
+**Requirements:** LOCAL-01, LOCAL-02, LOCAL-03, AUTH-01, AUTH-02
+
+**Success Criteria** (what must be TRUE):
+
+1. Google Business Profile claimed and optimized with business details (user can find on Google Maps)
+2. Business listed in 5+ Australian directories (user can verify via directory searches)
+3. Location-specific content about South Australia visible on site (user can find on About/Services pages)
+4. 3 guest posts published on external industry websites (user can find via backlink check)
+5. Backlinks from Australian business directories acquired (user can verify via SEO tools)
+
+**Plans:** TBD
+
+---
+
+### Phase 12: Analytics & Optimization
+
+**Goal:** Set up monitoring systems to track keyword rankings and measure SEO success
+
+**Depends on:** Phase 11
+
+**Requirements:** MON-02, MON-03, AUTH-03
+
+**Success Criteria** (what must be TRUE):
+
+1. Keyword ranking tracking configured for "epic sourcing" and "china direct" (user can view tracking data)
+2. Monthly SEO audit workflow documented and operational (user can run audit)
+3. Domain Authority increased to 15+ (user can verify via Moz/Ahrefs)
+
+**Plans:** TBD
+
+---
+
+## Progress Table
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 9. Technical SEO Foundation | 0/1 | Not started | - |
+| 10. Content Strategy | 0/1 | Not started | - |
+| 11. Local SEO & Authority | 0/1 | Not started | - |
+| 12. Analytics & Optimization | 0/1 | Not started | - |
+
+---
+
+## Coverage Map
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| TECH-01 | Phase 9 | Pending |
+| TECH-02 | Phase 9 | Pending |
+| TECH-03 | Phase 9 | Pending |
+| TECH-04 | Phase 9 | Pending |
+| TECH-05 | Phase 9 | Pending |
+| MON-01 | Phase 9 | Pending |
+| CONT-01 | Phase 10 | Pending |
+| CONT-02 | Phase 10 | Pending |
+| CONT-03 | Phase 10 | Pending |
+| CONT-04 | Phase 10 | Pending |
+| CONT-05 | Phase 10 | Pending |
+| LOCAL-01 | Phase 11 | Pending |
+| LOCAL-02 | Phase 11 | Pending |
+| LOCAL-03 | Phase 11 | Pending |
+| AUTH-01 | Phase 11 | Pending |
+| AUTH-02 | Phase 11 | Pending |
+| MON-02 | Phase 12 | Pending |
+| MON-03 | Phase 12 | Pending |
+| AUTH-03 | Phase 12 | Pending |
+
+---
+
+*Last updated: 2026-03-18*

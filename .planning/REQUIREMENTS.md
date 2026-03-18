@@ -67,31 +67,31 @@ Deferred to future release.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| TECH-01 | Phase 1 | Pending |
-| TECH-02 | Phase 1 | Pending |
-| TECH-03 | Phase 1 | Pending |
-| TECH-04 | Phase 1 | Pending |
-| TECH-05 | Phase 1 | Pending |
-| CONT-01 | Phase 2 | Pending |
-| CONT-02 | Phase 2 | Pending |
-| CONT-03 | Phase 2 | Pending |
-| CONT-04 | Phase 2 | Pending |
-| CONT-05 | Phase 2 | Pending |
-| LOCAL-01 | Phase 3 | Pending |
-| LOCAL-02 | Phase 3 | Pending |
-| LOCAL-03 | Phase 3 | Pending |
-| AUTH-01 | Phase 3 | Pending |
-| AUTH-02 | Phase 3 | Pending |
-| AUTH-03 | Phase 3 | Pending |
-| MON-01 | Phase 1 | Pending |
-| MON-02 | Phase 3 | Pending |
-| MON-03 | Phase 3 | Pending |
+| TECH-01 | Phase 9 | Pending |
+| TECH-02 | Phase 9 | Pending |
+| TECH-03 | Phase 9 | Pending |
+| TECH-04 | Phase 9 | Pending |
+| TECH-05 | Phase 9 | Pending |
+| MON-01 | Phase 9 | Pending |
+| CONT-01 | Phase 10 | Pending |
+| CONT-02 | Phase 10 | Pending |
+| CONT-03 | Phase 10 | Pending |
+| CONT-04 | Phase 10 | Pending |
+| CONT-05 | Phase 10 | Pending |
+| LOCAL-01 | Phase 11 | Pending |
+| LOCAL-02 | Phase 11 | Pending |
+| LOCAL-03 | Phase 11 | Pending |
+| AUTH-01 | Phase 11 | Pending |
+| AUTH-02 | Phase 11 | Pending |
+| AUTH-03 | Phase 12 | Pending |
+| MON-02 | Phase 12 | Pending |
+| MON-03 | Phase 12 | Pending |
 
 **Coverage:**
-- v1 requirements: 18 total
-- Mapped to phases: 18
+- v1 requirements: 19 total
+- Mapped to phases: 19
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-18*
-*Last updated: 2026-03-18 after competitor research*
+*Last updated: 2026-03-18 for v1.1 SEO Automation*
