@@ -17,20 +17,18 @@ export const metadata: Metadata = {
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
-interface ArticleData {
+interface Article {
   slug: string
-  index: number
-  title?: string
-  category?: string
-  date?: string
-  readTime?: string
+  title: string
+  category: string
+  date: string
+  readTime: string
   coverImage?: string
   desc?: string
   description?: string
-  [key: string]: unknown
 }
 
-function getArticles(): ArticleData[] {
+function getArticles(): Article[] {
   const articles = fs
     .readdirSync(BLOG_DIR)
     .filter(f => f.endsWith('.mdx'))
@@ -38,7 +36,17 @@ function getArticles(): ArticleData[] {
       const slug = filename.replace('.mdx', '')
       const raw = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf-8')
       const { data } = matter(raw)
-      return { slug, index: index + 1, ...data } as ArticleData
+      return {
+        slug,
+        index: index + 1,
+        title: data.title || '',
+        category: data.category || 'Uncategorized',
+        date: data.date || '',
+        readTime: data.readTime || '',
+        coverImage: data.coverImage,
+        desc: data.desc,
+        description: data.description,
+      } as Article
     })
     .sort((a, b) => {
       const dateA = a.date
@@ -53,6 +61,5 @@ export default function ResourcesPage() {
   const articles = getArticles()
   const categories = ['All Articles', ...Array.from(new Set(articles.map((a) => a.category).filter(Boolean)))]
 
-  // Cast to Article[] since we know the data exists from frontmatter
-  return <ResourcesContent articles={articles as any} categories={categories as string[]} />
+  return <ResourcesContent articles={articles} categories={categories} />
 }
