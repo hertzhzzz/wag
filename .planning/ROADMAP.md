@@ -6,7 +6,7 @@
 - ✅ **v1.1 Deployment & Minor Fixes** — Phase 5 (shipped 2026-03-17)
 - ✅ **v1.3 SEO Optimization** — Phase 6 (complete)
 - ✅ **v1.4 Security Audit** — Phase 8 (complete)
-- 🚧 **v1.5 PageSpeed** — Phase 7 (in progress)
+- ✅ **v1.5 PageSpeed** — Phase 7 (in progress)
 
 ## Phases
 
@@ -34,7 +34,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 6. SEO Optimization | 6/6 | Complete | |
 | 06.1. Vercel Gmail Config | 1/1 | Complete | 2026-03-17 |
 | 7. PageSpeed Mobile LCP | 1/7 | In Progress | 2026-03-18 |
-| 8. Security Audit | 4/5 | In Progress | 2026-03-18 |
+| 8. Security Audit | 5/5 | Complete | 2026-03-18 |
 
 **Total:** 6 phases, 25 plans (including gap closure)
 
@@ -113,14 +113,14 @@ Plans:
 
 **Depends on:** Phase 7
 
-**Plans:** 4/5 plans (gap closure in progress)
+**Plans:** 5/5 plans (complete)
 
 Plans:
 - [x] 08-01-PLAN.md — Dependency security (npm audit, npm outdated, upgrade Next.js)
 - [x] 08-02-PLAN.md — Security headers & CORS configuration
 - [x] 08-03-PLAN.md — Rate limiting & API hardening
 - [x] 08-04-PLAN.md — CI/CD security workflow
-- [ ] 08-05-PLAN.md — Fix npm audit vulnerabilities (gap closure)
+- [x] 08-05-PLAN.md — Fix npm audit vulnerabilities (gap closure)
 
 ### Success Criteria
 

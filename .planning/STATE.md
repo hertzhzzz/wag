@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: "Completed 08-02: Security headers and CORS configured"
-last_updated: "2026-03-18T01:50:00.000Z"
-last_activity: "2026-03-18 — Completed 08-02: Security headers and CORS"
+stopped_at: "Completed 08-05: npm audit gap closure (Next.js 16 + React 19)"
+last_updated: "2026-03-18T02:15:00.000Z"
+last_activity: "2026-03-18 — Completed 08-05: npm audit gap closure"
 progress:
   total_phases: 9
   completed_phases: 4
   total_plans: 13
-  completed_plans: 11
-  percent: 85
+  completed_plans: 12
+  percent: 92
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 ## Current Position
 
 Phase: 08-security-audit-analyze-and-fix-all-security-risks-in-the-wag-website (Security Audit)
-Plan: 02 (of 4)
+Plan: 05 (of 5)
 Status: Completed
-Last activity: 2026-03-18 — Completed 08-02: Security headers and CORS
+Last activity: 2026-03-18 — Completed 08-05: npm audit gap closure (Next.js 16 + React 19)
 
-Progress: [█████████░] 85%
+Progress: [██████████] 92%
 
 ## Performance Metrics
 
@@ -97,6 +97,10 @@ Recent decisions affecting current work:
 - [08-security-audit-02]: Security headers added via next.config.js (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy)
 - [08-security-audit-02]: CORS uses allowlist approach (explicit origin list vs wildcard)
 - [08-security-audit-02]: Both www and non-www domain variants added to allowed origins
+- [08-security-audit-05]: Removed browser-use (unused dependency with vulnerabilities)
+- [08-security-audit-05]: Upgraded eslint-config-next to 15+ to fix glob vulnerability
+- [08-security-audit-05]: Upgraded Next.js to 16.x and React to 19 (required for latest security fixes)
+- [08-security-audit-05]: npm audit now returns 0 vulnerabilities (gap closed)
 
 ### Roadmap Evolution
 
@@ -114,8 +118,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T01:17:58.123Z
-Stopped at: Completed 08-04: GitHub Actions security scanning workflow
+Last session: 2026-03-18T02:09:51.000Z
+Stopped at: Completed 08-05: npm audit gap closure (Next.js 16 + React 19)
 Resume file: None
 
 ## Deployment Status (v1.1)
