@@ -6,9 +6,9 @@
 
 ## Summary
 
-Phase 10 requires creating 3 SEO-optimized blog guides, expanding the FAQ section with Schema markup, and optimizing service pages with target keywords. The project already has a mature MDX-based blog system with detailed content guidelines, an existing FAQ component with JSON-LD schema, and service pages with basic metadata. The key work involves generating new content following existing patterns, expanding FAQ from 4 to 10-15 questions, and enhancing service page metadata with high-intent commercial keywords.
+Phase 10 requires creating 3 SEO-optimized blog guides, expanding the FAQ section with Schema markup, and optimizing service pages with target keywords. The project already has a mature MDX-based blog system with detailed content guidelines (BLOG_PROMPT.md), an existing FAQ component with correct FAQPage JSON-LD schema, and service pages with basic metadata. The key work involves generating new content following existing patterns, expanding FAQ from 4 to 10-15 questions and adding to services/about pages, and enhancing service page metadata with high-intent commercial keywords.
 
-**Primary recommendation:** Use existing BLOG_PROMPT.md for content generation (1500-2200 words per guide), expand existing FAQ data file with 6-11 new questions, and update service page metadata with target keywords "factory visit", "supplier sourcing", "China procurement".
+**Primary recommendation:** Use existing BLOG_PROMPT.md for content generation (1500-2200 words per guide), expand existing FAQ data file with 6-11 new questions and import FAQ components to services/about pages, update service page metadata with target keywords "factory visit", "supplier sourcing", "China procurement".
 
 <user_constraints>
 ## User Constraints (from CONTEXT.md)
@@ -39,8 +39,9 @@ Phase 10 requires creating 3 SEO-optimized blog guides, expanding the FAQ sectio
 | CONT-01 | Create "How to Import from China" guide (blog post) | Existing blog system with MDX, frontmatter fields, quality checklist in BLOG_PROMPT.md |
 | CONT-02 | Create "China Supplier Verification" guide (blog post) | Same content system, supplier verification topic aligns with existing brand expertise |
 | CONT-03 | Create "Australia Import Tips" guide (blog post) | Same content system, Australian market focus per brand positioning |
-| CONT-04 | Add FAQ section to website with schema markup | Existing FAQ.tsx (accordion), FAQSchema.tsx (JSON-LD), faqs.ts (data) - needs expansion to 10-15 questions |
+| CONT-04 | Add FAQ section to website with schema markup | FAQ already on homepage, needs expansion to 10-15 questions + add to services/about |
 | CONT-05 | Optimize service pages with target keywords | Service page metadata exists, needs high-intent keyword enhancement |
+
 </phase_requirements>
 
 ## Standard Stack
@@ -61,7 +62,7 @@ Phase 10 requires creating 3 SEO-optimized blog guides, expanding the FAQ sectio
 | Instead of | Could Use | Tradeoff |
 |------------|-----------|----------|
 | Custom FAQ component | Use existing FAQ.tsx | Existing accordion component is well-styled and accessible |
-| Manual JSON-LD | Use existing FAQSchema.tsx | Existing schema generator already produces valid FAQPage markup |
+| Manual JSON-LD | Use existing FAQSchema.tsx | Existing schema generator produces valid FAQPage markup per schema.org |
 
 **Installation:**
 No new packages required - all infrastructure already exists.
@@ -76,8 +77,8 @@ content/blog/
 ├── verify-chinese-supplier.mdx        # Existing
 ├── ...                                # 6 existing posts
 ├── how-to-import-from-china.mdx       # NEW - CONT-01
-├── china-supplier-verification.mdx   # NEW - CONT-02
-└── australia-import-tips.mdx          # NEW - CONT-03
+├── china-supplier-verification.mdx    # NEW - CONT-02
+└── australia-import-tips.mdx         # NEW - CONT-03
 
 app/
 ├── data/
@@ -105,7 +106,7 @@ Use BLOG_PROMPT.md workflow:
 
 **Source:** content/BLOG_PROMPT.md (detailed guidelines)
 
-### Pattern 2: FAQ Integration
+### Pattern 2: FAQ Integration (VERIFIED)
 **What:** Add accordion FAQ with JSON-LD schema to pages
 **When to use:** For CONT-04
 **Existing Implementation:**
@@ -122,7 +123,7 @@ export default function FAQ() {
 ```
 
 ```typescript
-// app/components/FAQSchema.tsx - JSON-LD generator
+// app/components/FAQSchema.tsx - JSON-LD generator (VERIFIED CORRECT FORMAT)
 'use client'
 import { faqs } from '@/data/faqs'
 
@@ -143,12 +144,15 @@ export default function FAQSchema() {
 }
 ```
 
-**Expansion needed:** Add 6-11 more questions to faqs.ts, import FAQ + FAQSchema to service pages
+**FAQPage Format Verification:** Verified against schema.org (2026-03-18) - current implementation uses correct format with Question and Answer types in mainEntity array. Google supports this for FAQ rich results.
+
+**Current Status:** FAQ already implemented on homepage (app/page.tsx lines 8, 33, 38)
+**Expansion needed:** Add 6-11 more questions to faqs.ts (target 10-15), import FAQ + FAQSchema to services/about pages
 
 ### Pattern 3: Service Page Keyword Optimization
 **What:** Update metadata with high-intent commercial keywords
 **When to use:** For CONT-05
-**Example:**
+**Current Implementation:**
 ```typescript
 // app/services/page.tsx - current metadata
 export const metadata: Metadata = {
@@ -158,7 +162,7 @@ export const metadata: Metadata = {
 }
 ```
 
-**Enhancement needed:** Add "factory visit", "supplier sourcing", "China procurement" as primary keywords in metadata + add content sections with these keywords
+**Enhancement needed:** Add "factory visit", "supplier sourcing", "China procurement" as primary keywords in metadata + add content sections with these keywords in H2/H3 headings
 
 ### Anti-Patterns to Avoid
 - **Content without frontmatter**: All blog posts MUST have complete frontmatter per BLOG_PROMPT.md template
@@ -166,6 +170,7 @@ export const metadata: Metadata = {
 - **Keyword stuffing**: Natural keyword placement in content, not repeated unnaturally
 - **Missing FAQSchema**: Every page with FAQ must include FAQSchema component for JSON-LD
 - **Wrong internal links**: Use relative paths `/services`, not `/resources/services`
+- **Filename-slug mismatch**: Next.js uses filename as URL path, ensure filename matches slug without `/resources/` prefix
 
 ## Don't Hand-Roll
 
@@ -218,7 +223,7 @@ export const metadata: Metadata = {
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 
-// Add before closing <>
+// Add before closing </>
 <FAQSchema />
 // ... existing content ...
 <FAQ />
@@ -282,12 +287,14 @@ takeaways:
 |--------------|------------------|--------------|--------|
 | Generic China content | Australia-market-focused content | Brand pivot | Higher relevance for Australian importers |
 | No FAQ schema | FAQPage JSON-LD schema | Phase 9 (TECH-04) | Rich snippets in search results |
+| FAQ only on homepage | FAQ on services + about pages | CONT-04 (this phase) | Maximum SEO coverage |
 | Basic metadata | Keyword-optimized metadata | CONT-05 (this phase) | Better ranking for commercial keywords |
 | 4 FAQ questions | 10-15 FAQ questions | CONT-04 (this phase) | Better coverage, more rich result opportunities |
 
 **Deprecated/outdated:**
 - Generic "China sourcing" content without market focus - now requires Australian context
 - Static metadata without keyword strategy - now requires commercial keyword optimization
+- FAQ on single page only - now requires multi-page coverage
 
 ## Open Questions
 
@@ -319,11 +326,11 @@ takeaways:
 ### Phase Requirements Test Map
 | Req ID | Behavior | Test Type | Automated Command | File Exists? |
 |--------|----------|-----------|-------------------|-------------|
-| CONT-01 | Blog post exists at /resources/how-to-import-from-china | Manual | Visit URL, verify content | ✅ content/blog/how-to-import-from-china.mdx |
-| CONT-02 | Blog post exists at /resources/china-supplier-verification | Manual | Visit URL, verify content | ✅ content/blog/china-supplier-verification.mdx |
-| CONT-03 | Blog post exists at /resources/australia-import-tips | Manual | Visit URL, verify content | ✅ content/blog/australia-import-tips.mdx |
-| CONT-04 | FAQ section with 10-15 questions on services page | Manual | Inspect /services, count questions | ✅ faqs.ts expanded |
-| CONT-05 | Service page has target keywords in metadata | Manual | Inspect page metadata | ✅ services/page.tsx optimized |
+| CONT-01 | Blog post exists at /resources/how-to-import-from-china | Manual | Visit URL, verify content | Need to create content/blog/how-to-import-from-china.mdx |
+| CONT-02 | Blog post exists at /resources/china-supplier-verification | Manual | Visit URL, verify content | Need to create content/blog/china-supplier-verification.mdx |
+| CONT-03 | Blog post exists at /resources/australia-import-tips | Manual | Visit URL, verify content | Need to create content/blog/australia-import-tips.mdx |
+| CONT-04 | FAQ section with 10-15 questions on services page | Manual | Inspect /services, count questions | Need to expand faqs.ts + add to services/about |
+| CONT-05 | Service page has target keywords in metadata | Manual | Inspect page metadata | Need to update services/page.tsx metadata |
 
 ### Sampling Rate
 - **Per task commit:** Manual verification of content structure
@@ -340,8 +347,9 @@ takeaways:
 - content/BLOG_PROMPT.md - Full content generation guidelines
 - content/BLOG_QA_PROMPT.md - Quality assurance checklist
 - app/components/FAQ.tsx - Existing FAQ component implementation
-- app/components/FAQSchema.tsx - Existing JSON-LD schema generator
+- app/components/FAQSchema.tsx - Existing JSON-LD schema generator (verified correct format)
 - app/data/faqs.ts - Existing FAQ data (4 questions)
+- schema.org/FAQPage - Verified JSON-LD format matches current specification
 
 ### Secondary (MEDIUM confidence)
 - Next.js 14.2 App Router documentation for metadata API
@@ -363,3 +371,4 @@ takeaways:
 ---
 
 *Generated for Phase 10: Content Strategy*
+*Updated: 2026-03-18 - Verified FAQ schema format against schema.org*
