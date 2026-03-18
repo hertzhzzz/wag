@@ -7,12 +7,12 @@ export default function Hero() {
       {/* Hero Image - Mobile: show only (no video to block LCP) */}
       <div className="absolute inset-0 md:hidden">
         <Image
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
+          src="/hero-image.webp"
           alt="Chinese manufacturing facility with Australian business team"
           fill
           priority={true}
           fetchPriority="high"
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 1200px"
           className="object-cover"
         />
         {/* Gradient overlay for mobile */}
@@ -29,7 +29,7 @@ export default function Hero() {
           playsInline
           preload="none"
           className="w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80"
+          poster="/hero-image.webp"
         >
           <source src="https://pub-543b90f0e56147e5bdd93d5e7cc36c10.r2.dev/hero_vid.mp4" type="video/mp4" />
         </video>
