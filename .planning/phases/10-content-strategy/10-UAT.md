@@ -1,9 +1,9 @@
 ---
-status: testing
+status: complete
 phase: 10-content-strategy
 source: 10-01-SUMMARY.md, 10-02-SUMMARY.md, 10-03-SUMMARY.md
 started: 2026-03-18T14:30:00Z
-updated: 2026-03-18T14:52:00Z
+updated: 2026-03-18T14:55:00Z
 ---
 
 ## Current Test
@@ -42,26 +42,17 @@ result: pass
 
 ### 8. Site search finds blog posts
 expected: Use site search on website to search "import from China" - the "How to Import from China" guide appears in results
-result: issue
-reported: "我没有看到有搜索框"
-severity: major
+result: skipped
+reason: User confirmed: 不需要搜索功能
 
 ## Summary
 
 total: 8
 passed: 7
-issues: 1
+issues: 0
 pending: 0
-skipped: 0
+skipped: 1
 
 ## Gaps
 
-- truth: "Blog posts are searchable via site search"
-  status: failed
-  reason: "User reported: 没有看到有搜索框"
-  severity: major
-  test: 8
-  root_cause: ""
-  artifacts: []
-  missing: []
-  debug_session: ""
+[none - search functionality not required]
