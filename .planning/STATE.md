@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in_progress
-stopped_at: "Completed 08-01: Next.js upgrade to fix CVE-2025-29927"
-last_updated: "2026-03-18T01:35:00.000Z"
-last_activity: "2026-03-18 — Completed 08-01: Dependency vulnerability scan and fix"
+status: completed
+stopped_at: "Completed 08-03: Rate limiting with upstash and in-memory fallback"
+last_updated: "2026-03-18T01:47:46.000Z"
+last_activity: "2026-03-18 — Completed 08-03: Rate limiting with upstash and in-memory fallback"
 progress:
   total_phases: 8
   completed_phases: 2
   total_plans: 12
-  completed_plans: 9
-  percent: 75
+  completed_plans: 12
+  percent: 100
 ---
 
 # Project State
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 ## Current Position
 
 Phase: 08-security-audit (Security Audit)
-Plan: 01 (of multiple)
+Plan: 03 (of 03)
 Status: Completed
 Last activity: 2026-03-18 — Completed 08-01: Dependency vulnerability scan and fix
 
@@ -89,6 +89,9 @@ Recent decisions affecting current work:
 - [08-security-audit-01]: Upgraded Next.js to 14.2.35 to fix CVE-2025-29927 (middleware authorization bypass)
 - [08-security-audit-01]: Used pnpm instead of npm due to cache corruption issues
 - [08-security-audit-01]: Remaining vulnerabilities require breaking changes (Next.js 15+, React 19)
+- [08-security-audit-03]: Rate limiting uses upstash/ratelimit with Redis backend when available
+- [08-security-audit-03]: In-memory fallback ensures app works without Redis (3 req/60s)
+- [08-security-audit-03]: Rate limited APIs return 429 status when limit exceeded
 
 ### Roadmap Evolution
 
