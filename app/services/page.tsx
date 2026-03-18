@@ -11,11 +11,14 @@ import { serviceFaqs } from '@/data/faqs-services'
 export const metadata: Metadata = {
   title: 'China Sourcing Services | Factory Tours & Supplier Verification',
   description: 'Our China sourcing services include factory tours, supplier verification, quality inspections, and procurement coordination for Australian businesses.',
-  keywords: ['china sourcing services', 'factory tour china', 'supplier verification china', 'china procurement', 'quality inspection china'],
+  keywords: ['factory visit', 'supplier sourcing', 'China procurement', 'china sourcing services', 'factory tour china', 'supplier verification china', 'quality inspection china'],
   openGraph: {
     title: 'China Sourcing Services | Factory Tours & Supplier Verification',
     description: 'Our China sourcing services include factory tours, supplier verification, quality inspections, and procurement coordination for Australian businesses.',
     url: 'https://www.winningadventure.com.au/services',
+    siteName: 'Winning Adventure Global',
+    locale: 'en_AU',
+    alternateLocale: 'en_US',
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/services',
@@ -41,7 +44,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-lg text-gray-300 max-w-[600px]">
-            From supplier discovery to factory visits — we handle every step of your China sourcing journey.
+            From supplier discovery to factory visits and end-to-end China procurement — we handle every step of your China sourcing journey.
           </p>
         </div>
       </section>
@@ -60,7 +63,7 @@ export default function ServicesPage() {
             </div>
             <div className="text-2xl font-bold text-amber">POA</div>
             <p className="text-[0.95rem] text-gray-600 leading-relaxed">
-              We take you directly to 2-3 pre-screened Chinese factories. Your bilingual guide handles all logistics — scheduling, transport, translation, and factory introductions. You visit, ask questions, and decide independently. Best for: businesses exploring new suppliers or verifying existing ones before committing.
+              We take you directly to 2-3 pre-screened Chinese factories for your supplier sourcing needs. Your bilingual guide handles all logistics — scheduling, transport, translation, and factory introductions. You visit, ask questions, and decide independently. Best for: businesses exploring new suppliers or verifying existing ones before committing.
             </p>
             <ul className="list-none flex flex-col gap-2">
               <li className="text-sm text-navy flex items-center gap-2">
