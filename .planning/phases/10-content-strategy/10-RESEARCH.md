@@ -10,6 +10,245 @@ Phase 10 requires creating 3 SEO-optimized blog guides, expanding the FAQ sectio
 
 **Primary recommendation:** Use existing BLOG_PROMPT.md for content generation (1500-2200 words per guide), expand existing FAQ data file with 6-11 new questions and import FAQ components to services/about pages, update service page metadata with target keywords "factory visit", "supplier sourcing", "China procurement".
 
+---
+
+## Phase-Specific Bug Prevention Analysis
+
+This section identifies technical risks when executing the three content strategy plans. Each plan has specific bug risks that must be addressed during implementation.
+
+### Plan 10-01: Create 3 SEO Blog Guides
+
+#### Critical Risk 1: Filename/Slug URL Mismatch (CRITICAL)
+
+**What goes wrong:** Blog posts return 404 errors because filename does not match URL slug.
+
+**Root cause:** Next.js uses the filename (without extension) as the URL path, NOT the `slug` field in frontmatter. BLOG_PROMPT.md explicitly states:
+- "Next.js uses filename as URL, not frontmatter slug field"
+- "If slug is `/resources/verify-chinese-supplier`, filename must be `verify-chinese-supplier.mdx`"
+
+**Affected files in Plan 10-01:**
+
+| Plan Filename | Required Frontmatter slug | Risk |
+|---------------|---------------------------|------|
+| `how-to-import-from-china.mdx` | `/resources/how-to-import-from-china` | Filename must NOT include /resources/ |
+| `china-supplier-verification.mdx` | `/resources/china-supplier-verification` | Filename must NOT include /resources/ |
+| `australia-import-tips.mdx` | `/resources/australia-import-tips` | Filename must NOT include /resources/ |
+
+**Prevention verification:**
+```bash
+# After creating each MDX file, verify:
+# 1. Filename does NOT have /resources/ prefix
+ls content/blog/*.mdx | grep -v "/resources/"
+
+# 2. Page responds with 200 (requires build first)
+npm run build && curl -s -o /dev/null -w "%{http_code}" http://localhost:3000/resources/how-to-import-from-china
+# Expected: 200, Not 404
+```
+
+#### Critical Risk 2: Internal Link Path Format (HIGH)
+
+**What goes wrong:** Internal links result in broken URLs (404).
+
+**Root cause:** BLOG_PROMPT.md rules specify:
+- Markdown internal links: `/services`, `/about` (NOT `/resources/services`)
+- Frontmatter slug: `/resources/your-article-slug` (only in frontmatter)
+
+**Prevention verification:**
+```bash
+# Check for incorrect internal links
+grep -E '\]\(/resources/' content/blog/*.mdx
+# Expected: nothing (should NOT contain /resources/ prefix in links)
+
+# Verify correct format exists
+grep -E '\]\(/services|\]\(/about|\]\(/enquiry' content/blog/*.mdx
+# Expected: should find internal links
+```
+
+#### Medium Risk 3: Duplicate Frontmatter Fields
+
+**What goes wrong:** gray-matter silently takes last value, causing undefined behavior.
+
+**Root cause:** Existing blog `verify-chinese-supplier.mdx` has duplicate `ctaTitle` field (lines 25 and 268). The second definition overwrites the first.
+
+**Evidence from existing code:**
+```yaml
+# Lines 25-26 in verify-chinese-supplier.mdx
+ctaTitle: "Planning a China factory visit?"
+
+# Line 268 (after content)
+ctaTitle: "Need help with supplier verification?"
+```
+
+**Prevention verification:**
+```bash
+# Check for duplicate frontmatter keys in new files
+# Manually inspect: ensure ctaTitle appears only once in frontmatter section (before ---)
+```
+
+#### Medium Risk 4: InlineCTA Component Property Mismatch
+
+**What goes wrong:** CTA button does not link to the correct URL.
+
+**Root cause:** The InlineCTA component in `resources/[slug]/page.tsx` does NOT accept a `ctaButtonLink` prop:
+```typescript
+// app/resources/[slug]/page.tsx lines 79-88
+function InlineCTA({ ctaTitle, ctaText, ctaButtonText }: { ... }) {
+  // Hardcoded to /enquiry - ignores ctaButtonLink
+  <Link href="/enquiry" ...>
+}
+```
+
+But existing blogs have both:
+- `ctaButtonLink: "https://www.winningadventure.com.au/enquiry"` - IGNORED
+- `ctaButtonText: "Book a consultation"` - USED
+
+**Prevention:**
+- Use `ctaButtonText` in frontmatter (this is what renders)
+- Do NOT use `ctaButtonLink` - it is ignored by the component
+
+#### Medium Risk 5: Missing Required Frontmatter Fields
+
+**What goes wrong:** Page builds but renders with missing data.
+
+**Required fields (verified from existing blog):**
+- title, seoTitle, description, category, author, date
+- readTime, subtitle, desc, coverImage, coverImageAlt
+- slug, primaryKeyword, secondaryKeywords (array), tags (array)
+- ctaTitle, ctaText, ctaButtonText
+- takeaways (array, minimum 3-5 items)
+
+**Prevention verification:**
+```bash
+# Verify all required fields exist
+for field in title seoTitle description primaryKeyword slug; do
+  grep -q "^$field:" content/blog/how-to-import-from-china.mdx || echo "MISSING: $field"
+done
+```
+
+#### Medium Risk 6: Prohibited Components
+
+**What goes wrong:** Build errors or unexpected rendering.
+
+**Root cause:** BLOG_PROMPT.md explicitly prohibits:
+- `ArticleImage` component
+- Generic "Conclusion" section heading
+
+**Prevention verification:**
+```bash
+grep -i "ArticleImage\|## Conclusion" content/blog/*.mdx
+# Expected: nothing
+```
+
+---
+
+### Plan 10-02: Expand FAQ and Add to Pages
+
+#### Low Risk 1: FAQ Import Path
+
+**What goes wrong:** Build fails with module not found.
+
+**Root cause:** FAQ.tsx imports from `@/data/faqs`:
+```typescript
+// app/components/FAQ.tsx line 4
+import { faqs } from '@/data/faqs'
+```
+
+This assumes `@/` maps to `app/`. Verify `tsconfig.json` path aliases are correct.
+
+**Verification:**
+```bash
+# Check tsconfig.json for path alias
+grep -A5 '"@/"' tsconfig.json
+```
+
+#### Medium Risk 2: FAQ Schema Duplication
+
+**What goes wrong:** Multiple FAQPage schemas on same domain may confuse search engines.
+
+**Current state:**
+- Homepage (`app/page.tsx`): Already has `<FAQSchema />` (line 33)
+- Services page: Will add `<FAQSchema />`
+- About page: Will add `<FAQSchema />`
+
+**Google's position:** Multiple FAQPage schemas on different URLs are valid if content differs.
+
+**Prevention:**
+- Ensure services page FAQ and about page FAQ have DIFFERENT questions than homepage FAQ
+- Or consolidate: only services + about pages need FAQ (homepage can keep for now)
+
+#### Low Risk 3: FAQ Component Placement
+
+**What goes wrong:** FAQ renders in wrong location or breaks page layout.
+
+**Recommendation from plan:** Insert before Footer:
+```tsx
+<FAQ />
+<CTABand />  {/* Optional: keep existing CTA */}
+<Footer />
+```
+
+NOT between Navbar and hero (would break hero layout).
+
+---
+
+### Plan 10-03: Keyword Optimization
+
+#### Critical Risk 1: Metadata Keywords Array Duplicates (HIGH)
+
+**What goes wrong:** Duplicate keywords are ignored or cause warnings.
+
+**From plan 10-03:**
+```typescript
+// Current keywords (app/services/page.tsx line 11):
+['china sourcing services', 'factory tour china', 'supplier verification china', 'china procurement', 'quality inspection china']
+
+// Plan adds:
+'factory visit', 'supplier sourcing', 'China procurement'
+
+// PROBLEM: 'china procurement' already exists (case difference - 'China' vs 'china')
+```
+
+**Prevention:**
+```typescript
+// Correct keywords array (no duplicates):
+keywords: [
+  'factory visit',
+  'supplier sourcing',
+  'China procurement',  // Only one variation
+  'china sourcing services',
+  'factory tour china',
+  'supplier verification china',
+  'quality inspection china'
+]
+```
+
+**Verification:**
+```bash
+# Check for duplicates
+grep -A3 "keywords:" app/services/page.tsx | tr ',' '\n' | sort -f | uniq -d
+```
+
+#### Medium Risk 2: Keywords in Content vs Metadata Mismatch
+
+**What goes wrong:** Search engines may penalize mismatch between metadata and page content.
+
+**Prevention:**
+```bash
+# Check keywords appear in content
+grep -ci "factory visit" app/services/page.tsx
+grep -ci "supplier sourcing" app/services/page.tsx
+grep -ci "China procurement" app/services/page.tsx
+# Each should return >= 1
+```
+
+#### High Risk 3: Keyword Stuffing
+
+**What goes wrong:** Google penalizes over-optimization.
+
+**Rule:** Keywords should appear naturally, 1-3% density maximum. Do NOT repeat keywords unnaturally.
+
+---
+
 <user_constraints>
 ## User Constraints (from CONTEXT.md)
 
@@ -50,7 +289,7 @@ Phase 10 requires creating 3 SEO-optimized blog guides, expanding the FAQ sectio
 | Library | Version | Purpose | Why Standard |
 |---------|---------|---------|--------------|
 | gray-matter | ^4.0.3 | MDX frontmatter parsing | Already integrated, reads blog metadata |
-| next | 14.2.x | App Router, metadata API | Already in use for SEO |
+| next | 14.2.x (project CLAUDE.md) - ACTUAL: 16.1.7 | App Router, metadata API | Already in use for SEO |
 
 ### Supporting
 | Library | Version | Purpose | When to Use |
@@ -188,7 +427,7 @@ export const metadata: Metadata = {
 ### Pitfall 1: Filename-Slug Mismatch
 **What goes wrong:** Blog post 404s because filename doesn't match URL slug
 **Why it happens:** Next.js uses filename as URL path, not frontmatter slug field
-**How to avoid:** Match filename to slug (e.g., slug: `/resources/verify-chinese-supplier` → filename: `verify-chinese-supplier.mdx`)
+**How to avoid:** Match filename to slug (e.g., slug: `/resources/verify-chinese-supplier` -> filename: `verify-chinese-supplier.mdx`)
 **Warning signs:** Article accessible via frontmatter slug but 404 on actual page
 
 ### Pitfall 2: FAQ Not Indexed by Google
@@ -296,6 +535,36 @@ takeaways:
 - Static metadata without keyword strategy - now requires commercial keyword optimization
 - FAQ on single page only - now requires multi-page coverage
 
+## Bug Prevention Verification Checklist
+
+### Before Executing Plan 10-01
+- [ ] Verified filename format: `*.mdx` without `/resources/` prefix
+- [ ] Verified frontmatter slug format: `/resources/your-slug`
+- [ ] Understood that InlineCTA ignores `ctaButtonLink` field
+
+### During Plan 10-01 Execution
+- [ ] After each blog file creation, verify URL responds with 200 (not 404)
+- [ ] Verify internal links use `/services` not `/resources/services`
+- [ ] Verify no duplicate frontmatter keys
+- [ ] Run `npm run build` to catch any issues
+
+### Before Executing Plan 10-02
+- [ ] Check homepage FAQ content to ensure uniqueness
+- [ ] Prepare different questions for services and about pages
+
+### During Plan 10-02 Execution
+- [ ] Verify FAQ component placement (before Footer)
+- [ ] Verify `<FAQSchema />` included after `<ServiceSchema />`
+- [ ] Run `npm run build` after changes
+
+### Before Executing Plan 10-03
+- [ ] Identify existing keywords to avoid duplicates
+
+### During Plan 10-03 Execution
+- [ ] Remove duplicate keywords (check case sensitivity)
+- [ ] Verify keywords appear naturally in page content
+- [ ] Run `npm run build` and `npm run lint`
+
 ## Open Questions
 
 1. **Should FAQ appear on About page as well?**
@@ -313,13 +582,18 @@ takeaways:
    - What's unclear: Whether to add article-specific FAQ or use global FAQ component
    - Recommendation: Each blog post has its own FAQ per BLOG_PROMPT.md; global FAQ is for service/about pages
 
+4. **Should homepage FAQ stay when services/about have FAQ?**
+   - What we know: Homepage already has FAQ
+   - Risk: Duplicate FAQPage schema across pages
+   - Recommendation: Keep homepage FAQ but ensure content differs from services/about
+
 ## Validation Architecture
 
 ### Test Framework
 | Property | Value |
 |----------|-------|
 | Framework | Playwright ^1.58.2 |
-| Config file | None — ad-hoc testing |
+| Config file | None - ad-hoc testing |
 | Quick run command | N/A - content validation |
 | Full suite command | N/A - manual content review |
 
@@ -338,7 +612,7 @@ takeaways:
 - **Phase gate:** All 5 requirements verified before /gsd:verify-work
 
 ### Wave 0 Gaps
-- None — existing infrastructure (blog system, FAQ component, Playwright) covers all validation needs
+- None - existing infrastructure (blog system, FAQ component, Playwright) covers all validation needs
 - Validation is primarily content review (manual) rather than automated testing
 
 ## Sources
@@ -352,7 +626,7 @@ takeaways:
 - schema.org/FAQPage - Verified JSON-LD format matches current specification
 
 ### Secondary (MEDIUM confidence)
-- Next.js 14.2 App Router documentation for metadata API
+- Next.js 14.2 App Router documentation for metadata API (project CLAUDE.md states 14.2, actual version is 16.1.7)
 - Schema.org FAQPage specification for JSON-LD structure
 
 ### Tertiary (LOW confidence)
@@ -364,6 +638,7 @@ takeaways:
 - Standard stack: HIGH - all infrastructure exists, no new packages needed
 - Architecture: HIGH - patterns well-defined in existing code and BLOG_PROMPT.md
 - Pitfalls: HIGH - known issues documented from existing blog posts
+- Bug prevention: HIGH - specific risks identified from actual code inspection
 
 **Research date:** 2026-03-18
 **Valid until:** 2026-04-18 (content strategy is stable, no rapid changes expected)
@@ -371,4 +646,4 @@ takeaways:
 ---
 
 *Generated for Phase 10: Content Strategy*
-*Updated: 2026-03-18 - Verified FAQ schema format against schema.org*
+*Updated: 2026-03-18 - Added bug prevention analysis*
