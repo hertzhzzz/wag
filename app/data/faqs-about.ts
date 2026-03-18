@@ -34,4 +34,24 @@ export const aboutFaqs = [
     question: 'What happens after I find a supplier through WAG?',
     answer: 'We provide post-trip supplier comparison reports and remain available for ongoing support. We help with order negotiation, sample coordination, quality control, and can facilitate continued communication with your chosen suppliers.',
   },
+  {
+    question: 'What industries does WAG have experience working with?',
+    answer: 'Our team has experience across 50+ industries including manufacturing, technology, food and health, construction, property, agriculture, automotive, and packaging. We have verified partners across 6 Chinese provinces.',
+  },
+  {
+    question: 'How do you handle language barriers with Chinese factories?',
+    answer: 'All our guides are bilingual in English and Mandarin. They handle all communication — from initial introductions to detailed technical discussions. You receive full translation of key documents and negotiations.',
+  },
+  {
+    question: 'What is your cancellation and refund policy?',
+    answer: 'We understand circumstances can change. Cancellations made 3+ weeks before your trip receive a full refund minus any non-recoverable costs. Later cancellations may incur fees depending on already incurred expenses.',
+  },
+  {
+    question: 'Can WAG help with ongoing supplier relationship management?',
+    answer: 'Yes, we offer continued support after your initial sourcing trip. This includes periodic quality checks, factory audits, sample coordination, and acting as a communication bridge between you and your suppliers.',
+  },
+  {
+    question: 'What are your office hours and response times?',
+    answer: 'We operate during Australian business hours (ACST) and typically respond to enquiries within 24 hours. Our team in Adelaide is available for consultations via phone, email, or video call.',
+  },
 ]

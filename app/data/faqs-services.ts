@@ -34,4 +34,24 @@ export const serviceFaqs = [
     question: 'What is the typical timeline from enquiry to factory visit?',
     answer: 'The process typically takes 4-6 weeks: 3-7 days for initial supplier shortlisting, followed by itinerary planning and logistics coordination. Rush trips may be possible with additional fees.',
   },
+  {
+    question: 'Are flights and accommodation included in your service?',
+    answer: 'Service fees cover trip coordination, supplier pre-screening, bilingual guide services, and inter-factory transport. Flight tickets and accommodation are arranged separately — we can provide recommendations for travel agents who offer competitive rates.',
+  },
+  {
+    question: 'What payment terms do you accept?',
+    answer: 'We accept bank transfers and can provide invoices in AUD. Payment terms are discussed during your initial consultation based on the scope of services required.',
+  },
+  {
+    question: 'Can you help with first-time importers who have never sourced from China?',
+    answer: 'Absolutely. We specialize in helping first-time importers navigate the entire process. We provide guidance on import regulations, documentation requirements, and connect you with freight forwarders who handle customs clearance.',
+  },
+  {
+    question: 'What happens if I need to change my trip dates after booking?',
+    answer: 'We understand plans can change. Date changes can be accommodated with sufficient notice (at least 2 weeks before scheduled dates). We will work with factories to reschedule visits and adjust your itinerary accordingly.',
+  },
+  {
+    question: 'Do you offer virtual factory tours for businesses unable to travel?',
+    answer: 'Yes, we can arrange virtual factory tours with live video calls and guided walkthroughs. We provide real-time translation and can conduct preliminary quality assessments on your behalf.',
+  },
 ]
