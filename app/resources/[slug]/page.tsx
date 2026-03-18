@@ -28,8 +28,9 @@ export async function generateStaticParams() {
   return getAllSlugs().map(slug => ({ slug }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const article = getArticle(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const article = getArticle(slug)
   if (!article) return {}
   const { frontmatter: fm } = article
   return {
@@ -51,7 +52,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
           alt: fm.title,
         }
       ] : [],
-      url: `https://www.winningadventure.com.au/resources/${params.slug}`,
+      url: `https://www.winningadventure.com.au/resources/${slug}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: fm.coverImage ? [fm.coverImage] : [],
     },
     alternates: {
-      canonical: `https://www.winningadventure.com.au/resources/${params.slug}`,
+      canonical: `https://www.winningadventure.com.au/resources/${slug}`,
     },
   }
 }
@@ -87,8 +88,9 @@ function InlineCTA({ ctaTitle, ctaText, ctaButtonText }: { ctaTitle: string; cta
   )
 }
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = getArticle(params.slug)
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const article = getArticle(slug)
   if (!article) notFound()
 
   const { frontmatter: fm, content } = article
