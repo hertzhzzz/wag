@@ -60,7 +60,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
       } else {
         throw new Error('Failed to subscribe')
       }
-    } catch (error) {
+    } catch {
       setSubscribeStatus('error')
       setErrorMessage('Something went wrong. Please try again.')
     }
@@ -197,7 +197,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
           {subscribeStatus === 'success' ? (
             <>
               <h2 className="font-serif text-white text-[28px] font-semibold mb-3">
-                You're on the list!
+                You&apos;re on the list!
               </h2>
               <p className="text-gray-300 text-[15px] mb-4">
                 Thank you for subscribing. Check your inbox for a confirmation email.

@@ -118,7 +118,7 @@ export default function EnquiryForm() {
           : data.error
         setErrors({ submit: errorMsg || 'Submission failed. Please try again.' })
       }
-    } catch (error) {
+    } catch {
       setErrors({ submit: 'Network error. Please try again.' })
     } finally {
       setSubmitting(false)
@@ -143,10 +143,10 @@ export default function EnquiryForm() {
             <span className="text-[#0F2D5E] font-semibold">Enquiry</span>
           </nav>
           <h1 className="font-serif font-bold text-[clamp(1.75rem,3vw,2.5rem)] text-[#0F2D5E] leading-tight mb-3">
-            Connect With Verified Chinese Suppliers —<br className="hidden sm:block" /> We've Already Vetted Them
+            Connect With Verified Chinese Suppliers —<br className="hidden sm:block" /> We&apos;ve Already Vetted Them
           </h1>
           <p className="text-base text-gray-600 max-w-[560px]">
-            Tell us what you need. We'll be in touch within 4 business hours and begin matching you with the right Chinese suppliers.
+            Tell us what you need. We&apos;ll be in touch within 4 business hours and begin matching you with the right Chinese suppliers.
           </p>
         </div>
       </section>
@@ -201,7 +201,7 @@ export default function EnquiryForm() {
                     Your Enquiry Is In Our Hands
                   </h3>
                   <p className="text-gray-600 max-w-[360px] mx-auto mb-8">
-                    We'll review your requirements and reach out within 4 business hours.
+                    We&apos;ll review your requirements and reach out within 4 business hours.
                   </p>
                   <Link href="/" className="px-6 py-2.5 bg-[#0F2D5E] text-white text-sm font-semibold hover:bg-[#0a2148] transition-colors no-underline">
                     Back to Home
@@ -360,7 +360,7 @@ export default function EnquiryForm() {
                         </button>
                         <p className="text-center text-xs text-gray-400 flex items-center justify-center gap-1.5 mt-2 md:mt-0">
                           <Lock size={12} />
-                          We'll be in touch within 4 business hours.
+                          We&apos;ll be in touch within 4 business hours.
                         </p>
                       </div>
                     </div>
@@ -372,7 +372,7 @@ export default function EnquiryForm() {
 
           {/* What happens next */}
           <div className="bg-[#0F2D5E] text-white rounded-lg p-8">
-            <h3 className="font-serif font-bold text-lg mb-6">Here's what happens after you reach out</h3>
+            <h3 className="font-serif font-bold text-lg mb-6">Here&apos;s what happens after you reach out</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 ['1', 'We get in touch', 'Within 4 business hours'],

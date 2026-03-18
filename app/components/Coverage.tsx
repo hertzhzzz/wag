@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 
 // Must be dynamically imported — Three.js requires browser APIs
 const Globe = dynamic(() => import('react-globe.gl'), { ssr: false })
@@ -32,15 +32,14 @@ const POINTS = [
 ]
 
 export default function Coverage() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const globeRef = useRef<any>(null)
-  const [ready, setReady] = useState(false)
 
   useEffect(() => {
     // Wait for globe to mount then set camera position over the Asia-Pacific region
     const timer = setTimeout(() => {
       if (globeRef.current) {
         globeRef.current.pointOfView({ lat: 0, lng: 126, altitude: 2.2 }, 0)
-        setReady(true)
       }
     }, 400)
     return () => clearTimeout(timer)
