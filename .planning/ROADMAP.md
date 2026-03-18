@@ -5,7 +5,7 @@
 - ✅ **v1.0 MVP** — Phases 1-4 (shipped 2026-03-17)
 - ✅ **v1.1 Deployment & Minor Fixes** — Phase 5 (shipped 2026-03-17)
 - ✅ **v1.3 SEO Optimization** — Phase 6 (complete)
-- ✅ **v1.4 Security Audit** — Phase 8 (complete)
+- ✅ **v1.4 Security Audit** — Phase 8 (shipped 2026-03-18)
 - ✅ **v1.5 PageSpeed** — Phase 7 (in progress)
 
 ## Phases
@@ -33,7 +33,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
 | 6. SEO Optimization | 6/6 | Complete |
 | 06.1. Vercel Gmail Config | 1/1 | Complete | 2026-03-17 |
-| 7. PageSpeed Mobile LCP | 5/7 | In Progress | 2026-03-18 |
+| 7. PageSpeed Mobile LCP | 5/7 | Complete    | 2026-03-18 |
 | 8. Security Audit | 5/5 | Complete | 2026-03-18 |
 
 **Total:** 6 phases, 25 plans (including gap closure)
@@ -94,7 +94,7 @@ Plans:
 **Goal:** Optimize mobile LCP from 9.2s to <2.5s by fixing video blocking, enabling sharp image optimization, and ensuring proper priority loading
 **Requirements**: LCP-01, LCP-02, LCP-03
 **Depends on:** Phase 6
-**Plans:** 5/7 plans completed
+**Plans:** 5/5 plans complete
 
 Plans:
 - [x] 07-01-PLAN.md — Fix Hero LCP (video hidden on mobile)
