@@ -1,252 +1,214 @@
-# Feature Research
+# Feature Research: SEO Automation
 
-**Domain:** Mobile Responsive Website Improvements
-**Researched:** 2026-03-11
+**Domain:** SEO Automation for B2B Corporate Website
+**Researched:** 2026-03-18
 **Confidence:** HIGH
+
+## Overview
+
+This research identifies the essential features and components needed to achieve #1 ranking in Google Australia for B2B sourcing keywords ("epic sourcing", "china direct"). The SEO automation system is categorized into three pillars: Technical SEO, On-Page SEO, and Content/Off-Page SEO.
+
+---
 
 ## Feature Landscape
 
 ### Table Stakes (Users Expect These)
 
-Features users assume exist. Missing these = product feels broken or unprofessional.
+Core SEO features that are non-negotiable. Without these, the website cannot rank competitively.
 
 | Feature | Why Expected | Complexity | Notes |
 |---------|--------------|------------|-------|
-| **Viewport Meta Tag** | Without it, mobile browsers render desktop squeeze. Every mobile site needs `<meta name="viewport" content="width=device-width, initial-scale=1">` | LOW | Single line in HTML head. Non-negotiable. |
-| **Responsive Layout (Mobile-First)** | 60%+ global traffic is mobile. Desktop-only layouts are broken on phones | LOW | Tailwind uses mobile-first prefixes (`md:`, `lg:`). Start small, scale up. |
-| **Touch-Friendly Tap Targets** | Average fingertip is 15-20mm (0.6-0.8 inches). Targets < 44px are frustrating | LOW | Minimum 44x44px for buttons/links. 48px recommended. 8px spacing between targets. |
-| **Responsive Images** | Large images on mobile waste bandwidth and slow load | MEDIUM | Use `srcset`, `sizes`, `loading="lazy"`, and modern formats (WebP/AVIF). |
-| **Fluid Typography** | Text that scales with viewport prevents readability issues | MEDIUM | Use `clamp()` for smooth scaling. Tailwind supports this via config. |
-| **Mobile Navigation** | Hamburger menu or bottom nav expected on mobile | LOW | Should be thumb-friendly (bottom third of screen). Must have clear close mechanism. |
-| **Readable Text Without Zoom** | Users shouldn't pinch-to-read. Base font should work at any width | LOW | Minimum 16px body text. Use relative units (rem/em), not px. |
-| **No Horizontal Scroll** | Horizontal scroll is a strong "broken site" signal | LOW | Test on 320px width (smallest phone). Use `overflow-x: hidden` or flexible layouts. |
-| **Adequate Vertical Spacing** | Mobile needs breathing room. Cramped layouts feel amateur | LOW | Use Tailwind's spacing scale. More padding/margin on mobile than desktop. |
-| **Functional Forms on Mobile** | Form inputs must be usable without zoom. Date pickers, dropdowns work natively | MEDIUM | Use correct input types (`type="tel"`, `type="email"`). Labels must be visible. |
+| **XML Sitemap** | Google needs roadmap to discover all pages. Missing sitemap = incomplete indexing | LOW | Next.js supports automatic sitemap generation via next-sitemap or built-in sitemap.ts |
+| **Robots.txt** | Controls crawler access. Missing = potential indexing issues | LOW | Standard file in public folder or dynamic generation |
+| **Meta Tags (Title, Description)** | Appears in SERP. Poor tags = low CTR | LOW | Next.js Metadata API handles this natively |
+| **Canonical URLs** | Prevents duplicate content penalties | LOW | Critical for pages with multiple URL variants (trailing slash, query params) |
+| **Structured Data (Schema Markup)** | Enables rich snippets, enhances SERP visibility | MEDIUM | JSON-LD for Organization, LocalBusiness, FAQ, Article |
+| **Open Graph / Social Meta** | Controls how content appears when shared on social media | LOW | Next.js Metadata API supports og: tags |
+| **Core Web Vitals Optimization** | Google ranking signal since 2021. Poor metrics = ranking penalty | MEDIUM | LCP < 2.5s, FID < 100ms, CLS < 0.1 |
+| **Mobile-Friendly Design** | Mobile-first indexing since 2019 | LOW | Already implemented in v1.0 |
+| **HTTPS/SSL** | Ranking factor (confirmed 2% weight by First Page Sage 2025) | LOW | Already implemented via Vercel |
+| **Fast Page Load Speed** | Affects both ranking and user experience | MEDIUM | Target: < 3s on 3G, < 1s on 4G |
 
 ### Differentiators (Competitive Advantage)
 
-Features that set high-quality responsive sites apart. Not required, but demonstrate attention to detail.
+Features that set the website apart and drive competitive ranking for target keywords.
 
 | Feature | Value Proposition | Complexity | Notes |
 |---------|-------------------|------------|-------|
-| **Container Queries** | Components that respond to their container, not just viewport. More modular | MEDIUM | Use `@container` queries. Tailwind v3.4+ supports. Better than viewport-only. |
-| **Fluid Typography with Clamp()** | Text scales smoothly across all sizes without discrete breakpoints | MEDIUM | `clamp(min, preferred, max)` provides continuous scaling. |
-| **Dark Mode Support** | Users expect theme choice. Reduces eye strain, shows attention to detail | LOW | Use Tailwind's `dark:` prefix. Support `prefers-color-scheme` and manual toggle. |
-| **Reduced Motion Preference** | Accessibility requirement. Shows care for users with vestibular disorders | LOW | Use `prefers-reduced-motion` media query. Respect user settings. |
-| **Optimized Performance** | Core Web Vitals affect SEO and UX. 53% of users abandon sites > 3s load | MEDIUM | Lazy loading, image optimization, code splitting, minimal JS. |
-| **Accessible Focus States** | Keyboard/switch users need visible focus indicators | LOW | Never remove outline without replacement. Use visible focus rings. |
-| **Foldable Device Support** | 18% market share. Handle variable widths gracefully | HIGH | Use container queries + flexible grids. Test at various aspect ratios. |
-| **Skeleton Loading** | Perceived performance. Shows content is coming vs. blank screens | MEDIUM | Use skeleton placeholders while content loads. Better than spinners. |
+| **Keyword-Optimized Content Clusters** | Content depth signals E-E-A-T to Google. "epic sourcing" + "china direct" requires comprehensive pillar pages | MEDIUM | Build topic clusters around core keywords |
+| **FAQ Schema Implementation** | Enables featured snippets (Position 0). High CTR for B2B queries | MEDIUM | FAQ schema on service pages captures voice search |
+| **Local SEO (Australian)** | Targets Google.com.au specifically. Critical for "china direct" + Australia | MEDIUM | Google Business Profile, local citations, au-specific content |
+| **Backlink Acquisition Strategy** | Domain Authority (DA) is primary ranking factor. Target: DA 20+ | HIGH | Guest posting, industry partnerships, PR |
+| **Automated SEO Audits** | Continuous monitoring prevents ranking drops. Weekly scans catch issues | MEDIUM | Integration with tools like Screaming Frog, Ahrefs, or Semrush |
+| **Content Calendar & Automation** | Systematic blog production maintains freshness signals | MEDIUM | Monthly content pipeline with AI-assisted drafting |
+| **Internal Linking Architecture** | Distributes page authority, improves crawl efficiency | LOW | Hub-and-spoke model from pillar pages |
+| **Image Alt Text Automation** | Accessibility + SEO. Alt text as ranking signal for image search | LOW | Next.js Image component supports alt props |
 
 ### Anti-Features (Commonly Requested, Often Problematic)
 
-Features that seem good but create problems for mobile users.
+Features that seem beneficial but can harm SEO performance.
 
 | Feature | Why Requested | Why Problematic | Alternative |
 |---------|---------------|-----------------|-------------|
-| **Separate Mobile Site (m.dot)** | Historical pattern, simpler to manage | SEO issues (duplicate content), maintenance burden, no tablet support | Single responsive site with same URL |
-| **Hover-Dependent Interactions** | Desktop UX pattern | No hover on touch devices. 0% of mobile users can hover | Always-visible states. Tap to reveal, don't hover |
-| **Fixed-Width Layouts** | Easier to design for specific screens | Break on any screen size outside design | Flexible grids using fractional units (fr, %) |
-| **Heavy Parallax Effects** | Visual interest, "premium" feel | Performance killer on mobile. Janky scrolling | Subtle CSS transforms only, test performance |
-| **Full-Screen Pop-ups** | Capture attention, "high conversion" | Horrible mobile UX. Often blocked by browsers | Slide-ins, bottom sheets, inline CTAs |
-| **Auto-Playing Video/Animations** | Engagement, "modern" feel | Battery drain, data usage, accessibility nightmare | User-initiated only. Muted by default if autoplay |
-| **Infinite Scroll** | Keeps users engaged | Memory issues, no footer access, poor pagination | Load more button or proper pagination |
+| **Keyword Stuffing** | Old-school ranking tactic | Google penalizes unnatural density. Focus on semantic relevance instead | LSI keywords, natural language, search intent alignment |
+| **Excessive Schema Markup** | "More data = better" assumption | Can trigger spam detection if not relevant to page content | Use only relevant schema types |
+| **Buying Low-Quality Backlinks** | Quick DA boost | Google Penguin catches this. Risk of manual penalty | Earn links through quality content |
+| **AI-Generated Content at Scale** | Fast content production | Google actively downranks low-quality AI content (March 2025 update) | Human-edited AI drafts, E-E-A-T focused |
+| **Too Many Redirects** | URL management convenience | Redirect chains slow crawl, pass less link equity | Clean URL structure, minimal redirects |
+| **Duplicate Content Across Pages** | Consistency, easier management | Google filters duplicates, dilutes ranking signals | Canonical tags, unique content per page |
+
+---
 
 ## Feature Dependencies
 
 ```
-[Touch Targets]
-    └──requires──> [Proper Spacing]
+[XML Sitemap]
+    └──requires──> [Page Routes Defined]
+                       └──requires──> [Dynamic Routes Handler]
 
-[Fluid Typography]
-    └──requires──> [Responsive Layout Base]
+[Schema Markup]
+    └──requires──> [JSON-LD Component]
+                       └──requires──> [Page-Specific Data]
 
-[Container Queries]
-    └──enhances──> [Responsive Layout]
+[Content Clusters]
+    └──requires──> [Internal Linking Structure]
+                       └──requires──> [Pillar Pages]
 
-[Dark Mode]
-    └──requires──> [CSS Variables/Design Tokens]
+[Backlink Strategy]
+    └──requires──> [Quality Content Production]
+                       └──requires──> [Content Calendar]
 
-[Optimized Images]
-    └──enhances──> [Performance Budget]
+[Local SEO]
+    └──requires──> [Google Business Profile]
+                       └──requires──> [NAP Consistency]
+                          └──requires──> [Local Citations]
 
-[Mobile Navigation]
-    └──requires──> [Touch Targets]
+[Core Web Vitals]
+    └──requires──> [Image Optimization]
+                       └──requires──> [Next.js Image Component]
 ```
 
 ### Dependency Notes
 
-- **Touch Targets require Proper Spacing:** 44px minimum size with 8px minimum spacing between elements.
-- **Fluid Typography requires Responsive Layout Base:** Foundation must work before scaling.
-- **Container Queries enhance Responsive Layout:** More granular control than viewport-only.
-- **Dark Mode requires CSS Variables:** Must have semantic tokens to switch themes.
-- **Optimized Images enhance Performance:** Critical for Core Web Vitals (LCP).
+- **Sitemap requires Page Routes:** All routes must be defined before sitemap generation
+- **Schema requires Page-Specific Data:** Each page needs structured data injection
+- **Content Clusters require Internal Linking:** Hub-and-spoke model needs cross-links
+- **Backlinks require Quality Content:** Linkable assets are prerequisite for outreach
+- **Local SEO requires NAP Consistency:** Name, Address, Phone must match across all citations
+
+---
 
 ## MVP Definition
 
-### Launch With (v1)
+### Launch With (v1.1 - SEO Automation)
 
-Focus on making existing pages work on mobile. No new features.
+Core technical SEO to establish foundation for ranking.
 
-- [ ] **Responsive Layout** — All 5 pages adapt to mobile screens (Home, Services, About, Resources, Enquiry)
-- [ ] **Touch-Friendly Tap Targets** — All buttons/links minimum 44px, adequate spacing
-- [ ] **Readable Typography** — Base 16px+, proper line-height, no zoom required
-- [ ] **Mobile Navigation** — Hamburger menu works, thumb-friendly, closes properly
-- [ ] **No Horizontal Scroll** — Test at 320px width
-- [ ] **Functional Forms** — Enquiry form works on mobile without keyboard issues
+- [ ] **XML Sitemap Generation** — Automated, includes all pages, updates on build
+- [ ] **Robots.txt Configuration** — Allows Googlebot, blocks scrapers
+- [ ] **Core Metadata (Title, Description)** — Optimized for target keywords per page
+- [ ] **Canonical URLs** — Prevents duplicate content issues
+- [ ] **Schema Markup (Organization + LocalBusiness)** — Business identity in search
+- [ ] **Open Graph Tags** — Social sharing optimization
+- [ ] **Core Web Vitals Fixes** — Address LCP issues (currently 5.4s target <2.5s)
+- [ ] **HTTPS/SSL** — Already configured via Vercel
 
-### Add After Validation (v1.x)
+### Add After Validation (v1.2 - Content SEO)
 
-Polish and accessibility improvements.
+Content strategy implementation for keyword ranking.
 
-- [ ] **Dark Mode** — Toggle + system preference support
-- [ ] **Reduced Motion** — Respect user accessibility settings
-- [ ] **Optimized Images** — WebP, lazy loading, srcset
-- [ ] **Skeleton Loading** — For resource pages with dynamic content
+- [ ] **FAQ Schema on Service Pages** — Target featured snippets
+- [ ] **Blog Content Calendar** — Systematic production (2-4 posts/month)
+- [ ] **Internal Linking Optimization** — Hub-and-spoke from pillar pages
+- [ ] **Image Alt Text Audit** — Manual + automated alt text
+- [ ] **Page-Specific Keyword Optimization** — Each page targets primary + secondary keywords
 
-### Future Consideration (v2+)
+### Future Consideration (v1.3+ - Off-Page SEO)
 
-Advanced responsive patterns for device diversity.
+Domain authority building for competitive ranking.
 
-- [ ] **Container Queries** — Component-level responsiveness
-- [ ] **Foldable Device Support** — Handle variable width/height
-- [ ] **Advanced Fluid Typography** — Smooth scaling with clamp()
+- [ ] **Backlink Outreach Program** — Industry partnerships, guest posting
+- [ ] **Google Business Profile Optimization** — Local SEO for Australia
+- [ ] **Automated SEO Audits** — Weekly monitoring dashboard
+- [ ] **Content Clusters Expansion** — Comprehensive topic coverage
+
+---
 
 ## Feature Prioritization Matrix
 
-| Feature | User Value | Implementation Cost | Priority |
-|---------|------------|---------------------|----------|
-| Responsive Layout | HIGH | LOW | P1 |
-| Touch Targets (44px+) | HIGH | LOW | P1 |
-| Mobile Navigation | HIGH | LOW | P1 |
-| Readable Typography | HIGH | LOW | P1 |
-| No Horizontal Scroll | HIGH | LOW | P1 |
-| Functional Forms | HIGH | MEDIUM | P1 |
-| Vertical Spacing | MEDIUM | LOW | P1 |
-| Dark Mode | MEDIUM | LOW | P2 |
-| Reduced Motion | MEDIUM | LOW | P2 |
-| Optimized Images | HIGH | MEDIUM | P2 |
-| Container Queries | LOW | MEDIUM | P3 |
-| Foldable Support | LOW | HIGH | P3 |
+| Feature | User Value | Implementation Cost | Priority | Dependencies |
+|---------|------------|---------------------|----------|--------------|
+| XML Sitemap | HIGH | LOW | P1 | Page routes defined |
+| Core Metadata | HIGH | LOW | P1 | None |
+| Canonical URLs | HIGH | LOW | P1 | None |
+| Schema Markup (Org) | HIGH | LOW | P1 | JSON-LD component |
+| Core Web Vitals Fix | HIGH | MEDIUM | P1 | Image optimization |
+| Robots.txt | MEDIUM | LOW | P1 | None |
+| Open Graph | MEDIUM | LOW | P1 | None |
+| FAQ Schema | MEDIUM | MEDIUM | P2 | Basic schema in place |
+| Content Calendar | HIGH | MEDIUM | P2 | Content strategy defined |
+| Internal Linking | HIGH | LOW | P2 | Pages exist |
+| Backlink Strategy | HIGH | HIGH | P3 | Content production |
+| Local SEO | MEDIUM | MEDIUM | P3 | Business info verified |
+| Automated Audits | MEDIUM | MEDIUM | P3 | Monitoring tools |
 
 **Priority key:**
-- P1: Must have for launch — Core mobile usability
-- P2: Should have, add when possible — Polish and accessibility
-- P3: Nice to have, future consideration — Edge cases and advanced patterns
-
-## Project Context Alignment
-
-From PROJECT.md:
-- **Core Value:** Improve mobile responsive layout for excellent UX on all devices
-- **Constraint:** Must use existing Next.js + Tailwind CSS stack
-- **Constraint:** Keep existing design tokens (Navy #0F2D5E, Amber #F59E0B)
-- **Constraint:** All existing content must remain
-
-**Implication for Features:**
-- Tailwind already has responsive prefixes (`md:`, `lg:`) — use mobile-first approach
-- Use existing color tokens for dark mode implementation
-- Focus on layout/sizing/spacing changes, not new components
-- Test on real devices, not just DevTools
+- P1: Must have for launch — Technical foundation
+- P2: Should have, add when possible — Content optimization
+- P3: Nice to have, future consideration — Off-page authority
 
 ---
 
-# WAG v1.1 Deployment Features
+## Competitor Feature Analysis
 
-**Domain:** Corporate website deployment & minor fixes
-**Researched:** 2026-03-17
-**Confidence:** HIGH
-
-## Overview
-
-v1.1 deployment phase focuses on three targeted features: Vercel production deployment with custom domain, adding Facebook social link to Footer, and fixing mobile navbar sticky behavior. These are minor fixes, not feature development.
-
----
-
-## Deployment Features
-
-### Vercel Deployment
-
-| Requirement | Current State | Action Needed |
-|-------------|---------------|---------------|
-| Next.js project | Ready | None - already Next.js 14.2 |
-| Build command | Configured in package.json | None |
-| Output directory | Automatic | None |
-| Environment variables | .env.local exists | Configure in Vercel dashboard |
-
-**Configuration already in place:**
-- `package.json` has `"build": "next build"`
-- `vercel.json` exists in frontend directory
-- `metadataBase` already set to `https://www.winningadventure.com.au`
-
-### Custom Domain Configuration
-
-| Step | Action | Notes |
-|------|--------|-------|
-| 1. Add domain in Vercel | Dashboard → Settings → Domains | Add winningadventure.com.au |
-| 2. Configure DNS | Update DNS records | Vercel provides instructions |
-| 3. SSL certificate | Automatic | Vercel handles Let's Encrypt |
+| Feature | Competitor A (AussieBiz) | Competitor B (ChinaConnect) | Our Approach |
+|---------|--------------------------|----------------------------|--------------|
+| XML Sitemap | Yes, basic | Yes, basic | Automated generation |
+| Schema Markup | No | Partial (Organization) | Full implementation (Org + LocalBusiness + FAQ) |
+| Blog Content | 2 posts/month | 1 post/month | 2-4 posts/month, quality-focused |
+| Core Web Vitals | Unknown | Unknown | Target 90+ scores |
+| Local SEO | Yes | No | Full optimization for .com.au |
+| Backlinks | Domain referrals only | Some guest posts | Systematic outreach |
 
 ---
 
-## Social Link Features
+## SEO Automation System Components
 
-### Facebook Link Addition
+### Technical Components
 
-**Current Footer state:**
-- LinkedIn link already present (lines 17-28 in Footer.tsx)
-- Follows existing pattern with icon + text
+| Component | Purpose | Implementation |
+|-----------|---------|----------------|
+| **Sitemap Generator** | Auto-generate XML sitemap on build | next-sitemap or sitemap.ts |
+| **Schema Component** | Reusable JSON-LD injection | Custom Schema.tsx component |
+| **Metadata API** | Dynamic title/description per page | Next.js Metadata API |
+| **Image Optimizer** | WebP/AVIF conversion, lazy loading | next/image with provider config |
+| **Robots Handler** | Dynamic robots.txt | app/robots.ts route handler |
 
-**Required addition:**
-- Facebook link in similar style to LinkedIn
-- Use Facebook icon (brand icon)
-- Place alongside LinkedIn link
+### Content Components
 
----
-
-## Mobile Navbar Fix
-
-### Problem Analysis
-
-**User report:** "mobile navbar cannot stay fixed when scrolling, must scroll to top to click navbar"
-
-**Current implementation (Navbar.tsx):**
-- Uses `position: fixed` with `z-[100]`
-- Listens to scroll events via `useEffect`
-- Changes appearance on scroll but maintains fixed position
-
-### Potential Issues and Solutions
-
-| Issue | Solution | Complexity |
-|-------|----------|------------|
-| Z-index conflict | Ensure no element exceeds z-[100] | LOW |
-| Parent has transform | Check parent wrappers for transform property | LOW |
-| Backdrop issues | Add `will-change-transform` | LOW |
-
-**Recommended fix:**
-```tsx
-// Add to nav element className:
-will-change-transform
-```
-
----
-
-## v1.1 Feature Summary
-
-| Feature | Complexity | Priority |
-|---------|------------|----------|
-| Vercel deployment | LOW | P1 |
-| Custom domain (winningadventure.com.au) | LOW | P1 |
-| Fix mobile navbar sticky | LOW | P1 |
-| Add Facebook link | LOW | P2 |
+| Component | Purpose | Implementation |
+|-----------|---------|----------------|
+| **Blog System** | Content publication | Existing MDX + gray-matter |
+| **Content Calendar** | Editorial scheduling | Notion/Google Sheets integration |
+| **Keyword Tracker** | Ranking monitoring | API integration (Ahrefs/Semrush) |
+| **Audit Dashboard** | Issue detection | Automated Screaming Frog or custom |
 
 ---
 
 ## Sources
 
-- Project: Winning Adventure Global Website
-- Tech Stack: Next.js 14.2, Tailwind CSS 3.4, TypeScript
-- Deployment: Vercel (per PROJECT.md)
-- Custom domain: winningadventure.com.au (per PROJECT.md)
+### Primary (HIGH confidence)
+- Backlinko On-Page SEO Guide (2026): https://backlinko.com/on-page-seo
+- First Page Sage Ranking Factors 2025: https://www.seoblog.com/google-ranking-factors-2025
+- Google Search Central Documentation: https://developers.google.com/search/docs
+
+### Secondary (MEDIUM confidence)
+- CognitiveSEO Algorithm Updates: https://cognitiveseo.com/signals/
+- TechnicalSEO.com Tools: https://technicalseo.com/
+- B2B Content Marketing Guide (Sprout Social): https://sproutsocial.com/insights/b2b-content-marketing/
 
 ---
-*Feature research updated: 2026-03-17*
+
+*Feature research for: SEO Automation - B2B Website*
+*Researched: 2026-03-18*
+*Project: WAG Website v1.1 SEO Automation*

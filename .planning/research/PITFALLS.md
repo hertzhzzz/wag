@@ -1,295 +1,278 @@
-# Domain Pitfalls: Vercel Deployment & Mobile Navbar
+# Pitfalls Research: SEO Automation for B2B Sourcing
 
-**Domain:** WAG Website v1.1 Deployment
-**Researched:** 2026-03-17
-**Confidence:** MEDIUM-HIGH
+**Domain:** SEO for B2B Sourcing Companies (Australian Market)
+**Researched:** 2026-03-18
+**Confidence:** MEDIUM
 
 ---
 
 ## Executive Summary
 
-v1.1 里程碑聚焦于将网站部署到 Vercel 并修复移动端导航栏问题。基于 v1.0 响应式改进的研究，本阶段需要关注两类陷阱：
+This research identifies critical pitfalls when implementing SEO for B2B sourcing companies targeting the Australian market. The key finding is that most SEO failures stem from treating B2B SEO identically to B2C SEO, ignoring the longer sales cycles, complex decision-making hierarchies, and specific Australian market nuances. Additionally, many companies prioritize short-term ranking gains over sustainable content strategies, leading to algorithm volatility and wasted resources.
 
-1. **Vercel 部署陷阱**：自定义域名配置、SSL 证书、环境变量构建问题
-2. **移动端导航栏粘性陷阱**：fixed 定位在移动浏览器的兼容性问题、触摸交互问题
+For WAG specifically (Australian company sourcing from China), the critical pitfalls revolve around: matching content to searcher intent, targeting the right keywords for the Australian market, building domain authority through legitimate channels, and maintaining technical SEO foundations.
 
 ---
 
 ## Critical Pitfalls
 
-### Pitfall 1: 自定义域名 SSL 证书配置失败
+### Pitfall 1: Ignoring Search Intent in B2B Context
 
 **What goes wrong:**
-部署完成后，使用自定义域名（如 winningadventure.com.au）访问网站时显示 SSL 证书警告或 "Too Many Redirects" 错误。Vercel 默认提供的 SSL 证书无法正确绑定到自定义域名。
+Content ranks but fails to convert. Pages attract visitors who bounce immediately because the content does not address the actual stage of the purchasing journey. A blog post targeting "China sourcing agent" might attract researchers rather than decision-makers ready to engage a service.
 
 **Why it happens:**
-- 域名 DNS 记录未正确配置（A 记录或 CNAME 指向 Vercel）
-- 首次添加域名时 SSL 证书处于 "Pending" 状态，需要时间传播
-- 域名注册商和 Vercel 的 DNS 解析存在缓存延迟
-- 同时配置了 A 记录和 CNAME 记录导致冲突
+B2B purchasing decisions involve multiple stakeholders at different stages: researchers gathering information, evaluators comparing options, and decision-makers authorizing budgets. Most content targets a single keyword without considering which persona that keyword attracts. Companies create content around what they do rather than what the buyer needs at each stage.
 
-**Consequences:**
-- 用户访问自定义域名时收到安全警告
-- SEO 排名下降，搜索引擎标记不安全
-- 无法启用 HSTS，影响用户体验
+**How to avoid:**
+Map content to the full buyer's journey. Create distinct content for each stage: awareness (educational content about industry challenges), consideration (comparative guides, service comparisons), and decision (case studies, pricing information, consultation offers). Use tools like Ahrefs or Semrush to analyze SERP features and understand what intent Google associates with target keywords.
 
-**Prevention:**
-1. 使用 Vercel 提供的 DNS 配置指南，添加正确的 CNAME 或 A 记录
-2. 等待 SSL 证书自动签发（通常 5 分钟至 24 小时）
-3. 在域名注册商处将 TTL 设置为较低值（如 300 秒）加快传播
-4. 使用 Vercel CLI 验证域名配置：`vercel domains verify <domain>`
-
-**Detection:**
-- Vercel Dashboard 的 Domains 面板显示证书状态为 "Pending" 或 "Error"
-- 使用 `dig winningadventure.com.au` 检查 DNS 记录是否正确解析
-- 浏览器访问显示 "Your connection is not private"
+**Warning signs:**
+- High impressions but low click-through rates in Search Console
+- Short average time on page (under 30 seconds)
+- High bounce rate on informational content
+- Content ranking for keywords outside intended intent
 
 **Phase to address:**
-v1.1 部署阶段 — 需要在 DNS 配置后等待证书签发
+Keyword Research and Content Strategy phase
 
 ---
 
-### Pitfall 2: 环境变量在 Vercel 构建时缺失
+### Pitfall 2: Targeting Wrong Keywords
 
 **What goes wrong:**
-本地开发正常，生产构建失败。控制台显示 "process.env.XXX is undefined" 或 Supabase/Resend 连接失败。表单提交功能在生产环境完全失效。
+Optimizing for keywords that are either too competitive to rank for, too broad to attract qualified traffic, or attract the wrong audience entirely. The website ranks for irrelevant terms, wasting development resources and failing to generate qualified leads.
 
 **Why it happens:**
-- 环境变量仅在本地 `.env.local` 中设置，未添加到 Vercel Project Settings
-- 环境变量名称不匹配（如本地用 `NEXT_PUBLIC_` 前缀，生产环境未加）
-- 构建时访问了客户端未暴露的服务器端环境变量
+The attraction of high search volume keywords leads companies to target terms like "sourcing" or "manufacturing in China" without considering their competitive landscape or business relevance. The assumption that ranking for generic terms will eventually filter down to qualified leads ignores the reality that competitors with much stronger domain authority dominate those terms.
 
-**Consequences:**
-- 构建失败或运行时崩溃
-- 关键功能（询价表单、Supabase 认证）不可用
-- 需要重新部署，增加上线时间
+**How to avoid:**
+Prioritize long-tail keywords with lower competition but higher commercial intent. For Australian B2B sourcing, target phrases like "Melbourne sourcing agent for China manufacturing" or "Australian company verified China suppliers" rather than generic terms. Use keyword difficulty scores in combination with search volume and commercial value. Focus on keywords where ranking is achievable within 6-12 months.
 
-**Prevention:**
-1. 在 Vercel Dashboard → Settings → Environment Variables 中添加所有环境变量
-2. 确保客户端需要的环境变量有 `NEXT_PUBLIC_` 前缀
-3. 使用 `.env.example` 文件记录所有必需的环境变量
-4. 在本地运行 `vercel env pull` 同步环境变量到本地
-5. 部署前在 Vercel Preview 环境测试所有环境变量
-
-**Detection:**
-- Vercel Build 日志显示环境变量相关错误
-- 浏览器控制台显示 "NEXT_PUBLIC_" 相关警告
-- 特定功能（如表单）在生产环境报错，本地正常
+**Warning signs:**
+- No ranking progress after 6+ months despite consistent effort
+- Ranking for keywords with zero conversion correlation
+- Content outranking the homepage for commercial terms
+- Competitors consistently outranking despite newer website
 
 **Phase to address:**
-v1.1 部署阶段 — 部署前必须配置完整
+Keyword Research phase
 
 ---
 
-### Pitfall 3: 移动端 fixed 定位在 iOS Safari 失效
+### Pitfall 3: Neglecting Australian Market Localization
 
 **What goes wrong:**
-移动端滚动时导航栏随页面滚动消失，用户无法在滚动后快速点击导航菜单。需要滚动回页面顶部才能看到导航栏。
+Website appears to target international audience rather than specifically Australian businesses. Missing local signals cause Google Australia to deprioritize the site for local searches, and Australian businesses perceive the company as not understanding their specific needs.
 
 **Why it happens:**
-- iOS Safari 对 `position: fixed` 有特殊处理，当地址栏显示/隐藏时可能重新计算视口
-- 某些情况下 fixed 元素会变为 relative 定位
-- 页面内容滚动时 fixed 定位的参考框架可能发生偏移
+Companies either ignore geographic modifiers entirely or use generic "Australia" in titles without true localization. The content fails to address Australian business context: regulations, cultural considerations, shipping logistics, payment terms, and quality standards specific to Australian importers.
 
-**Consequences:**
-- 用户无法随时访问导航，必须滚回顶部
-- 移动端用户体验严重下降
-- 违背了导航栏应始终可访问的设计原则
+**How to avoid:**
+- Include location-specific keywords naturally in content ("Australian-owned sourcing company", "Sydney-based China procurement")
+- Reference Australian business context, regulations (Australian Consumer Law, import regulations), and case studies with Australian clients
+- Ensure Google Business Profile is claimed and optimized
+- Build citations on Australian directories (True Local, StartLocal, Australian Business)
+- Use Australian English spelling and terminology
+- Specify Australian timezone and business hours
 
-**Prevention:**
-1. 使用 `position: sticky` 替代 `position: fixed` 作为主要方案：
-   ```css
-   position: sticky;
-   top: 0;
-   ```
-2. 如必须使用 fixed，添加以下 CSS 属性：
-   ```css
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   transform: translateZ(0);  /* 强制 GPU 渲染 */
-   -webkit-backface-visibility: hidden;
-   ```
-3. 为 body 添加 `-webkit-overflow-scrolling: touch` 改善滚动性能
-4. 使用 JavaScript 监听 scroll 事件作为 fallback：
-   ```javascript
-   window.addEventListener('scroll', () => {
-     if (window.scrollY > 50) {
-       document.body.classList.add('scrolled');
-     }
-   });
-   ```
-
-**Detection:**
-- 在真实 iOS 设备（而非模拟器）上测试
-- 滚动页面后观察导航栏是否保持固定
-- 反复滚动多次，检查是否稳定
+**Warning signs:**
+- No Google Business Profile or unverified listing
+- No Australian-specific content or case studies
+- Contact page shows generic international address
+- Missing ".com.au" domain or not having one as primary
+- No Australian testimonials or client logos
 
 **Phase to address:**
-v1.1 修复阶段 — 用户已报告此问题
+On-Page SEO and Local SEO phases
 
 ---
 
-### Pitfall 4: 移动端 hamburger 菜单按钮点击区域不足
+### Pitfall 4: Thin, Undifferentiated Content
 
 **What goes wrong:**
-用户点击 hamburger 菜单按钮时需要精确点击图标区域，多次尝试才能打开菜单。手指粗大的用户尤其容易误触。
+Content fails to differentiate from competitors. The website produces content that mirrors what everyone else in the industry publishes, providing no unique value proposition. Google recognizes the content as low-value and does not reward it with rankings.
 
 **Why it happens:**
-- 按钮仅设置了图标大小，未扩大点击热区
-- iOS Safari 不会放大 touch 目标，即使视觉上看起来足够大
-- 按钮周围的元素可能抢占点击事件
+Content is produced to hit publishing quotas rather than to provide genuine value. Companies replicate popular topics without adding new perspectives, data, or expertise. The content lacks original research, unique insights, or Australian market specifics that would make it valuable to readers.
 
-**Consequences:**
-- 用户无法顺利打开导航菜单
-- 多次点击导致菜单反复打开/关闭
-- 用户体验沮丧，可能直接离开网站
+**How to avoid:**
+Conduct content gap analysis against top-ranking competitors. Identify unique angles: original survey data from Australian importers, exclusive interviews with industry experts, case studies with named Australian companies, detailed guides addressing Australian-specific challenges. Focus on E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness) by demonstrating deep industry knowledge.
 
-**Prevention:**
-1. 确保按钮最小尺寸为 44x44px（符合 Apple HIG）：
-   ```jsx
-   <button className="min-h-11 min-w-11 ...">
-   ```
-2. 使用 `padding` 扩大点击区域：
-   ```jsx
-   className="p-2 min-h-11 min-w-11"
-   ```
-3. 添加触摸反馈（active 状态）：
-   ```css
-   .mobile-menu-btn:active {
-     background-color: rgba(0,0,0,0.1);
-   }
-   ```
-4. 确保按钮 `z-index` 高于页面其他内容
-
-**Current Status (WAG):**
-Navbar.tsx 第 60 行已设置 `min-h-11 min-w-11`，符合标准。
+**Warning signs:**
+- Content nearly identical to multiple other websites
+- No original data, research, or unique perspectives
+- Generic advice that could apply to any market
+- No author expertise or credentials displayed
+- Content without citations or external references
 
 **Phase to address:**
-v1.1 验证阶段 — 需在真实设备测试确认
+Content Strategy phase
 
 ---
 
-### Pitfall 5: Vercel 构建缓存导致样式未更新
+### Pitfall 5: Technical SEO Foundation Weaknesses
 
 **What goes wrong:**
-修改 Tailwind CSS 类名或样式后，Vercel 部署的页面仍显示旧样式。清除浏览器缓存后问题依旧。
+Website has underlying technical issues that prevent SEO success regardless of content quality. Site loads slowly, has crawl errors, missing metadata, poor mobile experience, or Core Web Vitals failures. These issues act as blockers, preventing content from ranking even when it is well-optimized.
 
 **Why it happens:**
-- Vercel 构建缓存保留了旧的 CSS 文件
-- Next.js 的 `_next/static` 目录被缓存
-- 浏览器缓存了带有旧哈希的 CSS 文件
+Technical SEO is deferred as "later work" while focusing on content. Development teams lack SEO awareness, implementing features that create technical debt. PageSpeed optimizations are not prioritized despite known impacts on both rankings and user experience.
 
-**Consequences:**
-- 用户看不到最新的 UI 更改
-- 误以为是代码问题，反复检查
-- 延迟上线时间
+**How to address:**
+Complete technical SEO audit before content work. Address Core Web Vitals (LCP under 2.5 seconds, FID under 100ms, CLS under 0.1). Implement proper schema markup for organization, local business, and article content. Ensure clean URL structure, proper internal linking, and XML sitemap. Fix all crawl errors in Google Search Console.
 
-**Prevention:**
-1. 触发重新构建：
-   - 提交新的 commit
-   - 使用 `vercel --force` 强制重新部署
-2. 在 next.config.js 中配置正确的缓存策略：
-   ```javascript
-   module.exports = {
-     reactStrictMode: true,
-     trailingSlash: true,
-   }
-   ```
-3. 使用 Vercel 的 "Clear Cache" 按钮（在 Deployment 设置中）
-4. 确保构建命令包含清理步骤：`next build`（通常已包含）
-
-**Detection:**
-- 同一代码在本地正常，生产环境异常
-- 多次刷新后问题依旧
-- 部署历史显示使用了缓存
+**Warning signs:**
+- Core Web Vitals in "Needs Improvement" or "Poor"
+- Crawl errors in Google Search Console
+- Missing or duplicate meta titles and descriptions
+- Slow mobile page speeds (over 3 seconds)
+- Broken internal links or 404 errors
 
 **Phase to address:**
-v1.1 部署阶段 — 如遇到此问题，使用 --force 重新部署
+Technical SEO Audit and Fixes phase
 
 ---
 
-### Pitfall 6: 移动端滚动时触发了意外的触摸手势
+### Pitfall 6: Short-Term SEO Thinking
 
 **What goes wrong:**
-用户在页面滚动时意外触发了导航菜单的打开/关闭操作。滑动屏幕时手指触发了按钮的点击事件。
+Expecting rapid ranking results leads to tactics that provide temporary gains but long-term penalties. When results do not materialize quickly, companies abandon SEO entirely, wasting previous investment.
 
 **Why it happens:**
-- 触摸事件和点击事件在移动端同时触发
-- 滚动过程中的意外触摸被误判为点击
-- 未使用 `touchstart` 事件防抖
+SEO is treated as a campaign rather than an investment. Companies expect significant results within weeks rather than months. This mindset leads to aggressive tactics: purchased links, content spinning, keyword stuffing, and other tactics that violate guidelines.
 
-**Consequences:**
-- 用户在滚动时菜单突然打开
-- 用户体验困惑和沮丧
+**How to avoid:**
+Set realistic expectations: meaningful SEO results take 6-12 months for new sites. Focus on sustainable strategies: quality content, natural link building, technical excellence, and user experience optimization. Measure progress through incremental improvements rather than immediate ranking wins.
 
-**Prevention:**
-1. 使用 `onPointerDown` 而非 `onClick` 捕获更精确的交互
-2. 检测滚动状态：
-   ```javascript
-   let isScrolling = false;
-   window.addEventListener('scroll', () => { isScrolling = true; });
-   window.addEventListener('scrollend', () => {
-     setTimeout(() => isScrolling = false, 100);
-   });
-   ```
-3. 或者在按钮上添加 CSS 防止意外触发：
-   ```css
-   button {
-     touch-action: manipulation;
-   }
-   ```
-
-**Current Status (WAG):**
-Navbar.tsx 使用 `onClick`，标准实现。如遇问题可考虑增强。
+**Warning signs:**
+- Pressure for results within 1-3 months
+- Discussion of "quick wins" or "hacks"
+- Willingness to purchase links or use aggressive tactics
+- Frequent strategy pivots without giving time for results
+- Abandoning SEO after 3-4 months of no visible results
 
 **Phase to address:**
-v1.1 验证阶段 — 需在真实移动设备测试
+SEO Strategy and Planning phase
 
 ---
 
-## Moderate Pitfalls
-
-### Pitfall 7: Vercel 默认域名与自定义域名冲突
+### Pitfall 7: Ignoring Off-Page Signals
 
 **What goes wrong:**
-同时通过 `xxx.vercel.app` 和 `winningadventure.com.au` 访问网站，搜索引擎可能将两者视为重复内容，导致 SEO 排名下降。
+Website has quality content but fails to build domain authority through backlinks. Without external signals of credibility, the site cannot compete against established players in search results.
 
-**Prevention:**
-1. 在 next.config.js 中配置域名重定向：
-   ```javascript
-   async redirects() {
-     return [
-       {
-         source: '/:path*',
-         destination: 'https://winningadventure.com.au/:path*',
-         permanent: true, // 301 重定向
-       },
-     ]
-   }
-   ```
-2. 在 Vercel Dashboard 设置 default 域名
+**Why it happens:**
+Link building is perceived as difficult or "spammy." Companies create content but do not promote it. There is no outreach strategy to earn mentions, guest posts, or industry citations. The website exists in a vacuum without connections to the broader industry ecosystem.
 
-### Pitfall 8: 构建日志未保存导致问题排查困难
+**How to avoid:**
+Develop systematic link building: industry directory submissions, HARO or Connectively responses, guest posting on relevant industry sites, creating shareable original research, building relationships with industry journalists and bloggers. Prioritize links from Australian business sites and industry publications relevant to sourcing.
 
-**What goes wrong:**
-部署失败但未保存构建日志，无法定位问题根因。
+**Warning signs:**
+- Domain Authority below 20 after 6+ months
+- Few or no backlinks from industry-relevant sites
+- No guest posting or external publication strategy
+- Backlinks primarily from low-quality or irrelevant sites
+- No monitoring of backlink profile
 
-**Prevention:**
-- 在 Vercel Dashboard 保留构建历史
-- 本地运行 `vercel build` 复现问题
+**Phase to address:**
+Link Building phase
 
 ---
 
-## Phase-Specific Warnings
+### Pitfall 8: Neglecting "Epic Sourcing" Brand Keyword Strategy
 
-| Phase Topic | Likely Pitfall | Mitigation |
-|-------------|---------------|------------|
-| 自定义域名配置 | SSL 证书 Pending | 提前配置 DNS，耐心等待传播 |
-| 环境变量 | 缺失导致构建失败 | 部署前在 Preview 环境测试 |
-| 移动端导航栏 | fixed 定位 iOS 失效 | 改用 sticky 或添加 transform |
-| 表单功能 | 生产环境连接失败 | 验证所有环境变量正确配置 |
+**What goes wrong:**
+WAG targets ranking for "epic sourcing" (a brand-specific term) but this keyword has zero search volume since no one searches for "epic sourcing" - it is invented. Meanwhile, competitors rank for terms Australian businesses actually search: "China sourcing agent", "manufacturing in China", "verified suppliers".
+
+**Why it happens:**
+Companies create brand keywords hoping to own the term, ignoring that search volume must exist. The assumption that ranking #1 for a zero-volume term will drive traffic is incorrect. Resources spent optimizing for invented terms could have been used for terms with proven search demand.
+
+**How to avoid:**
+Verify all target keywords have actual search volume using Google Keyword Planner, Ahrefs, or Semrush. "Epic sourcing" as a primary target is problematic - instead focus on: "sourcing agent", "China manufacturing consultant", "Australian sourcing company", "verified China suppliers". These have proven search demand from real Australian businesses.
+
+**Warning signs:**
+- Targeting keywords with zero or very low monthly searches
+- Brand keyword "ranking #1" but no traffic increase
+- Keywords not appearing in actual Australian business conversations
+
+**Phase to address:**
+Keyword Research phase - critical for WAG's strategy
+
+---
+
+## Technical Debt Patterns
+
+| Shortcut | Immediate Benefit | Long-term Cost | When Acceptable |
+|----------|-------------------|----------------|-----------------|
+| Using AI-generated content without editing | Fast content production | Google ranking penalties, no unique value | Never for B2B content - requires human expertise |
+| Buying backlinks | Quick authority boost | Google penalties, wasted money when caught | Never - violates guidelines |
+| Duplicating content across pages | Saves development time | Cannibalization, ranking issues | Never - each page needs unique content |
+| Skipping meta descriptions | Faster page deployment | Lower CTR, lost traffic | Acceptable short-term if resources constrained |
+| Ignoring analytics setup | Avoids setup complexity | No visibility into SEO performance | Never - must have from day one |
+| Using generic stock photos | No cost, fast | No E-E-A-T signals, distrust | Acceptable if supplemented with original images |
+
+## Integration Gotchas
+
+| Integration | Common Mistake | Correct Approach |
+|-------------|----------------|------------------|
+| Google Search Console | Not verifying ownership or ignoring warnings | Verify immediately, monitor weekly for issues |
+| Google Analytics 4 | Not linking to Search Console | Link accounts for unified data view |
+| XML Sitemap | Not submitting to Search Console | Submit and regularly resubmit after updates |
+| Schema Markup | Using incorrect or outdated schema | Use JSON-LD format for LocalBusiness and Organization |
+| CDN Configuration | Not excluding SEO-critical paths | Ensure all public pages cached properly |
+
+## Performance Traps
+
+| Trap | Symptoms | Prevention | When It Breaks |
+|------|----------|------------|----------------|
+| Too many pages with thin content | Crawl budget wasted, overall site quality drops | Consolidate into comprehensive pages | At 50+ pages of thin content |
+| Over-optimization of internal links | Anchor text patterns trigger spam filters | Use natural, varied anchor text | After 30% of links use exact match keywords |
+| JavaScript-rendered content | Googlebot cannot access content | Use server-side rendering or proper hydration | Immediately - content invisible to Google |
+
+## Security Mistakes
+
+| Mistake | Risk | Prevention |
+|---------|------|------------|
+| Exposing sitemap with internal URLs | Competitors see SEO strategy | Use robots.txt to partially hide sensitive paths |
+| Duplicate content across HTTP/HTTPS | Split ranking signals | Implement proper 301 redirects and canonical tags |
+| No SSL certificate | Trust signals lost, ranking penalty | Install SSL from day one |
+
+## UX Pitfalls
+
+| Pitfall | User Impact | Better Approach |
+|---------|-------------|-----------------|
+| No clear contact method on service pages | Lost leads, high bounce | Place CTA above fold, consistent contact placement |
+| No Australian phone number displayed | Signals to users company is not local | Prominent header with Australian phone number |
+| No lead magnet or content upgrade | No capture of high-intent visitors | Add relevant downloads, consultations for B2B buyers |
+
+## "Looks Done But Isn't" Checklist
+
+- [ ] **Keyword Research:** Often targets volume instead of commercial intent - verify keywords align with conversion goals
+- [ ] **Meta Descriptions:** Often generic or missing - verify each page has unique, compelling descriptions
+- [ ] **Internal Linking:** Often neglected - verify logical link architecture supports key pages
+- [ ] **Image Optimization:** Often forgotten - verify all images have alt text and compressed file sizes
+- [ ] **Mobile Optimization:** Often incomplete - verify mobile experience matches desktop
+- [ ] **Local SEO:** Often just "claimed" Google Business Profile - verify complete profile with photos, posts, reviews
+- [ ] **Content Freshness:** Often outdated - verify regular updates to key pages and blog
+
+## WAG-Specific Considerations
+
+### Keywords to Reconsider
+- "epic sourcing" - verify search volume exists before heavy investment
+- Ensure keywords match how Australian businesses actually search
+
+### Australian Market Signals to Add
+- Google Business Profile with Australian address
+- .com.au domain or prominent .com.au citation
+- Australian business directory listings
+- Testimonials from Australian clients
+- References to Australian regulations (ACL, import requirements)
+
+### Technical SEO Status (from v1.0)
+- PageSpeed LCP: 5.4s target <2.5s - needs improvement before content push
+- Mobile optimized - good foundation
+- SSL ready - good foundation
 
 ---
 
@@ -297,35 +280,38 @@ v1.1 验证阶段 — 需在真实移动设备测试
 
 | Pitfall | Recovery Cost | Recovery Steps |
 |---------|---------------|----------------|
-| SSL 证书失败 | LOW | 检查 DNS 配置，等待 24 小时，或使用 Vercel DNS |
-| 环境变量缺失 | LOW | 添加到 Vercel Settings，重新部署 |
-| iOS fixed 失效 | MEDIUM | 修改 CSS，添加 transform 或改用 sticky |
-| 构建缓存 | LOW | 使用 --force 重新部署 |
+| Google penalty | HIGH | Identify penalty type, submit reconsideration request, remove toxic links |
+| Keyword cannibalization | MEDIUM | Consolidate content, set canonical tags, redirect weaker pages |
+| Technical SEO debt | MEDIUM-HIGH | Prioritize fixes systematically, may require developer resources |
+| Lost backlinks | LOW-MEDIUM | Reach out to linking sites, create better content for re-linking |
 
 ---
 
-## Pre-Deployment Checklist
+## Pitfall-to-Phase Mapping
 
-- [ ] 所有环境变量已添加到 Vercel Settings
-- [ ] 自定义域名 DNS 记录已配置
-- [ ] SSL 证书状态显示 "Ready"（非 Pending）
-- [ ] 在 Vercel Preview 环境测试所有页面
-- [ ] 询价表单在生产环境可正常提交
-- [ ] 移动端导航栏在 iOS 设备上测试通过
-- [ ] 运行 `npm run build` 本地通过
-- [ ] 运行 `npm run lint` 无错误
+| Pitfall | Prevention Phase | Verification |
+|---------|------------------|--------------|
+| Ignoring search intent | Keyword Research | User journey mapping, SERP analysis |
+| Wrong keywords | Keyword Research | Difficulty analysis, competitor gap analysis |
+| No Australian localization | On-Page SEO | Local ranking check, citation audit |
+| Thin content | Content Strategy | Content audit, uniqueness scoring |
+| Technical weaknesses | Technical SEO Audit | Core Web Vitals, crawl error checks |
+| Short-term thinking | Strategy/Planning | Expectation alignment with stakeholders |
+| No backlinks | Link Building | Monthly backlink profile review |
+| Brand keyword strategy | Keyword Research | Search volume verification |
 
 ---
 
 ## Sources
 
-- [Vercel Domains Documentation](https://vercel.com/docs/domains)
-- [Vercel SSL Certificate Troubleshooting](https://vercel.com/docs/domains/troubleshooting)
-- [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying)
-- [iOS Safari position:fixed Issues (Stack Overflow)](https://stackoverflow.com/questions/41540001/ios-safari-position-fixed-bugs)
-- [MDN: position sticky](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+- Search Engine Journal: "19 Most Common SEO Errors That Hurt Your Rankings"
+- Search Engine Journal: "The 10 Most Harmful Mobile SEO Mistakes"
+- CSDN/B2B SaaS: "B2B SEO Mistakes and Solutions" (2025)
+- Search Engine Journal: "B2B Keyword Research Done Right"
+- Various Chinese SEO industry guides on B2B foreign trade SEO (2025-2026)
+- Australian SEO agency best practices and local market considerations
 
 ---
 
-*Pitfalls research for: WAG Website v1.1 Deployment*
-*Researched: 2026-03-17*
+*Pitfalls research for: SEO for B2B Sourcing Companies (Australian Market)*
+*Researched: 2026-03-18*

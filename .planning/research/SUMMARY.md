@@ -1,134 +1,195 @@
 # Project Research Summary
 
-**Project:** WAG Website v1.1
-**Domain:** Corporate website deployment and mobile UX improvements
-**Researched:** 2026-03-17
-**Confidence:** HIGH
+**Project:** WAG Website SEO Automation
+**Domain:** B2B SEO for Australian Sourcing Companies
+**Researched:** 2026-03-18
+**Confidence:** MEDIUM
+
+---
 
 ## Executive Summary
 
-v1.1 里程碑聚焦于将 Winning Adventure Global 官网部署到 Vercel 生产环境并修复已发现的移动端体验问题。基于研究，核心技术栈已就绪：Next.js 14.2 + Vercel 零配置部署 + Tailwind CSS 响应式架构。主要工作包括配置自定义域名（winningadventure.com.au）、修复移动端导航栏固定定位失效问题、以及添加 Facebook 社交链接。
+This research synthesizes findings from four parallel research streams to define the technology stack, features, architecture, and pitfalls for achieving #1 ranking in Google Australia for B2B sourcing keywords ("epic sourcing", "china direct").
 
-研究识别出 6 个关键陷阱，其中最需关注的是：Vercel 环境变量缺失导致构建失败、iOS Safari 中 fixed 定位失效、以及 SSL 证书配置延迟。建议采用渐进式实施策略，先完成开发环境验证，再部署到生产环境。
+The recommended approach follows a three-pillar SEO strategy: **Technical SEO** (foundation), **On-Page/Content SEO** (ranking drivers), and **Off-Page SEO** (authority building). For WAG specifically, the critical insight is that "epic sourcing" appears to be a brand-invented term with zero search volume, making it an ineffective primary keyword target. The research strongly recommends focusing on proven commercial keywords like "China sourcing agent", "Australian sourcing company", and "verified China suppliers" where Australian businesses actively search.
+
+The highest-risk pitfalls center on: (1) ignoring search intent in B2B contexts, (2) targeting keywords without verified search volume, (3) neglecting Australian market localization, and (4) technical SEO foundation weaknesses (LCP currently 5.4s vs target 2.5s). A phased approach prioritizing technical fixes before content creation will mitigate these risks.
+
+---
 
 ## Key Findings
 
 ### Recommended Stack
 
-**核心部署架构已确定：** Vercel 平台 + Next.js 14.2 App Router + Node.js 20.x。Vercel 提供原生 Next.js 支持，包含 ISR、SSR、图像优化等开箱即用功能，无需额外配置。
+**Core SEO platforms:**
+- **Semrush Pro** — Industry-leading keyword research (25B+ keywords), position tracking for Australian market, competitive analysis. Essential for ranking competitive terms.
+- **Google Search Console** — Free official Google data for ranking positions, click-through rates, indexing status. Critical for tracking target keywords.
+- **Google Analytics 4** — Official Google analytics with Search Console integration.
 
-**Core technologies:**
-- **Vercel** — 托管与 CDN，原生 Next.js 支持，零配置部署
-- **Next.js 14.2** — 当前项目版本，App Router 架构
-- **Node.js 20.x** — Next.js 14.2 要求，在 vercel.json 中已配置
-- **Tailwind CSS 3.4** — 移动优先响应式设计，已在项目中应用
-- **Sydney 区域 (syd1)** — 距离澳大利亚用户最近的边缘节点
+**Next.js integration:**
+- **next-sitemap** ^4.x — Automatic sitemap generation during build. Generates sitemap.xml and robots.txt automatically.
+- **Schema.org (JSON-LD)** — Native Next.js metadata API supports JSON-LD. Add Organization, LocalBusiness, FAQPage schemas for rich snippets.
+- **@vercel/analytics** — Web Vitals tracking and analytics.
+
+**Backlink & authority:**
+- **Google Business Profile** — Critical for local Australian searches. Optimize with accurate NAP, photos, services.
+- **HARO / Connectively** — Backlink acquisition from authoritative news sites.
+- **Guest Posting** — Target Australian and B2B procurement publications.
 
 ### Expected Features
 
 **Must have (table stakes):**
-- Vercel 生产部署 — 项目已具备部署条件
-- 自定义域名配置 — winningadventure.com.au，DNS 需正确配置
-- 移动端导航栏固定定位修复 — 用户已报告此问题
-- 环境变量配置 — Supabase + Resend 凭证需在 Vercel Dashboard 配置
+- XML Sitemap — Google needs roadmap to discover all pages
+- Robots.txt — Controls crawler access
+- Meta Tags (Title, Description) — Appears in SERP, affects CTR
+- Canonical URLs — Prevents duplicate content penalties
+- Structured Data (Schema Markup) — Enables rich snippets
+- Core Web Vitals Optimization — LCP < 2.5s, FID < 100ms, CLS < 0.1 (current LCP 5.4s needs fixing)
+- HTTPS/SSL — Already configured via Vercel
 
 **Should have (competitive):**
-- Facebook 社交链接添加 — Footer 已有 LinkedIn，参照添加 Facebook
-- SSL 证书自动签发 — Vercel 免费提供
-- 安全 headers 配置 — X-Frame-Options, X-Content-Type-Options 等
+- Keyword-Optimized Content Clusters — Build topic clusters around core commercial keywords
+- FAQ Schema Implementation — Enables featured snippets (Position 0)
+- Local SEO (Australian) — Google Business Profile, local citations, au-specific content
+- Backlink Acquisition Strategy — Domain Authority building through guest posting, industry partnerships
+- Internal Linking Architecture — Hub-and-spoke model from pillar pages
 
 **Defer (v2+):**
-- 容器查询 (Container Queries) — 组件级响应式，优先级较低
-- 折叠屏设备支持 — 18% 市场份额，高复杂度
+- Automated SEO Audits — Weekly monitoring dashboard
+- Content Clusters Expansion — Comprehensive topic coverage beyond initial pillar pages
 
 ### Architecture Approach
 
-**部署架构采用分层模式：**
-- **页面层 (Page Layer)** — 布局骨架，容器控制
-- **区块组件层 (Section Components)** — 功能区块响应式
-- **基础组件层 (Primitive Components)** — 可复用 UI 元素
+The SEO automation architecture follows a build-time + server-side pattern with monitoring automation:
 
-**Vercel 部署流程：** Git Push → Vercel Detect → Build (next build) → Serverless Functions → CDN
+**Major components:**
+1. **Sitemap Generator** — `next-sitemap` runs post-build, generates sitemap.xml and robots.txt
+2. **Schema Manager** — Reusable JSON-LD components for Organization, LocalBusiness, FAQ, Article
+3. **Analytics Collector** — @vercel/analytics SDK for Web Vitals tracking
+4. **Monitoring Service** — GitHub Actions scheduled workflows fetching GSC data
+5. **Content Pipeline** — Existing MDX + gray-matter for blog content with SEO frontmatter
 
-**自定义域名 DNS 配置：**
-- A 记录 (@) → 76.76.21.21
-- CNAME (www) → cname.vercel-dns.com
+**Key architectural patterns:**
+- Build-Time Sitemap Generation (zero runtime overhead)
+- Server-Side SEO Metadata (Next.js Metadata API)
+- JSON-LD Schema Components (reusable React components)
+- On-Demand Revalidation for Sitemaps (ISR)
+- GitHub Actions SEO Monitoring (scheduled workflows)
 
 ### Critical Pitfalls
 
-1. **SSL 证书配置失败** — 域名 DNS 未正确配置时证书处于 Pending 状态，需等待 5 分钟至 24 小时传播
-2. **环境变量在 Vercel 构建时缺失** — 仅本地 .env.local 存在，生产构建失败，需添加到 Vercel Project Settings
-3. **移动端 fixed 定位在 iOS Safari 失效** — 导航栏随页面滚动消失，建议改用 `position: sticky` 或添加 `transform: translateZ(0)`
-4. **Vercel 构建缓存导致样式未更新** — 修改 CSS 后部署仍显示旧样式，需使用 `--force` 重新部署
-5. **移动端 hamburger 菜单点击区域不足** — 按钮需最小 44x44px，当前实现已符合标准
+1. **Ignoring Search Intent in B2B Context** — Content ranks but fails to convert. B2B buyers have long sales cycles with multiple stakeholders (researchers, evaluators, decision-makers). Map content to full buyer's journey: awareness, consideration, decision stages.
+
+2. **Targeting Wrong Keywords** — "epic sourcing" has zero search volume (invented brand term). Prioritize long-tail keywords with proven search demand: "sourcing agent", "China manufacturing consultant", "Australian sourcing company", "verified China suppliers".
+
+3. **Neglecting Australian Market Localization** — Missing local signals cause Google Australia to deprioritize. Include location-specific keywords, Australian business context (ACL, import regulations), claim Google Business Profile, build citations on Australian directories.
+
+4. **Technical SEO Foundation Weaknesses** — Current LCP 5.4s is a critical blocker. Complete technical SEO audit before content work. Address Core Web Vitals, implement proper schema markup, fix crawl errors.
+
+5. **Thin, Undifferentiated Content** — Content fails to differentiate from competitors. Conduct content gap analysis against top-ranking competitors. Focus on E-E-A-T signals: original research, Australian case studies, expert perspectives.
+
+---
 
 ## Implications for Roadmap
 
-基于研究，建议采用单阶段实施策略，v1.1 聚焦于部署就绪和小修复。
+Based on research, suggested phase structure:
 
-### Phase 1: Vercel 部署与移动端修复
-
-**Rationale:** 部署是核心目标，移动端修复是用户报告的紧急问题，Facebook 链接是简单的补充任务
+### Phase 1: Technical SEO Foundation
+**Rationale:** Current LCP 5.4s is a critical blocker. Without technical foundation, content investment will not yield rankings.
 
 **Delivers:**
-- Vercel 生产环境部署完成
-- 自定义域名 (winningadventure.com.au) 生效
-- SSL 证书自动签发
-- 移动端导航栏固定定位修复
-- Facebook 链接添加
+- XML Sitemap generation (next-sitemap)
+- Robots.txt configuration
+- Core Web Vitals fixes (LCP < 2.5s)
+- Schema Markup (Organization + LocalBusiness)
+- Canonical URLs implementation
+- Open Graph tags
 
-**Addresses:**
-- Responsive Layout (from FEATURES.md)
-- Mobile Navigation fix (PITFALLS.md Pitfall 3)
-- Vercel Deployment (STACK.md)
+**Addresses:** All P1 table stakes from FEATURES.md
 
-**Avoids:**
-- SSL 证书 Pending — 提前配置 DNS 并等待传播
-- 环境变量缺失 — 部署前在 Vercel Dashboard 完整配置
+**Avoids:** Pitfall #4 (Technical SEO Foundation Weaknesses), Pitfall #5 (Thin Content — can't succeed with poor technical foundation)
+
+### Phase 2: On-Page SEO & Content Strategy
+**Rationale:** With technical foundation in place, content strategy can drive keyword rankings.
+
+**Delivers:**
+- Page-specific keyword optimization
+- FAQ Schema on service pages
+- Blog content calendar (2-4 posts/month)
+- Internal linking optimization (hub-and-spoke)
+- Image alt text audit
+
+**Uses:** Semrush for keyword research, MDX content system
+
+**Avoids:** Pitfall #1 (Ignoring Search Intent), Pitfall #2 (Wrong Keywords — validate with Semrush), Pitfall #8 (Brand keyword with zero volume)
+
+### Phase 3: Off-Page SEO & Authority Building
+**Rationale:** Domain authority building required to compete for competitive commercial keywords.
+
+**Delivers:**
+- Backlink outreach program (HARO, guest posting)
+- Google Business Profile optimization
+- Local citations (Australian directories)
+- Content clusters expansion
+
+**Avoids:** Pitfall #7 (Ignoring Off-Page Signals)
 
 ### Phase Ordering Rationale
 
-- **为何此顺序：** 部署是核心目标，修复移动端问题是用户痛点，添加 Facebook 是简单补充
-- **为何合并为一阶段：** 三个任务都是 P1 优先级且互不依赖，可并行处理
-- **如何避免陷阱：** 部署前完成环境变量配置，在真实 iOS 设备测试导航栏
+- Technical foundation must come first — current PageSpeed issues block content investment
+- Content strategy depends on keyword research validation — must verify search volume before creating content
+- Off-page SEO depends on having quality content to promote — cannot build links without linkable assets
+- Avoids Pitfall #6 (Short-Term Thinking) — realistic 6-12 month timeline for meaningful results
 
 ### Research Flags
 
 Phases likely needing deeper research during planning:
-- **无** — v1.1 任务已充分研究，有明确的实施路径
+- **Phase 2:** Keyword validation — need to confirm actual search volume for "epic sourcing" alternative terms using Semrush trial
+- **Phase 3:** Backlink outreach strategy — requires understanding Australian B2B procurement publications landscape
 
 Phases with standard patterns (skip research-phase):
-- **Phase 1:** Vercel 部署是标准模式，Next.js + Vercel 文档完善
-- **Phase 1:** 移动端 fixed 定位修复有成熟的 CSS 解决方案
+- **Phase 1:** Technical SEO — well-documented Next.js + next-sitemap patterns
+- **Phase 2:** Content calendar — established editorial workflow patterns
+
+---
 
 ## Confidence Assessment
 
 | Area | Confidence | Notes |
 |------|------------|-------|
-| Stack | HIGH | Vercel + Next.js 官方文档完整 |
-| Features | HIGH | 部署任务明确，修复已有用户报告 |
-| Architecture | HIGH | Next.js App Router 模式成熟 |
-| Pitfalls | MEDIUM-HIGH | 已识别 6 个陷阱，有对应解决方案 |
+| Stack | HIGH | Based on official Next.js docs, next-sitemap, Vercel documentation. Existing WAG stack integrates seamlessly. |
+| Features | HIGH | Table stakes and differentiators from established SEO industry standards (Backlinko, First Page Sage). |
+| Architecture | HIGH | Five documented patterns with code examples. Next.js App Router native support for all components. |
+| Pitfalls | MEDIUM | B2B SEO pitfalls well-documented, but WAG-specific keyword analysis needs validation. "epic sourcing" volume unconfirmed. |
 
-**Overall confidence:** HIGH
+**Overall confidence:** MEDIUM
 
 ### Gaps to Address
 
-- **DNS 传播时间：** 首次配置自定义域名后 SSL 证书可能延迟，需在验证阶段耐心等待
-- **真实设备测试：** 移动端 fixed 定位问题需在真实 iOS 设备测试，模拟器可能无法复现
+- **Keyword Volume Validation:** "epic sourcing" may have zero search volume. Need Semrush trial to validate alternative commercial keywords for Australian market.
+- **LCP Performance Gap:** Current 5.4s vs target 2.5s requires specific optimization plan during Phase 1 execution.
+- **Australian Market Specifics:** Some localization recommendations (directory listings, citation sites) need verification of current 2026 availability.
+
+---
 
 ## Sources
 
 ### Primary (HIGH confidence)
-- Vercel Documentation — https://vercel.com/docs/frameworks/nextjs
-- Vercel Custom Domains — https://vercel.com/docs/domains/add-a-domain
-- Next.js Deployment — https://nextjs.org/docs/app/building-your-application/deploying
+- Next.js Official Documentation (nextjs.org) — Metadata API, Image Optimization
+- next-sitemap GitHub Repository — Sitemap generation
+- Google Search Central Documentation — Core Web Vitals, Schema markup
+- Backlinko On-Page SEO Guide (2026) — SEO best practices
+- First Page Sage Ranking Factors 2025 — Ranking factor权重
 
 ### Secondary (MEDIUM confidence)
-- iOS Safari position:fixed Issues — Stack Overflow 社区解决方案
-- MDN: position sticky — https://developer.mozilla.org/en-US/docs/Web/CSS/position
+- Semrush 2026 Tutorial (99signals.com) — Keyword research methodology
+- Search Engine Journal — B2B SEO pitfalls and solutions
+- Australian SEO agency best practices — Local market considerations
+
+### Tertiary (LOW confidence)
+- Chinese SEO industry guides — B2B foreign trade SEO patterns (need validation for Australian market)
 
 ---
 
-*Research completed: 2026-03-17*
+*Research completed: 2026-03-18*
 *Ready for roadmap: yes*
