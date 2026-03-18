@@ -85,7 +85,9 @@
 4. 3 guest posts published on external industry websites (user can find via backlink check)
 5. Backlinks from Australian business directories acquired (user can verify via SEO tools)
 
-**Plans:** TBD
+**Plans:** 1/1 plans
+
+- [x] 11-01-PLAN.md - Local SEO & Authority (LOCAL-01, LOCAL-02, LOCAL-03, AUTH-01, AUTH-02)
 
 ---
 
@@ -113,7 +115,7 @@
 |-------|----------------|--------|-----------|
 | 9. Technical SEO Foundation | 1/1 | Complete   | 2026-03-18 |
 | 10. Content Strategy | 3/3 | Complete    | 2026-03-18 |
-| 11. Local SEO & Authority | 0/1 | Not started | - |
+| 11. Local SEO & Authority | 1/1 | Planned     | - |
 | 12. Analytics & Optimization | 0/1 | Not started | - |
 
 ---
@@ -133,15 +135,15 @@
 | CONT-03 | Phase 10 | Ready |
 | CONT-04 | Phase 10 | Ready |
 | CONT-05 | Phase 10 | Ready |
-| LOCAL-01 | Phase 11 | Pending |
-| LOCAL-02 | Phase 11 | Pending |
-| LOCAL-03 | Phase 11 | Pending |
-| AUTH-01 | Phase 11 | Pending |
-| AUTH-02 | Phase 11 | Pending |
+| LOCAL-01 | Phase 11 | Planned |
+| LOCAL-02 | Phase 11 | Planned |
+| LOCAL-03 | Phase 11 | Planned |
+| AUTH-01 | Phase 11 | Planned |
+| AUTH-02 | Phase 11 | Planned |
 | MON-02 | Phase 12 | Pending |
 | MON-03 | Phase 12 | Pending |
 | AUTH-03 | Phase 12 | Pending |
 
 ---
 
-*Last updated: 2026-03-18*
+*Last updated: 2026-03-19*
