@@ -13,6 +13,8 @@
   "dependencies": {
     "@remotion/animation-utils": "^4.0.429",
     "@remotion/player": "^4.0.429",
+    "@upstash/ratelimit": "^2.0.0",
+    "@upstash/redis": "^1.34.0",
     "autoprefixer": "^10.4.27",
     "browser-use": "^0.5.0",
     "csv-parse": "^6.1.0",
@@ -31,9 +33,8 @@
     "remark-html": "^16.0.0",
     "remotion": "^4.0.429",
     "resend": "^6.9.3",
-    "zod": "^4.3.6",
-    "@upstash/ratelimit": "^2.0.0",
-    "@upstash/redis": "^1.34.0"
+    "sharp": "^0.34.5",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
