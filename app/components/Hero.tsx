@@ -4,20 +4,23 @@ import Image from 'next/image'
 export default function Hero() {
   return (
     <section className="relative min-h-[60vh] md:min-h-[720px] flex items-center overflow-hidden">
-      {/* Hero Image - Priority loaded for LCP optimization */}
-      <div className="absolute inset-0">
+      {/* Hero Image - Mobile: show only (no video to block LCP) */}
+      <div className="absolute inset-0 md:hidden">
         <Image
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
           alt="Chinese manufacturing facility with Australian business team"
           fill
           priority={true}
           sizes="100vw"
           className="object-cover"
         />
+        {/* Gradient overlay for mobile */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
       </div>
 
-      {/* Video Background - Full Width */}
-      <div className="absolute inset-0" aria-hidden="true">
+      {/* Video Background - Desktop only (not on mobile to fix LCP) */}
+      <div className="hidden md:block absolute inset-0" aria-hidden="true">
         <video
           autoPlay
           muted

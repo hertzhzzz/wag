@@ -2,6 +2,12 @@ import { NextResponse } from 'next/server'
 import { z } from 'zod'
 import { checkRateLimit } from '@/lib/rate-limit'
 
+// CORS configuration
+const ALLOWED_ORIGINS = [
+  'https://www.winningadventure.com.au',
+  'https://winningadventure.com.au'
+]
+
 // Lazy load nodemailer to avoid SSR issues
 async function getTransporter() {
   if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
@@ -38,17 +44,49 @@ function escapeHtml(str: string): string {
     .replace(/'/g, '&#039;')
 }
 
+// CORS preflight handler
+export async function OPTIONS() {
+  const origin = 'https://www.winningadventure.com.au'
+  return new NextResponse(null, {
+    status: 204,
+    headers: {
+      'Access-Control-Allow-Origin': origin,
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Max-Age': '86400',
+    },
+  })
+}
+
+// Helper to check origin and add CORS headers
+function addCorsHeaders(response: NextResponse, origin: string): NextResponse {
+  if (ALLOWED_ORIGINS.includes(origin)) {
+    response.headers.set('Access-Control-Allow-Origin', origin)
+  }
+  return response
+}
+
 export async function POST(request: Request) {
+  // CORS origin check
+  const origin = request.headers.get('origin') || ''
+  if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+    return new NextResponse.json(
+      { error: 'Origin not allowed' },
+      { status: 403 }
+    )
+  }
+
   // Rate limiting - get IP from headers or fallback
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
     || request.headers.get('x-real-ip')
     || 'unknown'
 
   if (!(await checkRateLimit(ip))) {
-    return NextResponse.json(
+    const response = NextResponse.json(
       { error: 'Too many requests. Please try again later.' },
       { status: 429 }
     )
+    return addCorsHeaders(response, origin)
   }
 
   // Parse and validate request body
