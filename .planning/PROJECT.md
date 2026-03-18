@@ -19,7 +19,12 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 
 ### Active
 
-## Current State: v1.0 Production Release
+- [ ] **SEO-01**: Rank #1 for "epic sourcing" in Google Australia
+- [ ] **SEO-02**: Rank #1 for "china direct" in Google Australia
+- [ ] **SEO-03**: Increase Domain Authority (DA) to 20+
+- [ ] **SEO-04**: Establish systematic content creation pipeline
+
+## Current State: v1.1 SEO Automation
 
 **Shipped:** 2026-03-18
 **Phases:** 4 (06, 06.1, 07, 08)
@@ -110,6 +115,19 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 - Deploy to Vercel with custom domain winningadventure.com.au
 - Add Facebook social link to Footer
 - Fix mobile navbar sticky behavior
+
+---
+
+## Current Milestone: v1.1 SEO Automation
+
+**Goal:** Achieve #1 ranking for "epic sourcing" and "china direct" keywords in Google Australia, improve Domain Authority, and establish systematic content creation pipeline.
+
+**Target features:**
+- Keyword research and ranking strategy for Australian market
+- Content strategy and systematic blog production
+- On-page SEO optimization and technical improvements
+- Backlink building and domain authority growth
+- SEO analytics and monitoring automation
 
 ---
 *Last updated: 2026-03-18 after v1.0 production release*
