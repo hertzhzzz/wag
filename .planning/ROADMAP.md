@@ -34,9 +34,9 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 6. SEO Optimization | 6/6 | Complete | |
 | 06.1. Vercel Gmail Config | 1/1 | Complete | 2026-03-17 |
 | 7. PageSpeed Mobile LCP | 1/7 | In Progress | 2026-03-18 |
-| 8. Security Audit | 4/4 | Complete   | 2026-03-18 |
+| 8. Security Audit | 4/5 | In Progress | 2026-03-18 |
 
-**Total:** 6 phases, 24 plans (including gap closure)
+**Total:** 6 phases, 25 plans (including gap closure)
 
 ---
 
@@ -105,7 +105,7 @@ Plans:
 - [ ] 07-06-PLAN.md — SVG optimization
 - [ ] 07-07-PLAN.md — Final verification
 
-### Phase 8: security audit - analyze and fix all security risks in the WAG website
+### Phase 8: security audit - analyze and fix all security risks in the Wag website
 
 **Goal:** Comprehensive security audit to identify and fix vulnerabilities. Includes dependency scanning, API route security, security headers, and hardening measures.
 
@@ -113,13 +113,14 @@ Plans:
 
 **Depends on:** Phase 7
 
-**Plans:** 4/4 plans complete
+**Plans:** 4/5 plans (gap closure in progress)
 
 Plans:
 - [x] 08-01-PLAN.md — Dependency security (npm audit, npm outdated, upgrade Next.js)
 - [x] 08-02-PLAN.md — Security headers & CORS configuration
 - [x] 08-03-PLAN.md — Rate limiting & API hardening
 - [x] 08-04-PLAN.md — CI/CD security workflow
+- [ ] 08-05-PLAN.md — Fix npm audit vulnerabilities (gap closure)
 
 ### Success Criteria
 
