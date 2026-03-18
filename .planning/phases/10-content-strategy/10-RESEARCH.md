@@ -1,7 +1,7 @@
-# Phase 10: Content Strategy - Research
+# Phase 10: Content Strategy - Comprehensive Bug Scan Research
 
 **Researched:** 2026-03-18
-**Domain:** SEO Content Strategy (Blog + FAQ + Service Pages)
+**Domain:** MDX Blog System, FAQ System, Next.js Metadata API, Build Verification
 **Confidence:** HIGH
 
 ## Summary
@@ -9,6 +9,43 @@
 Phase 10 requires creating 3 SEO-optimized blog guides, expanding the FAQ section with Schema markup, and optimizing service pages with target keywords. The project already has a mature MDX-based blog system with detailed content guidelines (BLOG_PROMPT.md), an existing FAQ component with correct FAQPage JSON-LD schema, and service pages with basic metadata. The key work involves generating new content following existing patterns, expanding FAQ from 4 to 10-15 questions and adding to services/about pages, and enhancing service page metadata with high-intent commercial keywords.
 
 **Primary recommendation:** Use existing BLOG_PROMPT.md for content generation (1500-2200 words per guide), expand existing FAQ data file with 6-11 new questions and import FAQ components to services/about pages, update service page metadata with target keywords "factory visit", "supplier sourcing", "China procurement".
+
+---
+
+<user_constraints>
+## User Constraints (from CONTEXT.md)
+
+### Locked Decisions
+- 3 blog guides: "How to Import from China", "China Supplier Verification", "Australia Import Tips"
+- FAQ placement: Inline accordion on services and about pages
+- FAQ quantity: 10-15 questions
+- Use /skill wag-seo-blog for content generation following BLOG_PROMPT.md guidelines
+
+### Claude's Discretion
+- Exact FAQ question text and wording
+- Specific H2/H3 structure within each guide
+- Internal linking strategy between guides
+- Service page content additions vs metadata-only optimization
+
+### Deferred Ideas (OUT OF SCOPE)
+- None
+
+</user_constraints>
+
+---
+
+<phase_requirements>
+## Phase Requirements
+
+| ID | Description | Research Support |
+|----|-------------|------------------|
+| CONT-01 | Create "How to Import from China" guide (blog post) | Existing blog system with MDX, frontmatter fields, quality checklist in BLOG_PROMPT.md |
+| CONT-02 | Create "China Supplier Verification" guide (blog post) | Same content system, supplier verification topic aligns with existing brand expertise |
+| CONT-03 | Create "Australia Import Tips" guide (blog post) | Same content system, Australian market focus per brand positioning |
+| CONT-04 | Add FAQ section to website with schema markup | FAQ already on homepage, needs expansion to 10-15 questions + add to services/about |
+| CONT-05 | Optimize service pages with target keywords | Service page metadata exists, needs high-intent keyword enhancement |
+
+</phase_requirements>
 
 ---
 
@@ -45,70 +82,34 @@ npm run build && curl -s -o /dev/null -w "%{http_code}" http://localhost:3000/re
 # Expected: 200, Not 404
 ```
 
-#### Critical Risk 2: Internal Link Path Format (HIGH)
+#### Critical Risk 2: Invalid Frontmatter Crashes Build
 
-**What goes wrong:** Internal links result in broken URLs (404).
+**What goes wrong:** Build fails due to gray-matter parse error.
 
-**Root cause:** BLOG_PROMPT.md rules specify:
-- Markdown internal links: `/services`, `/about` (NOT `/resources/services`)
-- Frontmatter slug: `/resources/your-article-slug` (only in frontmatter)
-
-**Prevention verification:**
-```bash
-# Check for incorrect internal links
-grep -E '\]\(/resources/' content/blog/*.mdx
-# Expected: nothing (should NOT contain /resources/ prefix in links)
-
-# Verify correct format exists
-grep -E '\]\(/services|\]\(/about|\]\(/enquiry' content/blog/*.mdx
-# Expected: should find internal links
-```
-
-#### Medium Risk 3: Duplicate Frontmatter Fields
-
-**What goes wrong:** gray-matter silently takes last value, causing undefined behavior.
-
-**Root cause:** Existing blog `verify-chinese-supplier.mdx` has duplicate `ctaTitle` field (lines 25 and 268). The second definition overwrites the first.
-
-**Evidence from existing code:**
-```yaml
-# Lines 25-26 in verify-chinese-supplier.mdx
-ctaTitle: "Planning a China factory visit?"
-
-# Line 268 (after content)
-ctaTitle: "Need help with supplier verification?"
-```
-
-**Prevention verification:**
-```bash
-# Check for duplicate frontmatter keys in new files
-# Manually inspect: ensure ctaTitle appears only once in frontmatter section (before ---)
-```
-
-#### Medium Risk 4: InlineCTA Component Property Mismatch
-
-**What goes wrong:** CTA button does not link to the correct URL.
-
-**Root cause:** The InlineCTA component in `resources/[slug]/page.tsx` does NOT accept a `ctaButtonLink` prop:
+**Root cause:** `app/resources/[slug]/page.tsx` lines 19-25:
 ```typescript
-// app/resources/[slug]/page.tsx lines 79-88
-function InlineCTA({ ctaTitle, ctaText, ctaButtonText }: { ... }) {
-  // Hardcoded to /enquiry - ignores ctaButtonLink
-  <Link href="/enquiry" ...>
+function getArticle(slug: string) {
+  const filePath = path.join(BLOG_DIR, `${slug}.mdx`)
+  if (!fs.existsSync(filePath)) return null
+  const raw = fs.readFileSync(filePath, 'utf-8')
+  const { data, content } = matter(raw)  // No try-catch!
+  return { frontmatter: data, content }
 }
 ```
 
-But existing blogs have both:
-- `ctaButtonLink: "https://www.winningadventure.com.au/enquiry"` - IGNORED
-- `ctaButtonText: "Book a consultation"` - USED
+**Edge cases that cause parse failure:**
+- Invalid YAML syntax (tabs instead of spaces)
+- Missing closing `---` in frontmatter
+- Special characters without proper escaping
+- Empty required fields
 
 **Prevention:**
-- Use `ctaButtonText` in frontmatter (this is what renders)
-- Do NOT use `ctaButtonLink` - it is ignored by the component
+- Always validate YAML syntax before committing
+- Use online YAML validator or `yarn lint` (if configured)
 
-#### Medium Risk 5: Missing Required Frontmatter Fields
+#### Critical Risk 3: Missing Required Frontmatter Fields
 
-**What goes wrong:** Page builds but renders with missing data.
+**What goes wrong:** Page builds but renders with missing data, broken UI.
 
 **Required fields (verified from existing blog):**
 - title, seoTitle, description, category, author, date
@@ -125,69 +126,59 @@ for field in title seoTitle description primaryKeyword slug; do
 done
 ```
 
-#### Medium Risk 6: Prohibited Components
-
-**What goes wrong:** Build errors or unexpected rendering.
-
-**Root cause:** BLOG_PROMPT.md explicitly prohibits:
-- `ArticleImage` component
-- Generic "Conclusion" section heading
-
-**Prevention verification:**
-```bash
-grep -i "ArticleImage\|## Conclusion" content/blog/*.mdx
-# Expected: nothing
-```
-
 ---
 
 ### Plan 10-02: Expand FAQ and Add to Pages
 
-#### Low Risk 1: FAQ Import Path
+#### Critical Risk 1: Missing FAQSchema Component (CRITICAL)
 
-**What goes wrong:** Build fails with module not found.
-
-**Root cause:** FAQ.tsx imports from `@/data/faqs`:
-```typescript
-// app/components/FAQ.tsx line 4
-import { faqs } from '@/data/faqs'
-```
-
-This assumes `@/` maps to `app/`. Verify `tsconfig.json` path aliases are correct.
-
-**Verification:**
-```bash
-# Check tsconfig.json for path alias
-grep -A5 '"@/"' tsconfig.json
-```
-
-#### Medium Risk 2: FAQ Schema Duplication
-
-**What goes wrong:** Multiple FAQPage schemas on same domain may confuse search engines.
+**What goes wrong:** FAQ renders but no SEO rich results.
 
 **Current state:**
-- Homepage (`app/page.tsx`): Already has `<FAQSchema />` (line 33)
-- Services page: Will add `<FAQSchema />`
-- About page: Will add `<FAQSchema />`
+- `app/page.tsx` (homepage): HAS `<FAQSchema />` (line 33)
+- `app/services/page.tsx`: MISSING `<FAQSchema />`
+- `app/about/page.tsx`: MISSING `<FAQSchema />`
 
-**Google's position:** Multiple FAQPage schemas on different URLs are valid if content differs.
+**Task 10-02 requirement:** Add FAQ to services AND about pages.
 
-**Prevention:**
-- Ensure services page FAQ and about page FAQ have DIFFERENT questions than homepage FAQ
-- Or consolidate: only services + about pages need FAQ (homepage can keep for now)
-
-#### Low Risk 3: FAQ Component Placement
-
-**What goes wrong:** FAQ renders in wrong location or breaks page layout.
-
-**Recommendation from plan:** Insert before Footer:
-```tsx
+**Prevention:** Must add BOTH `<FAQ />` AND `<FAQSchema />` to each page:
+```typescript
+// WRONG - Only adds UI, no JSON-LD
 <FAQ />
-<CTABand />  {/* Optional: keep existing CTA */}
-<Footer />
+
+// CORRECT - Adds UI AND SEO schema
+<FAQSchema />
+<FAQ />
 ```
 
-NOT between Navbar and hero (would break hero layout).
+#### Critical Risk 2: FAQ Schema Duplication
+
+**What goes wrong:** Multiple identical FAQPage schemas confuse search engines.
+
+**Current state:**
+- Homepage: Has FAQ with its own questions
+- Services page: Will have different FAQ questions
+- About page: Will have different FAQ questions
+
+**Google's position:** Multiple FAQPage schemas on different URLs are valid IF content differs.
+
+**Prevention:**
+- Ensure each page's FAQ has UNIQUE questions
+- Do not copy homepage FAQ questions to services/about
+- Questions should match page context (services = process/timeline questions, about = company questions)
+
+#### Medium Risk 3: FAQ Data Structure Validation
+
+**What goes wrong:** Empty question/answer renders broken accordion.
+
+**Required structure:**
+```typescript
+{ question: string, answer: string }
+```
+
+**Prevention:**
+- Validate each FAQ item has both fields
+- Test with very long answers (may break mobile layout)
 
 ---
 
@@ -195,18 +186,17 @@ NOT between Navbar and hero (would break hero layout).
 
 #### Critical Risk 1: Metadata Keywords Array Duplicates (HIGH)
 
-**What goes wrong:** Duplicate keywords are ignored or cause warnings.
+**What goes wrong:** Duplicate keywords may cause warnings or be ignored.
 
-**From plan 10-03:**
+**Current keywords (app/services/page.tsx line 11):**
 ```typescript
-// Current keywords (app/services/page.tsx line 11):
 ['china sourcing services', 'factory tour china', 'supplier verification china', 'china procurement', 'quality inspection china']
-
-// Plan adds:
-'factory visit', 'supplier sourcing', 'China procurement'
-
-// PROBLEM: 'china procurement' already exists (case difference - 'China' vs 'china')
 ```
+
+**Plan adds:**
+`'factory visit', 'supplier sourcing', 'China procurement'`
+
+**PROBLEM:** 'china procurement' already exists (case difference - 'China' vs 'china')
 
 **Prevention:**
 ```typescript
@@ -228,7 +218,45 @@ keywords: [
 grep -A3 "keywords:" app/services/page.tsx | tr ',' '\n' | sort -f | uniq -d
 ```
 
-#### Medium Risk 2: Keywords in Content vs Metadata Mismatch
+#### Critical Risk 2: Missing OpenGraph Fields
+
+**What goes wrong:** Reduced social sharing quality.
+
+**Current services/page.tsx OpenGraph (lines 12-16):**
+```typescript
+openGraph: {
+  title: '...',
+  description: '...',
+  url: 'https://www.winningadventure.com.au/services',
+  // MISSING: locale, alternateLocale, siteName
+}
+```
+
+**Homepage has (app/page.tsx lines 16-23):**
+```typescript
+openGraph: {
+  locale: 'en_AU',
+  alternateLocale: 'en_US',
+  title: '...',
+  description: '...',
+  url: 'https://www.winningadventure.com.au/',
+  siteName: 'Winning Adventure Global',
+}
+```
+
+**Prevention:** Add missing fields to services page OpenGraph:
+```typescript
+openGraph: {
+  locale: 'en_AU',
+  alternateLocale: 'en_US',
+  title: '...',
+  description: '...',
+  url: 'https://www.winningadventure.com.au/services',
+  siteName: 'Winning Adventure Global',
+}
+```
+
+#### Medium Risk 3: Keywords in Content vs Metadata Mismatch
 
 **What goes wrong:** Search engines may penalize mismatch between metadata and page content.
 
@@ -237,11 +265,10 @@ grep -A3 "keywords:" app/services/page.tsx | tr ',' '\n' | sort -f | uniq -d
 # Check keywords appear in content
 grep -ci "factory visit" app/services/page.tsx
 grep -ci "supplier sourcing" app/services/page.tsx
-grep -ci "China procurement" app/services/page.tsx
 # Each should return >= 1
 ```
 
-#### High Risk 3: Keyword Stuffing
+#### High Risk 4: Keyword Stuffing
 
 **What goes wrong:** Google penalizes over-optimization.
 
@@ -249,53 +276,19 @@ grep -ci "China procurement" app/services/page.tsx
 
 ---
 
-<user_constraints>
-## User Constraints (from CONTEXT.md)
-
-### Locked Decisions
-- Content topics: "How to Import from China" (Australia focus), "China Supplier Verification" (due diligence), "Australia Import Tips" (regulations)
-- Content length: 1500-2200 words per BLOG_PROMPT.md
-- FAQ: 10-15 questions, inline accordion-style on services/about pages, FAQPage JSON-LD schema
-- Keywords: High-intent commercial — "factory visit", "supplier sourcing", "China procurement"
-- Pages to optimize: All service pages + homepage
-
-### Claude's Discretion
-- Exact FAQ question text and wording
-- Specific H2/H3 structure within each guide
-- Internal linking strategy between guides
-- Service page content additions vs metadata-only optimization
-
-### Deferred Ideas (OUT OF SCOPE)
-- None — discussion stayed within phase scope
-
-</user_constraints>
-
-<phase_requirements>
-## Phase Requirements
-
-| ID | Description | Research Support |
-|----|-------------|-----------------|
-| CONT-01 | Create "How to Import from China" guide (blog post) | Existing blog system with MDX, frontmatter fields, quality checklist in BLOG_PROMPT.md |
-| CONT-02 | Create "China Supplier Verification" guide (blog post) | Same content system, supplier verification topic aligns with existing brand expertise |
-| CONT-03 | Create "Australia Import Tips" guide (blog post) | Same content system, Australian market focus per brand positioning |
-| CONT-04 | Add FAQ section to website with schema markup | FAQ already on homepage, needs expansion to 10-15 questions + add to services/about |
-| CONT-05 | Optimize service pages with target keywords | Service page metadata exists, needs high-intent keyword enhancement |
-
-</phase_requirements>
-
 ## Standard Stack
 
 ### Core
 | Library | Version | Purpose | Why Standard |
 |---------|---------|---------|--------------|
 | gray-matter | ^4.0.3 | MDX frontmatter parsing | Already integrated, reads blog metadata |
-| next | 14.2.x (project CLAUDE.md) - ACTUAL: 16.1.7 | App Router, metadata API | Already in use for SEO |
+| next | 16.1.7 | App Router, metadata API | Verified from package.json |
 
 ### Supporting
-| Library | Version | Purpose | When to Use |
-|---------|---------|---------|-------------|
-| lucide-react | ^0.400.0 | Icons (CheckCircle for service cards) | Already in use |
-| @playwright/test | ^1.58.2 | E2E testing | For validating pages and content |
+| Library | Version | Purpose |
+|---------|---------|---------|
+| lucide-react | ^0.575.0 | Icons (CheckCircle for service cards) |
+| @playwright/test | ^1.58.2 | E2E testing |
 
 ### Alternatives Considered
 | Instead of | Could Use | Tradeoff |
@@ -305,6 +298,8 @@ grep -ci "China procurement" app/services/page.tsx
 
 **Installation:**
 No new packages required - all infrastructure already exists.
+
+---
 
 ## Architecture Patterns
 
@@ -326,9 +321,9 @@ app/
 │   ├── FAQ.tsx                        # Existing accordion component
 │   └── FAQSchema.tsx                  # Existing JSON-LD generator
 ├── services/
-│   └── page.tsx                       # Add FAQ section + keyword optimization
+│   └── page.tsx                       # Add FAQ section + keyword optimization + OpenGraph fix
 └── about/
-    └── page.tsx                       # Add FAQ section (optional per CONTEXT)
+    └── page.tsx                       # Add FAQ section + FAQSchema (MISSING in current!)
 ```
 
 ### Pattern 1: Blog Content Generation
@@ -393,15 +388,21 @@ export default function FAQSchema() {
 **When to use:** For CONT-05
 **Current Implementation:**
 ```typescript
-// app/services/page.tsx - current metadata
+// app/services/page.tsx - current metadata (MISSING locale/siteName)
 export const metadata: Metadata = {
   title: 'China Sourcing Services | Factory Tours & Supplier Verification',
   description: 'Our China sourcing services include factory tours...',
-  keywords: ['china sourcing services', 'factory tour china', 'supplier verification china', 'china procurement', 'quality inspection china'],
+  keywords: ['china sourcing services', 'factory tour china', ...],
+  openGraph: {
+    title: '...',
+    description: '...',
+    url: 'https://www.winningadventure.com.au/services',
+    // MISSING: locale, alternateLocale, siteName
+  },
 }
 ```
 
-**Enhancement needed:** Add "factory visit", "supplier sourcing", "China procurement" as primary keywords in metadata + add content sections with these keywords in H2/H3 headings
+**Enhancement needed:** Add "factory visit", "supplier sourcing", "China procurement" as primary keywords in metadata + add content sections with these keywords in H2/H3 headings + FIX missing OpenGraph fields
 
 ### Anti-Patterns to Avoid
 - **Content without frontmatter**: All blog posts MUST have complete frontmatter per BLOG_PROMPT.md template
@@ -410,6 +411,10 @@ export const metadata: Metadata = {
 - **Missing FAQSchema**: Every page with FAQ must include FAQSchema component for JSON-LD
 - **Wrong internal links**: Use relative paths `/services`, not `/resources/services`
 - **Filename-slug mismatch**: Next.js uses filename as URL path, ensure filename matches slug without `/resources/` prefix
+- **Duplicate ctaTitle in frontmatter**: Existing blog has duplicate ctaTitle - last value wins
+- **InlineCTA ignores ctaButtonLink**: Component hardcodes `/enquiry` link
+
+---
 
 ## Don't Hand-Roll
 
@@ -421,6 +426,8 @@ export const metadata: Metadata = {
 | FAQ data management | Hardcode in components | Update existing faqs.ts | Single source of truth for both UI and schema |
 
 **Key insight:** The content system is already mature with BLOG_PROMPT.md providing comprehensive guidelines. The FAQ system already has both UI component and schema generator. Only content creation and data expansion are needed.
+
+---
 
 ## Common Pitfalls
 
@@ -454,18 +461,43 @@ export const metadata: Metadata = {
 **How to avoid:** Each page should have unique primary keyword focus; homepage targets brand + "China sourcing", services page targets "factory tour" + "supplier verification"
 **Warning signs:** Multiple pages with identical meta descriptions or keyword focus
 
+### Pitfall 6: Duplicate Frontmatter Fields
+**What goes wrong:** gray-matter silently takes last value
+**Why it happens:** Existing blog `verify-chinese-supplier.mdx` has duplicate `ctaTitle` field (lines 25 and 268)
+**How to avoid:** Ensure each frontmatter field appears only once
+**Warning signs:** Build succeeds but wrong value renders
+
+### Pitfall 7: InlineCTA Link Ignored
+**What goes wrong:** CTA button doesn't link to intended URL
+**Why it happens:** Component hardcodes `/enquiry`, ignores `ctaButtonLink` frontmatter
+**How to avoid:** Use `ctaButtonText` (renders) not `ctaButtonLink` (ignored)
+**Warning signs:** All blog posts link to /enquiry regardless of frontmatter
+
+---
+
 ## Code Examples
 
-### Adding FAQ to Service Page
+### Adding FAQ to Service Page (WITH SCHEMA)
 ```typescript
-// app/services/page.tsx - add import
+// app/services/page.tsx - add imports
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 
-// Add before closing </>
-<FAQSchema />
-// ... existing content ...
-<FAQ />
+export default function ServicesPage() {
+  return (
+    <>
+      <ServiceSchema />
+      <Navbar />
+      {/* ... existing content ... */}
+
+      {/* FAQ Section - BOTH components required! */}
+      <FAQSchema />  {/* JSON-LD for SEO */}
+      <FAQ />        {/* UI accordion */}
+
+      <Footer />
+    </>
+  )
+}
 ```
 
 ### Expanding FAQ Data
@@ -520,6 +552,21 @@ takeaways:
 ---
 ```
 
+### Fixed OpenGraph Metadata
+```typescript
+// app/services/page.tsx - complete OpenGraph
+openGraph: {
+  locale: 'en_AU',
+  alternateLocale: 'en_US',
+  title: 'China Sourcing Services | Factory Tours & Supplier Verification',
+  description: 'Our China sourcing services include factory tours...',
+  url: 'https://www.winningadventure.com.au/services',
+  siteName: 'Winning Adventure Global',
+}
+```
+
+---
+
 ## State of the Art
 
 | Old Approach | Current Approach | When Changed | Impact |
@@ -529,11 +576,15 @@ takeaways:
 | FAQ only on homepage | FAQ on services + about pages | CONT-04 (this phase) | Maximum SEO coverage |
 | Basic metadata | Keyword-optimized metadata | CONT-05 (this phase) | Better ranking for commercial keywords |
 | 4 FAQ questions | 10-15 FAQ questions | CONT-04 (this phase) | Better coverage, more rich result opportunities |
+| Missing OpenGraph fields | Complete OpenGraph with locale/siteName | This phase | Better social sharing |
 
 **Deprecated/outdated:**
 - Generic "China sourcing" content without market focus - now requires Australian context
 - Static metadata without keyword strategy - now requires commercial keyword optimization
 - FAQ on single page only - now requires multi-page coverage
+- Incomplete OpenGraph - now requires all standard fields
+
+---
 
 ## Bug Prevention Verification Checklist
 
@@ -541,6 +592,7 @@ takeaways:
 - [ ] Verified filename format: `*.mdx` without `/resources/` prefix
 - [ ] Verified frontmatter slug format: `/resources/your-slug`
 - [ ] Understood that InlineCTA ignores `ctaButtonLink` field
+- [ ] Verified no duplicate frontmatter keys (especially ctaTitle)
 
 ### During Plan 10-01 Execution
 - [ ] After each blog file creation, verify URL responds with 200 (not 404)
@@ -551,19 +603,35 @@ takeaways:
 ### Before Executing Plan 10-02
 - [ ] Check homepage FAQ content to ensure uniqueness
 - [ ] Prepare different questions for services and about pages
+- [ ] Verify about page is MISSING FAQSchema (needs to be added)
 
 ### During Plan 10-02 Execution
+- [ ] Add BOTH FAQSchema AND FAQ components (not just FAQ!)
 - [ ] Verify FAQ component placement (before Footer)
-- [ ] Verify `<FAQSchema />` included after `<ServiceSchema />`
 - [ ] Run `npm run build` after changes
 
 ### Before Executing Plan 10-03
 - [ ] Identify existing keywords to avoid duplicates
+- [ ] Note services page is missing OpenGraph locale/siteName
 
 ### During Plan 10-03 Execution
 - [ ] Remove duplicate keywords (check case sensitivity)
+- [ ] Add missing OpenGraph fields: locale, alternateLocale, siteName
 - [ ] Verify keywords appear naturally in page content
 - [ ] Run `npm run build` and `npm run lint`
+
+---
+
+## Technical Risk Matrix Summary
+
+| Risk Level | Count | Key Items |
+|------------|-------|-----------|
+| CRITICAL | 5 | Filename/slug mismatch, Invalid frontmatter crash, Missing FAQSchema, Duplicate keywords, Missing OpenGraph fields |
+| HIGH | 2 | InlineCTA ignores ctaButtonLink, Duplicate frontmatter fields |
+| MEDIUM | 3 | FAQ structure validation, Keyword/content mismatch, Keyword stuffing |
+| LOW | 2 | Internal link format, FAQ component placement |
+
+---
 
 ## Open Questions
 
@@ -586,6 +654,8 @@ takeaways:
    - What we know: Homepage already has FAQ
    - Risk: Duplicate FAQPage schema across pages
    - Recommendation: Keep homepage FAQ but ensure content differs from services/about
+
+---
 
 ## Validation Architecture
 
@@ -615,6 +685,8 @@ takeaways:
 - None - existing infrastructure (blog system, FAQ component, Playwright) covers all validation needs
 - Validation is primarily content review (manual) rather than automated testing
 
+---
+
 ## Sources
 
 ### Primary (HIGH confidence)
@@ -623,14 +695,18 @@ takeaways:
 - app/components/FAQ.tsx - Existing FAQ component implementation
 - app/components/FAQSchema.tsx - Existing JSON-LD schema generator (verified correct format)
 - app/data/faqs.ts - Existing FAQ data (4 questions)
+- app/resources/[slug]/page.tsx - Dynamic routing implementation
 - schema.org/FAQPage - Verified JSON-LD format matches current specification
+- package.json - Verified package versions
 
 ### Secondary (MEDIUM confidence)
-- Next.js 14.2 App Router documentation for metadata API (project CLAUDE.md states 14.2, actual version is 16.1.7)
+- Next.js App Router documentation for metadata API
 - Schema.org FAQPage specification for JSON-LD structure
 
 ### Tertiary (LOW confidence)
 - N/A - all required patterns already exist in project
+
+---
 
 ## Metadata
 
@@ -646,4 +722,4 @@ takeaways:
 ---
 
 *Generated for Phase 10: Content Strategy*
-*Updated: 2026-03-18 - Added bug prevention analysis*
+*Updated: 2026-03-18 - Comprehensive bug scan with technical risk matrix*
