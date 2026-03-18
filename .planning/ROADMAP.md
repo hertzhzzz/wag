@@ -31,7 +31,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 3. Global UI Audit | v1.0 | 6/6 | Complete |
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
-| 6. SEO Optimization | 6/6 | Complete | |
+| 6. SEO Optimization | 6/6 | Complete |
 | 06.1. Vercel Gmail Config | 1/1 | Complete | 2026-03-17 |
 | 7. PageSpeed Mobile LCP | 1/7 | In Progress | 2026-03-18 |
 | 8. Security Audit | 5/5 | Complete | 2026-03-18 |
@@ -98,12 +98,12 @@ Plans:
 
 Plans:
 - [x] 07-01-PLAN.md — Fix Hero LCP (video hidden on mobile)
-- [ ] 07-02-PLAN.md — Verify image attributes
-- [ ] 07-03-PLAN.md — Calendly dynamic import (skip - already works)
-- [ ] 07-04-PLAN.md — Install sharp
+- [ ] 07-02-PLAN.md — Video preload fix + fetchpriority (CRITICAL: fix preload="none" + add fetchpriority="high")
+- [ ] 07-03-PLAN.md — Calendly dynamic import (SKIP - already works)
+- [ ] 07-04-PLAN.md — Install sharp (SKIP - already installed v0.34.5)
 - [ ] 07-05-PLAN.md — Bundle analysis
 - [ ] 07-06-PLAN.md — SVG optimization
-- [ ] 07-07-PLAN.md — Final verification
+- [ ] 07-07-PLAN.md — Final verification (checkpoint: human-verify)
 
 ### Phase 8: security audit - analyze and fix all security risks in the Wag website
 
