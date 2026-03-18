@@ -1,17 +1,17 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
-status: completed
-stopped_at: "Completed 08-05: npm audit gap closure (Next.js 16 + React 19)"
-last_updated: "2026-03-18T02:20:30.719Z"
-last_activity: "2026-03-18 — Completed 08-05: npm audit gap closure (Next.js 16 + React 19)"
+milestone: v1.5
+milestone_name: PageSpeed
+status: in_progress
+stopped_at: "Completed 07-02: video preload none + fetchpriority high"
+last_updated: "2026-03-18T02:39:00.000Z"
+last_activity: "2026-03-18 — Completed 07-02: video preload none + fetchpriority high"
 progress:
-  total_phases: 4
-  completed_phases: 4
-  total_plans: 13
-  completed_plans: 13
-  percent: 92
+  total_phases: 8
+  completed_phases: 7
+  total_plans: 32
+  completed_plans: 15
+  percent: 47
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-11)
 
 **Core value:** Improve mobile responsive layout for excellent UX on all devices
-**Current focus:** Phase 8 - Security Audit
+**Current focus:** Phase 7 - PageSpeed Mobile LCP Optimization
 
 ## Current Position
 
-Phase: 08-security-audit-analyze-and-fix-all-security-risks-in-the-wag-website (Security Audit)
-Plan: 05 (of 5)
+Phase: 07-pagespeed-mobile-lcp-9-2s-2-5s (PageSpeed Mobile LCP)
+Plan: 02 (of 7)
 Status: Completed
-Last activity: 2026-03-18 — Completed 08-05: npm audit gap closure (Next.js 16 + React 19)
+Last activity: 2026-03-18 — Completed 07-02: video preload none + fetchpriority high
 
-Progress: [██████████] 92%
+Progress: [██████░░░░] 47%
 
 ## Performance Metrics
 
@@ -98,6 +98,8 @@ Recent decisions affecting current work:
 - [08-security-audit-02]: CORS uses allowlist approach (explicit origin list vs wildcard)
 - [08-security-audit-02]: Both www and non-www domain variants added to allowed origins
 - [08-security-audit-05]: Removed browser-use (unused dependency with vulnerabilities)
+- [07-pagespeed-mobile-lcp-02]: Changed video preload from metadata to none to prevent video loading on mobile
+- [07-pagespeed-mobile-lcp-02]: Added fetchPriority=high to mobile hero Image for explicit LCP priority hint
 - [08-security-audit-05]: Upgraded eslint-config-next to 15+ to fix glob vulnerability
 - [08-security-audit-05]: Upgraded Next.js to 16.x and React to 19 (required for latest security fixes)
 - [08-security-audit-05]: npm audit now returns 0 vulnerabilities (gap closed)
