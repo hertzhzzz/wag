@@ -31,6 +31,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
 | 6. SEO Optimization | 6/6 | Complete | |
 | 06.1. Vercel Gmail Config | 1/1 | Complete    | 2026-03-17 |
+| 8. Security Audit | 4/4 | In Progress | |
 
 **Total:** 6 phases, 24 plans (including gap closure)
 
@@ -97,13 +98,28 @@ Plans:
 
 ### Phase 8: security audit - analyze and fix all security risks in the WAG website
 
-**Goal:** [To be planned]
-**Requirements**: TBD
+**Goal:** Comprehensive security audit to identify and fix vulnerabilities. Includes dependency scanning, API route security, security headers, and hardening measures.
+
+**Requirements:** SEC-01, SEC-02, SEC-03, SEC-04, SEC-05, SEC-06, SEC-07
+
 **Depends on:** Phase 7
-**Plans:** 0 plans
+
+**Plans:** 4/4 plans created
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 8 to break down)
+- [ ] 08-01-PLAN.md — Dependency security (npm audit, npm outdated, upgrade Next.js)
+- [ ] 08-02-PLAN.md — Security headers & CORS configuration
+- [ ] 08-03-PLAN.md — Rate limiting & API hardening
+- [ ] 08-04-PLAN.md — CI/CD security workflow
+
+### Success Criteria
+
+1. npm audit shows no critical or high vulnerabilities
+2. Next.js upgraded to 14.2.25+ to fix CVE-2025-29927
+3. Security headers present (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy)
+4. CORS configured for API routes (only allowed origins)
+5. Rate limiting implemented with persistent Redis storage
+6. Security scanning workflow runs in CI/CD
 
 ---
 
