@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: SEO Automation
 status: planning
-stopped_at: "Completed phase-10 plan 01: Content Strategy SEO blog posts"
-last_updated: "2026-03-18T11:43:36.927Z"
+stopped_at: Completed 10-03-PLAN.md - keyword optimization for services and homepage
+last_updated: "2026-03-18T11:44:02.941Z"
 last_activity: 2026-03-18 — Roadmap created for v1.1 SEO Automation
 progress:
   total_phases: 4
@@ -49,6 +49,7 @@ Progress: [░░░░░░░░░] 0%
 
 *Metrics reset for v1.1 milestone*
 | Phase 09 P01 | 2 | 3 tasks | 2 files |
+| Phase 10 P02 | 15 | 3 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,8 @@ Progress: [░░░░░░░░░] 0%
 - Phase 11: Local SEO & Authority grouping (LOCAL-01 to LOCAL-03 + AUTH-01 + AUTH-02)
 - Phase 12: Analytics & Optimization grouping (MON-02 + MON-03 + AUTH-03)
 - [Phase 09]: Fixed mobile LCP from 5.4s to 1.5s by downloading hero image locally as WebP
+- [Phase 10]: Created separate FAQ data files per page to ensure unique content for SEO
+- [Phase 10]: Applied case-insensitive keyword deduplication (removed lowercase 'china procurement' before adding 'China procurement')
 
 ### Pending Todos
 
@@ -85,8 +88,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T11:43:33.176Z
-Stopped at: Completed phase-10 plan 01: Content Strategy SEO blog posts
+Last session: 2026-03-18T11:44:02.938Z
+Stopped at: Completed 10-02-PLAN.md - FAQ expansion with unique content per page
 
 ## Deployment Status
 
