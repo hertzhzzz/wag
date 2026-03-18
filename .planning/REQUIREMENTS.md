@@ -9,11 +9,11 @@ Requirements for SEO automation milestone. Each maps to roadmap phases.
 
 ### Technical SEO
 
-- [ ] **TECH-01**: Fix LCP performance (5.4s → <2.5s) on mobile
-- [ ] **TECH-02**: Implement XML sitemap with next-sitemap
-- [ ] **TECH-03**: Add robots.txt configuration
-- [ ] **TECH-04**: Implement Schema.org markup (Organization + LocalBusiness)
-- [ ] **TECH-05**: Add canonical URLs to all pages
+- [x] **TECH-01**: Fix LCP performance (5.4s → <2.5s) on mobile
+- [x] **TECH-02**: Implement XML sitemap with next-sitemap
+- [x] **TECH-03**: Add robots.txt configuration
+- [x] **TECH-04**: Implement Schema.org markup (Organization + LocalBusiness)
+- [x] **TECH-05**: Add canonical URLs to all pages
 
 ### Content Strategy
 
@@ -37,7 +37,7 @@ Requirements for SEO automation milestone. Each maps to roadmap phases.
 
 ### Analytics & Monitoring
 
-- [ ] **MON-01**: Set up Google Search Console tracking
+- [x] **MON-01**: Set up Google Search Console tracking
 - [ ] **MON-02**: Configure ranking monitoring for target keywords
 - [ ] **MON-03**: Set up monthly SEO audit workflow
 
@@ -67,12 +67,12 @@ Deferred to future release.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| TECH-01 | Phase 9 | Pending |
-| TECH-02 | Phase 9 | Pending |
-| TECH-03 | Phase 9 | Pending |
-| TECH-04 | Phase 9 | Pending |
-| TECH-05 | Phase 9 | Pending |
-| MON-01 | Phase 9 | Pending |
+| TECH-01 | Phase 9 | Complete |
+| TECH-02 | Phase 9 | Complete |
+| TECH-03 | Phase 9 | Complete |
+| TECH-04 | Phase 9 | Complete |
+| TECH-05 | Phase 9 | Complete |
+| MON-01 | Phase 9 | Complete |
 | CONT-01 | Phase 10 | Pending |
 | CONT-02 | Phase 10 | Pending |
 | CONT-03 | Phase 10 | Pending |
