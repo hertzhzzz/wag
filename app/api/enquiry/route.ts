@@ -70,7 +70,7 @@ export async function POST(request: Request) {
   // CORS origin check
   const origin = request.headers.get('origin') || ''
   if (origin && !ALLOWED_ORIGINS.includes(origin)) {
-    return new NextResponse.json(
+    return NextResponse.json(
       { error: 'Origin not allowed' },
       { status: 403 }
     )
@@ -93,10 +93,11 @@ export async function POST(request: Request) {
   const parseResult = enquirySchema.safeParse(await request.json())
 
   if (!parseResult.success) {
-    return NextResponse.json(
+    const response = NextResponse.json(
       { error: 'Validation failed', details: parseResult.error.flatten().fieldErrors },
       { status: 400 }
     )
+    return addCorsHeaders(response, origin)
   }
 
   const { fullName, companyName, email, phone, industry, customIndustry, lookingFor } = parseResult.data
@@ -161,15 +162,17 @@ export async function POST(request: Request) {
       `,
     })
 
-    return NextResponse.json({ ok: true })
+    const response = NextResponse.json({ ok: true })
+    return addCorsHeaders(response, origin)
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     console.error('Email error:', errorMessage)
-    return NextResponse.json(
+    const response = NextResponse.json(
       { error: errorMessage.includes('credentials not configured')
         ? 'Email service not configured. Please contact the administrator.'
         : 'Failed to send email. Please try again.' },
       { status: 500 }
     )
+    return addCorsHeaders(response, origin)
   }
 }
