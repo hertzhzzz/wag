@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: "Completed 08-03: Rate limiting with upstash and in-memory fallback"
-last_updated: "2026-03-18T01:47:46.000Z"
-last_activity: "2026-03-18 — Completed 08-03: Rate limiting with upstash and in-memory fallback"
+status: in_progress
+stopped_at: "Completed 07-01: Mobile LCP fix - video hidden on mobile"
+last_updated: "2026-03-18T01:50:00.000Z"
+last_activity: "2026-03-18 — Completed 07-01: Mobile LCP fix"
 progress:
-  total_phases: 8
-  completed_phases: 2
-  total_plans: 12
-  completed_plans: 12
-  percent: 100
+  total_phases: 9
+  completed_phases: 3
+  total_plans: 13
+  completed_plans: 10
+  percent: 77
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-11)
 
 **Core value:** Improve mobile responsive layout for excellent UX on all devices
-**Current focus:** Phase 8 - Security Audit
+**Current focus:** Phase 7 - PageSpeed Mobile LCP Optimization
 
 ## Current Position
 
-Phase: 08-security-audit (Security Audit)
-Plan: 03 (of 03)
+Phase: 07-pagespeed-mobile-lcp-9-2s-2-5s (PageSpeed Mobile LCP Optimization)
+Plan: 01 (of multiple)
 Status: Completed
-Last activity: 2026-03-18 — Completed 08-01: Dependency vulnerability scan and fix
+Last activity: 2026-03-18 — Completed 07-01: Mobile LCP fix
 
-Progress: [██████████] 75%
+Progress: [███████░░] 77%
 
 ## Performance Metrics
 
@@ -92,6 +92,8 @@ Recent decisions affecting current work:
 - [08-security-audit-03]: Rate limiting uses upstash/ratelimit with Redis backend when available
 - [08-security-audit-03]: In-memory fallback ensures app works without Redis (3 req/60s)
 - [08-security-audit-03]: Rate limited APIs return 429 status when limit exceeded
+- [07-pagespeed-mobile-lcp-01]: Used md:hidden/hidden md:block pattern to conditionally show image vs video based on viewport
+- [07-pagespeed-mobile-lcp-01]: Mobile uses 800px image vs desktop 1920px for faster mobile LCP
 
 ### Roadmap Evolution
 

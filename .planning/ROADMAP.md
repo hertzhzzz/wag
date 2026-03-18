@@ -5,6 +5,8 @@
 - ✅ **v1.0 MVP** — Phases 1-4 (shipped 2026-03-17)
 - ✅ **v1.1 Deployment & Minor Fixes** — Phase 5 (shipped 2026-03-17)
 - ✅ **v1.3 SEO Optimization** — Phase 6 (complete)
+- ✅ **v1.4 Security Audit** — Phase 8 (complete)
+- 🚧 **v1.5 PageSpeed** — Phase 7 (in progress)
 
 ## Phases
 
@@ -30,8 +32,9 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 4. Resources + Testing | v1.0 | 4/4 | Complete |
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
 | 6. SEO Optimization | 6/6 | Complete | |
-| 06.1. Vercel Gmail Config | 1/1 | Complete    | 2026-03-17 |
-| 8. Security Audit | 4/4 | In Progress | |
+| 06.1. Vercel Gmail Config | 1/1 | Complete | 2026-03-17 |
+| 7. PageSpeed Mobile LCP | 1/7 | In Progress | 2026-03-18 |
+| 8. Security Audit | 4/4 | Complete | 2026-03-18 |
 
 **Total:** 6 phases, 24 plans (including gap closure)
 
@@ -88,13 +91,19 @@ Plans:
 
 ### Phase 7: PageSpeed 性能优化 - 优化 Mobile LCP (从 9.2s 到 <2.5s)，减少图片大小
 
-**Goal:** [To be planned]
-**Requirements**: TBD
+**Goal:** Optimize mobile LCP from 9.2s to <2.5s by fixing video blocking, enabling sharp image optimization, and ensuring proper priority loading
+**Requirements**: LCP-01, LCP-02, LCP-03
 **Depends on:** Phase 6
-**Plans:** 0 plans
+**Plans:** 1/7 plans completed
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 7 to break down)
+- [x] 07-01-PLAN.md — Fix Hero LCP (video hidden on mobile)
+- [ ] 07-02-PLAN.md — Verify image attributes
+- [ ] 07-03-PLAN.md — Calendly dynamic import (skip - already works)
+- [ ] 07-04-PLAN.md — Install sharp
+- [ ] 07-05-PLAN.md — Bundle analysis
+- [ ] 07-06-PLAN.md — SVG optimization
+- [ ] 07-07-PLAN.md — Final verification
 
 ### Phase 8: security audit - analyze and fix all security risks in the WAG website
 
@@ -104,13 +113,13 @@ Plans:
 
 **Depends on:** Phase 7
 
-**Plans:** 4/4 plans created
+**Plans:** 4/4 plans completed
 
 Plans:
 - [x] 08-01-PLAN.md — Dependency security (npm audit, npm outdated, upgrade Next.js)
-- [ ] 08-02-PLAN.md — Security headers & CORS configuration
-- [ ] 08-03-PLAN.md — Rate limiting & API hardening
-- [ ] 08-04-PLAN.md — CI/CD security workflow
+- [x] 08-02-PLAN.md — Security headers & CORS configuration
+- [x] 08-03-PLAN.md — Rate limiting & API hardening
+- [x] 08-04-PLAN.md — CI/CD security workflow
 
 ### Success Criteria
 
