@@ -21,7 +21,7 @@ Requirements for SEO automation milestone. Each maps to roadmap phases.
 - [x] **CONT-02**: Create "China Supplier Verification" guide (blog post)
 - [x] **CONT-03**: Create "Australia Import Tips" guide (blog post)
 - [x] **CONT-04**: Add FAQ section to website with schema markup
-- [ ] **CONT-05**: Optimize service pages with target keywords
+- [x] **CONT-05**: Optimize service pages with target keywords
 
 ### Local SEO
 
@@ -77,7 +77,7 @@ Deferred to future release.
 | CONT-02 | Phase 10 | Complete |
 | CONT-03 | Phase 10 | Complete |
 | CONT-04 | Phase 10 | Complete |
-| CONT-05 | Phase 10 | Pending |
+| CONT-05 | Phase 10 | Complete |
 | LOCAL-01 | Phase 11 | Pending |
 | LOCAL-02 | Phase 11 | Pending |
 | LOCAL-03 | Phase 11 | Pending |
