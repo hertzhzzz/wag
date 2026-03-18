@@ -33,7 +33,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 5. Vercel Deployment | v1.1 | 2/2 | Complete |
 | 6. SEO Optimization | 6/6 | Complete |
 | 06.1. Vercel Gmail Config | 1/1 | Complete | 2026-03-17 |
-| 7. PageSpeed Mobile LCP | 2/7 | In Progress | 2026-03-18 |
+| 7. PageSpeed Mobile LCP | 4/7 | In Progress | 2026-03-18 |
 | 8. Security Audit | 5/5 | Complete | 2026-03-18 |
 
 **Total:** 6 phases, 25 plans (including gap closure)
@@ -94,15 +94,15 @@ Plans:
 **Goal:** Optimize mobile LCP from 9.2s to <2.5s by fixing video blocking, enabling sharp image optimization, and ensuring proper priority loading
 **Requirements**: LCP-01, LCP-02, LCP-03
 **Depends on:** Phase 6
-**Plans:** 1/7 plans completed
+**Plans:** 4/7 plans completed
 
 Plans:
 - [x] 07-01-PLAN.md — Fix Hero LCP (video hidden on mobile)
 - [x] 07-02-PLAN.md — Video preload fix + fetchpriority (CRITICAL: fix preload="none" + add fetchpriority="high")
-- [ ] 07-03-PLAN.md — Calendly dynamic import (SKIP - already works)
-- [ ] 07-04-PLAN.md — Install sharp (SKIP - already installed v0.34.5)
-- [ ] 07-05-PLAN.md — Bundle analysis
-- [ ] 07-06-PLAN.md — SVG optimization
+- [x] 07-03-PLAN.md — Calendly dynamic import (SKIP - already works)
+- [x] 07-04-PLAN.md — Install sharp (SKIP - already installed v0.34.5)
+- [x] 07-05-PLAN.md — Bundle analysis
+- [x] 07-06-PLAN.md — SVG optimization (N/A - no SVG files in project)
 - [ ] 07-07-PLAN.md — Final verification (checkpoint: human-verify)
 
 ### Phase 8: security audit - analyze and fix all security risks in the Wag website
