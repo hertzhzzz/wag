@@ -107,7 +107,7 @@ Plans:
 **Plans:** 4/4 plans created
 
 Plans:
-- [ ] 08-01-PLAN.md — Dependency security (npm audit, npm outdated, upgrade Next.js)
+- [x] 08-01-PLAN.md — Dependency security (npm audit, npm outdated, upgrade Next.js)
 - [ ] 08-02-PLAN.md — Security headers & CORS configuration
 - [ ] 08-03-PLAN.md — Rate limiting & API hardening
 - [ ] 08-04-PLAN.md — CI/CD security workflow
