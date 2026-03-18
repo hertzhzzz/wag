@@ -19,6 +19,26 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 
 ### Active
 
+## Current State: v1.0 Production Release
+
+**Shipped:** 2026-03-18
+**Phases:** 4 (06, 06.1, 07, 08)
+**Plans:** 17 total
+
+### v1.0 Accomplishments
+- SEO optimization with metadata, schema, blog content
+- Vercel deployment with Gmail credentials
+- PageSpeed mobile LCP optimization (89 score)
+- Security audit with headers, CORS, rate limiting
+
+### Tech Debt
+- Mobile LCP: 5.4s (target <2.5s) — Unsplash image source limitation
+
+---
+
+<details>
+<summary>Previous milestone context (v1.0 MVP)</summary>
+
 ## Current Milestone: v1.1 Deployment & Minor Fixes
 
 **Goal:** Deploy website to production and fix remaining minor issues
@@ -27,6 +47,12 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 - Deploy to Vercel with custom domain winningadventure.com.au
 - Add Facebook social link to Footer
 - Fix mobile navbar sticky behavior (user reported: scrolls away, can't tap)
+
+</details>
+
+## Next Milestone: v1.1 (Planning)
+
+**Status:** Not yet defined
 
 ### Out of Scope
 
@@ -86,4 +112,4 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 - Fix mobile navbar sticky behavior
 
 ---
-*Last updated: 2026-03-17 after v1.1 milestone started*
+*Last updated: 2026-03-18 after v1.0 production release*
