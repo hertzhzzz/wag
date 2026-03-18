@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import { Metadata } from 'next'
 import ServiceSchema from '@/components/ServiceSchema'
+import FAQ from '@/components/FAQ'
+import FAQSchema from '@/components/FAQSchema'
+import { serviceFaqs } from '@/data/faqs-services'
 
 export const metadata: Metadata = {
   title: 'China Sourcing Services | Factory Tours & Supplier Verification',
@@ -23,6 +26,7 @@ export default function ServicesPage() {
   return (
     <>
       <ServiceSchema />
+      <FAQSchema faqs={serviceFaqs} />
       <Navbar />
 
       {/* Hero */}
@@ -240,6 +244,19 @@ export default function ServicesPage() {
           >
             Get Started →
           </Link>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 md:px-8 bg-[#f8f9fb]">
+        <div className="max-w-[800px] mx-auto">
+          <div className="text-center mb-12">
+            <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Frequently Asked Questions</p>
+            <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy">
+              Everything You Need to Know
+            </h2>
+          </div>
+          <FAQ faqs={serviceFaqs} />
         </div>
       </section>
 

@@ -1,8 +1,17 @@
 'use client'
 
-import { faqs } from '@/data/faqs'
+import { faqs as defaultFaqs } from '@/data/faqs'
 
-export default function FAQSchema() {
+type FAQItem = {
+  question: string
+  answer: string
+}
+
+interface FAQSchemaProps {
+  faqs?: FAQItem[]
+}
+
+export default function FAQSchema({ faqs = defaultFaqs }: FAQSchemaProps) {
   const faqData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

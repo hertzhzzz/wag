@@ -2,6 +2,9 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import FAQ from '@/components/FAQ'
+import FAQSchema from '@/components/FAQSchema'
+import { aboutFaqs } from '@/data/faqs-about'
 
 export const metadata: Metadata = {
   title: 'About Us | China Sourcing Experts Adelaide',
@@ -20,6 +23,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <FAQSchema faqs={aboutFaqs} />
       <Navbar />
 
       {/* Hero */}
@@ -222,6 +226,19 @@ export default function AboutPage() {
               <p className="text-gray-700">30 659 034 919</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 md:px-8 bg-[#f8f9fb]">
+        <div className="max-w-[800px] mx-auto">
+          <div className="text-center mb-12">
+            <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Frequently Asked Questions</p>
+            <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy">
+              Everything You Need to Know
+            </h2>
+          </div>
+          <FAQ faqs={aboutFaqs} />
         </div>
       </section>
 

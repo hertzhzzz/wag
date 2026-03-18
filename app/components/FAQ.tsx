@@ -1,9 +1,18 @@
 'use client'
 
 import { useState } from 'react'
-import { faqs } from '@/data/faqs'
+import { faqs as defaultFaqs } from '@/data/faqs'
 
-export default function FAQ() {
+type FAQItem = {
+  question: string
+  answer: string
+}
+
+interface FAQProps {
+  faqs?: FAQItem[]
+}
+
+export default function FAQ({ faqs = defaultFaqs }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const toggleFAQ = (index: number) => {
