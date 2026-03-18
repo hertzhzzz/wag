@@ -34,7 +34,7 @@ See: [.planning/milestones/v1.0-ROADMAP.md](.planning/milestones/v1.0-ROADMAP.md
 | 6. SEO Optimization | 6/6 | Complete | |
 | 06.1. Vercel Gmail Config | 1/1 | Complete | 2026-03-17 |
 | 7. PageSpeed Mobile LCP | 1/7 | In Progress | 2026-03-18 |
-| 8. Security Audit | 4/4 | Complete | 2026-03-18 |
+| 8. Security Audit | 4/4 | Complete   | 2026-03-18 |
 
 **Total:** 6 phases, 24 plans (including gap closure)
 
@@ -113,7 +113,7 @@ Plans:
 
 **Depends on:** Phase 7
 
-**Plans:** 4/4 plans completed
+**Plans:** 4/4 plans complete
 
 Plans:
 - [x] 08-01-PLAN.md — Dependency security (npm audit, npm outdated, upgrade Next.js)

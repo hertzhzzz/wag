@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: "Completed 07-01: Mobile LCP fix - video hidden on mobile"
+stopped_at: "Completed 08-02: Security headers and CORS configured"
 last_updated: "2026-03-18T01:50:00.000Z"
-last_activity: "2026-03-18 — Completed 07-01: Mobile LCP fix"
+last_activity: "2026-03-18 — Completed 08-02: Security headers and CORS"
 progress:
   total_phases: 9
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 13
-  completed_plans: 10
-  percent: 77
+  completed_plans: 11
+  percent: 85
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-11)
 
 **Core value:** Improve mobile responsive layout for excellent UX on all devices
-**Current focus:** Phase 7 - PageSpeed Mobile LCP Optimization
+**Current focus:** Phase 8 - Security Audit
 
 ## Current Position
 
-Phase: 07-pagespeed-mobile-lcp-9-2s-2-5s (PageSpeed Mobile LCP Optimization)
-Plan: 01 (of multiple)
+Phase: 08-security-audit-analyze-and-fix-all-security-risks-in-the-wag-website (Security Audit)
+Plan: 02 (of 4)
 Status: Completed
-Last activity: 2026-03-18 — Completed 07-01: Mobile LCP fix
+Last activity: 2026-03-18 — Completed 08-02: Security headers and CORS
 
-Progress: [███████░░] 77%
+Progress: [█████████░] 85%
 
 ## Performance Metrics
 
@@ -94,6 +94,9 @@ Recent decisions affecting current work:
 - [08-security-audit-03]: Rate limited APIs return 429 status when limit exceeded
 - [07-pagespeed-mobile-lcp-01]: Used md:hidden/hidden md:block pattern to conditionally show image vs video based on viewport
 - [07-pagespeed-mobile-lcp-01]: Mobile uses 800px image vs desktop 1920px for faster mobile LCP
+- [08-security-audit-02]: Security headers added via next.config.js (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy)
+- [08-security-audit-02]: CORS uses allowlist approach (explicit origin list vs wildcard)
+- [08-security-audit-02]: Both www and non-www domain variants added to allowed origins
 
 ### Roadmap Evolution
 
