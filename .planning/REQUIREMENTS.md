@@ -17,9 +17,9 @@ Requirements for SEO automation milestone. Each maps to roadmap phases.
 
 ### Content Strategy
 
-- [ ] **CONT-01**: Create "How to Import from China" guide (blog post)
-- [ ] **CONT-02**: Create "China Supplier Verification" guide (blog post)
-- [ ] **CONT-03**: Create "Australia Import Tips" guide (blog post)
+- [x] **CONT-01**: Create "How to Import from China" guide (blog post)
+- [x] **CONT-02**: Create "China Supplier Verification" guide (blog post)
+- [x] **CONT-03**: Create "Australia Import Tips" guide (blog post)
 - [ ] **CONT-04**: Add FAQ section to website with schema markup
 - [ ] **CONT-05**: Optimize service pages with target keywords
 
@@ -73,9 +73,9 @@ Deferred to future release.
 | TECH-04 | Phase 9 | Complete |
 | TECH-05 | Phase 9 | Complete |
 | MON-01 | Phase 9 | Complete |
-| CONT-01 | Phase 10 | Pending |
-| CONT-02 | Phase 10 | Pending |
-| CONT-03 | Phase 10 | Pending |
+| CONT-01 | Phase 10 | Complete |
+| CONT-02 | Phase 10 | Complete |
+| CONT-03 | Phase 10 | Complete |
 | CONT-04 | Phase 10 | Pending |
 | CONT-05 | Phase 10 | Pending |
 | LOCAL-01 | Phase 11 | Pending |
