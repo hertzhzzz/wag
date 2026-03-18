@@ -11,6 +11,7 @@ export default function Hero() {
           alt="Chinese manufacturing facility with Australian business team"
           fill
           priority={true}
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover"
         />
@@ -26,7 +27,7 @@ export default function Hero() {
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           className="w-full h-full object-cover"
           poster="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80"
         >
