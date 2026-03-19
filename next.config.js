@@ -6,6 +6,40 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   transpilePackages: ['react-globe.gl', 'three-globe', 'globe.gl'],
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/verify-chinese-supplier',
+        destination: '/resources/verify-chinese-supplier',
+        permanent: true,
+      },
+      {
+        source: '/china-factory-tour-guide',
+        destination: '/resources/china-factory-tour-guide',
+        permanent: true,
+      },
+      {
+        source: '/china-sourcing-risks',
+        destination: '/resources/china-sourcing-risks',
+        permanent: true,
+      },
+      {
+        source: '/china-vs-alibaba',
+        destination: '/resources/china-vs-alibaba',
+        permanent: true,
+      },
+      {
+        source: '/bulk-procurement-china-guide',
+        destination: '/resources/bulk-procurement-china-guide',
+        permanent: true,
+      },
+      {
+        source: '/china-business-travel-guide-2026',
+        destination: '/resources/china-business-travel-guide-2026',
+        permanent: true,
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       {
