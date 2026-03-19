@@ -229,6 +229,54 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* South Australia Presence */}
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-[11px] font-semibold text-amber tracking-[0.15em] uppercase mb-4">
+            Our Location
+          </div>
+          <h2 className="font-serif text-[28px] md:text-[32px] font-normal mb-6 text-navy">
+            Strategically Positioned in Adelaide, South Australia
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                Based in Adelaide&apos;s North Adelaide precinct, WAG is positioned at the heart of South Australia&apos;s business community. Our CBD proximity gives us direct access to major transportation networks, including the Port Adelaide container terminals and the Adelaide Airport freight facilities.
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                South Australia is rapidly becoming a hub for advanced manufacturing and export-oriented businesses. The Adelaide CBD houses key industry clusters in defense, health, and technology sectors, while surrounding warehouse districts in Dry Creek, Wingfield, and Port Adelaide provide essential logistics infrastructure for import-export operations.
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                From our North Adelaide office, we coordinate factory tour programs across China&apos;s manufacturing heartlands while maintaining close relationships with South Australian businesses ready to expand their supplier networks internationally.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6">
+              <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-3">
+                Key Locations We Serve
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="text-amber font-bold">Adelaide CBD</span>
+                  <span className="text-sm text-gray-600">Business district and professional services hub</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber font-bold">Port Adelaide</span>
+                  <span className="text-sm text-gray-600">Primary container port and freight hub</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber font-bold">Dry Creek / Wingfield</span>
+                  <span className="text-sm text-gray-600">Warehouse districts and logistics centers</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-amber font-bold">South Australia</span>
+                  <span className="text-sm text-gray-600">State-wide manufacturing and export sector</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 px-4 md:px-8 bg-[#f8f9fb]">
         <div className="max-w-[800px] mx-auto">
