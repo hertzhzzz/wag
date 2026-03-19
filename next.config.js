@@ -38,6 +38,21 @@ const nextConfig = {
         destination: '/resources/china-business-travel-guide-2026',
         permanent: true,
       },
+      {
+        source: '/australia-import-tips',
+        destination: '/resources/australia-import-tips',
+        permanent: true,
+      },
+      {
+        source: '/china-supplier-verification',
+        destination: '/resources/china-supplier-verification',
+        permanent: true,
+      },
+      {
+        source: '/how-to-import-from-china',
+        destination: '/resources/how-to-import-from-china',
+        permanent: true,
+      },
     ]
   },
   images: {
