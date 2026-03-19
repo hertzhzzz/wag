@@ -10,13 +10,13 @@ import FAQSchema from '@/components/FAQSchema'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Australia | Factory Tours & Supplier Verification',
+  title: 'WAG | China Sourcing Australia | Factory Tours & Supplier Verification',
   description: 'Winning Adventure Global helps Australian businesses source from China with factory tours, supplier verification, and end-to-end procurement support. Based in Adelaide.',
   keywords: ['china sourcing', 'china sourcing australia', 'adelaide china sourcing', 'south australia sourcing', 'australian import china', 'factory visit china', 'china sourcing adelaide', 'sourcing trip china', 'china factory tour', 'supplier verification china', 'factory visit', 'supplier sourcing', 'China procurement'],
   openGraph: {
     locale: 'en_AU',
     alternateLocale: 'en_US',
-    title: 'China Sourcing Australia | Factory Tours & Supplier Verification',
+    title: 'WAG | China Sourcing Australia | Factory Tours & Supplier Verification',
     description: 'Winning Adventure Global helps Australian businesses source from China with factory tours, supplier verification, and end-to-end procurement support. Based in Adelaide.',
     url: 'https://www.winningadventure.com.au/',
     siteName: 'Winning Adventure Global',
