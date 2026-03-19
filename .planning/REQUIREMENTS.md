@@ -25,14 +25,14 @@ Requirements for SEO automation milestone. Each maps to roadmap phases.
 
 ### Local SEO
 
-- [ ] **LOCAL-01**: Claim and optimize Google Business Profile
-- [ ] **LOCAL-02**: Add business to Australian directories (5+)
-- [ ] **LOCAL-03**: Add location-specific content (South Australia focus)
+- [x] **LOCAL-01**: Claim and optimize Google Business Profile
+- [x] **LOCAL-02**: Add business to Australian directories (5+)
+- [x] **LOCAL-03**: Add location-specific content (South Australia focus)
 
 ### Authority Building
 
-- [ ] **AUTH-01**: Create 3 guest posts on related industry sites
-- [ ] **AUTH-02**: Build backlinks from Australian business directories
+- [x] **AUTH-01**: Create 3 guest posts on related industry sites
+- [x] **AUTH-02**: Build backlinks from Australian business directories
 - [ ] **AUTH-03**: Increase Domain Authority to 15+ (from current ~5)
 
 ### Analytics & Monitoring
@@ -78,11 +78,11 @@ Deferred to future release.
 | CONT-03 | Phase 10 | Complete |
 | CONT-04 | Phase 10 | Complete |
 | CONT-05 | Phase 10 | Complete |
-| LOCAL-01 | Phase 11 | Pending |
-| LOCAL-02 | Phase 11 | Pending |
-| LOCAL-03 | Phase 11 | Pending |
-| AUTH-01 | Phase 11 | Pending |
-| AUTH-02 | Phase 11 | Pending |
+| LOCAL-01 | Phase 11 | Complete |
+| LOCAL-02 | Phase 11 | Complete |
+| LOCAL-03 | Phase 11 | Complete |
+| AUTH-01 | Phase 11 | Complete |
+| AUTH-02 | Phase 11 | Complete |
 | AUTH-03 | Phase 12 | Pending |
 | MON-02 | Phase 12 | Pending |
 | MON-03 | Phase 12 | Pending |
