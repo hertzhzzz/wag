@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 11 SEO Tracker - WAG</title>
+    <style>
+        :root {
+            --navy: #0F2D5E;
+            --amber: #F59E0B;
+            --light-bg: #f8fafc;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--light-bg);
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        header {
+            background: var(--navy);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 { font-size: 1.5rem; font-weight: 600; }
+        h2 {
+            color: var(--navy);
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--amber);
+        }
+        .card {
+            background: white;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .card-body { padding: 1.5rem; }
+        .nap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .nap-item {
+            background: var(--light-bg);
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--amber);
+        }
+        .nap-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+        .nap-value { font-weight: 600; color: var(--navy); }
+        .checklist { list-style: none; }
+        .checklist li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .checklist li:last-child { border-bottom: none; }
+        .checklist input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--amber);
+            cursor: pointer;
+        }
+        .checklist label { cursor: pointer; flex: 1; }
+        .checklist input:checked + label { text-decoration: line-through; color: #64748b; }
+        .category {
+            font-weight: 600;
+            color: var(--navy);
+            margin-top: 1rem;
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .category:first-child { margin-top: 0; }
+        .progress-bar {
+            background: var(--border);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        .progress-fill {
+            background: var(--amber);
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+        .progress-text { font-size: 0.875rem; color: #64748b; margin-top: 0.25rem; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background: var(--light-bg);
+            font-weight: 600;
+            color: var(--navy);
+        }
+        td select, td input[type="text"] {
+            width: 100%;
+            padding: 0.375rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+        .status-pending { color: #64748b; }
+        .status-contacted { color: var(--amber); }
+        .status-active { color: #22c55e; }
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            color: #64748b;
+            font-size: 0.75rem;
+        }
+        @media print {
+            body { padding: 0; background: white; }
+            .card { box-shadow: none; break-inside: avoid; }
+            header { background: white; color: var(--navy); border-bottom: 2px solid var(--navy); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Phase 11 SEO Tracker</h1>
+            <span style="color: var(--amber); font-weight: 600;">WAG</span>
+        </header>
+
+        <!-- NAP Data -->
+        <div class="card">
+            <div class="card-body">
+                <h2>NAP Data (Exact Format Required)</h2>
+                <div class="nap-grid">
+                    <div class="nap-item">
+                        <div class="nap-label">Business Name</div>
+                        <div class="nap-value">WAG - Winning Adventure Global</div>
+                    </div>
+                    <div class="nap-item">
+                        <div class="nap-label">Address</div>
+                        <div class="nap-value">5, 54 Melbourne St, North Adelaide SA 5006, Australia</div>
+                    </div>
+                    <div class="nap-item">
+                        <div class="nap-label">Phone</div>
+                        <div class="nap-value">0416 588 198</div>
+                    </div>
+                    <div class="nap-item">
+                        <div class="nap-label">ABN</div>
+                        <div class="nap-value">30 659 034 919</div>
+                    </div>
+                    <div class="nap-item">
+                        <div class="nap-label">Website</div>
+                        <div class="nap-value">https://www.winningadventure.com.au</div>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.75rem; color: #dc2626;">
+                    Never use variations. Do NOT use "WAG" alone, "Winning Adventure Global" without "WAG", or abbreviations.
+                </p>
+            </div>
+        </div>
+
+        <!-- Google Business Profile -->
+        <div class="card">
+            <div class="card-body">
+                <h2>Google Business Profile Setup</h2>
+                <ul class="checklist" id="gbp-checklist">
+                    <li><input type="checkbox" id="gbp1"><label for="gbp1">Go to business.google.com/business and sign in</label></li>
+                    <li><input type="checkbox" id="gbp2"><label for="gbp2">Enter business name: "WAG - Winning Adventure Global"</label></li>
+                    <li><input type="checkbox" id="gbp3"><label for="gbp3">Select primary category: "Import Export Agent"</label></li>
+                    <li><input type="checkbox" id="gbp4"><label for="gbp4">Add secondary categories: "Business Consultant", "Freight Forwarding Service"</label></li>
+                    <li><input type="checkbox" id="gbp5"><label for="gbp5">Enter address: 5, 54 Melbourne St, North Adelaide SA 5006</label></li>
+                    <li><input type="checkbox" id="gbp6"><label for="gbp6">Add service areas: Adelaide, South Australia, Australia</label></li>
+                    <li><input type="checkbox" id="gbp7"><label for="gbp7">Add phone: 0416 588 198</label></li>
+                    <li><input type="checkbox" id="gbp8"><label for="gbp8">Add website: https://www.winningadventure.com.au</label></li>
+                    <li><input type="checkbox" id="gbp9"><label for="gbp9">Wait for postcard verification (2-4 weeks)</label></li>
+                    <li><input type="checkbox" id="gbp10"><label for="gbp10">Add CTA buttons: Book a consultation, Get a quote, Contact us</label></li>
+                </ul>
+                <div class="progress-bar"><div class="progress-fill" id="gbp-progress" style="width: 0%"></div></div>
+                <div class="progress-text" id="gbp-progress-text">0 of 10 completed</div>
+            </div>
+        </div>
+
+        <!-- Directory Submissions -->
+        <div class="card">
+            <div class="card-body">
+                <h2>Australian Directory Submissions</h2>
+                <ul class="checklist" id="directory-checklist">
+                    <li class="category">High Priority - General Directories</li>
+                    <li><input type="checkbox" id="d1"><label for="d1">Google Business Profile</label></li>
+                    <li><input type="checkbox" id="d2"><label for="d2">Apple Business Connect (apple.com/business)</label></li>
+                    <li><input type="checkbox" id="d3"><label for="d3">Bing Places (bing.com/webmasters/bpos)</label></li>
+                    <li><input type="checkbox" id="d4"><label for="d4">TrueLocal.com.au</label></li>
+                    <li><input type="checkbox" id="d5"><label for="d5">Yelp.com.au</label></li>
+                    <li><input type="checkbox" id="d6"><label for="d6">Yellow Pages Australia (yellowpages.com.au)</label></li>
+                    <li><input type="checkbox" id="d7"><label for="d7">Australian Business Register (abr.business.gov.au)</label></li>
+
+                    <li class="category">Industry-Specific Directories</li>
+                    <li><input type="checkbox" id="d8"><label for="d8">Import Export Institute directory</label></li>
+                    <li><input type="checkbox" id="d9"><label for="d9">Australian Chamber of Commerce directories</label></li>
+                    <li><input type="checkbox" id="d10"><label for="d10">alogcase</label></li>
+                    <li><input type="checkbox" id="d11"><label for="d11">Procurement.org</label></li>
+
+                    <li class="category">Local Directories</li>
+                    <li><input type="checkbox" id="d12"><label for="d12">Adelaide CBD business directory</label></li>
+                    <li><input type="checkbox" id="d13"><label for="d13">South Australian business directories</label></li>
+                    <li><input type="checkbox" id="d14"><label for="d14">Local chambers of commerce</label></li>
+
+                    <li class="category">B2B / Sourcing Platforms</li>
+                    <li><input type="checkbox" id="d15"><label for="d15">Alibaba trade connections</label></li>
+                    <li><input type="checkbox" id="d16"><label for="d16">Global Sources verified supplier lists</label></li>
+                    <li><input type="checkbox" id="d17"><label for="d17">TradeIndia Australia directory</label></li>
+                </ul>
+                <div class="progress-bar"><div class="progress-fill" id="dir-progress" style="width: 0%"></div></div>
+                <div class="progress-text" id="dir-progress-text">0 of 17 completed</div>
+            </div>
+        </div>
+
+        <!-- Guest Post Outreach -->
+        <div class="card">
+            <div class="card-body">
+                <h2>Guest Post Outreach Tracker</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%">Site</th>
+                            <th style="width: 10%">DA</th>
+                            <th style="width: 20%">Contact</th>
+                            <th style="width: 15%">Status</th>
+                            <th style="width: 25%">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="guest-table">
+                        <tr>
+                            <td>Logistics News Today (logisticsnewstoday.com.au)</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>Purchasing & Procurement Center</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>Australian Business Coach</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>Supply Chain Digest</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>Sourcing Journal</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>Inbound Logistics</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>Smart Company Australia</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>Business Insider Australia</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>China Briefing (dantai.com)</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>Global Sources Blog</td>
+                            <td>-</td>
+                            <td><input type="text" placeholder="Email/name"></td>
+                            <td>
+                                <select>
+                                    <option value="pending">Pending</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="active">Active</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Notes"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Monthly Post Strategy -->
+        <div class="card">
+            <div class="card-body">
+                <h2>Monthly GBP Post Strategy</h2>
+                <ul class="checklist">
+                    <li class="category">Week 1</li>
+                    <li><input type="checkbox" id="post1"><label for="post1">Industry tip (e.g., "5 Questions to Ask Before Choosing a China Supplier")</label></li>
+                    <li class="category">Week 2</li>
+                    <li><input type="checkbox" id="post2"><label for="post2">Case study highlight</label></li>
+                    <li class="category">Week 3</li>
+                    <li><input type="checkbox" id="post3"><label for="post3">News/update about China sourcing regulations</label></li>
+                    <li class="category">Week 4</li>
+                    <li><input type="checkbox" id="post4"><label for="post4">Behind-the-scenes or team highlight</label></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            Phase 11 SEO Tracker | WAG - Winning Adventure Global | Local SEO & Authority
+        </div>
+    </div>
+
+    <script>
+        // LocalStorage persistence
+        const STORAGE_KEY = 'wag-phase11-seo-tracker';
+
+        function saveState() {
+            const state = {
+                checkboxes: {},
+                tableData: []
+            };
+
+            // Save checkboxes
+            document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+                state.checkboxes[cb.id] = cb.checked;
+            });
+
+            // Save table data
+            document.querySelectorAll('#guest-table tr').forEach(row => {
+                const inputs = row.querySelectorAll('input, select');
+                state.tableData.push(Array.from(inputs).map(el => el.value));
+            });
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (!saved) return;
+
+            try {
+                const state = JSON.parse(saved);
+
+                // Restore checkboxes
+                Object.entries(state.checkboxes).forEach(([id, checked]) => {
+                    const cb = document.getElementById(id);
+                    if (cb) cb.checked = checked;
+                });
+
+                // Restore table data
+                document.querySelectorAll('#guest-table tr').forEach((row, rowIndex) => {
+                    if (state.tableData[rowIndex]) {
+                        const inputs = row.querySelectorAll('input, select');
+                        inputs.forEach((input, colIndex) => {
+                            if (state.tableData[rowIndex][colIndex] !== undefined) {
+                                input.value = state.tableData[rowIndex][colIndex];
+                            }
+                        });
+                    }
+                });
+
+                updateProgress();
+            } catch (e) {
+                console.error('Failed to load state:', e);
+            }
+        }
+
+        function updateProgress() {
+            // GBP progress
+            const gbpCheckboxes = document.querySelectorAll('#gbp-checklist input[type="checkbox"]');
+            const gbpCompleted = Array.from(gbpCheckboxes).filter(cb => cb.checked).length;
+            const gbpPercent = (gbpCompleted / gbpCheckboxes.length) * 100;
+            document.getElementById('gbp-progress').style.width = gbpPercent + '%';
+            document.getElementById('gbp-progress-text').textContent = `${gbpCompleted} of ${gbpCheckboxes.length} completed`;
+
+            // Directory progress
+            const dirCheckboxes = document.querySelectorAll('#directory-checklist input[type="checkbox"]');
+            const dirCompleted = Array.from(dirCheckboxes).filter(cb => cb.checked).length;
+            const dirPercent = (dirCompleted / dirCheckboxes.length) * 100;
+            document.getElementById('dir-progress').style.width = dirPercent + '%';
+            document.getElementById('dir-progress-text').textContent = `${dirCompleted} of ${dirCheckboxes.length} completed`;
+        }
+
+        // Event listeners
+        document.querySelectorAll('input, select').forEach(el => {
+            el.addEventListener('change', saveState);
+            el.addEventListener('input', saveState);
+        });
+
+        // Load on page load
+        loadState();
+    </script>
+</body>
+</html>
