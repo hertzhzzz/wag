@@ -6,14 +6,15 @@
 
 | Category | Technology |
 |----------|------------|
-| Framework | Next.js 14.2 (App Router) |
-| Language | TypeScript |
+| Framework | Next.js 16.1 (App Router) |
+| Language | TypeScript 5 |
 | Styling | Tailwind CSS 3.4 |
-| Backend | Supabase (Auth + DB) |
-| Email | Resend |
+| Email | Nodemailer (Gmail SMTP) |
+| Rate Limiting | Upstash Redis (+ in-memory fallback) |
 | Media | Remotion (视频动画) |
 | Charts | ECharts |
-| Content | MDX + gray-matter |
+| Content | MDX + gray-matter + next-mdx-remote |
+| Validation | Zod |
 
 ## Commands
 
@@ -33,21 +34,40 @@ git push origin master  # GitHub 自动部署到 Vercel
 ## Project Structure
 
 ```
-wag/                      # 项目根目录 (已从 web/frontend 迁移)
+wag/                      # 项目根目录
 ├── app/                  # Next.js App Router
 │   ├── page.tsx          # 首页 (/)
+│   ├── layout.tsx        # 根布局
 │   ├── services/         # 服务页面
 │   ├── about/            # 关于页面
-│   ├── resources/        # 博客/文章 [动态: /resources/[slug]]
-│   ├── enquiry/          # 询价表单
+│   ├── resources/        # 博客列表 + [slug] 动态路由
+│   ├── enquiry/          # 询价表单页面 + components/
 │   ├── api/              # API 路由
-│   └── components/       # UI 组件
-├── content/              # Markdown 博客内容
+│   │   ├── enquiry/      # POST /api/enquiry (Zod验证 + Nodemailer)
+│   │   └── newsletter/   # POST /api/newsletter
+│   ├── components/        # 共享组件 (Navbar, Footer, Hero...)
+│   └── data/             # FAQ 数据文件
+├── content/blog/         # MDX 博客内容 (gray-matter frontmatter)
 ├── lib/                  # 工具函数
+│   └── rate-limit.ts     # Upstash Redis 限流 (+内存备援)
 ├── public/               # 静态资源
-├── .next/                # 构建输出 (gitignore)
+├── .planning/            # GSD 项目规划 (milestones/phases)
 └── vercel.json           # Vercel 配置
 ```
+
+## API Routes
+
+| Route | Method | Purpose |
+|-------|--------|---------|
+| `/api/enquiry` | POST | 询价表单提交，Zod验证+Nodemailer发邮件 |
+| `/api/newsletter` | POST | Newsletter 订阅 |
+
+## Content (Blog)
+
+- **Location**: `content/blog/*.mdx`
+- **Frontmatter**: `title`, `date`, `description`, `author`, `tags`
+- **Rendering**: `next-mdx-remote` + `remark-gfm` + `remark-html`
+- **Slug routing**: `/resources/[slug]`
 
 ## Deployment
 
@@ -95,14 +115,19 @@ vercel --prod
 - **禁止** "WA" 缩写，使用 "Winning Adventure Global" 或 "WAG"
 - 提交前必须：`npm run build` && `npm run lint`
 - 5 个页面必须可访问：`/`, `/services`, `/about`, `/resources`, `/enquiry`
+- **本地 build 成功 ≠ 线上可访问** — 部署后必须用 `curl -sI <URL>` 验证
 
 ## Env
 
 ```
-.env.local  # Supabase + Resend 凭证
+.env.local  # 环境变量 (不要提交到版本控制)
 ```
 
-> 不要提交 `.env.local` 到版本控制
+**Required variables**:
+- `GMAIL_USER` — Gmail address for SMTP sender
+- `GMAIL_APP_PASSWORD` — Gmail App Password (not regular password)
+- `UPSTASH_REDIS_REST_URL` — Upstash Redis URL (可选，缺失时用内存限流)
+- `UPSTASH_REDIS_REST_TOKEN` — Upstash Redis token (可选)
 
 ## Validation Checklist
 
@@ -148,4 +173,4 @@ vercel --prod
 
 ---
 
-*Updated: 2026-03-17*
+*Updated: 2026-03-20*

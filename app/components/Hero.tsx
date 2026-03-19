@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-amber/5 to-transparent skew-x-12" />
 
       {/* Text Content - Left Side with improved hierarchy */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16 py-20 md:py-28">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-22">
         {/* Brand tag - more refined */}
         <div className="flex items-center gap-3 mb-6">
           <span className="h-px w-8 bg-amber/70" />
@@ -54,18 +54,21 @@ export default function Hero() {
 
         <h1 className="max-w-3xl">
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(40px,6vw,72px)] text-white">
-            Your Chinese
+            See the factory.
           </span>
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(40px,6vw,72px)] text-amber">
-            Factory Partners
+            Meet your supplier.
           </span>
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(40px,6vw,72px)] text-white">
-            Are Already Waiting.
+            Cut to the chase
+          </span>
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(28px,4vw,48px)] text-white/70">
+            — save 20%+ on procurement.
           </span>
         </h1>
 
         <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-10">
-          We connect Australian businesses directly to China&apos;s best manufacturers. Whether you&apos;re exploring new suppliers or ready to procure — we guide you on the ground, every step of the way.
+          Guided China factory tours for Australian businesses — we coordinate the arrangements, you make the call.
         </p>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -90,7 +93,7 @@ export default function Hero() {
         </div>
 
         {/* Trust indicators - professional B2B element */}
-        <div className="flex flex-wrap items-center gap-8 mt-14 pt-8 border-t border-white/10">
+        <div className="flex flex-wrap items-center gap-8 mt-14 pt-8 pb-2 border-t border-white/10">
           <div className="flex items-center gap-2 text-white/60 text-sm">
             <svg className="w-5 h-5 text-amber" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

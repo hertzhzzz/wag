@@ -7,7 +7,7 @@
 - ✅ **v1.3 SEO Optimization** — Phase 6 (complete)
 - ✅ **v1.4 Security Audit** — Phase 8 (shipped 2026-03-18)
 - ✅ **v1.5 PageSpeed** — Phase 7 (shipped 2026-03-18)
-- 🚧 **v1.1 SEO Automation** — Phases 9-12 (in progress)
+- 🚧 **v1.6 UI Optimization** — Phase 13 (in progress)
 
 ---
 
@@ -117,6 +117,7 @@
 | 10. Content Strategy | 3/3 | Complete    | 2026-03-18 |
 | 11. Local SEO & Authority | 1/1 | Planned     | - |
 | 12. Analytics & Optimization | 0/1 | Not started | - |
+| 13. UI Optimization | 0/1 | Not started | - |
 
 ---
 
@@ -146,4 +147,24 @@
 
 ---
 
-*Last updated: 2026-03-19*
+### Phase 13: UI Optimization
+
+**Goal:** 基于 critique 报告，优化 WAG 前端视觉层次和品牌差异化
+
+**Depends on:** Phase 12
+
+**Scope:**
+- B: 解决重复 `border-gray-200 rounded-lg` 卡片样式 — 视觉无层次问题
+- C: 解决 Section 标签样式全为 `text-amber uppercase tracking` 模板感
+- D: 解决 HowItWorks 5 步骤等权重问题 — 引导注意力
+- E: 移除 Navbar CTA 无意义的 `bg-gradient from-navy to-navy` 渐变
+
+**Not in scope:** Industries 移动端导航问题 (Issue A)
+
+**Plans:** 0 plans
+
+- [ ] TBD (run /gsd:plan-phase 13 to break down)
+
+---
+
+*Last updated: 2026-03-20*

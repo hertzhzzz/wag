@@ -14,10 +14,10 @@ export default function Navbar() {
       setScrolled(window.scrollY > 10)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -46,30 +46,30 @@ export default function Navbar() {
 
         <ul className="hidden md:flex gap-9 list-none flex-1 justify-center">
           <li>
-            <Link href="/" className="nav-link">Home</Link>
+            <Link href="/" className="nav-link text-navy">Home</Link>
           </li>
           <li>
-            <Link href="/services" className="nav-link">Services</Link>
+            <Link href="/services" className="nav-link text-navy">Services</Link>
           </li>
           <li>
-            <Link href="/resources" className="nav-link">Resources</Link>
+            <Link href="/resources" className="nav-link text-navy">Resources</Link>
           </li>
           <li>
-            <Link href="/about" className="nav-link">About</Link>
+            <Link href="/about" className="nav-link text-navy">About</Link>
           </li>
         </ul>
 
         <div className="hidden md:flex">
           <Link
             href="/enquiry"
-            className="text-[13px] font-medium text-white px-[22px] py-[9px] flex-shrink-0 bg-gradient-to-r from-[#0F2D5E] to-[#1a3d6e] shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
+            className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-gradient-to-r from-[#0F2D5E] to-[#1a3d6e] flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
           >
             Start Your Factory Tour →
           </Link>
         </div>
 
         <button
-          className="md:hidden ml-auto bg-white border-0 text-navy cursor-pointer min-h-11 min-w-11 flex items-center justify-center rounded-lg shadow-sm"
+          className="md:hidden ml-auto border-0 cursor-pointer min-h-11 min-w-11 flex items-center justify-center rounded-lg bg-white text-navy shadow-sm"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle navigation menu"
           aria-expanded={mobileMenuOpen}
@@ -157,10 +157,10 @@ export default function Navbar() {
         .nav-link {
           font-size: 14px;
           font-weight: 400;
-          color: #0F2D5E;
           text-decoration: none;
           position: relative;
           padding-bottom: 4px;
+          color: #0F2D5E;
         }
         .nav-link::after {
           content: '';
