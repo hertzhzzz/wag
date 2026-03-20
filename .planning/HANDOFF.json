@@ -1,65 +1,40 @@
 {
   "version": "1.0",
-  "timestamp": "2026-03-20T02:05:26.474Z",
-  "phase": "quick-tasks",
-  "phase_name": "hero-optimization",
-  "phase_dir": ".planning/quick",
-  "plan": 1,
-  "task": 1,
-  "total_tasks": 1,
+  "timestamp": "2026-03-20T01:24:20.525Z",
+  "phase": "13",
+  "phase_name": "UI Optimization",
+  "phase_dir": ".planning/phases/13-ui-optimization",
+  "plan": null,
+  "task": null,
+  "total_tasks": null,
   "status": "paused",
   "completed_tasks": [
     {
-      "id": 1,
-      "name": "Update hero slogan",
+      "id": 0,
+      "name": "Phase 14 duplicate cleanup",
       "status": "done",
-      "commit": "51fb522e"
-    },
-    {
-      "id": 2,
-      "name": "Remove StatsBar component",
-      "status": "done",
-      "commit": "51fb522e"
-    },
-    {
-      "id": 3,
-      "name": "Reduce hero padding 20%",
-      "status": "done",
-      "commit": "51fb522e"
-    },
-    {
-      "id": 4,
-      "name": "Fix trust indicators bottom cutoff",
-      "status": "done",
-      "commit": "51fb522e"
+      "commit": null
     }
   ],
-  "remaining_tasks": [],
+  "remaining_tasks": [
+    {"id": 1, "name": "UI-SPEC.md design contract", "status": "not_started"},
+    {"id": 2, "name": "Plan phase (break down into tasks)", "status": "not_started"},
+    {"id": 3, "name": "Execute B: Card hierarchy fixes", "status": "not_started"},
+    {"id": 4, "name": "Execute C: Section label style fixes", "status": "not_started"},
+    {"id": 5, "name": "Execute D: HowItWorks step weighting", "status": "not_started"},
+    {"id": 6, "name": "Execute E: Remove meaningless gradient", "status": "not_started"}
+  ],
   "blockers": [],
   "human_actions_pending": [],
   "decisions": [
-    {
-      "decision": "Use 'See the factory. Meet your supplier. Cut to the chase — save 20%+ on procurement.' as new hero headline",
-      "rationale": "More action-oriented, specific benefit (20%+) aligns better with CTA 'Book a Free Discovery Call'",
-      "phase": "quick"
-    },
-    {
-      "decision": "Change subtitle from 'handle the logistics' to 'coordinate the arrangements'",
-      "rationale": "WAG does not do logistics - clarified in Lean Canvas. Coordination is accurate.",
-      "phase": "quick"
-    },
-    {
-      "decision": "Remove StatsBar (bg-navy section with animated counters)",
-      "rationale": "User requested removal. Stats saved to .planning/quick/260320-0ez-StatsBar-ORIGINAL.tsx",
-      "phase": "quick"
-    },
-    {
-      "decision": "Reduce hero padding from py-20 md:py-28 to py-16 md:py-22",
-      "rationale": "User requested 20% reduction to fit more content above fold",
-      "phase": "quick"
-    }
+    {"decision": "Use Phase 13 (not Phase 14) for UI Optimization", "rationale": "Phase 13 already existed with defined scope B+C+D+E", "phase": "13"},
+    {"decision": "Issue A (Industries mobile nav) excluded from scope", "rationale": "Not in scope per existing Phase 13 definition", "phase": "13"},
+    {"decision": "Phase 14 was duplicate - deleted after merging scope", "rationale": "Would have been another UI Optimization phase", "phase": "14"}
   ],
-  "uncommitted_files": [],
-  "next_action": "No immediate next action - deployed successfully. Awaiting further instructions.",
-  "context_notes": "Completed hero section optimization: updated slogan, removed StatsBar, reduced padding. All changes deployed to production. Critique identified 3 additional issues (navbar/hero visual disconnect, right side video area waste, mobile H1 line breaks) that were not addressed - user may want to revisit. Previous Phase 11 work is still pending human_actions (GBP, directories, guest posts)."
+  "uncommitted_files": [
+    ".planning/ROADMAP.md",
+    ".planning/STATE.md"
+  ],
+  "next_action": "Run /gsd:ui-phase 13 to generate UI-SPEC.md design contract",
+  "context_notes": "Was executing /gsd:do '开始优化前端页面' which routed to /gsd:ui-phase. Discovered Phase 13 UI Optimization already existed with pre-defined scope (B: card hierarchy, C: section labels, D: HowItWorks weighting, E: remove gradient). Created Phase 14 by mistake (duplicate), merged/deleted it. Phase 13 is dependency-later (depends on Phase 12 which is also not started). Need to run ui-phase workflow for Phase 13."
 }
