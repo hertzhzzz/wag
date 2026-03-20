@@ -1,4 +1,4 @@
-# WAG Website Improvements
+# WAG Website
 
 ## What This Is
 
@@ -6,16 +6,23 @@ Winning Adventure Global (WAG) company website - a Next.js-based corporate site 
 
 ## Core Value
 
-Improve mobile responsive layout to ensure the website provides an excellent user experience on all devices, particularly smartphones and tablets.
+Help Australian businesses safely connect with verified China manufacturers through professional sourcing services and factory visit experiences.
+
+## Current Status
+
+**All milestones complete.** Website is live at https://www.winningadventure.com.au
+
+## Milestones
+
+| Milestone | Version | Description |
+|-----------|---------|-------------|
+| MVP | v1.0 | Mobile-first responsive website |
+| Deployment | v1.1 | Vercel deployment + custom domain |
+| Security Audit | v1.2 | Security hardening + rate limiting |
+| SEO Optimization | v1.3 | Technical SEO, content strategy, authority building |
+| UI Optimization | v1.4 | Visual hierarchy and polish |
 
 ## Requirements
-
-### Validated
-
-- [x] Improve responsive layout for Home page on mobile devices — v1.0
-- [x] Improve responsive layout for Services page on mobile devices — v1.0
-- [x] Improve responsive layout for About page on mobile devices — v1.0
-- [x] Improve responsive layout for Enquiry form on mobile devices — v1.0
 
 ### Active
 
@@ -24,110 +31,42 @@ Improve mobile responsive layout to ensure the website provides an excellent use
 - [ ] **SEO-03**: Increase Domain Authority (DA) to 20+
 - [ ] **SEO-04**: Establish systematic content creation pipeline
 
-## Current State: v1.1 SEO Automation
-
-**Shipped:** 2026-03-18
-**Phases:** 4 (06, 06.1, 07, 08)
-**Plans:** 17 total
-
-### v1.0 Accomplishments
-- SEO optimization with metadata, schema, blog content
-- Vercel deployment with Gmail credentials
-- PageSpeed mobile LCP optimization (89 score)
-- Security audit with headers, CORS, rate limiting
-
-### Tech Debt
-- Mobile LCP: 5.4s (target <2.5s) — Unsplash image source limitation
-
----
-
-<details>
-<summary>Previous milestone context (v1.0 MVP)</summary>
-
-## Current Milestone: v1.1 Deployment & Minor Fixes
-
-**Goal:** Deploy website to production and fix remaining minor issues
-
-**Target features:**
-- Deploy to Vercel with custom domain winningadventure.com.au
-- Add Facebook social link to Footer
-- Fix mobile navbar sticky behavior (user reported: scrolls away, can't tap)
-
-</details>
-
-## Next Milestone: v1.1 (Planning)
-
-**Status:** Not yet defined
-
 ### Out of Scope
 
-- [New feature development] — Focus on improving existing functionality
-- [Backend changes] — No database or API changes required
-- [Design system overhaul] — Keep existing design tokens and colors
+- [E-commerce functionality] — Not core to B2B sourcing service
+- [Multi-language support] — Australian market only for now
+- [Chatbot/AI assistant] — Can add after SEO foundation established
 
 ## Context
 
-**Current Stack:**
-- Next.js 14.2 with App Router
-- Tailwind CSS 3.4.0 for styling
+**Tech Stack:**
+- Next.js 16.1 (App Router)
+- Tailwind CSS 3.4
 - TypeScript
-- Hosted: Not specified
+- Vercel hosting
+- Custom domain: winningadventure.com.au
 
-**Existing Pages:**
-- Home page (/)
+**Pages:**
+- Home (/)
 - Services (/services)
 - About (/about)
-- Resources/Blog (/resources)
-- Enquiry form (/enquiry)
+- Resources (/resources)
+- Enquiry (/enquiry)
 
-**Mobile Status (v1.0 Complete):**
-- All 5 pages verified working on 320px viewport
-- Touch targets meet 44px minimum
-- Navbar sticky behavior verified
-- Horizontal scroll eliminated on all pages
-
-**User Feedback:**
-- Navbar sticky issue resolved (user confirmed)
-- Touch target improvements applied
-
-## Constraints
-
-- **[Tech Stack]**: Next.js + Tailwind CSS — Must use existing stack
-- **[Design]**: Navy (#0F2D5E) + Amber (#F59E0B) color scheme — Maintain brand consistency
-- **[Content]**: All existing content must remain — No content removal
+**Brand:**
+- Primary: Navy (#0F2D5E)
+- Accent: Amber (#F59E0B)
+- Fonts: IBM Plex Sans, IBM Plex Serif
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Focus on responsive layout | Mobile-first approach ensures best experience | ✅ All 19 requirements satisfied |
-| 320px minimum viewport | Covers smallest mobile devices | ✅ Verified via Playwright tests |
-| Tailwind utility classes | Maintain existing patterns | ✅ Consistent across all pages |
-
----
-*Last updated: 2026-03-17 after v1.0 milestone*
-
-## Current Milestone: v1.1 Deployment & Minor Fixes
-
-**Goal:** Deploy website to production and fix remaining minor issues
-
-**Target features:**
-- Deploy to Vercel with custom domain winningadventure.com.au
-- Add Facebook social link to Footer
-- Fix mobile navbar sticky behavior
+| Mobile-first approach | Target audience uses mobile | ✅ All pages verified at 320px |
+| Next.js App Router | Modern React framework | ✅ Stable |
+| Tailwind CSS | Rapid iteration | ✅ Consistent |
+| Vercel deployment | GitHub integration | ✅ Auto-deploy working |
 
 ---
 
-## Current Milestone: v1.1 SEO Automation
-
-**Goal:** Achieve #1 ranking for "epic sourcing" and "china direct" keywords in Google Australia, improve Domain Authority, and establish systematic content creation pipeline.
-
-**Target features:**
-- Keyword research and ranking strategy for Australian market
-- Content strategy and systematic blog production
-- On-page SEO optimization and technical improvements
-- Backlink building and domain authority growth
-- SEO analytics and monitoring automation
-
----
-*Last updated: 2026-03-18 after v1.0 production release*
+*Last updated: 2026-03-20*
