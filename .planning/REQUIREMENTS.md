@@ -1,63 +1,74 @@
-# Requirements: WAG Website
+# Requirements: WAG Website v2.0 SEO Optimization
 
-**Defined:** 2026-03-18
+**Defined:** 2026-03-20
 **Core Value:** Help Australian businesses safely connect with verified China manufacturers
+**Milestone:** v2.0 SEO Optimization — 超越 Epic Sourcing Australia
 
-## v1 Requirements
+## Target Keywords
 
-All requirements from v1.0 through v1.4 have been completed.
+| Priority | Keyword | Competitor | Intent |
+|----------|---------|------------|--------|
+| 🔴 Primary | "factory visit China" | 提到但未重点 | Commercial |
+| 🔴 Primary | "China factory tour" | 几乎无 | Commercial |
+| 🟠 Secondary | "China sourcing agent" | Epic Sourcing (main) | Commercial |
+| 🟠 Secondary | "Supplier verification" | Epic Sourcing | Commercial |
+| 🟠 Secondary | "Factory audits" | Epic Sourcing | Commercial |
+| 🟡 Supporting | "Quality control" | Epic + ChinaDirect | Commercial |
+| 🟡 Supporting | "Canton Fair tours" | Epic Sourcing | Commercial |
 
-### Technical SEO
+**Strategy:** WAG dominates "factory visit China" niche; competes on "China sourcing agent" as secondary.
 
-- [x] **TECH-01**: Fix LCP performance (5.4s → <2.5s) on mobile
-- [x] **TECH-02**: Implement XML sitemap with next-sitemap
-- [x] **TECH-03**: Add robots.txt configuration
-- [x] **TECH-04**: Implement Schema.org markup (Organization + LocalBusiness)
-- [x] **TECH-05**: Add canonical URLs to all pages
+## v2.0 Requirements
 
-### Content Strategy
+### Technical SEO (Foundation)
 
-- [x] **CONT-01**: Create "How to Import from China" guide (blog post)
-- [x] **CONT-02**: Create "China Supplier Verification" guide (blog post)
-- [x] **CONT-03**: Create "Australia Import Tips" guide (blog post)
-- [x] **CONT-04**: Add FAQ section to website with schema markup
-- [x] **CONT-05**: Optimize service pages with target keywords
+- [ ] **TECH-10**: 实现 app/robots.ts 爬取控制 (Next.js MetadataRoute API)
+- [ ] **TECH-11**: 将所有 Schema 组件转换为 Server Components (修复 'use client' 导致的问题)
+- [ ] **TECH-12**: 在所有页面添加 BreadcrumbList schema (提高 Sitelinks eligibility)
+- [ ] **TECH-13**: 修复 Core Web Vitals (LCP < 2.5s, CLS < 0.1)
+- [ ] **TECH-14**: 在所有页面添加 Article schema (博客文章)
+- [ ] **TECH-15**: 审计并修复所有页面的 canonical URLs
 
-### Local SEO
+### Content Architecture
 
-- [x] **LOCAL-01**: Claim and optimize Google Business Profile
-- [x] **LOCAL-02**: Add business to Australian directories (5+)
-- [x] **LOCAL-03**: Add location-specific content (South Australia focus)
+- [ ] **ARCH-01**: 创建服务详情页 (/services/factory-tours, /services/supplier-verification, /services/quality-inspection)
+- [ ] **ARCH-02**: 实现 Hub-and-Spoke 内容架构 (pillar pages + topic clusters)
+- [ ] **ARCH-03**: 建立内部链接策略连接 pillar pages 到 spoke content
+
+### Content Development (Keyword-Focused)
+
+- [ ] **CONT-10**: 创建 Pillar Content: "The Complete Guide to Factory Visits in China" (target: "factory visit China", "China factory tour") (2000+ words)
+- [ ] **CONT-11**: 创建 Trust Content: "How to Verify Chinese Suppliers" (target: "supplier verification") + "Red Flags When Sourcing from China" (target: "China sourcing agent")
+- [ ] **CONT-12**: 创建 "China Factory Audit Checklist" (target: "factory audits")
+- [ ] **CONT-13**: 创建案例研究 (需客户授权)
+- [ ] **CONT-14**: 建立系统性内容发布流程 (月度新闻评论)
 
 ### Authority Building
 
-- [x] **AUTH-01**: Create 3 guest posts on related industry sites
-- [x] **AUTH-02**: Build backlinks from Australian business directories
-- [x] **AUTH-03**: Increase Domain Authority to 15+ (from current ~5)
+- [ ] **AUTH-10**: 完成竞品外链差距分析 (vs Epic Sourcing)
+- [ ] **AUTH-11**: Guest post 外展至制造/采购出版物
+- [ ] **AUTH-12**: 建立与澳大利亚商会的行业关系
 
-### Analytics & Monitoring
+### E-E-A-T Signals
 
-- [x] **MON-01**: Set up Google Search Console tracking
-- [x] **MON-02**: Configure ranking monitoring for target keywords
-- [x] **MON-03**: Set up monthly SEO audit workflow
+- [ ] **EEAT-01**: 在所有页面显示团队专业技能和经验
+- [ ] **EEAT-02**: 添加 WAG 中国实地经验的具体描述 (如 "Our team has visited 50+ factories in Guangdong")
 
-## v2 Requirements
+## v2.1 Requirements (Future)
 
 Deferred to future release.
 
-### Content Expansion
-- **CONT-10**: Create 10+ additional blog posts
-- **CONT-11**: Video content series
-- **CONT-12**: Industry-specific guides
-
 ### Advanced SEO
-- **TECH-10**: Implement FAQ schema on all pages
-- **TECH-11**: Add breadcrumb schema
-- **TECH-12**: Implement hreflang for multi-language
 
-### Performance
-- **PERF-01**: Achieve PageSpeed score 90+
-- **PERF-02**: Implement image optimization pipeline
+- [ ] **TECH-20**: 实现 Video schema for Remotion content
+- [ ] **TECH-21**: 添加 Image sitemap
+- [ ] **TECH-22**: 实现 Review/aggregate rating schema
+
+### Content Expansion
+
+- [ ] **CONT-20**: 创建 10+ 额外博客文章
+- [ ] **CONT-21**: 视频内容系列 (factory tour)
+- [ ] **CONT-22**: 行业特定指南
 
 ## Out of Scope
 
@@ -71,32 +82,31 @@ Deferred to future release.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| TECH-01 | 09 | ✅ Complete |
-| TECH-02 | 09 | ✅ Complete |
-| TECH-03 | 09 | ✅ Complete |
-| TECH-04 | 09 | ✅ Complete |
-| TECH-05 | 09 | ✅ Complete |
-| MON-01 | 09 | ✅ Complete |
-| CONT-01 | 10 | ✅ Complete |
-| CONT-02 | 10 | ✅ Complete |
-| CONT-03 | 10 | ✅ Complete |
-| CONT-04 | 10 | ✅ Complete |
-| CONT-05 | 10 | ✅ Complete |
-| LOCAL-01 | 11 | ✅ Complete |
-| LOCAL-02 | 11 | ✅ Complete |
-| LOCAL-03 | 11 | ✅ Complete |
-| AUTH-01 | 11 | ✅ Complete |
-| AUTH-02 | 11 | ✅ Complete |
-| AUTH-03 | 12 | ✅ Complete |
-| MON-02 | 12 | ✅ Complete |
-| MON-03 | 12 | ✅ Complete |
+| TECH-10 | Phase 14 | Pending |
+| TECH-11 | Phase 14 | Pending |
+| TECH-12 | Phase 14 | Pending |
+| TECH-13 | Phase 14 | Pending |
+| TECH-14 | Phase 15 | Pending |
+| TECH-15 | Phase 14 | Pending |
+| ARCH-01 | Phase 15 | Pending |
+| ARCH-02 | Phase 15 | Pending |
+| ARCH-03 | Phase 15 | Pending |
+| CONT-10 | Phase 16 | Pending |
+| CONT-11 | Phase 16 | Pending |
+| CONT-12 | Phase 16 | Pending |
+| CONT-13 | Phase 16 | Pending |
+| CONT-14 | Phase 16 | Pending |
+| AUTH-10 | Phase 17 | Pending |
+| AUTH-11 | Phase 17 | Pending |
+| AUTH-12 | Phase 17 | Pending |
+| EEAT-01 | Phase 14 | Pending |
+| EEAT-02 | Phase 14 | Pending |
 
 **Coverage:**
-- v1 requirements: 19 total
+- v2.0 requirements: 19 total
 - Mapped to phases: 19
 - Unmapped: 0 ✓
 
 ---
-
-*Requirements defined: 2026-03-18*
-*Last updated: 2026-03-20 after v1.4 UI Optimization*
+*Requirements defined: 2026-03-20*
+*Last updated: 2026-03-20 after keyword research confirmed*
