@@ -50,7 +50,7 @@ Help Australian businesses safely connect with verified China manufacturers thro
 - [x] **SEO-02**: 分析 chinafactorytours.com SEO 策略和关键词布局
 - [x] **SEO-03**: 分析 chinafactorytours.com 内容架构和用户体验
 - [x] **SEO-04**: 制定 WAG SEO 优化方案（基于竞品分析）
-- [ ] **SEO-05**: 创建 Two Ways to Access Section
+- [x] **SEO-05**: 创建 Two Ways to Access Section ✅
 - [ ] **SEO-06**: 创建 Directory Section（嵌入首页）
 - [ ] **SEO-07**: 实现右下角悬浮 Contact 按钮
 - [ ] **SEO-08**: 创建 FAQ Page + Schema
