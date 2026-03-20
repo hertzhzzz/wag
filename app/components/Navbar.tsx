@@ -62,7 +62,7 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <Link
             href="/enquiry"
-            className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-gradient-to-r from-[#0F2D5E] to-[#1a3d6e] flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
+            className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-gradient-to-r from-amber to-navy flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
           >
             Start Your Factory Tour →
           </Link>

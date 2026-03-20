@@ -63,7 +63,7 @@ export default function HowItWorks() {
       <div className="max-w-[1400px] mx-auto">
         {/* Section header - more professional */}
         <div className="max-w-2xl mb-16">
-          <p className="uppercase tracking-[0.15em] text-xs font-semibold text-amber mb-4">
+          <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
             Our Process
           </p>
           <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight">
@@ -79,35 +79,55 @@ export default function HowItWorks() {
           {/* Connecting line - desktop only */}
           <div className="hidden md:block absolute top-16 left-[12%] right-[12%] h-px bg-gradient-to-r from-amber/50 via-amber/20 to-amber/50 z-0" />
 
-          {steps.map((step, idx) => (
-            <div
-              key={idx}
-              className={`relative z-10 transition-all duration-700 ${
-                visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ transitionDelay: `${idx * 150}ms` }}
-            >
-              <div className="bg-white rounded-2xl p-6 h-full border border-navy/5 shadow-[0_4px_24px_rgba(15,45,94,0.06)] hover:shadow-[0_8px_32px_rgba(15,45,94,0.1)] transition-shadow duration-300">
-                {/* Step number badge */}
-                <div className="w-10 h-10 rounded-full bg-navy text-white font-semibold text-sm flex items-center justify-center mb-4">
-                  {step.num}
-                </div>
+          {steps.map((step, idx) => {
+            const isFirst = idx === 0
+            const isLast = idx === steps.length - 1
+            return (
+              <div
+                key={idx}
+                className={`relative z-10 transition-all duration-700 ${
+                  visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${idx * 150}ms` }}
+              >
+                <div className={`bg-white rounded-2xl p-6 h-full border transition-shadow duration-300 ${
+                  isLast
+                    ? 'border-amber/30 shadow-[0_8px_32px_rgba(245,158,11,0.15)] hover:shadow-[0_12px_40px_rgba(245,158,11,0.2)]'
+                    : 'border-navy/5 shadow-[0_4px_24px_rgba(15,45,94,0.06)] hover:shadow-[0_8px_32px_rgba(15,45,94,0.1)]'
+                }`}>
+                  {/* Step number badge */}
+                  <div className={`rounded-full font-semibold text-sm flex items-center justify-center mb-4 ${
+                    isFirst
+                      ? 'w-10 h-10 bg-navy/10 text-navy'
+                      : isLast
+                      ? 'w-12 h-12 bg-amber text-white shadow-[0_4px_12px_rgba(245,158,11,0.3)]'
+                      : 'w-10 h-10 bg-navy text-white'
+                  }`}>
+                    {step.num}
+                  </div>
 
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-amber/10 flex items-center justify-center mb-4">
-                  <step.icon size={24} className="text-amber" />
-                </div>
+                  {/* Icon */}
+                  <div className={`rounded-xl flex items-center justify-center mb-4 ${
+                    isFirst
+                      ? 'w-10 h-10 bg-navy/5'
+                      : isLast
+                      ? 'w-12 h-12 bg-amber/20'
+                      : 'w-12 h-12 bg-amber/10'
+                  }`}>
+                    <step.icon size={isFirst ? 20 : 24} className={isLast ? 'text-amber' : 'text-amber'} />
+                  </div>
 
-                {/* Content */}
-                <h3 className="text-lg font-semibold text-navy mb-2 leading-tight">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-navy/60 leading-relaxed">
-                  {step.desc}
-                </p>
+                  {/* Content */}
+                  <h3 className="text-lg font-semibold text-navy mb-2 leading-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-navy/60 leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* CTA section */}
