@@ -59,10 +59,10 @@ export default function HowItWorks() {
   }, [])
 
   return (
-    <section id="howitworks" className="bg-white py-20 md:py-28 px-6 md:px-10">
+    <section id="howitworks" className="bg-white py-14 md:py-18 px-6 md:px-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Section header - more professional */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-12">
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
             Our Process
           </p>
@@ -75,7 +75,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps - enhanced with connecting lines */}
-        <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 mb-16 relative">
+        <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 mb-12 relative">
           {/* Connecting line - desktop only */}
           <div className="hidden md:block absolute top-16 left-[12%] right-[12%] h-px bg-gradient-to-r from-amber/50 via-amber/20 to-amber/50 z-0" />
 

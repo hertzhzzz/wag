@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-amber/5 to-transparent skew-x-12" />
 
       {/* Text Content - Left Side with improved hierarchy */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-22">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
         {/* Brand tag - more refined */}
         <div className="flex items-center gap-3 mb-6">
           <span className="h-px w-8 bg-amber/70" />

@@ -141,53 +141,90 @@ export default function ServicesPage() {
       </section>
 
       {/* Process */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-[#f8f9fb]">
-        <div className="max-w-[1100px] mx-auto text-center mb-14">
-          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-2">
-            How We Work
-          </h2>
-          <p className="text-gray-600">
-            Five steps from enquiry to your first factory visit in China.
-          </p>
-        </div>
-        <div className="max-w-[1100px] mx-auto grid grid-cols-2 md:grid-cols-5 gap-3">
-          {[
-            {
-              num: '1',
-              title: 'Submit Your Inquiry',
-              desc: 'Fill out our enquiry form with your industry, product type, and sourcing requirements.',
-            },
-            {
-              num: '2',
-              title: 'We Review & Match',
-              desc: 'Within 3-7 days, we review your requirements and shortlist 2-3 pre-screened factories.',
-            },
-            {
-              num: '3',
-              title: 'Initial Consultation',
-              desc: 'We schedule a meeting to discuss your trip details, timeline, and specific factory requirements.',
-            },
-            {
-              num: '4',
-              title: 'Confirm Your Trip',
-              desc: 'We arrange flights, accommodation, transport, and your full itinerary in China.',
-            },
-            {
-              num: '5',
-              title: 'Factory Visit Experience',
-              desc: 'Your bilingual guide accompanies you throughout. Visit factories and make informed decisions.',
-            },
-          ].map((step, idx) => (
-            <div key={idx} className="text-center p-4 bg-white rounded-lg shadow-sm">
-              <div className="w-[40px] h-[40px] rounded-full bg-navy text-white text-sm font-bold flex items-center justify-center mx-auto mb-3">
-                {step.num}
-              </div>
-              <div className="font-bold text-sm text-navy mb-2">{step.title}</div>
-              <p className="text-xs text-gray-600 leading-relaxed">
-                {step.desc}
-              </p>
-            </div>
-          ))}
+      <section className="py-20 md:py-28 px-6 md:px-10 bg-[#f8f9fb]">
+        <div className="max-w-[1400px] mx-auto">
+          {/* Section header */}
+          <div className="max-w-2xl mb-16">
+            <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
+              Our Process
+            </p>
+            <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight">
+              Your China Trip, End to End
+            </h2>
+            <p className="text-lg text-navy/60 mt-4 leading-relaxed">
+              From pre-trip research to post-trip contracts — we handle every step of your sourcing journey with expertise and care.
+            </p>
+          </div>
+
+          {/* Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 mb-16 relative">
+            {/* Connecting line - desktop only */}
+            <div className="hidden md:block absolute top-16 left-[12%] right-[12%] h-px bg-gradient-to-r from-amber/50 via-amber/20 to-amber/50 z-0" />
+
+            {[
+              {
+                num: '1',
+                title: 'Submit Your Inquiry',
+                desc: 'Fill out our enquiry form with your industry, product type, and sourcing requirements.',
+              },
+              {
+                num: '2',
+                title: 'We Review & Match',
+                desc: 'Within 3-7 days, we review your requirements and shortlist 2-3 pre-screened factories.',
+              },
+              {
+                num: '3',
+                title: 'Initial Consultation',
+                desc: 'We schedule a meeting to discuss your trip details, timeline, and specific factory requirements.',
+              },
+              {
+                num: '4',
+                title: 'Confirm Your Trip',
+                desc: 'We arrange flights, accommodation, transport, and your full itinerary in China.',
+              },
+              {
+                num: '5',
+                title: 'Factory Visit Experience',
+                desc: 'Your bilingual guide accompanies you throughout. Visit factories and make informed decisions.',
+              },
+            ].map((step, idx) => {
+              const isFirst = idx === 0
+              const isLast = idx === 4
+              return (
+                <div
+                  key={idx}
+                  className={`relative z-10 transition-all duration-700 ${
+                    isLast ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-0'
+                  }`}
+                >
+                  <div className={`bg-white rounded-2xl p-6 h-full border transition-shadow duration-300 ${
+                    isLast
+                      ? 'border-amber/30 shadow-[0_8px_32px_rgba(245,158,11,0.15)]'
+                      : 'border-navy/5 shadow-[0_4px_24px_rgba(15,45,94,0.06)]'
+                  }`}>
+                    {/* Step number badge */}
+                    <div className={`rounded-full font-semibold text-sm flex items-center justify-center mb-4 ${
+                      isFirst
+                        ? 'w-10 h-10 bg-navy/10 text-navy'
+                        : isLast
+                        ? 'w-12 h-12 bg-amber text-white shadow-[0_4px_12px_rgba(245,158,11,0.3)]'
+                        : 'w-10 h-10 bg-navy text-white'
+                    }`}>
+                      {step.num}
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="text-lg font-semibold text-navy mb-2 leading-tight">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-navy/60 leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </section>
 

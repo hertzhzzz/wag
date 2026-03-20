@@ -20,12 +20,12 @@ export default function FAQ({ faqs = defaultFaqs }: FAQProps) {
   }
 
   return (
-    <section className="bg-white py-20 px-4 md:px-6">
+    <section className="bg-white py-14 px-4 md:px-6">
       <div className="max-w-[800px] mx-auto">
         <p className="text-sm font-normal text-navy/50 mb-3">
           Frequently Asked Questions
         </p>
-        <h2 className="font-serif text-[clamp(28px,4vw,42px)] font-semibold text-navy mb-10">
+        <h2 className="font-serif text-[clamp(28px,4vw,42px)] font-semibold text-navy mb-8">
           Everything You Need to Know
         </h2>
 

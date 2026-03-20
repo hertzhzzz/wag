@@ -32,8 +32,8 @@ export default function Home() {
       <Navbar />
       <FAQSchema />
       <Hero />
-      <HowItWorks />
       <TwoWaysAccess />
+      <HowItWorks />
       <Industries />
       <FAQ />
       <CTABand />

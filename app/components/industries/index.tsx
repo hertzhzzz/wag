@@ -113,7 +113,7 @@ export default function Industries() {
   }, [])
 
   return (
-    <section id="industries" className="bg-[#f0f4f8] py-[72px] px-4 md:px-10">
+    <section id="industries" className="bg-[#f0f4f8] py-14 md:py-16 px-4 md:px-10">
       <div className="max-w-[1100px] mx-auto">
         <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">
           Industries We Serve
@@ -121,7 +121,7 @@ export default function Industries() {
         <h2 className="font-serif text-4xl text-navy mb-2">
           Select Your Sector.
         </h2>
-        <p className="text-sm text-[#64748b] mb-10">
+        <p className="text-sm text-[#64748b] mb-8">
           50+ industries covered across 8+ Chinese provinces — if you don&apos;t see yours, let&apos;s talk.
         </p>
       </div>

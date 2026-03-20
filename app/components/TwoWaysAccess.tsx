@@ -17,8 +17,8 @@ const cards = [
       'Quality control guidance',
       'Contract follow-up support',
     ],
-    cta: 'Start Your Tour',
-    ctaHref: '/enquiry',
+    cta: 'See Our Services',
+    ctaHref: '/services',
   },
   {
     isPrimary: false,
@@ -58,10 +58,10 @@ export default function TwoWaysAccess() {
   }, [])
 
   return (
-    <section className="bg-white py-20 md:py-28 px-6 md:px-10">
+    <section className="bg-white py-14 md:py-18 px-6 md:px-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Section header */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-12">
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
             Our Services
           </p>

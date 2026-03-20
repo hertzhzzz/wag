@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function CTABand() {
   return (
-    <section className="bg-white border-t border-gray-200 py-16 px-4 md:px-10 w-full relative overflow-hidden">
+    <section className="bg-white border-t border-gray-200 py-12 px-4 md:px-10 w-full relative overflow-hidden">
       <div className="max-w-[1100px] mx-auto flex items-center justify-between gap-10 flex-wrap relative z-[1]">
         <div>
           <h2 className="font-serif text-[2rem] font-semibold text-navy mb-2.5">
