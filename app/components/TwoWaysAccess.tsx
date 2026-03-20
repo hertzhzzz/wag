@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Compass, Database } from 'lucide-react'
+import DirectoryAccessModal from './DirectoryAccessModal'
 
 const cards = [
   {
@@ -36,6 +37,7 @@ const cards = [
 
 export default function TwoWaysAccess() {
   const [visible, setVisible] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -122,33 +124,54 @@ export default function TwoWaysAccess() {
               </ul>
 
               {/* CTA */}
-              <Link
-                href={card.ctaHref}
-                className={`inline-flex items-center gap-3 px-6 py-3 text-sm font-semibold transition-all duration-300 no-underline min-h-11 hover:gap-4 ${
-                  card.isPrimary
-                    ? 'bg-amber text-white hover:bg-amber/90'
-                    : 'bg-navy text-white hover:bg-navy/90'
-                }`}
-              >
-                {card.cta}
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {card.isPrimary ? (
+                <Link
+                  href={card.ctaHref}
+                  className="inline-flex items-center gap-3 px-6 py-3 text-sm font-semibold transition-all duration-300 no-underline min-h-11 hover:gap-4 bg-amber text-white hover:bg-amber/90"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
+                  {card.cta}
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </Link>
+              ) : (
+                <button
+                  onClick={() => setModalOpen(true)}
+                  className="inline-flex items-center gap-3 px-6 py-3 text-sm font-semibold transition-all duration-300 no-underline min-h-11 hover:gap-4 bg-navy text-white hover:bg-navy/90"
+                >
+                  {card.cta}
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </button>
+              )}
             </div>
           ))}
         </div>
       </div>
+
+      {/* Directory Access Modal */}
+      <DirectoryAccessModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
 
       {/* Reduced motion accessibility */}
       <style jsx global>{`
