@@ -35,6 +35,7 @@ discuss → plan → execute → verify
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
 | 19 | Page SEO Optimization | Pending | Meta tags + 关键词 |
 | 20 | Technical SEO | Pending | sitemap.xml + robots.txt |
+| 21 | LinkedIn Post Skill (Socratic) | Planned | Socratic questioning + RAG for LinkedIn posts |
 
 ---
 
@@ -177,6 +178,19 @@ Plans:
 
 ---
 
+### Phase 21: LinkedIn Post Skill (Socratic)
+
+**Goal:** Create a Claude Code skill that uses Socratic questioning to guide users through LinkedIn post generation, with RAG-powered content retrieval from WAG blog posts
+
+**Requirements:** REQ-01 (Skill invocation), REQ-02 (Socratic flow), REQ-03 (RAG), REQ-04 (Post structure), REQ-05 (WAG voice)
+
+**Plans:** 1/1 plan created
+
+Plans:
+- [ ] 21-01-PLAN.md — Create wag-linkedin-post SKILL.md with Socratic flow, RAG, and LinkedIn template
+
+---
+
 ## Milestone Verification
 
 | Metric | Target | Verification |
@@ -201,6 +215,7 @@ Plans:
 - [ ] About page with E-E-A-T
 - [ ] All pages SEO 90+
 - [ ] Technical SEO complete
+- [ ] LinkedIn Post Skill creates brand-aligned posts
 
 ---
 
@@ -208,18 +223,8 @@ Plans:
 
 运行 `/gsd:execute-phase 15` 执行 Phase 15 计划
 
-### Phase 21: LinkedIn Post Skill 开发 — 创建一个基于 Socratic 提问的 LinkedIn 帖子生成 skill，用于 WAG 获客
-
-**Goal:** [To be planned]
-**Requirements**: TBD
-**Depends on:** Phase 20
-**Plans:** 0 plans
-
-Plans:
-- [ ] TBD (run /gsd:plan-phase 21 to break down)
-
 ---
 
 *Roadmap created: 2026-03-20*
-*Updated: 2026-03-20 (Phase 16 plans created)*
+*Updated: 2026-03-20 (Phase 21 plan created)*
 *Competitor: chinafactorytours.com*
