@@ -1,214 +1,189 @@
-# Feature Research: SEO Automation
+# Feature Landscape: China Sourcing Services
 
-**Domain:** SEO Automation for B2B Corporate Website
-**Researched:** 2026-03-18
-**Confidence:** HIGH
+**Project:** Winning Adventure Global (WAG)
+**Researched:** 2026-03-20
+**Domain:** B2B China Sourcing & Import Consulting
 
-## Overview
+## Table Stakes Features
 
-This research identifies the essential features and components needed to achieve #1 ranking in Google Australia for B2B sourcing keywords ("epic sourcing", "china direct"). The SEO automation system is categorized into three pillars: Technical SEO, On-Page SEO, and Content/Off-Page SEO.
+Features that buyers expect as baseline. Missing any of these = product feels incomplete or untrustworthy.
 
----
+| Feature | Why Expected | Complexity | WAG Status |
+|---------|--------------|------------|------------|
+| **Supplier identification** | Core job-to-be-done; find manufacturers | Low | Implemented |
+| **Price negotiation** | Expect professional representation | Medium | Implemented |
+| **Quality control inspections** | Protect investment; prevent defects | Medium | Implemented |
+| **Factory verification** | Mitigate fraud risk; verify legitimacy | Medium | Implemented |
+| **Shipping coordination** | Complex international logistics | Medium | Implemented |
+| **English-Chinese translation** | Bridge communication gap | Low | Implemented |
+| **Documentation support** | Import paperwork, contracts | Medium | Implemented |
 
-## Feature Landscape
+## Competitive Feature Analysis
 
-### Table Stakes (Users Expect These)
+### Feature Comparison Matrix
 
-Core SEO features that are non-negotiable. Without these, the website cannot rank competitively.
+| Feature | ChinaDirect | GMAC | The Sourcing Co | Supplyia | EJET | WAG |
+|---------|-------------|------|----------------|----------|------|-----|
+| Factory visits | Yes | Yes | Yes | Yes | Yes | Yes |
+| Supplier verification | Yes | Yes | Yes | Yes | Yes | Yes |
+| QC inspections | Yes | Yes | Yes | Yes | Yes | Yes |
+| End-to-end importing | Yes | Partial | Yes | Yes | Yes | Yes |
+| **In-person experience** | Buying trip | Yes | Yes | Limited | Yes | **Yes (core)** |
+| **Australia-based support** | Yes | Partial | No | No | No | **Yes** |
+| **Virtual + physical options** | Limited | Limited | No | Yes | Yes | **Yes** |
+| **Ongoing relationship mgmt** | Limited | Yes | Yes | Limited | Limited | **Yes** |
 
-| Feature | Why Expected | Complexity | Notes |
-|---------|--------------|------------|-------|
-| **XML Sitemap** | Google needs roadmap to discover all pages. Missing sitemap = incomplete indexing | LOW | Next.js supports automatic sitemap generation via next-sitemap or built-in sitemap.ts |
-| **Robots.txt** | Controls crawler access. Missing = potential indexing issues | LOW | Standard file in public folder or dynamic generation |
-| **Meta Tags (Title, Description)** | Appears in SERP. Poor tags = low CTR | LOW | Next.js Metadata API handles this natively |
-| **Canonical URLs** | Prevents duplicate content penalties | LOW | Critical for pages with multiple URL variants (trailing slash, query params) |
-| **Structured Data (Schema Markup)** | Enables rich snippets, enhances SERP visibility | MEDIUM | JSON-LD for Organization, LocalBusiness, FAQ, Article |
-| **Open Graph / Social Meta** | Controls how content appears when shared on social media | LOW | Next.js Metadata API supports og: tags |
-| **Core Web Vitals Optimization** | Google ranking signal since 2021. Poor metrics = ranking penalty | MEDIUM | LCP < 2.5s, FID < 100ms, CLS < 0.1 |
-| **Mobile-Friendly Design** | Mobile-first indexing since 2019 | LOW | Already implemented in v1.0 |
-| **HTTPS/SSL** | Ranking factor (confirmed 2% weight by First Page Sage 2025) | LOW | Already implemented via Vercel |
-| **Fast Page Load Speed** | Affects both ranking and user experience | MEDIUM | Target: < 3s on 3G, < 1s on 4G |
+### Feature Gaps (Opportunities)
 
-### Differentiators (Competitive Advantage)
+| Feature | Why Missing in Market | WAG Opportunity |
+|---------|----------------------|----------------|
+| **Structured factory visit experience** | Most competitors offer ad-hoc visits; no defined "experience" | Design immersive, educational visits |
+| **Supplier scorecard/report cards** | Rarely standardized; buyers feel blind | Transparent scoring system |
+| **Ongoing supplier relationship coaching** | Transaction-focused; no "partnership" model | Long-term partnership approach |
+| **Verification dashboards** | Buyers unsure what was checked | Visual verification evidence |
 
-Features that set the website apart and drive competitive ranking for target keywords.
+## Differentiating Features (WAG's Edge)
 
-| Feature | Value Proposition | Complexity | Notes |
-|---------|-------------------|------------|-------|
-| **Keyword-Optimized Content Clusters** | Content depth signals E-E-A-T to Google. "epic sourcing" + "china direct" requires comprehensive pillar pages | MEDIUM | Build topic clusters around core keywords |
-| **FAQ Schema Implementation** | Enables featured snippets (Position 0). High CTR for B2B queries | MEDIUM | FAQ schema on service pages captures voice search |
-| **Local SEO (Australian)** | Targets Google.com.au specifically. Critical for "china direct" + Australia | MEDIUM | Google Business Profile, local citations, au-specific content |
-| **Backlink Acquisition Strategy** | Domain Authority (DA) is primary ranking factor. Target: DA 20+ | HIGH | Guest posting, industry partnerships, PR |
-| **Automated SEO Audits** | Continuous monitoring prevents ranking drops. Weekly scans catch issues | MEDIUM | Integration with tools like Screaming Frog, Ahrefs, or Semrush |
-| **Content Calendar & Automation** | Systematic blog production maintains freshness signals | MEDIUM | Monthly content pipeline with AI-assisted drafting |
-| **Internal Linking Architecture** | Distributes page authority, improves crawl efficiency | LOW | Hub-and-spoke model from pillar pages |
-| **Image Alt Text Automation** | Accessibility + SEO. Alt text as ranking signal for image search | LOW | Next.js Image component supports alt props |
+### 1. Factory Visit Experience (Core Differentiator)
 
-### Anti-Features (Commonly Requested, Often Problematic)
+**What it is:** Structured, guided visits that combine verification with education and relationship building
 
-Features that seem beneficial but can harm SEO performance.
+**Value proposition:**
+- Buyers learn to evaluate factories themselves (capacity building)
+- Physical verification with expert guidance
+- Relationship building with potential suppliers
+- Confidence in decision-making
 
-| Feature | Why Requested | Why Problematic | Alternative |
-|---------|---------------|-----------------|-------------|
-| **Keyword Stuffing** | Old-school ranking tactic | Google penalizes unnatural density. Focus on semantic relevance instead | LSI keywords, natural language, search intent alignment |
-| **Excessive Schema Markup** | "More data = better" assumption | Can trigger spam detection if not relevant to page content | Use only relevant schema types |
-| **Buying Low-Quality Backlinks** | Quick DA boost | Google Penguin catches this. Risk of manual penalty | Earn links through quality content |
-| **AI-Generated Content at Scale** | Fast content production | Google actively downranks low-quality AI content (March 2025 update) | Human-edited AI drafts, E-E-A-T focused |
-| **Too Many Redirects** | URL management convenience | Redirect chains slow crawl, pass less link equity | Clean URL structure, minimal redirects |
-| **Duplicate Content Across Pages** | Consistency, easier management | Google filters duplicates, dilutes ranking signals | Canonical tags, unique content per page |
+**Complexity:** High
+**Competitive gap:** None offer structured "experience" model
+**Recommendation:** Make this the hero feature
 
----
+### 2. Australian-Backed Professional Support
+
+**What it is:** Australia-based team providing local support, accountability, and cultural understanding
+
+**Value proposition:**
+- Someone accountable in same time zone
+- Understands Australian business expectations
+- Bridges cultural gaps both ways
+- Recourse if issues arise
+
+**Complexity:** Medium
+**Competitive gap:** Most competitors are China-based or virtual-only
+
+### 3. Verification Transparency
+
+**What it is:** Detailed, visual reports on supplier verification beyond basic audits
+
+**Value proposition:**
+- Evidence-based confidence
+- Understand exactly what was checked
+- Informed decision-making
+- Risk reduction
+
+**Complexity:** Medium
+**Competitive gap:** Most agents provide minimal documentation
+
+### 4. Ongoing Relationship Management
+
+**What it is:** Continued support after initial sourcing; supplier relationship stewardship
+
+**Value proposition:**
+- Long-term partnership model vs. one-off transaction
+- Proactive issue identification
+- Continuous improvement guidance
+- Supplier performance tracking
+
+**Complexity:** High
+**Competitive gap:** Most agents disappear after sale
+
+## Anti-Features (Explicitly Avoid)
+
+Features to NOT build or emphasize, based on competitor analysis and market positioning.
+
+| Anti-Feature | Why Avoid | What To Do Instead |
+|--------------|-----------|-------------------|
+| **Deep discount positioning** | Commoditizes service; attracts wrong customers; unsustainable margins | Emphasize value, trust, risk reduction |
+| **Volume-only focus** | Requires different economics; dilutes premium positioning | Stay selective, relationship-focused |
+| **Fully automated/self-service** | Loses human touch that drives trust; core differentiator | Maintain high-touch model |
+| **Transparent pricing on website** | May commoditize; premium services need consultative sales | Pricing upon inquiry |
+| **Vietnam/India diversification** | Dilutes China expertise; confuses positioning | China specialization is strength |
+| **DIY platform/tools** | Shifts risk to buyer; contradicts trust positioning | Full-service, accountable model |
 
 ## Feature Dependencies
 
 ```
-[XML Sitemap]
-    └──requires──> [Page Routes Defined]
-                       └──requires──> [Dynamic Routes Handler]
-
-[Schema Markup]
-    └──requires──> [JSON-LD Component]
-                       └──requires──> [Page-Specific Data]
-
-[Content Clusters]
-    └──requires──> [Internal Linking Structure]
-                       └──requires──> [Pillar Pages]
-
-[Backlink Strategy]
-    └──requires──> [Quality Content Production]
-                       └──requires──> [Content Calendar]
-
-[Local SEO]
-    └──requires──> [Google Business Profile]
-                       └──requires──> [NAP Consistency]
-                          └──requires──> [Local Citations]
-
-[Core Web Vitals]
-    └──requires──> [Image Optimization]
-                       └──requires──> [Next.js Image Component]
+Supplier Verification → Factory Visits (need verified list first)
+Factory Visits → Ongoing Relationship Management (visit builds relationship)
+Verification → Quality Control (audit informs inspection needs)
+Price Negotiation → Shipping Coordination (negotiated terms affect logistics)
 ```
 
-### Dependency Notes
+## MVP Recommendation
 
-- **Sitemap requires Page Routes:** All routes must be defined before sitemap generation
-- **Schema requires Page-Specific Data:** Each page needs structured data injection
-- **Content Clusters require Internal Linking:** Hub-and-spoke model needs cross-links
-- **Backlinks require Quality Content:** Linkable assets are prerequisite for outreach
-- **Local SEO requires NAP Consistency:** Name, Address, Phone must match across all citations
+### Phase 1: Foundation
+Priority features for initial launch:
 
----
+1. **Supplier identification and verification** - Core job-to-be-done
+2. **Price negotiation** - Expected baseline
+3. **Factory visits (structured)** - Primary differentiator
+4. **Quality control inspections** - Risk mitigation
+5. **English-Chinese translation support** - Communication enabler
 
-## MVP Definition
+### Phase 2: Expansion
+Add as business grows:
 
-### Launch With (v1.1 - SEO Automation)
+1. **Detailed verification reports** - Transparency differentiator
+2. **Shipping coordination** - Complete the transaction
+3. **Documentation support** - Reduce buyer burden
 
-Core technical SEO to establish foundation for ranking.
+### Phase 3: Differentiation
+Long-term competitive features:
 
-- [ ] **XML Sitemap Generation** — Automated, includes all pages, updates on build
-- [ ] **Robots.txt Configuration** — Allows Googlebot, blocks scrapers
-- [ ] **Core Metadata (Title, Description)** — Optimized for target keywords per page
-- [ ] **Canonical URLs** — Prevents duplicate content issues
-- [ ] **Schema Markup (Organization + LocalBusiness)** — Business identity in search
-- [ ] **Open Graph Tags** — Social sharing optimization
-- [ ] **Core Web Vitals Fixes** — Address LCP issues (currently 5.4s target <2.5s)
-- [ ] **HTTPS/SSL** — Already configured via Vercel
+1. **Supplier scorecard system** - Transparent evaluation
+2. **Ongoing relationship coaching** - Partnership positioning
+3. **Virtual + hybrid visit options** - Flexibility
 
-### Add After Validation (v1.2 - Content SEO)
+## Feature Complexity Matrix
 
-Content strategy implementation for keyword ranking.
+| Feature | Build Complexity | Market Value | Competitive Impact |
+|---------|-----------------|--------------|-------------------|
+| Supplier verification | Medium | High | Table stakes |
+| Factory visit experience | High | Very High | Core differentiator |
+| Verification transparency | Medium | High | Differentiation |
+| Relationship management | High | Medium | Differentiation |
+| Virtual visit options | Medium | Medium | Fills gap |
 
-- [ ] **FAQ Schema on Service Pages** — Target featured snippets
-- [ ] **Blog Content Calendar** — Systematic production (2-4 posts/month)
-- [ ] **Internal Linking Optimization** — Hub-and-spoke from pillar pages
-- [ ] **Image Alt Text Audit** — Manual + automated alt text
-- [ ] **Page-Specific Keyword Optimization** — Each page targets primary + secondary keywords
+## Pricing Model Options
 
-### Future Consideration (v1.3+ - Off-Page SEO)
+### Option A: Commission-based
+- 8-12% of product value
+- Aligns incentives with buyer savings
+- Standard in industry
+- **Pros:** Simple, aligns incentives
+- **Cons:** May encourage larger orders over quality matches
 
-Domain authority building for competitive ranking.
+### Option B: Retainer + Commission
+- Monthly/quarterly retainer for relationship access
+- Reduced commission on transactions
+- **Pros:** Predictable revenue, deeper relationships
+- **Cons:** Adds complexity; may scare small buyers
 
-- [ ] **Backlink Outreach Program** — Industry partnerships, guest posting
-- [ ] **Google Business Profile Optimization** — Local SEO for Australia
-- [ ] **Automated SEO Audits** — Weekly monitoring dashboard
-- [ ] **Content Clusters Expansion** — Comprehensive topic coverage
+### Option C: Project-based
+- Flat fee per sourcing project
+- Additional fees for visits, audits
+- **Pros:** Transparent; good for defined scopes
+- **Cons:** May not fit ongoing needs
 
----
+### Recommendation
+**Hybrid model:** Commission (8-10%) + fee for physical visits ($1,500-5,000 depending on scope)
+- Aligns incentives
+- Values physical presence appropriately
+- Scales with transaction size
 
-## Feature Prioritization Matrix
+## Source Notes
 
-| Feature | User Value | Implementation Cost | Priority | Dependencies |
-|---------|------------|---------------------|----------|--------------|
-| XML Sitemap | HIGH | LOW | P1 | Page routes defined |
-| Core Metadata | HIGH | LOW | P1 | None |
-| Canonical URLs | HIGH | LOW | P1 | None |
-| Schema Markup (Org) | HIGH | LOW | P1 | JSON-LD component |
-| Core Web Vitals Fix | HIGH | MEDIUM | P1 | Image optimization |
-| Robots.txt | MEDIUM | LOW | P1 | None |
-| Open Graph | MEDIUM | LOW | P1 | None |
-| FAQ Schema | MEDIUM | MEDIUM | P2 | Basic schema in place |
-| Content Calendar | HIGH | MEDIUM | P2 | Content strategy defined |
-| Internal Linking | HIGH | LOW | P2 | Pages exist |
-| Backlink Strategy | HIGH | HIGH | P3 | Content production |
-| Local SEO | MEDIUM | MEDIUM | P3 | Business info verified |
-| Automated Audits | MEDIUM | MEDIUM | P3 | Monitoring tools |
-
-**Priority key:**
-- P1: Must have for launch — Technical foundation
-- P2: Should have, add when possible — Content optimization
-- P3: Nice to have, future consideration — Off-page authority
-
----
-
-## Competitor Feature Analysis
-
-| Feature | Competitor A (AussieBiz) | Competitor B (ChinaConnect) | Our Approach |
-|---------|--------------------------|----------------------------|--------------|
-| XML Sitemap | Yes, basic | Yes, basic | Automated generation |
-| Schema Markup | No | Partial (Organization) | Full implementation (Org + LocalBusiness + FAQ) |
-| Blog Content | 2 posts/month | 1 post/month | 2-4 posts/month, quality-focused |
-| Core Web Vitals | Unknown | Unknown | Target 90+ scores |
-| Local SEO | Yes | No | Full optimization for .com.au |
-| Backlinks | Domain referrals only | Some guest posts | Systematic outreach |
-
----
-
-## SEO Automation System Components
-
-### Technical Components
-
-| Component | Purpose | Implementation |
-|-----------|---------|----------------|
-| **Sitemap Generator** | Auto-generate XML sitemap on build | next-sitemap or sitemap.ts |
-| **Schema Component** | Reusable JSON-LD injection | Custom Schema.tsx component |
-| **Metadata API** | Dynamic title/description per page | Next.js Metadata API |
-| **Image Optimizer** | WebP/AVIF conversion, lazy loading | next/image with provider config |
-| **Robots Handler** | Dynamic robots.txt | app/robots.ts route handler |
-
-### Content Components
-
-| Component | Purpose | Implementation |
-|-----------|---------|----------------|
-| **Blog System** | Content publication | Existing MDX + gray-matter |
-| **Content Calendar** | Editorial scheduling | Notion/Google Sheets integration |
-| **Keyword Tracker** | Ranking monitoring | API integration (Ahrefs/Semrush) |
-| **Audit Dashboard** | Issue detection | Automated Screaming Frog or custom |
-
----
-
-## Sources
-
-### Primary (HIGH confidence)
-- Backlinko On-Page SEO Guide (2026): https://backlinko.com/on-page-seo
-- First Page Sage Ranking Factors 2025: https://www.seoblog.com/google-ranking-factors-2025
-- Google Search Central Documentation: https://developers.google.com/search/docs
-
-### Secondary (MEDIUM confidence)
-- CognitiveSEO Algorithm Updates: https://cognitiveseo.com/signals/
-- TechnicalSEO.com Tools: https://technicalseo.com/
-- B2B Content Marketing Guide (Sprout Social): https://sproutsocial.com/insights/b2b-content-marketing/
-
----
-
-*Feature research for: SEO Automation - B2B Website*
-*Researched: 2026-03-18*
-*Project: WAG Website v1.1 SEO Automation*
+- ChinaDirect Sourcing: Feature analysis from website claims
+- GMAC Sourcing Asia: Service descriptions from official site
+- Industry pricing from multiple sourcing agent websites
+- Asia Manufacturing Index (Dezan Shira) for trends

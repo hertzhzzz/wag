@@ -1,208 +1,114 @@
-# Project Research Summary
+# Research Summary: Winning Adventure Global (WAG)
 
-**Project:** WAG Website SEO Automation
-**Domain:** B2B SEO for Australian Sourcing Companies
-**Researched:** 2026-03-18
-**Confidence:** HIGH
+**Domain:** B2B Sourcing/Consulting (Australia-China)
+**Research Date:** 2026-03-20
+**Overall Confidence:** HIGH (based on completed project documentation)
 
 ---
 
 ## Executive Summary
 
-This research analyzes two direct competitors in the Australian China sourcing market to replicate their SEO strategies:
+Winning Adventure Global (WAG) is an Australian B2B sourcing consultancy that helps Australian SMEs safely connect with verified China manufacturers. The company addresses a real market gap: Australian businesses lose 20-40% to middleman markups when sourcing from China, yet lack the language skills, cultural knowledge, and factory verification capabilities to buy direct. WAG's dual-country, bilingual team provides a full闭环 (closed-loop) service covering supplier research, factory visits, and post-visit analysis reports.
 
-1. **Epic Sourcing** (epicsourcing.com.au) - Webflow-based, content-heavy, AI-powered
-2. **ChinaDirect Sourcing** (chinadirectsourcing.com.au) - WordPress-based, testimonial-driven, award-winning
-
-Key finding: Both competitors use similar proven SEO patterns that WAG can replicate. The main differentiator is content volume and quality.
+The website is now complete (v1.4) with all technical SEO, content strategy, and UI optimizations shipped. The business is positioned to pursue organic growth through SEO content marketing and local Adelaide business networks. The primary strategic focus for v2 should be establishing industry vertical expertise and developing a systematic content pipeline to drive organic lead generation.
 
 ---
 
-## Competitor Analysis
+## Key Findings
 
-### Epic Sourcing (epicsourcing.com.au)
+### Market Opportunities
 
-**Platform:** Webflow
-**Domain:** .com.au (Australia-focused)
+| Opportunity | Evidence | Confidence |
+|-------------|----------|------------|
+| SME demand for direct factory sourcing | 20-40% cost savings vs. middlemen cited in Lean Canvas | HIGH |
+| Trust deficit in China sourcing | "Blind buying" pain point explicitly documented | HIGH |
+| Untapped Adelaide market | Local SEO focus, no direct competitors identified | MEDIUM |
 
-**Target Keywords:**
-- "China Sourcing Agent Australia"
-- "Vietnam Sourcing"
-- "Import from China to Australia"
-- "China sourcing agents"
+### Competitive Advantages
 
-**Content Strategy:**
-- Blog posts under /post/ directory
-- Service pages: Product Sourcing, Product Development, Ecommerce, Supply Chain Management
-- FAQ section on homepage
-- AI product search tool (epicsourcing.ai)
-- Canton Fair presence/updates
+1. **Bilingual Dual-Country Team** - One operator in Australia, one in China; structurally difficult to replicate
+2. **Established Factory Network** - Years of relationship-building required for equivalent trust
+3. **Full-Stack Service** - Research, matching, visits, and reports; not just referral
 
-**SEO Tactics:**
-- Long-tail keyword blog posts
-- FAQ schema (likely)
-- Internal linking between services
-- Clear CTAs (Book a discovery call)
-- Trust signals (team photos, client testimonials)
+### Core User Pain Points
 
-**Strengths:**
-- Modern website design
-- Content-first approach
-- AI innovation (photo-find product)
-- Strong service page hierarchy
+| Pain Point | Impact | Addressed By |
+|------------|--------|--------------|
+| Middleman markup (20-40%) | Direct cost harm | Factory-direct pricing UVP |
+| Cannot verify factory reality | High-risk decisions | On-ground inspection service |
+| Language/cultural barriers | Negotiation failures, contract disputes | Bilingual team |
 
 ---
 
-### ChinaDirect Sourcing (chinadirectsourcing.com.au)
+## Strategic Recommendations
 
-**Platform:** WordPress with SEO plugins
-**Domain:** .com.au (Australia-focused)
+### Priority 1: Establish Industry Vertical Focus
+Target 2-3 industries (recommended: beauty/medical devices/agricultural drones per Lean Canvas). Deep vertical expertise creates switch costs and word-of-mouth referrals.
 
-**Target Keywords:**
-- "Import from China to Australia"
-- "China Buying Trips"
-- "Importing Master Class"
-- "End-to-end importing"
+### Priority 2: Systematic Content Pipeline
+Create 10+ blog posts targeting commercial-intent keywords around China sourcing. Video content featuring real factory visit case studies would significantly boost credibility.
 
-**Content Strategy:**
-- Video content series (YouTube integration)
-- Extensive client testimonials (10+ video/personal)
-- Award badges (HKABA, Stevie Awards, Telstra)
-- "China Buying Trips" - unique offering
-- "Importing Master Class" - educational content
+### Priority 3: Optimize Discovery Call Conversion
+Current funnel relies on Discovery Calls; ensure landing page clearly communicates the 20-40% savings potential and risk reduction.
 
-**SEO Tactics:**
-- WordPress + Yoast SEO
-- Category-based content organization
-- Strong E-E-A-T signals (awards, testimonials, years in business)
-- Backlinks from business associations
-- Local SEO (Australian office, local presence)
-
-**Strengths:**
-- 30,000+ supplier database
-- Award-winning (multiple)
-- Strong social proof
-- Video content strategy
+### Priority 4: Build Case Study Portfolio
+First 5 client case studies are critical for MVP validation. Document outcomes (factories visited, savings achieved, quality improvements).
 
 ---
 
-## Key Findings for WAG to Replicate
+## v2 Requirements (Deferred)
 
-### 1. Keyword Strategy
-
-| Competitor | Target Keywords |
-|------------|-----------------|
-| Epic Sourcing | "China Sourcing Agent Australia", "Vietnam Sourcing" |
-| ChinaDirect | "Import from China to Australia", "China Buying Trips" |
-
-**Recommended for WAG:**
-- "China sourcing agent Australia"
-- "Verified China suppliers Australia"
-- "Australia China sourcing company"
-- "Import from China to Australia" (competitive but worth targeting)
-
-### 2. Content Strategy
-
-Both competitors have:
-- Regular blog posts (how-to guides)
-- FAQ content
-- Service page optimization
-- Educational content (guides, beginner content)
-
-**WAG should create:**
-- How-to guides for importing from China
-- Verification/quality control guides
-- Australia-specific import tips
-- FAQ section
-
-### 3. Technical SEO
-
-| Feature | Epic | ChinaDirect | WAG Status |
-|---------|------|-------------|------------|
-| XML Sitemap | Likely auto | Likely auto | Needs implementation |
-| Schema Markup | Likely | Likely | Needs implementation |
-| Mobile Responsive | Yes | Yes | ✅ Done (v1.0) |
-| PageSpeed | Good | Moderate | ⚠️ LCP 5.4s needs fix |
-| .com.au domain | Yes | Yes | ✅ Done |
-
-### 4. Local SEO
-
-Both competitors have:
-- .com.au domains
-- Australian business context
-- Google Business Profile (implied)
-- Local citations
-
-**WAG should:**
-- Claim/optimize Google Business Profile
-- Get listed in Australian directories
-- Build local citations
-
-### 5. Backlink Strategy
-
-**Epic Sourcing:** Likely guest posting, Canton Fair partnerships
-**ChinaDirect:** Business associations (HKABA), awards, testimonials
-
-**WAG should:**
-- Industry partnerships
-- Guest posting on related sites
-- Business directory listings
+| Category | Item | Priority |
+|----------|------|----------|
+| Content | 10+ additional blog posts | HIGH |
+| Content | Video case study series | HIGH |
+| SEO | FAQ schema on all pages | MEDIUM |
+| SEO | Breadcrumb schema | LOW |
+| Performance | PageSpeed 90+ | MEDIUM |
 
 ---
 
-## Recommended Roadmap
+## Implications for Roadmap
 
-### Phase 1: Technical SEO Foundation
-- Fix LCP (5.4s → <2.5s)
-- Implement XML sitemap
-- Add Schema markup (Organization, LocalBusiness)
-- Fix technical SEO issues
+Based on current project state:
 
-### Phase 2: Content Strategy Implementation
-- Create 5-10 how-to blog posts (competitor-style)
-- Add FAQ section
-- Optimize service pages for target keywords
-- Add internal linking structure
+1. **Foundation Complete** - All v1 requirements shipped, website live at winningadventure.com.au
+2. **SEO Infrastructure Ready** - Technical SEO complete, content foundation laid
+3. **Next Focus Area** - Industry vertical specialization + content expansion
 
-### Phase 3: Authority Building
-- Set up Google Business Profile
-- Build backlinks via guest posting
-- Get listed in Australian directories
-- Build domain authority
-
----
-
-## What to Copy from Competitors
-
-### From Epic Sourcing:
-1. Blog post structure (how-to guides)
-2. Service page hierarchy
-3. FAQ implementation
-4. Clear CTAs
-5. Modern design approach
-
-### From ChinaDirect:
-1. Client testimonials (video + text)
-2. Awards/trust badges
-3. Educational content series
-4. "Buying Trip" concept (unique offering)
-5. WordPress SEO best practices
+**Suggested v2 Phase Structure:**
+- Phase A: Industry vertical deep-dive (2-3 focus industries)
+- Phase B: Content expansion (10+ blog posts + video series)
+- Phase C: Advanced SEO (FAQ schema, hreflang if needed)
+- Phase D: Performance optimization (PageSpeed 90+)
 
 ---
 
 ## Confidence Assessment
 
-| Area | Confidence | Notes |
-|------|------------|-------|
-| Competitor Analysis | HIGH | Direct website analysis |
-| Keyword Strategy | HIGH | From site content analysis |
-| Content Strategy | HIGH | Clear patterns from both sites |
-| Technical SEO | HIGH | Standard patterns |
-| Backlink Strategy | MEDIUM | Inferred from site authority |
-
-**Overall confidence:** HIGH
+| Area | Level | Notes |
+|------|-------|-------|
+| Market Opportunity | HIGH | Pain points clearly documented, validated by Lean Canvas |
+| Competitive Position | HIGH | Dual-country team is defensible moat |
+| Technical Stack | HIGH | Next.js 16.1 stable, all requirements met |
+| Growth Strategy | MEDIUM | Direction clear, execution details TBD |
 
 ---
 
-*Research completed: 2026-03-18*
-*Ready for requirements: yes*
+## Open Questions
+
+- What are the actual conversion rates from Discovery Call to paid engagement?
+- Is the Adelaide market sufficient for near-term growth, or is national expansion needed?
+- How will factory commission disclosure requirements affect client relationships?
+
+---
+
+## Source Documents
+
+| Document | Key Information |
+|----------|-----------------|
+| PROJECT.md | Tech stack, completed milestones, current status |
+| MILESTONES.md | Phase-by-phase completion history |
+| REQUIREMENTS.md | v1/v2 requirements traceability |
+| ROADMAP.md | Phase index and coverage mapping |
+| WAG-LEAN-CANVAS.md | Business model, pain points, UVP, customer segments |

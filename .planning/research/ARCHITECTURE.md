@@ -1,791 +1,344 @@
-# Vercel Deployment Architecture
+# Architecture & Implementation Decisions
 
-**Project:** WAG Website v1.1
-**Researched:** 2026-03-17
-**Domain:** Next.js + Vercel Deployment Integration
-**Confidence:** HIGH
+**Project:** Winning Adventure Global (WAG)
+**Domain:** B2B Sourcing/Consulting Service Website
+**Researched:** 2026-03-20
+**Confidence:** MEDIUM
 
----
+## Executive Summary
 
-## Part 1: Responsive Design Architecture (v1.0)
+WAG 作为一个 B2B 采购咨询服务网站，其技术架构需要在SEO表现、转化率优化和潜在客户追踪之间取得平衡。基于研究，最佳实践包括：采用 Next.js App Router 实现服务端渲染以提升SEO，使用结构化数据增强搜索可见性，通过清晰的转化路径设计提升询盘表单提交率，以及部署全面的分析追踪系统来衡量营销效果。
 
-**Original Date:** 2026-03-11
-
-### 架构概述
-
-**总体架构:** 基于 Tailwind CSS 移动优先的响应式组件系统
-
-**核心特征:**
-- Tailwind CSS 默认断点系统 (sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px)
-- 移动优先样式策略: 默认样式针对小屏幕，通过断点前缀逐步增强
-- 响应式组件封装: 组件内部处理自身响应式逻辑，父组件无需关心具体实现
-- 容器查询 (Container Queries): 组件级响应式布局，独立于视口尺寸
-
-### 组件边界
-
-#### 页面层 (Page Layer)
-
-**职责:** 页面布局骨架，响应式容器控制
-
-**位置:** `frontend/app/*.tsx` (各页面)
-
-**响应式职责:**
-- 主容器宽度控制 (`max-w-*`, `mx-auto`)
-- 页面级间距管理 (`py-*, px-*`)
-- 网格/弹性布局基础 (`grid`, `flex`)
-- 跨断点内容顺序控制 (`order-*`)
-
-#### 区块组件层 (Section Components)
-
-**职责:** 页面内独立功能区块的响应式布局
-
-**位置:** `frontend/app/components/*.tsx`
-
-**响应式职责:**
-- 区块内元素排版 (`flex-col` mobile → `flex-row` desktop)
-- 字体大小缩放 (`text-xl md:text-2xl lg:text-3xl`)
-- 间距自适应 (`gap-4 md:gap-6 lg:gap-8`)
-- 隐藏/显示控制 (`hidden md:block`)
-
-#### 基础组件层 (Primitive Components)
-
-**职责:** 可复用的响应式 UI 元素
-
-**位置:** `frontend/app/components/ui/` 或共享组件库
-
-**响应式职责:**
-- 按钮尺寸适配 (`px-4 py-2 md:px-6 md:py-3`)
-- 输入框响应式宽度 (`w-full md:w-auto`)
-- 触摸目标尺寸保障 (`min-h-[44px]` 移动端可点击)
-- 图标缩放 (`w-5 h-5 md:w-6 md:h-6`)
-
-### 响应式模式
-
-#### 模式一: 移动优先列布局
-
-```tsx
-// 默认单列 → 桌面多列
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  {/* 内容 */}
-</div>
-```
-
-#### 模式二: 反向列布局
-
-```tsx
-// 移动端: 视觉在下、文本在上
-// 桌面端: 文本在左、视觉在右
-<div className="flex flex-col-reverse md:flex-row gap-8">
-  <div className="md:w-1/2">{/* 文本 */}</div>
-  <div className="md:w-1/2">{/* 视觉 */}</div>
-</div>
-```
-
-#### 模式三: 触摸友好间距
-
-```tsx
-// 移动端增大触摸目标
-<button className="
-  px-4 py-3           /* 移动端更大 */
-  md:px-4 md:py-2     /* 桌面端正常 */
-  min-h-[44px]        /* 最小触摸高度 */
-">
-  操作
-</button>
-```
-
----
-
-## Part 2: Vercel Deployment Architecture (v1.1)
-
-### Executive Summary
-
-Vercel is the native deployment platform for Next.js and provides zero-config integration. The WAG website's existing Next.js 14.2 App Router architecture deploys to Vercel with minimal configuration. Key integration points: automatic detection, build command, environment variables, and custom domain setup.
-
-### Vercel Integration with Next.js
-
-#### Automatic Detection
-
-Vercel automatically detects Next.js projects by identifying `package.json` with `next` dependency. No manual configuration required.
-
-| Detection Method | Status |
-|-----------------|--------|
-| package.json with "next" | ✅ Detected |
-| next.config.js | ✅ Present |
-| App Router structure | ✅ Present |
-
-#### Build Configuration
-
-The existing `vercel.json` specifies Node 20.x:
-
-```json
-{
-  "build": {
-    "env": {
-      "NODE_VERSION": "20.x"
-    }
-  }
-}
-```
-
-**Build Command:** `next build` (Vercel defaults to this for Next.js)
-
-**Output:** Vercel handles serverless function generation automatically - no output directory needed.
-
-#### Framework Preset
-
-Vercel automatically uses `nextjs` framework preset when detected, which configures:
-- Next.js build pipeline
-- ISR (Incremental Static Regeneration) support
-- API routes as serverless functions
-- Image optimization
-
-### Architecture Patterns
-
-#### Deployment Flow
-
-```
-Git Push → Vercel Detect → Build (next build) → Serverless Functions → CDN
-```
-
-#### Component Mapping
-
-| Next.js Component | Vercel Equivalent |
-|-------------------|-------------------|
-| Pages Router | Serverless functions |
-| API Routes | Serverless endpoints |
-| Static pages | Edge network (CDN) |
-| Images (next/image) | Vercel Image Optimization |
-| Dynamic routes | On-demand serverless |
-
-### Environment Variables
-
-**Required for WAG:**
-
-| Variable | Source | Status |
-|----------|--------|--------|
-| NEXT_PUBLIC_SUPABASE_URL | .env.local | Needed |
-| NEXT_PUBLIC_SUPABASE_ANON_KEY | .env.local | Needed |
-| SUPABASE_SERVICE_ROLE_KEY | .env.local | Needed |
-| RESEND_API_KEY | .env.local | Needed |
-
-**Configuration:** Set in Vercel Dashboard → Project → Environment Variables
-
-### Integration Points
-
-#### 1. Supabase Integration
-- Connection string via environment variables
-- Auth cookies handled client-side
-- Database queries go direct from client (Supabase handles)
-
-#### 2. Resend (Email)
-- API key in environment variable
-- Server-side API route triggers send
-- No additional configuration needed
-
-#### 3. Static Assets
-- `/public` folder deployed to CDN
-- Images use `next/image` with Unsplash remote pattern (already configured)
-
-### Custom Domain Setup
-
-#### Domain: winningadventure.com.au
-
-**DNS Configuration Required:**
-
-| Record Type | Name | Value |
-|-------------|------|-------|
-| A | @ | 76.76.21.21 |
-| CNAME | www | cname.vercel-dns.com |
-
-**Alternative (recommended):**
-- Add domain in Vercel Dashboard
-- Vercel provides nameservers or DNS records
-- SSL certificate auto-provisioned
-
-#### SSL/TLS
-
-- Automatic with Vercel
-- Let's Encrypt certificate provisioned
-- HTTP → HTTPS redirect automatic
-
-### Production Considerations
-
-#### Build Optimization
-
-Current `next.config.js` settings are production-ready:
-
-```javascript
-const nextConfig = {
-  reactStrictMode: true, // ✅ Enabled
-  // Output handled by Vercel
-}
-```
-
-#### Performance
-
-| Feature | Vercel Support |
-|---------|---------------|
-| Edge Functions | ✅ Available |
-| ISR/Revalidation | ✅ Supported |
-| Image Optimization | ✅ Built-in |
-| Caching | ✅ Automatic CDN |
-
-#### Monitoring
-
-- Vercel Dashboard provides:
-  - Deployment status
-  - Function invocation logs
-  - Performance metrics
-  - Serverless function duration
-
-### Changes Required for Deployment
-
-#### Minimal - Already Complete
-
-1. ✅ `vercel.json` exists with Node 20.x
-2. ✅ `next.config.js` properly configured
-3. ✅ `package.json` has build script
-
-#### To Complete
-
-1. **Environment Variables:** Add to Vercel project settings
-2. **Custom Domain:** Configure DNS records
-3. **Deploy:** Push to GitHub/GitLab and connect to Vercel
-
-#### Recommended Additions
-
-**vercel.json (enhanced):**
-
-```json
-{
-  "build": {
-    "env": {
-      "NODE_VERSION": "20.x"
-    }
-  },
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
-    }
-  ]
-}
-```
-
-### Scalability
-
-| Scale Level | Vercel Handles |
-|--------------|---------------|
-| 100 users | Auto |
-| 10K users | Auto (CDN + Serverless) |
-| 100K users | Auto + paid plan |
-
-**Note:** WAG website is primarily static content - scales infinitely via CDN.
-
----
-
-## Part 3: SEO Automation Architecture (v1.1)
-
-### Executive Summary
-
-This section outlines the recommended architecture for integrating SEO automation into the existing WAG website (Next.js 14.2 + Tailwind + Vercel). The architecture covers four key pillars: content pipeline, analytics/monitoring, automation workflows, and structured data management.
+## Recommended Architecture
 
 ### System Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    SEO Automation Layer                      │
+│                        CDN (Vercel Edge)                    │
 ├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────┐ │
-│  │ Content Pipeline│  │  Analytics      │  │ Monitoring  │ │
-│  │ (MDX + Scripts) │  │  (Vercel)       │  │ (GSC API)   │ │
-│  └────────┬────────┘  └────────┬────────┘  └──────┬──────┘ │
-│           │                     │                   │        │
-├───────────┴─────────────────────┴───────────────────┴────────┤
-│                      Next.js Application                      │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  Pages: /, /services, /about, /resources, /enquiry  │    │
-│  │  Components: SEO metadata, Schema.org, Sitemap       │    │
-│  └─────────────────────────────────────────────────────┘    │
-├─────────────────────────────────────────────────────────────┤
-│                       Data Layer                             │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐                   │
-│  │ MDX Files │  │ Config   │  │ Env Vars │                   │
-│  └──────────┘  └──────────┘  └──────────┘                   │
+│                     Next.js 16 App Router                   │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐       │
+│  │  Home   │  │Services │  │  About  │  │Enquiry  │       │
+│  │  (/)    │  │/services│  │ /about  │  │/enquiry │       │
+│  └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘       │
+│       │            │            │            │             │
+│  ┌────┴────────────┴────────────┴────────────┴────┐       │
+│  │              Server Components                  │       │
+│  │     (Static Generation + ISR for performance)   │       │
+│  └─────────────────────┬───────────────────────────┘       │
+│                        │                                    │
+│  ┌─────────────────────┴───────────────────────────┐       │
+│  │              API Routes (Route Handlers)          │       │
+│  │   /api/enquiry    /api/newsletter                 │       │
+│  └─────────────────────┬───────────────────────────┘       │
+│                        │                                    │
+│  ┌─────────────────────┴───────────────────────────┐       │
+│  │           Third-party Integrations               │       │
+│  │   Nodemailer  │  Upstash Redis  │  Google Analytics│       │
+│  └───────────────────────────────────────────────────┘       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Component Responsibilities
+### Page Structure
 
-| Component | Responsibility | Typical Implementation |
-|-----------|----------------|------------------------|
-| Sitemap Generator | Auto-generate sitemap.xml and robots.txt | `next-sitemap` package, runs post-build |
-| Analytics Collector | Track Web Vitals, page performance | `@vercel/analytics` SDK |
-| Schema Manager | Generate and inject JSON-LD structured data | Custom React components |
-| Content Pipeline | Process MDX content, generate routes | gray-matter + Next.js dynamic routes |
-| Monitoring Service | Fetch GSC data, track rankings | Google Search Console API + GitHub Actions |
-| Automation Runner | Schedule SEO tasks, alerts | GitHub Actions scheduled workflows |
+| Page | Purpose | Rendering Strategy | Key Conversion Element |
+|------|---------|-------------------|----------------------|
+| `/` | 品牌展示 + 价值主张 | SSG (Static) | 服务概述 CTA |
+| `/services` | 服务详情 | SSG + ISR | 服务卡片 CTA |
+| `/about` | 信任建立 | SSG | 团队/资质展示 |
+| `/resources` | 博客/资讯 | SSG (Dynamic) | Newsletter 订阅 |
+| `/enquiry` | 询盘表单 | SSR (for rate limiting) | 核心转化点 |
 
-### Recommended Project Structure
+## SEO Strategy
 
-```
-wag/
-├── app/
-│   ├── api/
-│   │   └── seo/
-│   │       └── route.ts          # SEO API endpoints (rank tracking)
-│   ├── resources/
-│   │   └── [slug]/
-│   │       └── page.tsx         # Blog posts with SEO metadata
-│   ├── components/
-│   │   └── seo/
-│   │       ├── metadata.tsx     # Dynamic metadata generation
-│   │       ├── schema.tsx        # Schema.org JSON-LD components
-│   │       └── sitemap.tsx      # Sitemap generation
-│   ├── lib/
-│   │   ├── seo/
-│   │   │   ├── config.ts        # SEO configuration
-│   │   │   ├── analytics.ts     # Analytics utilities
-│   │   │   └── monitoring.ts     # GSC integration
-│   │   └── content.ts           # MDX content processing
-│   └── layout.tsx               # Root layout with SEO providers
-├── content/
-│   └── blog/                    # MDX blog posts
-│       └── *.mdx
-├── scripts/
-│   ├── generate-sitemap.ts      # Standalone sitemap generation
-│   ├── fetch-rankings.ts        # GSC ranking fetcher
-│   └── seo-audit.ts             # Automated SEO audit
-├── .github/
-│   └── workflows/
-│       ├── seo-monitor.yml      # Scheduled SEO monitoring
-│       └── content-deploy.yml  # Content deployment pipeline
-├── next-sitemap.config.js       # Sitemap configuration
-└── public/
-    └── robots.txt                # Generated by next-sitemap
-```
+### On-Page SEO Implementation
 
-### Structural Rationale
+**Next.js Metadata API for SEO:**
 
-- **`app/components/seo/`**: Centralized SEO components for reusability across pages
-- **`app/lib/seo/`**: SEO utilities and configuration, separated from UI logic
-- **`scripts/`**: Standalone Node.js scripts for automation tasks (run outside Next.js build)
-- **`.github/workflows/`**: GitHub Actions for automated SEO tasks and monitoring
-- **`content/blog/`**: MDX content with frontmatter for SEO metadata
-
-### Architectural Patterns
-
-#### Pattern 1: Build-Time Sitemap Generation
-
-**What:** Generate sitemap.xml and robots.txt during the Next.js build process using `next-sitemap`.
-
-**When to use:** Always - this is the foundation for search engine crawling.
-
-**Trade-offs:**
-- Pros: Zero runtime overhead, works with static export
-- Cons: Requires rebuild for new content (use ISR or on-demand revalidation to mitigate)
-
-**Example:**
-```javascript
-// next-sitemap.config.js
-module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://www.winningadventure.com.au',
-  generateRobotsTxt: true,
-  generateIndexSitemap: false,
-  outDir: './public',
-}
-```
-
-```json
-// package.json
-{
-  "scripts": {
-    "postbuild": "next-sitemap"
-  }
-}
-```
-
-#### Pattern 2: Server-Side SEO Metadata
-
-**What:** Generate page metadata (title, description, og:image) dynamically on the server using Next.js App Router's Metadata API.
-
-**When to use:** For all pages with dynamic content or when metadata needs to be computed.
-
-**Trade-offs:**
-- Pros: SEO-friendly, no client-side JavaScript needed for metadata
-- Cons: Requires server rendering or ISR
-
-**Example:**
 ```typescript
 // app/services/page.tsx
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'China Sourcing Services | Winning Adventure Global',
-  description: 'Professional China sourcing and factory verification services...',
+export const metadata = {
+  title: 'China Factory Sourcing Services | Winning Adventure Global',
+  description: 'Expert China sourcing solutions for Australian businesses. Verified manufacturers, factory visits, and quality control services.',
+  keywords: ['China sourcing', 'factory visits Australia', 'supplier verification', 'manufacturing China'],
   openGraph: {
-    title: 'China Sourcing Services',
-    description: 'Professional China sourcing...',
-    images: ['/og/services.jpg'],
+    title: 'China Factory Sourcing Services',
+    description: 'Connect with verified Chinese manufacturers',
+    type: 'website',
   },
-}
+};
 ```
 
-#### Pattern 3: JSON-LD Schema Components
+### Technical SEO Checklist
 
-**What:** Create reusable React components that inject Schema.org structured data as JSON-LD.
+| Item | Implementation | Status |
+|------|----------------|--------|
+| Meta tags | Next.js Metadata API | Required |
+| Canonical URLs | Metadata API `alternates.canonical` | Required |
+| robots.txt | `app/robots.ts` | Required |
+| sitemap.xml | `app/sitemap.ts` | Required |
+| Structured data | JSON-LD for Service/Organization | Required |
+| hreflang | If multilingual needed | Future |
+| Core Web Vitals | Image optimization, font loading | Ongoing |
 
-**When to use:** For pages that can benefit from rich search results (LocalBusiness, FAQ, Article).
+### Local SEO (Australia Market)
 
-**Trade-offs:**
-- Pros: Enables rich snippets in search results, improves CTR
-- Cons: Additional development time, requires validation
+For B2B sourcing targeting Australian businesses:
 
-**Example:**
+1. **Google Business Profile** - Claim and optimize (future)
+2. **Local keywords** - "Australia China sourcing", "Australian importer China"
+3. **Location signals** - Australian hosting consideration (Vercel Edge handles this)
+4. **Local citations** - Industry directories, trade associations
+
+### B2B-Specific SEO Keywords
+
+| Keyword Type | Examples | Target Pages |
+|--------------|----------|-------------|
+| Service | "China sourcing agent", "factory visit China" | /services |
+| Industry | "Australia manufacturing China", "import from China Australia" | /, /about |
+| Problem | "find reliable China supplier", "China manufacturer verification" | /services |
+| Location | "China sourcing Australia", "Australian company China manufacturing" | / |
+
+### Content Strategy for SEO
+
+1. **Service pages** - Comprehensive service descriptions with keywords
+2. **Blog/Resources** - Industry insights, China sourcing guides (content-driven SEO)
+3. **Case studies** - Success stories with client permission
+4. **FAQ section** - Common questions targeting search queries
+
+## Conversion Optimization
+
+### Conversion Path Design
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                    Conversion Funnel                     │
+├──────────────────────────────────────────────────────────┤
+│                                                          │
+│  Awareness          Interest          Decision          │
+│  ┌────────┐        ┌────────┐        ┌────────┐        │
+│  │  Home  │───────▶│Services │──────▶│Enquiry │        │
+│  │  Page  │        │  Page   │        │  Form  │        │
+│  └────────┘        └────────┘        └────────┘        │
+│       │                                    │            │
+│       │              ┌────────┐            │            │
+│       └─────────────▶│ About  │◀───────────┘            │
+│                       │  Page  │   Trust building         │
+│                       └────────┘                         │
+│                                                          │
+│                      Action                              │
+│                    ┌────────┐                            │
+│                    │ Submit │                            │
+│                    │ Form   │                            │
+│                    └────────┘                            │
+└──────────────────────────────────────────────────────────┘
+```
+
+### CTA Placement Strategy
+
+| Page | Primary CTA | Secondary CTA | CTA Text |
+|------|------------|--------------|----------|
+| Home | Above fold | After hero | "Start Your Sourcing Journey" |
+| Services | Each service card | Bottom of page | "Get a Quote" |
+| About | After trust signals | Bottom | "Contact Us" |
+| Enquiry | Form submit | - | "Submit Enquiry" |
+
+### Form Optimization
+
+**Enquiry Form Best Practices:**
+
+1. **Minimal fields** - Name, Email, Company, Message (avoid over-collection)
+2. **Clear labels** - No placeholder-as-label pattern
+3. **Validation feedback** - Inline, real-time
+4. **Trust signals** - Privacy note, response time expectation
+5. **Submit button** - Action-oriented, "Send Enquiry" not "Submit"
+
 ```typescript
-// components/seo/schema/local-business.tsx
-'use client'
-
-interface LocalBusinessSchemaProps {
-  name: string
-  description: string
-  url: string
-  telephone: string
-  email: string
-  address: {
-    streetAddress: string
-    addressLocality: string
-    addressRegion: string
-    postalCode: string
-    addressCountry: string
-  }
-  geo: {
-    latitude: number
-    longitude: number
-  }
-  openingHours: string[]
-}
-
-export function LocalBusinessSchema({
-  name,
-  description,
-  url,
-  telephone,
-  email,
-  address,
-  geo,
-  openingHours,
-}: LocalBusinessSchemaProps) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name,
-    description,
-    url,
-    telephone,
-    email,
-    address: {
-      '@type': 'PostalAddress',
-      ...address,
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      ...geo,
-    },
-    openingHours,
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
+// app/enquiry/page.tsx form fields
+const formFields = [
+  { name: 'name', label: 'Your Name', type: 'text', required: true },
+  { name: 'email', label: 'Email Address', type: 'email', required: true },
+  { name: 'company', label: 'Company Name', type: 'text', required: false },
+  { name: 'message', label: 'How can we help?', type: 'textarea', required: true },
+];
 ```
 
-#### Pattern 4: On-Demand Revalidation for Sitemaps
+### Trust Signals for B2B
 
-**What:** Use Next.js ISR (Incremental Static Regeneration) with on-demand revalidation to update sitemaps without full rebuilds.
+| Element | Placement | Purpose |
+|---------|-----------|---------|
+| Years in business | Home, About | Credibility |
+| Service scope | Home, Services | Clarity |
+| Process description | Services | Manage expectations |
+| Contact information | All pages | Accessibility |
+| Privacy assurance | Enquiry form | Anxiety reduction |
 
-**When to use:** When content is added frequently and you need sitemaps to reflect changes quickly.
+## Analytics & Tracking
 
-**Trade-offs:**
-- Pros: Fast sitemap updates, no full rebuild needed
-- Cons: More complex setup, requires API route
+### Recommended Tracking Stack
 
-**Example:**
+| Tool | Purpose | Implementation |
+|------|---------|---------------|
+| Google Analytics 4 | Traffic, behavior, conversions | gtag.js or Next.js Analytics |
+| Google Search Console | SEO performance | DNS verification |
+| Conversion tracking | Form submissions | GA4 events |
+| Heatmaps (optional) | UX insights | Hotjar/Clarity (future) |
+
+### GA4 Event Tracking Setup
+
 ```typescript
-// app/api/revalidate/route.ts
-import { NextRequest, NextResponse } from 'next/server'
-import { revalidatePath } from 'next/cache'
-
-export async function POST(request: NextRequest) {
-  const secret = request.nextUrl.searchParams.get('secret')
-
-  if (secret !== process.env.REVALIDATION_SECRET) {
-    return NextResponse.json({ message: 'Invalid token' }, { status: 401 })
+// lib/analytics.ts
+export const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', eventName, parameters);
   }
+};
 
-  revalidatePath('/sitemap.xml')
-  revalidatePath('/robots.txt')
+// Usage in components
+trackEvent('enquiry_form_submit', {
+  method: 'website',
+  location: 'enquiry_page',
+});
+```
 
-  return NextResponse.json({ revalidated: true })
+### Key Events to Track
+
+| Event | Trigger | Goal |
+|-------|---------|------|
+| `page_view` | Page load | Default GA4 |
+| `enquiry_form_view` | Enquiry page visit | Conversion funnel |
+| `enquiry_form_start` | First field focus | Form engagement |
+| `enquiry_form_submit` | Form submission | Primary conversion |
+| `enquiry_form_error` | Validation error | Form optimization |
+| `newsletter_signup` | Newsletter submit | Secondary conversion |
+| `cta_click` | CTA button click | Engagement |
+| `service_view` | Service page view | Interest signals |
+
+### Conversion Measurement
+
+```typescript
+// app/api/enquiry/route.ts - Track conversion on successful submission
+export async function POST(request: Request) {
+  // ... form processing
+
+  // After successful submission
+  trackEvent('conversion', {
+    event_category: 'enquiry',
+    event_label: 'form_submit',
+  });
+
+  return Response.json({ success: true });
 }
 ```
 
-#### Pattern 5: GitHub Actions SEO Monitoring
-
-**What:** Scheduled GitHub Actions workflows that fetch SEO data and send alerts.
-
-**When to use:** For ongoing SEO monitoring, ranking tracking, and automated audits.
-
-**Trade-offs:**
-- Pros: Free, integrates with GitHub, can send notifications
-- Cons: Limited execution time (6 hours max), rate limits
-
-**Example:**
-```yaml
-# .github/workflows/seo-monitor.yml
-name: SEO Monitor
-
-on:
-  schedule:
-    - cron: '0 8 * * *'  # Daily at 8 AM
-  workflow_dispatch:
-
-jobs:
-  ranking-check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Fetch GSC Rankings
-        run: node scripts/fetch-rankings.js
-        env:
-          GSC_CLIENT_EMAIL: ${{ secrets.GSC_CLIENT_EMAIL }}
-          GSC_PRIVATE_KEY: ${{ secrets.GSC_PRIVATE_KEY }}
-          GSC_PROPERTY_URL: ${{ secrets.GSC_PROPERTY_URL }}
-
-      - name: Check for Drops
-        run: node scripts/check-ranking-drops.js
-
-      - name: Notify on Issues
-        if: failure()
-        uses: slackapi/slack-github-action@v1
-        with:
-          payload: |
-            {
-              "text": "SEO Alert: Ranking drops detected",
-              "blocks": [...]
-            }
-```
-
-### Data Flow
-
-#### Content Publication Flow
+### Funnel Visualization Setup
 
 ```
-[Content Writer]
-      │
-      ▼
-[Create/Edit MDX File]
-      │
-      ▼
-[Git Push] ───────────────┐
-      │                    │
-      ▼                    ▼
-[GitHub Actions]      [Vercel Build]
-      │                    │
-      │            ┌──────┴──────┐
-      │            ▼             ▼
-      │    [next-sitemap]   [Next.js Build]
-      │            │             │
-      └────────────┴─────────────┘
-                       │
-                       ▼
-              [Deploy to Production]
-                       │
-                       ▼
-              [Google Bot Crawls]
+┌─────────────────────────────────────────────────────────────┐
+│                    GA4 Funnel Reports                       │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  Step 1: Landing          → page_view (homepage)            │
+│         │                                                   │
+│         ▼                                                   │
+│  Step 2: Service Pages    → page_view (/services, /about)   │
+│         │                                                   │
+│         ▼                                                   │
+│  Step 3: Enquiry Page     → page_view (/enquiry)            │
+│         │                                                   │
+│         ▼                                                   │
+│  Step 4: Form Submit      → enquiry_form_submit             │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-#### SEO Monitoring Flow
+## Performance Architecture
 
-```
-[Scheduled Trigger (GitHub Actions)]
-              │
-              ▼
-[Fetch Google Search Console Data]
-              │
-              ▼
-[Compare with Previous Data]
-      │              │
-      ▼              ▼
-[Within Threshold] [Alert Triggered]
-      │              │
-      ▼              ▼
-[Log Results]  [Send Slack/Email Notification]
-              │
-              ▼
-         [Create GitHub Issue]
-```
+### Core Web Vitals Targets
 
-#### Page SEO Data Flow
+| Metric | Target | Implementation |
+|--------|--------|---------------|
+| LCP (Largest Contentful Paint) | < 2.5s | Image optimization, SSG |
+| FID (First Input Delay) | < 100ms | Minimal client JS |
+| CLS (Cumulative Layout Shift) | < 0.1 | Reserved image spaces |
+| TTFB (Time to First Byte) | < 600ms | Vercel Edge caching |
 
-```
-[Page Request]
-      │
-      ▼
-[Next.js Server Component]
-      │
-      ├──► [Fetch MDX frontmatter]
-      │
-      ├──► [Generate Metadata]
-      │
-      ├──► [Generate Schema.org JSON-LD]
-      │
-      ▼
-[Render HTML with SEO tags]
-      │
-      ▼
-[Response to Client/Bot]
-```
+### Next.js Optimization Features
 
-### Scaling Considerations
+| Feature | Implementation | Benefit |
+|---------|----------------|---------|
+| Image optimization | `next/image` | LCP, CLS |
+| Font optimization | `next/font` | CLS, load performance |
+| Script loading | `next/script` strategy | FID |
+| Static generation | Default for content pages | TTFB, SEO |
+| ISR | Blog/Resources pages | Fresh content, performance |
+| Edge runtime | API routes if needed | Global latency |
 
-| Scale | Architecture Adjustments |
-|-------|--------------------------|
-| 0-100 pages | Single sitemap.xml, basic monitoring |
-| 100-500 pages | Multiple sitemaps (sitemap-index), weekly monitoring |
-| 500+ pages | Dedicated SEO microservice, daily API monitoring |
+## Security Considerations
 
-### Scaling Priorities
+| Concern | Mitigation | Implementation |
+|---------|-----------|----------------|
+| Form spam | Rate limiting + validation | Upstash Redis + Zod |
+| Email injection | Input sanitization | Nodemailer security |
+| XSS | React's built-in escaping | Default React behavior |
+| CSRF | Same-origin checks | Next.js defaults |
+| Sensitive data | Environment variables | `.env.local` only |
 
-1. **First bottleneck:** Sitemap generation time
-   - Solution: Split into multiple sitemaps by section (/blog/, /services/)
+## Scalability Path
 
-2. **Second bottleneck:** GSC API rate limits
-   - Solution: Cache results, use incremental fetches
+| Scale Stage | Users/Month | Architecture Adjustments |
+|-------------|-------------|-------------------------|
+| Launch | 0 - 1K | Current: SSG + Vercel |
+| Growth | 1K - 10K | Add CDN, consider image CDN |
+| Established | 10K - 100K | GA4 advanced, possible A/B testing |
+| Enterprise | 100K+ | CRM integration, marketing automation |
 
-3. **Third bottleneck:** Build time with large content
-   - Solution: Use ISR, on-demand revalidation
+## Anti-Patterns to Avoid
 
-### Anti-Patterns
+### 1. Over-Engineering for B2B Service Site
+**Bad:** Setting up complex microservice architecture for a brochure site
+**Good:** Simple Next.js monorepo with clear page structure
 
-#### Anti-Pattern 1: Client-Side Only SEO
+### 2. Client-Side Heavy Rendering
+**Bad:** React SPA with all content loaded via client-side fetch
+**Good:** SSG/SSR for content, minimal client JS
 
-**What people do:** Use JavaScript to set document.title and meta tags after page load.
+### 3. Ignoring Core Web Vitals
+**Bad:** Large unoptimized images, render-blocking scripts
+**Good:** Image optimization, deferred script loading
 
-**Why it's wrong:** Search engine bots may not execute JavaScript, leading to missing metadata in search results.
+### 4. Vanity SEO Without Substance
+**Bad:** Keyword stuffing, thin content, no internal linking
+**Good:** Quality content, clear information architecture, proper meta tags
 
-**Do this instead:** Use Next.js Metadata API for server-side metadata generation.
-
-#### Anti-Pattern 2: Hardcoded Sitemap URLs
-
-**What people do:** Manually maintain a list of URLs in sitemap.xml.
-
-**Why it's wrong:** Error-prone, doesn't scale, easily becomes outdated.
-
-**Do this instead:** Use `next-sitemap` with dynamic route discovery or generate from content source.
-
-#### Anti-Pattern 3: Ignoring Structured Data Validation
-
-**What people do:** Add Schema.org markup without testing in Google Rich Results Test.
-
-**Why it's wrong:** Invalid structured data can result in penalties or removal from rich results.
-
-**Do this instead:** Add validation step in CI/CD pipeline using Google's API.
-
-#### Anti-Pattern 4: No Monitoring After Launch
-
-**What people do:** Set up SEO and forget about it, only checking manually occasionally.
-
-**Why it's wrong:** Rankings change, competitors optimize, issues go undetected.
-
-**Do this instead:** Implement automated monitoring with alerts for significant changes.
-
-### Integration Points
-
-#### External Services
-
-| Service | Integration Pattern | Notes |
-|---------|---------------------|-------|
-| Google Search Console | REST API with service account | Requires Google Cloud project setup |
-| Google Analytics | @vercel/analytics SDK | Already compatible with Vercel |
-| Slack | Incoming Webhooks | For alerting on ranking changes |
-| Vercel | Native deployment | Automatic on push to master |
-
-#### Internal Boundaries
-
-| Boundary | Communication | Notes |
-|----------|---------------|-------|
-| SEO Components ↔ Pages | Props/Context | Pass SEO data via props or context |
-| SEO Lib ↔ Content | File system/MDX | Read content for metadata generation |
-| GitHub Actions ↔ GSC | API calls | Use service account for authentication |
-| Monitoring ↔ Alerts | Webhooks | Send notifications when thresholds breached |
-
-### Integration with Existing WAG Project
-
-#### Modifications to Existing Files
-
-| File | Change Type | Description |
-|------|-------------|-------------|
-| `package.json` | Modify | Add `next-sitemap`, `@vercel/analytics` |
-| `app/layout.tsx` | Modify | Add Analytics component |
-| `app/resources/[slug]/page.tsx` | Modify | Add dynamic metadata, schema |
-| `app/services/page.tsx` | Modify | Add LocalBusiness schema |
-| `app/about/page.tsx` | Modify | Add organization schema |
-
-#### New Files to Create
-
-| File | Purpose |
-|------|---------|
-| `next-sitemap.config.js` | Sitemap generation config |
-| `app/components/seo/schema.tsx` | Reusable schema components |
-| `app/lib/seo/config.ts` | SEO settings and defaults |
-| `scripts/fetch-rankings.js` | GSC data fetcher |
-| `.github/workflows/seo-monitor.yml` | Scheduled monitoring |
-
-#### Build Order
-
-1. Install dependencies: `npm install next-sitemap @vercel/analytics`
-2. Create SEO components in `app/components/seo/`
-3. Update existing pages with SEO metadata
-4. Configure `next-sitemap.config.js`
-5. Set up GitHub Actions workflows
-6. Configure GSC API access (if using automated monitoring)
-
----
+### 5. Tracking Without Action
+**Bad:** Implementing GA4 but never reviewing data
+**Good:** Define metrics, review weekly, iterate
 
 ## Sources
 
-### Vercel Deployment
-- Vercel Documentation: https://vercel.com/docs/frameworks/nextjs
-- Next.js Deployment: https://nextjs.org/docs/app/building-your-application/deploying
-- Custom Domains: https://vercel.com/docs/concepts/projects/domains
+| Topic | Source | Confidence |
+|-------|--------|------------|
+| Next.js SEO | CSDN Blog - Next.js SEO Guide 2025 | MEDIUM |
+| B2B Website Trends | 2025 B2B Website Design Trends (CSDN) | MEDIUM |
+| B2B Website Structure | Baidu Baike - B2B Research Strategy Report | MEDIUM |
+| GA4 Setup | GA4 Official Documentation | HIGH |
+| Conversion Optimization | Adobe Blog - Ecommerce CRO | MEDIUM |
+| SEO Best Practices | Moz CRO Resources | MEDIUM |
 
-### SEO Automation
-- [next-sitemap Documentation](https://github.com/iamvishnusankar/next-sitemap) - HIGH confidence
-- [Vercel Analytics](https://vercel.com/docs/concepts/analytics) - HIGH confidence
-- [Next.js Metadata API](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) - HIGH confidence
-- [Schema.org](https://schema.org/docs/schemas.html) - HIGH confidence
-- [Google Search Console API](https://developers.google.com/search-console) - HIGH confidence
-- [GitHub Actions Documentation](https://docs.github.com/en/actions) - HIGH confidence
-- [Yoast JSON-LD Guide](https://yoast.com/json-ld/) - MEDIUM confidence
+## Open Questions
 
----
+1. **CRM Integration** - Will a CRM be needed immediately, or manual lead management sufficient?
+2. **Marketing Automation** - Email sequences for enquiry follow-ups?
+3. **A/B Testing** - Is there a plan for systematic conversion optimization?
+4. **International SEO** - Is targeting Chinese keywords (pinyin) worth the investment?
+5. **Blog Content Strategy** - Who will own content creation and SEO optimization?
 
-*Updated: 2026-03-18 for v1.1 SEO automation milestone*
+## Recommendations
+
+1. **Phase 1:** Implement GA4 with event tracking before launch
+2. **Phase 2:** Add structured data markup (JSON-LD) for services
+3. **Phase 3:** Set up Search Console monitoring and monthly SEO reviews
+4. **Phase 4:** Consider heatmap tools (Hotjar/Clarity) after initial traffic
+5. **Phase 5:** A/B test CTA variations once baseline data exists
