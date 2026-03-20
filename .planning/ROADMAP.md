@@ -30,7 +30,7 @@ discuss → plan → execute → verify
 |-------|------|-----------------|-------------|
 | 14 | Two Ways to Access Section | Complete | 2026-03-20 |
 | 15 | 2/2 | Complete    | 2026-03-20 |
-| 16 | Floating Contact Button | Pending | 右下角悬浮按钮 + Modal |
+| 16 | Floating Contact Button | In Progress | 右下角悬浮按钮 + Modal |
 | 17 | FAQ Page + Schema | Pending | /resources/faq + FAQPage JSON-LD |
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
 | 19 | Page SEO Optimization | Pending | Meta tags + 关键词 |
@@ -87,11 +87,17 @@ Plans:
 
 **Goal:** 实现右下角悬浮联系按钮
 
+**Plans:** 2/2 plans created
+
+Plans:
+- [ ] 16-01-PLAN.md — Create API endpoint + FloatingContactButton component (pulse ring, modal, form)
+- [ ] 16-02-PLAN.md — Integrate FloatingContactButton into layout.tsx
+
 **Tasks:**
 1. 创建 FloatingContactButton 组件
 2. 固定定位：bottom-right, 20px from edges
 3. 悬停动画：transform + shadow
-4. ContactModal：overlay + form（Name, Email, Message）
+4. ContactModal：overlay + form（Email, Message）
 5. ESC 键和 overlay 点击关闭
 6. ARIA 无障碍标签
 7. 移动端适配（smaller sizing）
@@ -202,8 +208,18 @@ Plans:
 
 运行 `/gsd:execute-phase 15` 执行 Phase 15 计划
 
+### Phase 21: LinkedIn Post Skill 开发 — 创建一个基于 Socratic 提问的 LinkedIn 帖子生成 skill，用于 WAG 获客
+
+**Goal:** [To be planned]
+**Requirements**: TBD
+**Depends on:** Phase 20
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 21 to break down)
+
 ---
 
 *Roadmap created: 2026-03-20*
-*Updated: 2026-03-20 (Phase 15 plans created)*
+*Updated: 2026-03-20 (Phase 16 plans created)*
 *Competitor: chinafactorytours.com*
