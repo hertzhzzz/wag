@@ -30,7 +30,7 @@ discuss → plan → execute → verify
 |-------|------|-----------------|-------------|
 | 14 | Two Ways to Access Section | Complete | 2026-03-20 |
 | 15 | 2/2 | Complete    | 2026-03-20 |
-| 16 | 1/2 | In Progress|  |
+| 16 | 2/2 | Complete    | 2026-03-20 |
 | 17 | FAQ Page + Schema | Pending | /resources/faq + FAQPage JSON-LD |
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
 | 19 | Page SEO Optimization | Pending | Meta tags + 关键词 |
@@ -88,7 +88,7 @@ Plans:
 
 **Goal:** 实现右下角悬浮联系按钮
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [ ] 16-01-PLAN.md — Create API endpoint + FloatingContactButton component (pulse ring, modal, form)
