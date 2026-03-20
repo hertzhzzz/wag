@@ -1,235 +1,203 @@
-# ROADMAP: WAG Website v2.0 SEO Optimization
+# Roadmap: v2.0 SEO Optimization
 
-**Milestone:** v2.0
-**Phase range:** 14-18 (revised)
-**Granularity:** Fine
-**Created:** 2026-03-20
-**Revised:** 2026-03-20 (based on 5-reviewer analysis)
+## Milestone Overview
 
-## Overview
-
-Help Australian businesses safely connect with verified China manufacturers through professional sourcing services and factory visit experiences.
-
-**Target Keywords:**
-- Primary: "factory visit China", "China factory tour"
-- Secondary: "China sourcing agent", "supplier verification", "factory audits"
-- Supporting: "quality control"
-
-**Positioning Statement:**
-> "For Australian businesses who need hands-on factory verification, WAG provides in-person factory visits that typical China sourcing agents cannot match."
-
-**Success Metrics:**
-- #1 for "factory visit China" within 6 months
-- Top 5 for "China sourcing agent" within 12 months
-- DA 20+ with 50+ referring domains
-- Systematic content pipeline established
+**Milestone:** v2.0 SEO Optimization
+**Competitor:** chinafactorytours.com
+**Target:** Surpass competitor in relevant keyword rankings
+**Start Phase:** 14
 
 ---
-*Note: "Canton Fair tours" removed from keywords — commodity term, high competition, low differentiation*
+
+## Phase Workflow
+
+每个 Phase 必须经过：
+```
+discuss → plan → execute → verify
+```
+
+使用命令：
+- `/gsd:discuss-phase [N]` — 收集 Phase 背景和需求
+- `/gsd:plan-phase [N]` — 制定详细实施计划
+- `/gsd:execute-phase [N]` — 执行计划
+- `/gsd:verify-phase [N]` — 验证结果
+
 ---
 
-## Phases
+## Phase Structure
 
-- [ ] **Phase 14: Technical SEO Foundation** - Fix crawl control, schema, Core Web Vitals (INP), E-E-A-T signals, sitemap, OG tags
-- [ ] **Phase 15: Content Architecture** - Service detail pages, hub-and-spoke structure, internal linking
-- [ ] **Phase 16: Core Content** - Pillar page, trust content, audit checklist
-- [ ] **Phase 16B: Extended Content** - Localization content, case study, monthly pipeline
-- [ ] **Phase 17: Authority Building** - Competitor gap analysis, guest post outreach, industry relationships
+| Phase | Name | Workflow Status | Description |
+|-------|------|-----------------|-------------|
+| 14 | Two Ways to Access Section | 🟡 discuss | 新增服务介绍区块（两个服务选项并列） |
+| 15 | Directory Section (Landing) | ⬜ pending | 替换 Select Your Sector，工厂列表+地图+筛选 |
+| 16 | Floating Contact Button | ⬜ pending | 右下角悬浮按钮 + Modal |
+| 17 | FAQ Page + Schema | ⬜ pending | /resources/faq + FAQPage JSON-LD |
+| 18 | About Page | ⬜ pending | 公司故事 + E-E-A-T |
+| 19 | Page SEO Optimization | ⬜ pending | Meta tags + 关键词 |
+| 20 | Technical SEO | ⬜ pending | sitemap.xml + robots.txt |
 
-**Pre-Phase Note:** Keyword strategy + competitor analysis sprint should run parallel to Phase 14 to inform content strategy.
-
----
-*Phase ordering rationale: Technical foundation (14) → Structure (15) → Core content (16) → Extended content (16B) → Authority (17)*
-*External dependencies: Client authorization for case study (Phase 16B), guest post acceptance (Phase 17)*
 ---
 
 ## Phase Details
 
-### Phase 14: Technical SEO Foundation
+### Phase 14: Two Ways to Access Section
 
-**Goal:** Search engines can properly crawl, index, and understand WAG site content
+**Goal:** 在 HowItWorks 和 Directory Section 之间新增服务对比区块
 
-**Depends on:** Nothing (first phase of v2.0)
+**Tasks:**
+1. 创建 "Two Ways to Access" 组件
+2. 左侧：Full Service (Guided Tours) 卡片
+3. 右侧：Factory Directory Access 卡片
+4. 每个卡片包含：图标、标题、描述、特性列表、CTA
+5. 响应式布局（mobile: stacked, desktop: side-by-side）
+6. 集成到 homepage
 
-**Pre-requisite:** Run competitor analysis sprint (parallel to Phase 14) to inform Phase 15-16 content decisions
+**Deliverable:** `/` 首页新增 section
 
-**Requirements:** TECH-10, TECH-11, TECH-12, TECH-13, TECH-14, TECH-15, TECH-16, TECH-17, EEAT-01, EEAT-02
-
-**Success Criteria** (what must be TRUE):
-1. robots.txt allows all public pages and blocks noindex paths
-2. sitemap.xml exists and includes all public pages
-3. All JSON-LD schema components render as Server Components (no 'use client' in schema files)
-4. BreadcrumbList schema appears on all pages with correct itemListElement structure
-5. Article schema on all blog posts with headline, author, datePublished, dateModified
-6. Core Web Vitals pass: LCP < 2.5s, CLS < 0.1, INP < 200ms (FID deprecated March 2024)
-7. All pages have correct canonical URLs pointing to preferred version
-8. OpenGraph and Twitter Card metadata on all pages
-9. Team expertise and experience visible on all pages (EEAT-01)
-10. WAG China field experience (e.g., "Our team has visited 50+ factories in Guangdong") stated on site (EEAT-02)
-
-**Plans:** TBD
+**竞品参考:** chinafactorytours.com 的 "Two Ways to Access China's Best Manufacturers" 区块
 
 ---
 
-### Phase 15: Content Architecture
+### Phase 15: Directory Section (Landing Page)
 
-**Goal:** Hierarchical site structure enables topical authority and distributes PageRank effectively
+**Goal:** 替换 "Select Your Sector"，创建工厂目录展示
 
-**Depends on:** Phase 14
+**Tasks:**
+1. 创建 DirectorySection 组件
+2. 实现 Filter 筛选器（Electronics / Furniture / Robotics / EV Battery / More）
+3. 左侧：工厂列表（城市 + 描述 + 数量 + 标签）
+4. 右侧：Leaflet.js 地图（Leaflet + OpenStreetMap）
+5. 列表与地图联动（点击列表 → 地图定位；点击地图 → 列表滚动）
+6. 底部 CTA："View Full Directory →" 触发询价表单
+7. 响应式设计
 
-**Requirements:** ARCH-01, ARCH-02, ARCH-03
+**Deliverable:** `/` 首页替换 Industries section
 
-**Success Criteria** (what must be TRUE):
-1. Service detail pages exist at /services/factory-tours, /services/supplier-verification, /services/quality-inspection
-2. Hub-and-spoke architecture implemented with pillar pages linking to topic clusters
-3. Internal linking strategy connects pillar pages to all related spoke content
-4. Each pillar page has explicit list of target keywords and related spoke content
-
-**Plans:** TBD
-
----
-
-### Phase 16: Core Content Development
-
-**Goal:** Unique expertise-driven pillar content demonstrates E-E-A-T for primary keyword targets
-
-**Depends on:** Phase 15
-
-**Note:** External dependency — client authorization for any client-related content. Start authorization requests in Phase 14.
-
-**Requirements:** CONT-10, CONT-11, CONT-12, CONT-14
-
-**Success Criteria** (what must be TRUE):
-1. "The Complete Guide to Factory Visits in China" pillar page published (2000+ words, targets "factory visit China", "China factory tour")
-2. "How to Verify Chinese Suppliers" article published (targets "supplier verification")
-3. "Red Flags When Sourcing from China" article published (targets "China sourcing agent")
-4. "China Factory Audit Checklist" published (targets "factory audits")
-5. Monthly news review process established and documented
-
-**Plans:** TBD
+**竞品参考:** chinafactorytours.com 的 "Major Electronics Manufacturing Hubs" 区块
 
 ---
 
-### Phase 16B: Extended Content
+### Phase 16: Floating Contact Button
 
-**Goal:** Australian-localized content and case studies provide competitive differentiation
+**Goal:** 实现右下角悬浮联系按钮
 
-**Depends on:** Phase 16
+**Tasks:**
+1. 创建 FloatingContactButton 组件
+2. 固定定位：bottom-right, 20px from edges
+3. 悬停动画：transform + shadow
+4. ContactModal：overlay + form（Name, Email, Message）
+5. ESC 键和 overlay 点击关闭
+6. ARIA 无障碍标签
+7. 移动端适配（smaller sizing）
 
-**Note:** External dependency — case study requires client authorization. Plan backup content if authorization denied.
+**Deliverable:** 所有页面显示悬浮按钮
 
-**Requirements:** CONT-13 (case study), plus new requirements for localization content
-
-**Success Criteria** (what must be TRUE):
-1. "ChAFTA Import Guide for Australian Businesses" published (targets "Australia China sourcing")
-2. "Australia Import Regulations Overview" published
-3. Case study published (with client authorization — if denied, publish backup content)
-4. All new content has Article schema and internal links to relevant pillar pages
-
-**Plans:** TBD
-
----
-
-### Phase 17: Authority Building
-
-**Goal:** Backlink profile strengthens to compete with Epic Sourcing and ChinaDirect Sourcing
-
-**Depends on:** Phase 16B (content assets needed for outreach)
-
-**Note:** Guest post acceptance rate 5-20%. Success criteria uses "published" not "contacted".
-
-**Requirements:** AUTH-10, AUTH-11, AUTH-12
-
-**Success Criteria** (what must be TRUE):
-1. Competitor backlink gap analysis documented (WAG vs Epic Sourcing) with specific DA and referring domain comparisons
-2. At least 3 guest posts published on relevant sites (minimum DA 20, relevant audience)
-3. Relationship established with Australian industry association (note: for networking, not SEO value — chambers have low DA)
-
-**Plans:** TBD
+**竞品参考:** chinafactorytours.com 的 `.fc-btn`, `.fc-overlay`, `.fc-modal`
 
 ---
 
-## Progress Table
+### Phase 17: FAQ Page + Schema
 
-| Phase | Requirements | Plans | Status |
-|-------|-------------|--------|--------|
-| 14. Technical SEO Foundation | 10 | 0/10 | Not started |
-| 15. Content Architecture | 3 | 0/4 | Not started |
-| 16. Core Content | 4 | 0/5 | Not started |
-| 16B. Extended Content | 3 | 0/4 | Not started |
-| 17. Authority Building | 3 | 0/3 | Not started |
+**Goal:** 创建 FAQ 内容页 + JSON-LD 结构化数据
 
----
+**Tasks:**
+1. 创建 `/app/resources/faq/page.tsx`
+2. 撰写 10+ 制造业 FAQ 内容
+3. 实现手风琴 UI 组件
+4. 添加 FAQPage JSON-LD Schema
+5. 目标关键词布局
+6. 内链到服务页面
 
-## Coverage
+**Deliverable:** `/resources/faq` + 搜索结果富片段
 
-**Requirements:** 23 total (added TECH-16, TECH-17, CONT-15, CONT-16)
-**Mapped:** 23 (100%)
-**Unmapped:** 0
-
-| Requirement | Phase | Category |
-|-------------|-------|----------|
-| TECH-10 (robots.txt) | Phase 14 | Technical SEO |
-| TECH-11 (Schema Server Components) | Phase 14 | Technical SEO |
-| TECH-12 (BreadcrumbList) | Phase 14 | Technical SEO |
-| TECH-13 (Core Web Vitals) | Phase 14 | Technical SEO |
-| TECH-14 (Article schema) | Phase 14 | Technical SEO |
-| TECH-15 (canonical URLs) | Phase 14 | Technical SEO |
-| TECH-16 (sitemap.xml) | Phase 14 | Technical SEO |
-| TECH-17 (OG/Twitter metadata) | Phase 14 | Technical SEO |
-| EEAT-01 (team expertise) | Phase 14 | E-E-A-T Signals |
-| EEAT-02 (China field experience) | Phase 14 | E-E-A-T Signals |
-| ARCH-01 (service detail pages) | Phase 15 | Content Architecture |
-| ARCH-02 (hub-and-spoke) | Phase 15 | Content Architecture |
-| ARCH-03 (internal linking) | Phase 15 | Content Architecture |
-| CONT-10 (pillar page) | Phase 16 | Core Content |
-| CONT-11 (supplier verification) | Phase 16 | Core Content |
-| CONT-12 (red flags article) | Phase 16 | Core Content |
-| CONT-14 (monthly pipeline) | Phase 16 | Core Content |
-| CONT-15 (ChAFTA guide) | Phase 16B | Extended Content |
-| CONT-16 (import regulations) | Phase 16B | Extended Content |
-| CONT-13 (case study) | Phase 16B | Extended Content |
-| AUTH-10 (competitor gap analysis) | Phase 17 | Authority Building |
-| AUTH-11 (guest post outreach) | Phase 17 | Authority Building |
-| AUTH-12 (chamber relationship) | Phase 17 | Authority Building |
+**竞品参考:** chinafactorytours.com 的 FAQ section（但竞品没有独立页面）
 
 ---
 
-## Dependencies
+### Phase 18: About Page
 
-```
-[Pre-Phase] Competitor Analysis Sprint (parallel to Phase 14)
-    |
-    v
-Phase 14 (Technical SEO Foundation)
-    |
-    v
-Phase 15 (Content Architecture)
-    |
-    v
-Phase 16 (Core Content)
-    |
-    v
-Phase 16B (Extended Content)
-    |
-    v
-Phase 17 (Authority Building)
-```
+**Goal:** 构建 About 页面 + E-E-A-T 信号
+
+**Tasks:**
+1. 完善 `/app/about/page.tsx`（如已存在则优化）
+2. 撰写公司故事
+3. 添加团队介绍（credentials, background）
+4. 创建 trust badges
+5. 添加关键数据（Years in business, clients served）
+6. 添加联系信息
+
+**Deliverable:** `/about` 页面完整 E-E-A-T
+
+**竞品参考:** chinafactorytours.com/team.html
 
 ---
 
-## Risk Flags
+### Phase 19: Page SEO Optimization
 
-| Priority | Risk | Mitigation |
-|----------|------|------------|
-| P1 | Client credentials blocked | Start authorization in Phase 14 |
-| P1 | Case study authorization denied | Create backup content (generic industry case study) |
-| P1 | AI content detection | Expert review before publishing, focus on depth not volume |
-| P2 | Guest post acceptance rate 5-20% | Build outreach list of 15+ targets |
-| P2 | Core Web Vitals failures | Audit in Phase 14, fix before content push |
-| P3 | Google algorithm change | Monitor updates, flexible content strategy |
-| P3 | Competitor action | Monthly competitor monitoring |
+**Goal:** 优化所有页面 SEO
+
+**Tasks:**
+1. Lighthouse SEO 审计
+2. 撰写 unique title tags（50-60 chars）
+3. 撰写 meta descriptions（150-160 chars）
+4. 修复 H1/H2/H3 层级
+5. 首 100 词布局目标关键词
+6. 图片 alt 属性填充
+7. 内链策略
+
+**Deliverable:** 所有页面 Lighthouse SEO 90+
 
 ---
 
-*Last updated: 2026-03-20 after 5-reviewer analysis*
+### Phase 20: Technical SEO
+
+**Goal:** 技术 SEO 实现
+
+**Tasks:**
+1. Next.js sitemap 生成
+2. robots.txt 配置
+3. Canonical tags
+4. 死链检查
+5. Core Web Vitals 验证
+6. 提交 sitemap 到 Google Search Console
+
+**Deliverable:** 技术 SEO 完成
+
+---
+
+## Milestone Verification
+
+| Metric | Target | Verification |
+|--------|--------|-------------|
+| Two Ways section | 渲染在首页 | Visual check |
+| Directory section | 地图+列表联动 | Functional test |
+| Floating button | 所有页面可见 | Visual check |
+| FAQ page | Schema 验证通过 | URL inspection |
+| About page | 包含团队+故事 | Content review |
+| Lighthouse SEO | 90+ all pages | Lighthouse audit |
+| Sitemap | 包含所有页面 | XML inspection |
+
+---
+
+## Success Criteria
+
+- [ ] Two Ways to Access section 上线
+- [ ] Directory section 替换 Select Your Sector
+- [ ] 地图与列表完全联动
+- [ ] Floating contact button 实现
+- [ ] FAQ page with Schema markup
+- [ ] About page with E-E-A-T
+- [ ] All pages SEO 90+
+- [ ] Technical SEO complete
+
+---
+
+## Next Action
+
+运行 `/gsd:discuss-phase 14` 开始讨论 Phase 14
+
+---
+
+*Roadmap created: 2026-03-20*
+*Updated: 2026-03-20 (添加 discuss 流程要求)*
+*Competitor: chinafactorytours.com*

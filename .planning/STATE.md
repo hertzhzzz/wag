@@ -1,8 +1,8 @@
 ---
 gsd_state_version: 1.0
 milestone: v2.0
-milestone_name: SEO Optimization
-status: defining
+milestone_name: SEO Optimization v2 (ChinaFactoryTours)
+status: planned
 last_updated: "2026-03-20"
 ---
 
@@ -12,21 +12,13 @@ last_updated: "2026-03-20"
 
 **Core value:** Help Australian businesses safely connect with verified China manufacturers
 
-**Current focus:** v2.0 SEO Optimization — competing with Epic Sourcing Australia and ChinaDirect Sourcing
+**Current focus:** v2.0 SEO Optimization — 以 chinafactorytours.com 为对标制定优化方案
 
-## Current Position
+## Target Competitor
 
-Phase: Not started (defining requirements)
-Plan: —
-Status: Defining requirements
-Last activity: 2026-03-20 — Milestone v2.0 started
-
-## Target Competitors
-
-| Company | Website | Strengths |
-|---------|---------|-----------|
-| Epic Sourcing Australia | epicsourcing.com.au | 全方位服务, 无佣金模式, 澳洲本地团队 |
-| ChinaDirect Sourcing | chinadirectsourcing.com.au | 中国进口, 节省30-50% |
+| Company | Website | Focus |
+|---------|---------|-------|
+| China Factory Tours | chinafactorytours.com | 第一个对标网站，全面分析 |
 
 ## Milestones Summary
 
@@ -37,7 +29,54 @@ Last activity: 2026-03-20 — Milestone v2.0 started
 | Security Audit | v1.2 | 08 | ✅ Complete |
 | SEO Optimization | v1.3 | 06, 06.1, 07, 09, 10, 11, 12 | ✅ Complete |
 | UI Optimization | v1.4 | 13 | ✅ Complete |
-| SEO Optimization v2 | v2.0 | TBD | 🟡 In Progress |
+| SEO Optimization v2 | v2.0 | 14-20 | 🟡 In Progress |
+
+## Phase Workflow
+
+每个 Phase 必须经过：`discuss → plan → execute → verify`
+
+## Phase Progress
+
+| Phase | Name | Status |
+|-------|------|--------|
+| 14 | Two Ways to Access Section | 🟡 discuss |
+| 15 | Directory Section (Landing) | ⬜ pending |
+| 16 | Floating Contact Button | ⬜ pending |
+| 17 | FAQ Page + Schema | ⬜ pending |
+| 18 | About Page | ⬜ pending |
+| 19 | Page SEO Optimization | ⬜ pending |
+| 20 | Technical SEO | ⬜ pending |
+
+## v2.0 Success Metrics
+
+| Metric | Target | Current |
+|--------|--------|---------|
+| Two Ways section | Created | Planned |
+| Directory section (Landing) | Created | Planned |
+| Floating contact button | Implemented | Planned |
+| FAQ page | Created with Schema | Planned |
+| About page | E-E-A-T signals | Planned |
+| Lighthouse SEO | 90+ all pages | TBD |
+| Competitor ranking | Surpass chinafactorytours.com | TBD |
+
+## Planning Completed
+
+**Planning date:** 2026-03-20
+
+Research completed:
+- [x] Competitor analysis (chinafactorytours.com)
+- [x] Homepage analysis
+- [x] Services pages analysis
+- [x] Sitemap/blog/about/contact analysis
+- [x] Floating button analysis
+- [x] Directory structure analysis
+
+Documents created:
+- [x] `.planning/REQUIREMENTS.md`
+- [x] `.planning/ROADMAP.md`
+- [x] `.planning/research/COMPETITOR-ANALYSIS.md` (updated)
+
+Next action: `/gsd:discuss-phase 14` to start Phase 14 discussion
 
 ## Deployment Status
 
@@ -45,30 +84,11 @@ Last activity: 2026-03-20 — Milestone v2.0 started
 **GitHub Repo:** https://github.com/hertzhzzz/wag
 **Auto-deploy:** Enabled (push to master triggers Vercel deployment)
 
-## Directory Structure
+## Session Continuity
 
-```
-.planning/
-  milestones/
-    v1.0-mvp/           # Mobile-first MVP
-      phases/ 01-04
-    v1.1-deployment/    # Vercel deployment
-      phases/ 05
-    v1.2-security-audit/# Security hardening
-      phases/ 08
-    v1.3-seo-optimization/ # SEO & content
-      phases/ 06, 06.1, 07, 09, 10, 11, 12
-    v1.4-ui-optimization/  # UI polish
-      phases/ 13
-```
-
-## Quick Tasks Completed
-
-| # | Description | Date | Commit |
-|---|-------------|------|--------|
-| 260319-nma | HTML tool for Phase 11 SEO visualization | 2026-03-19 | 29cd4833 |
-| 260320-21l | Skill link analysis for cleanup | 2026-03-19 | 4b4b1f3c |
+- Last session: Started new v2.0 direction with chinafactorytours.com as competitor
+- Next action: Crawl and analyze chinafactorytours.com, then define requirements and roadmap
 
 ---
 
-*State updated: 2026-03-20 after v2.0 started*
+*State updated: 2026-03-20 after v2.0 direction change*
