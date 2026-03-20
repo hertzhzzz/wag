@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: unknown
-last_updated: "2026-03-20T08:05:37.621Z"
+last_updated: "2026-03-20T10:18:12.973Z"
 progress:
-  total_phases: 7
+  total_phases: 8
   completed_phases: 2
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 6
+  completed_plans: 5
 ---
 
 # Project State
@@ -17,7 +17,7 @@ progress:
 
 **Core value:** Help Australian businesses safely connect with verified China manufacturers
 
-**Current focus:** Phase 15 — directory-section-landing-page
+**Current focus:** Phase 16 — floating-contact-button (plan 01 complete, 02 pending)
 
 ## Target Competitor
 
@@ -46,11 +46,12 @@ progress:
 |-------|------|--------|
 | 14 | Two Ways to Access Section | ✅ Complete |
 | 15 | Directory Section (Landing) | 🟡 In Progress |
-| 16 | Floating Contact Button | ⬜ pending |
+| 16 | Floating Contact Button | 🟡 In Progress |
 | 17 | FAQ Page + Schema | ⬜ pending |
 | 18 | About Page | ⬜ pending |
 | 19 | Page SEO Optimization | ⬜ pending |
 | 20 | Technical SEO | ⬜ pending |
+| 21 | LinkedIn Post Skill (Socratic) | ⬜ pending |
 
 ## v2.0 Success Metrics
 
@@ -58,7 +59,7 @@ progress:
 |--------|--------|---------|
 | Two Ways section | Created | ✅ Complete |
 | Directory section (Landing) | Created | Planned |
-| Floating contact button | Implemented | Planned |
+| Floating contact button | Implemented | In Progress |
 | FAQ page | Created with Schema | Planned |
 | About page | E-E-A-T signals | Planned |
 | Lighthouse SEO | 90+ all pages | TBD |
@@ -93,8 +94,8 @@ Next action: `/gsd:discuss-phase 15` to start Phase 15 discussion
 
 ## Session Continuity
 
-- Last session: Completed Phase 15-01 - DirectorySection component (city list + Leaflet map)
-- Next action: Phase 15-02 - Integrate DirectorySection into homepage (replace Industries)
+- Last session: Completed Phase 16-01 - FloatingContactButton component + /api/contact endpoint
+- Next action: Phase 16-02 - Integrate FloatingContactButton into layout.tsx (gap: plan omitted layout integration)
 
 ### Quick Tasks Completed
 
@@ -102,6 +103,10 @@ Next action: `/gsd:discuss-phase 15` to start Phase 15 discussion
 |---|-------------|------|--------|-----------|
 | 260320-nyw | Modify Access Directory Free button to open modal with email capture form | 2026-03-20 | c4df7f6f | [260320-nyw-modify-access-directory-free-button-to-o](./quick/260320-nyw-modify-access-directory-free-button-to-o/) |
 
+## Roadmap Evolution
+
+- Phase 21 added: LinkedIn Post Skill 开发 — 创建一个基于 Socratic 提问的 LinkedIn 帖子生成 skill，用于 WAG 获客
+
 ---
 
-*State updated: 2026-03-20 after Phase 15-01 completion*
+*State updated: 2026-03-20 after Phase 16-01 completion*
