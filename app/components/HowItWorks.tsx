@@ -59,7 +59,7 @@ export default function HowItWorks() {
   }, [])
 
   return (
-    <section id="howitworks" className="bg-white py-20 md:py-28 px-4 md:px-8">
+    <section id="howitworks" className="bg-white py-20 md:py-28 px-6 md:px-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Section header - more professional */}
         <div className="max-w-2xl mb-16">
