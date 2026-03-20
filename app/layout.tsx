@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
+import FloatingContactButton from './components/FloatingContactButton'
 
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ['300', '400', '500', '600', '700'],
@@ -184,7 +185,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+      {children}
+      <FloatingContactButton />
+    </body>
     </html>
   )
 }
