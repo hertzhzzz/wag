@@ -1,61 +1,118 @@
-# STACK.md - Technology Stack
+# Technology Stack
 
-**Analysis Date:** 2026-03-17
+**Analysis Date:** 2026-03-20
 
-## Languages & Runtime
+## Languages
 
-| Category | Technology |
-|----------|------------|
-| Language | TypeScript 5.x |
-| Runtime | Node.js |
-| Framework | Next.js 14.2 (App Router) |
+**Primary:**
+- TypeScript 5 - Primary development language for all application code
 
-## Core Dependencies
+**Secondary:**
+- JavaScript - Used for configuration files (next.config.js, postcss.config.js, tailwind.config.ts)
 
-| Package | Version | Purpose |
-|---------|---------|---------|
-| next | 14.2.0 | React framework |
-| react | 18 | UI library |
-| tailwindcss | 3.4.0 | Styling |
-| typescript | 5.x | Type safety |
+## Runtime
 
-## Key Dependencies
+**Environment:**
+- Node.js - Server-side runtime (via Next.js)
+- Browser - Client-side execution via Next.js React components
 
-| Package | Purpose |
-|---------|---------|
-| nodemailer | Gmail SMTP for enquiry form |
-| resend | Email service (listed but NOT actively used) |
-| gray-matter | Parse MDX frontmatter |
-| next-mdx-remote | Render MDX content |
-| react-globe.gl | 3D globe visualization |
-| echarts | Charts (listed but not actively used) |
-| remotion | Video animations (listed but not actively used) |
-| zod | Schema validation for API routes |
-| lucide-react | Icons |
+**Package Manager:**
+- npm 10.9.0
+- Lockfile: `package-lock.json` (present)
 
-## Dev Dependencies
+## Frameworks
 
-| Package | Purpose |
-|---------|---------|
-| @playwright/test | E2E testing (present but not configured) |
-| @tailwindcss/typography | Prose styling |
-| eslint-config-next | Linting |
-| postcss | CSS processing |
+**Core:**
+- Next.js 16.1.7 (App Router) - Full-stack React framework
+- React 19.2.4 - UI library
+
+**Styling:**
+- Tailwind CSS 3.4 - Utility-first CSS framework
+- PostCSS 8 - CSS transformation pipeline
+- @tailwindcss/typography 0.5.19 - Typography plugin for Tailwind
+
+**Build/Dev:**
+- @next/bundle-analyzer 16.1.7 - Bundle size analysis (enabled via ANALYZE=true)
+- ESLint 8.57.1 - Code linting
+- eslint-config-next 15.5.13 - Next.js ESLint configuration
+
+**Content:**
+- MDX - Markdown with JSX support
+- gray-matter 4.0.3 - Frontmatter parsing for MDX files
+- next-mdx-remote 6.0.0 - Load MDX content remotely in Next.js
+- remark 15.0.0 - Markdown processor
+- remark-gfm 4.0.1 - GitHub Flavored Markdown support
+- remark-html 16.0.0 - Convert Markdown to HTML
+
+**Data Visualization:**
+- ECharts 6.0.0 - Interactive charts library
+- echarts-for-react 3.0.6 - React wrapper for ECharts
+- react-globe.gl 2.37.0 - 3D interactive globe visualization
+
+**Video Animation:**
+- Remotion 4.0.429 - Programmatic video creation using React
+- @remotion/animation-utils 4.0.429 - Remotion animation utilities
+- @remotion/player 4.0.429 - Video player component
+- @remotion/cli 4.0.431 - Remotion command-line interface
+
+**Validation:**
+- Zod 4.3.6 - TypeScript-first schema validation
+
+**Email:**
+- Nodemailer 8.0.1 - Email sending library
+- resend 6.9.3 - Modern email API (available but not actively used)
+
+**Rate Limiting:**
+- @upstash/ratelimit 2.0.0 - Rate limiting library
+- @upstash/redis 1.34.0 - Redis client for Upstash
+
+**Image Processing:**
+- sharp 34.5 - High-performance image processing
+
+**Icons:**
+- lucide-react 0.575.0 - Icon library
+
+**Utilities:**
+- csv-parse 6.1.0 - CSV parsing library
 
 ## Configuration
 
-**Path Aliases** (tsconfig.json):
-- `@/*` → `./app/*`
-- `@/lib/*` → `./lib/*`
+**TypeScript:**
+- `tsconfig.json` - Strict mode enabled, bundler module resolution
+- Path aliases: `@/*` maps to `./app/*`, `@/lib/*` maps to `./lib/*`
 
-**Custom Tailwind Colors:**
-- navy: #0F2D5E
-- amber: #F59E0B
+**Next.js:**
+- `next.config.js` - Custom redirects, image optimization, security headers, bundle analyzer
+- React Strict Mode: enabled
+- Transpiled packages: react-globe.gl, three-globe, globe.gl
 
-**Fonts:**
-- IBM Plex Sans
-- IBM Plex Serif
+**Tailwind:**
+- `tailwind.config.ts` - Custom colors (navy: #0F2D5E, amber: #F59E0B), custom fonts (IBM Plex Sans/Serif)
+- Custom fonts via CSS variables: `var(--font-ibm-plex-sans)`, `var(--font-ibm-plex-serif)`
+
+**PostCSS:**
+- `postcss.config.js` - tailwindcss and autoprefixer plugins
+
+**Path Aliases (tsconfig.json):**
+```
+@/*        -> ./app/*
+@/lib/*    -> ./lib/*
+```
+
+**Vercel Deployment:**
+- `vercel.json` - Build command: `npm run build`, output directory: `.next`
+
+## Platform Requirements
+
+**Development:**
+- Node.js compatible environment
+- npm 10.9.0+
+
+**Production:**
+- Deployed on Vercel
+- Custom domain: winningadventure.com.au (configured)
+- Environment variables required (see INTEGRATIONS.md)
 
 ---
 
-*Technology stack analysis: 2026-03-17*
+*Stack analysis: 2026-03-20*
