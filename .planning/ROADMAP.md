@@ -29,7 +29,7 @@ discuss → plan → execute → verify
 | Phase | Name | Workflow Status | Description |
 |-------|------|-----------------|-------------|
 | 14 | Two Ways to Access Section | Complete | 2026-03-20 |
-| 15 | 1/2 | In Progress|  |
+| 15 | 2/2 | Complete   | 2026-03-20 |
 | 16 | Floating Contact Button | Pending | 右下角悬浮按钮 + Modal |
 | 17 | FAQ Page + Schema | Pending | /resources/faq + FAQPage JSON-LD |
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
@@ -71,7 +71,7 @@ discuss → plan → execute → verify
 6. 底部 CTA："View Full Directory →" 触发询价表单
 7. 响应式设计
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [ ] 15-01-PLAN.md — Create DirectorySection components (types, data, FilterTabs, CityList, DirectoryMap)
