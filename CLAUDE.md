@@ -111,8 +111,15 @@ vercel --prod
 
 ## Rules
 
-- **禁止** emoji
-- **禁止** "WA" 缩写，使用 "Winning Adventure Global" 或 "WAG"
+### STRICT (Violations = Immediate Fix Required)
+- **禁止 emoji** — Never use emoji anywhere in the codebase
+- **禁止中文** — Page content, UI text, buttons, labels MUST be English only
+  - Exception: Blog content in `content/blog/*.mdx` may contain Chinese
+  - Exception: Comments in code
+  - This rule supersedes all other considerations — any Chinese text found on pages must be fixed immediately
+- **禁止 "WA" 缩写** — Use "Winning Adventure Global" or "WAG"
+
+### Standard Rules
 - 提交前必须：`npm run build` && `npm run lint`
 - 5 个页面必须可访问：`/`, `/services`, `/about`, `/resources`, `/enquiry`
 - **本地 build 成功 ≠ 线上可访问** — 部署后必须用 `curl -sI <URL>` 验证
