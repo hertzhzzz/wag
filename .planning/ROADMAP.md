@@ -28,7 +28,7 @@ discuss → plan → execute → verify
 
 | Phase | Name | Workflow Status | Description |
 |-------|------|-----------------|-------------|
-| 14 | 1/1 | Complete   | 2026-03-20 |
+| 14 | 1/1 | Complete    | 2026-03-20 |
 | 15 | Directory Section (Landing) | ⬜ pending | 替换 Select Your Sector，工厂列表+地图+筛选 |
 | 16 | Floating Contact Button | ⬜ pending | 右下角悬浮按钮 + Modal |
 | 17 | FAQ Page + Schema | ⬜ pending | /resources/faq + FAQPage JSON-LD |
