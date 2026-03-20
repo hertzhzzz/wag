@@ -4,7 +4,9 @@ import { checkRateLimit } from '@/lib/rate-limit'
 // CORS configuration
 const ALLOWED_ORIGINS = [
   'https://www.winningadventure.com.au',
-  'https://winningadventure.com.au'
+  'https://winningadventure.com.au',
+  'http://localhost:3000',
+  'http://localhost:3001',
 ]
 
 // CORS preflight handler
