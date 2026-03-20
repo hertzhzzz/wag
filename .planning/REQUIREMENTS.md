@@ -25,9 +25,11 @@
 - [ ] **TECH-10**: 实现 app/robots.ts 爬取控制 (Next.js MetadataRoute API)
 - [ ] **TECH-11**: 将所有 Schema 组件转换为 Server Components (修复 'use client' 导致的问题)
 - [ ] **TECH-12**: 在所有页面添加 BreadcrumbList schema (提高 Sitelinks eligibility)
-- [ ] **TECH-13**: 修复 Core Web Vitals (LCP < 2.5s, CLS < 0.1)
+- [ ] **TECH-13**: 修复 Core Web Vitals (LCP < 2.5s, CLS < 0.1, INP < 200ms — FID已废弃)
 - [ ] **TECH-14**: 在所有页面添加 Article schema (博客文章)
 - [ ] **TECH-15**: 审计并修复所有页面的 canonical URLs
+- [ ] **TECH-16**: 创建 app/sitemap.ts (Next.js 原生 sitemap)
+- [ ] **TECH-17**: 添加 OpenGraph 和 Twitter Card metadata
 
 ### Content Architecture
 
@@ -42,6 +44,8 @@
 - [ ] **CONT-12**: 创建 "China Factory Audit Checklist" (target: "factory audits")
 - [ ] **CONT-13**: 创建案例研究 (需客户授权)
 - [ ] **CONT-14**: 建立系统性内容发布流程 (月度新闻评论)
+- [ ] **CONT-15**: 创建 "ChAFTA Import Guide for Australian Businesses" (目标: "Australia China sourcing")
+- [ ] **CONT-16**: 创建 "Australia Import Regulations Overview"
 
 ### Authority Building
 
@@ -86,27 +90,31 @@ Deferred to future release.
 | TECH-11 | Phase 14 | Pending |
 | TECH-12 | Phase 14 | Pending |
 | TECH-13 | Phase 14 | Pending |
-| TECH-14 | Phase 15 | Pending |
+| TECH-14 | Phase 14 | Pending |
 | TECH-15 | Phase 14 | Pending |
+| TECH-16 | Phase 14 | Pending |
+| TECH-17 | Phase 14 | Pending |
+| EEAT-01 | Phase 14 | Pending |
+| EEAT-02 | Phase 14 | Pending |
 | ARCH-01 | Phase 15 | Pending |
 | ARCH-02 | Phase 15 | Pending |
 | ARCH-03 | Phase 15 | Pending |
 | CONT-10 | Phase 16 | Pending |
 | CONT-11 | Phase 16 | Pending |
 | CONT-12 | Phase 16 | Pending |
-| CONT-13 | Phase 16 | Pending |
 | CONT-14 | Phase 16 | Pending |
+| CONT-15 | Phase 16B | Pending |
+| CONT-16 | Phase 16B | Pending |
+| CONT-13 | Phase 16B | Pending |
 | AUTH-10 | Phase 17 | Pending |
 | AUTH-11 | Phase 17 | Pending |
 | AUTH-12 | Phase 17 | Pending |
-| EEAT-01 | Phase 14 | Pending |
-| EEAT-02 | Phase 14 | Pending |
 
 **Coverage:**
-- v2.0 requirements: 19 total
-- Mapped to phases: 19
+- v2.0 requirements: 23 total
+- Mapped to phases: 23
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-20*
-*Last updated: 2026-03-20 after keyword research confirmed*
+*Last updated: 2026-03-20 after 5-reviewer analysis — added TECH-16, TECH-17, CONT-15, CONT-16*
