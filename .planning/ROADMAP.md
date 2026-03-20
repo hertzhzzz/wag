@@ -29,7 +29,7 @@ discuss → plan → execute → verify
 | Phase | Name | Workflow Status | Description |
 |-------|------|-----------------|-------------|
 | 14 | Two Ways to Access Section | Complete | 2026-03-20 |
-| 15 | 2/2 | Complete   | 2026-03-20 |
+| 15 | 2/2 | Complete    | 2026-03-20 |
 | 16 | Floating Contact Button | Pending | 右下角悬浮按钮 + Modal |
 | 17 | FAQ Page + Schema | Pending | /resources/faq + FAQPage JSON-LD |
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
