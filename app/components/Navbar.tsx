@@ -55,7 +55,7 @@ export default function Navbar() {
             <Link href="/resources" className="nav-link text-navy">Resources</Link>
           </li>
           <li>
-            <Link href="/about" className="nav-link text-navy">About</Link>
+            <Link href="/about" className="nav-link text-navy">About Us</Link>
           </li>
         </ul>
 
