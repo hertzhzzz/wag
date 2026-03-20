@@ -28,13 +28,13 @@ discuss → plan → execute → verify
 
 | Phase | Name | Workflow Status | Description |
 |-------|------|-----------------|-------------|
-| 14 | 1/1 | Complete    | 2026-03-20 |
-| 15 | Directory Section (Landing) | ⬜ pending | 替换 Select Your Sector，工厂列表+地图+筛选 |
-| 16 | Floating Contact Button | ⬜ pending | 右下角悬浮按钮 + Modal |
-| 17 | FAQ Page + Schema | ⬜ pending | /resources/faq + FAQPage JSON-LD |
-| 18 | About Page | ⬜ pending | 公司故事 + E-E-A-T |
-| 19 | Page SEO Optimization | ⬜ pending | Meta tags + 关键词 |
-| 20 | Technical SEO | ⬜ pending | sitemap.xml + robots.txt |
+| 14 | Two Ways to Access Section | Complete | 2026-03-20 |
+| 15 | Directory Section (Landing) | Planned | 替换 Select Your Sector，工厂列表+地图+筛选 |
+| 16 | Floating Contact Button | Pending | 右下角悬浮按钮 + Modal |
+| 17 | FAQ Page + Schema | Pending | /resources/faq + FAQPage JSON-LD |
+| 18 | About Page | Pending | 公司故事 + E-E-A-T |
+| 19 | Page SEO Optimization | Pending | Meta tags + 关键词 |
+| 20 | Technical SEO | Pending | sitemap.xml + robots.txt |
 
 ---
 
@@ -70,6 +70,12 @@ discuss → plan → execute → verify
 5. 列表与地图联动（点击列表 → 地图定位；点击地图 → 列表滚动）
 6. 底部 CTA："View Full Directory →" 触发询价表单
 7. 响应式设计
+
+**Plans:** 2 plans
+
+Plans:
+- [ ] 15-01-PLAN.md — Create DirectorySection components (types, data, FilterTabs, CityList, DirectoryMap)
+- [ ] 15-02-PLAN.md — Install Leaflet deps + integrate into homepage
 
 **Deliverable:** `/` 首页替换 Industries section
 
@@ -194,10 +200,10 @@ discuss → plan → execute → verify
 
 ## Next Action
 
-运行 `/gsd:discuss-phase 15` 开始讨论 Phase 15
+运行 `/gsd:execute-phase 15` 执行 Phase 15 计划
 
 ---
 
 *Roadmap created: 2026-03-20*
-*Updated: 2026-03-20 (添加 discuss 流程要求)*
+*Updated: 2026-03-20 (Phase 15 plans created)*
 *Competitor: chinafactorytours.com*
