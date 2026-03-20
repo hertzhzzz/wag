@@ -22,14 +22,14 @@ const cards = [
   {
     isPrimary: false,
     icon: Database,
-    title: 'Factory Directory Access',
-    description: 'Browse verified manufacturers independently — email unlock reveals full contact details.',
+    title: 'Factory Directory Access — Free',
+    description: 'Browse verified manufacturers independently at no cost — submit an enquiry to unlock full contact details.',
     bullets: [
+      'Free access to factory directory',
       'Browse partial factory previews',
-      'Extensive factory database',
       'Submit enquiry for full details',
     ],
-    cta: 'Request Directory Access',
+    cta: 'Access Directory Free',
     ctaHref: '/enquiry',
   },
 ]
