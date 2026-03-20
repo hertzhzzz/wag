@@ -8,9 +8,20 @@ Winning Adventure Global (WAG) company website - a Next.js-based corporate site 
 
 Help Australian businesses safely connect with verified China manufacturers through professional sourcing services and factory visit experiences.
 
-## Current Status
+## Current Milestone: v2.0 SEO Optimization
 
-**All milestones complete.** Website is live at https://www.winningadventure.com.au
+**Goal:** 在 Google Australia 超越主要竞争对手，建立行业权威
+
+**Target competitors:**
+- Epic Sourcing Australia (epicsourcing.com.au) — 全方位采购服务
+- ChinaDirect Sourcing (chinadirectsourcing.com.au) — 中国进口服务
+
+**Target keywords:** China sourcing, import from China, factory visit China, Australia China supplier
+
+**Success metrics:**
+- Rank above competitors for target keywords
+- DA 20+
+- Systematic content pipeline established
 
 ## Milestones
 
@@ -26,8 +37,8 @@ Help Australian businesses safely connect with verified China manufacturers thro
 
 ### Active
 
-- [ ] **SEO-01**: Rank #1 for "epic sourcing" in Google Australia
-- [ ] **SEO-02**: Rank #1 for "china direct" in Google Australia
+- [ ] **SEO-01**: 在 Google Australia 超越 Epic Sourcing Australia (epicsourcing.com.au)
+- [ ] **SEO-02**: 在 Google Australia 超越 ChinaDirect Sourcing (chinadirectsourcing.com.au)
 - [ ] **SEO-03**: Increase Domain Authority (DA) to 20+
 - [ ] **SEO-04**: Establish systematic content creation pipeline
 
@@ -69,4 +80,4 @@ Help Australian businesses safely connect with verified China manufacturers thro
 
 ---
 
-*Last updated: 2026-03-20*
+*Last updated: 2026-03-20 after v2.0 SEO milestone started*

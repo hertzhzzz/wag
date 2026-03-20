@@ -1,8 +1,8 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.4
-milestone_name: UI Optimization
-status: complete
+milestone: v2.0
+milestone_name: SEO Optimization
+status: defining
 last_updated: "2026-03-20"
 ---
 
@@ -12,7 +12,21 @@ last_updated: "2026-03-20"
 
 **Core value:** Help Australian businesses safely connect with verified China manufacturers
 
-**Current focus:** All milestones complete
+**Current focus:** v2.0 SEO Optimization — competing with Epic Sourcing Australia and ChinaDirect Sourcing
+
+## Current Position
+
+Phase: Not started (defining requirements)
+Plan: —
+Status: Defining requirements
+Last activity: 2026-03-20 — Milestone v2.0 started
+
+## Target Competitors
+
+| Company | Website | Strengths |
+|---------|---------|-----------|
+| Epic Sourcing Australia | epicsourcing.com.au | 全方位服务, 无佣金模式, 澳洲本地团队 |
+| ChinaDirect Sourcing | chinadirectsourcing.com.au | 中国进口, 节省30-50% |
 
 ## Milestones Summary
 
@@ -23,6 +37,7 @@ last_updated: "2026-03-20"
 | Security Audit | v1.2 | 08 | ✅ Complete |
 | SEO Optimization | v1.3 | 06, 06.1, 07, 09, 10, 11, 12 | ✅ Complete |
 | UI Optimization | v1.4 | 13 | ✅ Complete |
+| SEO Optimization v2 | v2.0 | TBD | 🟡 In Progress |
 
 ## Deployment Status
 
@@ -56,4 +71,4 @@ last_updated: "2026-03-20"
 
 ---
 
-*State updated: 2026-03-20*
+*State updated: 2026-03-20 after v2.0 started*
