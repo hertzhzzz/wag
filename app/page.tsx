@@ -4,6 +4,7 @@ import CTABand from '@/components/CTABand'
 import Hero from './components/Hero'
 import Industries from './components/industries'
 import HowItWorks from './components/HowItWorks'
+import TwoWaysAccess from './components/TwoWaysAccess'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { Metadata } from 'next'
@@ -32,6 +33,7 @@ export default function Home() {
       <FAQSchema />
       <Hero />
       <HowItWorks />
+      <TwoWaysAccess />
       <Industries />
       <FAQ />
       <CTABand />
