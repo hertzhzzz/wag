@@ -1,139 +1,179 @@
-# Market Landscape: China Sourcing & B2B Import Consulting in Australia
+# Stack Research: SEO Competitor Analysis Tools
 
-**Project:** Winning Adventure Global (WAG)
+**Domain:** SEO Competitor Analysis Tools for Surpassing Epic Sourcing and ChinaDirect Sourcing
+**Project:** WAG Website v2.0 SEO Optimization
 **Researched:** 2026-03-20
 **Confidence:** MEDIUM
 
 ## Executive Summary
 
-The China sourcing and B2B import consulting market in Australia is a mature but fragmented industry serving businesses seeking to import manufactured goods from China. Key pain points include supplier verification, quality control, language barriers, and logistics complexity. WAG positions itself as a premium, relationship-driven service with physical presence in China, differentiating from discount agents and large impersonal platforms.
+To surpass Epic Sourcing Australia (epicsourcing.com.au) and ChinaDirect Sourcing (chinadirectsourcing.com.au) in Google Australia rankings, WAG needs a layered SEO tool stack covering: (1) competitor backlink intelligence, (2) technical site auditing, (3) rank tracking, and (4) ongoing monitoring. The core recommendation is **Ahrefs** as the primary SEO intelligence platform because it offers the most comprehensive backlink database, combined with **Screaming Frog SEO Spider** for deep technical crawling, and **Google Search Console** (free) for owned-site performance. For Next.js CI/CD integration, use **Lighthouse CLI** and **vercel-seo-audit**.
 
-## Market Overview
+## Recommended Stack
 
-### Market Size & Opportunity
+### Core SEO Intelligence Platform
 
-- **Australia-China bilateral trade:** Strong and growing, despite geopolitical tensions
-- **Key drivers:** Australian businesses seeking cost-competitive manufacturing, especially in furniture, electronics, machinery, and consumer goods
-- **Market gap:** Premium, trust-focused sourcing services that combine physical presence with professional verification
+| Technology | Version/Plan | Purpose | Why Recommended |
+|------------|--------------|---------|-----------------|
+| **Ahrefs** | Webmaster or higher ($99/mo) | Backlink analysis, competitor research, keyword discovery | Industry-standard backlink database (12+ trillion links), fastest crawl updates, competitor gap analysis reveals link opportunities WAG is missing from Epic Sourcing and ChinaDirect Sourcing |
+| **Google Search Console** | Free | Owned-site performance, indexing status, Core Web Vitals | Official Google data source; required for monitoring DA 20+ progress; zero cost |
+| **Google Lighthouse CLI** | Latest (via npm) | Automated technical SEO auditing | Native Next.js support; CI/CD integration for pre-deploy checks; catches issues before production |
 
-### Industry Trends (2025-2026)
+### Site Crawling and Technical Audit
 
-| Trend | Impact | Source Confidence |
-|-------|--------|-------------------|
-| Rising China manufacturing costs | Labor costs up 15-20% since 2020, pushing businesses to seek efficiency | MEDIUM |
-| Increased focus on supplier verification | Post-COVID quality concerns drive demand for on-ground verification | HIGH |
-| Digital factory visits replacing in-person | Virtual tours, video inspections becoming standard | MEDIUM |
-| Diversification pressure | Some businesses exploring Vietnam/India alternatives, but China remains dominant | HIGH |
-| Quality complexity | More complex sourcing requiring engineering expertise | MEDIUM |
+| Technology | Version/Plan | Purpose | Why Recommended |
+|------------|--------------|---------|-----------------|
+| **Screaming Frog SEO Spider** | v20+ (GBP 199/yr) | Desktop crawler for deep technical audit | Finds 300+ SEO issues (broken links, missing meta, canonical problems); essential for Next.js SSR/SPAs where JavaScript rendering matters |
+| **Sitebulb Cloud** | Pro plan | Visual technical SEO reporting | Better UX than Screaming Frog; cloud-based (no local install); strong for presenting audit results to stakeholders |
+| **vercel-seo-audit** | Latest (npm) | Next.js-specific SEO audit | Built specifically for Vercel deployments; catches Next.js metadata, OG tags, sitemap issues |
 
-### Key Market Events
+### Rank Tracking
 
-- **Canton Fair 2026:** Major trade event attracting Australian buyers
-- **Global Sourcing Expo Australia:** Annual event in Melbourne for industry networking
-- **Australia-China trade relations:** Stabilizing post-2020 tensions, creating renewed business interest
+| Technology | Version/Plan | Purpose | Why Recommended |
+|------------|--------------|---------|-----------------|
+| **SEmonitor** | Pro ($74/mo) | Automated rank tracking + competitor monitoring | Tracks WAG and competitor rankings side-by-side; includes keyword grouping for Australia targeting; 2026 updates include AI Overview tracking |
+| **Pro Rank Tracker** | Pro ($99/mo) | SERP tracking with API access | Good API for custom dashboards; tracks AI Overviews which is critical in 2026 search landscape |
 
-## Competitive Landscape
+### Supporting Libraries (Next.js Integration)
 
-### Direct Competitors (Australia-focused)
+| Library | Version | Purpose | When to Use |
+|---------|---------|---------|-------------|
+| `next-sitemap` | v4+ | Automated XML sitemap generation | Keeps Googlebot informed of all pages; required for large content sites |
+| `@next/third-parties` | Latest | Google Analytics 4 integration | Sending performance events to GA4; replaces manual gtag setup |
+| `next-robots.txt` | Via Next.js config | Crawl directive management | Controls what search engines access; essential for SEO control |
 
-| Company | Location | Services | Pricing Model | Differentiation |
-|---------|----------|----------|---------------|-----------------|
-| **ChinaDirect Sourcing** | Australia | End-to-end importing, buying trips, quality control | Commission-based (claim 30-50% savings) | Award-winning, Australian-based |
-| **GMAC Sourcing Asia** | Hong Kong (Australian-owned) | Vendor verification, price negotiation, QC, shipping | Service fees + commission | Long-standing Asia-Pacific expertise |
-| **The Sourcing Co** | Asia-Pacific | Product development, outsourcing, manufacturing | Not transparent | Factory-direct approach |
+## Installation
 
-### Indirect Competitors (Global China Sourcing)
+```bash
+# Core SEO tools (CLI)
+npm install -g lighthouse  # Google Lighthouse CLI
+npm install -g @sitebulb/audit  # Sitebulb CLI if available
 
-| Company | Location | Services | Pricing Model | Notes |
-|---------|----------|----------|---------------|-------|
-| **Advanta Sourcing** | China | Sourcing, design, manufacturing | Commission-based | Serves Fortune 500s, 34 countries |
-| **Supplyia** | China | One-stop sourcing, manufacturing, shipping | Service fee model | 2026 active marketing |
-| **EJET Procurement** | China | Sourcing, market visits, factory audits | Commission + service fees | Market visit specialists |
-| **Sourcify China** | China | Factory verification, sourcing | Commission from 3% | Transparent pricing |
-| **Asia Sourcing Group** | China | 500+ specialists, 60+ industries | Commission-based | Large network since 2011 |
+# Next.js SEO libraries
+npm install next-sitemap @next/third-parties
 
-### Competitor Pricing Models
+# Development dependencies
+npm install -D prettier eslint-plugin-next
+```
 
-| Model | Description | Typical Range | Market Adoption |
-|-------|-------------|---------------|------------------|
-| **Commission-based** | % of product factory price | 3-10% | Most common |
-| **Service fee + commission** | Flat fee + percentage | $199-500 setup + 3-5% | Mid-tier agents |
-| **Hourly/daily consulting** | For factory visits, audits | $200-500/day | Premium services |
-| **Flat per-service** | Per inspection, per audit | $128-228 per man-day | QC services |
+## Alternatives Considered
 
-### Competitive Gap Analysis
+| Recommended | Alternative | When to Use Alternative |
+|-------------|-------------|------------------------|
+| Ahrefs | SE Ranking | If budget is tight ($39/mo vs $99/mo) but need similar backlink analysis |
+| Screaming Frog | Sitebulb | If team prefers cloud-based UI over desktop application |
+| SEmonitor | Pro Rank Tracker | If need more flexible API integrations for custom dashboards |
+| Lighthouse CLI | PageSpeed Insights API | For programmatic scoring in CI/CD pipelines without local Chrome |
 
-**WAG's positioning opportunity:**
-- Premium, relationship-driven approach (vs. transactional discount agents)
-- Physical presence with English-speaking professionals
-- Factory visit experiences (differentiating "experience" vs. pure transactional)
-- Trust-building through verification and transparency
+## What NOT to Use
 
-## Industry Service Categories
+| Avoid | Why | Use Instead |
+|-------|-----|-------------|
+| Moz Pro | Declining relevance after founder Rand Fishkin left; backlink index significantly smaller than Ahrefs; slower updates | Ahrefs |
+| SEMrush | Higher cost ($120+/mo); less intuitive backlink analysis; stronger for PPC than organic SEO | Ahrefs or SE Ranking |
+| Free backlink checker tools | Severe data limitations (500 URLs max); incomplete for competitive analysis | Ahrefs Webmaster ($29/mo) for basic backlink monitoring |
+| Generic SEO plugins (Yoast, Rank Math) | Built for WordPress; not applicable to Next.js | next-sitemap + manual metadata |
+| Unverified "SEO automation" tools | Data accuracy questionable; no track record | Established names above |
 
-### Core Services (Table Stakes)
+## SEO Tool Categories for Competitor Analysis
 
-| Service | Market Expectation | Complexity |
-|---------|-------------------|------------|
-| Supplier identification | Expected | Low |
-| Price negotiation | Expected | Medium |
-| Quality control inspections | Expected | Medium |
-| Shipping coordination | Expected | Medium |
-| Factory audits | Expected | Medium |
+To beat Epic Sourcing and ChinaDirect Sourcing, WAG must analyze across these dimensions:
 
-### Differentiating Services (Premium)
+### 1. Backlink Profile Comparison
+- **What to analyze**: Total backlinks, referring domains, Domain Rating (DR), link velocity, anchor text distribution
+- **Tool**: Ahrefs Site Explorer
+- **Why**: Both competitors have 5+ year head start in link building; WAG must identify their high-value links and pursue similar sources
 
-| Service | Value Proposition | Complexity |
-|---------|-------------------|------------|
-| Factory visit experiences | Hands-on verification, relationship building | High |
-| Supplier verification deep-dive | Credit checks, capability assessments | Medium |
-| Custom product development | Engineering support, prototyping | High |
-| Ongoing relationship management | Long-term supplier partnership | Medium |
+### 2. Keyword Gap Analysis
+- **What to analyze**: Keywords Epic Sourcing and ChinaDirect rank for that WAG does not
+- **Tool**: Ahrefs Content Gap or SE Ranking Keyword Gap
+- **Why**: Reveals content opportunities (e.g., "factory visit China cost", "Australia China supplier verification")
 
-## Pricing Benchmarks
+### 3. Technical SEO Audit
+- **What to analyze**: Crawl errors, Core Web Vitals, meta completeness, schema markup, JavaScript rendering
+- **Tool**: Screaming Frog + Lighthouse CI
+- **Why**: Both competitors may have technical debt; WAG can exploit with superior site health scores
 
-### Service Fee Benchmarks (2025-2026)
+### 4. SERP Feature Capture
+- **What to analyze**: Who owns featured snippets, "People Also Ask", local packs, AI Overviews
+- **Tool**: Ahrefs or SEmonitor
+- **Why**: In 2026, AI Overviews and SERP features capture significant clicks; need to optimize for and own these
 
-| Service | Low | Mid | High | Notes |
-|---------|-----|-----|------|-------|
-| Factory audit | $128/day | $200/day | $500/day | Depends on complexity |
-| Quality inspection | $150 | $250 | $400 | Per visit |
-| Sourcing commission | 3% | 5-8% | 10% | Of product cost |
-| Buying trip (3-day) | $1,500 | $3,000 | $8,000 | All-inclusive |
-| Virtual factory tour | $200 | $400 | $800 | With interpreter |
+### 5. Local SEO Presence
+- **What to analyze**: Google Business Profile, local citations (Yelp, Yellow Pages, True Local), reviews
+- **Tool**: Google Business Profile (free) + BrightLocal or Localo
+- **Why**: "Australia China supplier" has strong local intent; dominating Google Maps is critical for visibility
 
-### Commission Structure Analysis
+## Stack Patterns by Budget
 
-- **Low-end (3-5%):** Volume-focused, less personalization
-- **Mid-tier (5-8%):** Balanced service, standard verification
-- **Premium (8-12%):** Full service, relationship focus, verification depth
+**If limited budget (GBP 500-1000/yr total):**
+- Ahrefs Webmaster ($29/mo) for backlink + keyword research
+- Google Search Console (free) for owned data
+- Screaming Frog (free tier, 500 URLs) for manual audits
+- SEmonitor trial for rank tracking verification
 
-## Source Notes
+**If full capability (GBP 2000+/yr):**
+- Ahrefs Standard ($199/mo) for complete backlink + content analysis
+- Screaming Frog paid license (GBP 199/yr)
+- Sitebulb Pro for visual reporting
+- SEmonitor Pro ($74/mo) for automated rank tracking
 
-**HIGH Confidence Sources:**
-- ChinaDirect Sourcing official website (chinadirectsourcing.com.au)
-- GMAC Sourcing Asia official website (gmacsourcing.com)
-- The Sourcing Co official website (thesourcing.co)
+**For Next.js CI/CD integration:**
+- Lighthouse CI + vercel-seo-audit in pre-deploy pipeline
+- GitHub Actions to run nightly audits against staging
+- Automated Slack/email alerts for critical SEO issues
 
-**MEDIUM Confidence Sources:**
-- Industry pricing from multiple sourcing agent websites
-- Market trend analysis from dezshira.com Asia Manufacturing Index
-- Supplyia, EJET Procurement, Sourcify China pricing pages
+## Version Compatibility
 
-**LOW Confidence Areas:**
-- Precise market size figures (not available from public sources)
-- Australia-specific import volume statistics (requires trade data subscription)
+| Package | Compatible With | Notes |
+|---------|-----------------|-------|
+| `next-sitemap@4.x` | Next.js 14+ App Router | Generates sitemap for dynamic routes; essential for content site |
+| `@next/third-parties` | Next.js 14+ | GA4 integration without manual gtag setup |
+| `vercel-seo-audit` | Vercel deployments only | Not compatible with other hosting providers |
+| Lighthouse CLI | Node 18+ | Use via npx or dedicated CI container image |
 
-## Research Gaps
+## Why Each Tool Matters for WAG Specifically
 
-1. **Market size:** No public Australian market size data for China sourcing services
-2. **WAG pricing strategy:** Not provided in context, needs internal decision
-3. **Competitor financials:** Private companies, limited public data
-4. **Customer demographics:** Specific Australian industry verticals most active
+### Ahrefs
+WAG needs to understand why Epic Sourcing and ChinaDirect rank for target keywords. Ahrefs reveals:
+- Their exact backlink sources (directories, guest posts, press)
+- Keyword gaps WAG has not targeted
+- Content that drives their traffic
+- Link building opportunities WAG should pursue
 
-## Implications for Roadmap
+### Screaming Frog
+Next.js App Router creates JavaScript-rendered pages that require special handling:
+- Detects hreflang issues
+- Finds duplicate meta descriptions across pages
+- Audits internal linking structure
+- Identifies pages blocked by robots.txt
 
-1. **Positioning:** WAG's factory visit experience is a clear differentiator
-2. **Pricing guidance:** Commission range of 5-10% aligns with market; premium tier can command 10%+
-3. **Service expansion:** Consider adding virtual verification options for cost-conscious segment
-4. **Trust messaging:** Verification and transparency themes resonate strongly in post-COVID market
+### SEmonitor
+Weekly rank tracking against specific competitors:
+- "China sourcing Australia" keyword group
+- "Factory visit China" keyword group
+- Geographic targeting (Sydney, Melbourne, Brisbane)
+- Automated alerts when competitor outranks WAG
+
+### Lighthouse
+Core Web Vitals directly affect Google rankings:
+- LCP (Largest Contentful Paint) < 2.5s
+- FID (First Input Delay) < 100ms
+- CLS (Cumulative Layout Shift) < 0.1
+- Next.js optimized builds should score 90+ on all metrics
+
+## Sources
+
+- Screaming Frog SEO Spider official site (v20, 2026-01) — https://www.screamingfrog.co.uk/seo-spider/
+- Ahrefs features and pricing — https://ahrefs.com (verified via product documentation)
+- Sitebulb Cloud features (2026-02) — https://sitebulb.com
+- SEmonitor rank tracking (2026-02) — https://www.seomonitor.com
+- Pro Rank Tracker pricing (2026-02) — https://proranktracker.com
+- 12 Best SEO Tools for 2026 (Backlinko) — https://backlinko.com/best-free-seo-tools (2026-02)
+- next-sitemap npm package — https://www.npmjs.com/package/next-sitemap
+- vercel-seo-audit GitHub repository (2026-03) — https://github.com/CichyEZ/vercel-seo-audit
+
+---
+
+*Stack research for: SEO Competitor Analysis*
+*Researched: 2026-03-20*

@@ -1,344 +1,443 @@
-# Architecture & Implementation Decisions
+# Architecture Research: SEO Site Structure for WAG
 
-**Project:** Winning Adventure Global (WAG)
-**Domain:** B2B Sourcing/Consulting Service Website
+**Domain:** B2B Sourcing Services Website (Australia-China)
+**Project:** Winning Adventure Global Website
 **Researched:** 2026-03-20
 **Confidence:** MEDIUM
 
 ## Executive Summary
 
-WAG 作为一个 B2B 采购咨询服务网站，其技术架构需要在SEO表现、转化率优化和潜在客户追踪之间取得平衡。基于研究，最佳实践包括：采用 Next.js App Router 实现服务端渲染以提升SEO，使用结构化数据增强搜索可见性，通过清晰的转化路径设计提升询盘表单提交率，以及部署全面的分析追踪系统来衡量营销效果。
+WAG's SEO architecture needs evolution from basic implementation to competitive levels. Current gaps include missing `robots.ts`, fragmented schema (Client Components where Server Components needed), no breadcrumb schema, no hub-and-spoke content architecture, and missing Article schema for blog posts. This research provides a phased architecture roadmap to achieve Domain Authority 20+ and rank above Epic Sourcing Australia and ChinaDirect Sourcing.
 
-## Recommended Architecture
+## Current Architecture Assessment
+
+### What Exists
+
+| Component | Status | Location |
+|-----------|--------|----------|
+| Sitemap | Basic | `app/sitemap.ts` |
+| Metadata API | Per-page | `app/*/metadata.ts` |
+| JSON-LD Schema | Partial | `app/layout.tsx`, `app/components/*Schema.tsx` |
+| Google Analytics | Implemented | `app/layout.tsx` |
+| robots.txt | **Missing** | - |
+
+### Current Gaps (Priority Order)
+
+| Gap | Impact | Effort |
+|-----|--------|--------|
+| No `robots.ts` | Crawl control impossible | Low |
+| Schema in Client Components | SEO indexation risk | Medium |
+| No breadcrumb schema | Lost sitelinks opportunity | Low |
+| No Article schema | Blog posts not rich-indexed | Medium |
+| Flat site structure | Weak topical authority | High |
+| No service detail pages | Thin content, no long-tail keywords | High |
+| No internal linking strategy | PageRank not distributed | Medium |
+
+---
+
+## Recommended Architecture: Hub-and-Spoke SEO Structure
 
 ### System Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                        CDN (Vercel Edge)                    │
+│                      Search Engine Bot                        │
 ├─────────────────────────────────────────────────────────────┤
-│                     Next.js 16 App Router                   │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐       │
-│  │  Home   │  │Services │  │  About  │  │Enquiry  │       │
-│  │  (/)    │  │/services│  │ /about  │  │/enquiry │       │
-│  └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘       │
-│       │            │            │            │             │
-│  ┌────┴────────────┴────────────┴────────────┴────┐       │
-│  │              Server Components                  │       │
-│  │     (Static Generation + ISR for performance)   │       │
-│  └─────────────────────┬───────────────────────────┘       │
-│                        │                                    │
-│  ┌─────────────────────┴───────────────────────────┐       │
-│  │              API Routes (Route Handlers)          │       │
-│  │   /api/enquiry    /api/newsletter                 │       │
-│  └─────────────────────┬───────────────────────────┘       │
-│                        │                                    │
-│  ┌─────────────────────┴───────────────────────────┐       │
-│  │           Third-party Integrations               │       │
-│  │   Nodemailer  │  Upstash Redis  │  Google Analytics│       │
-│  └───────────────────────────────────────────────────┘       │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐        │
+│  │ Sitemap │  │ Robots  │  │ JSON-LD │  │ Content │        │
+│  │ Generator│ │ Generator│ │ Assembler│ │ Hub     │        │
+│  └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘        │
+│       │            │            │            │              │
+├───────┴────────────┴────────────┴────────────┴──────────────┤
+│                    Next.js App Router                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │              Metadata API Layer                        │    │
+│  │  - Per-page metadata exports                          │    │
+│  │  - generateMetadata() for dynamic pages               │    │
+│  │  - canonical URLs                                     │    │
+│  └─────────────────────────────────────────────────────┘    │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │              Schema Assembly Layer                     │    │
+│  │  - Organization (root layout)                        │    │
+│  │  - LocalBusiness (root layout)                        │    │
+│  │  - WebPage (per page)                                │    │
+│  │  - BreadcrumbList (per page)                         │    │
+│  │  - FAQPage (service pages)                           │    │
+│  │  - Article (blog posts)                              │    │
+│  └─────────────────────────────────────────────────────┘    │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │              Content Structure Layer                  │    │
+│  │  - Hub page (/services)                              │    │
+│  │  - Spoke pages (/services/[service-name])           │    │
+│  │  - Resource center (/resources)                      │    │
+│  │  - Blog posts (/resources/[slug])                    │    │
+│  └─────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Page Structure
+### Component Responsibilities
 
-| Page | Purpose | Rendering Strategy | Key Conversion Element |
-|------|---------|-------------------|----------------------|
-| `/` | 品牌展示 + 价值主张 | SSG (Static) | 服务概述 CTA |
-| `/services` | 服务详情 | SSG + ISR | 服务卡片 CTA |
-| `/about` | 信任建立 | SSG | 团队/资质展示 |
-| `/resources` | 博客/资讯 | SSG (Dynamic) | Newsletter 订阅 |
-| `/enquiry` | 询盘表单 | SSR (for rate limiting) | 核心转化点 |
+| Component | Responsibility | Implementation |
+|-----------|----------------|----------------|
+| `app/sitemap.ts` | Generate XML sitemap | Next.js MetadataRoute API |
+| `app/robots.ts` | Generate robots.txt | Next.js MetadataRoute API |
+| `app/layout.tsx` | Global schema (Organization, LocalBusiness) | Static JSON-LD in `<head>` |
+| `app/components/BreadcrumbSchema.tsx` | BreadcrumbList for each page | Server Component |
+| `app/components/ServiceSchema.tsx` | Service schema | Convert to Server Component |
+| `app/components/FAQSchema.tsx` | FAQPage schema | Convert to Server Component |
+| `app/components/ArticleSchema.tsx` | BlogPosting schema | New Server Component |
+| `app/resources/[slug]/page.tsx` | Blog post with full schema | Enhanced with Article schema |
 
-## SEO Strategy
+---
 
-### On-Page SEO Implementation
+## Recommended Project Structure
 
-**Next.js Metadata API for SEO:**
+```
+wag/
+├── app/
+│   ├── layout.tsx              # Root layout: Organization + LocalBusiness
+│   ├── sitemap.ts              # Dynamic sitemap generation
+│   ├── robots.ts               # NEW: Robots.txt generation
+│   ├── page.tsx                # Homepage: Hub with FAQPage
+│   ├── services/
+│   │   ├── page.tsx            # Services hub page
+│   │   ├── metadata.ts         # Services metadata
+│   │   └── [service]/          # NEW: Service detail pages
+│   │       ├── page.tsx
+│   │       └── metadata.ts
+│   ├── about/
+│   │   ├── page.tsx
+│   │   └── metadata.ts
+│   ├── resources/
+│   │   ├── page.tsx            # Resource center hub
+│   │   ├── metadata.ts
+│   │   └── [slug]/
+│   │       ├── page.tsx        # Blog article with Article schema
+│   │       └── metadata.ts
+│   ├── enquiry/
+│   │   ├── page.tsx
+│   │   └── metadata.ts
+│   ├── components/
+│   │   ├── BreadcrumbSchema.tsx  # NEW: Server Component
+│   │   ├── ServiceSchema.tsx     # Refactored: Server Component
+│   │   ├── FAQSchema.tsx         # Refactored: Server Component
+│   │   ├── ArticleSchema.tsx     # NEW: Blog post schema
+│   │   └── FAQ.tsx
+│   └── api/
+├── content/
+│   └── blog/                   # MDX blog content
+└── lib/
+    └── seo/
+        ├── schema.ts           # NEW: Schema assembly utilities
+        └── metadata.ts        # NEW: Shared metadata helpers
+```
 
+### Structure Rationale
+
+- **`app/robots.ts`:** Next.js 13.3+ file-based metadata API for robots.txt
+- **`app/services/[service]/`:** Flat hub-and-spoke structure for service pages; each service gets full page with targeted keywords
+- **`app/components/*Schema.tsx`:** Server Components for all JSON-LD (not Client Components with `'use client'`)
+- **`lib/seo/`:** Centralized SEO utilities for DRY schema and metadata management
+
+---
+
+## Architectural Patterns
+
+### Pattern 1: Hub-and-Spoke Content Architecture
+
+**What:** Central hub page linking to detailed spoke pages, with cross-links between related content.
+
+**When to use:** B2B service sites with multiple related offerings.
+
+**Example:**
+```
+/services (Hub)  ─────┬───> /services/factory-tours (Spoke)
+                      ├───> /services/supplier-verification (Spoke)
+                      └───> /services/quality-inspection (Spoke)
+
+/resources (Hub)  ────┬───> /resources/how-to-source-from-china (Spoke)
+                      └───> /resources/factory-visit-checklist (Spoke)
+```
+
+**Trade-offs:**
+- Pros: Creates topical authority, distributes PageRank, improves crawl depth
+- Cons: Requires content strategy investment
+
+### Pattern 2: Hierarchical Schema Assembly
+
+**What:** Layer schemas from general (Organization) to specific (Service) based on page type.
+
+**When to use:** Every page should have WebPage schema referencing the Organization.
+
+**Example:**
 ```typescript
-// app/services/page.tsx
+// app/services/factory-tours/page.tsx
 export const metadata = {
-  title: 'China Factory Sourcing Services | Winning Adventure Global',
-  description: 'Expert China sourcing solutions for Australian businesses. Verified manufacturers, factory visits, and quality control services.',
-  keywords: ['China sourcing', 'factory visits Australia', 'supplier verification', 'manufacturing China'],
-  openGraph: {
-    title: 'China Factory Sourcing Services',
-    description: 'Connect with verified Chinese manufacturers',
-    type: 'website',
-  },
-};
+  // ... title, description, canonical
+}
+
+// Root layout already outputs: Organization + LocalBusiness
+// This page adds:
+const schemas = [
+  WebPageSchema({ path: '/services/factory-tours' }),
+  ServiceSchema({ name: 'Factory Tours', ... }),
+  FAQPageSchema({ faqs: factoryTourFaqs }),
+  BreadcrumbListSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'Factory Tours', url: '/services/factory-tours' },
+  ]),
+]
 ```
 
-### Technical SEO Checklist
+### Pattern 3: Dynamic Metadata with generateMetadata()
 
-| Item | Implementation | Status |
-|------|----------------|--------|
-| Meta tags | Next.js Metadata API | Required |
-| Canonical URLs | Metadata API `alternates.canonical` | Required |
-| robots.txt | `app/robots.ts` | Required |
-| sitemap.xml | `app/sitemap.ts` | Required |
-| Structured data | JSON-LD for Service/Organization | Required |
-| hreflang | If multilingual needed | Future |
-| Core Web Vitals | Image optimization, font loading | Ongoing |
+**What:** Use Next.js `generateMetadata()` for dynamic pages with full SEO control.
 
-### Local SEO (Australia Market)
+**When to use:** Blog posts, service detail pages, paginated content.
 
-For B2B sourcing targeting Australian businesses:
-
-1. **Google Business Profile** - Claim and optimize (future)
-2. **Local keywords** - "Australia China sourcing", "Australian importer China"
-3. **Location signals** - Australian hosting consideration (Vercel Edge handles this)
-4. **Local citations** - Industry directories, trade associations
-
-### B2B-Specific SEO Keywords
-
-| Keyword Type | Examples | Target Pages |
-|--------------|----------|-------------|
-| Service | "China sourcing agent", "factory visit China" | /services |
-| Industry | "Australia manufacturing China", "import from China Australia" | /, /about |
-| Problem | "find reliable China supplier", "China manufacturer verification" | /services |
-| Location | "China sourcing Australia", "Australian company China manufacturing" | / |
-
-### Content Strategy for SEO
-
-1. **Service pages** - Comprehensive service descriptions with keywords
-2. **Blog/Resources** - Industry insights, China sourcing guides (content-driven SEO)
-3. **Case studies** - Success stories with client permission
-4. **FAQ section** - Common questions targeting search queries
-
-## Conversion Optimization
-
-### Conversion Path Design
-
-```
-┌──────────────────────────────────────────────────────────┐
-│                    Conversion Funnel                     │
-├──────────────────────────────────────────────────────────┤
-│                                                          │
-│  Awareness          Interest          Decision          │
-│  ┌────────┐        ┌────────┐        ┌────────┐        │
-│  │  Home  │───────▶│Services │──────▶│Enquiry │        │
-│  │  Page  │        │  Page   │        │  Form  │        │
-│  └────────┘        └────────┘        └────────┘        │
-│       │                                    │            │
-│       │              ┌────────┐            │            │
-│       └─────────────▶│ About  │◀───────────┘            │
-│                       │  Page  │   Trust building         │
-│                       └────────┘                         │
-│                                                          │
-│                      Action                              │
-│                    ┌────────┐                            │
-│                    │ Submit │                            │
-│                    │ Form   │                            │
-│                    └────────┘                            │
-└──────────────────────────────────────────────────────────┘
-```
-
-### CTA Placement Strategy
-
-| Page | Primary CTA | Secondary CTA | CTA Text |
-|------|------------|--------------|----------|
-| Home | Above fold | After hero | "Start Your Sourcing Journey" |
-| Services | Each service card | Bottom of page | "Get a Quote" |
-| About | After trust signals | Bottom | "Contact Us" |
-| Enquiry | Form submit | - | "Submit Enquiry" |
-
-### Form Optimization
-
-**Enquiry Form Best Practices:**
-
-1. **Minimal fields** - Name, Email, Company, Message (avoid over-collection)
-2. **Clear labels** - No placeholder-as-label pattern
-3. **Validation feedback** - Inline, real-time
-4. **Trust signals** - Privacy note, response time expectation
-5. **Submit button** - Action-oriented, "Send Enquiry" not "Submit"
-
+**Example:**
 ```typescript
-// app/enquiry/page.tsx form fields
-const formFields = [
-  { name: 'name', label: 'Your Name', type: 'text', required: true },
-  { name: 'email', label: 'Email Address', type: 'email', required: true },
-  { name: 'company', label: 'Company Name', type: 'text', required: false },
-  { name: 'message', label: 'How can we help?', type: 'textarea', required: true },
-];
-```
+// app/resources/[slug]/metadata.ts
+export async function generateMetadata(
+  { params }: { params: { slug: string } }
+): Promise<Metadata> {
+  const article = await getArticle(params.slug)
+  const baseUrl = 'https://www.winningadventure.com.au'
 
-### Trust Signals for B2B
-
-| Element | Placement | Purpose |
-|---------|-----------|---------|
-| Years in business | Home, About | Credibility |
-| Service scope | Home, Services | Clarity |
-| Process description | Services | Manage expectations |
-| Contact information | All pages | Accessibility |
-| Privacy assurance | Enquiry form | Anxiety reduction |
-
-## Analytics & Tracking
-
-### Recommended Tracking Stack
-
-| Tool | Purpose | Implementation |
-|------|---------|---------------|
-| Google Analytics 4 | Traffic, behavior, conversions | gtag.js or Next.js Analytics |
-| Google Search Console | SEO performance | DNS verification |
-| Conversion tracking | Form submissions | GA4 events |
-| Heatmaps (optional) | UX insights | Hotjar/Clarity (future) |
-
-### GA4 Event Tracking Setup
-
-```typescript
-// lib/analytics.ts
-export const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', eventName, parameters);
+  return {
+    title: article.title,
+    description: article.description,
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      type: 'article',
+      publishedTime: article.date,
+      authors: [article.author],
+      images: [{ url: article.coverImage, alt: article.title }],
+    },
+    alternates: {
+      canonical: `${baseUrl}/resources/${params.slug}`,
+    },
   }
-};
-
-// Usage in components
-trackEvent('enquiry_form_submit', {
-  method: 'website',
-  location: 'enquiry_page',
-});
-```
-
-### Key Events to Track
-
-| Event | Trigger | Goal |
-|-------|---------|------|
-| `page_view` | Page load | Default GA4 |
-| `enquiry_form_view` | Enquiry page visit | Conversion funnel |
-| `enquiry_form_start` | First field focus | Form engagement |
-| `enquiry_form_submit` | Form submission | Primary conversion |
-| `enquiry_form_error` | Validation error | Form optimization |
-| `newsletter_signup` | Newsletter submit | Secondary conversion |
-| `cta_click` | CTA button click | Engagement |
-| `service_view` | Service page view | Interest signals |
-
-### Conversion Measurement
-
-```typescript
-// app/api/enquiry/route.ts - Track conversion on successful submission
-export async function POST(request: Request) {
-  // ... form processing
-
-  // After successful submission
-  trackEvent('conversion', {
-    event_category: 'enquiry',
-    event_label: 'form_submit',
-  });
-
-  return Response.json({ success: true });
 }
 ```
 
-### Funnel Visualization Setup
+---
+
+## Data Flow
+
+### Request Flow: SEO-Optimized Page
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    GA4 Funnel Reports                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Step 1: Landing          → page_view (homepage)            │
-│         │                                                   │
-│         ▼                                                   │
-│  Step 2: Service Pages    → page_view (/services, /about)   │
-│         │                                                   │
-│         ▼                                                   │
-│  Step 3: Enquiry Page     → page_view (/enquiry)            │
-│         │                                                   │
-│         ▼                                                   │
-│  Step 4: Form Submit      → enquiry_form_submit             │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+User/Bot Request
+       ↓
+Next.js App Router (matches route)
+       ↓
+┌──────────────────────────────────────┐
+│  1. generateMetadata() [if dynamic] │
+│  2. Page Component renders           │
+│  3. Server Components output JSON-LD │
+│  4. Children render                 │
+└──────────────────────────────────────┘
+       ↓
+HTML Response
+       ├── <head>: Metadata + JSON-LD
+       └── <body>: Content + Schema Components
 ```
 
-## Performance Architecture
+### Schema Assembly Flow
 
-### Core Web Vitals Targets
+```
+Page Context
+    ↓
+Determine Page Type (homepage|service|article|about)
+    ↓
+Assemble Relevant Schemas
+    │
+    ├── Always: WebPage + Organization reference
+    ├── Homepage: LocalBusiness + FAQPage + Service
+    ├── Service: Service + FAQPage + BreadcrumbList
+    ├── Article: Article + BreadcrumbList + Author
+    └── About: Organization (already in layout)
+    ↓
+Render as <script type="application/ld+json">
+```
 
-| Metric | Target | Implementation |
-|--------|--------|---------------|
-| LCP (Largest Contentful Paint) | < 2.5s | Image optimization, SSG |
-| FID (First Input Delay) | < 100ms | Minimal client JS |
-| CLS (Cumulative Layout Shift) | < 0.1 | Reserved image spaces |
-| TTFB (Time to First Byte) | < 600ms | Vercel Edge caching |
+---
 
-### Next.js Optimization Features
+## Scaling Considerations
 
-| Feature | Implementation | Benefit |
-|---------|----------------|---------|
-| Image optimization | `next/image` | LCP, CLS |
-| Font optimization | `next/font` | CLS, load performance |
-| Script loading | `next/script` strategy | FID |
-| Static generation | Default for content pages | TTFB, SEO |
-| ISR | Blog/Resources pages | Fresh content, performance |
-| Edge runtime | API routes if needed | Global latency |
+| Scale | Architecture Adjustments |
+|-------|--------------------------|
+| 0-50 pages | Current flat structure + sitemap is sufficient |
+| 50-200 pages | Add hub-and-spoke, service detail pages, improve internal linking |
+| 200+ pages | Consider sub-sitemaps, pagination, faceted navigation |
 
-## Security Considerations
+### Scaling Priorities
 
-| Concern | Mitigation | Implementation |
-|---------|-----------|----------------|
-| Form spam | Rate limiting + validation | Upstash Redis + Zod |
-| Email injection | Input sanitization | Nodemailer security |
-| XSS | React's built-in escaping | Default React behavior |
-| CSRF | Same-origin checks | Next.js defaults |
-| Sensitive data | Environment variables | `.env.local` only |
+1. **First bottleneck: Crawl depth** - Add service detail pages to reduce clicks from homepage to content
+2. **Second bottleneck: Schema completeness** - Ensure every page has proper WebPage schema with breadcrumb
+3. **Third bottleneck: Content freshness** - Implement systematic blog content pipeline
 
-## Scalability Path
+---
 
-| Scale Stage | Users/Month | Architecture Adjustments |
-|-------------|-------------|-------------------------|
-| Launch | 0 - 1K | Current: SSG + Vercel |
-| Growth | 1K - 10K | Add CDN, consider image CDN |
-| Established | 10K - 100K | GA4 advanced, possible A/B testing |
-| Enterprise | 100K+ | CRM integration, marketing automation |
+## Anti-Patterns
 
-## Anti-Patterns to Avoid
+### Anti-Pattern 1: JSON-LD in Client Components
 
-### 1. Over-Engineering for B2B Service Site
-**Bad:** Setting up complex microservice architecture for a brochure site
-**Good:** Simple Next.js monorepo with clear page structure
+**What people do:** Using `'use client'` for schema components.
 
-### 2. Client-Side Heavy Rendering
-**Bad:** React SPA with all content loaded via client-side fetch
-**Good:** SSG/SSR for content, minimal client JS
+**Why it's wrong:** JSON-LD should be in initial HTML for search engines to parse before JavaScript executes. Client Components may not be indexed properly by all crawlers.
 
-### 3. Ignoring Core Web Vitals
-**Bad:** Large unoptimized images, render-blocking scripts
-**Good:** Image optimization, deferred script loading
+**Do this instead:**
+```typescript
+// app/components/FAQSchema.tsx
+// Remove 'use client' - make it a Server Component
+export default function FAQSchema({ faqs }: { faqs: FAQItem[] }) {
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  }
 
-### 4. Vanity SEO Without Substance
-**Bad:** Keyword stuffing, thin content, no internal linking
-**Good:** Quality content, clear information architecture, proper meta tags
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+    />
+  )
+}
+```
 
-### 5. Tracking Without Action
-**Bad:** Implementing GA4 but never reviewing data
-**Good:** Define metrics, review weekly, iterate
+### Anti-Pattern 2: Duplicate Organization Schema on Every Page
+
+**What people do:** Including full Organization schema on every page.
+
+**Why it's wrong:** Google's documentation states only ONE page should have Organization schema. Others should reference via `@id`.
+
+**Do this instead:**
+```typescript
+// Root layout: Full Organization schema
+// Service pages: WebPage schema with reference
+{
+  "@type": "WebPage",
+  "@id": "https://www.winningadventure.com.au/services/#webpage",
+  "publisher": {
+    "@id": "https://www.winningadventure.com.au/#organization"
+  }
+}
+```
+
+### Anti-Pattern 3: Missing Canonical URLs
+
+**What people do:** Not specifying canonical URLs, allowing search engines to index parameter variants.
+
+**Why it's wrong:** Duplicate content dilutes PageRank and causes ranking conflicts.
+
+**Do this instead:**
+```typescript
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.winningadventure.com.au/services/factory-tours',
+  },
+}
+```
+
+### Anti-Pattern 4: Flat Site Structure with No Hierarchy
+
+**What people do:** All pages at same depth (e.g., `/service-1`, `/service-2`, `/about`).
+
+**Why it's wrong:** Search engines trust deeper pages less; no clear topical authority signals.
+
+**Do this instead:**
+```
+/services (hub, high authority)
+  ├── /services/factory-tours
+  ├── /services/supplier-verification
+  └── /services/quality-inspection
+```
+
+---
+
+## Priority Implementation Order
+
+Based on impact and dependencies:
+
+### Phase 1: Foundation (1-2 days)
+| Task | Impact | Notes |
+|------|--------|-------|
+| Create `app/robots.ts` | High | Enable crawl control |
+| Convert `*Schema.tsx` to Server Components | High | Fix indexation risk |
+| Add canonical URLs to all pages | Medium | Prevent duplicate content |
+
+### Phase 2: Schema Completeness (2-3 days)
+| Task | Impact | Notes |
+|------|--------|-------|
+| Add BreadcrumbList schema to all pages | Medium | Sitelinks eligibility |
+| Add Article schema to blog posts | High | Rich results for articles |
+| Add WebPage schema with Organization reference | High | Proper entity association |
+| Consolidate duplicate Organization schema | Medium | Follow Google guidelines |
+
+### Phase 3: Content Architecture (1-2 weeks)
+| Task | Impact | Notes |
+|------|--------|-------|
+| Create service detail pages | High | Target long-tail keywords |
+| Implement hub-and-spoke linking | High | Distribute PageRank |
+| Add internal links between related content | Medium | Improve crawl depth |
+| Create resource center hub page | Medium | Topical authority |
+
+### Phase 4: Advanced SEO (ongoing)
+| Task | Impact | Notes |
+|------|--------|-------|
+| Image sitemap | Low | Image indexing |
+| Video schema (if using Remotion) | Medium | Video search visibility |
+| Review/aggregate rating schema | Medium | Trust signals |
+| Speakable specification | Low | Voice search readiness |
+
+---
+
+## Integration Points
+
+### External Services
+
+| Service | Integration Pattern | Notes |
+|---------|---------------------|-------|
+| Google Search Console | Verification via meta tag | Already implemented |
+| Google Analytics | Script injection | Already implemented |
+| Google Business Profile | LocalBusiness schema | Already implemented |
+| Bing Webmaster | Verification via meta tag | Add to metadata |
+
+### Internal Boundaries
+
+| Boundary | Communication | Notes |
+|----------|---------------|-------|
+| Layout Pages | Props (children), Metadata exports | Server Components by default |
+| Page Schema Components | Props (page data) | Pass data to schema components |
+| lib/seo Pages | Import utilities | Shared helpers for DRY code |
+
+---
 
 ## Sources
 
-| Topic | Source | Confidence |
-|-------|--------|------------|
-| Next.js SEO | CSDN Blog - Next.js SEO Guide 2025 | MEDIUM |
-| B2B Website Trends | 2025 B2B Website Design Trends (CSDN) | MEDIUM |
-| B2B Website Structure | Baidu Baike - B2B Research Strategy Report | MEDIUM |
-| GA4 Setup | GA4 Official Documentation | HIGH |
-| Conversion Optimization | Adobe Blog - Ecommerce CRO | MEDIUM |
-| SEO Best Practices | Moz CRO Resources | MEDIUM |
+| Source | Confidence | Relevance |
+|--------|------------|-----------|
+| [Next.js Metadata API Documentation](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) | HIGH | Primary |
+| [Google Structured Data Guidelines](https://developers.google.com/search/docs/structured-data) | HIGH | Primary |
+| [Schema.org Documentation](https://schema.org/docs/schemas.html) | HIGH | Primary |
+| [Next.js 13.3 File-Based Metadata API](https://nextjs.org/blog/next-13-3) | HIGH | Primary |
+| [Google: Hierarchical Schema Best Practices](https://developers.google.com/search/docs/appearance/structured-data/organization) | HIGH | Primary |
+| [Moz: Website Architecture for SEO](https://www.searchenginejournal.com/how-to-optimize-website-architecture-for-seo/477179/) | MEDIUM | Secondary |
 
-## Open Questions
+---
 
-1. **CRM Integration** - Will a CRM be needed immediately, or manual lead management sufficient?
-2. **Marketing Automation** - Email sequences for enquiry follow-ups?
-3. **A/B Testing** - Is there a plan for systematic conversion optimization?
-4. **International SEO** - Is targeting Chinese keywords (pinyin) worth the investment?
-5. **Blog Content Strategy** - Who will own content creation and SEO optimization?
-
-## Recommendations
-
-1. **Phase 1:** Implement GA4 with event tracking before launch
-2. **Phase 2:** Add structured data markup (JSON-LD) for services
-3. **Phase 3:** Set up Search Console monitoring and monthly SEO reviews
-4. **Phase 4:** Consider heatmap tools (Hotjar/Clarity) after initial traffic
-5. **Phase 5:** A/B test CTA variations once baseline data exists
+*Architecture research for: WAG Website SEO Optimization*
+*Researched: 2026-03-20*
