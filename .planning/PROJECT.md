@@ -52,7 +52,7 @@ Help Australian businesses safely connect with verified China manufacturers thro
 - [x] **SEO-04**: 制定 WAG SEO 优化方案（基于竞品分析）
 - [x] **SEO-05**: 创建 Two Ways to Access Section ✅
 - [ ] **SEO-06**: 创建 Directory Section（嵌入首页）
-- [ ] **SEO-07**: 实现右下角悬浮 Contact 按钮
+- [x] **SEO-07**: 实现右下角悬浮 Contact 按钮 ✅ (Phase 16)
 - [ ] **SEO-08**: 创建 FAQ Page + Schema
 - [ ] **SEO-09**: 优化 About Page E-E-A-T
 - [ ] **SEO-10**: Page SEO Optimization
@@ -97,4 +97,4 @@ Help Australian businesses safely connect with verified China manufacturers thro
 
 ---
 
-*Last updated: 2026-03-20 after v2.0 SEO milestone redirected to chinafactorytours.com*
+*Last updated: 2026-03-20 after Phase 16 (floating contact button) completed*
