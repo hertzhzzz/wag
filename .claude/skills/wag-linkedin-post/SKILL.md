@@ -1,13 +1,13 @@
 ---
 name: wag-linkedin-post
-description: "Generate WAG-branded LinkedIn posts using Socratic questioning and RAG-powered content retrieval"
+description: "Generate WAG-branded LinkedIn posts and expand to blog articles"
 ---
 
 # WAG LinkedIn Post Generator
 
 ## Overview
 
-This skill generates high-quality LinkedIn posts for Winning Adventure Global using a Socratic questioning approach to guide topic selection, combined with RAG-powered retrieval of relevant WAG content.
+This skill generates high-quality LinkedIn posts for Winning Adventure Global using a Socratic questioning approach to guide topic selection, combined with RAG-powered retrieval of relevant WAG content. It also handles expansion to blog articles.
 
 **Language approach:** Socratic questions are presented in Simplified Chinese (to match WAG's client base), but the generated LinkedIn post is always in English (for LinkedIn audience reach).
 
@@ -130,6 +130,83 @@ After generating the LinkedIn post, perform a deep fact check using parallel res
 
 **Note:** Do not skip parallel research. A single web search is insufficient for professional credibility. Cross-validation is mandatory.
 
+## LinkedIn Post → Blog Article Workflow
+
+When a LinkedIn post should be expanded into a blog article, follow this workflow:
+
+### 1. Directory Structure
+
+Create a directory for the post:
+```
+social/linkedin-post/{YYYY-MM-DD-topic}/
+├── post.md          # Original LinkedIn post
+├── outline.md       # Image outline/briefing
+├── imgs/           # Original images (e.g., 01-fake-factory-reveal.png)
+│   ├── 01-description.png
+│   └── 02-description.png
+└── prompts/        # AI image generation prompts
+    └── 01-infographic-description.md
+```
+
+### 2. Image Naming Convention
+
+Use zero-padded two-digit prefix for ordering:
+- `01-fake-factory-reveal.png` — First image (appears earlier in article)
+- `02-3step-verification.png` — Second image (appears later)
+
+### 3. Blog MDX Frontmatter Template
+
+```yaml
+---
+title: "{Post Title}"
+date: "{YYYY-MM-DD}"
+description: "{Meta description - max 160 chars, compelling summary}"
+author: "Winning Adventure Global"
+tags: ["tag1", "tag2", "tag3", "tag4", "tag5"]
+category: "{Category Name}"
+readTime: "{N} min read"
+coverImage: "/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/01-description.png"
+ctaTitle: "{CTA Title}"
+ctaText: "{CTA Description Text}"
+ctaButtonText: "{Button Text}"
+---
+```
+
+### 4. Image Path Rules for MDX
+
+**CRITICAL:** MDX images must use `/public/social/` paths, NOT relative paths.
+
+| Location | Use | Example |
+|----------|-----|---------|
+| `public/social/...` | MDX blog posts | `/social/linkedin-post/.../imgs/01-foo.png` |
+| `social/...` | Source assets only | Original AI generation prompts, outlines |
+
+**Action:** Copy images to `public/social/` before creating MDX:
+```bash
+mkdir -p public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs
+cp social/linkedin-post/{YYYY-MM-DD-topic}/imgs/*.png public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/
+```
+
+### 5. Blog Article Structure
+
+Expand LinkedIn post (Hook→Body→CTA) into blog format:
+
+| LinkedIn Section | Blog Expansion |
+|------------------|----------------|
+| Hook (1-2 sentences) | Introduction (2-3 paragraphs setup) |
+| Body paragraphs | Expanded sections with sub-headings |
+| CTA (hard question) | Soft CTA (educational next steps) |
+
+### 6. QA Checklist Before Publishing
+
+- [ ] MDX file in `content/blog/{slug}.mdx`
+- [ ] Frontmatter complete: title, date, description, author, tags, category, readTime, coverImage, ctaTitle, ctaText, ctaButtonText
+- [ ] Images copied to `public/social/` with correct paths
+- [ ] MDX image paths use `/social/` (not `../social/` or `../../social/`)
+- [ ] ResourcesContent links use `/resources/${slug}` (not just `${slug}`)
+- [ ] `npm run build` passes
+- [ ] Article accessible at `/resources/{slug}` after deployment
+
 ## WAG Brand Voice Guidelines
 
 **Reference:** CLAUDE.md brand personality — Reliable, Professional, Exclusive
@@ -154,3 +231,4 @@ After generating the LinkedIn post, perform a deep fact check using parallel res
 - **Always invoke RAG before generating** — Retrieve at least 1 WAG blog post to source specific insights. Posts without WAG-specific content feel generic.
 - **Avoid "WA" abbreviation** — Use "Winning Adventure Global" or "WAG" as appropriate.
 - **Fact check required before publishing** — Verify all claims against WAG blog content or web search. Present fact check table to user for approval.
+- **Blog images go in public/social/** — MDX files cannot reference `../social/` paths. Always copy to `public/social/` for Next.js static serving.
