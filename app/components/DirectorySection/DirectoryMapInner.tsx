@@ -14,23 +14,60 @@ interface DirectoryMapInnerProps {
   onCitySelect: (city: string) => void
 }
 
+// Generate distributed factory points around a city center
+// Points are spread using a Gaussian-like distribution
+function generateFactoryPoints(
+  cityEntry: CityEntry
+): Array<{ coords: [number, number]; index: number }> {
+  const points: Array<{ coords: [number, number]; index: number }> = []
+  const numPoints = Math.max(1, Math.min(8, Math.round(cityEntry.factories / 10)))
+
+  // Spread radius varies by city size (larger cities = bigger industrial zones)
+  const baseRadius = 0.15 + (cityEntry.factories / 100) * 0.3
+
+  for (let i = 0; i < numPoints; i++) {
+    // Use deterministic pseudo-random offset based on city + index
+    // This ensures consistent positioning across re-renders
+    const seed = cityEntry.city.charCodeAt(0) + cityEntry.city.charCodeAt(1) + i * 17
+    const angle = (seed % 360) * (Math.PI / 180)
+    const radiusFactor = 0.3 + ((seed * 7) % 70) / 100
+
+    const latOffset = Math.cos(angle) * baseRadius * radiusFactor
+    const lngOffset = Math.sin(angle) * baseRadius * radiusFactor
+
+    points.push({
+      coords: [
+        cityEntry.coords[0] + latOffset,
+        cityEntry.coords[1] + lngOffset,
+      ],
+      index: i,
+    })
+  }
+
+  return points
+}
+
 // Custom amber marker icon using DivIcon
-function createAmberIcon() {
+// primary markers are slightly larger when a city has multiple points
+function createAmberIcon(isPrimary = false) {
+  const size = isPrimary ? 28 : 20
+  const offset = isPrimary ? 14 : 10
+
   return L.divIcon({
     className: 'custom-amber-marker',
     html: `
       <div style="
-        width: 24px;
-        height: 24px;
+        width: ${size}px;
+        height: ${size}px;
         background-color: #F59E0B;
-        border: 3px solid #FFFFFF;
+        border: ${isPrimary ? '3' : '2'}px solid #FFFFFF;
         border-radius: 50%;
         box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       "></div>
     `,
-    iconSize: [24, 24],
-    iconAnchor: [12, 12],
-    popupAnchor: [0, -12],
+    iconSize: [size, size],
+    iconAnchor: [offset, offset],
+    popupAnchor: [0, -offset],
   })
 }
 
@@ -84,9 +121,9 @@ export default function DirectoryMapInner({
     markerClusterRef.current.clearLayers()
     markersRef.current.clear()
 
-    // Add new markers
+    // Add new markers - multiple per city based on factory count
     cities.forEach((cityEntry) => {
-      const marker = L.marker(cityEntry.coords, { icon: createAmberIcon() })
+      const factoryPoints = generateFactoryPoints(cityEntry)
 
       const popupContent = `
         <div style="min-width: 180px;">
@@ -120,17 +157,28 @@ export default function DirectoryMapInner({
         </div>
       `
 
-      marker.bindPopup(popupContent, {
-        closeButton: false,
-        className: 'custom-popup',
-      })
+      // Create multiple markers per city based on factory count
+      factoryPoints.forEach((point, pointIndex) => {
+        // Vary marker size based on factory count at this "point"
+        const marker = L.marker(point.coords, {
+          icon: createAmberIcon(pointIndex === 0 && factoryPoints.length > 1),
+        })
 
-      marker.on('click', () => {
-        onCitySelect(cityEntry.city)
-      })
+        marker.bindPopup(popupContent, {
+          closeButton: false,
+          className: 'custom-popup',
+        })
 
-      markersRef.current.set(cityEntry.city, marker)
-      markerClusterRef.current?.addLayer(marker)
+        marker.on('click', () => {
+          onCitySelect(cityEntry.city)
+        })
+
+        // Only add first marker of city to markersRef for selection
+        if (pointIndex === 0) {
+          markersRef.current.set(cityEntry.city, marker)
+        }
+        markerClusterRef.current?.addLayer(marker)
+      })
     })
   }, [cities, onCitySelect])
 
