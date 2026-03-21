@@ -36,7 +36,7 @@ discuss → plan → execute → verify
 | 19 | Page SEO Optimization | Pending | Meta tags + 关键词 |
 | 20 | Technical SEO | Pending | sitemap.xml + robots.txt |
 | 21 | LinkedIn Post Skill (Socratic) | Planned | Socratic questioning + RAG for LinkedIn posts |
-| 22 | 1/1 | Complete   | 2026-03-21 |
+| 22 | 1/1 | Complete    | 2026-03-21 |
 
 ---
 
