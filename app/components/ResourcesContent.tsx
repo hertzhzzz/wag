@@ -107,7 +107,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
         {featured && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 mb-12 overflow-hidden">
             {/* Left: image */}
-            <Link href={featured.slug} className="relative min-h-[320px] bg-[#0F2D5E] flex items-center justify-center overflow-hidden group">
+            <Link href={`/resources/${featured.slug}`} className="relative min-h-[320px] bg-[#0F2D5E] flex items-center justify-center overflow-hidden group">
               {featured.coverImage && (
                 <Image
                   src={featured.coverImage} width={800} height={400}
@@ -125,7 +125,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
               <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-4">
                 Featured Article &nbsp;·&nbsp; {featured.date} &nbsp;·&nbsp; {featured.readTime}
               </p>
-              <Link href={featured.slug} className="block">
+              <Link href={`/resources/${featured.slug}`} className="block">
                 <h2 className="font-serif text-[26px] font-semibold leading-snug text-[#0F2D5E] mb-4 hover:text-[#F59E0B] transition-colors">
                   {featured.title}
                 </h2>
@@ -134,7 +134,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
                 {featured.desc || featured.description}
               </p>
               <Link
-                href={featured.slug}
+                href={`/resources/${featured.slug}`}
                 className="self-start bg-[#0F2D5E] text-white px-6 py-3 text-[13px] font-bold tracking-wide hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors min-h-11"
               >
                 Read Full Guide
@@ -152,7 +152,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
                 className="bg-white border border-gray-200 overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(15,45,94,0.1)] transition-all duration-200"
               >
                 {/* Card image */}
-                <Link href={article.slug} className="relative h-[180px] bg-[#0F2D5E] flex items-center justify-center overflow-hidden block group">
+                <Link href={`/resources/${article.slug}`} className="relative h-[180px] bg-[#0F2D5E] flex items-center justify-center overflow-hidden block group">
                   {article.coverImage && (
                     <Image
                       src={article.coverImage} width={400} height={200}
@@ -170,7 +170,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
                   <p className="text-[11px] text-gray-400 uppercase tracking-widest mb-2">
                     {article.date} &nbsp;·&nbsp; {article.readTime}
                   </p>
-                  <Link href={article.slug} className="block">
+                  <Link href={`/resources/${article.slug}`} className="block">
                     <h3 className="font-serif text-[18px] font-semibold text-[#0F2D5E] leading-snug mb-3 hover:text-[#F59E0B] transition-colors">
                       {article.title}
                     </h3>
@@ -179,7 +179,7 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
                     {article.desc || article.description}
                   </p>
                   <Link
-                    href={article.slug}
+                    href={`/resources/${article.slug}`}
                     className="text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors"
                   >
                     Read Article →

@@ -13,6 +13,27 @@ requirements:
   - REQ-03
   - REQ-04
   - REQ-05
+
+must_haves:
+  truths:
+    - "Skill invokes via /skill wag-linkedin-post command"
+    - "Socratic questions guide topic selection (3-4 questions)"
+    - "RAG retrieves relevant WAG content at runtime"
+    - "Generated posts follow LinkedIn format: Hook/Body/CTA/Hashtags"
+    - "Posts align with WAG brand voice (reliable, professional, exclusive)"
+  artifacts:
+    - path: .claude/skills/wag-linkedin-post/SKILL.md
+      provides: "Complete skill with Socratic flow, RAG, and post template"
+      min_lines: 150
+  key_links:
+    - from: "SKILL.md"
+      to: "content/blog/*.mdx"
+      via: "Glob + Grep (head_limit: 3) + Read pattern"
+      pattern: "RAG retrieval for content sourcing"
+    - from: "SKILL.md"
+      to: "CLAUDE.md brand guidelines"
+      via: "Brand voice reference in skill"
+      pattern: "WAG voice constraints applied"
 ---
 
 <objective>
@@ -27,28 +48,6 @@ Output: `.claude/skills/wag-linkedin-post/SKILL.md`
 @/Users/mark/Projects/wag/.planning/phases/21-linkedin-post-skill-socratic-linkedin-skill-wag/21-VALIDATION.md
 @/Users/mark/.claude/skills/brainstorming/SKILL.md
 </context>
-
-<must_haves>
-  truths:
-    - "Skill invokes via /skill wag-linkedin-post command"
-    - "Socratic questions guide topic selection (3-4 questions)"
-    - "RAG retrieves relevant WAG content at runtime"
-    - "Generated posts follow LinkedIn format: Hook/Body/CTA/Hashtags"
-    - "Posts align with WAG brand voice (reliable, professional, exclusive)"
-  artifacts:
-    - path: ".claude/skills/wag-linkedin-post/SKILL.md"
-      provides: "Complete skill with Socratic flow, RAG, and post template"
-      min_lines: 150
-  key_links:
-    - from: "SKILL.md"
-      to: "content/blog/*.mdx"
-      via: "Glob + Grep (head_limit: 3) + Read pattern"
-      pattern: "RAG retrieval for content sourcing"
-    - from: "SKILL.md"
-      to: "CLAUDE.md brand guidelines"
-      via: "Brand voice reference in skill"
-      pattern: "WAG voice constraints applied"
-</must_haves>
 
 <tasks>
 

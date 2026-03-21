@@ -52,6 +52,13 @@ wag/                      # 项目根目录
 │   └── rate-limit.ts     # Upstash Redis 限流 (+内存备援)
 ├── public/               # 静态资源
 ├── .planning/            # GSD 项目规划 (milestones/phases)
+├── social/               # 社交媒体内容
+│   └── linkedin-post/    # LinkedIn 帖子资产
+│       └── {YYYY-MM-DD-topic}/  # 按日期+主题分类
+│           ├── post.md    # 帖子正文
+│           ├── outline.md # 配图大纲
+│           ├── imgs/     # 配图
+│           └── prompts/   # AI 生图 prompt 文件
 └── vercel.json           # Vercel 配置
 ```
 
