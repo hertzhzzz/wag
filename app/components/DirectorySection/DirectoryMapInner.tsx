@@ -47,11 +47,11 @@ function generateFactoryPoints(
   return points
 }
 
-// Custom factory marker icon using WAG brand colors
-// Navy (#0F2D5E) primary with Amber (#F59E0B) accent
+// Custom factory marker icon - high contrast for map visibility
+// Amber (#F59E0B) primary with Navy (#0F2D5E) border for maximum contrast
 function createFactoryIcon(factories: number, isPrimary = false) {
   // Size scales with factory count for visual hierarchy
-  const baseSize = Math.min(36, 20 + Math.floor(factories / 15))
+  const baseSize = Math.min(40, 24 + Math.floor(factories / 12))
   const size = isPrimary ? baseSize + 4 : baseSize
   const offset = Math.floor(size / 2)
 
@@ -59,20 +59,20 @@ function createFactoryIcon(factories: number, isPrimary = false) {
   const badgeHtml = isPrimary && factories > 10
     ? `<div style="
         position: absolute;
-        top: -6px;
-        right: -6px;
-        background-color: #F59E0B;
+        top: -8px;
+        right: -8px;
+        background-color: #0F2D5E;
         color: white;
-        font-size: 9px;
+        font-size: 10px;
         font-weight: 700;
-        min-width: 16px;
-        height: 16px;
-        border-radius: 8px;
+        min-width: 20px;
+        height: 20px;
+        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 2px solid white;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        border: 2px solid #F59E0B;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       ">${factories}</div>`
     : ''
 
@@ -83,22 +83,22 @@ function createFactoryIcon(factories: number, isPrimary = false) {
         position: relative;
         width: ${size}px;
         height: ${size}px;
-        background: linear-gradient(135deg, #0F2D5E 0%, #1a4080 100%);
-        border: 3px solid #FFFFFF;
+        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        border: ${isPrimary ? 4 : 3}px solid #0F2D5E;
         border-radius: 50%;
-        box-shadow: 0 3px 12px rgba(15, 45, 94, 0.4), 0 0 0 4px rgba(245, 158, 11, 0.25);
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.6), 0 0 0 3px rgba(245, 158, 11, 0.3);
         display: flex;
         align-items: center;
         justify-content: center;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       ">
-        <svg width="${Math.floor(size * 0.5)}" height="${Math.floor(size * 0.5)}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 21V7L12 3L21 7V21H15V14H9V21H3Z" fill="#F59E0B"/>
-          <rect x="5" y="8" width="3" height="3" fill="white" opacity="0.9"/>
-          <rect x="10" y="8" width="4" height="4" fill="white" opacity="0.9"/>
-          <rect x="16" y="8" width="3" height="3" fill="white" opacity="0.9"/>
-          <rect x="7" y="13" width="3" height="3" fill="white" opacity="0.7"/>
-          <rect x="14" y="13" width="3" height="3" fill="white" opacity="0.7"/>
+        <svg width="${Math.floor(size * 0.55)}" height="${Math.floor(size * 0.55)}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 21V7L12 3L21 7V21H15V14H9V21H3Z" fill="#0F2D5E"/>
+          <rect x="5" y="8" width="3" height="3" fill="#F59E0B"/>
+          <rect x="10" y="8" width="4" height="4" fill="#F59E0B"/>
+          <rect x="16" y="8" width="3" height="3" fill="#F59E0B"/>
+          <rect x="7" y="13" width="3" height="3" fill="#F59E0B" opacity="0.8"/>
+          <rect x="14" y="13" width="3" height="3" fill="#F59E0B" opacity="0.8"/>
         </svg>
         ${badgeHtml}
       </div>
@@ -109,10 +109,10 @@ function createFactoryIcon(factories: number, isPrimary = false) {
   })
 }
 
-// Cluster icon styled with brand colors
+// Cluster icon - high contrast amber with navy border
 function createClusterIcon(cluster: L.MarkerCluster) {
   const childCount = cluster.getChildCount()
-  const size = Math.min(56, 36 + Math.floor(childCount / 3))
+  const size = Math.min(60, 40 + Math.floor(childCount / 2))
 
   return L.divIcon({
     html: `
@@ -120,9 +120,9 @@ function createClusterIcon(cluster: L.MarkerCluster) {
         width: ${size}px;
         height: ${size}px;
         background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-        border: 4px solid white;
+        border: 4px solid #0F2D5E;
         border-radius: 50%;
-        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.5), 0 0 0 3px rgba(245, 158, 11, 0.2);
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.6), 0 0 0 4px rgba(245, 158, 11, 0.25);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -130,10 +130,10 @@ function createClusterIcon(cluster: L.MarkerCluster) {
         font-family: 'IBM Plex Sans', system-ui, sans-serif;
       ">
         <span style="
-          color: white;
-          font-size: ${size > 40 ? 16 : 13}px;
+          color: #0F2D5E;
+          font-size: ${size > 44 ? 18 : 14}px;
           font-weight: 700;
-          text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+          text-shadow: 0 1px 0 rgba(255,255,255,0.3);
         ">${childCount}</span>
       </div>
     `,
