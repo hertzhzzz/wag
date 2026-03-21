@@ -36,6 +36,7 @@ discuss → plan → execute → verify
 | 19 | Page SEO Optimization | Pending | Meta tags + 关键词 |
 | 20 | Technical SEO | Pending | sitemap.xml + robots.txt |
 | 21 | LinkedIn Post Skill (Socratic) | Planned | Socratic questioning + RAG for LinkedIn posts |
+| 22 | 1/1 | Complete   | 2026-03-21 |
 
 ---
 
@@ -108,6 +109,16 @@ Plans:
 **竞品参考:** chinafactorytours.com 的 `.fc-btn`, `.fc-overlay`, `.fc-modal`
 
 ---
+
+### Phase 16.1: 优化这个假的AI的chat box的使用体验 (INSERTED)
+
+**Goal:** [Urgent work - to be planned]
+**Requirements**: TBD
+**Depends on:** Phase 16
+**Plans:** 0 plans
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 16.1 to break down)
 
 ### Phase 17: FAQ Page + Schema
 
@@ -184,10 +195,51 @@ Plans:
 
 **Requirements:** REQ-01 (Skill invocation), REQ-02 (Socratic flow), REQ-03 (RAG), REQ-04 (Post structure), REQ-05 (WAG voice)
 
+**Output Convention:** Generated LinkedIn posts and assets are saved to `social/linkedin-post/{YYYY-MM-DD-topic}/`:
+```
+social/linkedin-post/{YYYY-MM-DD-topic}/
+├── post.md       # 帖子正文
+├── outline.md    # 配图大纲
+├── imgs/         # AI 生成配图
+└── prompts/      # 生图 prompt 文件
+```
+
 **Plans:** 1/1 plan created
 
 Plans:
 - [ ] 21-01-PLAN.md — Create wag-linkedin-post SKILL.md with Socratic flow, RAG, and LinkedIn template
+
+---
+
+### Phase 22: LinkedIn Post → Blog Article
+
+**Goal:** 将 LinkedIn 帖子扩写为完整博客文章，发布到 /resources
+
+**Source:** `social/linkedin-post/2026-03-21-factory-verification/post.md`
+**Title:** "How to Verify Chinese Factories on 1688 Before Paying a Deposit"
+**Images:** `social/linkedin-post/2026-03-21-factory-verification/imgs/`
+**Output:** `content/blog/how-to-verify-chinese-factories-1688.mdx`
+
+**Tasks:**
+1. Read original LinkedIn post
+2. RAG retrieve relevant WAG blog content for context
+3. Expand to 1000-1500 words blog article with:
+   - Introduction (expanded Hook)
+   - Section 1: The Problem - Trading companies vs real factories
+   - Section 2: The 3 Verification Steps (with images)
+   - Section 3: What happens if you skip verification
+   - Conclusion: Next steps (not hard CTA)
+4. Add MDX frontmatter (title, date, description, author, tags)
+5. Integrate images from social/linkedin-post/
+6. Fact-check all claims
+7. Build verification (`npm run build`)
+
+**Deliverable:** `/resources/how-to-verify-chinese-factories-1688`
+
+**Plans:** 1/1 plans complete
+
+Plans:
+- [x] 22-01-PLAN.md — Expand LinkedIn post to blog article with fact-check and images
 
 ---
 
@@ -216,15 +268,16 @@ Plans:
 - [ ] All pages SEO 90+
 - [ ] Technical SEO complete
 - [ ] LinkedIn Post Skill creates brand-aligned posts
+- [ ] Blog article "How to Verify Chinese Factories on 1688" published to /resources
 
 ---
 
 ## Next Action
 
-运行 `/gsd:execute-phase 15` 执行 Phase 15 计划
+运行 `/gsd:execute-phase 22` 执行 Phase 22 计划（LinkedIn → Blog 扩写）
 
 ---
 
 *Roadmap created: 2026-03-20*
-*Updated: 2026-03-20 (Phase 21 plan created)*
+*Updated: 2026-03-21 (Phase 22 plan created)*
 *Competitor: chinafactorytours.com*
