@@ -97,4 +97,16 @@ Help Australian businesses safely connect with verified China manufacturers thro
 
 ---
 
-*Last updated: 2026-03-20 after Phase 16 (floating contact button) completed*
+*Last updated: 2026-03-21 after Phase 22 (LinkedIn post to blog) completed*
+
+## Validated Requirements
+
+| ID | Requirement | Validated In |
+|----|-------------|--------------|
+| SEO-01 | 分析 chinafactorytours.com 全部页面结构 | Phase 14 |
+| SEO-02 | 分析 chinafactorytours.com SEO 策略和关键词布局 | Phase 14 |
+| SEO-03 | 分析 chinafactorytours.com 内容架构和用户体验 | Phase 14 |
+| SEO-04 | 制定 WAG SEO 优化方案（基于竞品分析） | Phase 14 |
+| SEO-05 | 创建 Two Ways to Access Section | Phase 14 |
+| SEO-07 | 实现右下角悬浮 Contact 按钮 | Phase 16 |
+| CONTENT-01 | LinkedIn post expanded to blog article on 1688 factory verification | Phase 22 |
