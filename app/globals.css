@@ -9,7 +9,9 @@
 
 .animate-pulse-ring {
   animation: pulse-ring 2s ease-in-out infinite;
+  transform-origin: center;
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   .animate-pulse-ring {
