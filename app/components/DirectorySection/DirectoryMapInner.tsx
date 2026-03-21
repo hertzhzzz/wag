@@ -47,27 +47,99 @@ function generateFactoryPoints(
   return points
 }
 
-// Custom amber marker icon using DivIcon
-// primary markers are slightly larger when a city has multiple points
-function createAmberIcon(isPrimary = false) {
-  const size = isPrimary ? 28 : 20
-  const offset = isPrimary ? 14 : 10
+// Custom factory marker icon using WAG brand colors
+// Navy (#0F2D5E) primary with Amber (#F59E0B) accent
+function createFactoryIcon(factories: number, isPrimary = false) {
+  // Size scales with factory count for visual hierarchy
+  const baseSize = Math.min(36, 20 + Math.floor(factories / 15))
+  const size = isPrimary ? baseSize + 4 : baseSize
+  const offset = Math.floor(size / 2)
+
+  // Factory count badge for primary markers
+  const badgeHtml = isPrimary && factories > 10
+    ? `<div style="
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        background-color: #F59E0B;
+        color: white;
+        font-size: 9px;
+        font-weight: 700;
+        min-width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      ">${factories}</div>`
+    : ''
 
   return L.divIcon({
-    className: 'custom-amber-marker',
+    className: 'factory-marker',
     html: `
       <div style="
+        position: relative;
         width: ${size}px;
         height: ${size}px;
-        background-color: #F59E0B;
-        border: ${isPrimary ? '3' : '2'}px solid #FFFFFF;
+        background: linear-gradient(135deg, #0F2D5E 0%, #1a4080 100%);
+        border: 3px solid #FFFFFF;
         border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      "></div>
+        box-shadow: 0 3px 12px rgba(15, 45, 94, 0.4), 0 0 0 4px rgba(245, 158, 11, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      ">
+        <svg width="${Math.floor(size * 0.5)}" height="${Math.floor(size * 0.5)}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 21V7L12 3L21 7V21H15V14H9V21H3Z" fill="#F59E0B"/>
+          <rect x="5" y="8" width="3" height="3" fill="white" opacity="0.9"/>
+          <rect x="10" y="8" width="4" height="4" fill="white" opacity="0.9"/>
+          <rect x="16" y="8" width="3" height="3" fill="white" opacity="0.9"/>
+          <rect x="7" y="13" width="3" height="3" fill="white" opacity="0.7"/>
+          <rect x="14" y="13" width="3" height="3" fill="white" opacity="0.7"/>
+        </svg>
+        ${badgeHtml}
+      </div>
     `,
     iconSize: [size, size],
     iconAnchor: [offset, offset],
     popupAnchor: [0, -offset],
+  })
+}
+
+// Cluster icon styled with brand colors
+function createClusterIcon(cluster: L.MarkerCluster) {
+  const childCount = cluster.getChildCount()
+  const size = Math.min(56, 36 + Math.floor(childCount / 3))
+
+  return L.divIcon({
+    html: `
+      <div style="
+        width: ${size}px;
+        height: ${size}px;
+        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        border: 4px solid white;
+        border-radius: 50%;
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.5), 0 0 0 3px rgba(245, 158, 11, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: 'IBM Plex Sans', system-ui, sans-serif;
+      ">
+        <span style="
+          color: white;
+          font-size: ${size > 40 ? 16 : 13}px;
+          font-weight: 700;
+          text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        ">${childCount}</span>
+      </div>
+    `,
+    className: 'factory-cluster',
+    iconSize: [size, size],
+    iconAnchor: [Math.floor(size / 2), Math.floor(size / 2)],
   })
 }
 
@@ -97,10 +169,12 @@ export default function DirectoryMapInner({
     }).addTo(mapRef.current)
 
     markerClusterRef.current = L.markerClusterGroup({
-      maxClusterRadius: 50,
+      maxClusterRadius: 60,
       spiderfyOnMaxZoom: true,
       showCoverageOnHover: false,
       zoomToBoundsOnClick: true,
+      iconCreateFunction: createClusterIcon,
+      disableClusteringAtZoom: 10,
     })
 
     mapRef.current.addLayer(markerClusterRef.current)
@@ -159,9 +233,9 @@ export default function DirectoryMapInner({
 
       // Create multiple markers per city based on factory count
       factoryPoints.forEach((point, pointIndex) => {
-        // Vary marker size based on factory count at this "point"
+        const isPrimary = pointIndex === 0
         const marker = L.marker(point.coords, {
-          icon: createAmberIcon(pointIndex === 0 && factoryPoints.length > 1),
+          icon: createFactoryIcon(cityEntry.factories, isPrimary),
         })
 
         marker.bindPopup(popupContent, {
@@ -216,19 +290,31 @@ export default function DirectoryMapInner({
     <>
       <div ref={mapContainerRef} className="w-full h-full rounded-lg" />
       <style jsx global>{`
+        .factory-marker {
+          background: transparent !important;
+          border: none !important;
+        }
+        .factory-cluster {
+          background: transparent !important;
+          border: none !important;
+        }
         .custom-popup .leaflet-popup-content-wrapper {
-          border-radius: 8px;
+          border-radius: 10px;
           padding: 0;
           overflow: hidden;
-          box-shadow: 0 4px 24px rgba(15, 45, 94, 0.15);
+          box-shadow: 0 8px 32px rgba(15, 45, 94, 0.2);
+          border: 1px solid rgba(15, 45, 94, 0.1);
         }
         .custom-popup .leaflet-popup-content {
           margin: 0;
-          padding: 12px;
+          padding: 0;
         }
-        .custom-amber-marker {
-          background: transparent;
-          border: none;
+        .leaflet-popup-tip {
+          background: white;
+        }
+        /* Cluster hover effect */
+        .factory-cluster:hover {
+          transform: scale(1.05);
         }
       `}</style>
     </>
