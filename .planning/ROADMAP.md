@@ -31,6 +31,7 @@ discuss → plan → execute → verify
 | 14 | Two Ways to Access Section | Complete | 2026-03-20 |
 | 15 | 2/2 | Complete    | 2026-03-20 |
 | 16 | 2/2 | Complete    | 2026-03-20 |
+| 16.1 | 1/1 | Planned | AI Chat Box UX optimization |
 | 17 | FAQ Page + Schema | Pending | /resources/faq + FAQPage JSON-LD |
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
 | 19 | Page SEO Optimization | Pending | Meta tags + 关键词 |
@@ -110,15 +111,16 @@ Plans:
 
 ---
 
-### Phase 16.1: 优化这个假的AI的chat box的使用体验 (INSERTED)
+### Phase 16.1: AI Chat Box UX Optimization
 
-**Goal:** [Urgent work - to be planned]
-**Requirements**: TBD
+**Goal:** Optimize AIChatBox.tsx with pulse animation, Bot icon, user-initiated form trigger, improved welcome message, "View More" post-submit links, toast errors, mobile optimization, and delete FloatingContactButton.tsx
+
+**Requirements**: UX-01, UX-02, UX-03, UX-04, UX-05, UX-06, UX-07, UX-08, DEL-01, DEL-02
 **Depends on:** Phase 16
-**Plans:** 0 plans
+**Plans:** 1/1 plan created
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 16.1 to break down)
+- [x] 16.1-01-PLAN.md — Optimize AIChatBox UX (pulse, Bot icon, user-initiated form, welcome message, View More links, toast errors) + delete FloatingContactButton
 
 ### Phase 17: FAQ Page + Schema
 
@@ -274,10 +276,10 @@ Plans:
 
 ## Next Action
 
-运行 `/gsd:execute-phase 22` 执行 Phase 22 计划（LinkedIn → Blog 扩写）
+运行 `/gsd:execute-phase 16.1` 执行 Phase 16.1 计划（AI Chat Box UX 优化）
 
 ---
 
 *Roadmap created: 2026-03-20*
-*Updated: 2026-03-21 (Phase 22 plan created)*
+*Updated: 2026-03-21 (Phase 16.1 plan created, Phase 22 complete)*
 *Competitor: chinafactorytours.com*
