@@ -146,8 +146,8 @@ export default function AIChatBox() {
         >
           {/* Pulse Ring - only visible when chat is idle/closed */}
           {!isExpanded && (
-            <div className="absolute inset-0 -m-4 hidden sm:block">
-              <div className="w-16 h-16 mx-auto my-4 border-2 border-navy/50 rounded-full animate-pulse-ring" />
+            <div className="absolute w-[88px] h-[88px] -left-4 -top-4 hidden sm:flex items-center justify-center">
+              <div className="w-16 h-16 border-2 border-navy/50 rounded-full animate-pulse-ring" />
             </div>
           )}
 
