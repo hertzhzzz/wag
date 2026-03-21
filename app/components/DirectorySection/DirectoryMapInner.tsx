@@ -86,13 +86,14 @@ function createFactoryIcon(factories: number, isPrimary = false) {
         background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
         border: ${isPrimary ? 4 : 3}px solid #0F2D5E;
         border-radius: 50%;
-        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.6), 0 0 0 3px rgba(245, 158, 11, 0.3);
+        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.6);
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       ">
-        <svg width="${Math.floor(size * 0.55)}" height="${Math.floor(size * 0.55)}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="${Math.floor(size * 0.5)}" height="${Math.floor(size * 0.5)}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
           <path d="M3 21V7L12 3L21 7V21H15V14H9V21H3Z" fill="#0F2D5E"/>
           <rect x="5" y="8" width="3" height="3" fill="#F59E0B"/>
           <rect x="10" y="8" width="4" height="4" fill="#F59E0B"/>
@@ -293,6 +294,10 @@ export default function DirectoryMapInner({
         .factory-marker {
           background: transparent !important;
           border: none !important;
+          border-radius: 50% !important;
+        }
+        .factory-marker > div {
+          border-radius: 50% !important;
         }
         .factory-cluster {
           background: transparent !important;
