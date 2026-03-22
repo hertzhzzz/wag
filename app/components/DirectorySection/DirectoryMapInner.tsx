@@ -161,9 +161,9 @@ export default function DirectoryMapInner({
       attributionControl: false,
     })
 
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
       maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      attribution: '&copy; Esri'
     }).addTo(mapRef.current)
 
     markerClusterRef.current = L.markerClusterGroup({
