@@ -15,22 +15,23 @@ interface DirectoryMapInnerProps {
 }
 
 // Generate distributed factory points around a city center
-// Points are spread using a Gaussian-like distribution
+// Points scale with factory count - more factories = more points
 function generateFactoryPoints(
   cityEntry: CityEntry
 ): Array<{ coords: [number, number]; index: number }> {
   const points: Array<{ coords: [number, number]; index: number }> = []
-  const numPoints = Math.max(1, Math.min(8, Math.round(cityEntry.factories / 10)))
+  // Scale: 1 point per ~4 factories, minimum 2 points per city
+  const numPoints = Math.max(2, Math.ceil(cityEntry.factories / 4))
 
   // Spread radius varies by city size (larger cities = bigger industrial zones)
-  const baseRadius = 0.15 + (cityEntry.factories / 100) * 0.3
+  const baseRadius = 0.2 + (cityEntry.factories / 100) * 0.4
 
   for (let i = 0; i < numPoints; i++) {
     // Use deterministic pseudo-random offset based on city + index
     // This ensures consistent positioning across re-renders
     const seed = cityEntry.city.charCodeAt(0) + cityEntry.city.charCodeAt(1) + i * 17
     const angle = (seed % 360) * (Math.PI / 180)
-    const radiusFactor = 0.3 + ((seed * 7) % 70) / 100
+    const radiusFactor = 0.2 + ((seed * 7) % 80) / 100
 
     const latOffset = Math.cos(angle) * baseRadius * radiusFactor
     const lngOffset = Math.sin(angle) * baseRadius * radiusFactor
