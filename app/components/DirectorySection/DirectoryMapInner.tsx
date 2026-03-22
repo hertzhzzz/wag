@@ -85,12 +85,13 @@ function createFactoryIcon(factories: number, isPrimary = false) {
       ">
         ${showCountInside
           ? `<span style="
-              color: white;
+              color: #FFFFFF;
               font-size: ${fontSize}px;
               font-weight: 700;
               font-family: 'IBM Plex Sans', system-ui, sans-serif;
-              text-shadow: 0 1px 3px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.5);
+              text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 2px 4px rgba(0,0,0,0.7);
               line-height: 1;
+              filter: drop-shadow(0 0 2px rgba(0,0,0,0.8));
             ">${factories}</span>`
           : `<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 50%; height: 50%;">
               <path d="M3 21V7L12 3L21 7V21H15V14H9V21H3Z" fill="#0F2D5E"/>
