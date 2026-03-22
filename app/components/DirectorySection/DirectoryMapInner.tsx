@@ -55,32 +55,21 @@ function createFactoryIcon(factories: number, isPrimary = false) {
   const size = isPrimary ? baseSize + 4 : baseSize
   const offset = Math.floor(size / 2)
 
-  // Factory count badge for primary markers
-  const badgeHtml = isPrimary && factories > 10
-    ? `<div style="
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        background-color: #0F2D5E;
-        color: white;
-        font-size: 10px;
-        font-weight: 700;
-        min-width: 20px;
-        height: 20px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid #F59E0B;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      ">${factories}</div>`
-    : ''
+  // Dynamic font size based on digit count and marker size
+  const digitCount = factories.toString().length
+  let fontSize = Math.floor(size * 0.4)
+  if (digitCount === 2) fontSize = Math.floor(size * 0.4)
+  if (digitCount === 3) fontSize = Math.floor(size * 0.35)
+  if (digitCount >= 4) fontSize = Math.floor(size * 0.28)
+
+  // When showing count inside circle (isPrimary && factories > 10)
+  // Show number centered instead of SVG icon
+  const showCountInside = isPrimary && factories > 10
 
   return L.divIcon({
     className: 'factory-marker',
     html: `
       <div style="
-        position: relative;
         width: ${size}px;
         height: ${size}px;
         background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
@@ -90,18 +79,27 @@ function createFactoryIcon(factories: number, isPrimary = false) {
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-sizing: border-box;
       ">
-        <svg width="${Math.floor(size * 0.5)}" height="${Math.floor(size * 0.5)}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-          <path d="M3 21V7L12 3L21 7V21H15V14H9V21H3Z" fill="#0F2D5E"/>
-          <rect x="5" y="8" width="3" height="3" fill="#F59E0B"/>
-          <rect x="10" y="8" width="4" height="4" fill="#F59E0B"/>
-          <rect x="16" y="8" width="3" height="3" fill="#F59E0B"/>
-          <rect x="7" y="13" width="3" height="3" fill="#F59E0B" opacity="0.8"/>
-          <rect x="14" y="13" width="3" height="3" fill="#F59E0B" opacity="0.8"/>
-        </svg>
-        ${badgeHtml}
+        ${showCountInside
+          ? `<span style="
+              color: #0F2D5E;
+              font-size: ${fontSize}px;
+              font-weight: 700;
+              font-family: 'IBM Plex Sans', system-ui, sans-serif;
+              text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+              line-height: 1;
+            ">${factories}</span>`
+          : `<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 50%; height: 50%;">
+              <path d="M3 21V7L12 3L21 7V21H15V14H9V21H3Z" fill="#0F2D5E"/>
+              <rect x="5" y="8" width="3" height="3" fill="#F59E0B"/>
+              <rect x="10" y="8" width="4" height="4" fill="#F59E0B"/>
+              <rect x="16" y="8" width="3" height="3" fill="#F59E0B"/>
+              <rect x="7" y="13" width="3" height="3" fill="#F59E0B" opacity="0.8"/>
+              <rect x="14" y="13" width="3" height="3" fill="#F59E0B" opacity="0.8"/>
+            </svg>`
+        }
       </div>
     `,
     iconSize: [size, size],
@@ -294,10 +292,9 @@ export default function DirectoryMapInner({
         .factory-marker {
           background: transparent !important;
           border: none !important;
-          border-radius: 50% !important;
         }
         .factory-marker > div {
-          border-radius: 50% !important;
+          box-sizing: border-box !important;
         }
         .factory-cluster {
           background: transparent !important;
