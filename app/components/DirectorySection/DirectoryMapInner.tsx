@@ -93,13 +93,9 @@ function createFactoryIcon(factories: number, isPrimary = false) {
               line-height: 1;
               filter: drop-shadow(0 0 2px rgba(0,0,0,0.8));
             ">${factories}</span>`
-          : `<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 50%; height: 50%;">
-              <path d="M3 21V7L12 3L21 7V21H15V14H9V21H3Z" fill="#0F2D5E"/>
-              <rect x="5" y="8" width="3" height="3" fill="#F59E0B"/>
-              <rect x="10" y="8" width="4" height="4" fill="#F59E0B"/>
-              <rect x="16" y="8" width="3" height="3" fill="#F59E0B"/>
-              <rect x="7" y="13" width="3" height="3" fill="#F59E0B" opacity="0.8"/>
-              <rect x="14" y="13" width="3" height="3" fill="#F59E0B" opacity="0.8"/>
+          : `<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 55%; height: 55%;">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#0F2D5E"/>
+              <circle cx="12" cy="9" r="2.5" fill="#F59E0B"/>
             </svg>`
         }
       </div>
