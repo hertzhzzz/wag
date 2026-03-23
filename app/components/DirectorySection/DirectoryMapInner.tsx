@@ -49,7 +49,7 @@ function generateFactoryPoints(
 }
 
 // Custom factory marker icon - Navy (#0F2D5E) background with white text
-function createFactoryIcon(factories: number, isPrimary = false) {
+function createFactoryIcon(factories: number, isPrimary = false, showCount = false) {
   // Size scales with factory count for visual hierarchy
   const baseSize = Math.min(40, 24 + Math.floor(factories / 12))
   const size = isPrimary ? baseSize + 4 : baseSize
@@ -62,9 +62,9 @@ function createFactoryIcon(factories: number, isPrimary = false) {
   if (digitCount === 3) fontSize = Math.floor(size * 0.35)
   if (digitCount >= 4) fontSize = Math.floor(size * 0.28)
 
-  // When showing count inside circle (isPrimary && factories > 10)
-  // Show number centered instead of SVG icon
-  const showCountInside = isPrimary && factories > 10
+  // Show count inside circle only when explicitly requested AND factories > 10
+  // This is now controlled by zoom level from outside
+  const showCountInside = showCount && isPrimary && factories > 10
 
   return L.divIcon({
     className: 'factory-marker',
@@ -84,6 +84,7 @@ function createFactoryIcon(factories: number, isPrimary = false) {
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         box-sizing: border-box;
         flex-shrink: 0;
+        position: relative;
       ">
         ${showCountInside
           ? `<span data-factories="${factories}" style="
@@ -92,6 +93,10 @@ function createFactoryIcon(factories: number, isPrimary = false) {
               font-weight: 700;
               font-family: 'IBM Plex Sans', system-ui, sans-serif;
               line-height: 1;
+              text-align: center;
+              width: 100%;
+              position: absolute;
+              left: 0;
             ">${factories}</span>`
           : `<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 55%; height: 55%; flex-shrink: 0;">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#FFFFFF"/>
@@ -171,6 +176,8 @@ export default function DirectoryMapInner({
   const mapContainerRef = useRef<HTMLDivElement>(null)
   const markerClusterRef = useRef<L.MarkerClusterGroup | null>(null)
   const markersRef = useRef<Map<string, L.Marker>>(new Map())
+  const zoomRef = useRef<number>(5)
+  const showCountRef = useRef<boolean>(true)
 
   // Initialize map
   useEffect(() => {
@@ -198,6 +205,29 @@ export default function DirectoryMapInner({
     })
 
     mapRef.current.addLayer(markerClusterRef.current)
+
+    // Listen for zoom changes to update marker icons
+    mapRef.current.on('zoomend', () => {
+      if (!mapRef.current) return
+      const newZoom = mapRef.current.getZoom()
+      zoomRef.current = newZoom
+      const newShowCount = newZoom < 12 // Show count only when zoomed out enough
+
+      // Only update if showCount state changed
+      if (newShowCount !== showCountRef.current) {
+        showCountRef.current = newShowCount
+        // Update all marker icons
+        markersRef.current.forEach((marker) => {
+          // @ts-ignore - factories/city are custom properties
+          const factories = marker.options.factories as number
+          // @ts-ignore
+          const city = marker.options.city as string
+          // @ts-ignore
+          const isPrimary = marker.options.isPrimary as boolean
+          marker.setIcon(createFactoryIcon(factories, isPrimary, newShowCount))
+        })
+      }
+    })
 
     return () => {
       if (mapRef.current) {
@@ -255,10 +285,11 @@ export default function DirectoryMapInner({
       factoryPoints.forEach((point, pointIndex) => {
         const isPrimary = pointIndex === 0
         const marker = L.marker(point.coords, {
-          icon: createFactoryIcon(cityEntry.factories, isPrimary),
+          icon: createFactoryIcon(cityEntry.factories, isPrimary, showCountRef.current),
           factories: cityEntry.factories,
           city: cityEntry.city,
-        } as L.MarkerOptions & { factories: number; city: string })
+          isPrimary: isPrimary,
+        } as L.MarkerOptions & { factories: number; city: string; isPrimary: boolean })
 
         marker.bindPopup(popupContent, {
           closeButton: false,
