@@ -1,0 +1,74 @@
+# Winning Adventure Global
+
+## Site Overview
+
+Winning Adventure Global connects Australian businesses with verified Chinese manufacturers through factory tours, supplier verification, and end-to-end procurement support.
+
+## Site Structure
+
+### Main Pages
+- / (Homepage) — Company introduction, factory directory, how it works
+- /services — China sourcing services: factory tours, bulk procurement
+- /about — Company story, founder Andy Liu, Adelaide presence
+- /resources — Blog articles and guides on China sourcing
+- /enquiry — Contact form for consultation requests
+
+### Blog Articles
+
+1. **Australia Import Tips: Essential Guide for First-Time Importers**
+   Everything Australian businesses need to know about importing goods. Covers customs requirements, GST, quarantine, product compliance, and practical tips for successful importing.
+   Category: China Factory Tour | Author: Andy Liu, Founder
+
+2. **How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order**
+   A practical guide for Australian businesses ready to place their first bulk order in China — from price negotiation to quality checks.
+   Category: Bulk Purchase Procurement Trip | Author: Andy Liu, Founder
+
+3. **The Complete Guide to China Business Travel for Australian Companies (2026 Edition)**
+   Essential 2026 guide for Australian businesses: China business travel trends, factory visit strategies, Canton Fair tips, and how to turn trips into measurable outcomes.
+   Category: China Business Travel | Author: Winning Adventure Global Team
+
+4. **7 Things I Learned Visiting Chinese Factories for 8 Years — What Australian Buyers Must Know Before They Board the Plane**
+   What Australian buyers must know before visiting Chinese factories. Learn from 200+ factory visits across Guangdong, Shenzhen, Zhengzhou.
+   Category: China Factory Tour | Author: Andy Liu, Founder
+
+5. **China Sourcing Risks & How to Mitigate Them: An Australian Business Guide**
+   Understand the common risks of sourcing from China and learn proven strategies to protect your business. Quality issues, communication barriers, and fraud prevention.
+   Category: China Sourcing Risks | Author: Andy Liu, Founder
+
+6. **China Supplier Verification: How to Check If a Supplier Is Legitimate**
+   Learn how to verify Chinese suppliers before placing orders. This guide covers factory verification, due diligence steps, red flags, and how to avoid supplier scams.
+   Category: China Factory Tour | Author: Andy Liu, Founder
+
+7. **Direct Factory Sourcing vs Alibaba: Which is Better for Australian Businesses?**
+   Compare direct factory sourcing with Alibaba-style platforms. Learn when each approach works best and how to choose for your business needs.
+   Category: China Sourcing | Author: Andy Liu, Founder
+
+8. **How to Import from China: A Practical Guide for Australian Businesses**
+   Learn the complete process of importing from China to Australia. This guide covers customs requirements, GST, quarantine rules, finding suppliers, and arranging factory visits.
+   Category: China Factory Tour | Author: Andy Liu, Founder
+
+9. **How to Verify Chinese Factories on 1688 Before Paying a Deposit**
+   Most Australian businesses discover this truth too late: the 1688 supplier who seemed reliable was never a factory at all. Learn the 3 verification steps before you pay any deposit.
+   Category: Factory Verification | Author: Winning Adventure Global
+
+10. **How to Verify a Chinese Supplier: Real Factory vs Trading Company**
+    Learn how Australian buyers can verify whether a Chinese supplier is a real factory, trading company, or shell company using official records, audits, and address checks.
+    Category: China Factory Tour | Author: Andy Liu, Founder
+
+## Key Topics Covered
+
+- China factory verification
+- 1688 supplier vetting
+- Bulk procurement from China
+- Australian import regulations
+- Factory tour planning
+- Supplier fraud prevention
+- Canton Fair strategies
+- Direct sourcing vs platforms
+
+## Business Information
+
+- Location: North Adelaide, SA, Australia
+- ABN: 30 659 034 919
+- Phone: +61 416 588 198
+- Service Area: Australia (Sydney, Melbourne, Brisbane, Perth, Adelaide)
