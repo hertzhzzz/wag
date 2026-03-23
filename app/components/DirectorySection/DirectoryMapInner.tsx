@@ -22,9 +22,9 @@ function generateFactoryPoints(
   const points: Array<{ coords: [number, number]; index: number }> = []
   const numPoints = cityEntry.factories
 
-  // Spread radius scales with factory count to avoid overlap
-  // Larger cities need bigger area to spread out 50-80 pins
-  const baseRadius = 0.3 + (cityEntry.factories / 80) * 1.5
+  // Spread radius: max 0.3 degrees (~30km) to keep pins within city area
+  // This prevents pins from spreading into ocean for coastal cities
+  const baseRadius = Math.min(0.3, 0.05 + (cityEntry.factories / 500))
 
   for (let i = 0; i < numPoints; i++) {
     // Deterministic spread: use golden angle for even distribution
@@ -32,9 +32,9 @@ function generateFactoryPoints(
     const angle = (i * goldenAngle + cityEntry.city.charCodeAt(0) * 10) % 360
     const angleRad = angle * (Math.PI / 180)
 
-    // Radius varies: inner rings closer together, outer rings spread out
-    const ring = Math.floor(i / 12)
-    const radiusFactor = 0.3 + (ring * 0.25) + ((i % 12) / 12) * 0.4
+    // Concentric rings: pins spread in expanding circles
+    const ring = Math.floor(i / 10)
+    const radiusFactor = 0.2 + ring * 0.2
 
     // Calculate offset in degrees
     const latOffset = Math.cos(angleRad) * baseRadius * radiusFactor
