@@ -6,7 +6,8 @@ export const directoryCities: CityEntry[] = [
     province: 'Guangdong',
     factories: 80,
     focus: 'Furniture manufacturing hub',
-    coords: [23.0218, 113.1219],
+    // Moved to Lecong furniture industrial zone area (south of city center)
+    coords: [22.9718, 113.0819],
     industries: ['Furniture', 'Construction'],
   },
   {
@@ -14,7 +15,8 @@ export const directoryCities: CityEntry[] = [
     province: 'Guangdong',
     factories: 50,
     focus: 'Electronics manufacturing center',
-    coords: [23.0209, 113.7518],
+    // Moved slightly east from center to Chang'an industrial area (away from water)
+    coords: [23.0756, 113.8032],
     industries: ['Electronics', 'Robotics'],
   },
   {
@@ -30,7 +32,8 @@ export const directoryCities: CityEntry[] = [
     province: 'Guangdong',
     factories: 60,
     focus: 'Trading and export hub',
-    coords: [23.1291, 113.2644],
+    // Moved to Huangpu industrial area (east of city center, away from water)
+    coords: [23.1862, 113.3985],
     industries: ['Electronics', 'Furniture'],
   },
   {
@@ -38,7 +41,8 @@ export const directoryCities: CityEntry[] = [
     province: 'Guangdong',
     factories: 75,
     focus: 'Global tech innovation center',
-    coords: [22.5431, 114.0579],
+    // Moved inland from water area to Longhua industrial zone (north of Shenzhen)
+    coords: [22.6532, 114.0285],
     industries: ['Electronics', 'Robotics'],
   },
   {

@@ -22,9 +22,12 @@ function generateFactoryPoints(
   const points: Array<{ coords: [number, number]; index: number }> = []
   const numPoints = cityEntry.factories
 
-  // Spread radius: max 0.3 degrees (~30km) to keep pins within city area
-  // This prevents pins from spreading into ocean for coastal cities
-  const baseRadius = Math.min(0.3, 0.05 + (cityEntry.factories / 500))
+  // Spread radius: max 0.15 degrees (~15km) to avoid ocean for coastal cities
+  // Use smaller radius for coastal cities, larger for inland cities
+  const isCoastalCity = ['Shenzhen', 'Dongguan', 'Foshan', 'Guangzhou'].includes(cityEntry.city)
+  const baseRadius = isCoastalCity
+    ? Math.min(0.15, 0.03 + (cityEntry.factories / 1000))
+    : Math.min(0.25, 0.05 + (cityEntry.factories / 500))
 
   for (let i = 0; i < numPoints; i++) {
     // Deterministic spread: use golden angle for even distribution
