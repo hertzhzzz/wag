@@ -3,6 +3,7 @@ import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import AIChatBox from './components/AIChatBox'
+import ScrollTracker from './components/ScrollTracker'
 
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ['300', '400', '500', '600', '700'],
@@ -200,6 +201,7 @@ export default function RootLayout({
       <body>
       {children}
       <AIChatBox />
+      <ScrollTracker />
     </body>
     </html>
   )

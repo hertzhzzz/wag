@@ -1,0 +1,23 @@
+{
+  "jobs": 2,
+  "tasks": [
+    {
+      "id": "factory-reality-check",
+      "promptFiles": ["prompts/01-factory-reality-check.md"],
+      "image": "imgs/01-factory-reality-check.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "3step-verification",
+      "promptFiles": ["prompts/02-3step-verification.md"],
+      "image": "imgs/02-3step-verification.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}

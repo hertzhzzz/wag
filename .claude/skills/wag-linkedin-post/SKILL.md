@@ -13,19 +13,50 @@ This skill generates high-quality LinkedIn posts for Winning Adventure Global us
 
 **When to use:** When a user wants to create a LinkedIn post for WAG, invoke this skill to guide them through topic selection (in Chinese), retrieve relevant WAG insights, and produce a formatted English post ready to publish.
 
+## WAG Business Model Context (Core Reference)
+
+**Source:** WAG-Australia 商业模型 v1.0 (2026-03-22)
+
+**Target Customer Pain Points:**
+- Australian SME owners (AV/audio/lighting/event rental, automotive) facing 20-30% price premium when buying through Australian wholesalers/importers vs direct factory sourcing
+- Three insurmountable barriers: Language, Trust, Logistics
+- Cannot independently verify if a factory is real or trustworthy
+- Existing sourcing agents take orders on behalf of clients — clients never build direct relationships with factories
+- Some agents hide 20-25% rebates, adding cost without transparency
+
+**WAG Differentiation:**
+- NOT a middleman, trading company, or sourcing agent
+- Core promise: "Tell me what you need. I get you a free factory quote. If the price works, I take you to see the factory yourself."
+- Value layers: Access, Trust, Safety, Logistics, Direct Relationship, Transparent Pricing
+- WAG accompanies clients to China, helping them sign contracts directly with factories — WAG is the guide, not the intermediary
+
+**Key Market Data:**
+- 85% of Australian SMBs use Alibaba.com to find overseas suppliers
+- China accounts for 62% of all inquiry sources for Australian importers
+- Australia-China供应链管理 market: USD 949.4M in 2025, projected USD 2,277.9M by 2034 (CAGR 10.21%)
+
+**Service Flow:**
+- Step 1 (Free): SME describes product needs + current purchase price
+- Step 2 (Free): WAG contacts factories for confidential quotes, delivers to client; factory names kept confidential pre-visit
+- Step 3 (Paid): WAG coordinates full China trip — flights, hotel, translator, factory appointments; client signs directly with factory
+
+**Pricing Model:**
+- Transparent cost-plus: flights (actual) + hotel (actual) + translator (per day) + coordination service fee
+- Estimated total per trip: A$5,300-8,300 for one client; A$3,500-5,000 per client when 2-3 SMEs share
+
 ## Socratic Question Flow
 
-Before generating any content, guide the user through exactly 4 questions to clarify the post direction. Present questions in Simplified Chinese to match WAG client base, but generate the final LinkedIn post in English.
+Before generating any content, guide the user through exactly 5 questions to clarify the post direction. Present questions in Simplified Chinese to match WAG client base, but generate the final LinkedIn post in English.
 
 **Question 1 — Topic Discovery:**
 "你的目标读者目前正在面临哪些中国采购挑战？"
 *(What specific China sourcing challenge are your ideal LinkedIn post readers dealing with right now?)*
-[Context: This identifies the core pain point — e.g., factory verification, quality control, communication barriers, minimum order quantities]
+[Context: This identifies the core pain point — e.g., factory verification, quality control, communication barriers, minimum order quantities. Reference WAG business model: new brand companies cannot find source factories, cannot trust if factories are real]
 
 **Question 2 — Pain Point Clarification:**
 "关于这个挑战，你听到过哪些最常见的误解？"
 *(What's the most common misconception about this challenge that you've encountered?)*
-[Context: This surfaces the fear or myth to debunk — e.g., "all Chinese factories are the same," "websites prove legitimacy," "the cheapest option is most efficient"]
+[Context: This surfaces the fear or myth to debunk — e.g., "all Chinese factories are the same," "websites prove legitimacy," "the cheapest option is most efficient," "a professional-looking factory in Australia is proof of Chinese manufacturing capability"]
 
 **Question 3 — Post Tone:**
 "你希望这篇文章起到什么作用——教育（建立认知）、挑战（引发讨论）还是激励（展示可能性）？"
@@ -42,10 +73,10 @@ Before generating any content, guide the user through exactly 4 questions to cla
 
 | 选择 | 影响 |
 |------|------|
-| **公司主页** | 使用"We"，突出WAG专业服务，算法触及率较低但品牌积累强 |
-| **个人账号** | 使用"I"，创始人IP背书，算法触及率更高，更易病毒传播 |
+| **公司主页** | 使用"We"，突出WAG专业服务，品牌积累强 |
+| **个人账号** | 使用"I"，创始人IP背书，触及率更高，更易病毒传播 |
 
-[Context: Determines tone, pronouns, and how WAG is positioned in the post]
+[Context: Determines tone, pronouns, and how WAG is positioned in the post. Per 2026 LinkedIn algorithm data, personal profiles outperform company pages by 561% in reach]
 
 ## RAG Implementation
 
@@ -86,6 +117,23 @@ OR
 [HASHTAGS - exactly 6-10 strategic tags]
 #ChinaSourcing #AustralianBusiness #Manufacturing #etc
 ```
+
+## 2026 LinkedIn Algorithm Context
+
+**Key algorithm changes (2026):**
+- Shift from "like-driven" to "deep engagement-driven" — NLP analyzes comment quality
+- External links in post body = -60% reach penalty
+- Engagement pods (互赞群) now detected with 97% accuracy, risk of shadow ban
+- Best-performing format: Document Carousel (6.6% engagement), Text-only post (4%), Image/Graphic (4.85%)
+- Personal Profile outperforms Company Page by 561% in organic reach
+- Best posting time (Australia audience): Tuesday-Thursday, 9-11 AM AEDT
+- First 60 minutes after posting: must be online to respond to comments (algorithm boost window)
+
+**Optimal hook strategies for 2026:**
+- Counterintuitive + specific numbers: "We audited 23 factories for Australian clients in 12 months. Here is what we found."
+- Loss framing: "My LinkedIn reach dropped 60%. Then I changed one thing."
+- Pain point + promise: "Most Australian businesses overpay on China sourcing because they skip this one step."
+- Specific scenario + suspense: "We spent $47K testing every LinkedIn strategy. Here is what actually worked."
 
 ## Fact Check Procedure
 
@@ -136,17 +184,30 @@ When a LinkedIn post should be expanded into a blog article, follow this workflo
 
 ### 1. Directory Structure
 
-Create a directory for the post:
+**Canonical Storage Path:** All generated LinkedIn posts are stored in:
+
 ```
 social/linkedin-post/{YYYY-MM-DD-topic}/
-├── post.md          # Original LinkedIn post
+├── post.md          # Original LinkedIn post content
 ├── outline.md       # Image outline/briefing
-├── imgs/           # Original images (e.g., 01-fake-factory-reveal.png)
-│   ├── 01-description.png
-│   └── 02-description.png
-└── prompts/        # AI image generation prompts
-    └── 01-infographic-description.md
+├── imgs/           # Original AI-generated images
+│   ├── 01-factory-reality-check.png
+│   └── 02-3step-verification.png
+└── prompts/        # AI image generation prompt files
+    └── 01-factory-reality-check.md
 ```
+
+**Published Images (for MDX/blog use):** After image generation, copy images to:
+```
+public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/
+```
+
+**Archive Path (after publishing):** Move completed posts to:
+```
+social/linkedin-post/archive/{YYYY-MM}/{YYYY-MM-DD-topic}/
+```
+
+**Date format:** Use `YYYY-MM-DD` prefix for unique identification and chronological sorting.
 
 ### 2. Image Naming Convention
 
@@ -232,3 +293,4 @@ Expand LinkedIn post (Hook→Body→CTA) into blog format:
 - **Avoid "WA" abbreviation** — Use "Winning Adventure Global" or "WAG" as appropriate.
 - **Fact check required before publishing** — Verify all claims against WAG blog content or web search. Present fact check table to user for approval.
 - **Blog images go in public/social/** — MDX files cannot reference `../social/` paths. Always copy to `public/social/` for Next.js static serving.
+- **2026 Algorithm Rule: No external links in post body** — Put all links in the first comment. Links in post body receive -60% reach penalty.

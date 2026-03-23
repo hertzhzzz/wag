@@ -1,6 +1,17 @@
+'use client'
+
 import Link from 'next/link'
+import { trackCTAClick } from '@/lib/analytics'
 
 export default function CTABand() {
+  const handleStartClick = () => {
+    trackCTAClick('Start Your China Trip', 'CTABand')
+  }
+
+  const handleSeeHowClick = () => {
+    trackCTAClick('See How It Works', 'CTABand')
+  }
+
   return (
     <section className="bg-white border-t border-gray-200 py-12 px-4 md:px-10 w-full relative overflow-hidden">
       <div className="max-w-[1100px] mx-auto flex items-center justify-between gap-10 flex-wrap relative z-[1]">
@@ -15,12 +26,14 @@ export default function CTABand() {
         <div className="flex gap-4 flex-wrap flex-shrink-0">
           <Link
             href="/enquiry"
+            onClick={handleStartClick}
             className="bg-navy text-white px-7 py-3.5 border-0 rounded font-sans text-[0.95rem] font-semibold cursor-pointer inline-block transition-all hover:bg-[#163d73] hover:-translate-y-px min-h-11"
           >
             Start Your China Trip →
           </Link>
           <Link
             href="/#howitworks"
+            onClick={handleSeeHowClick}
             className="bg-white text-navy px-7 py-3.5 border-2 border-navy rounded font-sans text-[0.95rem] font-medium cursor-pointer inline-block transition-all hover:bg-[#f0f4fa] hover:-translate-y-px min-h-11"
           >
             See How It Works

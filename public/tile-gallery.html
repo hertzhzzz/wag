@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tile Sources Gallery - China Factory Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'IBM Plex Sans', system-ui, sans-serif; background: #1a1a2e; color: #fff; padding: 20px; }
+    h1 { text-align: center; margin-bottom: 10px; color: #F59E0B; }
+    p.subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 14px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 24px; max-width: 1800px; margin: 0 auto; }
+    .tile-card { background: #16213e; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+    .tile-header { padding: 12px 16px; background: #0f2d5e; display: flex; justify-content: space-between; align-items: center; }
+    .tile-name { font-weight: 600; font-size: 14px; color: #F59E0B; }
+    .tile-provider { font-size: 11px; color: #888; }
+    .tile-map { height: 220px; background: #000; }
+    .tile-url { padding: 8px 16px; font-size: 10px; color: #666; word-break: break-all; font-family: monospace; background: #0d1b2a; }
+    .nav { text-align: center; margin-bottom: 20px; position: sticky; top: 0; background: #1a1a2e; padding: 10px; z-index: 100; }
+    .nav button { background: #F59E0B; color: #000; border: none; padding: 8px 16px; margin: 4px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+    .nav button:hover { background: #D97706; }
+    .nav button.active { background: #0F2D5E; color: #fff; }
+    .filter { margin-bottom: 10px; }
+    .filter select { padding: 8px 12px; border-radius: 6px; border: 1px solid #333; background: #16213e; color: #fff; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+    .badge-free { background: #22c55e; color: #000; }
+    .badge-paid { background: #ef4444; color: #fff; }
+    .badge-api { background: #f59e0b; color: #000; }
+  </style>
+</head>
+<body>
+  <h1>Tile Sources Gallery</h1>
+  <p class="subtitle">Click on a tile to select it for your China Factory Directory map</p>
+
+  <div class="nav">
+    <div class="filter">
+      <select id="filter" onchange="filterTiles()">
+        <option value="all">All Tiles</option>
+        <option value="free">Free (No API Key)</option>
+        <option value="styled">Styled/Light</option>
+        <option value="dark">Dark Theme</option>
+        <option value="satellite">Satellite</option>
+        <option value="terrain">Terrain</option>
+      </select>
+    </div>
+    <button class="active" onclick="showAll()">Show All</button>
+  </div>
+
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    // Center on China
+    const CENTER = [35.0, 105.0];
+    const ZOOM = 5;
+
+    const tiles = [
+      // FREE - No API Key
+      { name: 'OpenStreetMap', provider: 'Standard', url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', category: 'free', tags: ['street'] },
+      { name: 'CartoDB Positron', provider: 'CartoDB', url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', category: 'free styled', tags: ['light', 'minimal'] },
+      { name: 'CartoDB Dark Matter', provider: 'CartoDB', url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', category: 'free dark', tags: ['dark'] },
+      { name: 'CartoDB Voyager', provider: 'CartoDB', url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', category: 'free styled', tags: ['street', 'modern'] },
+      { name: 'CartoDB Voyager No Labels', provider: 'CartoDB', url: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}.png', category: 'free styled', tags: ['street', 'clean'] },
+      { name: 'OpenTopoMap', provider: 'OpenStreetMap', url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', category: 'free terrain', tags: ['terrain', 'topo'] },
+      { name: 'CyclOSM', provider: 'OpenStreetMap', url: 'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', category: 'free styled', tags: ['cycling'] },
+      { name: 'HikeBike', provider: 'WMFLabs', url: 'https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png', category: 'free terrain', tags: ['hiking'] },
+      { name: 'OpenRailwayMap', provider: 'OpenStreetMap', url: 'https://{s}.tiles.openrailwaymap.org/standard/{z}/{x}/{y}.png', category: 'free styled', tags: ['railway'] },
+
+      // Esri - Free
+      { name: 'Esri WorldStreet', provider: 'Esri', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', category: 'free', tags: ['street'] },
+      { name: 'Esri NatGeo', provider: 'Esri', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', category: 'free styled', tags: ['style'] },
+      { name: 'Esri World Imagery', provider: 'Esri', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', category: 'free satellite', tags: ['satellite'] },
+      { name: 'Esri Terrain', provider: 'Esri', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', category: 'free terrain', tags: ['terrain'] },
+      { name: 'Esri National Geographic', provider: 'Esri', url: 'https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', category: 'free styled', tags: ['style'] },
+
+      // Stadia - Free tier available
+      { name: 'Stadia Alidade Smooth', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', category: 'free styled', tags: ['modern', 'clean'] },
+      { name: 'Stadia Alidade Smooth Dark', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', category: 'free dark', tags: ['dark', 'modern'] },
+      { name: 'Stadia OSMBright', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', category: 'free styled', tags: ['street', 'bright'] },
+      { name: 'Stadia Outdoors', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png', category: 'free terrain', tags: ['outdoor', 'terrain'] },
+      { name: 'Stadia Stamen Toner', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png', category: 'free styled', tags: ['black', 'high-contrast'] },
+      { name: 'Stadia Stamen Toner Lite', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.png', category: 'free styled', tags: ['light', 'minimal'] },
+      { name: 'Stadia Stamen Toner Dark', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/stamen_toner_dark/{z}/{x}/{y}{r}.png', category: 'free dark', tags: ['dark', 'high-contrast'] },
+      { name: 'Stadia Stamen Watercolor', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}{r}.png', category: 'free styled', tags: ['artistic'] },
+      { name: 'Stadia Stamen Terrain', provider: 'Stadia', url: 'https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.png', category: 'free terrain', tags: ['terrain', 'topo'] },
+
+      // OpenStreetMap variants
+      { name: 'OpenStreetMap DE', provider: 'OpenStreetMap DE', url: 'https://tile.openstreetmap.de/{z}/{x}/{y}.png', category: 'free', tags: ['street'] },
+      { name: 'OpenStreetMap HOT', provider: 'Humanitarian', url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', category: 'free', tags: ['street', 'humanitarian'] },
+      { name: 'OpenStreetMap France', provider: 'OpenStreetMap France', url: 'https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', category: 'free', tags: ['street'] },
+
+      // MtbMap
+      { name: 'MtB Map', provider: 'mtbmap.cz', url: 'http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png', category: 'free terrain', tags: ['mountain', 'cycling'] },
+
+      // FreeMapSK
+      { name: 'FreeMap SK', provider: 'FreeMap.sk', url: 'https://{s}.freemap.sk/T/{z}/{x}/{y}.jpeg', category: 'free terrain', tags: [' Slovakia'] },
+
+      // NASAGIBS
+      { name: 'NASA Terra', provider: 'NASA', url: 'https://map1.vis.earthdata.nasa.gov/wmts-webmerc/MODIS_Terra_CorrectedReflectance_TrueColor/default/{time}/{tilematrixset}{maxZoom}/{z}/{y}/{x}.jpg', category: 'free satellite', tags: ['satellite', 'nasa'] },
+    ];
+
+    const maps = {};
+
+    function createTileCard(tile, index) {
+      const card = document.createElement('div');
+      card.className = 'tile-card';
+      card.id = `tile-${index}`;
+      card.onclick = () => selectTile(index);
+
+      card.innerHTML = `
+        <div class="tile-header">
+          <div>
+            <div class="tile-name">${tile.name}</div>
+            <div class="tile-provider">${tile.provider}</div>
+          </div>
+          <span class="badge badge-free">FREE</span>
+        </div>
+        <div class="tile-map" id="map-${index}"></div>
+        <div class="tile-url">${tile.url}</div>
+      `;
+      return card;
+    }
+
+    function initMaps() {
+      tiles.forEach((tile, index) => {
+        const mapContainer = document.getElementById(`map-${index}`);
+        if (mapContainer) {
+          const map = L.map(`map-${index}`, {
+            center: CENTER,
+            zoom: ZOOM,
+            zoomControl: false,
+            attributionControl: false,
+            dragging: false,
+            scrollWheelZoom: false,
+            doubleClickZoom: false,
+            boxZoom: false,
+            keyboard: false
+          });
+
+          L.tileLayer(tile.url, {
+            maxZoom: 18,
+            attribution: '&copy; ' + tile.provider
+          }).addTo(map);
+
+          maps[index] = map;
+        }
+      });
+    }
+
+    function selectTile(index) {
+      const tile = tiles[index];
+      // Copy to clipboard
+      navigator.clipboard.writeText(tile.url);
+      // Visual feedback
+      document.querySelectorAll('.tile-card').forEach(c => c.style.outline = 'none');
+      document.getElementById(`tile-${index}`).style.outline = '3px solid #F59E0B';
+      alert(`Selected: ${tile.name}\n\nURL copied to clipboard!`);
+    }
+
+    function filterTiles() {
+      const filter = document.getElementById('filter').value;
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = '';
+
+      tiles.forEach((tile, index) => {
+        let show = true;
+        if (filter === 'free') show = tile.category.includes('free') && !tile.category.includes('paid');
+        else if (filter === 'styled') show = tile.category.includes('styled');
+        else if (filter === 'dark') show = tile.category.includes('dark');
+        else if (filter === 'satellite') show = tile.category.includes('satellite');
+        else if (filter === 'terrain') show = tile.category.includes('terrain');
+
+        if (show) {
+          gallery.appendChild(createTileCard(tile, index));
+        }
+      });
+
+      // Reinitialize maps after filtering
+      setTimeout(initMaps, 100);
+    }
+
+    function showAll() {
+      document.getElementById('filter').value = 'all';
+      const gallery = document.getElementById('gallery');
+      gallery.innerHTML = '';
+
+      tiles.forEach((tile, index) => {
+        gallery.appendChild(createTileCard(tile, index));
+      });
+
+      setTimeout(initMaps, 100);
+    }
+
+    // Initialize
+    showAll();
+  </script>
+</body>
+</html>
