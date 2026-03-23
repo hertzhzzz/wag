@@ -127,13 +127,13 @@ export default function RootLayout({
                 "addressCountry": "AU"
               },
               "telephone": "+61-416588198",
-              "abn": "30 659 034 919",
+              "ABN": "30 659 034 919",
               "areaServed": {
                 "@type": "Country",
                 "name": "Australia"
               },
               "serviceType": ["Factory Tour", "Procurement Support", "Supplier Verification"],
-              "priceRange": "$$$",
+              "priceRange": "AUD $2,000 - $50,000+",
               "sameAs": [
                 "https://www.google.com/maps/place/Winning+Adventure+Global/@-34.9303231,138.6088232,15z/data=!4m6!3m5!1s0x6ad870f9565fbbb3:0x64f74ad4a0ab7b43!8m2!3d-34.9076802!4d138.6063284!16s%2Fg%2F11yyg4dg4j",
                 "https://www.linkedin.com/company/winning-adventure-global",
@@ -185,6 +185,13 @@ export default function RootLayout({
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                 "opens": "09:00",
                 "closes": "18:00"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "47",
+                "bestRating": "5",
+                "worstRating": "1"
               }
             })
           }}
