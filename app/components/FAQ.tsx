@@ -29,15 +29,15 @@ export default function FAQ({ faqs = defaultFaqs }: FAQProps) {
           Everything You Need to Know
         </h2>
 
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="flex flex-col bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 h-full"
             >
               <button
                 onClick={() => toggleFAQ(idx)}
-                className="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-gray-50/70 transition-colors cursor-pointer border-0 min-h-11"
+                className="w-full flex items-start justify-between p-5 text-left bg-white hover:bg-gray-50/70 transition-colors cursor-pointer border-0 min-h-11 flex-grow"
               >
                 <span className="font-semibold text-navy text-base pr-4">
                   {faq.question}
@@ -47,7 +47,7 @@ export default function FAQ({ faqs = defaultFaqs }: FAQProps) {
                 </span>
               </button>
               {openIndex === idx && (
-                <div className="px-5 pb-5 pt-0">
+                <div className="px-5 pb-5 pt-0 flex-grow">
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {faq.answer}
                   </p>
