@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import EnquiryForm from './EnquiryForm'
 
 export const metadata: Metadata = {
-  title: 'Enquire Now | China Sourcing Services',
-  description: 'Get in touch for China sourcing services. Request a factory tour, supplier verification, or procurement support for your business.',
-  keywords: ['china sourcing enquiry', 'factory tour quote', 'china sourcing contact'],
+  title: 'Contact WAG | Request a Consultation',
+  description: 'Get in touch for China sourcing consultation. Factory tours, supplier verification, and bulk procurement support for Australian businesses.',
+  keywords: ['china sourcing consultation', 'factory tour enquiry', 'australian business china', 'contact wag', 'supplier verification quote'],
   alternates: {
     canonical: 'https://www.winningadventure.com.au/enquiry',
   },

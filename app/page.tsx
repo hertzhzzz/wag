@@ -11,9 +11,9 @@ import ReviewSchema from '@/components/ReviewSchema'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'WAG | China Sourcing Australia | Factory Tours & Supplier Verification',
-  description: 'Winning Adventure Global helps Australian businesses source from China with factory tours, supplier verification, and end-to-end procurement support. Based in Adelaide.',
-  keywords: ['china sourcing', 'china sourcing australia', 'adelaide china sourcing', 'south australia sourcing', 'australian import china', 'factory visit china', 'china sourcing adelaide', 'sourcing trip china', 'china factory tour', 'supplier verification china', 'factory visit', 'supplier sourcing', 'China procurement'],
+  title: 'China Sourcing Company | Australian Business Guide',
+  description: 'Connect with verified Chinese manufacturers. Factory tours, supplier verification, and procurement support for Australian businesses since 2012.',
+  keywords: ['china sourcing company', 'australian business china', 'verified suppliers china', 'factory tour china', 'china sourcing agent', 'supplier verification'],
   openGraph: {
     locale: 'en_AU',
     alternateLocale: 'en_US',

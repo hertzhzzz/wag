@@ -10,9 +10,14 @@ import PersonSchema from '@/components/PersonSchema'
 import ReviewSchema from '@/components/ReviewSchema'
 
 export const metadata: Metadata = {
-  title: 'About Us | China Sourcing Experts Adelaide',
-  description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. Based in Adelaide, we provide factory tours, supplier verification, and procurement support.',
-  keywords: ['china sourcing adelaide', 'south australia sourcing', 'adelaide sourcing company', 'australian business china', 'factory tour china', 'about china sourcing'],
+  title: 'About Winning Adventure Global | Adelaide China Sourcing',
+  description: 'Founded in Adelaide, SA. 12+ years helping Australian businesses find reliable China manufacturers. Expert sourcing agents in Shenzhen and beyond.',
+  keywords: [
+    'Adelaide China procurement consultant',
+    'Australian owned China sourcing company',
+    'South Australia import agent',
+    'Sydney Melbourne Brisbane Perth China sourcing',
+  ],
   openGraph: {
     title: 'About Us | China Sourcing Experts Adelaide',
     description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. Based in Adelaide, we provide factory tours, supplier verification, and procurement support.',

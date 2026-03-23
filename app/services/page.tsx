@@ -10,9 +10,18 @@ import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Services | Factory Tours & Supplier Verification',
-  description: 'Our China sourcing services include factory tours, supplier verification, quality inspections, and procurement coordination for Australian businesses.',
-  keywords: ['factory visit', 'supplier sourcing', 'China procurement', 'china sourcing services', 'factory tour china', 'supplier verification china', 'quality inspection china'],
+  title: 'China Factory Visit Services | Supplier Verification',
+  description: 'Join guided factory tours in Shenzhen, Guangzhou, and Shanghai. WAG helps Australian businesses verify suppliers and negotiate with manufacturers.',
+  keywords: [
+    'Australia China sourcing agent',
+    'Australian business China factory tour',
+    'Sydney China procurement',
+    'Melbourne import from China',
+    'Brisbane Alibaba alternative',
+    'Perth China sourcing',
+    'Adelaide factory visit',
+    'China factory verification',
+  ],
   openGraph: {
     title: 'China Sourcing Services | Factory Tours & Supplier Verification',
     description: 'Our China sourcing services include factory tours, supplier verification, quality inspections, and procurement coordination for Australian businesses.',

@@ -6,9 +6,9 @@ import matter from 'gray-matter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Resources | China Factory Tour Guides & Business Insights',
-  description: 'Expert guides on planning factory visits in China, sourcing strategies, and business travel tips for Australian businesses.',
-  keywords: ['China factory tour guide', 'China business travel', 'factory visit China', 'sourcing from China', 'Canton Fair guide', 'Australian business China'],
+  title: 'China Sourcing Resources | Factory Guide for Australians',
+  description: 'Free guides on verifying Chinese suppliers, import regulations, and procurement strategies. Expert tips for Australian businesses sourcing from China.',
+  keywords: ['china manufacturing resources', 'factory guide australia', 'supplier tips china', 'china sourcing guide', 'australian import china', 'verify chinese suppliers'],
   openGraph: {
     title: 'Resources | China Factory Tour Guides',
     description: 'Expert guides on planning factory visits in China for Australian businesses.',
