@@ -50,33 +50,6 @@ export default function AboutPage() {
 
       {/* Founder Story */}
       <div className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto">
-        {/* Founder Photo */}
-        {/* TODO: Replace with actual founder photo /public/andy-liu.jpg */}
-        <div className="mb-8">
-          <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-amber/30 shadow-lg bg-gray-200">
-            {/* Placeholder - user should add /public/andy-liu.jpg */}
-          </div>
-          <div className="mt-3 text-sm text-navy font-medium">
-            Andy Liu
-            <span className="text-gray-500 font-normal ml-2">Founder</span>
-          </div>
-        </div>
-        {/* LinkedIn Profile Link */}
-        {/* TODO: Replace with actual LinkedIn URL */}
-        <div className="mt-4">
-          <a
-            href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-navy hover:text-amber transition-colors"
-            aria-label="Andy Liu on LinkedIn"
-          >
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-            LinkedIn Profile
-          </a>
-        </div>
         <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-5">
           The Founder&apos;s Story
         </div>
