@@ -34,7 +34,7 @@ discuss → plan → execute → verify
 | 16.1 | 1/1 | Planned | AI Chat Box UX optimization |
 | 17 | FAQ Page + Schema | Pending | /resources/faq + FAQPage JSON-LD |
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
-| 19 | Page SEO Optimization | Pending | Meta tags + 关键词 |
+| 19 | Page SEO + GEO Optimization | 4/4 Planned | Meta tags + 关键词 + 地理信号 |
 | 20 | Technical SEO | Pending | sitemap.xml + robots.txt |
 | 21 | LinkedIn Post Skill (Socratic) | Planned | Socratic questioning + RAG for LinkedIn posts |
 | 22 | 1/1 | Complete    | 2026-03-21 |
@@ -158,9 +158,17 @@ Plans:
 
 ---
 
-### Phase 19: Page SEO Optimization
+### Phase 19: Page SEO + GEO Optimization
 
-**Goal:** 优化所有页面 SEO
+**Goal:** 优化所有页面 SEO + 地理信号（GEO）
+
+**Plans:** 4/4 plans created
+
+Plans:
+- [x] 19-01-PLAN.md — Infrastructure Foundations (llms.txt, robots.txt AI rules, ArticleSchema, BreadcrumbSchema, PersonSchema)
+- [x] 19-02-PLAN.md — Content E-E-A-T (founder photo, LinkedIn link, ReviewSchema)
+- [x] 19-03-PLAN.md — Page SEO Optimization (title tags, meta descriptions, heading hierarchy, keywords)
+- [x] 19-04-PLAN.md — Google Business Profile Setup (user action required)
 
 **Tasks:**
 1. Lighthouse SEO 审计
@@ -170,8 +178,15 @@ Plans:
 5. 首 100 词布局目标关键词
 6. 图片 alt 属性填充
 7. 内链策略
+8. **GEO 优化：**
+   - Google Business Profile 创建/认领（NAP 一致性）
+   - LocalBusiness Schema 增强（geo:lat/lng、openingHours、priceRange）
+   - Australian 城市关键词落地页（city-specific content）
+   - Review/Testimonial Schema 添加
+   - Australian 商业目录提交（Yellow Pages, True Local, ABR）
+   - 城市 Meta Keywords 添加（Sydney、Melbourne、Brisbane、Perth）
 
-**Deliverable:** 所有页面 Lighthouse SEO 90+
+**Deliverable:** 所有页面 Lighthouse SEO 90+ + GEO 信号覆盖澳大利亚主要城市
 
 ---
 
@@ -281,5 +296,5 @@ Plans:
 ---
 
 *Roadmap created: 2026-03-20*
-*Updated: 2026-03-21 (Phase 16.1 plan created, Phase 22 complete)*
+*Updated: 2026-03-23 (Phase 19 plans: 19-01 through 19-04 created)*
 *Competitor: chinafactorytours.com*
