@@ -196,7 +196,7 @@ export default function DirectoryMapInner({
     }).addTo(mapRef.current)
 
     markerClusterRef.current = L.markerClusterGroup({
-      maxClusterRadius: 60,
+      maxClusterRadius: 0, // Only cluster markers at exact same coords (same city), never merge cities
       spiderfyOnMaxZoom: true,
       showCoverageOnHover: false,
       zoomToBoundsOnClick: true,
