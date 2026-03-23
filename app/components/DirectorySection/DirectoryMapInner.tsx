@@ -48,8 +48,7 @@ function generateFactoryPoints(
   return points
 }
 
-// Custom factory marker icon - high contrast for map visibility
-// Amber (#F59E0B) primary with Navy (#0F2D5E) border for maximum contrast
+// Custom factory marker icon - Navy (#0F2D5E) background with white text
 function createFactoryIcon(factories: number, isPrimary = false) {
   // Size scales with factory count for visual hierarchy
   const baseSize = Math.min(40, 24 + Math.floor(factories / 12))
@@ -71,31 +70,32 @@ function createFactoryIcon(factories: number, isPrimary = false) {
     className: 'factory-marker',
     html: `
       <div style="
-        width: ${size}px;
-        height: ${size}px;
-        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-        border: ${isPrimary ? 4 : 3}px solid #0F2D5E;
-        border-radius: 50%;
-        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.6);
+        width: ${size}px !important;
+        height: ${size}px !important;
+        min-width: ${size}px !important;
+        min-height: ${size}px !important;
+        background: #0F2D5E;
+        border: ${isPrimary ? 3 : 2}px solid #FFFFFF;
+        border-radius: 50% !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         display: flex;
         align-items: center;
         justify-content: center;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         box-sizing: border-box;
+        flex-shrink: 0;
       ">
         ${showCountInside
-          ? `<span style="
+          ? `<span data-factories="${factories}" style="
               color: #FFFFFF;
               font-size: ${fontSize}px;
               font-weight: 700;
               font-family: 'IBM Plex Sans', system-ui, sans-serif;
-              text-shadow: 0 0 4px rgba(0,0,0,0.9), 0 2px 4px rgba(0,0,0,0.7);
               line-height: 1;
-              filter: drop-shadow(0 0 2px rgba(0,0,0,0.8));
             ">${factories}</span>`
-          : `<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 55%; height: 55%;">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#0F2D5E"/>
-              <circle cx="12" cy="9" r="2.5" fill="#F59E0B"/>
+          : `<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 55%; height: 55%; flex-shrink: 0;">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#FFFFFF"/>
+              <circle cx="12" cy="9" r="2.5" fill="#0F2D5E"/>
             </svg>`
         }
       </div>
@@ -106,32 +106,54 @@ function createFactoryIcon(factories: number, isPrimary = false) {
   })
 }
 
-// Cluster icon - high contrast amber with navy border
+// Cluster icon - Navy (#0F2D5E) background with white text, no orange glow
 function createClusterIcon(cluster: L.MarkerCluster) {
-  const childCount = cluster.getChildCount()
-  const size = Math.min(60, 40 + Math.floor(childCount / 2))
+  // Sum factory counts per city — avoid double-counting when multiple marker points
+  // belong to the same city. Use a Map to deduplicate by city name.
+  // @ts-ignore - cities is custom property added to marker options
+  const cityFactories = new Map<string, number>()
+  const allChildMarkers = cluster.getAllChildMarkers()
+  allChildMarkers.forEach((marker) => {
+    // @ts-ignore - city is custom property added to marker options
+    const city = marker.options.city as string
+    // @ts-ignore - factories is custom property added to marker options
+    const factories = marker.options.factories as number
+    if (city && factories && !isNaN(factories)) {
+      // Only record the first (highest) factory count per city
+      if (!cityFactories.has(city)) {
+        cityFactories.set(city, factories)
+      }
+    }
+  })
+
+  const totalFactories = Array.from(cityFactories.values()).reduce((sum, f) => sum + f, 0)
+  const displayCount = totalFactories > 0 ? totalFactories : cluster.getChildCount()
+  const size = Math.min(60, 40 + Math.floor(displayCount / 10))
 
   return L.divIcon({
     html: `
       <div style="
-        width: ${size}px;
-        height: ${size}px;
-        background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-        border: 4px solid #0F2D5E;
-        border-radius: 50%;
-        box-shadow: 0 4px 16px rgba(245, 158, 11, 0.6), 0 0 0 4px rgba(245, 158, 11, 0.25);
+        width: ${size}px !important;
+        height: ${size}px !important;
+        min-width: ${size}px !important;
+        min-height: ${size}px !important;
+        background: #0F2D5E;
+        border: 3px solid #FFFFFF;
+        border-radius: 50% !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         font-family: 'IBM Plex Sans', system-ui, sans-serif;
+        flex-shrink: 0;
       ">
         <span style="
-          color: #0F2D5E;
-          font-size: ${size > 44 ? 18 : 14}px;
+          color: #FFFFFF;
+          font-size: ${size > 44 ? 16 : 13}px;
           font-weight: 700;
-          text-shadow: 0 1px 0 rgba(255,255,255,0.3);
-        ">${childCount}</span>
+          line-height: 1;
+        ">${displayCount}</span>
       </div>
     `,
     className: 'factory-cluster',
@@ -234,7 +256,9 @@ export default function DirectoryMapInner({
         const isPrimary = pointIndex === 0
         const marker = L.marker(point.coords, {
           icon: createFactoryIcon(cityEntry.factories, isPrimary),
-        })
+          factories: cityEntry.factories,
+          city: cityEntry.city,
+        } as L.MarkerOptions & { factories: number; city: string })
 
         marker.bindPopup(popupContent, {
           closeButton: false,
