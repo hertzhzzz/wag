@@ -133,7 +133,12 @@ export default function RootLayout({
                 "name": "Australia"
               },
               "serviceType": ["Factory Tour", "Procurement Support", "Supplier Verification"],
-              "priceRange": "$$$"
+              "priceRange": "$$$",
+              "sameAs": [
+                "https://www.google.com/maps/place/Winning+Adventure+Global/@-34.9303231,138.6088232,15z/data=!4m6!3m5!1s0x6ad870f9565fbbb3:0x64f74ad4a0ab7b43!8m2!3d-34.9076802!4d138.6063284!16s%2Fg%2F11yyg4dg4j",
+                "https://www.linkedin.com/company/winning-adventure-global",
+                "https://www.facebook.com/winningadventureglobal"
+              ]
             })
           }}
         />
