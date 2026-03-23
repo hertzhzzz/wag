@@ -7,6 +7,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
+import ArticleSchema from '@/components/ArticleSchema'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
@@ -131,6 +133,21 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <>
       <Navbar />
+      <ArticleSchema
+        title={fm.title}
+        description={fm.description}
+        url={`https://www.winningadventure.com.au/resources/${slug}`}
+        author={fm.author}
+        datePublished={fm.date}
+        dateModified={fm.updatedDate}
+        image={fm.coverImage}
+        category={fm.category}
+      />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.winningadventure.com.au' },
+        { name: 'Resources', url: 'https://www.winningadventure.com.au/resources' },
+        { name: fm.category, url: `https://www.winningadventure.com.au/resources/${slug}` }
+      ]} />
 
       {/* Hero */}
       <section className="bg-[#0F2D5E] py-16 px-8">
