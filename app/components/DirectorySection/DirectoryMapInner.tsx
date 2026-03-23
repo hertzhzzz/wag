@@ -15,26 +15,30 @@ interface DirectoryMapInnerProps {
 }
 
 // Generate distributed factory points around a city center
-// Points scale with factory count - more factories = more points
+// Each city gets 1-3 points spread in different directions
 function generateFactoryPoints(
   cityEntry: CityEntry
 ): Array<{ coords: [number, number]; index: number }> {
   const points: Array<{ coords: [number, number]; index: number }> = []
-  // Scale: 1 point per ~4 factories, minimum 2 points per city
-  const numPoints = Math.max(2, Math.ceil(cityEntry.factories / 4))
 
-  // Spread radius varies by city size (larger cities = bigger industrial zones)
-  const baseRadius = 0.2 + (cityEntry.factories / 100) * 0.4
+  // Each city gets 1 point per ~30 factories, min 1, max 3
+  const numPoints = Math.max(1, Math.min(3, Math.ceil(cityEntry.factories / 30)))
+
+  // Fixed spread radius: 0.5-1.0 degrees (~50-100km at China's latitude)
+  // This ensures markers are well spread across the city area, not clustered
+  const baseRadius = 0.5 + (cityEntry.factories / 200) * 0.5
 
   for (let i = 0; i < numPoints; i++) {
-    // Use deterministic pseudo-random offset based on city + index
-    // This ensures consistent positioning across re-renders
-    const seed = cityEntry.city.charCodeAt(0) + cityEntry.city.charCodeAt(1) + i * 17
-    const angle = (seed % 360) * (Math.PI / 180)
-    const radiusFactor = 0.2 + ((seed * 7) % 80) / 100
+    // Deterministic angle: spread evenly around circle (120° apart for 3 points)
+    const angle = (i * 120 + cityEntry.city.charCodeAt(0) * 3) % 360
+    const angleRad = angle * (Math.PI / 180)
 
-    const latOffset = Math.cos(angle) * baseRadius * radiusFactor
-    const lngOffset = Math.sin(angle) * baseRadius * radiusFactor
+    // Radius varies: use different radii for visual spread
+    const radiusFactor = i === 0 ? 1.0 : (i === 1 ? 0.7 : 0.4)
+
+    // Calculate offset in degrees
+    const latOffset = Math.cos(angleRad) * baseRadius * radiusFactor
+    const lngOffset = Math.sin(angleRad) * baseRadius * radiusFactor
 
     points.push({
       coords: [
@@ -48,24 +52,14 @@ function generateFactoryPoints(
   return points
 }
 
-// Custom factory marker icon - Navy (#0F2D5E) background with white text
+// Custom factory marker icon - Navy (#0F2D5E) pin with white border
 function createFactoryIcon(factories: number, isPrimary = false, showCount = false) {
   // Size scales with factory count for visual hierarchy
   const baseSize = Math.min(40, 24 + Math.floor(factories / 12))
   const size = isPrimary ? baseSize + 4 : baseSize
   const offset = Math.floor(size / 2)
 
-  // Dynamic font size based on digit count and marker size
-  const digitCount = factories.toString().length
-  let fontSize = Math.floor(size * 0.4)
-  if (digitCount === 2) fontSize = Math.floor(size * 0.4)
-  if (digitCount === 3) fontSize = Math.floor(size * 0.35)
-  if (digitCount >= 4) fontSize = Math.floor(size * 0.28)
-
-  // Show count inside circle only when explicitly requested AND factories > 10
-  // This is now controlled by zoom level from outside
-  const showCountInside = showCount && isPrimary && factories > 10
-
+  // Always show pin icon, never show factory count
   return L.divIcon({
     className: 'factory-marker',
     html: `
@@ -86,23 +80,10 @@ function createFactoryIcon(factories: number, isPrimary = false, showCount = fal
         flex-shrink: 0;
         position: relative;
       ">
-        ${showCountInside
-          ? `<span data-factories="${factories}" style="
-              color: #FFFFFF;
-              font-size: ${fontSize}px;
-              font-weight: 700;
-              font-family: 'IBM Plex Sans', system-ui, sans-serif;
-              line-height: 1;
-              text-align: center;
-              width: 100%;
-              position: absolute;
-              left: 0;
-            ">${factories}</span>`
-          : `<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 55%; height: 55%; flex-shrink: 0;">
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 55%; height: 55%; flex-shrink: 0;">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#FFFFFF"/>
               <circle cx="12" cy="9" r="2.5" fill="#0F2D5E"/>
-            </svg>`
-        }
+            </svg>
       </div>
     `,
     iconSize: [size, size],
