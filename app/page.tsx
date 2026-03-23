@@ -7,6 +7,7 @@ import HowItWorks from './components/HowItWorks'
 import TwoWaysAccess from './components/TwoWaysAccess'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
+import ReviewSchema from '@/components/ReviewSchema'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function Home() {
     <>
       <Navbar />
       <FAQSchema />
+      <ReviewSchema />
       <Hero />
       <TwoWaysAccess />
       <HowItWorks />
