@@ -7,6 +7,7 @@ import ServiceSchema from '@/components/ServiceSchema'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { serviceFaqs } from '@/data/faqs-services'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'China Sourcing Services | Factory Tours & Supplier Verification',
@@ -31,6 +32,10 @@ export default function ServicesPage() {
       <ServiceSchema />
       <FAQSchema faqs={serviceFaqs} />
       <Navbar />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.winningadventure.com.au' },
+        { name: 'Services', url: 'https://www.winningadventure.com.au/services' }
+      ]} />
 
       {/* Hero */}
       <section className="bg-navy py-12 md:py-16 px-4 md:px-8">

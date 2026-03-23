@@ -1,4 +1,5 @@
 import ResourcesContent from '@/components/ResourcesContent'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -61,5 +62,13 @@ export default function ResourcesPage() {
   const articles = getArticles()
   const categories = ['All Articles', ...Array.from(new Set(articles.map((a) => a.category).filter(Boolean)))]
 
-  return <ResourcesContent articles={articles} categories={categories} />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.winningadventure.com.au' },
+        { name: 'Resources', url: 'https://www.winningadventure.com.au/resources' }
+      ]} />
+      <ResourcesContent articles={articles} categories={categories} />
+    </>
+  )
 }

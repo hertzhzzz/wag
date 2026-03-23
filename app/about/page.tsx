@@ -5,6 +5,8 @@ import { Metadata } from 'next'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { aboutFaqs } from '@/data/faqs-about'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import PersonSchema from '@/components/PersonSchema'
 
 export const metadata: Metadata = {
   title: 'About Us | China Sourcing Experts Adelaide',
@@ -24,7 +26,12 @@ export default function AboutPage() {
   return (
     <>
       <FAQSchema faqs={aboutFaqs} />
+      <PersonSchema />
       <Navbar />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.winningadventure.com.au' },
+        { name: 'About', url: 'https://www.winningadventure.com.au/about' }
+      ]} />
 
       {/* Hero */}
       <div className="py-8 md:py-10 px-4 md:px-12 max-w-[90%] mx-auto mt-8">
