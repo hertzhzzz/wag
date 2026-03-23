@@ -15,26 +15,26 @@ interface DirectoryMapInnerProps {
 }
 
 // Generate distributed factory points around a city center
-// Each city gets 1-3 points spread in different directions
+// Number of points equals the factory count for that city
 function generateFactoryPoints(
   cityEntry: CityEntry
 ): Array<{ coords: [number, number]; index: number }> {
   const points: Array<{ coords: [number, number]; index: number }> = []
+  const numPoints = cityEntry.factories
 
-  // Each city gets 1 point per ~30 factories, min 1, max 3
-  const numPoints = Math.max(1, Math.min(3, Math.ceil(cityEntry.factories / 30)))
-
-  // Fixed spread radius: 0.5-1.0 degrees (~50-100km at China's latitude)
-  // This ensures markers are well spread across the city area, not clustered
-  const baseRadius = 0.5 + (cityEntry.factories / 200) * 0.5
+  // Spread radius scales with factory count to avoid overlap
+  // Larger cities need bigger area to spread out 50-80 pins
+  const baseRadius = 0.3 + (cityEntry.factories / 80) * 1.5
 
   for (let i = 0; i < numPoints; i++) {
-    // Deterministic angle: spread evenly around circle (120° apart for 3 points)
-    const angle = (i * 120 + cityEntry.city.charCodeAt(0) * 3) % 360
+    // Deterministic spread: use golden angle for even distribution
+    const goldenAngle = 137.508
+    const angle = (i * goldenAngle + cityEntry.city.charCodeAt(0) * 10) % 360
     const angleRad = angle * (Math.PI / 180)
 
-    // Radius varies: use different radii for visual spread
-    const radiusFactor = i === 0 ? 1.0 : (i === 1 ? 0.7 : 0.4)
+    // Radius varies: inner rings closer together, outer rings spread out
+    const ring = Math.floor(i / 12)
+    const radiusFactor = 0.3 + (ring * 0.25) + ((i % 12) / 12) * 0.4
 
     // Calculate offset in degrees
     const latOffset = Math.cos(angleRad) * baseRadius * radiusFactor
