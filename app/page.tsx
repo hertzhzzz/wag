@@ -7,6 +7,7 @@ import HowItWorks from './components/HowItWorks'
 import TwoWaysAccess from './components/TwoWaysAccess'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
+import { homepageFaqs } from '@/data/faqs'
 import ReviewSchema from '@/components/ReviewSchema'
 import { Metadata } from 'next'
 
@@ -56,13 +57,13 @@ export default function Home() {
     <>
       <Navbar />
       <WebsiteSchema />
-      <FAQSchema />
+      <FAQSchema faqs={homepageFaqs} />
       <ReviewSchema />
       <Hero />
       <TwoWaysAccess />
       <HowItWorks />
       <DirectorySection />
-      <FAQ />
+      <FAQ faqs={homepageFaqs} />
       <CTABand />
       <Footer />
     </>
