@@ -32,7 +32,7 @@ discuss → plan → execute → verify
 | 15 | 2/2 | Complete    | 2026-03-20 |
 | 16 | 2/2 | Complete    | 2026-03-20 |
 | 16.1 | 1/1 | Planned | AI Chat Box UX optimization |
-| 17 | FAQ Page + Schema | Complete | 2026-03-24 |
+| 17 | FAQ Page + Schema | Complete    | 2026-03-24 |
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
 | 19 | 3/4 | Complete    | 2026-03-23 |
 | 20 | Technical SEO | Pending | sitemap.xml + robots.txt |
@@ -162,7 +162,7 @@ Plans:
 
 **Goal:** 优化所有页面 SEO + 地理信号（GEO）
 
-**Plans:** 4/4 plans complete
+**Plans:** 1/1 plans complete
 
 Plans:
 - [x] 19-01-PLAN.md — Infrastructure Foundations (llms.txt, robots.txt AI rules, ArticleSchema, BreadcrumbSchema, PersonSchema)

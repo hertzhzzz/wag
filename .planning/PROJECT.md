@@ -53,7 +53,7 @@ Help Australian businesses safely connect with verified China manufacturers thro
 - [x] **SEO-05**: 创建 Two Ways to Access Section ✅
 - [ ] **SEO-06**: 创建 Directory Section（嵌入首页）
 - [x] **SEO-07**: 实现右下角悬浮 Contact 按钮 ✅ (Phase 16)
-- [ ] **SEO-08**: 创建 FAQ Page + Schema
+- [x] **SEO-08**: 创建 FAQ Page + Schema ✅ (Phase 17)
 - [ ] **SEO-09**: 优化 About Page E-E-A-T
 - [ ] **SEO-10**: Page SEO Optimization
 - [ ] **SEO-11**: Technical SEO (sitemap, robots.txt)
@@ -97,7 +97,7 @@ Help Australian businesses safely connect with verified China manufacturers thro
 
 ---
 
-*Last updated: 2026-03-21 after Phase 22 (LinkedIn post to blog) completed*
+*Last updated: 2026-03-24 after Phase 17 (FAQ Page + Schema) completed*
 
 ## Validated Requirements
 
@@ -109,4 +109,5 @@ Help Australian businesses safely connect with verified China manufacturers thro
 | SEO-04 | 制定 WAG SEO 优化方案（基于竞品分析） | Phase 14 |
 | SEO-05 | 创建 Two Ways to Access Section | Phase 14 |
 | SEO-07 | 实现右下角悬浮 Contact 按钮 | Phase 16 |
+| SEO-08 | 创建 FAQ Page + Schema | Phase 17 |
 | CONTENT-01 | LinkedIn post expanded to blog article on 1688 factory verification | Phase 22 |
