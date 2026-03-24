@@ -104,6 +104,7 @@ Next action: `/gsd:plan-phase 16.1` or `/gsd:plan-phase 17` — Phase 22 (Linked
 |---|-------------|------|--------|-----------|
 | 260320-nyw | Modify Access Directory Free button to open modal with email capture form | 2026-03-20 | c4df7f6f | [260320-nyw-modify-access-directory-free-button-to-o](./quick/260320-nyw-modify-access-directory-free-button-to-o/) |
 | 260323-qdm | 优化首页 FAQ 区，12 个竖排 accordion 占据过多垂直空间，改为 2-3 列网格卡片布局 | 2026-03-23 | 42889dcd | [260323-qdm-faq-12-accordion-2-3](./quick/260323-qdm-faq-12-accordion-2-3/) |
+| 260324-sk4 | 为 /app/resources 下的所有博客文章添加 Article/BlogPosting schema | 2026-03-24 | d7ded36f | [260324-sk4-app-resources-article-blogposting-schema](./quick/260324-sk4-app-resources-article-blogposting-schema/) |
 
 ## Roadmap Evolution
 
@@ -112,7 +113,7 @@ Next action: `/gsd:plan-phase 16.1` or `/gsd:plan-phase 17` — Phase 22 (Linked
 
 ---
 
-Last activity: 2026-03-23 - Completed quick task 260323-qdm: 优化首页 FAQ 区，12 个竖排 accordion 占据过多垂直空间，改为 2-3 列网格卡片布局
+Last activity: 2026-03-24 - Completed quick task 260324-sk4: 为 /app/resources 下的所有博客文章添加 Article/BlogPosting schema
 
 ---
 *State updated: 2026-03-23*
