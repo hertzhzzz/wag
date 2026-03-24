@@ -117,7 +117,13 @@ export default function RootLayout({
               "description": "China factory tours for Australian businesses",
               "founder": {
                 "@type": "Person",
-                "name": "Andy Liu"
+                "name": "Andy Liu",
+                "jobTitle": "Founder",
+                "url": "https://www.winningadventure.com.au/about",
+                "sameAs": [
+                  "https://www.linkedin.com/in/andyliu"
+                ],
+                "knowsAbout": ["China Manufacturing", "Supply Chain Management", "Factory Verification", "International Trade", "Pearl River Delta Manufacturing"]
               },
               "address": {
                 "@type": "PostalAddress",
@@ -134,11 +140,13 @@ export default function RootLayout({
                 "name": "Australia"
               },
               "serviceType": ["Factory Tour", "Procurement Support", "Supplier Verification"],
-              "priceRange": "AUD $2,000 - $50,000+",
+              "priceRange": "Contact for quote",
               "sameAs": [
                 "https://www.google.com/maps/place/Winning+Adventure+Global/@-34.9303231,138.6088232,15z/data=!4m6!3m5!1s0x6ad870f9565fbbb3:0x64f74ad4a0ab7b43!8m2!3d-34.9076802!4d138.6063284!16s%2Fg%2F11yyg4dg4j",
                 "https://www.linkedin.com/company/winning-adventure-global",
-                "https://www.facebook.com/winningadventureglobal"
+                "https://www.facebook.com/winningadventureglobal",
+                "https://www.youtube.com/@winningadventure",
+                "https://www.instagram.com/winningadventureglobal"
               ]
             })
           }}
@@ -153,7 +161,7 @@ export default function RootLayout({
               "image": "https://www.winningadventure.com.au/logo.png",
               "url": "https://www.winningadventure.com.au",
               "telephone": "+61-416588198",
-              "priceRange": "AUD $2,000 - $50,000+",
+              "priceRange": "Contact for quote",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "5, 54 Melbourne St",
