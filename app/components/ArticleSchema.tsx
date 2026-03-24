@@ -24,7 +24,7 @@ export default function ArticleSchema({
 }: ArticleSchemaProps) {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": ["Article", "BlogPosting"],
     "headline": title,
     "description": description,
     "url": url,
