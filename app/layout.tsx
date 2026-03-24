@@ -121,7 +121,7 @@ export default function RootLayout({
                 "jobTitle": "Founder",
                 "url": "https://www.winningadventure.com.au/about",
                 "sameAs": [
-                  "https://www.linkedin.com/in/andyliu"
+                  "https://www.linkedin.com/company/winning-adventure-global"
                 ],
                 "knowsAbout": ["China Manufacturing", "Supply Chain Management", "Factory Verification", "International Trade", "Pearl River Delta Manufacturing"]
               },
