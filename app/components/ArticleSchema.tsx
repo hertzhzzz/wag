@@ -1,6 +1,3 @@
-'use client'
-import { useEffect } from 'react'
-
 interface ArticleSchemaProps {
   title: string
   description: string
@@ -68,15 +65,10 @@ export default function ArticleSchema({
     }
   }
 
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.textContent = JSON.stringify(schema)
-    document.head.appendChild(script)
-    return () => {
-      document.head.removeChild(script)
-    }
-  }, [])
-
-  return null
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
 }

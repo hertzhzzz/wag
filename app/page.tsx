@@ -27,10 +27,35 @@ export const metadata: Metadata = {
   },
 }
 
+function WebsiteSchema() {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Winning Adventure Global",
+    "url": "https://www.winningadventure.com.au",
+    "description": "China factory tours and sourcing services for Australian businesses",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.winningadventure.com.au/resources?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+    />
+  )
+}
+
 export default function Home() {
   return (
     <>
       <Navbar />
+      <WebsiteSchema />
       <FAQSchema />
       <ReviewSchema />
       <Hero />
