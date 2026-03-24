@@ -32,7 +32,7 @@ discuss → plan → execute → verify
 | 15 | 2/2 | Complete    | 2026-03-20 |
 | 16 | 2/2 | Complete    | 2026-03-20 |
 | 16.1 | 1/1 | Planned | AI Chat Box UX optimization |
-| 17 | FAQ Page + Schema | Pending | /resources/faq + FAQPage JSON-LD |
+| 17 | FAQ Page + Schema | Complete | 2026-03-24 |
 | 18 | About Page | Pending | 公司故事 + E-E-A-T |
 | 19 | 3/4 | Complete    | 2026-03-23 |
 | 20 | Technical SEO | Pending | sitemap.xml + robots.txt |
