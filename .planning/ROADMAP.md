@@ -53,7 +53,8 @@
   4. `llms.txt` content is under 10KB
   5. llms.txt uses standardized numbers: 500+ suppliers, 50+ industries
 
-**Plans**: TBD
+**Plans**:
+- [ ] 23-01-PLAN.md — Fix llms.txt data accuracy + add ChatGPT-User to robots.txt
 
 ### Phase 24: Schema Consistency
 
@@ -87,7 +88,8 @@
   5. ABN has clickable verification link
   6. All ArticleSchema and BreadcrumbSchema are server-rendered (not useEffect)
 
-**Plans**: TBD
+**Plans**:
+- [ ] 23-01-PLAN.md — Fix llms.txt data accuracy + add ChatGPT-User to robots.txt
 
 ### Phase 25: Content Citability
 
@@ -109,7 +111,8 @@
   2. At least one page cites verifiable third-party data (ABS, DFAT, or AusTrade)
   3. All geographic claims are consistent (Australia HQ, China supplier locations)
 
-**Plans**: TBD
+**Plans**:
+- [ ] 23-01-PLAN.md — Fix llms.txt data accuracy + add ChatGPT-User to robots.txt
 
 ## P0 Emergency Fix (Completed)
 
