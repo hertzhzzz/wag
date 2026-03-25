@@ -12,9 +12,10 @@ Fix schema inconsistencies across WAG site and complete remaining GEO schema gap
 - Fix geographic consistency: Schema areaServed Australia, content clarifies China as supplier location
 - Standardize numbers: 500+ suppliers, 50+ industries across all pages
 - Add BreadcrumbSchema to /enquiry page
-- Fix Andy Liu LinkedIn in Organization schema (personal profile)
+- Remove Andy Liu LinkedIn from PersonSchema (personal LinkedIn does not exist)
+- Fix server-rendered PersonSchema (currently uses useEffect — AI crawlers miss this)
+- Fix server-rendered ArticleSchema and BreadcrumbSchema (already use direct `<script>` tags — no fix needed)
 - Add ABN verification link
-- Fix server-rendered ArticleSchema and BreadcrumbSchema (currently use useEffect)
 
 **Out of scope:**
 - Schema changes to blog articles (Phase 25)
@@ -22,38 +23,32 @@ Fix schema inconsistencies across WAG site and complete remaining GEO schema gap
 </domain>
 
 <decisions>
-## Implementation Decisions (from Phase 23)
+## Implementation Decisions
 
-### Geographic Standards
+### Geographic Standards (from Phase 23)
 - **areaServed**: Australia only — confirmed by stakeholders
 - **Supplier count**: 500+ — standardized across all pages
 - **Industry count**: 50+ — standardized across all pages
+- **China operations**: Guangdong Province only (Shenzhen, Foshan, Guangzhou)
+- **No Zhengzhou/Shaanxi** references in any schema
 
 ### ABN Verification
 - **ABN**: 30 659 034 919
 - **Verification URL**: https://abr.business.gov.au/Search/ResultsActive?SearchText=30659034919
 
-### Geographic Data
-- **China operations**: Guangdong Province only (Shenzhen, Foshan, Guangzhou)
-- **No Zhengzhou/Shaanxi** references in any schema
+### Andy Liu LinkedIn
+- **Decision**: Remove LinkedIn URL from PersonSchema sameAs — Andy Liu does not have a personal LinkedIn profile
+- Remove `"https://www.linkedin.com/in/andyliu-wag"` from sameAs array
 
-## Gray Areas (Need Discussion)
+### /enquiry BreadcrumbSchema
+- **Breadcrumb trail**: Home > Enquiry
+- Items: `[{ name: 'Home', url: 'https://www.winningadventure.com.au' }, { name: 'Enquiry', url: 'https://www.winningadventure.com.au/enquiry' }]`
+- **Rationale**: Enquiry is a top-level page, not a child of Services
 
-### 1. Andy Liu LinkedIn URL
-- Organization schema needs personal LinkedIn, not company page
-- **Question**: What is Andy Liu's personal LinkedIn profile URL?
-
-### 2. BreadcrumbSchema for /enquiry
-- What breadcrumb trail for /enquiry page?
-- Options: Home > Enquiry OR Home > Services > Enquiry
-
-### 3. ArticleSchema Server-Rendering
-- Current implementation uses useEffect — AI crawlers miss these
-- Fix approach: Move JSON-LD generation to server component
-
-### 4. BreadcrumbSchema Server-Rendering
-- Same issue as ArticleSchema — useEffect causes AI crawlers to miss
-- Fix approach: Same as ArticleSchema
+### Server-Side Rendering
+- **PersonSchema** (`app/components/PersonSchema.tsx`): Convert from `'use client'` + `useEffect` approach to direct `<script dangerouslySetInnerHTML>` rendering — same pattern as ArticleSchema
+- **ArticleSchema** (`app/components/ArticleSchema.tsx`): Already uses `<script dangerouslySetInnerHTML>` directly — no fix needed, already server-compatible
+- **BreadcrumbSchema** (`app/components/BreadcrumbSchema.tsx`): Already uses `<script dangerouslySetInnerHTML>` directly — no fix needed, already server-compatible
 </decisions>
 
 <canonical_refs>
@@ -68,11 +63,14 @@ Fix schema inconsistencies across WAG site and complete remaining GEO schema gap
 ### Requirements
 - `.planning/REQUIREMENTS.md` — GEO-03, GEO-04, GEO-05, GEO-06
 
-### Codebase
-- `app/layout.tsx` — Organization schema location
-- `app/about/page.tsx` — Andy Liu Person schema
-- `app/enquiry/page.tsx` — BreadcrumbSchema target
-- `app/resources/[slug]/page.tsx` — ArticleSchema
+### Codebase Files
+- `app/components/PersonSchema.tsx` — Andy Liu Person schema (needs LinkedIn removal + server-fix)
+- `app/components/BreadcrumbSchema.tsx` — Breadcrumb schema component
+- `app/components/ArticleSchema.tsx` — Article schema (already server-compatible)
+- `app/about/page.tsx` — Andy Liu Person schema usage location
+- `app/enquiry/page.tsx` — BreadcrumbSchema target page
+- `app/enquiry/EnquiryForm.tsx` — Client component, no schema here
+- `app/resources/[slug]/page.tsx` — ArticleSchema and BreadcrumbSchema usage
 
 ### Prior Phase Context
 - Phase 23 decisions on standardized numbers and geographic scope
@@ -84,24 +82,29 @@ Fix schema inconsistencies across WAG site and complete remaining GEO schema gap
 ### Reusable Assets
 - JSON-LD script components already exist in codebase
 - Organization and Person schemas already partially implemented
+- BreadcrumbSchema component accepts `items` array prop — ready for reuse on /enquiry
 
 ### Established Patterns
 - Next.js App Router with server components
-- JSON-LD via <script> tags in head
-- useEffect currently used for schema rendering (problematic)
+- JSON-LD via `<script type="application/ld+json">` with `dangerouslySetInnerHTML`
+- ArticleSchema and BreadcrumbSchema already use server-compatible pattern
+- PersonSchema currently uses `useEffect` pattern (PROBLEMATIC — needs conversion)
 
 ### Integration Points
-- Organization schema in layout.tsx
-- ArticleSchema in blog post pages
-- BreadcrumbSchema needs new implementation for /enquiry
+- PersonSchema: imported in `app/about/page.tsx`
+- BreadcrumbSchema: imported in `app/about/page.tsx` and `app/resources/[slug]/page.tsx`
+- ArticleSchema: imported in `app/resources/[slug]/page.tsx`
+- /enquiry page (`app/enquiry/page.tsx`) currently has no schema components — needs BreadcrumbSchema added
 </code_context>
 
 <specifics>
 ## Specific Ideas
 
-- ABN verification link: `https://abr.business.gov.au/Search/ResultsActive?SearchText=30659034919`
+- ABN verification URL: `https://abr.business.gov.au/Search/ResultsActive?SearchText=30659034919`
 - Standardized numbers: 500+ suppliers, 50+ industries
-- Geographic: Australia HQ, China as supplier location
+- Geographic: Australia HQ, China as supplier location (Guangdong only)
+- Andy Liu has NO personal LinkedIn — remove from PersonSchema
+- /enquiry breadcrumb: Home > Enquiry only
 </specifics>
 
 <deferred>
