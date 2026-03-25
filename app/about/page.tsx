@@ -58,7 +58,7 @@ export default function AboutPage() {
           When Andy Liu moved from China to Adelaide, the gap was immediately apparent. Australian businesses were leaving millions on the table — not because Chinese suppliers didn&apos;t want to work with them, but because no one was doing the translation work. Not just language. Trust. Process. Relationships.
         </p>
         <p className="text-base leading-relaxed text-gray-700 mb-5">
-          Andy has spent years inside Chinese manufacturing hubs — Shenzhen, Foshan, Guangzhou, Zhengzhou, Shaanxi. He knows which suppliers deliver on time, which ones cut corners on quality, and which ones are genuinely excited to build long-term partnerships with Australian B2B buyers.
+          Andy has spent years inside Chinese manufacturing hubs — Shenzhen, Foshan, Guangzhou. He knows which suppliers deliver on time, which ones cut corners on quality, and which ones are genuinely excited to build long-term partnerships with Australian B2B buyers.
         </p>
         <blockquote className="border-l-4 border-amber py-4 px-6 bg-[#fffbf0] my-8 font-serif italic text-lg leading-relaxed text-navy">
           &quot;The suppliers are ready. The opportunity is real. You just need someone who&apos;s already on the ground to open the right doors.&quot;
@@ -153,7 +153,7 @@ export default function AboutPage() {
             China has the manufacturing capacity, the technical expertise, and the willingness to work with Australian businesses. The challenge isn&apos;t capability — it&apos;s connection.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed mb-5">
-            Our network of 100+ verified suppliers across Guangdong, Shenzhen, Foshan, Guangzhou, Zhengzhou, and Shaanxi are actively seeking Australian B2B partners. They&apos;re ready. You just need the introduction.
+            Our network of 500+ verified suppliers across Guangdong Province — Shenzhen, Foshan, and Guangzhou — are actively seeking Australian B2B partners. They&apos;re ready. You just need the introduction.
           </p>
           <ul className="list-none mt-8">
             <li className="py-4 border-b border-gray-200 text-sm text-navy font-medium flex items-center gap-3">
@@ -162,7 +162,7 @@ export default function AboutPage() {
             </li>
             <li className="py-4 border-b border-gray-200 text-sm text-navy font-medium flex items-center gap-3">
               <span className="text-amber font-bold text-base">✓</span>
-              100+ verified factory partners
+              500+ verified factory partners
             </li>
             <li className="py-4 border-b border-gray-200 text-sm text-navy font-medium flex items-center gap-3">
               <span className="text-amber font-bold text-base">✓</span>

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import EnquiryForm from './EnquiryForm'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Contact WAG | Request a Consultation',
@@ -11,5 +12,13 @@ export const metadata: Metadata = {
 }
 
 export default function EnquiryPage() {
-  return <EnquiryForm />
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.winningadventure.com.au' },
+        { name: 'Enquiry', url: 'https://www.winningadventure.com.au/enquiry' }
+      ]} />
+      <EnquiryForm />
+    </>
+  )
 }

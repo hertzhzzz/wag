@@ -12,7 +12,7 @@ export const aboutFaqs = [
   },
   {
     question: 'How long has WAG been operating?',
-    answer: 'Our team has years of experience inside Chinese manufacturing hubs including Shenzhen, Foshan, Guangzhou, Zhengzhou, and Shaanxi. We have built our network of 100+ verified suppliers over multiple years of direct engagement.',
+    answer: 'Our team has years of experience inside Chinese manufacturing hubs including Shenzhen, Foshan, and Guangzhou. We have built our network of 500+ verified suppliers over multiple years of direct engagement.',
   },
   {
     question: 'What is your verification process for suppliers?',
