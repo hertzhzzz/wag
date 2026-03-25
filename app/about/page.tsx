@@ -235,7 +235,17 @@ export default function AboutPage() {
             </div>
             <div>
               <p className="text-xs font-semibold text-amber uppercase tracking-wider mb-2">ABN</p>
-              <p className="text-gray-700">30 659 034 919</p>
+              <p className="text-gray-700">
+                30 659 034 919
+                <a
+                  href="https://abr.business.gov.au/Search/ResultsActive?SearchText=30659034919"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 text-amber hover:underline text-xs"
+                >
+                  (Verify)
+                </a>
+              </p>
             </div>
           </div>
         </div>

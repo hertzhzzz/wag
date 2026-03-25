@@ -1,6 +1,3 @@
-'use client'
-import { useEffect } from 'react'
-
 export default function PersonSchema() {
   const schema = {
     "@context": "https://schema.org",
@@ -24,9 +21,7 @@ export default function PersonSchema() {
         "addressCountry": "AU"
       }
     },
-    "sameAs": [
-      "https://www.linkedin.com/in/andyliu-wag"
-    ],
+    "sameAs": [],
     "knowsAbout": ["China manufacturing", "Supplier verification", "B2B procurement", "Factory tours"],
     "areaServed": {
       "@type": "Country",
@@ -34,15 +29,10 @@ export default function PersonSchema() {
     }
   }
 
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.textContent = JSON.stringify(schema)
-    document.head.appendChild(script)
-    return () => {
-      document.head.removeChild(script)
-    }
-  }, [])
-
-  return null
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
 }
