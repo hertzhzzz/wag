@@ -45,8 +45,8 @@ Help Australian businesses safely connect with verified China manufacturers thro
 
 ### Active (v3.0)
 
-- [ ] **GEO-01**: 生成并配置 `llms.txt`
-- [ ] **GEO-02**: 品牌 AI 可见度对标分析（Perplexity/ChatGPT/Gemini）
+- [x] **GEO-01**: 生成并配置 `llms.txt` (Phase 23)
+- [x] **GEO-02**: 品牌 AI 可见度对标分析（Perplexity/ChatGPT/Gemini）(Phase 23)
 - [ ] **GEO-03**: 内容 Citability 优化（E-E-A-T 深化）
 - [ ] **GEO-04**: GEO 技术审计（crawler 合规性、Indexability）
 - [ ] **GEO-05**: Schema 完整性审查与补充
