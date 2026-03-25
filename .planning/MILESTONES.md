@@ -1,5 +1,24 @@
 # Milestones
 
+## v2.0 SEO Optimization v2 (Shipped: 2026-03-25)
+
+**Phases:** 14-17, 19, 21-22 (8 phases executed; 18 About Page + 20 Technical SEO deferred to v3.0)
+**Status:** ✅ Complete — Archived
+
+**Key accomplishments:**
+- Two Ways to Access Section on homepage
+- Directory Section with Leaflet.js map integration
+- Floating Contact Button (replaced by AI Chat Box in 16.1)
+- AI Chat Box UX optimization
+- FAQ page with FAQPage JSON-LD schema
+- Page SEO + GEO (ArticleSchema, BreadcrumbSchema, PersonSchema, WebSite+SearchAction)
+- LinkedIn Post Skill (Socratic)
+- LinkedIn Post → Blog Article expansion
+
+**Archived:** `.planning/milestones/v2.0-seo-optimization-archived/`
+
+---
+
 ## v1.4 UI Optimization (Shipped: 2026-03-20)
 
 **Phases:** 13 (1 phase)
@@ -69,4 +88,4 @@
 
 ---
 
-*Last updated: 2026-03-20*
+*Last updated: 2026-03-25*
