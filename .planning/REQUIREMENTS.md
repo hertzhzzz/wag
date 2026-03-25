@@ -1,206 +1,79 @@
-# Requirements: v2.0 SEO Optimization
+# Requirements: WAG Website v3.0 GEO Optimization
 
-## Overview
+**Defined:** 2026-03-25
+**Core Value:** Help Australian businesses safely connect with verified China manufacturers
 
-**Milestone:** v2.0 SEO Optimization
-**Competitor:** chinafactorytours.com
-**Goal:** Surpass competitor in relevant keyword rankings through content strategy, directory page, and UI improvements
+## v1 Requirements
 
----
+Requirements for v3.0 release. Each maps to roadmap phases.
 
-## Requirements Summary
+### AI Crawler Infrastructure
 
-| ID | Requirement | Priority | Type |
-|----|-------------|----------|------|
-| SEO-01 | Create Factory Directory page with map integration | P0 | Feature |
-| SEO-02 | Implement floating contact button (bottom-right) | P0 | Feature |
-| SEO-03 | Create dedicated FAQ pages with Schema markup | P1 | Content |
-| SEO-04 | Strengthen E-E-A-T signals throughout site | P1 | Content |
-| SEO-05 | Optimize existing pages for target keywords | P1 | SEO |
-| SEO-06 | Create sitemap.xml and robots.txt optimization | P2 | Technical |
+- [ ] **GEO-01**: 生成 `llms.txt` — AI crawler discovery 文件，位于 `/llms.txt`
+- [ ] **GEO-02**: 更新 `robots.txt` — 显式允许 GPTBot、ClaudeBot、Claude-Web、PerplexityBot、Google-Extended
 
----
+### Schema Foundation
 
-## Detailed Requirements
+- [ ] **GEO-03**: Article/BlogPosting Schema — 为全部10篇博客文章添加 Article schema
+- [ ] **GEO-04**: Organization sameAs — 添加 LinkedIn、YouTube 等社交链接
+- [ ] **GEO-05**: Andy Liu Person Schema 完善 — 添加 jobTitle、sameAs (LinkedIn)、knowsAbout
+- [ ] **GEO-06**: BreadcrumbList Schema — 为所有页面添加面包屑导航 schema
 
-### SEO-01: Factory Directory Page
+### Content Citability
 
-**Description:**
-Create a `/directory` page showcasing verified Chinese factories, organized by industry and location. Use interactive map to visualize factory clusters.
+- [ ] **GEO-07**: Third-party Citations — 引用 DFAT、ABS、AusTrade 等官方数据
+- [ ] **GEO-08**: speakable Property — 为 FAQPage 添加 speakable specification
 
-**Acceptance Criteria:**
-- [ ] Directory page at `/directory`
-- [ ] Filter by industry (Furniture, Electronics, Robotics, EV Battery)
-- [ ] Filter by location/region
-- [ ] Interactive Leaflet map with factory markers
-- [ ] Factory cards showing: Name, Location, Category, Verification badge
-- [ ] Responsive design for mobile
+## v2 Requirements
 
-**Implementation Notes:**
-- Use Leaflet.js + OpenStreetMap (same as competitor, free)
-- Factory data can be curated list initially (not database)
-- Map markers clustered by city
+Deferred to future release. Tracked but not in current roadmap.
 
----
+### Trust Signal Accumulation
 
-### SEO-02: Floating Contact Button
+- **GEO-09**: Client Testimonials — 真实客户评价（必须真实，需客户授权）
+- **GEO-10**: Video Content — YouTube 工厂参观视频（需内容制作能力）
 
-**Description:**
-Implement a persistent floating contact button in the bottom-right corner that opens a contact form modal.
+### GEO Platform Presence
 
-**Acceptance Criteria:**
-- [ ] Fixed position: bottom-right (20px from edges)
-- [ ] Visible on all pages
-- [ ] Click opens modal overlay with contact form
-- [ ] Form fields: Name, Email, Message
-- [ ] Mobile responsive (smaller on mobile)
-- [ ] Smooth hover animation
-- [ ] Accessible (ARIA labels)
-
-**Implementation Notes:**
-Based on competitor analysis, the floating button uses:
-- `.fc-btn` class for the button
-- `.fc-overlay` class for the modal backdrop
-- `.fc-modal` class for the dialog
-- Z-index: 10000 (button), 10001 (overlay)
-- Blue color scheme (#1d4ed8)
-
----
-
-### SEO-03: FAQ Pages with Schema Markup
-
-**Description:**
-Create dedicated FAQ pages targeting long-tail manufacturing keywords, with JSON-LD Schema markup for rich results.
-
-**Acceptance Criteria:**
-- [ ] `/resources/faq` page
-- [ ] FAQ schema markup (Schema.org/FAQPage)
-- [ ] Questions addressing:
-  - How to find reliable suppliers in China
-  - What certifications to look for
-  - How to protect IP when manufacturing in China
-  - Typical MOQs and lead times
-  - Factory audit process
-- [ ] Accordion-style expandable answers
-- [ ] Internal linking to relevant service pages
-
-**Keywords to Target:**
-- "China factory verification process"
-- "how to find reliable Chinese manufacturers"
-- "PCB assembly China guide"
-- "furniture manufacturers China"
-- "IP protection China manufacturing"
-
----
-
-### SEO-04: E-E-A-T Signal Strengthening
-
-**Description:**
-Enhance Experience, Expertise, Authoritativeness, and Trustworthiness signals across the site.
-
-**Acceptance Criteria:**
-- [ ] Team page with real credentials (or realistic for WAG positioning)
-- [ ] "About" page with company story and mission
-- [ ] Trust badges visible: Factory audit count, Years in business
-- [ ] Client testimonials with names and companies
-- [ ] Certification/association mentions
-- [ ] Contact information visible on all pages
-
-**Page Requirements:**
-- [ ] `/about` page with company narrative
-- [ ] `/team` or `/about#team` with team credentials
-- [ ] Footer with: Address, Phone, Email, ABN
-- [ ] Homepage trust bar with key stats
-
----
-
-### SEO-05: Page SEO Optimization
-
-**Description:**
-Optimize existing pages (Home, Services, About, Resources) with proper meta tags, heading structure, and keyword placement.
-
-**Acceptance Criteria:**
-- [ ] Each page has unique `<title>` tag (50-60 chars)
-- [ ] Each page has unique `<meta description>` (150-160 chars)
-- [ ] Proper H1/H2/H3 hierarchy
-- [ ] Target keywords in first 100 words
-- [ ] Image alt attributes populated
-- [ ] Internal linking strategy implemented
-
-**Page-by-Page Optimization:**
-
-| Page | Primary Keyword | Secondary Keywords |
-|------|-----------------|-------------------|
-| Home | China sourcing company | Australian business, verified suppliers |
-| Services | China factory visit | guided tours, supplier verification |
-| About | About Winning Adventure Global | company story, team |
-| Resources | China manufacturing resources | factory guide, supplier tips |
-| Directory | China factory directory | verified manufacturers, supplier map |
-
----
-
-### SEO-06: Technical SEO
-
-**Description:**
-Implement technical SEO elements for search engine crawlability and indexing.
-
-**Acceptance Criteria:**
-- [ ] `/sitemap.xml` generated and submitted to Google Search Console
-- [ ] `robots.txt` allows crawling of main pages
-- [ ] Canonical tags on all pages
-- [ ] 301 redirects for known broken links
-- [ ] Next.js metadata API used for SEO tags
-- [ ] Core Web Vitals optimized (LCP < 2.5s, CLS < 0.1)
-
----
-
-## Content Requirements
-
-### New Pages to Create
-
-| Page | URL | Purpose |
-|------|-----|---------|
-| Directory | `/directory` | Factory listings with map |
-| About | `/about` | Company story and team |
-| FAQ | `/resources/faq` | Manufacturing FAQ content |
-
-### Content Updates
-
-| Page | Update |
-|------|--------|
-| Home | Add trust bar, improve CTA placement |
-| Services | Add industry-specific sections |
-| Resources | Add more blog posts, case studies |
-| Footer | Add contact info, physical address |
-
----
+- **GEO-11**: Perplexity Brand Pages — 认领品牌页面
+- **GEO-12**: Wikipedia Presence — 建立维基百科条目（需知名度门槛）
 
 ## Out of Scope
 
-- Multi-language support
-- E-commerce/payment functionality
-- User accounts or dashboard
-- Real-time chat support
-- Database-driven directory (static initially)
+Explicitly excluded. Documented to prevent scope creep.
+
+| Feature | Reason |
+|---------|--------|
+| Google Business Profile | 已完成（v2.0 或更早） |
+| Fabricated testimonials | 违反 PROJECT.md 真实性原则；AI 会交叉验证 |
+| Auto-generated FAQ content | 低质量内容，AI 会 penalize |
+| AI-generated content | 违反 E-E-A-T 原则 |
+| Review schema without real reviews | Schema 验证会检测到，与实际不符会损害信任 |
+
+## Traceability
+
+Which phases cover which requirements. Updated during roadmap creation.
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| GEO-01 (llms.txt) | Phase 23 | Pending |
+| GEO-02 (robots.txt AI rules) | Phase 23 | Pending |
+| GEO-03 (Article schema) | Phase 24 | Pending |
+| GEO-04 (Organization sameAs) | Phase 24 | Pending |
+| GEO-05 (Person schema) | Phase 24 | Pending |
+| GEO-06 (BreadcrumbList) | Phase 24 | Pending |
+| GEO-07 (Third-party citations) | Phase 25 | Pending |
+| GEO-08 (speakable property) | Phase 25 | Pending |
+| GEO-09 (Client testimonials) | Future | Deferred |
+| GEO-10 (Video content) | Future | Deferred |
+| GEO-11 (Perplexity Brand Pages) | Future | Deferred |
+| GEO-12 (Wikipedia presence) | Future | Deferred |
+
+**Coverage:**
+- v1 requirements: 8 total
+- Mapped to phases: 8
+- Unmapped: 0 ✓
 
 ---
-
-## Dependencies
-
-- None (can be implemented independently)
-
----
-
-## Verification
-
-Each requirement must be verified by:
-1. Visual inspection of rendered page
-2. Mobile responsiveness check (320px minimum)
-3. Console error check
-4. SEO audit withighthouse
-5. `npm run build` passes
-
----
-
-*Requirements created: 2026-03-20*
-*Based on competitor analysis of chinafactorytours.com*
+*Requirements defined: 2026-03-25*
+*Last updated: 2026-03-25 after initial definition*
