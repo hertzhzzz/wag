@@ -50,7 +50,7 @@ AI crawlers (GPTBot, ClaudeBot, PerplexityBot, etc.) can properly discover and a
 
 ### ABN Verification
 
-- **Add ABN verification link** — ABN 30 659 034 919. Link to Australian Business Register lookup: `https://www.abrs.business.gov.au/ABRSearch?abn=30659034919`
+- **Add ABN verification link** — ABN 30 659 034 919. Link to Australian Business Register lookup: `https://abr.business.gov.au/Search/ResultsActive?SearchText=30659034919`
 
 ### Verification
 
