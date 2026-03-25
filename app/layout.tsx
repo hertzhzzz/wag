@@ -194,13 +194,6 @@ export default function RootLayout({
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                 "opens": "09:00",
                 "closes": "18:00"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "47",
-                "bestRating": "5",
-                "worstRating": "1"
               }
             })
           }}
