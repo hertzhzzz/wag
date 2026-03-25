@@ -7,7 +7,6 @@ import FAQSchema from '@/components/FAQSchema'
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import PersonSchema from '@/components/PersonSchema'
-import ReviewSchema from '@/components/ReviewSchema'
 
 export const metadata: Metadata = {
   title: 'About Winning Adventure Global | Adelaide China Sourcing',
@@ -33,7 +32,6 @@ export default function AboutPage() {
     <>
       <FAQSchema faqs={aboutFaqs} />
       <PersonSchema />
-      <ReviewSchema />
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
