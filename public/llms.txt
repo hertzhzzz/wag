@@ -115,7 +115,7 @@ Manufacturing, technology, food and health, construction, property, agriculture,
 ## Business Information
 
 - Location: 5/54 Melbourne St, North Adelaide SA 5006, Australia
-- ABN: 30 659 034 919 (verified: https://www.abrs.business.gov.au/ABRSearch?abn=30659034919)
+- ABN: 30 659 034 919 (verified: https://abr.business.gov.au/Search/ResultsActive?SearchText=30659034919)
 - Phone: +61 416 588 198
 - Email: mark@winningadventure.com.au
 - Website: https://www.winningadventure.com.au
