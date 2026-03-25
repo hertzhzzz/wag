@@ -21,7 +21,7 @@
 
 ## Phases
 
-- [ ] **Phase 23: AI Crawler Infrastructure** - llms.txt fixes + ChatGPT-User + robots.txt
+- [x] **Phase 23: AI Crawler Infrastructure** - llms.txt fixes + ChatGPT-User + robots.txt (completed 2026-03-25)
 - [ ] **Phase 24: Schema Consistency** - Geographic alignment, number standardization, breadcrumbs, LinkedIn, ABN
 - [ ] **Phase 25: Content Citability** - Third-party citations and speakable property
 
@@ -54,7 +54,7 @@
   5. llms.txt uses standardized numbers: 500+ suppliers, 50+ industries
 
 **Plans**:
-- [ ] 23-01-PLAN.md — Fix llms.txt data accuracy + add ChatGPT-User to robots.txt
+- [x] 23-01-PLAN.md — Fix llms.txt data accuracy + add ChatGPT-User to robots.txt
 
 ### Phase 24: Schema Consistency
 

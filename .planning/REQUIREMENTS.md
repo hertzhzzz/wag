@@ -9,8 +9,8 @@ Requirements for v3.0 release. Each maps to roadmap phases.
 
 ### AI Crawler Infrastructure
 
-- [ ] **GEO-01**: 生成 `llms.txt` — AI crawler discovery 文件，位于 `/llms.txt`
-- [ ] **GEO-02**: 更新 `robots.txt` — 显式允许 GPTBot、ClaudeBot、Claude-Web、PerplexityBot、Google-Extended
+- [x] **GEO-01**: 生成 `llms.txt` — AI crawler discovery 文件，位于 `/llms.txt`
+- [x] **GEO-02**: 更新 `robots.txt` — 显式允许 GPTBot、ClaudeBot、Claude-Web、PerplexityBot、Google-Extended
 
 ### Schema Foundation
 
