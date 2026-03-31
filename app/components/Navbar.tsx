@@ -57,6 +57,9 @@ export default function Navbar() {
           <li>
             <Link href="/about" className="nav-link text-navy">About Us</Link>
           </li>
+          <li>
+            <Link href="/enquiry" className="nav-link text-navy">Enquiry</Link>
+          </li>
         </ul>
 
         <div className="hidden md:flex">
