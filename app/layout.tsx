@@ -104,6 +104,12 @@ export default function RootLayout({
             gtag('config', 'G-VEGJ1YL8YR');
           `}
         </Script>
+        <Script
+          src="https://app.livechatai.com/embed.js"
+          data-id="cmndzab780001l204qa2lyy0x"
+          strategy="afterInteractive"
+          async
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
