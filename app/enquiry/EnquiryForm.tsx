@@ -154,8 +154,8 @@ export default function EnquiryForm() {
       <section className="py-12 px-4 sm:px-8">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-10">
 
-          {/* Two-column: Book a Call | Submit Enquiry */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Three-column: Book a Call | LiveChat | Submit Enquiry */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             {/* LEFT: Calendly */}
             <div className="bg-white border border-gray-200 rounded-lg p-8">
@@ -171,9 +171,27 @@ export default function EnquiryForm() {
               <CalendlyWidget />
             </div>
 
+            {/* CENTER: LiveChat */}
+            <div className="bg-white border border-gray-200 rounded-lg p-8 flex flex-col">
+              <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Option 2</p>
+              <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-2">Chat With Us</h2>
+              <p className="text-sm text-gray-600 mb-4">
+                Get instant answers. Voice input supported.
+              </p>
+              <iframe
+                src="https://app.livechatai.com/aibot-iframe/cmndzab780001l204qa2lyy0x"
+                style={{ border: '1px solid #EAEAEA', borderRadius: '8px' }}
+                width="100%"
+                height="580"
+                frameBorder="0"
+                allow="microphone"
+                title="LiveChat AI Assistant"
+              />
+            </div>
+
             {/* RIGHT: Enquiry Form - 2 Step */}
             <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Option 2</p>
+              <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Option 3</p>
               <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-2">
                 Submit Your Sourcing Enquiry
               </h2>
