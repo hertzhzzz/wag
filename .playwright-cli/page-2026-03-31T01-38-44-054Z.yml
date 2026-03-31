@@ -1,0 +1,621 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Skip to main content" [ref=e2] [cursor=pointer]
+      - link "Accessibility help" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=en-AU
+      - link "Accessibility feedback" [ref=e4] [cursor=pointer]
+  - generic [ref=e9]:
+    - search [ref=e10]:
+      - generic [ref=e12]:
+        - link "Go to Google Home" [ref=e14] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQPAgJ
+          - img [ref=e15]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - combobox "Search" [ref=e26]: Australia news today Australia news today
+            - generic [ref=e27]:
+              - button "Clear" [ref=e29] [cursor=pointer]:
+                - img [ref=e31]
+              - generic [ref=e34]:
+                - button "Search by voice" [ref=e35] [cursor=pointer]:
+                  - img [ref=e36]
+                - button "Search by image" [ref=e38] [cursor=pointer]:
+                  - img [ref=e39]
+          - button "Search" [ref=e41] [cursor=pointer]:
+            - img [ref=e44]
+    - generic [ref=e46]:
+      - button "Settings" [ref=e48] [cursor=pointer]:
+        - img [ref=e51]
+      - generic [ref=e54]:
+        - button "Google apps" [ref=e56] [cursor=pointer]:
+          - img [ref=e57]
+        - link "Sign in" [ref=e61] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/search%3Fq%3DAustralia%2Bnews%2Btoday%26sca_esv%3D2eb1beb0bd5e5e34%26source%3Dhp%26ei%3DfiXLaZKxDfGZseMPyfeuyA4%26iflsig%3DAFdpzrgAAAAAacszjrMuv5e4s-ddw0gYTOMlzytrWPN2%26ved%3D0ahUKEwiS6OSmgMmTAxXxTGwGHcm7C-kQ4dUDCBY%26uact%3D5%26oq%3DAustralia%2Bnews%2Btoday%26gs_lp%3DEgdnd3Mtd2l6IhRBdXN0cmFsaWEgbmV3cyB0b2RheTILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgsQABiABBixAxiDATIFEAAYgARIjmhQAFgAcAB4AJABAJgBf6ABf6oBAzAuMbgBA8gBAPgBAZgCAaAChgGYAwCSBwMwLjGgB6oFsgcDMC4xuAeGAcIHAzItMcgHBIAIAQ%26sclient%3Dgws-wiz%26sei%3DoiXLae3TI9qVseMP19ydqQE&ec=futura_srp_og_si_72236_p
+  - generic [ref=e63]:
+    - navigation [ref=e69]:
+      - generic [ref=e73]:
+        - list [ref=e74]:
+          - listitem [ref=e75]:
+            - link "AI Mode" [ref=e78] [cursor=pointer]:
+              - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&udm=50&source=hp&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&aep=1&ntc=1&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ2J8OegQIDxAE
+              - generic [ref=e81]: AI Mode
+          - listitem [ref=e82]:
+            - link "All" [disabled] [ref=e83]:
+              - generic [ref=e85]: All
+          - listitem [ref=e86]:
+            - link "News" [ref=e87] [cursor=pointer]:
+              - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Australia+news+today&tbm=nws&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ0pQJegQIGBAB
+              - generic [ref=e89]: News
+          - listitem [ref=e90]:
+            - link "Videos" [ref=e91] [cursor=pointer]:
+              - /url: /search?sca_esv=2eb1beb0bd5e5e34&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&q=Australia+news+today&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQtKgLegQIFxAB
+              - generic [ref=e93]: Videos
+          - listitem [ref=e94]:
+            - link "Images" [ref=e95] [cursor=pointer]:
+              - /url: /search?sca_esv=2eb1beb0bd5e5e34&udm=2&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&q=Australia+news+today&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQtKgLegQIExAB
+              - generic [ref=e97]: Images
+          - listitem [ref=e98]:
+            - link "Forums" [ref=e99] [cursor=pointer]:
+              - /url: /search?sca_esv=2eb1beb0bd5e5e34&udm=18&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&q=Australia+news+today&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQs6gLegQIEhAB
+              - generic [ref=e101]: Forums
+          - listitem [ref=e102]:
+            - link "Short videos" [ref=e103] [cursor=pointer]:
+              - /url: /search?sca_esv=2eb1beb0bd5e5e34&udm=39&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&q=Australia+news+today&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQs6gLegQIERAB
+              - generic [ref=e105]: Short videos
+          - listitem [ref=e106]:
+            - button "More filters" [ref=e107] [cursor=pointer]:
+              - generic "More filters" [ref=e108]:
+                - generic [ref=e109]:
+                  - generic [ref=e110]: More
+                  - img [ref=e112]
+        - button "Tools" [ref=e115] [cursor=pointer]:
+          - generic [ref=e117]:
+            - generic [ref=e118]: Tools
+            - img [ref=e120]
+    - heading "Search Results" [level=1] [ref=e122]
+    - main [ref=e128]:
+      - generic [ref=e132]:
+        - generic [ref=e134]:
+          - generic [ref=e144]:
+            - heading "See results about" [level=2] [ref=e148]
+            - link "Australia Country in Oceania" [ref=e151] [cursor=pointer]:
+              - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Australia&si=AL3DRZEAa7u8XhP5vP-1m6UQt14xsAfuF5E6rfzcg_fwiVNW8eO8Uka_HRgsRKJ9b35FvbVPzulJ6XCJ1ekGnywM57ArvkdUCf-4eD_Gd5MBctBJwh_7_pfegPgcHqPk0_rXix_BMIB-K6tlAxKf0Ys1bpnTf8A-LqJboITEaxRInB4ocaZbC8IRRrXL3smyZcyPgLoagjXkQewH52rz1nfYHiq8QTVPYg%3D%3D&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ6RN6BAgWEAE
+              - generic [ref=e153]:
+                - generic [ref=e157]:
+                  - generic [ref=e158]: Australia
+                  - generic [ref=e159]: Country in Oceania
+                - img [ref=e162]
+          - generic [ref=e165]:
+            - generic [ref=e167]:
+              - heading "Top stories" [level=2] [ref=e169]:
+                - generic [ref=e171]: Top stories
+              - link "Sign in to customise" [ref=e173] [cursor=pointer]:
+                - /url: https://accounts.google.com/ServiceLogin?ec=oo-seaport-srp-sp-11135&continue=https://www.google.com/search?q%3DAustralia%2Bnews%2Btoday%26sca_esv%3D2eb1beb0bd5e5e34%26source%3Dhp%26ei%3DfiXLaZKxDfGZseMPyfeuyA4%26iflsig%3DAFdpzrgAAAAAacszjrMuv5e4s-ddw0gYTOMlzytrWPN2%26ved%3D0ahUKEwiS6OSmgMmTAxXxTGwGHcm7C-kQ4dUDCBY%26uact%3D5%26oq%3DAustralia%2Bnews%2Btoday%26gs_lp%3DEgdnd3Mtd2l6IhRBdXN0cmFsaWEgbmV3cyB0b2RheTILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgsQABiABBixAxiDATIFEAAYgARIjmhQAFgAcAB4AJABAJgBf6ABf6oBAzAuMbgBA8gBAPgBAZgCAaAChgGYAwCSBwMwLjGgB6oFsgcDMC4xuAeGAcIHAzItMcgHBIAIAQ%26sclient%3Dgws-wiz%26sei%3DoiXLae3TI9qVseMP19ydqQE%26ptid%3D11135%26ptt%3D8%26fpts%3D1774921123219
+                - generic [ref=e175]:
+                  - img [ref=e177]
+                  - text: Sign in to customise
+            - generic [ref=e179]:
+              - heading "Dezi Freeman, wanted for killing two officers, dies in police shooting" [level=2] [ref=e183]:
+                - link "Dezi Freeman, wanted for killing two officers, dies in police shooting" [ref=e184] [cursor=pointer]:
+                  - /url: https://www.google.com/search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&tbm=nws&story=GkgSRkRlemkgRnJlZW1hbiwgd2FudGVkIGZvciBraWxsaW5nIHR3byBvZmZpY2VycywgZGllcyBpbiBwb2xpY2Ugc2hvb3RpbmcyLwoloMzxp5fa2omMAbDP9vTCrrm7HKfXgofB2PvYCMjp2bKeuL24bBD2ofrmEBgFcgIQAQ&fcs=ABHuY3RAWx23qmpY6p7BT_qIezRkTQJHCg&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQjcEJegQIIRAD
+                  - generic [ref=e185]:
+                    - generic [ref=e186]: Dezi Freeman, wanted for killing two officers, dies in police shooting
+                    - img [ref=e188]
+              - generic [ref=e191]:
+                - link "News.com.au About this result Chilling hideout where Dezi met his end 21 hours ago" [ref=e194] [cursor=pointer]:
+                  - /url: https://www.news.com.au/national/victoria/news/fugitive-dezi-freeman-found-and-shot-dead-by-police/news-story/60056baee6cfcb48b66e920aaf5914bb
+                  - generic [ref=e199]:
+                    - generic [ref=e201]:
+                      - generic [ref=e204]: News.com.au
+                      - button "About this result" [ref=e207]:
+                        - img [ref=e208]
+                    - heading "Chilling hideout where Dezi met his end" [level=4] [ref=e210]
+                    - generic [ref=e211]: 21 hours ago
+                - generic [ref=e213]:
+                  - link "Australian Broadcasting Corporation About this result What led to Dezi Freeman's shootout with police that killed two 22 hours ago" [ref=e216] [cursor=pointer]:
+                    - /url: https://www.abc.net.au/news/2026-03-30/dezi-freeman-timeline-key-people-police-shooting-porepunkah/105856850
+                    - generic [ref=e221]:
+                      - generic [ref=e223]:
+                        - generic [ref=e225]: Australian Broadcasting Corporation
+                        - button "About this result" [ref=e228]:
+                          - img [ref=e229]
+                      - heading "What led to Dezi Freeman's shootout with police that killed two" [level=4] [ref=e231]
+                      - generic [ref=e232]: 22 hours ago
+                  - link "The Guardian About this result Fugitive emerged from building holding weapon before being shot dead, commissioner says – as it happened 18 hours ago" [ref=e236] [cursor=pointer]:
+                    - /url: https://www.theguardian.com/australia-news/live/2026/mar/30/dezi-freeman-update-news-shot-dead-by-police-australia-fugitive-victoria-porepunkah-shooting-live-updates-latest-ntwnfb
+                    - generic [ref=e241]:
+                      - generic [ref=e243]:
+                        - generic [ref=e246]: The Guardian
+                        - button "About this result" [ref=e249]:
+                          - img [ref=e250]
+                      - heading "Fugitive emerged from building holding weapon before being shot dead, commissioner says – as it happened" [level=4] [ref=e252]
+                      - generic [ref=e253]: 18 hours ago
+            - generic [ref=e254]:
+              - heading "Australia to halve fuel tax amid high prices" [level=2] [ref=e258]:
+                - link "Australia to halve fuel tax amid high prices" [ref=e259] [cursor=pointer]:
+                  - /url: https://www.google.com/search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&tbm=nws&story=Gi4SLEF1c3RyYWxpYSB0byBoYWx2ZSBmdWVsIHRheCBhbWlkIGhpZ2ggcHJpY2VzMjAKJsHRpMevoqPvB9HEiJbln-HN_gH53tG02aSspjqZjZaZzqSzr4QBEOzMudcQGAVyAhAB&fcs=ABHuY3SX_UrAGftSelygbwxJgEtDxZn0lA&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQjcEJegQIIxAD
+                  - generic [ref=e260]:
+                    - generic [ref=e261]: Australia to halve fuel tax amid high prices
+                    - img [ref=e263]
+              - generic [ref=e266]:
+                - link "9News About this result As fuel excise set to be halved, when will fuel prices in Australia go down? 5 hours ago" [ref=e269] [cursor=pointer]:
+                  - /url: https://www.9news.com.au/national/fuel-shortage-australia-when-will-petrol-prices-go-down-explained/79bd42b8-cb81-4def-abf3-d4f6fec80680
+                  - generic [ref=e274]:
+                    - generic [ref=e276]:
+                      - generic [ref=e279]: 9News
+                      - button "About this result" [ref=e282]:
+                        - img [ref=e283]
+                    - heading "As fuel excise set to be halved, when will fuel prices in Australia go down?" [level=4] [ref=e285]
+                    - generic [ref=e286]: 5 hours ago
+                - link "BBC About this result Fuel tax halved and free public transport offered as war pushes up prices in Australia 20 hours ago" [ref=e290] [cursor=pointer]:
+                  - /url: https://www.bbc.com/news/articles/c937n0yxggeo
+                  - generic [ref=e295]:
+                    - generic [ref=e297]:
+                      - generic [ref=e300]: BBC
+                      - button "About this result" [ref=e303]:
+                        - img [ref=e304]
+                    - heading "Fuel tax halved and free public transport offered as war pushes up prices in Australia" [level=4] [ref=e306]
+                    - generic [ref=e307]: 20 hours ago
+            - generic [ref=e308]:
+              - heading "Also in the news" [level=2] [ref=e312]:
+                - generic [ref=e314]: Also in the news
+              - generic [ref=e316]:
+                - link "News.com.au About this result ‘Horror’ flu surge sparks urgent call 25 minutes ago" [ref=e319] [cursor=pointer]:
+                  - /url: https://www.news.com.au/lifestyle/health/health-problems/flu-deaths-exceed-covid19-in-late-2025-doctors-push-early-vaccines/news-story/c6b0d5bab833681a3ffc2b2d315dbdbe
+                  - generic [ref=e324]:
+                    - generic [ref=e326]:
+                      - generic [ref=e329]: News.com.au
+                      - button "About this result" [ref=e332]:
+                        - img [ref=e333]
+                    - heading "‘Horror’ flu surge sparks urgent call" [level=4] [ref=e335]
+                    - generic [ref=e336]: 25 minutes ago
+                - link "Australian Broadcasting Corporation About this result Telstra claims new coverage maps will 'make it much harder' for customers 17 minutes ago" [ref=e340] [cursor=pointer]:
+                  - /url: https://www.abc.net.au/news/2026-03-31/telstra-defends-coverage-maps-following-acma-new-rules/106515274
+                  - generic [ref=e345]:
+                    - generic [ref=e347]:
+                      - generic [ref=e349]: Australian Broadcasting Corporation
+                      - button "About this result" [ref=e352]:
+                        - img [ref=e353]
+                    - heading "Telstra claims new coverage maps will 'make it much harder' for customers" [level=4] [ref=e355]
+                    - generic [ref=e356]: 17 minutes ago
+            - link "More news" [ref=e358] [cursor=pointer]:
+              - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Australia+news+today&tbm=nws&source=univ&tbo=u&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQt8YBKAJ6BAggEAU
+              - separator [ref=e359]
+              - generic [ref=e360]:
+                - generic [ref=e361]: More news
+                - img [ref=e363]
+        - generic [ref=e367]:
+          - heading "Web results" [level=2] [ref=e368]
+          - generic [ref=e369]:
+            - generic [ref=e372]:
+              - link "ABC News & Headlines – Australian Broadcasting Corporation Australian Broadcasting Corporation https://www.abc.net.au" [ref=e374] [cursor=pointer]:
+                - /url: https://www.abc.net.au/
+                - heading "ABC News & Headlines – Australian Broadcasting Corporation" [level=3] [ref=e375]
+                - generic [ref=e380]:
+                  - generic [ref=e382]: Australian Broadcasting Corporation
+                  - generic [ref=e384]: https://www.abc.net.au
+              - button "About this result" [ref=e385] [cursor=pointer]:
+                - img [ref=e388]
+            - generic [ref=e391]:
+              - generic [ref=e392]:
+                - generic [ref=e393]: 3 hours ago
+                - text: —
+              - generic [ref=e394]:
+                - text: Follow the latest headlines from
+                - emphasis [ref=e395]: ABC News
+                - text: ", Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster."
+        - generic [ref=e399]:
+          - generic [ref=e402]:
+            - link "9News - Latest news and headlines from Australia and the world 9News https://www.9news.com.au" [ref=e404] [cursor=pointer]:
+              - /url: https://www.9news.com.au/
+              - heading "9News - Latest news and headlines from Australia and the world" [level=3] [ref=e405]
+              - generic [ref=e410]:
+                - generic [ref=e412]: 9News
+                - generic [ref=e414]: https://www.9news.com.au
+            - button "About this result" [ref=e415] [cursor=pointer]:
+              - img [ref=e418]
+          - generic [ref=e421]:
+            - generic [ref=e422]:
+              - generic [ref=e423]: 4 hours ago
+              - text: —
+            - generic [ref=e424]:
+              - emphasis [ref=e425]: An accused gunman on the run after two police officers were fatally shot
+              - text: and another was. Families of officers Dezi Freeman killed finally have answers ...
+            - link "Read more" [ref=e426] [cursor=pointer]:
+              - /url: https://www.9news.com.au/#:~:text=Families%20of%20officers%20Dezi%20Freeman,killed%20finally%20have%20answers
+        - generic [ref=e430]:
+          - generic [ref=e433]:
+            - link "news.com.au — Australia's leading news site for latest headlines News.com.au https://www.news.com.au" [ref=e435] [cursor=pointer]:
+              - /url: https://www.news.com.au/
+              - heading "news.com.au — Australia's leading news site for latest headlines" [level=3] [ref=e436]
+              - generic [ref=e441]:
+                - generic [ref=e443]: News.com.au
+                - generic [ref=e445]: https://www.news.com.au
+            - button "About this result" [ref=e446] [cursor=pointer]:
+              - img [ref=e449]
+          - generic [ref=e452]:
+            - generic [ref=e453]:
+              - generic [ref=e454]: 3 hours ago
+              - text: —
+            - generic [ref=e455]:
+              - emphasis [ref=e456]: Read the latest headlines
+              - text: covering sports, entertainment, finance, politics and national breaking news. Be on it with Australia's leading news site.
+        - generic [ref=e460]:
+          - generic [ref=e463]:
+            - link "The Australian | Latest Australian News Headlines and World ... The Australian https://www.theaustralian.com.au" [ref=e465] [cursor=pointer]:
+              - /url: https://www.theaustralian.com.au/
+              - heading "The Australian | Latest Australian News Headlines and World ..." [level=3] [ref=e466]
+              - generic [ref=e471]:
+                - generic [ref=e473]: The Australian
+                - generic [ref=e475]: https://www.theaustralian.com.au
+            - button "About this result" [ref=e476] [cursor=pointer]:
+              - img [ref=e479]
+          - generic [ref=e482]:
+            - generic [ref=e483]:
+              - generic [ref=e484]: 1 hour ago
+              - text: —
+            - generic [ref=e485]:
+              - text: A 70s ghost is back – and it could crash our economy.
+              - emphasis [ref=e486]: Stagflation now looms over suburban Australia
+              - text: ", yet there is a question almost no one in government or the ..."
+            - link "Read more" [ref=e487] [cursor=pointer]:
+              - /url: https://www.theaustralian.com.au/#:~:text=A%2070s%20ghost%20is%20back,bureaucracy%20seems%20willing%20to%20ask.
+        - generic [ref=e491]:
+          - generic [ref=e492]:
+            - heading "People also ask" [level=2] [ref=e493]
+            - button "About this result" [ref=e494] [cursor=pointer]:
+              - img [ref=e497]
+          - generic [ref=e499]:
+            - button "What are the top 10 news headlines of today?" [ref=e505] [cursor=pointer]:
+              - generic [ref=e507]: What are the top 10 news headlines of today?
+              - img [ref=e510]
+            - button "How do you say \"hi\" in Australian?" [ref=e519] [cursor=pointer]:
+              - generic [ref=e521]: How do you say "hi" in Australian?
+              - img [ref=e524]
+            - button "Why are people protesting in Australia?" [ref=e533] [cursor=pointer]:
+              - generic [ref=e535]: Why are people protesting in Australia?
+              - img [ref=e538]
+            - button "Are Indians increasing in Australia?" [ref=e547] [cursor=pointer]:
+              - generic [ref=e549]: Are Indians increasing in Australia?
+              - img [ref=e552]
+        - generic [ref=e558]:
+          - generic [ref=e560]:
+            - heading "Videos" [level=2] [ref=e561]
+            - button "About this result" [ref=e562] [cursor=pointer]:
+              - img [ref=e565]
+          - generic [ref=e568]:
+            - generic [ref=e574]:
+              - generic [ref=e575]:
+                - link "Relief at the petrol pump for Aussie drivers | 9 News Australia YouTube 9 News Australia 5 hours ago" [ref=e577] [cursor=pointer]:
+                  - /url: https://www.youtube.com/watch?v=QhkkC3-lGsk
+                  - heading "Relief at the petrol pump for Aussie drivers | 9 News Australia YouTube 9 News Australia 5 hours ago" [level=3] [ref=e578]:
+                    - generic [ref=e581]: Relief at the petrol pump for Aussie drivers | 9 News Australia
+                    - generic [ref=e583]:
+                      - generic [ref=e584]:
+                        - text: YouTube
+                        - generic [ref=e585]: · 9 News Australia
+                      - generic [ref=e586]: 5 hours ago
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - text: YouTube
+                          - generic: · 9 News Australia
+                    - button "About this result" [ref=e587] [cursor=pointer]:
+                      - img [ref=e590]
+              - button "Relief at the petrol pump for Aussie drivers | 9 News Australia by 9 News Australia on YouTube. Play on Google. 5:25" [ref=e592] [cursor=pointer]:
+                - generic [ref=e593]:
+                  - img [ref=e596]
+                  - generic [ref=e599]:
+                    - generic [ref=e600]: 5:25
+                    - img [ref=e603]
+            - generic [ref=e610]:
+              - generic [ref=e611]:
+                - link "Trump makes fresh threat to Iran | 9 News Australia YouTube 9 News Australia 4 hours ago" [ref=e613] [cursor=pointer]:
+                  - /url: https://www.youtube.com/watch?v=EzVI8FH5cQc
+                  - heading "Trump makes fresh threat to Iran | 9 News Australia YouTube 9 News Australia 4 hours ago" [level=3] [ref=e614]:
+                    - generic [ref=e617]: Trump makes fresh threat to Iran | 9 News Australia
+                    - generic [ref=e619]:
+                      - generic [ref=e620]:
+                        - text: YouTube
+                        - generic [ref=e621]: · 9 News Australia
+                      - generic [ref=e622]: 4 hours ago
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - text: YouTube
+                          - generic: · 9 News Australia
+                    - button "About this result" [ref=e623] [cursor=pointer]:
+                      - img [ref=e626]
+              - button "Trump makes fresh threat to Iran | 9 News Australia by 9 News Australia on YouTube. Play on Google. 6:20" [ref=e628] [cursor=pointer]:
+                - generic [ref=e629]:
+                  - img [ref=e632]
+                  - generic [ref=e635]:
+                    - generic [ref=e636]: 6:20
+                    - img [ref=e639]
+            - generic [ref=e646]:
+              - generic [ref=e647]:
+                - link "Penny Wong discusses Aussie fuel excise | Today Show ... YouTube TODAY 4 hours ago" [ref=e649] [cursor=pointer]:
+                  - /url: https://www.youtube.com/watch?v=ywjU4ipGKJQ
+                  - heading "Penny Wong discusses Aussie fuel excise | Today Show ... YouTube TODAY 4 hours ago" [level=3] [ref=e650]:
+                    - generic [ref=e653]: Penny Wong discusses Aussie fuel excise | Today Show ...
+                    - generic [ref=e655]:
+                      - generic [ref=e656]:
+                        - text: YouTube
+                        - generic [ref=e657]: · TODAY
+                      - generic [ref=e658]: 4 hours ago
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - text: YouTube
+                          - generic: · TODAY
+                    - button "About this result" [ref=e659] [cursor=pointer]:
+                      - img [ref=e662]
+              - button "Penny Wong discusses Aussie fuel excise | Today Show ... by TODAY on YouTube. Play on Google. 5:05" [ref=e664] [cursor=pointer]:
+                - generic [ref=e665]:
+                  - img [ref=e668]
+                  - generic [ref=e671]:
+                    - generic [ref=e672]: 5:05
+                    - img [ref=e675]
+            - generic [ref=e681]:
+              - generic [ref=e682]:
+                - link "How Australia's seven-month-long manhunt came to an end BBC 1 day ago" [ref=e684] [cursor=pointer]:
+                  - /url: https://www.bbc.com/news/videos/cjw8vqnlzxvo
+                  - heading "How Australia's seven-month-long manhunt came to an end BBC 1 day ago" [level=3] [ref=e685]:
+                    - generic [ref=e688]: How Australia's seven-month-long manhunt came to an end
+                    - generic [ref=e690]:
+                      - generic [ref=e691]: BBC
+                      - generic [ref=e692]: 1 day ago
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: BBC
+                    - button "About this result" [ref=e693] [cursor=pointer]:
+                      - img [ref=e696]
+              - link "How Australia's seven-month-long manhunt came to an end on BBC. Play on BBC. 0:43" [ref=e698] [cursor=pointer]:
+                - /url: https://www.bbc.com/news/videos/cjw8vqnlzxvo
+                - generic [ref=e699]:
+                  - img [ref=e702]
+                  - generic [ref=e706]: 0:43
+          - link "View all videos" [ref=e709] [cursor=pointer]:
+            - /url: /search?sca_esv=2eb1beb0bd5e5e34&udm=7&q=Australia+news+today&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8ccDKAJ6BAhJEAQ
+            - separator [ref=e710]
+            - generic [ref=e711]:
+              - generic [ref=e712]: View all
+              - img [ref=e714]
+        - generic [ref=e718]:
+          - heading "Web results" [level=2] [ref=e719]
+          - generic [ref=e720]:
+            - generic [ref=e723]:
+              - link "Australian Breaking News Headlines & World News Online ... SMH.com.au https://www.smh.com.au" [ref=e725] [cursor=pointer]:
+                - /url: https://www.smh.com.au/
+                - heading "Australian Breaking News Headlines & World News Online ..." [level=3] [ref=e726]
+                - generic [ref=e731]:
+                  - generic [ref=e733]: SMH.com.au
+                  - generic [ref=e735]: https://www.smh.com.au
+              - button "About this result" [ref=e736] [cursor=pointer]:
+                - img [ref=e739]
+            - generic [ref=e742]:
+              - generic [ref=e743]:
+                - generic [ref=e744]: 2 hours ago
+                - text: —
+              - generic [ref=e745]:
+                - emphasis [ref=e746]: Breaking news from Sydney, Australia and the world
+                - text: . Features the latest business, sport, entertainment, travel, lifestyle, and technology news.
+        - generic [ref=e750]:
+          - generic [ref=e753]:
+            - link "9 News Australia YouTube · 9 News Australia 1.8M+ followers" [ref=e755] [cursor=pointer]:
+              - /url: https://www.youtube.com/@9NewsAUS
+              - heading "9 News Australia" [level=3] [ref=e756]
+              - generic [ref=e761]:
+                - generic [ref=e763]: YouTube · 9 News Australia
+                - generic [ref=e765]: 1.8M+ followers
+            - button "About this result" [ref=e766] [cursor=pointer]:
+              - img [ref=e769]
+          - generic [ref=e772]:
+            - generic [ref=e773]:
+              - text: New videos daily as news breaks in Australia. ·
+              - emphasis [ref=e774]: Army forms new dedicated group to safeguard coastal areas
+              - text: "| 9 News Australia · One Nation claims third South ..."
+            - link "Read more" [ref=e775] [cursor=pointer]:
+              - /url: https://www.youtube.com/@9NewsAUS#:~:text=New%20videos%20daily%20as%20news,breaks%20in%20Australia.&text=Army%20forms%20new%20dedicated%20group,areas%20%7C%209%20News%20Australia&text=One%20Nation%20claims%20third%20South,seat%20%7C%209%20News%20Australia
+        - generic [ref=e779]:
+          - generic [ref=e782]:
+            - link "Sky News Australia | Australian News Headlines & World ... Sky News Australia https://www.skynews.com.au" [ref=e784] [cursor=pointer]:
+              - /url: https://www.skynews.com.au/
+              - heading "Sky News Australia | Australian News Headlines & World ..." [level=3] [ref=e785]
+              - generic [ref=e790]:
+                - generic [ref=e792]: Sky News Australia
+                - generic [ref=e794]: https://www.skynews.com.au
+            - button "About this result" [ref=e795] [cursor=pointer]:
+              - img [ref=e798]
+          - generic [ref=e801]:
+            - generic [ref=e802]:
+              - generic [ref=e803]: 2 hours ago
+              - text: —
+            - generic [ref=e804]:
+              - emphasis [ref=e805]: Anthony Albanese halves the fuel excise for three months
+              - text: amid petrol shortages. Sky News host Sharri Markson details how Prime Minister Anthony Albanese today ...
+            - link "Read more" [ref=e806] [cursor=pointer]:
+              - /url: https://www.skynews.com.au/#:~:text=Anthony%20Albanese%20halves%20the%20fuel,three%20months%20amid%20petrol%20shortages
+        - generic [ref=e810]:
+          - generic [ref=e813]:
+            - link "Latest Australia news and comment The Guardian https://www.theguardian.com › australia-news" [ref=e815] [cursor=pointer]:
+              - /url: https://www.theguardian.com/australia-news
+              - heading "Latest Australia news and comment" [level=3] [ref=e816]
+              - generic [ref=e821]:
+                - generic [ref=e823]: The Guardian
+                - generic [ref=e825]: https://www.theguardian.com › australia-news
+            - button "About this result" [ref=e826] [cursor=pointer]:
+              - img [ref=e829]
+          - generic [ref=e832]:
+            - generic [ref=e833]:
+              - generic [ref=e834]: 4 hours ago
+              - text: —
+            - generic [ref=e835]:
+              - emphasis [ref=e836]: Australia news
+              - text: · Police at the isolated Murray River Road property near Thologolong where Dezi Freeman was shot dead · A man is seen using the 91-octane pump near ...
+            - link "Read more" [ref=e837] [cursor=pointer]:
+              - /url: https://www.theguardian.com/australia-news#:~:text=Australia%20news&text=Australia's%20most%20high%2Dprofile%20manhunt%20ended&text=Australians%20may%20not%20see%20cheaper
+        - region "Ads" [ref=e841]:
+          - generic [ref=e842]:
+            - heading "Sponsored result" [level=2] [ref=e848]
+            - generic [ref=e849]:
+              - generic [ref=e860]:
+                - generic [ref=e861]:
+                  - link "Breaking news headlines | Australia's Leading News Site News.com.au https://www.news.com.au › australian › news" [ref=e862] [cursor=pointer]:
+                    - /url: https://www.news.com.au/
+                    - heading "Breaking news headlines | Australia's Leading News Site" [level=3] [ref=e863]
+                    - generic [ref=e869]:
+                      - generic [ref=e871]: News.com.au
+                      - generic [ref=e872]: https://www.news.com.au › australian › news
+                  - button "Why this ad?" [ref=e875] [cursor=pointer]:
+                    - img [ref=e877]
+                - generic [ref=e882]:
+                  - text: Be on the latest
+                  - emphasis [ref=e883]: news
+                  - text: ", as it happens from"
+                  - emphasis [ref=e884]: Australia
+                  - text: and around the world. Bringing You The Latest
+                  - emphasis [ref=e885]: News
+                  - text: from
+                  - emphasis [ref=e886]: Australia
+                  - text: and around The World.
+                  - emphasis [ref=e887]: Australia's
+                  - text: "#1"
+                  - emphasis [ref=e888]: news
+                  - text: site. Latest
+                  - emphasis [ref=e889]: news
+                  - text: updates. 24/7
+                  - emphasis [ref=e890]: news
+                  - text: coverage. Global
+                  - emphasis [ref=e891]: news
+                  - text: updates.
+                - generic [ref=e893]:
+                  - text: ‎
+                  - link "Australia's Top Stories Today" [ref=e894] [cursor=pointer]:
+                    - /url: https://www.news.com.au/%7Bignore%7D?utm_source=Google&utm_medium=AOD&utm_campaign=RSA
+                  - text: · ‎
+                  - link "All the Latest News Headlines" [ref=e895] [cursor=pointer]:
+                    - /url: /aclk?sa=L&ai=DChsSEwiEn6q4gMmTAxWTqGYCHUQWM1UYACICCAIQAxoCc20&co=1&ase=2&gclid=EAIaIQobChMIhJ-quIDJkwMVk6hmAh1EFjNVEAMYASADEgIO9fD_BwE&cid=CAASugHkaHAbtZRxG6OBS3wz9Dn5g8gYwonQBYecvqNwqiuCvnOkpzr3ogoT81VkrzbDVIVhgqVb6Ix_8q_BK5N9h5JCu6AjcLg3w9P0JnPWXalztiQUgDk_xhil0aFZRQzNzt5UAwKBQMGYho_WGWpzXNxJGy3GW9jmhXKNLEDOg3tiiW_lhusyExlpcnmNkKXr3aRmETmwM275uTjTCzeSVL22S9B_aFdz460_xN5QHiRyB_zEvBJXex3Z7mo&cce=2&category=acrcp_v1_32&sig=AOD64_2p2X7eS7Hlxd10Z2P1WrBqFm658A&adurl=&q=
+                  - text: · ‎
+                  - link "Your ultimate news site" [ref=e896] [cursor=pointer]:
+                    - /url: https://www.news.com.au/national
+                - generic [ref=e901]: 1M+ visits in past month
+              - button "Hide sponsored result" [ref=e902] [cursor=pointer]:
+                - separator [ref=e903]
+                - generic [ref=e904]:
+                  - generic [ref=e905]: Hide sponsored result
+                  - img [ref=e907]
+      - generic [ref=e910]:
+        - generic [ref=e915]:
+          - heading "People also search for" [level=2] [ref=e917]
+          - generic [ref=e919]:
+            - generic [ref=e920]:
+              - link "Fuel news australia" [ref=e924] [cursor=pointer]:
+                - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Fuel+news+australia&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ1QJ6BAguEAE
+                - generic [ref=e925]:
+                  - generic [ref=e928]:
+                    - generic [ref=e930]: Fuel news australia
+                    - img [ref=e933]
+                  - img [ref=e938]
+              - link "Breaking news just in" [ref=e943] [cursor=pointer]:
+                - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Breaking+news+just+in&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ1QJ6BAhEEAE
+                - generic [ref=e944]:
+                  - generic [ref=e949]: Breaking news just in
+                  - img [ref=e953]
+              - link "Australia news today live" [ref=e958] [cursor=pointer]:
+                - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Australia+news+today+live&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ1QJ6BAhBEAE
+                - generic [ref=e959]:
+                  - generic [ref=e964]: Australia news today live
+                  - img [ref=e968]
+              - link "Australia news today immigration" [ref=e973] [cursor=pointer]:
+                - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Australia+news+today+immigration&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ1QJ6BAg-EAE
+                - generic [ref=e974]:
+                  - generic [ref=e979]: Australia news today immigration
+                  - img [ref=e983]
+            - generic [ref=e985]:
+              - link "What is happening in Australia today" [ref=e989] [cursor=pointer]:
+                - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=What+is+happening+in+Australia+today&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ1QJ6BAg9EAE
+                - generic [ref=e990]:
+                  - generic [ref=e995]: What is happening in Australia today
+                  - img [ref=e999]
+              - link "Nine news" [ref=e1004] [cursor=pointer]:
+                - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Nine+news&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ1QJ6BAg7EAE
+                - generic [ref=e1005]:
+                  - generic [ref=e1010]: Nine news
+                  - img [ref=e1014]
+              - link "Sky News Australia" [ref=e1019] [cursor=pointer]:
+                - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Sky+News+Australia&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ1QJ6BAgzEAE
+                - generic [ref=e1020]:
+                  - generic [ref=e1025]: Sky News Australia
+                  - img [ref=e1029]
+              - link "Daily Mail Australia" [ref=e1034] [cursor=pointer]:
+                - /url: /search?sca_esv=2eb1beb0bd5e5e34&q=Daily+Mail+Australia&sa=X&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ1QJ6BAgwEAE
+                - generic [ref=e1035]:
+                  - generic [ref=e1040]: Daily Mail Australia
+                  - img [ref=e1044]
+        - navigation [ref=e1046]:
+          - heading "Page navigation" [level=1] [ref=e1047]
+          - text: "1"
+          - link "Page 2" [ref=e1050] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=10&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAE
+            - text: "2"
+          - link "Page 3" [ref=e1052] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=20&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAG
+            - text: "3"
+          - link "Page 4" [ref=e1054] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=30&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAI
+            - text: "4"
+          - link "Page 5" [ref=e1056] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=40&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAK
+            - text: "5"
+          - link "Page 6" [ref=e1058] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=50&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAM
+            - text: "6"
+          - link "Page 7" [ref=e1060] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=60&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAO
+            - text: "7"
+          - link "Page 8" [ref=e1062] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=70&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAQ
+            - text: "8"
+          - link "Page 9" [ref=e1064] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=80&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAS
+            - text: "9"
+          - link "Page 10" [ref=e1066] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=90&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8tMDegQICRAU
+            - text: "10"
+          - heading "Next" [level=2] [ref=e1068]:
+            - link "Next" [ref=e1069] [cursor=pointer]:
+              - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&ei=oiXLaYulOLuNseMPgeO50Qg&start=10&sa=N&sstk=Af77f_fJM-ciR21u_7qlXXM-75EO5-rokAygbb4yympDiPTiQOq8O-ofUxvKgzt1t3ErYY9NT-aJFD7PsAWgpN8b34ySlr6rPe0NUQ&ved=2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ8NMDegQICRAW
+              - generic [ref=e1071]: Next
+      - navigation
+    - contentinfo [ref=e1073]:
+      - heading "Footer links" [level=1] [ref=e1074]
+      - generic [ref=e1078]:
+        - generic [ref=e1080]:
+          - text: Australia
+          - generic [ref=e1082]:
+            - button "5006, North Adelaide SA - From your IP address" [ref=e1084] [cursor=pointer]:
+              - generic [ref=e1085]: 5006, North Adelaide SA
+              - generic [ref=e1087]:
+                - text: "-"
+                - generic [ref=e1088]: From your IP address
+            - text: "-"
+            - button "Update location" [ref=e1090] [cursor=pointer]: Update location
+        - generic [ref=e1093]:
+          - link "Help" [ref=e1094] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=en-AU&fg=1
+          - link "Send feedback" [ref=e1095] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy" [ref=e1096] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en-AU&fg=1
+          - link "Terms" [ref=e1097] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en-AU&fg=1

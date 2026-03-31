@@ -53,19 +53,19 @@ Before generating any content, guide the user through exactly 5 questions to cla
 *(What specific China sourcing challenge are your ideal LinkedIn post readers dealing with right now?)*
 [Context: This identifies the core pain point — e.g., factory verification, quality control, communication barriers, minimum order quantities. Reference WAG business model: new brand companies cannot find source factories, cannot trust if factories are real]
 
-**Question 2 — Pain Point Clarification:**
-"关于这个挑战，你听到过哪些最常见的误解？"
-*(What's the most common misconception about this challenge that you've encountered?)*
-[Context: This surfaces the fear or myth to debunk — e.g., "all Chinese factories are the same," "websites prove legitimacy," "the cheapest option is most efficient," "a professional-looking factory in Australia is proof of Chinese manufacturing capability"]
+**Question 2 — Content Structure:**
+"这个问题适合用什么结构来表达——步骤框架（1-2-3步）、案例分析、还是揭露误区？"
+*(What structure works best for this topic — step framework, case study, or myth-busting?)*
+[Context: Based on WAG data, step frameworks (3 steps) outperform all other formats. Prioritize "before doing X, check these 3 things" structure.]
 
-**Question 3 — Post Tone:**
-"你希望这篇文章起到什么作用——教育（建立认知）、挑战（引发讨论）还是激励（展示可能性）？"
-*(Do you want this post to educate, challenge, or inspire?)*
-[Context: Guides the emotional register — educate for awareness, challenge for engagement, inspire for aspiration]
+**Question 3 — War Story:**
+"你自己或客户有没有经历过这个问题的真实案例？"
+*(Do you have a real story from yourself or a client who experienced this problem?)*
+[Context: Real stories drive engagement. If user has a story, lead with it. If not, create a composite scenario based on WAG experience.]
 
-**Question 4 — CTA Direction:**
-"读者读完文章后应该做什么——在评论区分享经验、联系咨询，还是改变对这个话题的看法？"
-*(What should readers do after reading — share their experience in comments, reach out for a consultation, or think differently?)*
+**Question 4 — CTA Design:**
+"读者读完文章后，你希望他们做什么——分享类似经历、联系咨询、还是转发给有需要的人？"
+*(What do you want readers to do after reading — share their experience, reach out for consultation, or forward to someone who needs this?)*
 
 **Question 5 — Posting Perspective:**
 "这篇文章是以公司主页还是个人账号发布？"
@@ -95,28 +95,167 @@ After gathering the user's answers, retrieve relevant WAG content before generat
 
 **Important:** Always invoke RAG to retrieve at least 1 WAG blog post before generating. This ensures the post references specific WAG expertise rather than generic content.
 
-## LinkedIn Post Template
+## LinkedIn Post Templates
+
+### Template A: Step-By-Step Framework (ER=33.33%, Highest Performance)
 
 ```
-[HOOK - max 210 characters, bold statement or question that creates curiosity]
-
-[BREAK - line gap]
-
-[BODY - 3-5 short paragraphs]
-- Paragraph 1: Context (1-2 sentences establishing the situation)
-- Paragraph 2-4: Core insight with specific WAG-relevant examples/data
-- Paragraph 5: Transition to CTA
+[HOOK - max 210 characters]
+Formula: "Before [action], verify [N] things: [promise]"
+Example: "Before paying any deposit for your China order, verify three things: factory, not trading company."
 
 [BREAK]
 
-[CTA - soft question that drives comments]
-"What would you do differently? Share in comments."
-OR
-"How has this affected your sourcing strategy? Let's discuss."
+[BODY - 3 numbered steps]
 
-[HASHTAGS - exactly 6-10 strategic tags]
-#ChinaSourcing #AustralianBusiness #Manufacturing #etc
+Step 1 — [Tool/Method name, specific action]
+[One sentence explaining why this matters]
+
+Step 2 — [Tool/Method name, specific action]
+[One sentence explaining the consequence of skipping]
+
+Step 3 — [Tool/Method name, specific action]
+[One sentence about Australian legal responsibility]
+
+[BREAK]
+
+[CTA - specific yes/no with reasoning]
+"Did you know gsxt.gov.cn is free for anyone to verify a Chinese business license? Were you ever asked to check one before placing an order?"
+
+[HASHTAGS - 6-10 tags, mix broad + niche]
+#ChinaSourcing #FactoryVerification #AustraliaChina #SupplyChain #ImportFromChina #AustralianBusiness
 ```
+
+### Template B: Document Carousel (Best Format for 2026 Algorithm)
+
+For carousel posts, use this structure:
+```
+Slide 1 (Title): [Problem statement - curiosity hook]
+Slide 2: [Context - why this matters for Australian businesses]
+Slide 3: [Step 1 with specific tool/website]
+Slide 4: [Step 2 with specific tool/website]
+Slide 5: [Step 3 with specific tool/website]
+Slide 6 (CTA): [Question that invites comments]
+```
+
+**Carousel tip:** LinkedIn's 2026 algorithm gives Document Carousels 6.6% average engagement vs 4% for text-only posts.
+
+### Template C: Story → Lesson → Framework
+
+```
+[HOOK - 210 chars max]
+"A client paid a $12,000 deposit to a supplier in March. By April, the factory had vanished."
+
+[BREAK]
+
+[STORY - 2-3 short paragraphs]
+Paragraph 1: What happened (specific details — amounts, platform, timeline)
+Paragraph 2: What went wrong (the verification step that was skipped)
+Paragraph 3: What we did (how WAG would have prevented this)
+
+[BREAK]
+
+[FRAMEWORK - the 3 things to check]
+Before paying any deposit, verify:
+1. [Check on gsxt.gov.cn — business license shows "manufacturing"]
+2. [Live video of production lines during working hours]
+3. [Certification verified directly with issuing body]
+
+[BREAK]
+
+[CTA - experience trigger]
+"What verification step would you add to this list? I read every comment."
+
+[HASHTAGS]
+```
+
+---
+
+## Content Format Decision Tree
+
+Before generating, determine format based on topic:
+
+| Topic Type | Recommended Format | Why |
+|------------|-------------------|-----|
+| Factory verification how-to | Template A (Steps) | Data-proven ER=33% |
+| Warning/myth-busting | Template C (Story+Framework) | Story creates emotional hook |
+| Process explanation | Document Carousel | Highest algorithm preference |
+| Brand introduction | Text-only post | Simple, authentic |
+| Industry data/statistics | Carousel or graphic | Visual breaks up numbers |
+
+**Format priority for WAG topics:** Steps > Story+Framework > Carousel > Text > Brand Intro
+
+### CTA Frameworks (Data-Proven to Drive Comments)
+
+**CRITICAL:** WAG's historical CTA "What would you do differently? Share in comments." generated **0 comments** across all 3 posts. Replace with specific, experience-based questions.
+
+| CTA Framework | Example | Why It Works |
+|---------------|---------|--------------|
+| **War story request** | "Has a supplier ever failed this step for you? What happened?" | Personal storytelling triggers empathy + comments |
+| **Specific yes/no with reasoning** | "Did you know gsxt.gov.cn was free to use? Were you ever asked to verify a license?" | Binary question with nuance invitation |
+| **Complete the sentence** | "The biggest mistake I see Australian brands make when verifying factories is..." | Positions reader as expert, invites correction/addition |
+| **Industry-specific** | "For those in [AV/event/automotive]: what's your factory verification process?" | Creates tribe affinity, more likely to respond |
+| **反面教材 request** | "What's the most costly lesson you've learned about supplier verification?" | People share mistakes readily; creates trust |
+
+**DO NOT use:**
+- "What would you do differently?" — too abstract, 0 comments historically
+- "Share in comments" alone — passive, no trigger
+- "Let's discuss" — vague, no specific angle
+
+**Post first-comment-on-LinkedIn rule:** After posting, FIRST comment should be the answer to your own CTA question — this seeds the conversation and makes comment section look active.
+
+### Hook Formulas (Ranked by WAG Data Performance)
+
+| Rank | Hook Formula | Example | ER | CTR |
+|------|-------------|---------|-----|-----|
+| 1 | "Before [action], verify [N] things..." | "Before paying any deposit, verify three things..." | 33.33% | 20.83% |
+| 2 | "Step 1/2/3 — [specific action]" | "Step 1 — Check the business license on gsxt.gov.cn" | 33.33% | 20.83% |
+| 3 | "When you [situation], one fact matters most" | "When you source from China as a new Australian brand, one fact matters most..." | 33.33% | 20.83% |
+| 4 | "Hi everyone, let us introduce..." | Intro posts | 9.09% | 2.27% |
+| 5 | "[Observation] too late" | "Most Australian businesses discover this truth too late" | 7.02% | 1.75% |
+
+**Recommendation:** Lead with numbered frameworks. The "3 steps" structure consistently outperformed all other approaches.
+
+## WAG LinkedIn Performance Data (2026-03)
+
+**Source:** LinkedIn Analytics export (03/04 - 03/23/2026), 3 organic posts
+
+| Metric | Value |
+|--------|-------|
+| Total Impressions | 125 |
+| Total Clicks | 7 |
+| Total Likes | 9 |
+| **Total Comments** | **0** |
+| **Total Reposts** | **0** |
+| Avg ER | 16.48% |
+| Comment Rate | **0.00%** |
+
+### Post Performance Ranking
+
+| Rank | Content Type | Hook Style | Impressions | ER | CTR |
+|------|-------------|------------|-------------|-----|------|
+| 1 | Educational/How-to | 3-step framework | 24 | **33.33%** | **20.83%** |
+| 2 | Brand Intro | "Hi everyone" | 44 | 9.09% | 2.27% |
+| 3 | Awareness/Reveal | "Truth too late" | 57 | 7.02% | 1.75% |
+
+### Key Performance Insights
+
+1. **Higher impressions do NOT mean higher engagement.** The post with most impressions (57) had worst ER (7.02%) and lowest CTR (1.75%). The post with fewest impressions (24) had best ER (33.33%) and highest CTR (20.83%).
+
+2. **Step-by-step framework content wins.** The 3-step verification framework post (33.33% ER) outperformed the "truth too late" post (7.02% ER) by 4.7x in engagement rate.
+
+3. **ZERO comments is the #1 problem.** All 3 posts generated 0 comments despite 125 total impressions. The CTA questions are not driving discussion.
+
+4. **CTAs must be specific and experience-based** to drive comments, not generic questions.
+
+### Content Type Preference (Based on Data)
+
+| Do This | Avoid This |
+|---------|------------|
+| Step-by-step frameworks (3 steps, numbered lists) | "Truth too late" / "You didn't know..." awakening posts |
+| Specific tactical advice (what to check, how to verify) | Generic warnings without actionable content |
+| Pain point + solution promise | Provocative statements without follow-through |
+| Hook with clear structure: "3 things to check before..." | Hooks with suspense only: "What nobody told you..." |
 
 ## 2026 LinkedIn Algorithm Context
 
@@ -129,54 +268,23 @@ OR
 - Best posting time (Australia audience): Tuesday-Thursday, 9-11 AM AEDT
 - First 60 minutes after posting: must be online to respond to comments (algorithm boost window)
 
-**Optimal hook strategies for 2026:**
-- Counterintuitive + specific numbers: "We audited 23 factories for Australian clients in 12 months. Here is what we found."
-- Loss framing: "My LinkedIn reach dropped 60%. Then I changed one thing."
-- Pain point + promise: "Most Australian businesses overpay on China sourcing because they skip this one step."
-- Specific scenario + suspense: "We spent $47K testing every LinkedIn strategy. Here is what actually worked."
+**Optimal hook strategies (data-proven for WAG):**
+- Framework/Steps: "Before paying any deposit, verify three things..." (ER=33.33%, CTR=20.83%)
+- Specific scenario + consequence: "When you source from China as a new Australian brand, one fact matters most..."
+- Tactical how-to: "Step 1 — Check the business license on gsxt.gov.cn..."
 
 ## Fact Check Procedure
 
-After generating the LinkedIn post, perform a deep fact check using parallel research agents before presenting to the user.
+After generating the LinkedIn post, verify claims against WAG's existing blog content and, if needed, use web search for real-time data.
 
-**Requirement: Deploy at least 5 parallel research agents for cross-validation.**
+**Simplified Protocol:**
 
-### Research Agent Protocol
+1. **Check WAG blog content first** — RAG-retrieved content is pre-verified
+2. **For new claims**, use `mcp__MiniMax__web_search` to verify
+3. **Flag any claim** that cannot be verified with: "[Claim] — unverified, remove or rephrase"
+4. **Present verification status** to user before final approval
 
-1. **Deploy 5+ research agents in parallel**, each focusing on a different verification angle:
-
-   | Agent | Focus |
-   |-------|-------|
-   | Agent 1 | Platform supplier verification (1688, Alibaba - trading company vs factory) |
-   | Agent 2 | LinkedIn B2B content engagement metrics and algorithm signals |
-   | Agent 3 | Australia-China sourcing statistics and challenges 2025-2026 |
-   | Agent 4 | Factory verification methods and business license verification in China |
-   | Agent 5 | LinkedIn post optimal length, hook strategies, comment-driven engagement |
-
-2. **Each agent must:**
-   - Use `mcp__MiniMax__web_search` for real-time data
-   - Search at least 3 different sources per claim
-   - Cross-validate against multiple authoritative sources
-   - Return findings with source URLs
-
-3. **Merge findings** into a unified fact check table:
-
-   ```
-   | Claim | Agent 1 | Agent 2 | Agent 3 | Status | Confidence |
-   |-------|---------|---------|---------|--------|------------|
-   ```
-
-4. **Apply cross-validation rules:**
-   - **High Confidence** — Confirmed by 3+ agents across different source types
-   - **Medium Confidence** — Confirmed by 2 agents, or single authoritative source
-   - **Low Confidence** — Single source, or conflicting findings
-   - **Disputed** — Agents return contradictory information
-
-5. **Present to user** with clear confidence levels and source attribution
-
-6. **Update the post** — remove or rephrase any Low Confidence or Disputed claims before final approval
-
-**Note:** Do not skip parallel research. A single web search is insufficient for professional credibility. Cross-validation is mandatory.
+**Do not use generic industry statistics** unless they can be cited from a named source. LinkedIn audiences in B2B respond to specificity, not vague claims.
 
 ## LinkedIn Post → Blog Article Workflow
 
@@ -268,6 +376,69 @@ Expand LinkedIn post (Hook→Body→CTA) into blog format:
 - [ ] `npm run build` passes
 - [ ] Article accessible at `/resources/{slug}` after deployment
 
+## Traffic Optimization Checklist
+
+Before publishing, verify each item:
+
+### Pre-Posting Checklist
+
+- [ ] **Hook within 210 characters** — Test with LinkedIn character counter. If hook is 211+, the algorithm never shows the full post.
+- [ ] **First 90 characters make sense standalone** — LinkedIn shows first ~3 lines before "see more". Does the hook work without reading the body?
+- [ ] **CTA is specific and experience-based** — Not "What would you do differently?" (0 comments). Use the CTA frameworks above.
+- [ ] **Hashtags: 6-10, mix broad + niche** — See hashtag matrix below
+- [ ] **No external links in post body** — -60% reach penalty. Put links in first comment.
+- [ ] **No emoji** — WAG brand rule
+- [ ] **Personal Profile recommended** — Personal profiles outperform company pages by 561% in organic reach
+
+### Hashtag Matrix for WAG Topics
+
+| Topic | Primary Hashtags | Secondary Hashtags |
+|-------|-----------------|-------------------|
+| Factory verification | #ChinaSourcing #FactoryVerification #SupplyChain | #ImportFromChina #AustraliaChinaTrade |
+| Quality control | #QualityControl #Manufacturing #QualityAssurance | #ChinaManufacturing #ProductSafety |
+| Brand intro | #AustralianBusiness #Adelaide #NewBusiness | #SmallBusinessAustralia #Entrepreneur |
+| Industry-specific | #[YourIndustry] #AudioVisual #Lighting #Events | #Automotive #AV #EventRentals |
+
+**Never use:** #WAG #WinningAdventureGlobal (too niche, zero search volume)
+
+### First Comment Template (Traffic Booster)
+
+**After posting, immediately add this as first comment:**
+
+```
+[For verification topics:]
+"In our experience working with Australian brands across AV, lighting, and automotive — Step 2 is where most companies cut corners. Has a supplier ever failed one of these checks for you?"
+
+[For brand intro topics:]
+"We help Australian SMEs build direct relationships with Chinese factories — without the risk of going in blind. Questions about sourcing from China? Ask below."
+```
+
+**Why this works:** LinkedIn's algorithm boosts posts with early comments. Answering your own CTA question first seeds the conversation and signals engagement intent.
+
+### Posting Schedule (Australia AEDT)
+
+| Day | Time | Quality |
+|-----|------|---------|
+| Tuesday | 9-11 AM AEDT | Best |
+| Wednesday | 9-11 AM AEDT | Good |
+| Thursday | 9-11 AM AEDT | Good |
+| Monday | Any | Avoid |
+| Friday | Any | Avoid |
+| Weekend | Any | Avoid |
+
+**After posting:** Stay online for 60 minutes. Respond to every comment within this window. LinkedIn's algorithm gives a 4x boost to posts with engagement in the first hour.
+
+### Personal Profile vs Company Page
+
+| Factor | Personal Profile | Company Page |
+|--------|-----------------|--------------|
+| Algorithm reach | 561% higher | Baseline |
+| Trust signals | Founder credibility | Brand credibility |
+| Viral potential | Higher | Lower |
+| Content type | Personal stories, opinions | Educational, professional |
+
+**Recommendation:** Post from Personal Profile (Zhe He) for reach. Cross-post to Company Page for brand building. Never post to Company Page alone.
+
 ## WAG Brand Voice Guidelines
 
 **Reference:** CLAUDE.md brand personality — Reliable, Professional, Exclusive
@@ -278,19 +449,29 @@ Expand LinkedIn post (Hook→Body→CTA) into blog format:
 | Specific WAG insights from RAG | Generic B2B clichés |
 | Trust signals and credentials | Aggressive CTAs or urgency tactics |
 | Experienced, knowledgeable tone | Emoji or informal abbreviations |
+| **Step-by-step frameworks** (data-proven ER=33%) | **Awakening/ revelation posts** (data-proven ER=7%) |
 
 **Tone:** Professional but approachable. Position WAG as the knowledgeable guide, not the seller.
 
-**Voice:** Speak from experience. Use specific numbers, dates, or case references when available from RAG content.
+**Voice:** Speak from experience. Use specific numbers, dates, or case references when available from RAG content. WAG's best-performing post used a 3-step verification framework — emulate this structure.
+
+**Content Priority (based on WAG data):**
+1. How-to / Step-by-step frameworks (ER up to 33%)
+2. Case studies with specific examples (from RAG)
+3. Tactical advice with named tools (e.g., gsxt.gov.cn)
+4. Myth-busting (only if paired with actionable framework)
+5. Brand intro (lowest ER but needed for awareness)
 
 ## Critical Rules
 
 - **Hook MUST be within 210 characters** — LinkedIn truncates at the "see more" line (~3 lines / 210 chars). If the hook exceeds this, readers never see it.
 - **Hashtags: 6-10 maximum** — LinkedIn's algorithm penalizes spam signals from excessive hashtags. Mix broad (#Manufacturing) with specific (#AustraliaChinaTrade) tags.
-- **CTA: Soft question only** — Drive comments with engagement questions, not direct links or lead forms. LinkedIn's algorithm rewards comment activity.
+- **CTA: Experience-based questions only** — Generic CTAs ("What would you do differently?") generated ZERO comments in WAG data. Use war story requests, specific yes/no questions, or "complete the sentence" prompts.
+- **Seed the comment section** — After posting, add a FIRST comment answering your own CTA question. This starts the conversation and signals activity to LinkedIn's algorithm.
 - **No emoji anywhere in the post** — WAG brand rule. Emoji dilute professional positioning.
 - **Always invoke RAG before generating** — Retrieve at least 1 WAG blog post to source specific insights. Posts without WAG-specific content feel generic.
 - **Avoid "WA" abbreviation** — Use "Winning Adventure Global" or "WAG" as appropriate.
 - **Fact check required before publishing** — Verify all claims against WAG blog content or web search. Present fact check table to user for approval.
 - **Blog images go in public/social/** — MDX files cannot reference `../social/` paths. Always copy to `public/social/` for Next.js static serving.
 - **2026 Algorithm Rule: No external links in post body** — Put all links in the first comment. Links in post body receive -60% reach penalty.
+- **Posting cadence** — WAG data shows 3 posts in 20 days with gaps. Maintain consistent posting schedule (1-2x per week) to build algorithmic momentum.

@@ -16,7 +16,7 @@ Requirements for v3.0 release. Each maps to roadmap phases.
 
 - [ ] **GEO-03**: Article/BlogPosting Schema — 为全部10篇博客文章添加 Article schema
 - [ ] **GEO-04**: Organization sameAs — 添加 LinkedIn、YouTube 等社交链接
-- [ ] **GEO-05**: Andy Liu Person Schema 完善 — 添加 jobTitle、sameAs (LinkedIn)、knowsAbout
+- [x] **GEO-05**: Andy Liu Person Schema 完善 — 添加 jobTitle、sameAs (LinkedIn)、knowsAbout
 - [ ] **GEO-06**: BreadcrumbList Schema — 为所有页面添加面包屑导航 schema
 
 ### Content Citability

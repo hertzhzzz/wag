@@ -1,0 +1,217 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Skip to main content" [ref=e2] [cursor=pointer]
+      - link "Accessibility help" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=en-AU
+      - link "Accessibility feedback" [ref=e4] [cursor=pointer]
+  - generic [ref=e7]:
+    - search [ref=e8]:
+      - generic [ref=e10]:
+        - link "Go to Google Home" [ref=e12] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQPAgI
+          - img [ref=e13]
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - combobox "Search" [ref=e24]: Australia news today Australia news today
+            - generic [ref=e25]:
+              - button "Clear" [ref=e27] [cursor=pointer]:
+                - img [ref=e29]
+              - button "Search by voice" [ref=e33] [cursor=pointer]:
+                - img [ref=e34]
+          - button "Google Search" [ref=e36] [cursor=pointer]:
+            - img [ref=e39]
+    - generic [ref=e41]:
+      - button "Settings" [ref=e43] [cursor=pointer]:
+        - img [ref=e46]
+      - generic [ref=e49]:
+        - button "Google apps" [ref=e51] [cursor=pointer]:
+          - img [ref=e52]
+        - link "Sign in" [ref=e56] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/search%3Fsca_esv%3D2eb1beb0bd5e5e34%26q%3DAustralia%2Bnews%2Btoday%26tbm%3Dnws%26source%3Dlnms%26fbs%3DADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg%26sa%3DX%26ved%3D2ahUKEwiL_qS4gMmTAxW7RmwGHYFxLooQ0pQJegQIGBAB%26biw%3D960%26bih%3D963%26dpr%3D1&ec=futura_srp_og_si_72236_p
+  - generic [ref=e58]:
+    - navigation [ref=e64]:
+      - generic [ref=e68]:
+        - list [ref=e69]:
+          - listitem [ref=e70]:
+            - link "AI Mode" [ref=e73] [cursor=pointer]:
+              - /url: /search?q=Australia+news+today&sa=X&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&udm=50&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&aep=1&ntc=1&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ2J8OegQIAhAE
+              - generic [ref=e76]: AI Mode
+          - listitem [ref=e77]:
+            - link "All" [ref=e78] [cursor=pointer]:
+              - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&sa=X&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ0pQJegQIAhAG
+              - generic [ref=e80]: All
+          - listitem [ref=e81]:
+            - link "News" [disabled] [ref=e82]:
+              - generic [ref=e84]: News
+          - listitem [ref=e85]:
+            - link "Videos" [ref=e86] [cursor=pointer]:
+              - /url: /search?q=Australia+news+today&sa=X&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQtKgLegQIAhAK
+              - generic [ref=e88]: Videos
+          - listitem [ref=e89]:
+            - link "Images" [ref=e90] [cursor=pointer]:
+              - /url: /search?q=Australia+news+today&sa=X&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&udm=2&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQtKgLegQIAhAM
+              - generic [ref=e92]: Images
+          - listitem [ref=e93]:
+            - link "Forums" [ref=e94] [cursor=pointer]:
+              - /url: /search?q=Australia+news+today&sa=X&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&udm=18&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQs6gLegQIAhAO
+              - generic [ref=e96]: Forums
+          - listitem [ref=e97]:
+            - link "Short videos" [ref=e98] [cursor=pointer]:
+              - /url: /search?q=Australia+news+today&sa=X&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&udm=39&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKp0UJuhqwKhR0QUhF54-6jIX2xhuqmjuyJb8bmeAomNlFMB8Bu7AGJj-3abmVQJgPJqrptXapgTabjfhwkjknT7e4uPa0w5uPntMk4nzXlyV3Ks9cma_XbFHRlKZbM6HrQ0-w7vNCVKhxZPpcN-NACHVo37N2gQd9BgMMqgcT9hHcZr_Mc895s6auOoGHKJTdabiAgTg&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQs6gLegQIAhAQ
+              - generic [ref=e100]: Short videos
+          - listitem [ref=e101]:
+            - button "More filters" [ref=e102] [cursor=pointer]:
+              - generic "More filters" [ref=e103]:
+                - generic [ref=e104]:
+                  - generic [ref=e105]: More
+                  - img [ref=e107]
+        - button "Tools" [ref=e110] [cursor=pointer]:
+          - generic [ref=e112]:
+            - generic [ref=e113]: Tools
+            - img [ref=e115]
+    - heading "Search Results" [level=1] [ref=e117]
+    - navigation
+    - main [ref=e123]:
+      - generic [ref=e129]:
+        - link "Australian Broadcasting Corporation Israel backs down over holy site, Pope rebukes Hegseth, and what else you should know Donald Trump renews threats against Iran's energy infrastructure while his secretary of war faces an apparent rebuke from the pope. . 6 hours ago" [ref=e133] [cursor=pointer]:
+          - /url: https://www.abc.net.au/news/2026-03-31/iran-israel-war-daily-news-briefing/106502924
+          - generic [ref=e138]:
+            - generic [ref=e142]: Australian Broadcasting Corporation
+            - heading "Israel backs down over holy site, Pope rebukes Hegseth, and what else you should know" [level=3] [ref=e143]
+            - generic [ref=e144]: Donald Trump renews threats against Iran's energy infrastructure while his secretary of war faces an apparent rebuke from the pope.
+            - generic [ref=e145]: .
+            - generic [ref=e146]: 6 hours ago
+        - 'link "The Guardian Australian politics live: MP celebrates end to ‘rip off at the checkout’ as RBA moves to end credit card surcharges by October Labor MP Jerome Laxale has been leading the charge on ending surcharges for card transactions, which has now been removed by the Reserve... . 1 hour ago" [ref=e150] [cursor=pointer]':
+          - /url: https://www.theguardian.com/australia-news/live/2026/mar/31/australian-politics-live-social-media-ban-cost-of-living-fuel-crisis-excise-inflation-anthony-albanese-jim-chalmers-budget-ntwnfb
+          - generic [ref=e155]:
+            - generic [ref=e159]: The Guardian
+            - 'heading "Australian politics live: MP celebrates end to ‘rip off at the checkout’ as RBA moves to end credit card surcharges by October" [level=3] [ref=e160]'
+            - generic [ref=e161]: Labor MP Jerome Laxale has been leading the charge on ending surcharges for card transactions, which has now been removed by the Reserve...
+            - generic [ref=e162]: .
+            - generic [ref=e163]:
+              - generic [ref=e164]: LIVE
+              - text: 1 hour ago
+        - link "News.com.au Chilling hideout where Dezi met his end Chilling images have emerged of the shipping containers where cop killer Dezi Freeman was found hiding before police shot him dead after a... . 21 hours ago" [ref=e168] [cursor=pointer]:
+          - /url: https://www.news.com.au/national/victoria/news/fugitive-dezi-freeman-found-and-shot-dead-by-police/news-story/60056baee6cfcb48b66e920aaf5914bb
+          - generic [ref=e173]:
+            - generic [ref=e177]: News.com.au
+            - heading "Chilling hideout where Dezi met his end" [level=3] [ref=e178]
+            - generic [ref=e179]: Chilling images have emerged of the shipping containers where cop killer Dezi Freeman was found hiding before police shot him dead after a...
+            - generic [ref=e180]: .
+            - generic [ref=e181]: 21 hours ago
+        - link "BBC How Australia’s seven-month-long manhunt came to an end Fugitive Dezi Freeman has been wanted since he shot dead two police officers on his rural property in August last year. . 1 day ago" [ref=e185] [cursor=pointer]:
+          - /url: https://www.bbc.com/news/videos/cjw8vqnlzxvo
+          - generic [ref=e190]:
+            - generic [ref=e194]: BBC
+            - heading "How Australia’s seven-month-long manhunt came to an end" [level=3] [ref=e195]
+            - generic [ref=e196]: Fugitive Dezi Freeman has been wanted since he shot dead two police officers on his rural property in August last year.
+            - generic [ref=e197]: .
+            - generic [ref=e198]: 1 day ago
+        - link "9News As fuel excise set to be halved, when will fuel prices in Australia go down? Australians are set to see some much-needed relief at the petrol pump after Anthony Albanese announced the reduction of a key fuel tax for... . 5 hours ago" [ref=e202] [cursor=pointer]:
+          - /url: https://www.9news.com.au/national/fuel-shortage-australia-when-will-petrol-prices-go-down-explained/79bd42b8-cb81-4def-abf3-d4f6fec80680
+          - generic [ref=e207]:
+            - generic [ref=e211]: 9News
+            - heading "As fuel excise set to be halved, when will fuel prices in Australia go down?" [level=3] [ref=e212]
+            - generic [ref=e213]: Australians are set to see some much-needed relief at the petrol pump after Anthony Albanese announced the reduction of a key fuel tax for...
+            - generic [ref=e214]: .
+            - generic [ref=e215]: 5 hours ago
+        - link "Sky News Australia Cop killer Dezi Freeman shot dead after three-hour standoff with police Fugitive Dezi Freeman was given \"every option\" to surrender before brandishing a gun at police during an hours-long standoff culminating in... . 21 hours ago" [ref=e219] [cursor=pointer]:
+          - /url: https://www.skynews.com.au/australia-news/crime/cop-killer-dezi-freeman-found-and-shot-dead-by-police/news-story/20533144fd735d0c6f5cf319abfc391c
+          - generic [ref=e224]:
+            - generic [ref=e228]: Sky News Australia
+            - heading "Cop killer Dezi Freeman shot dead after three-hour standoff with police" [level=3] [ref=e229]
+            - generic [ref=e230]: Fugitive Dezi Freeman was given "every option" to surrender before brandishing a gun at police during an hours-long standoff culminating in...
+            - generic [ref=e231]: .
+            - generic [ref=e232]: 21 hours ago
+        - 'link "Australian Broadcasting Corporation Live: Consumer confidence hits 53-year low, ASX and AUD down Consumer confidence across Australia has hit its worst level since tracking began in 1973, according to the latest ANZ-Roy Morgan survey. . 55 minutes ago" [ref=e236] [cursor=pointer]':
+          - /url: https://www.abc.net.au/news/2026-03-31/asx-markets-business-live-news-march-30-2026/106510434
+          - generic [ref=e241]:
+            - generic [ref=e245]: Australian Broadcasting Corporation
+            - 'heading "Live: Consumer confidence hits 53-year low, ASX and AUD down" [level=3] [ref=e246]'
+            - generic [ref=e247]: Consumer confidence across Australia has hit its worst level since tracking began in 1973, according to the latest ANZ-Roy Morgan survey.
+            - generic [ref=e248]: .
+            - generic [ref=e249]:
+              - generic [ref=e250]: LIVE
+              - text: 55 minutes ago
+        - link "Australian Broadcasting Corporation Early government modelling shows how long fuel stockpile lasts if imports slow Diesel stocks would last about six months if Australia's imports dropped by 20 per cent, according to modelling compiled for the federal... . 7 hours ago" [ref=e254] [cursor=pointer]:
+          - /url: https://www.abc.net.au/news/2026-03-31/modelling-assumes-rationing-if-diesel-stockpile-drops-to-10-days/106513966
+          - generic [ref=e259]:
+            - generic [ref=e263]: Australian Broadcasting Corporation
+            - heading "Early government modelling shows how long fuel stockpile lasts if imports slow" [level=3] [ref=e264]
+            - generic [ref=e265]: Diesel stocks would last about six months if Australia's imports dropped by 20 per cent, according to modelling compiled for the federal...
+            - generic [ref=e266]: .
+            - generic [ref=e267]: 7 hours ago
+        - 'link "Australian Broadcasting Corporation Federal politics: Chalmers writes to ACCC to ensure fuel retailers pass on excise cut — as it happened Treasurer Jim Chalmers has written a letter to the consumer watchdog asking it to ensure fuel retailers pass on the fuel excise cut. . 19 hours ago" [ref=e271] [cursor=pointer]':
+          - /url: https://www.abc.net.au/news/2026-03-30/federal-politics-live-blog-albanese-fuel-national-cabinet/106509730
+          - generic [ref=e276]:
+            - generic [ref=e280]: Australian Broadcasting Corporation
+            - 'heading "Federal politics: Chalmers writes to ACCC to ensure fuel retailers pass on excise cut — as it happened" [level=3] [ref=e281]'
+            - generic [ref=e282]: Treasurer Jim Chalmers has written a letter to the consumer watchdog asking it to ensure fuel retailers pass on the fuel excise cut.
+            - generic [ref=e283]: .
+            - generic [ref=e284]: 19 hours ago
+        - link "Australian Broadcasting Corporation Secret tunnels used in plot to smuggle one tonne of cocaine into Australia, police say Australian police have charged six crew members of the high-profile MV Raider vessel with drug smuggling, saying they attempted to bring 1... . 1 day ago" [ref=e288] [cursor=pointer]:
+          - /url: https://www.abc.net.au/news/2026-03-30/six-mv-raider-crew-members-charged-cocaine-smuggling-australia/106510626
+          - generic [ref=e293]:
+            - generic [ref=e297]: Australian Broadcasting Corporation
+            - heading "Secret tunnels used in plot to smuggle one tonne of cocaine into Australia, police say" [level=3] [ref=e298]
+            - generic [ref=e299]: Australian police have charged six crew members of the high-profile MV Raider vessel with drug smuggling, saying they attempted to bring 1...
+            - generic [ref=e300]: .
+            - generic [ref=e301]: 1 day ago
+      - navigation [ref=e304]:
+        - heading "Page navigation" [level=1] [ref=e305]
+        - text: "1"
+        - link "Page 2" [ref=e308] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=10&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAE
+          - text: "2"
+        - link "Page 3" [ref=e310] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=20&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAG
+          - text: "3"
+        - link "Page 4" [ref=e312] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=30&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAI
+          - text: "4"
+        - link "Page 5" [ref=e314] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=40&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAK
+          - text: "5"
+        - link "Page 6" [ref=e316] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=50&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAM
+          - text: "6"
+        - link "Page 7" [ref=e318] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=60&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAO
+          - text: "7"
+        - link "Page 8" [ref=e320] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=70&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAQ
+          - text: "8"
+        - link "Page 9" [ref=e322] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=80&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAS
+          - text: "9"
+        - link "Page 10" [ref=e324] [cursor=pointer]:
+          - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=90&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8tMDegQIBhAU
+          - text: "10"
+        - heading "Next" [level=2] [ref=e326]:
+          - link "Next" [ref=e327] [cursor=pointer]:
+            - /url: /search?q=Australia+news+today&sca_esv=2eb1beb0bd5e5e34&biw=960&bih=963&tbm=nws&ei=syXLacqGOKKTseMP3YrOgQU&start=10&sa=N&ved=2ahUKEwiKrLLAgMmTAxWiSWwGHV2FM1AQ8NMDegQIBhAW
+            - generic [ref=e329]: Next
+      - navigation
+    - contentinfo [ref=e330]:
+      - heading "Footer links" [level=1] [ref=e331]
+      - generic [ref=e335]:
+        - generic [ref=e337]:
+          - text: Australia
+          - generic [ref=e339]:
+            - button "5006, North Adelaide SA - From your IP address" [ref=e341] [cursor=pointer]:
+              - generic [ref=e342]: 5006, North Adelaide SA
+              - generic [ref=e344]:
+                - text: "-"
+                - generic [ref=e345]: From your IP address
+            - text: "-"
+            - button "Update location" [ref=e347] [cursor=pointer]: Update location
+        - generic [ref=e350]:
+          - link "Help" [ref=e351] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=en-AU&fg=1
+          - link "Send feedback" [ref=e352] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy" [ref=e353] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en-AU&fg=1
+          - link "Terms" [ref=e354] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en-AU&fg=1
