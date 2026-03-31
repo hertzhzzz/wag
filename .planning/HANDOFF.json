@@ -1,40 +1,31 @@
 {
   "version": "1.0",
-  "timestamp": "2026-03-20T01:24:20.525Z",
-  "phase": "13",
-  "phase_name": "UI Optimization",
-  "phase_dir": ".planning/phases/13-ui-optimization",
+  "timestamp": "2026-03-31T02:46:32.482Z",
+  "phase": "ad-hoc",
+  "phase_name": "UI improvements session",
+  "phase_dir": null,
   "plan": null,
   "task": null,
   "total_tasks": null,
   "status": "paused",
   "completed_tasks": [
-    {
-      "id": 0,
-      "name": "Phase 14 duplicate cleanup",
-      "status": "done",
-      "commit": null
-    }
+    {"id": 1, "name": "GSD update 1.28.0 -> 1.30.0", "status": "done", "commit": "N/A"},
+    {"id": 2, "name": "Reapply 15 local GSD patches", "status": "done", "commit": "N/A"},
+    {"id": 3, "name": "Remove AIChatBox from all pages", "status": "done", "commit": "ec66f204"},
+    {"id": 4, "name": "Add Enquiry link to Navbar", "status": "done", "commit": "a607a912"},
+    {"id": 5, "name": "Add LiveChat global script to layout", "status": "done", "commit": "c74ce8df"},
+    {"id": 6, "name": "Add LiveChat iframe to enquiry page", "status": "done", "commit": "e2b2a700"},
+    {"id": 7, "name": "Mobile tab selector for enquiry options", "status": "done", "commit": "bc57c462"}
   ],
-  "remaining_tasks": [
-    {"id": 1, "name": "UI-SPEC.md design contract", "status": "not_started"},
-    {"id": 2, "name": "Plan phase (break down into tasks)", "status": "not_started"},
-    {"id": 3, "name": "Execute B: Card hierarchy fixes", "status": "not_started"},
-    {"id": 4, "name": "Execute C: Section label style fixes", "status": "not_started"},
-    {"id": 5, "name": "Execute D: HowItWorks step weighting", "status": "not_started"},
-    {"id": 6, "name": "Execute E: Remove meaningless gradient", "status": "not_started"}
-  ],
+  "remaining_tasks": [],
   "blockers": [],
   "human_actions_pending": [],
   "decisions": [
-    {"decision": "Use Phase 13 (not Phase 14) for UI Optimization", "rationale": "Phase 13 already existed with defined scope B+C+D+E", "phase": "13"},
-    {"decision": "Issue A (Industries mobile nav) excluded from scope", "rationale": "Not in scope per existing Phase 13 definition", "phase": "13"},
-    {"decision": "Phase 14 was duplicate - deleted after merging scope", "rationale": "Would have been another UI Optimization phase", "phase": "14"}
+    {"decision": "Removed custom AIChatBox in favor of LiveChat service", "rationale": "Third-party LiveChat provides better UX with voice input", "phase": "ad-hoc"},
+    {"decision": "Used next/Script with strategy=afterInteractive for LiveChat", "rationale": "Non-blocking load preserves page performance", "phase": "ad-hoc"},
+    {"decision": "Three-column layout on desktop, tab selector on mobile", "rationale": "Desktop has space; mobile needs focused one-at-a-time interaction", "phase": "ad-hoc"}
   ],
-  "uncommitted_files": [
-    ".planning/ROADMAP.md",
-    ".planning/STATE.md"
-  ],
-  "next_action": "Run /gsd:ui-phase 13 to generate UI-SPEC.md design contract",
-  "context_notes": "Was executing /gsd:do '开始优化前端页面' which routed to /gsd:ui-phase. Discovered Phase 13 UI Optimization already existed with pre-defined scope (B: card hierarchy, C: section labels, D: HowItWorks weighting, E: remove gradient). Created Phase 14 by mistake (duplicate), merged/deleted it. Phase 13 is dependency-later (depends on Phase 12 which is also not started). Need to run ui-phase workflow for Phase 13."
+  "uncommitted_files": [],
+  "next_action": "No pending tasks. Next work can start fresh with new instructions.",
+  "context_notes": "All changes pushed directly to master. No formal GSD phase. Next phase is 23-ai-crawler-infrastructure (research in .planning/)."
 }
