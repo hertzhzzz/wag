@@ -50,6 +50,7 @@ export default function EnquiryForm() {
   }, [])
 
   const [step, setStep] = useState(1)
+  const [selectedContact, setSelectedContact] = useState<'call' | 'chat' | 'form'>('call')
   const [formData, setFormData] = useState({
     fullName: '', companyName: '', email: '', phone: '',
     industry: '', customIndustry: '', lookingFor: '',
@@ -154,11 +155,32 @@ export default function EnquiryForm() {
       <section className="py-12 px-4 sm:px-8">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-10">
 
+          {/* Mobile tab selector */}
+          <div className="lg:hidden flex gap-2 p-1 bg-gray-100 rounded-lg">
+            {([
+              { id: 'call', label: 'Book a Call' },
+              { id: 'chat', label: 'Chat With Us' },
+              { id: 'form', label: 'Submit Enquiry' },
+            ] as const).map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setSelectedContact(tab.id)}
+                className={`flex-1 py-2.5 px-3 text-xs font-semibold rounded-md transition-all ${
+                  selectedContact === tab.id
+                    ? 'bg-[#0F2D5E] text-white shadow-sm'
+                    : 'text-gray-500 hover:text-[#0F2D5E]'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+
           {/* Three-column: Book a Call | LiveChat | Submit Enquiry */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             {/* LEFT: Calendly */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
+            <div className={`bg-white border border-gray-200 rounded-lg p-8 ${selectedContact !== 'call' ? 'hidden lg:block' : ''}`}>
               <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Option 1</p>
               <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-2">Book a Call</h2>
               <p className="text-sm text-gray-600 mb-4">
@@ -172,7 +194,7 @@ export default function EnquiryForm() {
             </div>
 
             {/* CENTER: LiveChat */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8 flex flex-col">
+            <div className={`bg-white border border-gray-200 rounded-lg p-8 flex flex-col ${selectedContact !== 'chat' ? 'hidden lg:block' : ''}`}>
               <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Option 2</p>
               <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-2">Chat With Us</h2>
               <p className="text-sm text-gray-600 mb-4">
@@ -190,7 +212,7 @@ export default function EnquiryForm() {
             </div>
 
             {/* RIGHT: Enquiry Form - 2 Step */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
+            <div className={`bg-white border border-gray-200 rounded-lg p-8 ${selectedContact !== 'form' ? 'hidden lg:block' : ''}`}>
               <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Option 3</p>
               <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-2">
                 Submit Your Sourcing Enquiry
