@@ -21,10 +21,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.winningadventure.com.au'),
   title: {
     template: '%s | Winning Adventure Global',
-    default: 'Winning Adventure Global — China Factory Tours for Australian Businesses',
+    default: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
   },
-  description: 'We take Australian businesses directly to China\'s best manufacturers. Book your factory tour today with bilingual guides and verified suppliers.',
-  keywords: ['China factory tour', 'Australian business China sourcing', 'B2B manufacturing China', 'factory tour China', 'China procurement agent'],
+  description: 'WAG connects Australian businesses with verified Chinese manufacturers across all industries. Pre-screened suppliers, factory tours, and procurement support. No matter your product, we help you source from China with confidence.',
+  keywords: ['china sourcing agent', 'verified chinese suppliers', 'australian business china sourcing', 'china procurement support', 'supplier verification china', 'import from china guide', 'china manufacturing agent'],
   authors: [{ name: 'Andy Liu' }],
   creator: 'Winning Adventure Global',
   publisher: 'Winning Adventure Global',
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     url: 'https://www.winningadventure.com.au',
     siteName: 'Winning Adventure Global',
-    title: 'Winning Adventure Global — China Factory Tours for Australian Businesses',
-    description: 'We take Australian businesses directly to China\'s best manufacturers. Book your factory tour today.',
+    title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
+    description: 'WAG connects Australian businesses with verified Chinese manufacturers across all industries. Pre-screened suppliers, factory tours, and procurement support.',
     images: [
       {
         url: '/og-image.jpg',
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Winning Adventure Global',
-    description: 'China factory tours for Australian businesses',
+    title: 'WAG | China Sourcing Agent for Australian Businesses',
+    description: 'Verified Chinese manufacturers across all industries. Factory tours, supplier verification, and procurement support.',
     images: ['/og-image.jpg'],
   },
   alternates: {
@@ -119,7 +119,7 @@ export default function RootLayout({
               "name": "Winning Adventure Global",
               "url": "https://www.winningadventure.com.au",
               "logo": "https://www.winningadventure.com.au/logo.png",
-              "description": "China factory tours for Australian businesses",
+              "description": "WAG connects Australian businesses with verified Chinese manufacturers across all industries. Pre-screened suppliers, factory tours, supplier verification, and end-to-end procurement support.",
               "founder": {
                 "@type": "Person",
                 "name": "Andy Liu",

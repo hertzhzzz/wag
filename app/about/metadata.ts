@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us | Winning Adventure Global',
-  description: 'Learn about Andy Liu and Winning Adventure Global. Australian-owned China sourcing business based in Adelaide, South Australia.',
-  keywords: ['China sourcing agent Adelaide', 'Australian China business consultant', 'factory tour operator China', 'Adelaide China business', 'Andy Liu China sourcing'],
+  title: 'About WAG: Australia\'s China Sourcing Partner | Winning Adventure Global',
+  description: 'Winning Adventure Global is an Australian-owned China sourcing agency. Founder Andy Liu helps Australian businesses find and verify Chinese manufacturers across electronics, furniture, apparel, machinery, and more.',
+  keywords: ['china sourcing agent australia', 'australian owned china sourcing', 'china sourcing adelaide', 'andy liu china sourcing', 'verified chinese manufacturers australia', 'china supplier connection service'],
   openGraph: {
-    title: 'About Us | Winning Adventure Global',
-    description: 'Learn about our founder Andy Liu and our mission to connect Australian businesses with Chinese manufacturers.',
+    title: 'About WAG: Australia\'s China Sourcing Partner | Winning Adventure Global',
+    description: 'Australian-owned and operated. Learn how we help Australian businesses connect with verified Chinese manufacturers.',
   },
 }
