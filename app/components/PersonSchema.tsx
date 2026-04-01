@@ -6,7 +6,7 @@ export default function PersonSchema() {
     "jobTitle": "Founder",
     "description": "China sourcing expert helping Australian businesses connect with verified Chinese manufacturers",
     "url": "https://www.winningadventure.com.au/about",
-    "image": "https://www.winningadventure.com.au/andy-liu.jpg",
+    "image": "https://www.winningadventure.com.au/og-image.jpg",
     "telephone": "+61-416588198",
     "worksFor": {
       "@type": "Organization",
@@ -21,7 +21,11 @@ export default function PersonSchema() {
         "addressCountry": "AU"
       }
     },
-    "sameAs": [],
+    "sameAs": [
+      "https://www.linkedin.com/company/winning-adventure-global",
+      "https://www.facebook.com/winningadventureglobal",
+      "https://www.youtube.com/@winningadventureglobal"
+    ],
     "knowsAbout": ["China manufacturing", "Supplier verification", "B2B procurement", "Factory tours"],
     "areaServed": {
       "@type": "Country",

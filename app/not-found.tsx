@@ -1,6 +1,16 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+
+export const metadata: Metadata = {
+  title: '404 - Page Not Found | Winning Adventure Global',
+  description: 'The page you are looking for does not exist or has been moved. Get back on track with our China sourcing expertise.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+}
 
 export default function NotFound() {
   return (
