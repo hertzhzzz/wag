@@ -475,3 +475,115 @@ Before publishing, verify each item:
 - **Blog images go in public/social/** — MDX files cannot reference `../social/` paths. Always copy to `public/social/` for Next.js static serving.
 - **2026 Algorithm Rule: No external links in post body** — Put all links in the first comment. Links in post body receive -60% reach penalty.
 - **Posting cadence** — WAG data shows 3 posts in 20 days with gaps. Maintain consistent posting schedule (1-2x per week) to build algorithmic momentum.
+
+## Post-Generation Next Steps
+
+After generating the LinkedIn post, present these options to the user:
+
+---
+
+### Suggested Next Steps (Present to User)
+
+After the post is generated, ask the user what they want to do next:
+
+**1. Generate Illustrations**
+> "需要为这篇帖子生成配图吗？"
+> - Use `baoyu-article-illustrator` skill
+> - Creates visual assets (flowcharts, scene illustrations, comparison graphics)
+> - Best for: Template A (flowchart) and Template C (scene + comparison)
+
+**2. Expand to Blog Article**
+> "需要把这篇帖子扩展成博客文章吗？"
+> - Follow the "LinkedIn Post → Blog Article Workflow" section above
+> - Creates MDX file in `content/blog/`
+> - Best for: High-performing posts worth expanding
+
+**3. Publish Directly**
+> "帖子已就绪，可以直接复制发布"
+> - Provide the final post text
+> - Include first comment template for seeding
+> - Best for: When illustrations are not needed
+
+**4. Review & Iterate**
+> "需要调整内容、语气或角度吗？"
+> - Modify hook, CTA, or body based on user feedback
+> - Re-generate with changes
+
+---
+
+### Do NOT Auto-Invoke Skills
+
+**Important:** After generating the post, ALWAYS present these options to the user and let them decide. Do NOT automatically invoke `baoyu-article-illustrator` or any other skill without user confirmation.
+
+**Reason:** The user may not need illustrations, may want to review the text first, or may have a different priority. Always give the user control over the next action.
+
+---
+
+## WCSP Output Contract
+
+All LinkedIn post generation MUST return this structured response:
+
+```yaml
+output:
+  status: success | warning | error
+
+  summary: "Generated LinkedIn post: 3-step framework, 198 char hook, war story CTA"
+
+  next_actions:
+    - action: user-confirm
+      description: "Present post to user for approval"
+      blocking: true
+    - action: generate-image
+      description: "Create carousel or illustration images"
+      blocking: false
+    - action: expand-blog
+      description: "Expand post to blog MDX article"
+      blocking: false
+
+  artifacts:
+    post_text: "/social/linkedin-post/{YYYY-MM-DD-topic}/post.md"
+    outline_text: "/social/linkedin-post/{YYYY-MM-DD-topic}/outline.md"
+    hook_chars: 198
+    body_chars: 892
+    cta_type: war-story
+    format_type: steps
+    quality_flags:
+      - type: hook-limit
+        detail: "Within 210 char limit"
+        severity: none
+      - type: cta-specific
+        detail: "Experience-based CTA, not generic"
+        severity: none
+      - type: rag-retrieved
+        detail: "Sourced from 2 WAG blog posts"
+        severity: none
+
+  error:
+    root_cause: "Hook exceeds 210 char limit"
+    safe_retry: "Trim body sentences, preserve 3-step structure"
+    stop_condition: "3 retries exceeded"
+```
+
+### Error Recovery
+
+| Error | Recovery | Stop Condition |
+|-------|----------|----------------|
+| Hook >210 chars | Trim sentences, shorten step descriptions | 3 retries → present oversized |
+| No RAG content found | Use generic WAG data, flag for user | Auto-continue |
+| CTA too generic | Replace with war story framework | Must pass quality gate |
+| Fact unverifiable | Flag + remove or cite source | Block if WAG data flagged |
+| Blog expansion fail | Return post only, skip MDX | Partial output acceptable |
+
+### Quality Gates
+
+Before returning success:
+- [ ] Hook ≤ 210 chars
+- [ ] First 90 chars standalone-readable
+- [ ] CTA is specific and experience-based (not "What would you do?")
+- [ ] Hashtag count 6-10
+- [ ] No emoji
+- [ ] No external links in body
+- [ ] External links in first comment (if any)
+- [ ] RAG retrieved at least 1 WAG blog post
+- [ ] Facts verified or flagged
+- [ ] Format is steps/story/carousel (not brand intro if avoidable)

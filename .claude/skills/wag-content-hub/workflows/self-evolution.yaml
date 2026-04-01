@@ -1,0 +1,196 @@
+name: wag-self-evolution
+description: "Self-evolution feedback loop — analyze performance data, update content rules, optimize future generation"
+
+triggers:
+  immediate:
+    description: "Single-day anomaly detection"
+    conditions:
+      - metric: er
+        platform: any
+        threshold: ">50% drop OR >100% spike"
+        action: "flag + schedule full analysis"
+      - metric: impressions
+        platform: any
+        threshold: ">75% drop vs 7d average"
+        action: "flag content for review"
+
+  statistical:
+    description: "Statistical significance detection"
+    conditions:
+      - test: t_test
+        comparison: vs historical mean (lookback: 30d)
+        threshold: "p < 0.05"
+        min_samples: 5
+        action: "generate rule update proposal"
+
+  trend:
+    description: "Trend-based detection"
+    conditions:
+      - method: linear_regression
+        window: sliding_7d
+        threshold: "slope significant at p < 0.05"
+        action: "update trend rules"
+
+schedule:
+  # T+18h: Collector runs → normalizes → stores
+  # T+20h: Self-evolution engine calculates rules
+  # T+22h: New rules ready for next day's generation
+  analysis_run: "0 2 * * *"   # 2 AM daily (UTC) — after collector T+8h buffer
+  weekly_deep: "0 3 * * 0"    # Sunday 3 AM — deep weekly analysis
+
+update_cycle:
+  stages:
+    - name: data_ready
+      offset: "T+18h from last publish"
+      action: "collector normalizes and stores data"
+    - name: analysis_start
+      offset: "T+20h"
+      action: "engine loads posts, calculates group stats, runs t-tests"
+    - name: rules_updated
+      offset: "T+22h"
+      action: "upsert to performance-rules.md, flag best posts"
+    - name: rules_active
+      offset: "T+24h"
+      action: "new rules available for next content generation"
+
+rule_update_algorithm:
+  inputs:
+    lookback_window: 30  # days
+    min_sample_size: 5   # minimum posts per group for valid stats
+
+  steps:
+    1_load_posts:
+      description: "Load all posts from lookback window"
+      query: |
+        SELECT * FROM norm_posts
+        WHERE published_at >= date('now', '-30 days')
+        AND platform != 'gsc'
+
+    2_group_by_dimensions:
+      groups:
+        - dimension: format
+          field: content_type
+          values: ["text", "carousel", "image", "video"]
+        - dimension: topic
+          field: topic_tags
+          values: ["factory-verification", "quality-control", "brand-intro", "supply-chain"]
+        - dimension: platform
+          field: platform
+          values: ["linkedin", "twitter", "facebook"]
+        - dimension: hook_type
+          field: hook_type
+          values: ["knowledge-type", "sharpness-test", "relationship-type", "long-tail"]
+
+    3_calculate_group_stats:
+      metrics:
+        - avg_er: "mean(er) across group"
+        - median_er: "median(er) across group"
+        - std_er: "stddev(er) across group"
+        - sample_size: "count(*)"
+        - avg_impressions: "mean(impressions)"
+        - total_engagements: "sum(engagements)"
+
+    4_statistical_tests:
+      global_comparison:
+        method: independent_samples_t_test
+        null_hypothesis: "group mean ER == global mean ER"
+        alpha: 0.05
+        output: "p_value, t_statistic, group_mean, global_mean"
+
+      trend_tests:
+        method: linear_regression
+        x: "days_since_start"
+        y: "er"
+        window: 7  # sliding window
+        output: "slope, intercept, r_squared, p_value"
+
+    5_compute_confidence:
+      levels:
+        low:
+          condition: "sample_size < 5"
+          weight: 0.3
+        medium:
+          condition: "5 <= sample_size < 15"
+          weight: 0.7
+        high:
+          condition: "sample_size >= 15 AND p_value < 0.05"
+          weight: 1.0
+
+    6_generate_rules:
+      rule_structure:
+        - rule_id: "RULE-{platform}-{dimension}-{value}-{date}"
+          platform: "linkedin|twitter|facebook|all"
+          dimension: "format|topic|hook_type|platform"
+          value: "specific value"
+          avg_er: float
+          sample_size: int
+          confidence: "low|medium|high"
+          statistical_significance:
+            p_value: float
+            significant: bool
+          trend:
+            direction: "rising|falling|stable"
+            slope: float
+          generated_at: "ISO8601"
+          active: true
+
+    7_upsert_rules:
+      file: "performance-rules.md"
+      strategy: "upsert by rule_id, preserve higher confidence on conflict"
+      merge_logic: |
+        IF EXISTS(old_rule):
+          IF new.confidence > old.confidence: REPLACE
+          IF new.confidence == old.confidence AND new.sample_size > old.sample_size: REPLACE
+          ELSE: KEEP old
+        ELSE: INSERT new
+
+    8_flag_best_posts:
+      criteria:
+        - "ER > 90th percentile for platform"
+        - "minimum 50 impressions"
+        - "not already flagged"
+      action: "add to best-posts.md with date and key metric"
+
+conflict_resolution:
+  priority_order:
+    1: "platform-specific rules > platform-agnostic rules"
+    2: "high confidence > medium > low"
+    3: "newer version > older version"
+    4: "statistically significant (p<0.05) > not significant"
+
+  resolution_logic: |
+    When multiple rules apply to same content:
+    1. Filter to applicable rules (matching platform, format, topic)
+    2. Sort by priority_order
+    3. Apply highest-priority rule
+    4. If tie, use highest confidence
+    5. If still tie, use most recent
+
+output:
+  rules_file: "lib/performance-rules.md"
+  best_posts_file: "lib/best-posts.md"
+  analysis_log: "analytics/self-evolution/YYYY-MM-DD.md"
+
+quality_gates:
+  - name: minimum_data
+    check: "At least 3 platforms with data for the day"
+    fail_action: "skip update, log warning"
+  - name: data_freshness
+    check: "No single platform data older than 7 days"
+    fail_action: "flag stale data, partial update"
+  - name: statistical_power
+    check: "At least 5 samples per group for t-test"
+    fail_action: "mark confidence as low, don't claim significance"
+
+reporting:
+  daily:
+    - "Rules updated count"
+    - "Best posts flagged"
+    - "Anomalies detected"
+    - "Rule conflicts resolved"
+  weekly:
+    - "Performance trends by platform"
+    - "Format effectiveness ranking"
+    - "Topic engagement ranking"
+    - "Rule confidence progression"
+    - "Recommendations for next week"
