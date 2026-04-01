@@ -192,17 +192,21 @@ Before returning success:
 - [ ] CTA section present
 - [ ] No emoji
 - [ ] Facts verified or flagged
-- [ ] **Images copied to `public/social/`** (required for static serving)
+- [ ] Images reference `/social/...` (single source in `public/social/`)
 
 ## Directory Structure
 
-**Storage path:**
+**Image storage (SINGLE SOURCE):**
+```
+public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/  # THE ONLY image location
+```
+
+**Content working directory:**
 ```
 social/linkedin-post/{YYYY-MM-DD-topic}/
-├── post.md          # Original LinkedIn post
-├── outline.md       # Image outline
-├── imgs/           # AI-generated images
-└── prompts/        # Image generation prompts
+├── post.md          # LinkedIn post text
+├── outline.md       # Image generation outline
+└── prompts/        # AI image generation prompts
 ```
 
 **Blog MDX path:**
@@ -210,17 +214,11 @@ social/linkedin-post/{YYYY-MM-DD-topic}/
 content/blog/{slug}.mdx
 ```
 
-**Published images path:**
+**Image URL path (in MDX):**
 ```
-public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/
+/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/01-xxx.png
 ```
-
-**⚠️ CRITICAL: Copy images to public/ before deploying**
-```bash
-mkdir -p public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/
-cp social/linkedin-post/{YYYY-MM-DD-topic}/imgs/*.png public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/
-```
-Images will 404 if not copied to `public/social/` — the MDX path `/social/...` maps to `public/social/...`
+⚠️ MDX references `/social/...` which Next.js serves directly from `public/social/...` — no copying needed.
 
 ## Suggested Next Steps
 

@@ -35,7 +35,7 @@ git push origin master  # GitHub 自动部署到 Vercel
 
 ```
 wag/                      # 项目根目录
-├── app/                  # Next.js App Router
+├── app/                  # Next.js App Router [部署到 Vercel]
 │   ├── page.tsx          # 首页 (/)
 │   ├── layout.tsx        # 根布局
 │   ├── services/         # 服务页面
@@ -47,20 +47,49 @@ wag/                      # 项目根目录
 │   │   └── newsletter/   # POST /api/newsletter
 │   ├── components/        # 共享组件 (Navbar, Footer, Hero...)
 │   └── data/             # FAQ 数据文件
-├── content/blog/         # MDX 博客内容 (gray-matter frontmatter)
+├── content/blog/         # MDX 博客内容 [部署到 Vercel]
+│   └── *.mdx             # 博客文章，通过 /resources/[slug] 访问
 ├── lib/                  # 工具函数
 │   └── rate-limit.ts     # Upstash Redis 限流 (+内存备援)
-├── public/               # 静态资源
-├── .planning/            # GSD 项目规划 (milestones/phases)
-├── social/               # 社交媒体内容
-│   └── linkedin-post/    # LinkedIn 帖子资产
-│       └── {YYYY-MM-DD-topic}/  # 按日期+主题分类
-│           ├── post.md    # 帖子正文
-│           ├── outline.md # 配图大纲
-│           ├── imgs/     # 配图
-│           └── prompts/   # AI 生图 prompt 文件
+├── public/               # 静态资源 [部署到 Vercel]
+│   └── social/           # 图片唯一存储位置 [SINGLE SOURCE]
+│       └── linkedin-post/{YYYY-MM-DD-topic}/imgs/*.png
+├── social/               # 社交媒体内容中心 [通过 wag-content-hub skill 管理]
+│   ├── linkedin-post/     # LinkedIn 内容批次
+│   │   └── {YYYY-MM-DD-topic}/
+│   │       ├── post.md    # 帖子正文
+│   │       ├── outline.md # 配图大纲
+│   │       ├── prompts/   # AI 生图 prompt
+│   │       │   └── *.md
+│   │       └── publish-preview.html  # 分发预览 (一键复制)
+│   ├── x-post/           # X/Twitter 内容批次
+│   │   └── {YYYY-MM-DD-topic}/
+│   │       └── post.md
+│   ├── facebook-post/    # Facebook 内容批次
+│   │   └── {YYYY-MM-DD-topic}/
+│   │       └── post.md
+│   └── discovery-call-script-v1.md  # 销售话术
+├── .claude/skills/wag-content-hub/  # 内容中心 skill (统一入口)
 └── vercel.json           # Vercel 配置
 ```
+
+## Content Hub (wag-content-hub)
+
+**社交媒体内容统一入口** — 通过 `.claude/skills/wag-content-hub/SKILL.md` 管理。
+
+**使用 skill 命令：** `/wag-content-hub` 或直接说明需求（自动路由到对应 sub-skill）。
+
+**内容生命周期：**
+1. **创建** → 通过 skill 生成 LinkedIn/X/Facebook/SEO 内容
+2. **配图** → 自动调用 `baoyu-article-illustrator` + `baoyu-danger-gemini-web` 生成
+3. **预览** → `publish-preview.html` 一键复制所有渠道内容
+4. **分发** → 手动复制发布到各平台
+5. **归档** → 发布后归档到 `social/*/archive/`
+
+**图片存储规则 (SINGLE SOURCE):**
+- 图片只存储在 `public/social/...` — 唯一位置
+- MDX 文章引用：`/social/linkedin-post/{date-topic}/imgs/*.png`
+- 生成图片时直接保存到 `public/social/...`，无需复制
 
 ## API Routes
 

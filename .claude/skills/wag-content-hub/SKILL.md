@@ -349,6 +349,8 @@ input:
 
 **Style:** minimal-flat (WAG brand: Navy #0F2D5E + Amber #F59E0B)
 
+**⚠️ SINGLE SOURCE:** Images are saved directly to `public/social/...` — the only image location. No copying.
+
 **Image Generation Pipeline:**
 
 #### Step 1: Analyze Content
@@ -358,7 +360,7 @@ input:
 
 #### Step 2: Generate Outline
 
-**Output file:** `{article-dir}/imgs/outline.md`
+**Output file:** `social/linkedin-post/{YYYY-MM-DD-topic}/outline.md`
 
 ```yaml
 ---
@@ -416,11 +418,13 @@ filename: {NN}-{type}-{slug}.png
 [Style guidance]
 ```
 
-**Prompt files saved to:** `{article-dir}/imgs/prompts/`
+**Prompt files saved to:** `social/linkedin-post/{YYYY-MM-DD-topic}/prompts/`
 
 #### Step 4: Generate Images
 
 **Tool:** `baoyu-danger-gemini-web` skill
+
+**Output location:** `public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/` (SINGLE SOURCE)
 
 **Consent check:**
 ```bash
@@ -430,9 +434,10 @@ grep -q '"accepted":true' ~/Library/Application\ Support/baoyu-skills/gemini-web
 
 **Generation command:**
 ```bash
+mkdir -p public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/
 bun main.ts \
-  --promptfiles "{prompt-file-path}" \
-  --image "{output-dir}/{filename}.png"
+  --promptfiles "social/linkedin-post/{YYYY-MM-DD-topic}/prompts/{NN}-{type}-{slug}.md" \
+  --image "public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/{NN}-{type}-{slug}.png"
 ```
 
 **Parallel generation:** All 3 images generate simultaneously.
@@ -443,13 +448,13 @@ bun main.ts \
 phase: 4.5
 status: {success|warning|error}
 images_generated:
-  - path: "{article-dir}/imgs/01-factory-vs-trading-company.png"
+  - path: "public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/01-factory-vs-trading-company.png"
     size_bytes: 940139
     status: verified
-  - path: "{article-dir}/imgs/02-three-step-framework.png"
+  - path: "public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/02-three-step-framework.png"
     size_bytes: 583255
     status: verified
-  - path: "{article-dir}/imgs/03-wag-consultation-cta.png"
+  - path: "public/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/03-wag-consultation-cta.png"
     status: {generating|verified|failed}
 
 next_actions:
@@ -462,7 +467,7 @@ next_actions:
 ```
 
 **Quality gates:**
-- [ ] All 3 images exist
+- [ ] All 3 images exist in `public/social/...`
 - [ ] File sizes > 10KB (indicates actual image, not error)
 - [ ] Aspect ratio approximately 16:9
 
@@ -753,7 +758,7 @@ After Phase 5 (Double QA) passes, automatically generate HTML preview:
 ```yaml
 phase: 6.5
 output:
-  file: "{topic-dir}/publish-preview.html"
+  file: "social/linkedin-post/{YYYY-MM-DD-topic}/publish-preview.html"
   content:
     linkedin: <from Phase 4>
     x_thread:
@@ -766,14 +771,11 @@ output:
   open: true
   summary: "HTML preview generated — click to open and copy"
   prerequisites:
-    - images_copied_to_public: true
-    - image_paths_use_absolute: true
+    - images_in_public_social: true  # Single source, no copying needed
 ```
 
-**⚠️ Image Path Requirement:**
-- HTML 中图片路径必须使用绝对路径：`/social/linkedin-post/{YYYY-MM-DD-topic}/imgs/01-xxx.png`
-- 相对路径（如 `imgs/01-xxx.png`）在直接打开 file:// 时无法加载图片
-- MDX 文章使用 `/social/...` 映射到 `public/social/...`，与 HTML 预览路径一致
+**Image Path:** All images use `/social/linkedin-post/{date-topic}/imgs/...` which maps to `public/social/...` — single source, no copying.
+
 next_actions:
   - action: open-preview
     description: "Open publish-preview.html in browser"
@@ -786,10 +788,8 @@ next_actions:
 **Quality gates:**
 - [ ] All content sections present
 - [ ] Copy buttons functional
-- [ ] Images use absolute paths (`/social/linkedin-post/...`)
-- [ ] Images display correctly
+- [ ] Images reference `/social/...` (single source in `public/social/`)
 - [ ] Thread order clearly labeled
-- [ ] Images copied to `public/social/` (prerequisite for HTML preview)
 
 **Error recovery:**
 - If HTML generation fails: output raw content as markdown
