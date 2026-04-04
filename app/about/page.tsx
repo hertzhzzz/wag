@@ -63,15 +63,111 @@ export default function AboutPage() {
         <blockquote className="border-l-4 border-amber py-4 px-6 bg-[#fffbf0] my-8 font-serif italic text-lg leading-relaxed text-navy">
           &quot;The suppliers are ready. The opportunity is real. You just need someone who&apos;s already on the ground to open the right doors.&quot;
         </blockquote>
-        <p className="text-base leading-relaxed text-gray-700 mb-5">
+        <p className="text-base leading-relaxed text-gray-700">
           Winning Adventure Global is the bridge Andy Liu wished had existed when he was helping his first Australian client source from China. We don&apos;t guess. We verify, match, and deliver.
         </p>
-        <Link
-          href="/enquiry"
-          className="inline-block mt-4 bg-amber text-navy text-sm font-semibold py-3 px-8 tracking-wide transition-opacity hover:opacity-85 min-h-11"
-        >
-          Start Your Supplier Search →
-        </Link>
+      </div>
+
+      {/* Australia Leadership */}
+      <div className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[1100px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-start">
+          {/* Profile Image */}
+          <div className="flex flex-col items-center">
+            <div className="relative w-full aspect-[3/4] max-w-[280px] bg-gray-100 border-2 border-amber overflow-hidden">
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 text-gray-400">
+                <svg className="w-16 h-16 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span className="text-xs text-gray-400 uppercase tracking-wider">Mark He</span>
+              </div>
+            </div>
+            <p className="mt-4 text-xs text-gray-500 text-center uppercase tracking-wider">
+              Managing Director, Australia
+            </p>
+          </div>
+
+          {/* Profile Content */}
+          <div>
+            <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-3">
+              Australia Team
+            </div>
+            <h2 className="font-serif text-[34px] font-normal leading-tight mb-7">
+              Your Australian Point of Contact for China Sourcing
+            </h2>
+            <p className="text-base leading-relaxed text-gray-700 mb-5">
+              As Managing Director of WAG&apos;s Australia office, I bridge the gap between Australian businesses and Chinese manufacturing. Based in Adelaide, I work directly with clients across Australia — from initial supplier search through to final delivery.
+            </p>
+            <p className="text-base leading-relaxed text-gray-700 mb-5">
+              My focus is simple: helping Australian businesses source with confidence. Whether you are establishing your first supply chain or optimising an existing one, I bring local accountability and direct access to WAG&apos;s verified factory network in China.
+            </p>
+            <blockquote className="border-l-4 border-amber py-4 px-6 bg-[#fffbf0] my-8 font-serif italic text-lg leading-relaxed text-navy">
+              &quot;You do not need to navigate this alone. I am here to translate the process, verify the suppliers, and make sure your interests are protected at every step.&quot;
+            </blockquote>
+            <p className="text-base leading-relaxed text-gray-700 mb-5">
+              If you are evaluating suppliers, worried about quality consistency, or simply want to understand your options before committing — let us have a conversation. No pressure, no obligations. Just straight talk about your sourcing challenges.
+            </p>
+            <div className="flex items-center gap-4 mt-6">
+              <a
+                href="https://www.linkedin.com/in/mark-zhe-he/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-navy text-white text-sm font-semibold py-3 px-6 tracking-wide transition-opacity hover:opacity-85 min-h-11"
+              >
+                Connect on LinkedIn
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+              <Link
+                href="/enquiry"
+                className="inline-block bg-amber text-navy text-sm font-semibold py-3 px-8 tracking-wide transition-opacity hover:opacity-85 min-h-11"
+              >
+                Book a Consultation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Values Strip */}
+      <div className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto">
+        <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-5">
+          Australia Leadership
+        </div>
+        <h2 className="font-serif text-[34px] font-normal leading-tight mb-7">
+          Your Australian Point of Contact for China Sourcing
+        </h2>
+        <p className="text-base leading-relaxed text-gray-700 mb-5">
+          As Managing Director of WAG&apos;s Australia office, I bridge the gap between Australian businesses and Chinese manufacturing. Based in Adelaide, I work directly with clients across Australia — from initial supplier search through to final delivery.
+        </p>
+        <p className="text-base leading-relaxed text-gray-700 mb-5">
+          My focus is simple: helping Australian businesses source with confidence. Whether you are establishing your first supply chain or optimising an existing one, I bring local accountability and direct access to WAG&apos;s verified factory network in China.
+        </p>
+        <blockquote className="border-l-4 border-amber py-4 px-6 bg-[#fffbf0] my-8 font-serif italic text-lg leading-relaxed text-navy">
+          &quot;You do not need to navigate this alone. I am here to translate the process, verify the suppliers, and make sure your interests are protected at every step.&quot;
+        </blockquote>
+        <p className="text-base leading-relaxed text-gray-700 mb-5">
+          If you are evaluating suppliers, worried about quality consistency, or simply want to understand your options before committing — let us have a conversation. No pressure, no obligations. Just straight talk about your sourcing challenges.
+        </p>
+        <div className="flex items-center gap-4 mt-6">
+          <a
+            href="https://www.linkedin.com/in/mark-zhe-he/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-navy text-white text-sm font-semibold py-3 px-6 tracking-wide transition-opacity hover:opacity-85 min-h-11"
+          >
+            Connect on LinkedIn
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <Link
+            href="/enquiry"
+            className="inline-block bg-amber text-navy text-sm font-semibold py-3 px-8 tracking-wide transition-opacity hover:opacity-85 min-h-11"
+          >
+            Book a Consultation →
+          </Link>
+        </div>
       </div>
 
       {/* Values Strip */}
