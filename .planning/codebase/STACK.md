@@ -5,99 +5,106 @@
 ## Languages
 
 **Primary:**
-- TypeScript 5 - Primary development language for all application code
-- JavaScript - Limited use, primarily for configuration files
+- TypeScript 5 - Primary language for all application code
+
+**Secondary:**
+- JavaScript (ES2017) - Legacy support via `allowJs: true` in tsconfig
 
 ## Runtime
 
 **Environment:**
-- Node.js 20+ (specified in devDependencies @types/node)
-- Next.js 16.1.7 (React 19.2.4 as peer dependency)
+- Node.js (version managed by npm 10.9.0)
 
 **Package Manager:**
-- npm 10.9.0 (specified via packageManager field)
-- Lockfile: `package-lock.json` (implicit with npm)
+- npm 10.9.0
+- Lockfile: `package-lock.json` (present)
 
 ## Frameworks
 
 **Core:**
-- Next.js 16.1.7 (App Router) - Primary application framework
+- Next.js 16.1.7 (App Router) - React framework for full-stack web application
 - React 19.2.4 - UI library
-- Tailwind CSS 3.4 - Styling framework
-- @tailwindcss/typography 0.5.19 - Typography plugin for Tailwind
 
-**Data Processing:**
+**Styling:**
+- Tailwind CSS 3.4.0 - Utility-first CSS framework
+- @tailwindcss/typography 0.5.19 - Prose styling for MDX content
+
+**Content:**
 - next-mdx-remote 6.0.0 - MDX content rendering
+- gray-matter 4.0.3 - Frontmatter parsing
 - remark 15.0.0 + remark-gfm 4.0.1 + remark-html 16.0.0 - Markdown processing
-- gray-matter 4.0.3 - Frontmatter parsing for MDX
 
-**Visualization:**
-- ECharts 6.0.0 - Charts and data visualization
-- echarts-for-react 3.0.6 - React wrapper for ECharts
-- leaflet 1.9.4 - Interactive maps
-- leaflet.markercluster 1.5.3 - Marker clustering for Leaflet
-- react-globe.gl 2.37.0 - 3D globe visualization
-- Remotion 4.0.429 - Video animation framework
-
-**Forms & Validation:**
-- Zod 4.3.6 - Schema-based validation
+## Key Dependencies
 
 **Email:**
-- Nodemailer 8.0.1 - Email sending via SMTP
-- Resend 6.9.3 - Alternative email service (installed but not visibly used in API routes)
-
-**Image Processing:**
-- Sharp 0.34.5 - Image optimization
+- nodemailer 8.0.1 - Email sending via Gmail SMTP
+- resend 6.9.3 - Alternative email service (installed but not actively used)
 
 **Rate Limiting:**
 - @upstash/ratelimit 2.0.0 - Redis-based rate limiting
 - @upstash/redis 1.34.0 - Redis client for Upstash
 
+**Validation:**
+- zod 4.3.6 - Schema-based validation
+
+**Visualization:**
+- echarts 6.0.0 + echarts-for-react 3.0.6 - Charts and data visualization
+- leaflet 1.9.4 + leaflet.markercluster 1.5.3 - Interactive maps
+- react-globe.gl 2.37.0 - 3D globe visualization
+
+**Animation & Media:**
+- remotion 4.0.429 + @remotion/animation-utils 4.0.429 + @remotion/player 4.0.429 - Video animation
+- sharp 0.34.5 - Image optimization
+
 **Utilities:**
-- csv-parse 6.1.0 - CSV parsing
 - lucide-react 0.575.0 - Icon library
+- csv-parse 6.1.0 - CSV parsing
+- react 19.2.4 / react-dom 19.2.4
+
+## Build & Dev Tools
+
+**Bundler:**
+- Next.js built-in (webpack-based)
+- @next/bundle-analyzer 16.1.7 - Bundle size analysis
 
 **Testing:**
-- Playwright 1.58.2 - E2E testing framework
-- @playwright/test - Playwright test runner
+- @playwright/test 1.58.2 - E2E testing framework
 
-**Build & Analysis:**
-- @next/bundle-analyzer 16.1.7 - Bundle size analysis
-- @remotion/cli 4.0.431 - Remotion command-line tools
+**Linting:**
+- eslint 8.57.1
+- eslint-config-next 15.5.13
 
-**Development:**
-- ESLint 8.57.1 - Code linting
-- eslint-config-next 15.5.13 - Next.js ESLint configuration
-- PostCSS 8 - CSS processing
+**Type Checking:**
+- TypeScript 5 (tsconfig.json with strict mode enabled)
 
-## Configuration
+**CSS Processing:**
+- postcss 8 - CSS transformation
+- autoprefixer 10.4.27 - Vendor prefix automation
+
+## Configuration Files
 
 **Build:**
-- `next.config.js` - Next.js configuration with bundle analyzer, image domains, redirects, security headers
-- `tailwind.config.ts` - Tailwind CSS configuration with custom colors (navy, amber) and fonts (IBM Plex Sans/Serif)
-- `postcss.config.js` - PostCSS configuration for Tailwind and Autoprefixer
-- `tsconfig.json` - TypeScript configuration with path aliases (@/* -> app/*, @/lib/* -> lib/*)
+- `next.config.js` - Next.js configuration (bundle analyzer, redirects, image domains, security headers)
+- `tsconfig.json` - TypeScript configuration (strict mode, path aliases `@/*` and `@/lib/*`)
+- `tailwind.config.ts` - Tailwind CSS with custom colors (navy, amber) and IBM Plex fonts
+- `postcss.config.js` - PostCSS with Tailwind and Autoprefixer
+- `vercel.json` - Vercel deployment configuration
 
 **Path Aliases:**
 - `@/*` maps to `./app/*`
 - `@/lib/*` maps to `./lib/*`
 
-**Security Headers (via next.config.js):**
-- Strict-Transport-Security: max-age=31536000; includeSubDomains
-- X-Frame-Options: DENY
-- X-Content-Type-Options: nosniff
-- Referrer-Policy: strict-origin-when-cross-origin
-- Permissions-Policy: camera=(), microphone=(), geolocation=()
-
 ## Platform Requirements
 
 **Development:**
-- Node.js 20+
-- npm 10.9.0
+- Node.js compatible environment
+- npm 10.9.0+
+- Two dev servers: `npm run dev` (port 3000) and `npm run dev:admin` (port 3001)
 
 **Production:**
-- Vercel (inferred from deployment workflow and next.config.js)
-- Environment: Next.js App Router deployment
+- Deployment target: Vercel
+- Node.js runtime on Vercel
+- Environment variables required (see INTEGRATIONS.md)
 
 ---
 
