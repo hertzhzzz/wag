@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -48,7 +48,14 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <div className="hidden md:flex">
+        <div className="hidden md:flex gap-3">
+          <a
+            href="tel:0397618700"
+            className="flex items-center gap-[6px] text-[13px] font-medium px-[14px] py-[9px] text-navy bg-white/80 border border-navy/20 hover:bg-navy hover:text-white flex-shrink-0 transition-all"
+          >
+            <Phone size={15} strokeWidth={2} />
+            <span>03 9761 8700</span>
+          </a>
           <Link
             href="/enquiry"
             className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-navy flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
