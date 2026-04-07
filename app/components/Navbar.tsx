@@ -50,11 +50,11 @@ export default function Navbar() {
 
         <div className="hidden md:flex gap-3">
           <a
-            href="tel:0397618700"
-            className="flex items-center gap-[6px] text-[13px] font-medium px-[14px] py-[9px] text-navy bg-white/80 border border-navy/20 hover:bg-navy hover:text-white flex-shrink-0 transition-all"
+            href="tel:+61416588198"
+            className="flex flex-col items-start px-[14px] py-[8px] text-navy bg-white/80 border border-navy/20 hover:bg-navy hover:text-white flex-shrink-0 transition-all leading-tight"
           >
-            <Phone size={15} strokeWidth={2} />
-            <span>03 9761 8700</span>
+            <span className="text-[10px] font-medium uppercase tracking-wide">Call Us Today</span>
+            <span className="text-[13px] font-semibold">+61 0416588198</span>
           </a>
           <Link
             href="/enquiry"
