@@ -40,7 +40,7 @@ export default function ArticleSchema({
       "name": "Winning Adventure Global",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.winningadventure.com.au/logo.png"
+        "url": "https://www.winningadventure.com.au/logos/logo.png"
       }
     },
     "datePublished": datePublished,
