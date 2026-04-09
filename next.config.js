@@ -8,6 +8,21 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
+      // HTTP → HTTPS (temporary, not cached)
+      {
+        source: '/(.*)',
+        has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],
+        destination: 'https://www.winningadventure.com.au/:1',
+        permanent: false,
+      },
+      // non-www → www (temporary)
+      {
+        source: '/(.*)',
+        has: [{ type: 'host', value: 'winningadventure.com.au' }],
+        destination: 'https://www.winningadventure.com.au/:1',
+        permanent: false,
+      },
+      // Existing blog redirects
       {
         source: '/verify-chinese-supplier',
         destination: '/resources/verify-chinese-supplier',
