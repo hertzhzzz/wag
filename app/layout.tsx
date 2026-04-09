@@ -112,7 +112,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Winning Adventure Global",
               "url": "https://www.winningadventure.com.au",
-              "logo": "https://www.winningadventure.com.au/logo.png",
+              "logo": "https://www.winningadventure.com.au/logos/logo.png",
               "description": "WAG connects Australian businesses with verified Chinese manufacturers across all industries. Pre-screened suppliers, factory tours, supplier verification, and end-to-end procurement support.",
               "founder": {
                 "@type": "Person",
@@ -157,7 +157,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Winning Adventure Global",
-              "image": "https://www.winningadventure.com.au/logo.png",
+              "image": "https://www.winningadventure.com.au/logos/logo.png",
               "url": "https://www.winningadventure.com.au",
               "telephone": "+61-416588198",
               "priceRange": "Contact for quote",
