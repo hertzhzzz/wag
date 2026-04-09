@@ -1,11 +1,11 @@
 {
-  "model_profile": "balanced",
+  "model_profile": "inherit",
   "commit_docs": true,
-  "parallelization": false,
-  "search_gitignored": false,
+  "parallelization": true,
+  "search_gitignored": true,
   "brave_search": false,
   "firecrawl": false,
-  "exa_search": false,
+  "exa_search": true,
   "git": {
     "branching_strategy": "none",
     "phase_branch_template": "gsd/phase-{phase}-{slug}",
@@ -13,17 +13,17 @@
     "quick_branch_template": null
   },
   "workflow": {
-    "research": false,
-    "plan_check": false,
-    "verifier": false,
-    "nyquist_validation": false,
+    "research": true,
+    "plan_check": true,
+    "verifier": true,
+    "nyquist_validation": true,
     "auto_advance": false,
     "node_repair": true,
     "node_repair_budget": 2,
     "ui_phase": true,
     "ui_safety_gate": true,
-    "text_mode": false,
-    "research_before_questions": false,
+    "text_mode": true,
+    "research_before_questions": true,
     "discuss_mode": "discuss",
     "skip_discuss": false,
     "code_review": true,
@@ -34,7 +34,12 @@
   },
   "project_code": null,
   "phase_naming": "sequential",
-  "agent_skills": {},
-  "mode": "yolo",
-  "granularity": "coarse"
+  "agent_skills": {
+    "gsd-researcher": [
+      ".claude/skills/agent-reach/SKILL.md",
+      ".claude/skills/agent-reach/references/search.md"
+    ]
+  },
+  "mode": "interactive",
+  "granularity": "fine"
 }
