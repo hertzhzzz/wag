@@ -66,7 +66,7 @@ test.describe('DirectoryMap markers', () => {
   test('cluster must have white text color, NOT navy', async ({ page }) => {
     const navyTextClusters = await page.evaluate(() => {
       const clusters = document.querySelectorAll('.factory-cluster')
-      const results: Array<{ index: i; textColor: string }> = []
+      const results: Array<{ index: number; textColor: string }> = []
       clusters.forEach((el, i) => {
         const span = el.querySelector('span')
         if (!span) return
@@ -130,6 +130,6 @@ test.describe('DirectoryMap markers', () => {
     // Factory counts are like 20, 25, 30, 35, 40, 50, 55, 60, 75, 80
     // If cluster numbers are all < 20, something is wrong
     const suspiciouslySmall = clusterNumbers.filter(n => n < 15)
-    expect(suspectivelySmall, `Some cluster numbers suspiciously small (childCount-like): ${suspectivelySmall}`).toHaveLength(0)
+    expect(suspiciouslySmall, `Some cluster numbers suspiciously small (childCount-like): ${suspiciouslySmall}`).toHaveLength(0)
   })
 })
