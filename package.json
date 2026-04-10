@@ -9,7 +9,7 @@
     "build": "next build",
     "build:admin": "next build admin",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
     "@remotion/animation-utils": "^4.0.429",

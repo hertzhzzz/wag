@@ -1,0 +1,59 @@
+{
+  "jobs": 6,
+  "tasks": [
+    {
+      "id": "slide01",
+      "promptFiles": ["01-title-slide.md"],
+      "image": "imgs/01-title-slide.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "slide02",
+      "promptFiles": ["02-context-slide.md"],
+      "image": "imgs/02-context-slide.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "slide03",
+      "promptFiles": ["03-step1-license.md"],
+      "image": "imgs/03-step1-license.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "slide04",
+      "promptFiles": ["04-step2-video.md"],
+      "image": "imgs/04-step2-video.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "slide05",
+      "promptFiles": ["05-step3-certification.md"],
+      "image": "imgs/05-step3-certification.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "slide06",
+      "promptFiles": ["06-cta-slide.md"],
+      "image": "imgs/06-cta-slide.png",
+      "provider": "google",
+      "model": "gemini-3-pro-image-preview",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}
