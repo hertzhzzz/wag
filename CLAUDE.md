@@ -34,7 +34,7 @@ git push origin master  # GitHub 自动部署到 Vercel
 ## Project Structure
 
 ```
-wag/                      # 项目根目录
+wag-frontend/              # 项目根目录
 ├── app/                  # Next.js App Router [部署到 Vercel]
 │   ├── page.tsx          # 首页 (/)
 │   ├── layout.tsx        # 根布局
@@ -57,8 +57,7 @@ wag/                      # 项目根目录
 │       │   └── {article-slug}/*.png
 │       └── linkedin-post/ # 博客引用的配图（与文章同名的 date-topic 目录）
 │           └── {YYYY-MM-DD-topic}/imgs/*.png
-├── social/               # [已移至 skill 目录]
-│   └── (empty - 残留目录，可删除)
+├── social/               # [已移至 skill 目录] — 空目录，可删除
 ├── .claude/skills/wag-content-hub/  # 社交媒体内容中心 [完整内容包]
 │   ├── social/            # 全部内容：linkedin-post, x-post, facebook-post,
 │   │   │                  # cold-email, 生成脚本, prompts, 发布预览 HTML
@@ -81,7 +80,7 @@ wag/                      # 项目根目录
 
 **图片存储规则 (SINGLE SOURCE):**
 - 博客配图：存储在 `public/social/` — 这是网站静态资源，Vercel 部署用
-- 博客 MDX 引用格式：`/social/linkedin-post/{date-topic}/imgs/*.png`
+- 博客 MDX 引用格式：`/social/blog/{article-slug}/*.png`
 - AI 生图 prompt 输出到 `prompts/*.md`，生成后存入 `public/social/.../imgs/`
 
 ## API Routes
@@ -174,6 +173,22 @@ vercel --prod
 [ ] 询价表单正常工作
 ```
 
+## Debugging & Gotchas
+
+| Issue | Symptom | Solution |
+|-------|---------|----------|
+| Tailwind `bg-amber-500` fails | Button renders with transparent background | Use `bg-amber` instead (single-value custom colors don't generate numbered variants) |
+| Image 404 in blog posts | Console errors for missing `/social/linkedin-post/...` images | Blog posts must only use images from `public/social/blog/{slug}/` |
+| Duplicate section headings on About page | "Your Australian Point of Contact" appeared twice | Check `about/page.tsx` for accidental duplication after copy-paste |
+| Playwright MCP connection timeout | Extension fails to attach on first try | Refresh/re-navigate the page to retry |
+
+## Image Rules
+
+- **Blog MDX images**: Must be in `public/social/blog/{article-slug}/` — this is the single source for website images
+- **LinkedIn/social images**: Stored in `public/social/linkedin-post/{date-topic}/imgs/` — these are social media assets, NOT blog images
+- **MDX reference format**: `/social/blog/{article-slug}/image.png` (no `/public/` prefix in URLs)
+- **AI image prompts**: Output to `prompts/*.md`, generated images saved to appropriate `public/social/` subdirectory
+
 ## Design Context
 
 ### Users
@@ -209,7 +224,7 @@ vercel --prod
 
 ---
 
-*Updated: 2026-03-20*
+*Updated: 2026-04-10*
 
 <!-- GSD:profile-start -->
 ## Developer Profile
