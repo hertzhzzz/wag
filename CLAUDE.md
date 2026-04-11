@@ -21,7 +21,6 @@
 ```bash
 # 开发
 npm run dev          # 开发服务器 (localhost:3000)
-npm run dev:admin   # 管理后台 (localhost:3001)
 
 # 构建
 npm run build       # 生产构建 [必须提交前通过]
@@ -57,8 +56,9 @@ wag-frontend/              # 项目根目录
 │       │   └── {article-slug}/*.png
 │       └── linkedin-post/ # 博客引用的配图（与文章同名的 date-topic 目录）
 │           └── {YYYY-MM-DD-topic}/imgs/*.png
-├── social/               # [已移至 skill 目录] — 空目录，可删除
-├── .claude/skills/wag-content-hub/  # 社交媒体内容中心 [完整内容包]
+├── social/               # 社交媒体内容资产 (4.9M)
+│   └── linkedin-post/    # LinkedIn post 图片
+├── .claude/skills/wag-linkedin-post/  # 社交媒体内容 skill
 │   ├── social/            # 全部内容：linkedin-post, x-post, facebook-post,
 │   │   │                  # cold-email, 生成脚本, prompts, 发布预览 HTML
 │   ├── SKILL.md           # 内容 hub skill 定义
@@ -66,9 +66,9 @@ wag-frontend/              # 项目根目录
 └── vercel.json           # Vercel 配置
 ```
 
-## Content Hub (wag-content-hub)
+## Content Hub (wag-linkedin-post)
 
-**社交媒体内容已移至 skill 目录** — `~/.hermes/skills/content-generation/wag-content-hub/social/`
+**社交媒体内容 skill** — `.claude/skills/wag-linkedin-post/`
 
 **内容生命周期：**
 1. **创建内容骨架** → `python social/generate_content.py --topic "xxx" --type single-post|carousel`
