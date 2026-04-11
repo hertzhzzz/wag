@@ -97,11 +97,20 @@ Keep:
 
 ---
 
-## 5. Verification
+## 5. Actual Outcome
+
+| Change | Status | Note |
+|--------|--------|------|
+| Remove `./admin/**` and `./shared/**` from tailwind | ✅ Done | Clean |
+| Remove `@/lib/*` from tsconfig | ❌ No-op | Actually used in 5 places — would break build |
+| Fix layout.tsx import | ❌ No-op | ScrollTracker is local to layout, relative is correct |
+| Fix CLAUDE.md | ✅ Done | social/, dev:admin, skill path all corrected |
+
+## 6. Verification
 
 After changes:
-- [ ] `npm run build` passes
-- [ ] `npm run lint` passes
+- [x] `npm run build` passes
+- [ ] `npm run lint` passes (pre-existing errors, unrelated)
 - [ ] All 5 pages accessible (`/`, `/services`, `/about`, `/resources`, `/enquiry`)
-- [ ] No references to `admin/` or `shared/` in configs
-- [ ] Import style consistent (shared=`@/`, local=relative)
+- [x] No references to `admin/` or `shared/` in configs
+- [x] Import style consistent (shared=`@/`, local=relative)
