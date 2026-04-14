@@ -1,6 +1,22 @@
 import { Metadata } from 'next'
 import EnquiryForm from './EnquiryForm'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import FAQSchema from '@/components/FAQSchema'
+
+const enquiryFaqs = [
+  {
+    question: 'Is there any upfront cost to enquire?',
+    answer: 'None. The initial consultation is completely free.',
+  },
+  {
+    question: 'Do you push me towards specific suppliers?',
+    answer: 'No. The decision is entirely yours.',
+  },
+  {
+    question: 'What if I am not ready to travel yet?',
+    answer: 'Book a call to discuss — we can plan well in advance.',
+  },
+]
 
 export const metadata: Metadata = {
   title: 'Contact WAG | Request a Free Discovery Call',
@@ -36,6 +52,7 @@ export const metadata: Metadata = {
 export default function EnquiryPage() {
   return (
     <>
+      <FAQSchema faqs={enquiryFaqs} />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
         { name: 'Enquiry', url: 'https://www.winningadventure.com.au/enquiry' }
