@@ -9,9 +9,9 @@ import FAQSchema from '@/components/FAQSchema'
 import { cityFaqs, type CityFaqItem } from '@/data/faqs-city'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
-type CityKey = 'adelaide' | 'sydney' | 'melbourne' | 'perth'
+type CityKey = 'adelaide' | 'sydney' | 'melbourne' | 'perth' | 'brisbane'
 
-const VALID_CITIES: CityKey[] = ['adelaide', 'sydney', 'melbourne', 'perth']
+const VALID_CITIES: CityKey[] = ['adelaide', 'sydney', 'melbourne', 'perth', 'brisbane']
 
 interface CityContent {
   headline: string
@@ -102,6 +102,25 @@ const cityContent: Record<CityKey, CityContent> = {
     whyLocalBullet4: 'Despite fewer direct flights, Perth businesses can leverage the western gateway position for faster turnaround on both factory visit trips and ongoing supply chain communications with Chinese partners.',
     ctaHeadline: 'Ready to visit Chinese factories from Perth?',
     ctaBody: 'Perth\'s time zone advantage and port proximity make it a strategically important hub for China sourcing. Tell us what you need to source and we will arrange a focused factory visit with pre-screened suppliers and bilingual support.',
+  },
+  brisbane: {
+    headline: 'Brisbane Factory Visits to China — Guided Tours for Queensland Importers',
+    heroIntro: 'Brisbane is Queensland\'s capital and Australia\'s fourth-largest city, with direct flights to Singapore, Shanghai, and Guangzhou providing strong connectivity to Chinese manufacturing hubs. Queensland businesses in mining equipment, agriculture, and food processing source from Chinese manufacturers, and WAG helps Brisbane importers verify suppliers, negotiate terms, and manage quality — all backed by bilingual on-site support.',
+    metaDescription: 'Brisbane businesses visit Chinese factories with guided tours. WAG provides pre-screened suppliers, bilingual guides, and full logistics for Queensland importers sourcing from China.',
+    metaKeywords: [
+      'Brisbane China factory visit',
+      'Brisbane sourcing China',
+      'Queensland importer China',
+      'Shenzhen factory tour Brisbane',
+      'Brisbane AV equipment sourcing',
+      'Brisbane automotive parts China',
+    ],
+    whyLocalBullet1: 'Brisbane Airport offers direct flights to Singapore, Shanghai, and Guangzhou, giving Queensland businesses direct access to major Chinese manufacturing hubs without requiring eastern seaboard connections.',
+    whyLocalBullet2: 'Brisbane\'s strong manufacturing sector in Wacol, Richlands, and Carole Park industrial areas sources components and equipment from Chinese factories, requiring regular on-site verification of production capacity and quality systems.',
+    whyLocalBullet3: 'Queensland\'s mining equipment, agriculture, and food processing sectors rely on Chinese manufacturers for specialized machinery and components, with many businesses requiring face-to-face meetings before committing to volume orders.',
+    whyLocalBullet4: 'Brisbane\'s position as a gateway to Asia through Singapore makes it an increasingly important hub for Queensland businesses establishing long-term sourcing relationships with Chinese suppliers.',
+    ctaHeadline: 'Ready to visit Chinese factories from Brisbane?',
+    ctaBody: 'Brisbane\'s direct flight access to Asia makes factory visits highly practical for Queensland businesses. Tell us your sourcing requirements and we will arrange pre-screened factory appointments with bilingual support throughout.',
   },
 }
 
