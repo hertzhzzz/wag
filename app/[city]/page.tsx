@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { cityFaqs, type CityFaqItem } from '@/data/faqs-city'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import LocalBusinessSchema from '@/components/LocalBusinessSchema'
 
 type CityKey = 'adelaide' | 'sydney' | 'melbourne' | 'perth' | 'brisbane'
 
@@ -185,6 +186,7 @@ export default async function CityPage(
     <>
       <ServiceSchema />
       <FAQSchema faqs={faqs as CityFaqItem[]} />
+      <LocalBusinessSchema />
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: baseUrl },
