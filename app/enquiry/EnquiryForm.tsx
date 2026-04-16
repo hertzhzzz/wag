@@ -231,7 +231,7 @@ export default function EnquiryForm() {
               <CalendlyWidget />
             </div>
 
-            {/* RIGHT: Enquiry Form - Single Step */}
+            {/* RIGHT: Enquiry Form */}
             <div className={`bg-white border border-gray-200 rounded-lg p-8 ${selectedContact !== 'form' ? 'hidden lg:block' : ''}`}>
               <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Option 2</p>
               <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-2">

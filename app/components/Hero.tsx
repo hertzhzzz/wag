@@ -54,21 +54,21 @@ export default function Hero() {
 
         <h1 className="max-w-3xl">
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(40px,6vw,72px)] text-white">
-            See the factory.
+            No middleman margins.
           </span>
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(40px,6vw,72px)] text-amber">
-            Meet your supplier.
+            Face-to-face with the factory.
           </span>
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(40px,6vw,72px)] text-white">
-            Cut to the chase
+            We do the sourcing.
           </span>
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(28px,4vw,48px)] text-white/70">
-            — save 20%+ on procurement.
+            You do the business.
           </span>
         </h1>
 
         <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-10">
-          Guided China factory tours for Australian businesses — we coordinate the arrangements, you make the call.
+          Australian businesses use WAG to source directly from verified Chinese manufacturers — without paying trader markups. Free quote to start. Face-to-face access via our China team or guided factory visits.
         </p>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -76,7 +76,7 @@ export default function Hero() {
             href="/enquiry"
             className="inline-flex items-center gap-3 bg-amber text-navy px-8 py-4 font-bold hover:bg-[#d97706] transition-all duration-300 no-underline min-h-11 shadow-lg hover:shadow-xl hover:shadow-amber/20 hover:-translate-y-0.5"
           >
-            Book a Factory Tour
+            Get a Free Quote
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -85,7 +85,7 @@ export default function Hero() {
             href="#howitworks"
             className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 no-underline text-sm min-h-11 backdrop-blur-sm"
           >
-            See How It Works
+            Or arrange a factory visit →
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
