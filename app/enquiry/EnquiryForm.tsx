@@ -53,7 +53,7 @@ export default function EnquiryForm() {
   const [selectedContact, setSelectedContact] = useState<'call' | 'chat' | 'form'>('call')
   const [formData, setFormData] = useState({
     fullName: '', companyName: '', email: '', phone: '',
-    industry: '', customIndustry: '', lookingFor: '',
+    industry: '', customIndustry: '', sourcingType: '', lookingFor: '',
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitted, setSubmitted] = useState(false)
@@ -76,6 +76,7 @@ export default function EnquiryForm() {
     if (formData.industry === 'other' && !formData.customIndustry.trim()) {
       newErrors.customIndustry = 'Please specify your industry'
     }
+    if (!formData.sourcingType.trim()) newErrors.sourcingType = 'Please select an option'
     if (!formData.lookingFor.trim()) newErrors.lookingFor = 'Please describe what you need'
     return newErrors
   }
@@ -144,10 +145,10 @@ export default function EnquiryForm() {
             <span className="text-[#0F2D5E] font-semibold">Enquiry</span>
           </nav>
           <h1 className="font-serif font-bold text-[clamp(1.75rem,3vw,2.5rem)] text-[#0F2D5E] leading-tight mb-3">
-            Connect With Verified Chinese Suppliers —<br className="hidden sm:block" /> We&apos;ve Already Vetted Them
+            Your Direct Line to China&apos;s Best Factories —<br className="hidden sm:block" /> No Alibaba Guesswork Required
           </h1>
           <p className="text-base text-gray-600 max-w-[560px]">
-            Tell us what you need. We&apos;ll be in touch within 4 business hours and begin matching you with the right Chinese suppliers.
+            We connect Australian businesses with ITC Electronics — a publicly listed Chinese manufacturer — and vet every supplier before you sign anything. Tell us what you need.
           </p>
         </div>
       </section>
@@ -356,6 +357,39 @@ export default function EnquiryForm() {
                         />
                       )}
 
+                      <div>
+                        <p className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
+                          Do you already have a supplier? <span className="text-[#F59E0B]">*</span>
+                        </p>
+                        <div className="flex flex-col gap-2.5">
+                          {[
+                            { value: 'new', label: 'No — I\'m looking for a supplier from scratch' },
+                            { value: 'existing', label: 'Yes — I have a supplier but want to improve or compare' },
+                            { value: 'oem', label: 'I\'m working with a supplier and want OEM/custom products' },
+                          ].map((option) => (
+                            <label
+                              key={option.value}
+                              className={`flex items-start gap-3 p-3 border rounded cursor-pointer transition-colors ${
+                                formData.sourcingType === option.value
+                                  ? 'border-[#0F2D5E] bg-[#0F2D5E]/5'
+                                  : 'border-gray-200 hover:border-gray-300'
+                              }`}
+                            >
+                              <input
+                                type="radio"
+                                name="sourcingType"
+                                value={option.value}
+                                checked={formData.sourcingType === option.value}
+                                onChange={(e) => setFormData({...formData, sourcingType: e.target.value})}
+                                className="mt-0.5 accent-[#0F2D5E]"
+                              />
+                              <span className="text-sm text-[#0F2D5E]">{option.label}</span>
+                            </label>
+                          ))}
+                        </div>
+                        {errors.sourcingType && <p className="mt-1.5 text-xs text-red-500">{errors.sourcingType}</p>}
+                      </div>
+
                       <KeyboardAwareTextarea
                         id="lookingFor"
                         label="What are you looking for?"
@@ -376,8 +410,8 @@ export default function EnquiryForm() {
                       {/* Trust stats */}
                       <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-100">
                         <div className="text-center">
-                          <p className="text-lg font-bold text-[#0F2D5E]">500+</p>
-                          <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Verified</p>
+                          <p className="text-lg font-bold text-[#0F2D5E]">ITC</p>
+                          <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Listed Partner</p>
                         </div>
                         <div className="text-center border-x border-gray-100">
                           <p className="text-lg font-bold text-[#0F2D5E]">4hrs</p>
