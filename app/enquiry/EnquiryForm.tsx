@@ -128,6 +128,28 @@ export default function EnquiryForm() {
       <section className="py-12 px-4 sm:px-8">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-10">
 
+          {/* What happens next — moved above form */}
+          <div className="bg-[#0F2D5E] text-white rounded-lg p-8">
+            <h3 className="font-serif font-bold text-lg mb-6">Here&apos;s what happens after you reach out</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                ['1', 'We get in touch', 'Within 4 business hours'],
+                ['2', 'We shortlist suppliers', '2-3 verified factories'],
+                ['3', 'You visit them in China', 'Full tour arranged'],
+              ].map(([n, title, sub]) => (
+                <div key={n} className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#F59E0B] text-[#0F2D5E] text-sm font-bold flex items-center justify-center flex-shrink-0">
+                    {n}
+                  </div>
+                  <div>
+                    <strong className="block text-sm font-semibold mb-1">{title}</strong>
+                    <span className="text-[0.8125rem] text-white/70">{sub}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Mobile tab selector */}
           <div className="lg:hidden flex gap-2 p-1 bg-gray-100 rounded-lg">
             {([
@@ -341,28 +363,6 @@ export default function EnquiryForm() {
                   </div>
                 </form>
               )}
-            </div>
-          </div>
-
-          {/* What happens next */}
-          <div className="bg-[#0F2D5E] text-white rounded-lg p-8">
-            <h3 className="font-serif font-bold text-lg mb-6">Here&apos;s what happens after you reach out</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                ['1', 'We get in touch', 'Within 4 business hours'],
-                ['2', 'We shortlist suppliers', '2-3 verified factories'],
-                ['3', 'You visit them in China', 'Full tour arranged'],
-              ].map(([n, title, sub]) => (
-                <div key={n} className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#F59E0B] text-[#0F2D5E] text-sm font-bold flex items-center justify-center flex-shrink-0">
-                    {n}
-                  </div>
-                  <div>
-                    <strong className="block text-sm font-semibold mb-1">{title}</strong>
-                    <span className="text-[0.8125rem] text-white/70">{sub}</span>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
