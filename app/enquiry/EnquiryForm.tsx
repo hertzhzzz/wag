@@ -128,25 +128,70 @@ export default function EnquiryForm() {
       <section className="py-12 px-4 sm:px-8">
         <div className="max-w-[1200px] mx-auto flex flex-col gap-10">
 
-          {/* What happens next — moved above form */}
+          {/* What happens next — two paths */}
           <div className="bg-[#0F2D5E] text-white rounded-lg p-8">
-            <h3 className="font-serif font-bold text-lg mb-6">Here&apos;s what happens after you reach out</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                ['1', 'We get in touch', 'Within 4 business hours'],
-                ['2', 'We shortlist suppliers', '2-3 verified factories'],
-                ['3', 'You visit them in China', 'Full tour arranged'],
-              ].map(([n, title, sub]) => (
-                <div key={n} className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#F59E0B] text-[#0F2D5E] text-sm font-bold flex items-center justify-center flex-shrink-0">
-                    {n}
+            <h3 className="font-serif font-bold text-lg mb-8 text-center">Here&apos;s what happens after you reach out</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+              {/* Path 1: Visit in China */}
+              <div className="flex flex-col gap-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-[#F59E0B] text-[#0F2D5E] text-sm font-bold flex items-center justify-center flex-shrink-0">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
                   </div>
-                  <div>
-                    <strong className="block text-sm font-semibold mb-1">{title}</strong>
-                    <span className="text-[0.8125rem] text-white/70">{sub}</span>
-                  </div>
+                  <p className="text-sm font-semibold text-white">Path 1 — Visit Factories in China</p>
                 </div>
-              ))}
+                {[
+                  ['We get in touch', 'Within 4 business hours'],
+                  ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
+                  ['We plan your trip', 'Flights, hotel, and factory schedule arranged'],
+                  ['You visit in person', 'Guided tours, technical meetings, quality inspection'],
+                  ['Production & shipping', 'We monitor production and ship to your door'],
+                ].map(([title, sub], i) => (
+                  <div key={i} className="flex gap-3">
+                    <div className="w-5 h-5 rounded-full bg-white/20 text-[#F59E0B] text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                      {i + 1}
+                    </div>
+                    <div>
+                      <strong className="block text-sm font-semibold mb-0.5">{title}</strong>
+                      <span className="text-[0.8125rem] text-white/70">{sub}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Divider */}
+              <div className="hidden md:flex items-center justify-center">
+                <div className="w-px h-full bg-white/20 min-h-[200px]" />
+              </div>
+
+              {/* Path 2: Remote / No travel */}
+              <div className="flex flex-col gap-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-white/20 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </div>
+                  <p className="text-sm font-semibold text-white">Path 2 — Remote Verification</p>
+                </div>
+                {[
+                  ['We get in touch', 'Within 4 business hours'],
+                  ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
+                  ['We send you reports', 'Video walkthroughs, photos, and sample quotes'],
+                  ['You review from here', 'No travel needed — full transparency from Australia'],
+                  ['We arrange shipping', 'Production monitoring and delivery managed end-to-end'],
+                ].map(([title, sub], i) => (
+                  <div key={i} className="flex gap-3">
+                    <div className="w-5 h-5 rounded-full bg-white/20 text-white/70 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                      {i + 1}
+                    </div>
+                    <div>
+                      <strong className="block text-sm font-semibold mb-0.5">{title}</strong>
+                      <span className="text-[0.8125rem] text-white/70">{sub}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
             </div>
           </div>
 
