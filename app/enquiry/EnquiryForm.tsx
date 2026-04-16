@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { Lock, MapPin, Mail, CheckCircle, DollarSign, Building2, ArrowLeft, ArrowRight } from 'lucide-react'
+import { Lock, MapPin, Mail, CheckCircle, DollarSign, Building2 } from 'lucide-react'
 import { KeyboardAwareInput } from './components/KeyboardAwareInput'
 import { KeyboardAwareTextarea } from './components/KeyboardAwareTextarea'
 
@@ -49,17 +49,16 @@ export default function EnquiryForm() {
     return () => window.removeEventListener('error', handleError)
   }, [])
 
-  const [step, setStep] = useState(1)
-  const [selectedContact, setSelectedContact] = useState<'call' | 'form'>('call')
+  const [selectedContact, setSelectedContact] = useState<'call' | 'form'>('form')
   const [formData, setFormData] = useState({
-    fullName: '', companyName: '', email: '', phone: '',
+    fullName: '', companyName: '', email: '',
     industry: '', customIndustry: '', sourcingType: '', lookingFor: '',
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
 
-  const validateStep1 = () => {
+  const validate = () => {
     const newErrors: Record<string, string> = {}
     if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required'
     if (!formData.email.trim()) newErrors.email = 'Email is required'
@@ -69,36 +68,9 @@ export default function EnquiryForm() {
     return newErrors
   }
 
-  const validateStep2 = () => {
-    const newErrors: Record<string, string> = {}
-    if (!formData.companyName.trim()) newErrors.companyName = 'Company name is required'
-    if (!formData.industry.trim()) newErrors.industry = 'Please select your industry'
-    if (formData.industry === 'other' && !formData.customIndustry.trim()) {
-      newErrors.customIndustry = 'Please specify your industry'
-    }
-    if (!formData.sourcingType.trim()) newErrors.sourcingType = 'Please select an option'
-    if (!formData.lookingFor.trim()) newErrors.lookingFor = 'Please describe what you need'
-    return newErrors
-  }
-
-  const handleNext = () => {
-    const newErrors = validateStep1()
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors)
-    } else {
-      setErrors({})
-      setStep(2)
-    }
-  }
-
-  const handleBack = () => {
-    setStep(1)
-    setErrors({})
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const newErrors = validateStep2()
+    const newErrors = validate()
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors)
       return
@@ -193,26 +165,12 @@ export default function EnquiryForm() {
               <CalendlyWidget />
             </div>
 
-            {/* RIGHT: Enquiry Form - 2 Step */}
+            {/* RIGHT: Enquiry Form - Single Step */}
             <div className={`bg-white border border-gray-200 rounded-lg p-8 ${selectedContact !== 'form' ? 'hidden lg:block' : ''}`}>
               <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Option 2</p>
               <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-2">
                 Submit Your Sourcing Enquiry
               </h2>
-
-              {/* Progress indicator */}
-              <div className="flex items-center gap-2 mb-6 pb-6 border-b border-gray-200">
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                  step >= 1 ? 'bg-[#0F2D5E] text-white' : 'bg-gray-200 text-gray-400'
-                }`}>1</div>
-                <div className={`flex-1 h-1 ${step >= 2 ? 'bg-[#0F2D5E]' : 'bg-gray-200'}`} />
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                  step >= 2 ? 'bg-[#0F2D5E] text-white' : 'bg-gray-200 text-gray-400'
-                }`}>2</div>
-                <span className="text-sm text-gray-500 ml-2">
-                  {step === 1 ? 'Step 1: Contact' : 'Step 2: Details'}
-                </span>
-              </div>
 
               {submitted ? (
                 <div className="text-center py-12">
@@ -231,195 +189,156 @@ export default function EnquiryForm() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="pb-20 md:pb-0">
-                  {/* Step 1: Contact Info */}
-                  {step === 1 && (
-                    <div className="flex flex-col gap-5">
-                      <KeyboardAwareInput
-                        id="fullName"
-                        label="Full Name"
-                        required
-                        value={formData.fullName}
-                        onChange={(e) => setFormData({...formData, fullName: e.target.value})}
-                        placeholder="Jane Smith"
-                        autoComplete="name"
-                        error={errors.fullName}
-                      />
+                  <div className="flex flex-col gap-5">
+                    <KeyboardAwareInput
+                      id="fullName"
+                      label="Full Name"
+                      required
+                      value={formData.fullName}
+                      onChange={(e) => setFormData({...formData, fullName: e.target.value})}
+                      placeholder="Jane Smith"
+                      autoComplete="name"
+                      error={errors.fullName}
+                    />
 
-                      <KeyboardAwareInput
-                        id="email"
-                        type="email"
-                        label="Email Address"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        placeholder="jane@company.com.au"
-                        autoComplete="email"
-                        error={errors.email}
-                      />
+                    <KeyboardAwareInput
+                      id="email"
+                      type="email"
+                      label="Email Address"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      placeholder="jane@company.com.au"
+                      autoComplete="email"
+                      error={errors.email}
+                    />
 
-                      <KeyboardAwareInput
-                        id="phone"
-                        type="tel"
-                        label="Phone"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        placeholder="+61 4XX XXX XXX"
-                        autoComplete="tel"
-                      />
+                    <KeyboardAwareInput
+                      id="companyName"
+                      label="Company Name"
+                      value={formData.companyName}
+                      onChange={(e) => setFormData({...formData, companyName: e.target.value})}
+                      placeholder="Acme Pty Ltd"
+                      autoComplete="organization"
+                    />
 
-                      <button
-                        type="button"
-                        onClick={handleNext}
-                        className="w-full py-3.5 px-6 bg-[#0F2D5E] text-white font-semibold hover:bg-[#0a2148] active:bg-[#071a3a] transition-colors flex items-center justify-center gap-2"
+                    <div>
+                      <label htmlFor="industry" className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5">
+                        Industry / Sector
+                      </label>
+                      <select
+                        id="industry"
+                        value={formData.industry}
+                        onChange={(e) => setFormData({...formData, industry: e.target.value})}
+                        className={`${inputClass('industry')} pr-10 appearance-none bg-white cursor-pointer`}
                       >
-                        Continue <ArrowRight size={18} />
-                      </button>
+                        <option value="">Select your industry...</option>
+                        <option value="aesthetics">Aesthetics &amp; Cosmetics</option>
+                        <option value="drones">Agricultural Drones</option>
+                        <option value="chemical">Chemical &amp; Industrial</option>
+                        <option value="fashion">Fashion &amp; Apparel</option>
+                        <option value="food">Food &amp; Beverage</option>
+                        <option value="healthcare">Healthcare &amp; Medical</option>
+                        <option value="construction">Construction &amp; Building</option>
+                        <option value="technology">Technology &amp; Electronics</option>
+                        <option value="furniture">Furniture &amp; Homewares</option>
+                        <option value="cbd">CBD Retail &amp; Commercial</option>
+                        <option value="property">Industrial Property</option>
+                        <option value="av">AV &amp; Smart Systems</option>
+                        <option value="other">Other (please specify)</option>
+                      </select>
+                      {errors.industry && <p className="mt-1 text-xs text-red-500">{errors.industry}</p>}
                     </div>
-                  )}
 
-                  {/* Step 2: Company Details */}
-                  {step === 2 && (
-                    <div className="flex flex-col gap-5">
-                      <button
-                        type="button"
-                        onClick={handleBack}
-                        className="flex items-center gap-1 text-sm text-gray-500 hover:text-[#0F2D5E] transition-colors w-fit"
-                      >
-                        <ArrowLeft size={16} /> Back to contact
-                      </button>
-
+                    {formData.industry === 'other' && (
                       <KeyboardAwareInput
-                        id="companyName"
-                        label="Company Name"
-                        required
-                        value={formData.companyName}
-                        onChange={(e) => setFormData({...formData, companyName: e.target.value})}
-                        placeholder="Acme Pty Ltd"
-                        autoComplete="organization"
-                        error={errors.companyName}
+                        type="text"
+                        label="Specify Industry"
+                        value={formData.customIndustry}
+                        onChange={(e) => setFormData({...formData, customIndustry: e.target.value})}
+                        placeholder="Enter your industry..."
                       />
+                    )}
 
-                      <div>
-                        <label htmlFor="industry" className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5">
-                          Industry / Sector <span className="text-[#F59E0B]">*</span>
-                        </label>
-                        <select
-                          id="industry"
-                          value={formData.industry}
-                          onChange={(e) => setFormData({...formData, industry: e.target.value})}
-                          className={`${inputClass('industry')} pr-10 appearance-none bg-white cursor-pointer`}
-                        >
-                          <option value="">Select your industry...</option>
-                          <option value="aesthetics">Aesthetics &amp; Cosmetics</option>
-                          <option value="drones">Agricultural Drones</option>
-                          <option value="chemical">Chemical &amp; Industrial</option>
-                          <option value="fashion">Fashion &amp; Apparel</option>
-                          <option value="food">Food &amp; Beverage</option>
-                          <option value="healthcare">Healthcare &amp; Medical</option>
-                          <option value="construction">Construction &amp; Building</option>
-                          <option value="technology">Technology &amp; Electronics</option>
-                          <option value="furniture">Furniture &amp; Homewares</option>
-                          <option value="cbd">CBD Retail &amp; Commercial</option>
-                          <option value="property">Industrial Property</option>
-                          <option value="av">AV &amp; Smart Systems</option>
-                          <option value="other">Other (please specify)</option>
-                        </select>
-                        {errors.industry && <p className="mt-1 text-xs text-red-500">{errors.industry}</p>}
+                    <div>
+                      <p className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
+                        Do you already have a supplier?
+                      </p>
+                      <div className="flex flex-col gap-2.5">
+                        {[
+                          { value: 'new', label: 'No — I\'m looking for a supplier from scratch' },
+                          { value: 'existing', label: 'Yes — I have a supplier but want to improve or compare' },
+                          { value: 'oem', label: 'I\'m working with a supplier and want OEM/custom products' },
+                        ].map((option) => (
+                          <label
+                            key={option.value}
+                            className={`flex items-start gap-3 p-3 border rounded cursor-pointer transition-colors ${
+                              formData.sourcingType === option.value
+                                ? 'border-[#0F2D5E] bg-[#0F2D5E]/5'
+                                : 'border-gray-200 hover:border-gray-300'
+                            }`}
+                          >
+                            <input
+                              type="radio"
+                              name="sourcingType"
+                              value={option.value}
+                              checked={formData.sourcingType === option.value}
+                              onChange={(e) => setFormData({...formData, sourcingType: e.target.value})}
+                              className="mt-0.5 accent-[#0F2D5E]"
+                            />
+                            <span className="text-sm text-[#0F2D5E]">{option.label}</span>
+                          </label>
+                        ))}
                       </div>
+                      {errors.sourcingType && <p className="mt-1.5 text-xs text-red-500">{errors.sourcingType}</p>}
+                    </div>
 
-                      {formData.industry === 'other' && (
-                        <KeyboardAwareInput
-                          type="text"
-                          label="Specify Industry"
-                          value={formData.customIndustry}
-                          onChange={(e) => setFormData({...formData, customIndustry: e.target.value})}
-                          placeholder="Enter your industry..."
-                          error={errors.customIndustry}
-                        />
-                      )}
+                    <KeyboardAwareTextarea
+                      id="lookingFor"
+                      label="What are you looking for?"
+                      value={formData.lookingFor}
+                      onChange={(e) => setFormData({...formData, lookingFor: e.target.value})}
+                      placeholder="Describe your product, quantity, quality requirements..."
+                      rows={4}
+                    />
 
-                      <div>
-                        <p className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
-                          Do you already have a supplier? <span className="text-[#F59E0B]">*</span>
-                        </p>
-                        <div className="flex flex-col gap-2.5">
-                          {[
-                            { value: 'new', label: 'No — I\'m looking for a supplier from scratch' },
-                            { value: 'existing', label: 'Yes — I have a supplier but want to improve or compare' },
-                            { value: 'oem', label: 'I\'m working with a supplier and want OEM/custom products' },
-                          ].map((option) => (
-                            <label
-                              key={option.value}
-                              className={`flex items-start gap-3 p-3 border rounded cursor-pointer transition-colors ${
-                                formData.sourcingType === option.value
-                                  ? 'border-[#0F2D5E] bg-[#0F2D5E]/5'
-                                  : 'border-gray-200 hover:border-gray-300'
-                              }`}
-                            >
-                              <input
-                                type="radio"
-                                name="sourcingType"
-                                value={option.value}
-                                checked={formData.sourcingType === option.value}
-                                onChange={(e) => setFormData({...formData, sourcingType: e.target.value})}
-                                className="mt-0.5 accent-[#0F2D5E]"
-                              />
-                              <span className="text-sm text-[#0F2D5E]">{option.label}</span>
-                            </label>
-                          ))}
-                        </div>
-                        {errors.sourcingType && <p className="mt-1.5 text-xs text-red-500">{errors.sourcingType}</p>}
+                    {errors.submit && (
+                      <div className="p-3 bg-red-50 border border-red-200 rounded text-red-600 text-sm">
+                        {errors.submit}
                       </div>
+                    )}
 
-                      <KeyboardAwareTextarea
-                        id="lookingFor"
-                        label="What are you looking for?"
-                        required
-                        value={formData.lookingFor}
-                        onChange={(e) => setFormData({...formData, lookingFor: e.target.value})}
-                        placeholder="Describe your product, quantity, quality requirements..."
-                        rows={4}
-                        error={errors.lookingFor}
-                      />
-
-                      {errors.submit && (
-                        <div className="p-3 bg-red-50 border border-red-200 rounded text-red-600 text-sm">
-                          {errors.submit}
-                        </div>
-                      )}
-
-                      {/* Trust stats */}
-                      <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-100">
-                        <div className="text-center">
-                          <p className="text-lg font-bold text-[#0F2D5E]">ITC</p>
-                          <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Listed Partner</p>
-                        </div>
-                        <div className="text-center border-x border-gray-100">
-                          <p className="text-lg font-bold text-[#0F2D5E]">4hrs</p>
-                          <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Response</p>
-                        </div>
-                        <div className="text-center">
-                          <p className="text-lg font-bold text-[#0F2D5E]">$0</p>
-                          <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Upfront</p>
-                        </div>
+                    {/* Trust stats */}
+                    <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-100">
+                      <div className="text-center">
+                        <p className="text-lg font-bold text-[#0F2D5E]">ITC</p>
+                        <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Listed Partner</p>
                       </div>
-
-                      {/* Sticky submit button for mobile */}
-                      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 md:relative md:bottom-auto md:p-0 md:bg-transparent md:border-0">
-                        <button
-                          type="submit"
-                          disabled={submitting}
-                          className="w-full py-4 md:py-3.5 px-6 bg-[#0F2D5E] text-white font-semibold hover:bg-[#0a2148] active:bg-[#071a3a] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                        >
-                          {submitting ? 'Sending…' : 'Submit Enquiry →'}
-                        </button>
-                        <p className="text-center text-xs text-gray-400 flex items-center justify-center gap-1.5 mt-2 md:mt-0">
-                          <Lock size={12} />
-                          We&apos;ll be in touch within 4 business hours.
-                        </p>
+                      <div className="text-center border-x border-gray-100">
+                        <p className="text-lg font-bold text-[#0F2D5E]">4hrs</p>
+                        <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Response</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-lg font-bold text-[#0F2D5E]">$0</p>
+                        <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Upfront</p>
                       </div>
                     </div>
-                  )}
+
+                    {/* Sticky submit button for mobile */}
+                    <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 md:relative md:bottom-auto md:p-0 md:bg-transparent md:border-0">
+                      <button
+                        type="submit"
+                        disabled={submitting}
+                        className="w-full py-4 md:py-3.5 px-6 bg-[#0F2D5E] text-white font-semibold hover:bg-[#0a2148] active:bg-[#071a3a] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                      >
+                        {submitting ? 'Sending…' : 'Submit Enquiry →'}
+                      </button>
+                      <p className="text-center text-xs text-gray-400 flex items-center justify-center gap-1.5 mt-2 md:mt-0">
+                        <Lock size={12} />
+                        We&apos;ll be in touch within 4 business hours.
+                      </p>
+                    </div>
+                  </div>
                 </form>
               )}
             </div>
