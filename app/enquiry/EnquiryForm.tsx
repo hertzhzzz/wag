@@ -120,7 +120,7 @@ export default function EnquiryForm() {
             Your Direct Line to China&apos;s Best Factories —<br className="hidden sm:block" /> No Alibaba Guesswork Required
           </h1>
           <p className="text-base text-gray-600 max-w-[560px]">
-            We connect Australian businesses with ITC Electronics — a publicly listed Chinese manufacturer — and vet every supplier before you sign anything. Tell us what you need.
+            We connect Australian businesses with verified Chinese manufacturers — and vet every supplier before you sign anything. Tell us what you need.
           </p>
         </div>
       </section>
@@ -311,7 +311,7 @@ export default function EnquiryForm() {
                     {/* Trust stats */}
                     <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-100">
                       <div className="text-center">
-                        <p className="text-lg font-bold text-[#0F2D5E]">ITC</p>
+                        <p className="text-lg font-bold text-[#0F2D5E]">Verified</p>
                         <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Listed Partner</p>
                       </div>
                       <div className="text-center border-x border-gray-100">
