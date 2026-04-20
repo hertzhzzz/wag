@@ -43,26 +43,26 @@ export default function Hero() {
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-amber/5 to-transparent skew-x-12" />
 
       {/* Text Content - Left Side with improved hierarchy */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
         {/* Brand tag - more refined */}
         <div className="flex items-center gap-3 mb-6">
           <span className="h-px w-8 bg-amber/70" />
           <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/70">
-            Adelaide · Australia
+            Australia
           </p>
         </div>
 
-        <h1 className="max-w-3xl">
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(40px,6vw,72px)] text-white">
+        <h1 className="max-w-[780px]">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white">
             No middleman margins.
           </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(40px,6vw,72px)] text-amber">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(32px,4.8vw,58px)] text-amber">
             Face-to-face with the factory.
           </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(40px,6vw,72px)] text-white">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white">
             We do the sourcing.
           </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(28px,4vw,48px)] text-white/70">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(22px,3.2vw,38px)] text-white/70">
             You do the business.
           </span>
         </h1>
