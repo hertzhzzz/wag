@@ -11,6 +11,7 @@ export default function Hero() {
           alt="Chinese manufacturing facility with Australian business team"
           fill
           priority={true}
+          loading="eager"
           fetchPriority="high"
           sizes="(max-width: 768px) 100vw, 1200px"
           className="object-cover"
