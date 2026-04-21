@@ -149,6 +149,10 @@ export async function generateMetadata(
     title: content.headline,
     description: content.metaDescription,
     keywords: content.metaKeywords,
+    robots: {
+      index: false,
+      follow: true,
+    },
     openGraph: {
       title: content.headline,
       description: content.metaDescription,
