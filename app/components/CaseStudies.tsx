@@ -16,6 +16,8 @@ const caseStudies = [
     location: 'Melbourne importer',
     product: 'Audio equipment',
     units: '5,000 units',
+    quote: 'Saved 40% on our first order. The factory visit was worth every cent.',
+    quoteAttribution: 'Melbourne importer — audio equipment sector',
   },
   {
     industry: 'LED Display Systems',
@@ -32,6 +34,8 @@ const caseStudies = [
     location: 'Sydney importer',
     product: 'LED display panels',
     units: '12,000 units',
+    quote: 'The inspection report alone was worth the trip. We knew exactly what we were paying for.',
+    quoteAttribution: 'Sydney importer — LED display sector',
   },
   {
     industry: 'Auto Parts & Components',
@@ -48,6 +52,8 @@ const caseStudies = [
     location: 'Adelaide importer',
     product: 'Auto parts',
     units: '8,400 units',
+    quote: 'WAG caught the problem before it left China. A recall would have been catastrophic.',
+    quoteAttribution: 'Adelaide importer — automotive sector',
   },
 ]
 
@@ -125,6 +131,19 @@ export default function CaseStudies() {
                 <div className="mt-4 pt-4 border-t border-navy/10 flex items-center justify-between text-xs text-navy/40">
                   <span>{study.location}</span>
                   <span>{study.units}</span>
+                </div>
+
+                {/* Representative quote */}
+                <div className="mt-4 pt-4 border-t border-navy/10">
+                  <div className="flex items-center gap-0.5 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} width="11" height="11" viewBox="0 0 12 12" fill="#F59E0B">
+                        <path d="M6 1l1.35 2.73 3.02.44-2.19 2.13.52 3.01L6 8.05l-2.7 1.26.52-3.01L1.63 4.17l3.02-.44z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-xs text-navy/60 italic leading-relaxed">"{study.quote}"</p>
+                  <p className="text-[10px] text-navy/30 mt-1 uppercase tracking-wider">{study.quoteAttribution}</p>
                 </div>
               </div>
             </div>
