@@ -145,7 +145,8 @@ export default function RootLayout({
                 "https://www.linkedin.com/company/winning-adventure-global",
                 "https://www.facebook.com/winningadventureglobal",
                 "https://www.youtube.com/@winningadventure",
-                "https://www.instagram.com/winningadventureglobal"
+                "https://www.instagram.com/winningadventureglobal",
+                "https://share.google/qQBUJkAAn1ZChq7Mc"
               ]
             })
           }}
