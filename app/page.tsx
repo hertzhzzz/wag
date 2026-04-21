@@ -7,6 +7,7 @@ import HowItWorks from './components/HowItWorks'
 import TwoWaysAccess from './components/TwoWaysAccess'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
+import CaseStudies from '@/components/CaseStudies'
 import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
 
@@ -59,6 +60,7 @@ export default function Home() {
       <FAQSchema faqs={homepageFaqs} />
       <Hero />
       <TwoWaysAccess />
+      <CaseStudies />
       <HowItWorks />
       <DirectorySection />
       <FAQ faqs={homepageFaqs} />
