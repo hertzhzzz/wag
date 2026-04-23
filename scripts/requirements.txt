@@ -1,0 +1,9 @@
+# WAG SEO Workflow Dependencies
+
+# Google APIs
+google-api-python-client>=2.100.0
+google-analytics-data>=0.18.0
+google-auth>=2.20.0
+
+# DataForSEO (if using REST API directly instead of MCP)
+requests>=2.31.0

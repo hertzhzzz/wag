@@ -1,0 +1,399 @@
+{
+  "timestamp": "2026-04-23T10:10:21.629748",
+  "domain": "winningadventure.com.au",
+  "overall_score": 0,
+  "keywords_ranked": 41,
+  "top_performing_keywords": [
+    {
+      "query": "china sourcing agent australia",
+      "impressions": 41,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 40.21951219512195,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "china sourcing tour",
+      "impressions": 30,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 12.8,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "china sourcing services",
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 71.88235294117646,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "visiting chinese factories",
+      "impressions": 17,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 12.294117647058824,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "china business tours",
+      "impressions": 15,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 62.2,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "china sourcing company",
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 57.22222222222222,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "chinese wholesalers australia",
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 77.88888888888889,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "how to buy from chinese manufacturers",
+      "impressions": 9,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 51.333333333333336,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "china business trip package",
+      "impressions": 7,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 69.57142857142857,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "winning adventure global",
+      "impressions": 5,
+      "clicks": 2,
+      "ctr": 0.4,
+      "position": 1,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "chinese factory",
+      "impressions": 5,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 29.8,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "china sourcing",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 66.66666666666667,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "china sourcing service",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 73,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "exports",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 10.666666666666666,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "importing australia",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 67,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "winning",
+      "impressions": 3,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 7,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "chinese sourcing agent",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 62,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "chinese travel agency",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 74,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "export",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 9,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "query": "import and export business",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 6,
+      "page": "",
+      "date": "2026-03-26 to 2026-04-23"
+    }
+  ],
+  "content_gaps": [],
+  "technical_issues": [],
+  "recommendations": [],
+  "geo_score": 0,
+  "top_pages": [
+    {
+      "page_path": "/",
+      "page_title": "China Sourcing Company | Australian Business Guide",
+      "sessions": 152,
+      "users": 76,
+      "bounce_rate": 0.40131578947368424,
+      "avg_session_duration": 181.0170435723684,
+      "page_views": 243,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/about",
+      "page_title": "About Winning Adventure Global | Adelaide China Sourcing | Winning Adventure Global",
+      "sessions": 33,
+      "users": 20,
+      "bounce_rate": 0.06060606060606061,
+      "avg_session_duration": 166.81990887878788,
+      "page_views": 50,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/resources/how-to-import-from-china",
+      "page_title": "How to Import from China: A Practical Guide for Australian Businesses | Winning Adventure Global",
+      "sessions": 25,
+      "users": 25,
+      "bounce_rate": 0.92,
+      "avg_session_duration": 31.34799556,
+      "page_views": 36,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/resources",
+      "page_title": "China Sourcing Resources | Factory Guide for Australians | Winning Adventure Global",
+      "sessions": 21,
+      "users": 8,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 161.62126714285714,
+      "page_views": 44,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/services",
+      "page_title": "China Factory Visit Services | Supplier Verification | Winning Adventure Global",
+      "sessions": 21,
+      "users": 15,
+      "bounce_rate": 0.09523809523809523,
+      "avg_session_duration": 124.9590661904762,
+      "page_views": 24,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/enquiry",
+      "page_title": "Contact WAG | Request a Free Discovery Call | Winning Adventure Global",
+      "sessions": 18,
+      "users": 7,
+      "bounce_rate": 0.05555555555555555,
+      "avg_session_duration": 311.0823516111111,
+      "page_views": 46,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/resources/verify-chinese-supplier",
+      "page_title": "How to Verify a Chinese Supplier: Real Factory vs Trading Company | Winning Adventure Global",
+      "sessions": 11,
+      "users": 7,
+      "bounce_rate": 0.2727272727272727,
+      "avg_session_duration": 234.2589566363636,
+      "page_views": 25,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/",
+      "page_title": "About Winning Adventure Global | Adelaide China Sourcing | Winning Adventure Global",
+      "sessions": 9,
+      "users": 9,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 26.04761311111111,
+      "page_views": 0,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/",
+      "page_title": "China Sourcing Resources | Factory Guide for Australians | Winning Adventure Global",
+      "sessions": 7,
+      "users": 3,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 61.90200171428571,
+      "page_views": 0,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/",
+      "page_title": "China Factory Visit Services | Supplier Verification | Winning Adventure Global",
+      "sessions": 5,
+      "users": 5,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 8.2750774,
+      "page_views": 0,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/",
+      "page_title": "Contact WAG | Request a Free Discovery Call | Winning Adventure Global",
+      "sessions": 5,
+      "users": 2,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 22.7261186,
+      "page_views": 0,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/enquiry",
+      "page_title": "Contact WAG | Request a Consultation | Winning Adventure Global",
+      "sessions": 5,
+      "users": 3,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 603.7628746,
+      "page_views": 9,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/resources/bulk-procurement-china-guide",
+      "page_title": "How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order | Winning Adventure Global",
+      "sessions": 5,
+      "users": 5,
+      "bounce_rate": 0.2,
+      "avg_session_duration": 84.8661388,
+      "page_views": 5,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/resources/china-business-sourcing-tour",
+      "page_title": "How to Plan a China Business Sourcing Tour That Actually Pays Off | Winning Adventure Global",
+      "sessions": 4,
+      "users": 3,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 222.14851625,
+      "page_views": 10,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/resources/what-happens-when-verification-is-skipped",
+      "page_title": "What Happens When You Skip Supplier Verification: A Real Story | Winning Adventure Global",
+      "sessions": 4,
+      "users": 2,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 182.41943675,
+      "page_views": 6,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/",
+      "page_title": "Contact WAG | Request a Consultation | Winning Adventure Global",
+      "sessions": 3,
+      "users": 2,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 42.56549866666666,
+      "page_views": 0,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/resources/china-factory-tour-guide",
+      "page_title": "7 Things I Learned Visiting Chinese Factories for 8 Years — What Australian Buyers Must Know Before They Board the Plane | Winning Adventure Global",
+      "sessions": 3,
+      "users": 3,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 221.69435099999998,
+      "page_views": 3,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/resources/how-to-verify-chinese-factories-1688",
+      "page_title": "How to Verify Chinese Factories on 1688 Before Paying a Deposit | Winning Adventure Global",
+      "sessions": 3,
+      "users": 3,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 945.4197106666667,
+      "page_views": 11,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/adelaide",
+      "page_title": "Adelaide Businesses Source Smarter with China Factory Visits | Winning Adventure Global",
+      "sessions": 2,
+      "users": 1,
+      "bounce_rate": 0.0,
+      "avg_session_duration": 125.3482145,
+      "page_views": 3,
+      "date": "2026-03-26 to 2026-04-23"
+    },
+    {
+      "page_path": "/china-sourcing-agent-australia",
+      "page_title": "China Sourcing Agent for Australian Businesses | Winning Adventure Global",
+      "sessions": 2,
+      "users": 2,
+      "bounce_rate": 0.5,
+      "avg_session_duration": 172.3847485,
+      "page_views": 13,
+      "date": "2026-03-26 to 2026-04-23"
+    }
+  ],
+  "total_sessions": 338,
+  "avg_bounce_rate": 0.12527213868003342,
+  "total_impressions": 209,
+  "total_clicks": 2,
+  "avg_ctr": 0.00975609756097561
+}

@@ -9,6 +9,7 @@ export interface Frontmatter {
   author: string
   category: string
   readTime: string
+  subtitle?: string
   coverImage?: string
   updatedDate?: string
   takeaways?: string[]

@@ -46,8 +46,8 @@ export function EnhancedTip({ children, title = 'Pro Tip' }: { children: React.R
 
 function createHeadingComponent(level: 2 | 3) {
   const className = level === 2
-    ? 'font-serif text-2xl font-bold text-[#0F2D5E] mb-4 mt-12 scroll-mt-20'
-    : 'font-serif text-xl font-bold text-[#0F2D5E] mb-3 mt-8 scroll-mt-20'
+    ? 'font-serif text-3xl font-bold text-[#0F2D5E] mb-4 mt-12 pb-3 border-b border-gray-100 scroll-mt-20'
+    : 'font-serif text-xl font-semibold text-[#0F2D5E] mb-3 mt-8 scroll-mt-20'
   const Tag = `h${level}` as 'h2' | 'h3'
 
   return function Heading({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) {
@@ -86,7 +86,7 @@ export function createMdxComponents(ctaTitle: string, ctaText: string, ctaButton
 
     // Text element overrides
     p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
-      <p className="text-gray-700 leading-relaxed mb-4" {...props} />
+      <p className="text-gray-700 leading-7 mb-5 text-base" {...props} />
     ),
     li: (props: React.HTMLAttributes<HTMLLIElement>) => (
       <li className="text-gray-700 leading-relaxed" {...props} />
@@ -119,7 +119,7 @@ export function createMdxComponents(ctaTitle: string, ctaText: string, ctaButton
       <sup className="text-[#F59E0B] font-semibold cursor-pointer" {...props} />
     ),
     a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-      <a className="text-[#0F2D5E] underline hover:text-[#F59E0B] transition-colors" {...props} />
+      <a className="text-[#0F2D5E] font-medium underline decoration-[#F59E0B]/40 hover:decoration-[#F59E0B] hover:text-[#F59E0B] transition-colors" {...props} />
     ),
     blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
       <blockquote className="border-l-4 border-[#F59E0B] pl-4 my-4 italic text-gray-600" {...props} />
