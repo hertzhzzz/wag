@@ -12,14 +12,14 @@ import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Company | Factory Tours & Supplier Verification | Australia',
-  description: 'Connect with verified Chinese manufacturers. WAG arranges factory tours in Shenzhen, Guangzhou and Shanghai. Australian businesses use us to verify suppliers and reduce sourcing risk.',
-  keywords: ['china sourcing company', 'australian business china', 'verified suppliers china', 'factory tour china', 'china sourcing agent', 'supplier verification'],
+  title: 'China Sourcing Agent Australia | Factory Tours & Supplier Verification | WAG',
+  description: 'Australian-owned China sourcing agent. We arrange factory tours in Shenzhen, Guangzhou & Shanghai, verify suppliers, and protect Australian businesses from fraud. Serving Adelaide, Sydney, Melbourne.',
+  keywords: ['china sourcing agent australia', 'china sourcing company', 'australian business china', 'verified suppliers china', 'factory tour china', 'supplier verification', 'china factory visit', 'australian import china'],
   openGraph: {
     locale: 'en_AU',
     alternateLocale: 'en_US',
-    title: 'WAG | China Sourcing Australia | Factory Tours & Supplier Verification',
-    description: 'Winning Adventure Global helps Australian businesses source from China with factory tours, supplier verification, and end-to-end procurement support. Based in Adelaide.',
+    title: 'WAG | Australia\'s China Sourcing Agent | Factory Tours & Supplier Verification',
+    description: 'Australian-owned and operated. We escort Australian businesses on factory tours in China, verify suppliers, and ensure your sourcing is safe and successful.',
     url: 'https://www.winningadventure.com.au/',
     siteName: 'Winning Adventure Global',
   },
