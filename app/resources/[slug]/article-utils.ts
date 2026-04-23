@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { slugify } from './string-utils'
-import type { Article, ArticleNavItem, PrevNextArticles, Frontmatter, Heading } from './types'
+import type { Article, ArticleNavItem, PrevNextArticles, Frontmatter, Heading, FAQItem } from './types'
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
@@ -100,4 +100,59 @@ export function splitContent(content: string): { intro: string; body: string } {
     intro: parts[0],
     body: '\n## '.concat(parts.slice(1).join('\n## ')),
   }
+}
+
+// ============================================
+// DATE FORMATTING
+// ============================================
+
+/**
+ * Convert "14 Apr 2026" to "2026-04-14" ISO 8601 format for schema.
+ */
+export function formatDateForSchema(dateStr: string): string {
+  if (!dateStr) return ''
+  // Already ISO format
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return dateStr
+  // Parse "14 Apr 2026" format
+  const months: Record<string, string> = {
+    Jan: '01', Feb: '02', Mar: '03', Apr: '04', May: '05', Jun: '06',
+    Jul: '07', Aug: '08', Sep: '09', Oct: '10', Nov: '11', Dec: '12',
+  }
+  const parts = dateStr.split(' ')
+  if (parts.length === 3) {
+    const day = parts[0].padStart(2, '0')
+    const month = months[parts[1]] || '01'
+    const year = parts[2]
+    return `${year}-${month}-${day}`
+  }
+  return dateStr
+}
+
+// ============================================
+// FAQ EXTRACTION FROM MDX CONTENT
+// ============================================
+
+export function extractFaqsFromContent(content: string): FAQItem[] {
+  const faqs: FAQItem[] = []
+  // Match the FAQ section heading (case-insensitive)
+  const faqSectionMatch = content.match(/##\s+[Ff]requently\s+[Aa]sked\s+[Qq]uestions\n([\s\S]*?)(?=\n##\s|\n---\n|$)/)
+  if (!faqSectionMatch) return faqs
+
+  const faqSection = faqSectionMatch[1]
+  // Match ### Question patterns followed by answer paragraphs
+  const questionMatches = faqSection.matchAll(/###\s+(.+?)\n([\s\S]*?)(?=\n###\s|\n---\n|$)/g)
+
+  for (const match of questionMatches) {
+    const question = match[1].trim()
+    let answer = match[2].trim()
+    // Clean up answer: remove MDX components like <Tip>, <InlineCTA /> etc.
+    answer = answer.replace(/<[^>]+>[\s\S]*?<\/[^>]+>/g, '').trim()
+    // Remove markdown links but keep text
+    answer = answer.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim()
+    if (question && answer) {
+      faqs.push({ question, answer })
+    }
+  }
+
+  return faqs
 }

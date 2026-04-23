@@ -2,9 +2,9 @@ export default function PersonSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Mark He",
-    "jobTitle": "Managing Director, Australia",
-    "description": "Managing Director of WAG Australia office. Helping Australian businesses find verified manufacturers in China with local accountability and direct access to WAG's factory network.",
+    "name": "Andy Liu",
+    "jobTitle": "Founder",
+    "description": "Founder of Winning Adventure Global. Based in Adelaide, helping Australian businesses find verified manufacturers in China with local accountability and direct access to WAG's factory network.",
     "url": "https://www.winningadventure.com.au/about",
     "image": "https://www.winningadventure.com.au/og-image.jpg",
     "telephone": "+61-416588198",
@@ -22,12 +22,12 @@ export default function PersonSchema() {
       }
     },
     "sameAs": [
-      "https://www.linkedin.com/in/mark-zhe-he/",
       "https://www.linkedin.com/company/winning-adventure-global",
       "https://www.facebook.com/winningadventureglobal",
-      "https://www.youtube.com/@winningadventureglobal"
+      "https://www.youtube.com/@winningadventure",
+      "https://www.instagram.com/winningadventureglobal"
     ],
-    "knowsAbout": ["China manufacturing", "Supplier verification", "B2B procurement", "Factory tours", "Australian business compliance"],
+    "knowsAbout": ["China manufacturing", "Supply Chain Management", "Factory Verification", "International Trade", "Pearl River Delta Manufacturing", "Australian B2B procurement"],
     "areaServed": {
       "@type": "Country",
       "name": "Australia"

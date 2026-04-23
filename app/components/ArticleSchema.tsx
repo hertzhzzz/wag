@@ -28,7 +28,8 @@ export default function ArticleSchema({
     "author": {
       "@type": "Person",
       "name": author,
-      "jobTitle": "Founder",
+      "jobTitle": "Managing Director",
+      "url": "https://www.winningadventure.com.au/about",
       "worksFor": {
         "@type": "Organization",
         "name": "Winning Adventure Global",

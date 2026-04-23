@@ -7,11 +7,12 @@ import remarkGfm from 'remark-gfm'
 import ArticleSchema from '@/components/ArticleSchema'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import HowToSchema from '@/components/HowToSchema'
+import FAQSchema from '@/components/FAQSchema'
 import { ReadingProgressBar } from './ReadingProgressBar'
 import { BackToTopButton } from './BackToTopButton'
 import { ShareButtons } from './ShareButtons'
 import { ArticleNavigation } from './ArticleNavigation'
-import { getArticle, getAllSlugs, getPrevNextArticles, splitContent } from './article-utils'
+import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema } from './article-utils'
 import { HOW_TO_ARTICLES } from './how-to-data'
 import { createMdxComponents } from './mdx-components'
 import type { Frontmatter } from './types'
@@ -73,6 +74,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const takeaways: string[] = fm.takeaways || []
   const { prevArticle, nextArticle } = getPrevNextArticles(slug)
   const { intro, body } = splitContent(content)
+  // Extract FAQs from MDX content for JSON-LD schema
+  const articleFaqs = extractFaqsFromContent(content)
 
   // Create MDX component mapping with article-specific CTA data
   const components = createMdxComponents(fm.ctaTitle, fm.ctaText, fm.ctaButtonText)
@@ -97,8 +100,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         description={fm.description}
         url={`https://www.winningadventure.com.au/resources/${slug}`}
         author={fm.author}
-        datePublished={fm.date}
-        dateModified={fm.updatedDate}
+        datePublished={formatDateForSchema(fm.date)}
+        dateModified={fm.updatedDate ? formatDateForSchema(fm.updatedDate) : formatDateForSchema(fm.date)}
         image={fm.coverImage}
         category={fm.category}
       />
@@ -111,6 +114,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           steps={howToData.steps}
         />
       )}
+
+      {articleFaqs.length > 0 && <FAQSchema faqs={articleFaqs} />}
 
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },

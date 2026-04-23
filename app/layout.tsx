@@ -95,7 +95,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
       <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="afterInteractive" />
+        {/* Preload hero image for LCP — rendered by Hero.tsx on desktop */}
+        <link
+          rel="preload"
+          as="image"
+          href="/hero-image.webp"
+          fetchPriority="high"
+          crossOrigin="anonymous"
+        />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="lazyOnload" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
