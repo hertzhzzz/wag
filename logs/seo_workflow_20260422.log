@@ -1,0 +1,69 @@
+2026-04-22 17:16:09 | INFO     | ============================================================
+2026-04-22 17:16:09 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-22 17:16:09 | INFO     | Mode: insight
+2026-04-22 17:16:09 | INFO     | Time: 2026-04-22 17:16:09
+2026-04-22 17:16:09 | INFO     | ============================================================
+2026-04-22 17:16:09 | INFO     | Running gap analysis...
+2026-04-22 17:16:09 | INFO     | GSC service initialized successfully
+2026-04-22 17:16:11 | INFO     | GSC returned 56 rows
+2026-04-22 17:16:11 | INFO     | ============================================================
+2026-04-22 17:16:11 | INFO     | Workflow completed!
+2026-04-22 17:16:11 | INFO     | ============================================================
+2026-04-22 17:16:26 | INFO     | ============================================================
+2026-04-22 17:16:26 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-22 17:16:26 | INFO     | Mode: insight
+2026-04-22 17:16:26 | INFO     | Time: 2026-04-22 17:16:26
+2026-04-22 17:16:26 | INFO     | ============================================================
+2026-04-22 17:16:26 | INFO     | Running gap analysis...
+2026-04-22 17:16:26 | INFO     | GSC service initialized successfully
+2026-04-22 17:16:27 | INFO     | GSC returned 56 rows
+2026-04-22 17:16:27 | INFO     | ============================================================
+2026-04-22 17:16:27 | INFO     | Workflow completed!
+2026-04-22 17:16:27 | INFO     | ============================================================
+2026-04-22 17:17:10 | INFO     | ============================================================
+2026-04-22 17:17:10 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-22 17:17:10 | INFO     | Mode: insight
+2026-04-22 17:17:10 | INFO     | Time: 2026-04-22 17:17:10
+2026-04-22 17:17:10 | INFO     | ============================================================
+2026-04-22 17:17:10 | INFO     | Running gap analysis...
+2026-04-22 17:17:10 | INFO     | GSC service initialized successfully
+2026-04-22 17:17:11 | INFO     | GSC returned 56 rows
+2026-04-22 17:17:11 | INFO     | ============================================================
+2026-04-22 17:17:11 | INFO     | Workflow completed!
+2026-04-22 17:17:11 | INFO     | ============================================================
+2026-04-22 17:17:33 | INFO     | GSC service initialized successfully
+2026-04-22 17:17:34 | INFO     | GSC returned 56 rows
+2026-04-22 17:17:34 | INFO     | GSC returned 56 rows
+2026-04-22 17:17:43 | INFO     | GSC service initialized successfully
+2026-04-22 17:17:44 | INFO     | GSC returned 42 rows
+2026-04-22 17:18:17 | INFO     | GSC service initialized successfully
+2026-04-22 17:18:18 | INFO     | GSC returned 56 rows
+2026-04-22 17:18:27 | INFO     | GSC service initialized successfully
+2026-04-22 17:18:28 | INFO     | GSC returned 56 rows
+2026-04-22 17:18:36 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-22 17:38:40 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:38:43 | INFO     | MCP server initialized successfully
+2026-04-22 17:38:43 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-22 17:38:43 | WARNING  | MCP error: {'code': -32601, 'message': 'Method not found'}
+2026-04-22 17:38:43 | INFO     | SERP returned 0 results
+2026-04-22 17:38:52 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:38:54 | INFO     | MCP server initialized successfully
+2026-04-22 17:39:02 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:39:04 | INFO     | MCP server initialized successfully
+2026-04-22 17:39:13 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:39:15 | INFO     | MCP server initialized successfully
+2026-04-22 17:39:26 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:39:28 | INFO     | MCP server initialized successfully
+2026-04-22 17:39:41 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:39:43 | INFO     | MCP server initialized successfully
+2026-04-22 17:39:52 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:39:54 | INFO     | MCP server initialized successfully
+2026-04-22 17:39:59 | WARNING  | MCP request timeout: tools/call
+2026-04-22 17:40:33 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:40:35 | INFO     | MCP server initialized successfully
+2026-04-22 17:40:40 | WARNING  | MCP request timeout: tools/call
+2026-04-22 17:46:03 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-22 17:46:08 | INFO     | MCP server initialized successfully
+2026-04-22 17:46:08 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-22 17:46:13 | WARNING  | MCP request timeout: tools/call
+2026-04-22 17:46:28 | ERROR    | Direct SERP API failed: <urlopen error _ssl.c:1112: The handshake operation timed out>

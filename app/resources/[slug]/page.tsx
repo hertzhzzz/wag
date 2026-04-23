@@ -125,13 +125,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <article className="py-10 px-6">
         <div className="max-w-[900px] mx-auto">
 
-          {/* Key Takeaways */}
+          {/* Key Takeaways - positioned early for scannability */}
           {takeaways.length > 0 && <KeyTakeaways items={takeaways} />}
 
           {/* Article Meta with Share */}
-          <div className="flex items-center justify-between py-3 border-y border-gray-200 mb-6">
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <span>Last updated: {fm.date}</span>
+          <div className="flex items-center justify-between py-3 border-b border-gray-200 mb-6">
+            <div className="flex items-center gap-4 text-sm text-gray-400">
+              <span>{fm.date}</span>
             </div>
             <ShareButtons
               title={fm.title}
@@ -139,8 +139,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             />
           </div>
 
-          {/* Intro Section */}
-          <div className="pb-8 border-b border-gray-200 mb-8 text-base text-gray-700 leading-relaxed">
+          {/* Intro Section - The Hook */}
+          <div className="pb-8 border-b border-gray-200 mb-8">
             <MDXRemote source={intro} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
           </div>
 
@@ -166,24 +166,36 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
 function HeroSection({ fm }: { fm: Frontmatter }) {
   return (
-    <section className="relative bg-white pt-6 pb-8 px-6 overflow-hidden border-b border-gray-200">
-      <div className="relative max-w-[900px] mx-auto">
-        <nav className="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wider mb-3">
+    <section className="bg-white pt-8 pb-6 px-6 border-b border-gray-100">
+      <div className="max-w-[900px] mx-auto">
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-2 text-xs text-gray-400 uppercase tracking-wider mb-4">
           <Link href="/" className="hover:text-[#0F2D5E] transition-colors">Home</Link>
           <span>›</span>
           <Link href="/resources" className="hover:text-[#0F2D5E] transition-colors">Resources</Link>
-          <span>›</span>
-          <span className="text-gray-700">{fm.category}</span>
         </nav>
-        <p className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase mb-2">{fm.category}</p>
-        <h1 className="font-serif font-bold text-[clamp(1.3rem,2.5vw,1.75rem)] text-[#0F2D5E] leading-tight mb-3 max-w-3xl">
+
+        {/* Category */}
+        <p className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase mb-3">{fm.category}</p>
+
+        {/* Title */}
+        <h1 className="font-serif font-bold text-[clamp(1.5rem,3vw,2.25rem)] text-[#0F2D5E] leading-tight mb-4 max-w-3xl">
           {fm.title}
         </h1>
-        <div className="flex items-center gap-3 text-sm text-gray-600">
-          <Link href="/about" className="hover:text-[#F59E0B] transition-colors">{fm.author}</Link>
-          <span>·</span>
+
+        {/* Subtitle - Hook */}
+        {fm.subtitle && (
+          <p className="text-lg text-gray-600 leading-relaxed mb-4 max-w-2xl">
+            {fm.subtitle}
+          </p>
+        )}
+
+        {/* Meta bar */}
+        <div className="flex items-center gap-4 text-sm text-gray-500 border-t border-gray-100 pt-4">
+          <Link href="/about" className="font-medium text-[#0F2D5E] hover:text-[#F59E0B] transition-colors">{fm.author}</Link>
+          <span className="text-gray-300">·</span>
           <span>{fm.date}</span>
-          <span>·</span>
+          <span className="text-gray-300">·</span>
           <span>{fm.readTime}</span>
         </div>
       </div>

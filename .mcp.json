@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "dataforseo": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "dataforseo-mcp-server"
+      ],
+      "env": {
+        "DATAFORSEO_USERNAME": "markhezhe@gmail.com",
+        "DATAFORSEO_PASSWORD": "52757aacf5b32603",
+        "ENABLED_MODULES": "SERP,KEYWORDS_DATA,ONPAGE,DATAFORSEO_LABS,BACKLINKS,DOMAIN_ANALYTICS,BUSINESS_DATA,CONTENT_ANALYSIS,AI_OPTIMIZATION"
+      }
+    }
+  }
+}

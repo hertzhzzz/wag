@@ -1,0 +1,1092 @@
+2026-04-23 09:24:55 | INFO     | ============================================================
+2026-04-23 09:24:55 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:24:55 | INFO     | Mode: research
+2026-04-23 09:24:55 | INFO     | Time: 2026-04-23 09:24:55
+2026-04-23 09:24:55 | INFO     | ============================================================
+2026-04-23 09:24:55 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:24:57 | INFO     | MCP server initialized successfully
+2026-04-23 09:24:57 | INFO     | Starting keyword research for: ['sourcing from china']
+2026-04-23 09:24:57 | INFO     | Fetching keyword ideas for: sourcing from china
+2026-04-23 09:24:57 | WARNING  | MCP error: {'code': -32601, 'message': 'Method not found'}
+2026-04-23 09:24:58 | ERROR    | Keyword suggestions direct API failed: HTTP Error 404: Not Found
+2026-04-23 09:24:58 | INFO     | Found 0 keyword ideas
+2026-04-23 09:24:58 | INFO     | ============================================================
+2026-04-23 09:24:58 | INFO     | Workflow completed!
+2026-04-23 09:24:58 | INFO     | ============================================================
+2026-04-23 09:27:01 | INFO     | ============================================================
+2026-04-23 09:27:01 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:27:01 | INFO     | Mode: research
+2026-04-23 09:27:01 | INFO     | Time: 2026-04-23 09:27:01
+2026-04-23 09:27:01 | INFO     | ============================================================
+2026-04-23 09:27:01 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:27:03 | INFO     | MCP server initialized successfully
+2026-04-23 09:27:03 | INFO     | Starting keyword research for: ['sourcing from china']
+2026-04-23 09:27:03 | INFO     | Fetching keyword ideas for: sourcing from china
+2026-04-23 09:27:03 | WARNING  | MCP error: {'code': -32601, 'message': 'Method not found'}
+2026-04-23 09:27:04 | INFO     | Direct API found 24 keyword suggestions
+2026-04-23 09:27:04 | INFO     | Found 24 keyword ideas
+2026-04-23 09:27:04 | INFO     | ============================================================
+2026-04-23 09:27:04 | INFO     | Workflow completed!
+2026-04-23 09:27:04 | INFO     | ============================================================
+2026-04-23 09:27:09 | INFO     | ============================================================
+2026-04-23 09:27:09 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:27:09 | INFO     | Mode: insight
+2026-04-23 09:27:09 | INFO     | Time: 2026-04-23 09:27:09
+2026-04-23 09:27:09 | INFO     | ============================================================
+2026-04-23 09:27:09 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:27:11 | INFO     | MCP server initialized successfully
+2026-04-23 09:27:11 | INFO     | Running gap analysis...
+2026-04-23 09:27:13 | INFO     | GSC service initialized successfully
+2026-04-23 09:27:14 | INFO     | GSC returned 55 rows
+2026-04-23 09:27:14 | INFO     | ============================================================
+2026-04-23 09:27:14 | INFO     | Workflow completed!
+2026-04-23 09:27:14 | INFO     | ============================================================
+2026-04-23 09:27:21 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:27:23 | INFO     | MCP server initialized successfully
+2026-04-23 09:27:24 | INFO     | GSC service initialized successfully
+2026-04-23 09:27:25 | INFO     | GSC returned 55 rows
+2026-04-23 09:27:32 | INFO     | GSC service initialized successfully
+2026-04-23 09:27:33 | INFO     | GSC returned 41 rows
+2026-04-23 09:27:59 | INFO     | ============================================================
+2026-04-23 09:27:59 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:27:59 | INFO     | Mode: full
+2026-04-23 09:27:59 | INFO     | Time: 2026-04-23 09:27:59
+2026-04-23 09:27:59 | INFO     | ============================================================
+2026-04-23 09:27:59 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:28:01 | INFO     | MCP server initialized successfully
+2026-04-23 09:28:01 | INFO     | Starting full SEO workflow...
+2026-04-23 09:28:01 | INFO     | GSC service initialized successfully
+2026-04-23 09:28:03 | INFO     | GSC returned 55 rows
+2026-04-23 09:28:03 | INFO     | Identified 0 content gaps
+2026-04-23 09:28:03 | INFO     | Report saved to: reports/seo_report_test
+2026-04-23 09:28:03 | INFO     | ============================================================
+2026-04-23 09:28:03 | INFO     | Workflow completed!
+2026-04-23 09:28:03 | INFO     | ============================================================
+2026-04-23 09:28:18 | INFO     | ============================================================
+2026-04-23 09:28:18 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:28:18 | INFO     | Mode: insight
+2026-04-23 09:28:18 | INFO     | Time: 2026-04-23 09:28:18
+2026-04-23 09:28:18 | INFO     | ============================================================
+2026-04-23 09:28:18 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:28:20 | INFO     | MCP server initialized successfully
+2026-04-23 09:28:20 | INFO     | Running gap analysis...
+2026-04-23 09:28:21 | INFO     | GSC service initialized successfully
+2026-04-23 09:28:22 | INFO     | GSC returned 55 rows
+2026-04-23 09:28:22 | INFO     | ============================================================
+2026-04-23 09:28:22 | INFO     | Workflow completed!
+2026-04-23 09:28:22 | INFO     | ============================================================
+2026-04-23 09:28:30 | INFO     | GSC service initialized successfully
+2026-04-23 09:28:31 | INFO     | GSC returned 55 rows
+2026-04-23 09:28:37 | INFO     | GSC service initialized successfully
+2026-04-23 09:28:38 | INFO     | GSC returned 41 rows
+2026-04-23 09:28:44 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:28:46 | INFO     | MCP server initialized successfully
+2026-04-23 09:28:47 | INFO     | GSC service initialized successfully
+2026-04-23 09:28:48 | INFO     | GSC returned 41 rows
+2026-04-23 09:28:55 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:28:57 | INFO     | MCP server initialized successfully
+2026-04-23 09:28:57 | INFO     | GSC service initialized successfully
+2026-04-23 09:28:59 | INFO     | GSC returned 41 rows
+2026-04-23 09:29:00 | INFO     | GSC returned 55 rows
+2026-04-23 09:29:07 | INFO     | ============================================================
+2026-04-23 09:29:07 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:29:07 | INFO     | Mode: full
+2026-04-23 09:29:07 | INFO     | Time: 2026-04-23 09:29:07
+2026-04-23 09:29:07 | INFO     | ============================================================
+2026-04-23 09:29:07 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:29:09 | INFO     | MCP server initialized successfully
+2026-04-23 09:29:09 | INFO     | Starting full SEO workflow...
+2026-04-23 09:29:09 | INFO     | GSC service initialized successfully
+2026-04-23 09:29:10 | INFO     | GSC returned 55 rows
+2026-04-23 09:29:10 | INFO     | Identified 0 content gaps
+2026-04-23 09:29:10 | INFO     | Report saved to: /Users/mark/Projects/wag-frontend/reports/seo_report_20260423
+2026-04-23 09:29:10 | INFO     | ============================================================
+2026-04-23 09:29:10 | INFO     | Workflow completed!
+2026-04-23 09:29:10 | INFO     | ============================================================
+2026-04-23 09:30:32 | INFO     | ============================================================
+2026-04-23 09:30:32 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:30:32 | INFO     | Mode: full
+2026-04-23 09:30:32 | INFO     | Time: 2026-04-23 09:30:32
+2026-04-23 09:30:32 | INFO     | ============================================================
+2026-04-23 09:30:32 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:30:34 | INFO     | MCP server initialized successfully
+2026-04-23 09:30:34 | INFO     | Starting full SEO workflow...
+2026-04-23 09:30:35 | INFO     | GSC service initialized successfully
+2026-04-23 09:30:36 | INFO     | GSC returned 55 rows
+2026-04-23 09:30:36 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:30:40 | INFO     | SERP returned 14 results via direct API
+2026-04-23 09:30:40 | ERROR    | Unexpected error: '<=' not supported between instances of 'str' and 'int'
+Traceback (most recent call last):
+  File "/Users/mark/Projects/wag-frontend/scripts/seo_workflow.py", line 1538, in main
+    gaps = gap_client.identify_content_gaps()
+  File "/Users/mark/Projects/wag-frontend/scripts/seo_workflow.py", line 1251, in identify_content_gaps
+    opportunity = self._calculate_opportunity(item, serp_data)
+  File "/Users/mark/Projects/wag-frontend/scripts/seo_workflow.py", line 1288, in _calculate_opportunity
+    is_top_result = serp_data and serp_data[0].get("position", 0) <= 3
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<=' not supported between instances of 'str' and 'int'
+2026-04-23 09:30:55 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:30:57 | INFO     | MCP server initialized successfully
+2026-04-23 09:30:57 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:31:01 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:31:18 | INFO     | ============================================================
+2026-04-23 09:31:18 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:31:18 | INFO     | Mode: full
+2026-04-23 09:31:18 | INFO     | Time: 2026-04-23 09:31:18
+2026-04-23 09:31:18 | INFO     | ============================================================
+2026-04-23 09:31:18 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:31:20 | INFO     | MCP server initialized successfully
+2026-04-23 09:31:20 | INFO     | Starting full SEO workflow...
+2026-04-23 09:31:21 | INFO     | GSC service initialized successfully
+2026-04-23 09:31:22 | INFO     | GSC returned 55 rows
+2026-04-23 09:31:22 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:31:27 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:31:27 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:31:31 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:31:31 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 09:31:34 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:31:34 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:31:40 | INFO     | SERP returned 15 results via direct API
+2026-04-23 09:31:40 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:31:46 | INFO     | SERP returned 16 results via direct API
+2026-04-23 09:31:46 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:31:51 | INFO     | SERP returned 16 results via direct API
+2026-04-23 09:31:51 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 09:31:56 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:31:56 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 09:31:59 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:31:59 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 09:32:04 | INFO     | SERP returned 11 results via direct API
+2026-04-23 09:32:04 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 09:32:08 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:32:08 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 09:32:13 | INFO     | SERP returned 14 results via direct API
+2026-04-23 09:32:13 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 09:32:18 | INFO     | SERP returned 13 results via direct API
+2026-04-23 09:32:18 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:32:24 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:32:24 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:32:28 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:32:28 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:32:33 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:32:33 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:32:40 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:32:40 | INFO     | Identified 16 content gaps
+2026-04-23 09:32:40 | INFO     | Researching keywords: ['china business tours', 'china business tours', 'china business trip package', 'china sourcing agent australia', 'china sourcing agent australia', 'china sourcing agent australia', 'china sourcing company', 'china sourcing services', 'china sourcing tour', 'chinese factory']
+2026-04-23 09:32:40 | INFO     | Report saved to: reports/seo_report_20260423
+2026-04-23 09:32:40 | INFO     | ============================================================
+2026-04-23 09:32:40 | INFO     | Workflow completed!
+2026-04-23 09:32:40 | INFO     | ============================================================
+2026-04-23 09:32:53 | INFO     | ============================================================
+2026-04-23 09:32:53 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:32:53 | INFO     | Mode: insight
+2026-04-23 09:32:53 | INFO     | Time: 2026-04-23 09:32:53
+2026-04-23 09:32:53 | INFO     | ============================================================
+2026-04-23 09:32:53 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:32:55 | INFO     | MCP server initialized successfully
+2026-04-23 09:32:55 | INFO     | Running gap analysis...
+2026-04-23 09:32:56 | INFO     | GSC service initialized successfully
+2026-04-23 09:32:57 | INFO     | GSC returned 55 rows
+2026-04-23 09:32:57 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:33:08 | INFO     | SERP returned 13 results via direct API
+2026-04-23 09:33:08 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:33:15 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:33:15 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 09:33:20 | INFO     | SERP returned 13 results via direct API
+2026-04-23 09:33:20 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:33:24 | INFO     | SERP returned 16 results via direct API
+2026-04-23 09:33:24 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:33:28 | INFO     | SERP returned 16 results via direct API
+2026-04-23 09:33:28 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:33:36 | INFO     | SERP returned 16 results via direct API
+2026-04-23 09:33:36 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 09:33:40 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:33:40 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 09:33:45 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:33:45 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 09:33:48 | INFO     | SERP returned 11 results via direct API
+2026-04-23 09:33:48 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 09:33:54 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:33:54 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 09:33:58 | INFO     | SERP returned 13 results via direct API
+2026-04-23 09:33:58 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 09:34:05 | INFO     | SERP returned 14 results via direct API
+2026-04-23 09:34:05 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:34:09 | INFO     | SERP returned 13 results via direct API
+2026-04-23 09:34:09 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:34:13 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:34:13 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:34:17 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:34:17 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:34:22 | INFO     | SERP returned 12 results via direct API
+2026-04-23 09:34:22 | INFO     | [HIGH] china business tours
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] china business tours
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] china business trip package
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] china sourcing company
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] china sourcing services
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] china sourcing tour
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] chinese factory
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:34:22 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:34:22 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 09:34:22 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:34:22 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:34:22 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:34:22 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:34:22 | INFO     | ============================================================
+2026-04-23 09:34:22 | INFO     | Workflow completed!
+2026-04-23 09:34:22 | INFO     | ============================================================
+2026-04-23 09:34:27 | INFO     | ============================================================
+2026-04-23 09:34:27 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:34:27 | INFO     | Mode: insight
+2026-04-23 09:34:27 | INFO     | Time: 2026-04-23 09:34:27
+2026-04-23 09:34:27 | INFO     | ============================================================
+2026-04-23 09:34:27 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:34:29 | INFO     | MCP server initialized successfully
+2026-04-23 09:34:29 | INFO     | Running gap analysis...
+2026-04-23 09:34:30 | INFO     | GSC service initialized successfully
+2026-04-23 09:34:31 | INFO     | GSC returned 55 rows
+2026-04-23 09:34:31 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:34:35 | INFO     | SERP returned 14 results via direct API
+2026-04-23 09:34:35 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:34:39 | INFO     | SERP returned 13 results via direct API
+2026-04-23 09:34:39 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 09:34:43 | INFO     | SERP returned 13 results via direct API
+2026-04-23 09:34:43 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:34:44 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:44 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:34:45 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:45 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:34:46 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:46 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 09:34:48 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:48 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 09:34:49 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:49 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 09:34:50 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:50 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 09:34:53 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:53 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 09:34:55 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:55 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 09:34:56 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:56 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:34:57 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:57 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:34:58 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:58 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:34:59 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:34:59 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:35:00 | ERROR    | SERP HTTP error 402: Payment Required
+2026-04-23 09:35:00 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] china sourcing company
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] china sourcing services
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] china sourcing tour
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] chinese factory
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:00 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 09:35:00 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:35:00 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:35:00 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:35:00 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:35:00 | INFO     | [HIGH] china business tours
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:35:00 | INFO     | [HIGH] china business tours
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:35:00 | INFO     | [HIGH] china business trip package
+2026-04-23 09:35:00 | INFO     |   Intent: informational | Action: quick_win
+2026-04-23 09:35:00 | INFO     | ============================================================
+2026-04-23 09:35:00 | INFO     | Workflow completed!
+2026-04-23 09:35:00 | INFO     | ============================================================
+2026-04-23 09:35:17 | INFO     | ============================================================
+2026-04-23 09:35:17 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:35:17 | INFO     | Mode: insight
+2026-04-23 09:35:17 | INFO     | Time: 2026-04-23 09:35:17
+2026-04-23 09:35:17 | INFO     | ============================================================
+2026-04-23 09:35:17 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:35:19 | INFO     | MCP server initialized successfully
+2026-04-23 09:35:19 | INFO     | Running gap analysis...
+2026-04-23 09:35:20 | INFO     | GSC service initialized successfully
+2026-04-23 09:35:21 | INFO     | GSC returned 55 rows
+2026-04-23 09:35:21 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:35:22 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:22 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:35:23 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:23 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 09:35:24 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:24 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:35:25 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:25 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:35:26 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:26 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:35:28 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:28 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 09:35:29 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:29 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 09:35:30 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:30 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 09:35:31 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:31 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 09:35:32 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:32 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 09:35:33 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:33 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 09:35:34 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:34 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:35:35 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:35 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:35:36 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:36 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:35:37 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:37 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:35:38 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:35:38 | INFO     | [HIGH] china business tours
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] china business tours
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] china business trip package
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] china sourcing company
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] china sourcing services
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] china sourcing tour
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] chinese factory
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:35:38 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:35:38 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 09:35:38 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:35:38 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:35:38 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:35:38 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:35:38 | INFO     | ============================================================
+2026-04-23 09:35:38 | INFO     | Workflow completed!
+2026-04-23 09:35:38 | INFO     | ============================================================
+2026-04-23 09:56:23 | INFO     | ============================================================
+2026-04-23 09:56:23 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:56:23 | INFO     | Mode: insight
+2026-04-23 09:56:23 | INFO     | Time: 2026-04-23 09:56:23
+2026-04-23 09:56:23 | INFO     | ============================================================
+2026-04-23 09:56:23 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:56:25 | INFO     | MCP server initialized successfully
+2026-04-23 09:56:25 | INFO     | Running gap analysis...
+2026-04-23 09:56:25 | INFO     | GSC service initialized successfully
+2026-04-23 09:56:26 | INFO     | GSC returned 55 rows
+2026-04-23 09:56:26 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:56:28 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:28 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:56:29 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:29 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 09:56:31 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:31 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:56:32 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:32 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:56:33 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:33 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:56:34 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:34 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 09:56:35 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:35 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 09:56:37 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:37 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 09:56:38 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:38 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 09:56:39 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:39 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 09:56:40 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:40 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 09:56:42 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:42 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:56:43 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:43 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:56:44 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:44 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:56:45 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:45 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:56:46 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:56:46 | INFO     | [HIGH] china business tours
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] china business tours
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] china business trip package
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] china sourcing company
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] china sourcing services
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] china sourcing tour
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] chinese factory
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:56:46 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:56:46 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 09:56:46 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:56:46 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:56:46 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:56:46 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:56:46 | INFO     | ============================================================
+2026-04-23 09:56:46 | INFO     | Workflow completed!
+2026-04-23 09:56:46 | INFO     | ============================================================
+2026-04-23 09:57:38 | INFO     | ============================================================
+2026-04-23 09:57:38 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 09:57:38 | INFO     | Mode: insight
+2026-04-23 09:57:38 | INFO     | Time: 2026-04-23 09:57:38
+2026-04-23 09:57:38 | INFO     | ============================================================
+2026-04-23 09:57:38 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 09:57:40 | INFO     | MCP server initialized successfully
+2026-04-23 09:57:40 | INFO     | Running gap analysis...
+2026-04-23 09:57:41 | INFO     | GSC service initialized successfully
+2026-04-23 09:57:42 | INFO     | GSC returned 55 rows
+2026-04-23 09:57:42 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:57:43 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:43 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 09:57:44 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:44 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 09:57:46 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:46 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:57:47 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:47 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:57:48 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:48 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 09:57:49 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:49 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 09:57:50 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:50 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 09:57:51 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:51 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 09:57:52 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:52 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 09:57:53 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:53 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 09:57:54 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:54 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 09:57:55 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:55 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:57:56 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:56 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 09:57:57 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:57 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:57:58 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:58 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 09:57:59 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 09:57:59 | INFO     | [HIGH] china business tours
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] china business tours
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] china business trip package
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] china sourcing company
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] china sourcing services
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] china sourcing tour
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] chinese factory
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 09:57:59 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 09:57:59 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 09:57:59 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:57:59 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:57:59 | INFO     | [HIGH] winning adventure global
+2026-04-23 09:57:59 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 09:57:59 | INFO     | ============================================================
+2026-04-23 09:57:59 | INFO     | Workflow completed!
+2026-04-23 09:57:59 | INFO     | ============================================================
+2026-04-23 10:02:15 | INFO     | ============================================================
+2026-04-23 10:02:15 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:02:15 | INFO     | Mode: insight
+2026-04-23 10:02:15 | INFO     | Time: 2026-04-23 10:02:15
+2026-04-23 10:02:15 | INFO     | ============================================================
+2026-04-23 10:02:15 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:02:18 | INFO     | MCP server initialized successfully
+2026-04-23 10:02:18 | INFO     | Running gap analysis...
+2026-04-23 10:02:20 | INFO     | GSC service initialized successfully
+2026-04-23 10:02:21 | INFO     | GSC returned 55 rows
+2026-04-23 10:02:21 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 10:02:23 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:24 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:02:24 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 10:02:25 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:27 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:02:27 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 10:02:28 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:30 | INFO     | Serper returned 10 results for 'china business trip package'
+2026-04-23 10:02:30 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:02:31 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:33 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:02:33 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:02:34 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:35 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:02:35 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:02:36 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:39 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:02:39 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 10:02:40 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:41 | INFO     | Serper returned 9 results for 'china sourcing company'
+2026-04-23 10:02:41 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 10:02:42 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:43 | INFO     | Serper returned 10 results for 'china sourcing services'
+2026-04-23 10:02:43 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 10:02:44 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:46 | INFO     | Serper returned 9 results for 'china sourcing tour'
+2026-04-23 10:02:46 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 10:02:47 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:49 | INFO     | Serper returned 9 results for 'chinese factory'
+2026-04-23 10:02:49 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 10:02:50 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:52 | INFO     | Serper returned 10 results for 'chinese wholesalers australia'
+2026-04-23 10:02:52 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 10:02:53 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:55 | INFO     | Serper returned 10 results for 'how to buy from chinese manufacturers'
+2026-04-23 10:02:55 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 10:02:56 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:02:57 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:02:57 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 10:02:59 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:00 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:03:00 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 10:03:01 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:03 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:03:03 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 10:03:04 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:05 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:03:05 | INFO     | [HIGH] china business tours
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] china business tours
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] china business trip package
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] china sourcing company
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] china sourcing services
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] china sourcing tour
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] chinese factory
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:03:05 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 10:03:05 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 10:03:05 | INFO     | [HIGH] winning adventure global
+2026-04-23 10:03:05 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 10:03:05 | INFO     | [HIGH] winning adventure global
+2026-04-23 10:03:05 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 10:03:05 | INFO     | ============================================================
+2026-04-23 10:03:05 | INFO     | Workflow completed!
+2026-04-23 10:03:05 | INFO     | ============================================================
+2026-04-23 10:03:10 | INFO     | ============================================================
+2026-04-23 10:03:10 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:03:10 | INFO     | Mode: insight
+2026-04-23 10:03:10 | INFO     | Time: 2026-04-23 10:03:10
+2026-04-23 10:03:10 | INFO     | ============================================================
+2026-04-23 10:03:10 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:03:14 | INFO     | MCP server initialized successfully
+2026-04-23 10:03:14 | INFO     | Running gap analysis...
+2026-04-23 10:03:16 | INFO     | GSC service initialized successfully
+2026-04-23 10:03:17 | INFO     | GSC returned 55 rows
+2026-04-23 10:03:17 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 10:03:19 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:21 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:03:21 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 10:03:22 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:24 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:03:24 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 10:03:25 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:27 | INFO     | Serper returned 10 results for 'china business trip package'
+2026-04-23 10:03:27 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:03:28 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:29 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:03:29 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:03:30 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:31 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:03:31 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:03:32 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:33 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:03:33 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 10:03:34 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:36 | INFO     | Serper returned 9 results for 'china sourcing company'
+2026-04-23 10:03:36 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 10:03:37 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:39 | INFO     | Serper returned 10 results for 'china sourcing services'
+2026-04-23 10:03:39 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 10:03:40 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:42 | INFO     | Serper returned 9 results for 'china sourcing tour'
+2026-04-23 10:03:42 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 10:03:43 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:45 | INFO     | Serper returned 9 results for 'chinese factory'
+2026-04-23 10:03:45 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 10:03:46 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:47 | INFO     | Serper returned 10 results for 'chinese wholesalers australia'
+2026-04-23 10:03:47 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 10:03:49 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:50 | INFO     | Serper returned 10 results for 'how to buy from chinese manufacturers'
+2026-04-23 10:03:50 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 10:03:51 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:53 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:03:53 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 10:03:54 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:55 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:03:55 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 10:03:56 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:03:58 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:03:58 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 10:03:59 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:04:00 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:04:00 | INFO     | [HIGH] china business tours
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] china business tours
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] china business trip package
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] china sourcing company
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] china sourcing services
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] china sourcing tour
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] chinese factory
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:04:00 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 10:04:00 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 10:04:00 | INFO     | [HIGH] winning adventure global
+2026-04-23 10:04:00 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 10:04:00 | INFO     | [HIGH] winning adventure global
+2026-04-23 10:04:00 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 10:04:00 | INFO     | ============================================================
+2026-04-23 10:04:00 | INFO     | Workflow completed!
+2026-04-23 10:04:00 | INFO     | ============================================================
+2026-04-23 10:04:36 | INFO     | ============================================================
+2026-04-23 10:04:36 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:04:36 | INFO     | Mode: ga4
+2026-04-23 10:04:36 | INFO     | Time: 2026-04-23 10:04:36
+2026-04-23 10:04:36 | INFO     | ============================================================
+2026-04-23 10:04:36 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:04:39 | INFO     | MCP server initialized successfully
+2026-04-23 10:04:39 | INFO     | Fetching GA4 data...
+2026-04-23 10:04:43 | INFO     | GA4 service initialized successfully
+2026-04-23 10:04:43 | ERROR    | GA4 API error: No module named 'google.analytics.data_v1'
+2026-04-23 10:04:43 | INFO     | Using mock GA4 data
+2026-04-23 10:04:43 | INFO     | Retrieved 5 pages from GA4
+2026-04-23 10:04:43 | INFO     | ============================================================
+2026-04-23 10:04:43 | INFO     | Workflow completed!
+2026-04-23 10:04:43 | INFO     | ============================================================
+2026-04-23 10:06:45 | INFO     | ============================================================
+2026-04-23 10:06:45 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:06:45 | INFO     | Mode: ga4
+2026-04-23 10:06:45 | INFO     | Time: 2026-04-23 10:06:45
+2026-04-23 10:06:45 | INFO     | ============================================================
+2026-04-23 10:06:45 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:06:51 | INFO     | MCP server initialized successfully
+2026-04-23 10:06:51 | INFO     | Fetching GA4 data...
+2026-04-23 10:06:56 | INFO     | GA4 service initialized successfully
+2026-04-23 10:06:56 | ERROR    | GA4 API error: No module named 'google.analytics.data_v1'
+2026-04-23 10:06:56 | INFO     | Using mock GA4 data
+2026-04-23 10:06:56 | INFO     | Retrieved 5 pages from GA4
+2026-04-23 10:06:56 | INFO     | ============================================================
+2026-04-23 10:06:56 | INFO     | Workflow completed!
+2026-04-23 10:06:56 | INFO     | ============================================================
+2026-04-23 10:07:54 | INFO     | ============================================================
+2026-04-23 10:07:54 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:07:54 | INFO     | Mode: ga4
+2026-04-23 10:07:54 | INFO     | Time: 2026-04-23 10:07:54
+2026-04-23 10:07:54 | INFO     | ============================================================
+2026-04-23 10:07:54 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:07:57 | INFO     | MCP server initialized successfully
+2026-04-23 10:07:57 | INFO     | Fetching GA4 data...
+2026-04-23 10:08:01 | INFO     | GA4 service initialized successfully
+2026-04-23 10:08:01 | ERROR    | GA4 API error: BetaAnalyticsDataClient.run_report() got an unexpected keyword argument 'property'
+2026-04-23 10:08:01 | INFO     | Using mock GA4 data
+2026-04-23 10:08:01 | INFO     | Retrieved 5 pages from GA4
+2026-04-23 10:08:01 | INFO     | ============================================================
+2026-04-23 10:08:01 | INFO     | Workflow completed!
+2026-04-23 10:08:01 | INFO     | ============================================================
+2026-04-23 10:08:26 | INFO     | ============================================================
+2026-04-23 10:08:26 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:08:26 | INFO     | Mode: ga4
+2026-04-23 10:08:26 | INFO     | Time: 2026-04-23 10:08:26
+2026-04-23 10:08:26 | INFO     | ============================================================
+2026-04-23 10:08:26 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:08:29 | INFO     | MCP server initialized successfully
+2026-04-23 10:08:29 | INFO     | Fetching GA4 data...
+2026-04-23 10:08:32 | INFO     | GA4 service initialized successfully
+2026-04-23 10:08:33 | INFO     | GA4 returned 49 rows
+2026-04-23 10:08:33 | INFO     | Retrieved 20 pages from GA4
+2026-04-23 10:08:33 | INFO     | ============================================================
+2026-04-23 10:08:33 | INFO     | Workflow completed!
+2026-04-23 10:08:33 | INFO     | ============================================================
+2026-04-23 10:08:39 | INFO     | ============================================================
+2026-04-23 10:08:39 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:08:39 | INFO     | Mode: ga4
+2026-04-23 10:08:39 | INFO     | Time: 2026-04-23 10:08:39
+2026-04-23 10:08:39 | INFO     | ============================================================
+2026-04-23 10:08:39 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:08:41 | INFO     | MCP server initialized successfully
+2026-04-23 10:08:41 | INFO     | Fetching GA4 data...
+2026-04-23 10:08:45 | INFO     | GA4 service initialized successfully
+2026-04-23 10:08:46 | INFO     | GA4 returned 49 rows
+2026-04-23 10:08:46 | INFO     | Retrieved 20 pages from GA4
+2026-04-23 10:08:46 | INFO     | ============================================================
+2026-04-23 10:08:46 | INFO     | Workflow completed!
+2026-04-23 10:08:46 | INFO     | ============================================================
+2026-04-23 10:08:53 | INFO     | ============================================================
+2026-04-23 10:08:53 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:08:53 | INFO     | Mode: full
+2026-04-23 10:08:53 | INFO     | Time: 2026-04-23 10:08:53
+2026-04-23 10:08:53 | INFO     | ============================================================
+2026-04-23 10:08:53 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:08:56 | INFO     | MCP server initialized successfully
+2026-04-23 10:08:56 | INFO     | Starting full SEO workflow...
+2026-04-23 10:08:58 | INFO     | GSC service initialized successfully
+2026-04-23 10:08:59 | INFO     | GSC returned 55 rows
+2026-04-23 10:08:59 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 10:09:01 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:03 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:09:03 | INFO     | Fetching SERP data for: china business tours
+2026-04-23 10:09:04 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:06 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:09:06 | INFO     | Fetching SERP data for: china business trip package
+2026-04-23 10:09:07 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:09 | INFO     | Serper returned 10 results for 'china business trip package'
+2026-04-23 10:09:09 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:09:10 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:13 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:09:13 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:09:14 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:15 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:09:15 | INFO     | Fetching SERP data for: china sourcing agent australia
+2026-04-23 10:09:17 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:18 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:09:18 | INFO     | Fetching SERP data for: china sourcing company
+2026-04-23 10:09:19 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:20 | INFO     | Serper returned 9 results for 'china sourcing company'
+2026-04-23 10:09:20 | INFO     | Fetching SERP data for: china sourcing services
+2026-04-23 10:09:21 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:25 | INFO     | Serper returned 10 results for 'china sourcing services'
+2026-04-23 10:09:25 | INFO     | Fetching SERP data for: china sourcing tour
+2026-04-23 10:09:27 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:29 | INFO     | Serper returned 9 results for 'china sourcing tour'
+2026-04-23 10:09:29 | INFO     | Fetching SERP data for: chinese factory
+2026-04-23 10:09:30 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:31 | INFO     | Serper returned 9 results for 'chinese factory'
+2026-04-23 10:09:31 | INFO     | Fetching SERP data for: chinese wholesalers australia
+2026-04-23 10:09:32 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:34 | INFO     | Serper returned 10 results for 'chinese wholesalers australia'
+2026-04-23 10:09:34 | INFO     | Fetching SERP data for: how to buy from chinese manufacturers
+2026-04-23 10:09:35 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:37 | INFO     | Serper returned 10 results for 'how to buy from chinese manufacturers'
+2026-04-23 10:09:37 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 10:09:38 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:40 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:09:40 | INFO     | Fetching SERP data for: visiting chinese factories
+2026-04-23 10:09:41 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:42 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:09:42 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 10:09:43 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:45 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:09:45 | INFO     | Fetching SERP data for: winning adventure global
+2026-04-23 10:09:46 | ERROR    | DataForSEO API: Account out of credits (402 Payment Required)
+2026-04-23 10:09:48 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:09:48 | INFO     | Identified 16 content gaps
+2026-04-23 10:09:48 | INFO     | Researching keywords: ['china business tours', 'china business tours', 'china business trip package', 'china sourcing agent australia', 'china sourcing agent australia', 'china sourcing agent australia', 'china sourcing company', 'china sourcing services', 'china sourcing tour', 'chinese factory']
+2026-04-23 10:09:48 | INFO     | Report saved to: /Users/mark/Projects/wag-frontend/reports/seo_report_20260423
+2026-04-23 10:09:48 | INFO     | ============================================================
+2026-04-23 10:09:48 | INFO     | Workflow completed!
+2026-04-23 10:09:48 | INFO     | ============================================================
+2026-04-23 10:10:16 | INFO     | ============================================================
+2026-04-23 10:10:16 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:10:16 | INFO     | Mode: analyze
+2026-04-23 10:10:16 | INFO     | Time: 2026-04-23 10:10:16
+2026-04-23 10:10:16 | INFO     | ============================================================
+2026-04-23 10:10:16 | INFO     | Starting MCP server: npx -y dataforseo-mcp-server
+2026-04-23 10:10:18 | INFO     | MCP server initialized successfully
+2026-04-23 10:10:18 | INFO     | Running full SEO analysis...
+2026-04-23 10:10:19 | INFO     | GSC service initialized successfully
+2026-04-23 10:10:20 | INFO     | GSC returned 41 rows
+2026-04-23 10:10:21 | INFO     | GA4 service initialized successfully
+2026-04-23 10:10:21 | INFO     | GA4 returned 49 rows
+2026-04-23 10:10:21 | INFO     | ============================================================
+2026-04-23 10:10:21 | INFO     | Workflow completed!
+2026-04-23 10:10:21 | INFO     | ============================================================
+2026-04-23 10:35:31 | INFO     | ============================================================
+2026-04-23 10:35:31 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:35:31 | INFO     | Mode: insight
+2026-04-23 10:35:31 | INFO     | Time: 2026-04-23 10:35:31
+2026-04-23 10:35:31 | INFO     | ============================================================
+2026-04-23 10:35:31 | INFO     | Running gap analysis...
+2026-04-23 10:35:31 | ERROR    | Unexpected error: name 'dfs' is not defined
+Traceback (most recent call last):
+  File "/Users/mark/Projects/wag-frontend/scripts/seo_workflow.py", line 1104, in main
+    gap_client = SEOMGAPIClient(gsc, ga4, dfs, logger, serper)
+                                          ^^^
+NameError: name 'dfs' is not defined
+2026-04-23 10:36:11 | INFO     | ============================================================
+2026-04-23 10:36:11 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:36:11 | INFO     | Mode: insight
+2026-04-23 10:36:11 | INFO     | Time: 2026-04-23 10:36:11
+2026-04-23 10:36:11 | INFO     | ============================================================
+2026-04-23 10:36:11 | INFO     | Running gap analysis...
+2026-04-23 10:36:14 | INFO     | GSC service initialized successfully
+2026-04-23 10:36:15 | INFO     | GSC returned 55 rows
+2026-04-23 10:36:18 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:36:19 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:36:21 | INFO     | Serper returned 10 results for 'china business trip package'
+2026-04-23 10:36:22 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:36:25 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:36:26 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:36:27 | INFO     | Serper returned 9 results for 'china sourcing company'
+2026-04-23 10:36:29 | INFO     | Serper returned 10 results for 'china sourcing services'
+2026-04-23 10:36:31 | INFO     | Serper returned 9 results for 'china sourcing tour'
+2026-04-23 10:36:33 | INFO     | Serper returned 9 results for 'chinese factory'
+2026-04-23 10:36:34 | INFO     | Serper returned 10 results for 'chinese wholesalers australia'
+2026-04-23 10:36:35 | INFO     | Serper returned 10 results for 'how to buy from chinese manufacturers'
+2026-04-23 10:36:37 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:36:38 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:36:40 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:36:41 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:36:41 | INFO     | [HIGH] china business tours
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] china business tours
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] china business trip package
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] china sourcing company
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] china sourcing services
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] china sourcing tour
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] chinese factory
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:36:41 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 10:36:41 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 10:36:41 | INFO     | [HIGH] winning adventure global
+2026-04-23 10:36:41 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 10:36:41 | INFO     | [HIGH] winning adventure global
+2026-04-23 10:36:41 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 10:36:41 | INFO     | ============================================================
+2026-04-23 10:36:41 | INFO     | Workflow completed!
+2026-04-23 10:36:41 | INFO     | ============================================================
+2026-04-23 10:36:51 | INFO     | ============================================================
+2026-04-23 10:36:51 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:36:51 | INFO     | Mode: analyze
+2026-04-23 10:36:51 | INFO     | Time: 2026-04-23 10:36:51
+2026-04-23 10:36:51 | INFO     | ============================================================
+2026-04-23 10:36:51 | INFO     | Running full SEO analysis...
+2026-04-23 10:36:54 | INFO     | GSC service initialized successfully
+2026-04-23 10:36:55 | INFO     | GSC returned 41 rows
+2026-04-23 10:37:01 | INFO     | GA4 service initialized successfully
+2026-04-23 10:37:03 | INFO     | GA4 returned 49 rows
+2026-04-23 10:37:03 | INFO     | ============================================================
+2026-04-23 10:37:03 | INFO     | Workflow completed!
+2026-04-23 10:37:03 | INFO     | ============================================================
+2026-04-23 10:40:50 | INFO     | ============================================================
+2026-04-23 10:40:50 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:40:50 | INFO     | Mode: analyze
+2026-04-23 10:40:50 | INFO     | Time: 2026-04-23 10:40:50
+2026-04-23 10:40:50 | INFO     | ============================================================
+2026-04-23 10:40:50 | INFO     | Running full SEO analysis...
+2026-04-23 10:40:51 | INFO     | GSC service initialized successfully
+2026-04-23 10:40:52 | INFO     | GSC returned 41 rows
+2026-04-23 10:40:54 | INFO     | GA4 service initialized successfully
+2026-04-23 10:40:55 | INFO     | GA4 returned 49 rows
+2026-04-23 10:40:55 | INFO     | ============================================================
+2026-04-23 10:40:55 | INFO     | Workflow completed!
+2026-04-23 10:40:55 | INFO     | ============================================================
+2026-04-23 10:41:00 | INFO     | ============================================================
+2026-04-23 10:41:00 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 10:41:00 | INFO     | Mode: insight
+2026-04-23 10:41:00 | INFO     | Time: 2026-04-23 10:41:00
+2026-04-23 10:41:00 | INFO     | ============================================================
+2026-04-23 10:41:00 | INFO     | Running gap analysis...
+2026-04-23 10:41:01 | INFO     | GSC service initialized successfully
+2026-04-23 10:41:02 | INFO     | GSC returned 55 rows
+2026-04-23 10:41:04 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:41:06 | INFO     | Serper returned 10 results for 'china business tours'
+2026-04-23 10:41:07 | INFO     | Serper returned 10 results for 'china business trip package'
+2026-04-23 10:41:09 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:41:10 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:41:12 | INFO     | Serper returned 10 results for 'china sourcing agent australia'
+2026-04-23 10:41:13 | INFO     | Serper returned 10 results for 'china sourcing company'
+2026-04-23 10:41:15 | INFO     | Serper returned 10 results for 'china sourcing services'
+2026-04-23 10:41:18 | INFO     | Serper returned 9 results for 'china sourcing tour'
+2026-04-23 10:41:20 | INFO     | Serper returned 9 results for 'chinese factory'
+2026-04-23 10:41:21 | INFO     | Serper returned 10 results for 'chinese wholesalers australia'
+2026-04-23 10:41:23 | INFO     | Serper returned 10 results for 'how to buy from chinese manufacturers'
+2026-04-23 10:41:25 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:41:26 | INFO     | Serper returned 10 results for 'visiting chinese factories'
+2026-04-23 10:41:27 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:41:29 | INFO     | Serper returned 10 results for 'winning adventure global'
+2026-04-23 10:41:29 | INFO     | [HIGH] china business tours
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] china business tours
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] china business trip package
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] china sourcing agent australia
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] china sourcing company
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] china sourcing services
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] china sourcing tour
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] chinese factory
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] chinese wholesalers australia
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] how to buy from chinese manufacturers
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: monitor
+2026-04-23 10:41:29 | INFO     | [HIGH] visiting chinese factories
+2026-04-23 10:41:29 | INFO     |   Intent: informational | Action: optimize_title_meta
+2026-04-23 10:41:29 | INFO     | [HIGH] winning adventure global
+2026-04-23 10:41:29 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 10:41:29 | INFO     | [HIGH] winning adventure global
+2026-04-23 10:41:29 | INFO     |   Intent: navigational | Action: optimize_title_meta
+2026-04-23 10:41:29 | INFO     | ============================================================
+2026-04-23 10:41:29 | INFO     | Workflow completed!
+2026-04-23 10:41:29 | INFO     | ============================================================
+2026-04-23 11:26:10 | INFO     | ============================================================
+2026-04-23 11:26:10 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 11:26:10 | INFO     | Mode: gsc
+2026-04-23 11:26:10 | INFO     | Time: 2026-04-23 11:26:10
+2026-04-23 11:26:10 | INFO     | ============================================================
+2026-04-23 11:26:10 | INFO     | Fetching GSC data...
+2026-04-23 11:26:11 | INFO     | GSC service initialized successfully
+2026-04-23 11:26:13 | INFO     | GSC returned 41 rows
+2026-04-23 11:26:13 | INFO     | Retrieved 41 queries from GSC
+2026-04-23 11:26:13 | ERROR    | Unexpected error: dict contains fields not in fieldnames: 'date', 'page'
+Traceback (most recent call last):
+  File "/Users/mark/Projects/wag-frontend/scripts/seo_workflow.py", line 1088, in main
+    writer.writerow(asdict(row))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/csv.py", line 225, in writerow
+    return self.writer.writerow(self._dict_to_list(rowdict))
+                                ~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/csv.py", line 220, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+                     + ", ".join([repr(x) for x in wrong_fields]))
+ValueError: dict contains fields not in fieldnames: 'date', 'page'
+2026-04-23 11:26:21 | INFO     | ============================================================
+2026-04-23 11:26:21 | INFO     | WAG SEO + GEO Automation Workflow Starting
+2026-04-23 11:26:21 | INFO     | Mode: analyze
+2026-04-23 11:26:21 | INFO     | Time: 2026-04-23 11:26:21
+2026-04-23 11:26:21 | INFO     | ============================================================
+2026-04-23 11:26:21 | INFO     | Running full SEO analysis...
+2026-04-23 11:26:22 | INFO     | GSC service initialized successfully
+2026-04-23 11:26:23 | INFO     | GSC returned 41 rows
+2026-04-23 11:26:23 | INFO     | GA4 service initialized successfully
+2026-04-23 11:26:25 | INFO     | GA4 returned 49 rows
+2026-04-23 11:26:25 | INFO     | ============================================================
+2026-04-23 11:26:25 | INFO     | Workflow completed!
+2026-04-23 11:26:25 | INFO     | ============================================================
