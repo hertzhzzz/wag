@@ -2,6 +2,11 @@
 // ARTICLE PAGE TYPES
 // ============================================
 
+export interface FAQItem {
+  question: string
+  answer: string
+}
+
 export interface Frontmatter {
   title: string
   date: string
@@ -16,6 +21,7 @@ export interface Frontmatter {
   ctaTitle: string
   ctaText: string
   ctaButtonText: string
+  faqs?: FAQItem[]
 }
 
 export interface Article {
