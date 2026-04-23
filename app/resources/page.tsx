@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: 'Expert guides on planning factory visits in China for Australian businesses. Includes supplier verification checklists and import tips.',
     url: 'https://www.winningadventure.com.au/resources',
   },
+  alternates: {
+    canonical: 'https://www.winningadventure.com.au/resources',
+  },
 }
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
