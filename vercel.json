@@ -1,4 +1,12 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "winningadventure.com.au" }],
+      "destination": "https://www.winningadventure.com.au/:path*",
+      "permanent": true
+    }
+  ]
 }
