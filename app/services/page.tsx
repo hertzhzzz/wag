@@ -10,8 +10,8 @@ import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'China Factory Visit Services | Supplier Verification',
-  description: 'Join guided factory tours in Shenzhen, Guangzhou, and Shanghai. WAG helps Australian businesses verify suppliers and negotiate with manufacturers.',
+  title: 'China Sourcing Tour Services | Factory Visits & Supplier Verification',
+  description: 'Join guided China sourcing tours in Shenzhen, Guangzhou & Shanghai. WAG helps Australian businesses verify suppliers, negotiate with manufacturers and reduce procurement risk.',
   keywords: [
     'Australia China sourcing agent',
     'Australian business China factory tour',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     'China factory verification',
   ],
   openGraph: {
-    title: 'China Sourcing Services | Factory Tours & Supplier Verification',
-    description: 'Our China sourcing services include factory tours, supplier verification, quality inspections, and procurement coordination for Australian businesses.',
+    title: 'China Sourcing Tour Services | Factory Visits & Supplier Verification',
+    description: 'Guided factory tours in Shenzhen, Guangzhou & Shanghai. Australian businesses use WAG to verify suppliers, negotiate better terms, and reduce sourcing risk.',
     url: 'https://www.winningadventure.com.au/services',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',

@@ -12,8 +12,8 @@ import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Company | Australian Business Guide',
-  description: 'Connect with verified Chinese manufacturers. Factory tours, supplier verification, and procurement support for Australian businesses since 2012.',
+  title: 'China Sourcing Company | Factory Tours & Supplier Verification | Australia',
+  description: 'Connect with verified Chinese manufacturers. WAG arranges factory tours in Shenzhen, Guangzhou and Shanghai. Australian businesses use us to verify suppliers and reduce sourcing risk.',
   keywords: ['china sourcing company', 'australian business china', 'verified suppliers china', 'factory tour china', 'china sourcing agent', 'supplier verification'],
   openGraph: {
     locale: 'en_AU',
