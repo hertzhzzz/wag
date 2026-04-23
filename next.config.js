@@ -8,25 +8,17 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
-      // HTTP → HTTPS (permanent for SEO)
-      {
-        source: '/(.*)',
-        has: [{ type: 'header', key: 'x-forwarded-proto', value: 'http' }],
-        destination: 'https://www.winningadventure.com.au/:1',
-        permanent: true,
-      },
       // non-www → www (permanent for SEO canonical)
       {
-        source: '/(.*)',
+        source: '/',
         has: [{ type: 'host', value: 'winningadventure.com.au' }],
-        destination: 'https://www.winningadventure.com.au/:1',
+        destination: 'https://www.winningadventure.com.au/',
         permanent: true,
       },
-      // www with HTTP → HTTPS (catches edge cases)
       {
-        source: '/(.*)',
-        has: [{ type: 'host', value: 'www.winningadventure.com.au' }],
-        destination: 'https://www.winningadventure.com.au/:1',
+        source: '/:path*',
+        has: [{ type: 'host', value: 'winningadventure.com.au' }],
+        destination: 'https://www.winningadventure.com.au/:path*',
         permanent: true,
       },
       // Existing blog redirects
