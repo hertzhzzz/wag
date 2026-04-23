@@ -166,31 +166,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
 function HeroSection({ fm }: { fm: Frontmatter }) {
   return (
-    <section className="relative bg-[#0F2D5E] pt-6 pb-8 px-6 overflow-hidden">
-      {fm.coverImage && (
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `url(${fm.coverImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0F2D5E]/80 to-[#0F2D5E]" />
+    <section className="relative bg-white pt-6 pb-8 px-6 overflow-hidden border-b border-gray-200">
       <div className="relative max-w-[900px] mx-auto">
-        <nav className="flex items-center gap-2 text-xs text-blue-300 uppercase tracking-wider mb-3">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+        <nav className="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wider mb-3">
+          <Link href="/" className="hover:text-[#0F2D5E] transition-colors">Home</Link>
           <span>›</span>
-          <Link href="/resources" className="hover:text-white transition-colors">Resources</Link>
+          <Link href="/resources" className="hover:text-[#0F2D5E] transition-colors">Resources</Link>
           <span>›</span>
-          <span className="text-white">{fm.category}</span>
+          <span className="text-gray-700">{fm.category}</span>
         </nav>
         <p className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase mb-2">{fm.category}</p>
-        <h1 className="font-serif font-bold text-[clamp(1.3rem,2.5vw,1.75rem)] text-white leading-tight mb-3 max-w-3xl">
+        <h1 className="font-serif font-bold text-[clamp(1.3rem,2.5vw,1.75rem)] text-[#0F2D5E] leading-tight mb-3 max-w-3xl">
           {fm.title}
         </h1>
-        <div className="flex items-center gap-3 text-sm text-blue-200">
+        <div className="flex items-center gap-3 text-sm text-gray-600">
           <Link href="/about" className="hover:text-[#F59E0B] transition-colors">{fm.author}</Link>
           <span>·</span>
           <span>{fm.date}</span>
@@ -204,19 +193,19 @@ function HeroSection({ fm }: { fm: Frontmatter }) {
 
 function KeyTakeaways({ items }: { items: string[] }) {
   return (
-    <div className="bg-gradient-to-br from-[#0F2D5E] to-[#1a4080] text-white p-6 rounded-xl mb-6 shadow-lg">
+    <div className="bg-gray-50 border border-gray-200 text-[#0F2D5E] p-6 rounded-xl mb-6 shadow-sm">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-9 h-9 rounded-lg bg-[#F59E0B] flex items-center justify-center">
           <svg className="w-5 h-5 text-[#0F2D5E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
-        <h3 className="font-serif font-bold text-lg text-[#F59E0B]">Key Takeaways</h3>
+        <h3 className="font-serif font-bold text-lg text-[#0F2D5E]">Key Takeaways</h3>
       </div>
       <ul className="space-y-2">
         {items.map((item, i) => (
-          <li key={i} className="flex items-start gap-3 text-sm text-blue-100">
-            <span className="w-5 h-5 rounded-full bg-[#F59E0B]/20 text-[#F59E0B] text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+          <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+            <span className="w-5 h-5 rounded-full bg-[#0F2D5E] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
               {i + 1}
             </span>
             {item}
