@@ -21,7 +21,7 @@ function getAllArticles() {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://winningadventure.com.au'
+  const baseUrl = 'https://www.winningadventure.com.au'
   const articles = getAllArticles()
 
   const blogUrls = articles.map(article => ({
