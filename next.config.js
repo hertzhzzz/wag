@@ -8,20 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
-      // non-www → www (permanent for SEO canonical)
-      {
-        source: '/',
-        has: [{ type: 'host', value: 'winningadventure.com.au' }],
-        destination: 'https://www.winningadventure.com.au/',
-        permanent: true,
-      },
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'winningadventure.com.au' }],
-        destination: 'https://www.winningadventure.com.au/:path*',
-        permanent: true,
-      },
-      // Existing blog redirects
+      // Blog slug redirects
       {
         source: '/verify-chinese-supplier',
         destination: '/resources/verify-chinese-supplier',
