@@ -1,5 +1,5 @@
 # Winning Adventure Global
-Last updated: 2026-03-25
+Last updated: 2026-04-23
 
 ## Site Overview
 
@@ -50,67 +50,137 @@ Manufacturing, technology, food and health, construction, property, agriculture,
 - /about — Company story, founder Andy Liu, Adelaide presence
 - /resources — Blog articles and guides on China sourcing
 - /enquiry — Contact form for consultation requests
+- /adelaide — Adelaide China factory visit services for South Australian businesses
+- /sydney — Sydney China factory visit services for NSW businesses
+- /melbourne — Melbourne China factory visit services for Victorian businesses
+- /perth — Perth China factory visit services for Western Australian businesses
 
-### Blog Articles
+### Blog Articles (25 articles)
 
-1. **Australia Import Tips: Essential Guide for First-Time Importers**
-   Everything Australian businesses need to know about importing goods. Covers customs requirements, GST, quarantine, product compliance, and practical tips for successful importing.
-   Category: China Factory Tour | Author: Andy Liu, Founder
+**Location-Specific Factory Visit Articles**
 
-2. **How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order**
-   A practical guide for Australian businesses ready to place their first bulk order in China — from price negotiation to quality checks.
-   Category: Bulk Purchase Procurement Trip | Author: Andy Liu, Founder
+1. **China Factory Visits for Adelaide Businesses: A Practical Guide for SME Importers**
+   Adelaide-focused guide covering direct factory sourcing for South Australian SMEs. Covers Port Adelaide logistics, SA business regulations, and factory visit planning for Adelaide-based importers.
+   Category: China Sourcing | Author: Mark He (Managing Director, WAG Adelaide)
 
-3. **The Complete Guide to China Business Travel for Australian Companies (2026 Edition)**
-   Essential 2026 guide for Australian businesses: China business travel trends, factory visit strategies, Canton Fair tips, and how to turn trips into measurable outcomes.
-   Category: China Business Travel | Author: Winning Adventure Global Team
+2. **China Factory Visits for Sydney Businesses: Sourcing Strategy for NSW SME Importers**
+   Sydney-focused guide for NSW businesses. Covers Port Botany logistics, automotive and AV equipment sourcing, and structured factory visit programmes for Sydney importers.
+   Category: China Sourcing | Author: Mark He (Managing Director, WAG Adelaide)
 
-4. **7 Things I Learned from 200+ Factory Visits — What Australian Buyers Must Know Before They Board the Plane**
-   What Australian buyers must know before visiting Chinese factories. Learn from 200+ factory visits across Guangdong Province (Shenzhen, Foshan, Guangzhou).
-   Category: China Factory Tour | Author: Andy Liu, Founder
+3. **China Factory Visits for Melbourne Businesses: Direct Sourcing for Victorian SME Importers**
+   Melbourne-focused guide for Victorian manufacturers. Covers Port of Melbourne logistics, food processing equipment, and precision engineering component sourcing.
+   Category: China Sourcing | Author: Mark He (Managing Director, WAG Adelaide)
 
-5. **China Sourcing Risks & How to Mitigate Them: An Australian Business Guide**
-   Understand the common risks of sourcing from China and learn proven strategies to protect your business. Quality issues, communication barriers, and fraud prevention.
-   Category: China Sourcing Risks | Author: Andy Liu, Founder
+4. **China Factory Visits for Perth Businesses: Direct Sourcing for WA SME Importers**
+   Perth-focused guide for Western Australian businesses. Covers Fremantle Port logistics, mining equipment sourcing, and direct factory relationships for WA SME importers.
+   Category: China Sourcing | Author: Mark He (Managing Director, WAG Adelaide)
 
-6. **China Supplier Verification: How to Check If a Supplier Is Legitimate**
-   Learn how to verify Chinese suppliers before placing orders. This guide covers factory verification, due diligence steps, red flags, and how to avoid supplier scams.
-   Category: China Factory Tour | Author: Andy Liu, Founder
+5. **China Factory Visits for Brisbane Businesses: Direct Sourcing for Queensland SME Importers**
+   Brisbane-focused guide for Queensland businesses. Covers Port of Brisbane logistics, agricultural equipment sourcing, and direct factory relationships for QLD importers.
+   Category: China Sourcing | Author: Mark He (Managing Director, WAG Adelaide)
 
-7. **Direct Factory Sourcing vs Alibaba: Which is Better for Australian Businesses?**
-   Compare direct factory sourcing with Alibaba-style platforms. Learn when each approach works best and how to choose for your business needs.
-   Category: China Sourcing | Author: Andy Liu, Founder
+**Factory Verification and Supplier Due Diligence**
 
-8. **How to Import from China: A Practical Guide for Australian Businesses**
-   Learn the complete process of importing from China to Australia. This guide covers customs requirements, GST, quarantine rules, finding suppliers, and arranging factory visits.
-   Category: China Factory Tour | Author: Andy Liu, Founder
+6. **How to Verify Chinese Factories on 1688 Before Paying a Deposit**
+   Three-step verification framework for Australian buyers using 1688. Covers factory vs trading company identification, business licence verification, and deposit risk management.
+   Category: Factory Verification | Author: Mark He
 
-9. **How to Verify Chinese Factories on 1688 Before Paying a Deposit**
-   Most Australian businesses discover this truth too late: the 1688 supplier who seemed reliable was never a factory at all. Learn the 3 verification steps before you pay any deposit.
-   Category: Factory Verification | Author: Winning Adventure Global
+7. **How to Verify a Chinese Supplier: Real Factory vs Trading Company**
+   Detailed guide to distinguishing genuine manufacturers from trading companies. Covers SAMR corporate registry checks, address verification, and production capacity assessment.
+   Category: China Factory Tour | Author: Mark He
 
-10. **How to Verify a Chinese Supplier: Real Factory vs Trading Company**
-    Learn how Australian buyers can verify whether a Chinese supplier is a real factory, trading company, or shell company using official records, audits, and address checks.
-    Category: China Factory Tour | Author: Andy Liu, Founder
+8. **Supplier Verification Checklist for Chinese Factories: Step-by-Step Guide**
+   Comprehensive 12-point verification checklist aligned with SGS and BSI inspection standards. Includes factory audit checklist, quality management review, and export history verification.
+   Category: China Factory Tour | Author: Mark He
+
+9. **How to Verify Chinese Factories for AV Equipment: The 3-Step Guide Australian Brands Need**
+   Specialised guide for Australian AV equipment brands sourcing from China. Covers audio quality testing, electrical safety compliance, and SGS pre-shipment inspection for event equipment.
+   Category: China Sourcing | Author: Mark He
+
+10. **How to Verify Chinese Factories for Event Hire Equipment: The 3-Step Framework Every Australian Event Hire Company Needs**
+    Specialised guide for Australian event hire companies. Covers equipment durability testing, safety compliance verification, and rental equipment quality standards.
+    Category: China Sourcing | Author: Mark He
+
+11. **What Happens When You Skip Supplier Verification: A Real Story**
+    Case study of an Australian automotive parts importer who skipped verification and faced AUD $47,000 in losses from non-compliant brake components rejected at Port Botany.
+    Category: Factory Verification | Author: Mark He
+
+12. **Chinese Supplier Quality Not as Promised: What to Do When Goods Don't Match**
+    Practical guide for Australian businesses when Chinese supplier quality does not match expectations. Covers CNCA-accredited laboratory testing, dispute resolution, and remediation strategies.
+    Category: China Factory Tour | Author: Mark He
+
+**Sourcing Strategy and Risk Management**
+
+13. **China Sourcing Risks & How to Mitigate Them: An Australian Business Guide**
+    Comprehensive risk management guide for Australian importers. Covers quality issues, fraud prevention, communication barriers, IP protection, and supply chain disruption mitigation.
+    Category: China Sourcing Risks | Author: Mark He
+
+14. **Direct Factory Sourcing vs Alibaba: Which is Better for Australian Businesses?**
+    Comparative analysis of direct factory sourcing versus Alibaba-style platforms. Covers cost structures, quality control differences, and when each approach is appropriate.
+    Category: China Sourcing | Author: Mark He
+
+15. **Factory vs Trading Company: How to Tell Who You're Actually Dealing With**
+    Identification guide distinguishing genuine factories from trading companies and intermediaries. Covers pricing structures, MOQ differences, and verification approaches for each type.
+    Category: China Factory Tour | Author: Mark He
+
+**Import Process and Compliance**
+
+16. **How to Import from China: A Practical Guide for Australian Businesses**
+    Complete import guide covering customs requirements, GST rules, quarantine regulations, and product compliance standards. Includes step-by-step import process for Australian businesses.
+    Category: China Factory Tour | Author: Mark He
+
+17. **Australia Import Tips: Essential Guide for First-Time Importers**
+    Foundational guide for first-time Australian importers from China. Covers customs procedures, import permits, quarantine requirements, and common mistakes to avoid.
+    Category: China Factory Tour | Author: Mark He
+
+18. **Should You Pay a Deposit to a Chinese Supplier? What Australian Businesses Need to Know**
+    Deposit risk management guide for Australian buyers. Covers payment terms negotiation, escrow arrangements, and deposit recovery strategies when supplier relationships fail.
+    Category: China Factory Tour | Author: Mark He
+
+**Bulk Procurement and China Travel**
+
+19. **How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order**
+    Comprehensive guide to bulk purchasing from Chinese manufacturers. Covers container loading optimisation, volume pricing negotiation, and production monitoring for large orders.
+    Category: Bulk Purchase Procurement Trip | Author: Mark He
+
+20. **The Complete Guide to China Business Travel for Australian Companies (2026 Edition)**
+    2026 edition guide covering China business travel planning, Canton Fair attendance strategies, factory visit preparation, and trip ROI measurement for Australian companies.
+    Category: China Business Travel | Author: Mark He
+
+21. **How to Plan a China Business Sourcing Tour That Actually Pays Off**
+    Strategic guide to planning effective China sourcing trips. Covers factory visit scheduling, itinerary optimisation, follow-up management, and converting visits into supplier relationships.
+    Category: China Factory Tour | Author: Mark He
+
+22. **7 Things I Learned Visiting Chinese Factories for 8 Years — What Australian Buyers Must Know Before They Board the Plane**
+    First-person account of lessons learned across 200+ factory visits. Covers verification mistakes, negotiation approaches, relationship building, and quality control lessons from WAG's operational experience.
+    Category: China Factory Tour | Author: Mark He
+
+**Negotiation Skills**
+
+23. **How to Negotiate with a Chinese Factory: What Australian Businesses Get Wrong**
+    Negotiation strategy guide for Australian businesses. Covers face (mianzi) dynamics, price negotiation approaches, MOQ discussions, and building long-term factory relationships.
+    Category: China Factory Tour | Author: Mark He
+
+24. **Visiting Chinese Factories: An Australian Business Owner's Complete Checklist (2026)**
+    Comprehensive pre-trip checklist for Australian business owners visiting Chinese factories. Covers documentation requirements, negotiation preparation, quality inspection tools, and cultural preparation.
+    Category: China Factory Tour | Author: Mark He
 
 ## Key Topics Covered
 
 - China sourcing agent Australia services
 - Visiting Chinese factories safely
+- Factory visit planning for Australia-China business trips
 - China sourcing tour planning and preparation
-- China business tours for Australian importers
-- Finding reliable Chinese wholesalers in Australia
-- China business trip package options
-- Factory verification and supplier due diligence
+- Factory verification and supplier due diligence (SGS, BSI, CNCA, SAMR)
 - 1688 supplier vetting before visiting
 - Bulk procurement from China guide
-- Australian import regulations and customs requirements
-- Factory tour planning for China visits
+- Australian import regulations, customs requirements, GST
 - Supplier fraud prevention and red flags
 - Canton Fair strategies and visit planning
-- Direct sourcing vs Alibaba-style platforms
+- Direct factory sourcing vs Alibaba-style platforms
 - Quality inspection coordination in China
 - Negotiation strategies with Chinese manufacturers
+- Adelaide, Sydney, Melbourne, Perth, Brisbane factory visit services
 
 ## Business Information
 
@@ -125,3 +195,8 @@ Manufacturing, technology, food and health, construction, property, agriculture,
 - Factory Visits Completed: 200+
 - Verified Suppliers: 500+
 - Pricing: Customized packages (contact for quote)
+
+## Author Information
+
+- **Andy Liu** — Founder, Winning Adventure Global. Based in Adelaide, extensive China manufacturing expertise across Shenzhen, Foshan, Guangzhou, and Pearl River Delta. 200+ factory visits completed.
+- **Mark He** — Managing Director, Winning Adventure Global Adelaide. Primary author of blog articles covering factory visits, supplier verification, import compliance, and China sourcing strategy.
