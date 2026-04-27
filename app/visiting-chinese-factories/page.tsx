@@ -242,7 +242,7 @@ export default function VisitingChineseFactoriesPage() {
             Key Manufacturing Hubs in China
           </h2>
           <p className="text-gray-600 mb-10 max-w-[560px]">
-            We coordinate factory visits across China's major manufacturing regions, covering 6-8 core hubs in Jiangsu, Zhejiang, and Guangdong provinces.
+            We coordinate factory visits across China&apos;s major manufacturing regions, covering 6-8 core hubs in Jiangsu, Zhejiang, and Guangdong provinces.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[

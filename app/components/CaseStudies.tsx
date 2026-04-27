@@ -1,4 +1,5 @@
 import { CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
 
 const caseStudies = [
   {
@@ -142,7 +143,7 @@ export default function CaseStudies() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-xs text-navy/60 italic leading-relaxed">"{study.quote}"</p>
+                  <p className="text-xs text-navy/60 italic leading-relaxed">&ldquo;{study.quote}&rdquo;</p>
                   <p className="text-[10px] text-navy/30 mt-1 uppercase tracking-wider">{study.quoteAttribution}</p>
                 </div>
               </div>
@@ -152,7 +153,7 @@ export default function CaseStudies() {
 
         {/* CTA */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <a
+          <Link
             href="/enquiry"
             className="inline-flex items-center gap-3 bg-amber text-navy px-8 py-4 font-bold hover:bg-[#d97706] transition-all duration-300 no-underline min-h-11 shadow-lg hover:shadow-xl hover:shadow-amber/20 hover:-translate-y-0.5"
           >
@@ -160,7 +161,7 @@ export default function CaseStudies() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
           <p className="text-xs text-navy/40 max-w-md">
             Case studies above are illustrative of typical project outcomes. Individual results may vary.
           </p>
