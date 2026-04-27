@@ -106,92 +106,95 @@ export default function EnquiryForm() {
           {/* Desktop: left (paths + trust) / right (form) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
-            {/* Left column: What happens next + trust stats + FAQ + contact */}
-            <div className="flex flex-col gap-8">
+            {/* Left column: What happens next + trust stats */}
+            <div className="flex flex-col gap-6">
 
               {/* What happens next — two paths */}
               <div>
                 <h3 className="font-serif font-bold text-lg mb-6 text-[#0F2D5E]">Here&apos;s what happens after you reach out</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-              {/* Path 1: Visit in China */}
-              <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
-                <div className="flex items-center gap-2.5 mb-4">
-                  <div className="w-7 h-7 rounded-full bg-[#0F2D5E] text-white flex items-center justify-center flex-shrink-0">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
-                  </div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#0F2D5E]">Path 1 — Visit Factories in China</p>
-                </div>
-                <div className="flex flex-col gap-2.5">
-                  {[
-                    ['We get in touch', 'Within 4 business hours'],
-                    ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
-                    ['We plan your trip', 'Flights, hotel, and factory schedule arranged'],
-                    ['You visit in person', 'Guided tours, technical meetings, quality inspection'],
-                    ['Production & shipping', 'We monitor production and ship to your door'],
-                  ].map(([title, sub], i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <div className="w-4 h-4 rounded-full bg-[#0F2D5E] text-[#F59E0B] text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
-                        {i + 1}
+                  {/* Path 1: Visit in China */}
+                  <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
+                    <div className="flex items-center gap-2.5 mb-4">
+                      <div className="w-7 h-7 rounded-full bg-[#0F2D5E] text-white flex items-center justify-center flex-shrink-0">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
                       </div>
-                      <div>
-                        <span className="text-xs font-semibold text-[#0F2D5E]">{title} — </span>
-                        <span className="text-xs text-gray-500">{sub}</span>
-                      </div>
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#0F2D5E]">Path 1 — Visit Factories in China</p>
                     </div>
-                  ))}
+                    <div className="flex flex-col gap-2.5">
+                      {[
+                        ['We get in touch', 'Within 4 business hours'],
+                        ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
+                        ['We plan your trip', 'Flights, hotel, and factory schedule arranged'],
+                        ['You visit in person', 'Guided tours, technical meetings, quality inspection'],
+                        ['Production & shipping', 'We monitor production and ship to your door'],
+                      ].map(([title, sub], i) => (
+                        <div key={i} className="flex items-start gap-2.5">
+                          <div className="w-4 h-4 rounded-full bg-[#0F2D5E] text-[#F59E0B] text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                            {i + 1}
+                          </div>
+                          <div>
+                            <span className="text-xs font-semibold text-[#0F2D5E]">{title} — </span>
+                            <span className="text-xs text-gray-500">{sub}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Path 2: Remote / No travel */}
+                  <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
+                    <div className="flex items-center gap-2.5 mb-4">
+                      <div className="w-7 h-7 rounded-full bg-[#0F2D5E] text-white flex items-center justify-center flex-shrink-0">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                      </div>
+                      <p className="text-xs font-bold uppercase tracking-wider text-[#0F2D5E]">Path 2 — Remote Verification</p>
+                    </div>
+                    <div className="flex flex-col gap-2.5">
+                      {[
+                        ['We get in touch', 'Within 4 business hours'],
+                        ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
+                        ['We send you reports', 'Video walkthroughs, photos, and sample quotes'],
+                        ['You review from here', 'No travel needed — full transparency from Australia'],
+                        ['We arrange shipping', 'Production monitoring and delivery managed end-to-end'],
+                      ].map(([title, sub], i) => (
+                        <div key={i} className="flex items-start gap-2.5">
+                          <div className="w-4 h-4 rounded-full bg-[#0F2D5E] text-[#F59E0B] text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                            {i + 1}
+                          </div>
+                          <div>
+                            <span className="text-xs font-semibold text-[#0F2D5E]">{title} — </span>
+                            <span className="text-xs text-gray-500">{sub}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
-              {/* Path 2: Remote / No travel */}
-              <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
-                <div className="flex items-center gap-2.5 mb-4">
-                  <div className="w-7 h-7 rounded-full bg-[#0F2D5E] text-white flex items-center justify-center flex-shrink-0">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                  </div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#0F2D5E]">Path 2 — Remote Verification</p>
+              {/* Trust stats */}
+              <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-100">
+                <div className="text-center">
+                  <p className="text-lg font-bold text-[#0F2D5E]">Verified</p>
+                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Listed Partner</p>
                 </div>
-                <div className="flex flex-col gap-2.5">
-                  {[
-                    ['We get in touch', 'Within 4 business hours'],
-                    ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
-                    ['We send you reports', 'Video walkthroughs, photos, and sample quotes'],
-                    ['You review from here', 'No travel needed — full transparency from Australia'],
-                    ['We arrange shipping', 'Production monitoring and delivery managed end-to-end'],
-                  ].map(([title, sub], i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <div className="w-4 h-4 rounded-full bg-[#0F2D5E] text-[#F59E0B] text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
-                        {i + 1}
-                      </div>
-                      <div>
-                        <span className="text-xs font-semibold text-[#0F2D5E]">{title} — </span>
-                        <span className="text-xs text-gray-500">{sub}</span>
-                      </div>
-                    </div>
-                  ))}
+                <div className="text-center border-x border-gray-100">
+                  <p className="text-lg font-bold text-[#0F2D5E]">4hrs</p>
+                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Response</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-lg font-bold text-[#0F2D5E]">$0</p>
+                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Upfront</p>
                 </div>
               </div>
 
             </div>
-          </div>
 
-          {/* Trust stats */}
-          <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-100">
-            <div className="text-center">
-              <p className="text-lg font-bold text-[#0F2D5E]">Verified</p>
-              <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Listed Partner</p>
-            </div>
-            <div className="text-center border-x border-gray-100">
-              <p className="text-lg font-bold text-[#0F2D5E]">4hrs</p>
-              <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Response</p>
-            </div>
-            <div className="text-center">
-              <p className="text-lg font-bold text-[#0F2D5E]">$0</p>
-              <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Upfront</p>
-            </div>
-          </div>
-
-          {/* Form card */}
+            {/* Right column: Form card */}
+            <div>
           <div className="bg-white border border-gray-200 rounded-lg p-8">
             <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Get in Touch</p>
             <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-6">
