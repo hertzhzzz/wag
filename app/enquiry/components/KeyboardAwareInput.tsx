@@ -5,12 +5,14 @@ interface KeyboardAwareInputProps extends React.InputHTMLAttributes<HTMLInputEle
   label: string
   required?: boolean
   error?: string
+  onBlur?: () => void
 }
 
 export function KeyboardAwareInput({
   label,
   required = false,
   error,
+  onBlur,
   id,
   className,
   ...props
@@ -52,6 +54,7 @@ export function KeyboardAwareInput({
       <input
         ref={inputRef}
         id={id}
+        onBlur={onBlur}
         className={`w-full py-3 px-4 border rounded text-[0.9375rem] text-[#0F2D5E] outline-none transition-colors ${
           error ? 'border-red-400 focus:border-red-500' : 'border-gray-200 focus:border-[#0F2D5E]'
         } ${className || ''}`}
