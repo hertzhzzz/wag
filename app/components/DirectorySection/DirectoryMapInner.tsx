@@ -99,13 +99,12 @@ function createFactoryIcon(factories: number, isPrimary = false, showCount = fal
 function createClusterIcon(cluster: L.MarkerCluster) {
   // Sum factory counts per city — avoid double-counting when multiple marker points
   // belong to the same city. Use a Map to deduplicate by city name.
-  // @ts-ignore - cities is custom property added to marker options
   const cityFactories = new Map<string, number>()
   const allChildMarkers = cluster.getAllChildMarkers()
   allChildMarkers.forEach((marker) => {
-    // @ts-ignore - city is custom property added to marker options
+    // @ts-expect-error - city is custom property added to marker options
     const city = marker.options.city as string
-    // @ts-ignore - factories is custom property added to marker options
+    // @ts-expect-error - factories is custom property added to marker options
     const factories = marker.options.factories as number
     if (city && factories && !isNaN(factories)) {
       // Only record the first (highest) factory count per city
@@ -202,11 +201,11 @@ export default function DirectoryMapInner({
         showCountRef.current = newShowCount
         // Update all marker icons
         markersRef.current.forEach((marker) => {
-          // @ts-ignore - factories/city are custom properties
+          // @ts-expect-error - factories/city are custom properties
           const factories = marker.options.factories as number
-          // @ts-ignore
+          // @ts-expect-error - city is custom property on marker
           const city = marker.options.city as string
-          // @ts-ignore
+          // @ts-expect-error - isPrimary is custom property on marker
           const isPrimary = marker.options.isPrimary as boolean
           marker.setIcon(createFactoryIcon(factories, isPrimary, newShowCount))
         })
