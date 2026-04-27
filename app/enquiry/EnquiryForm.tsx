@@ -101,12 +101,18 @@ export default function EnquiryForm() {
       </section>
 
       <section className="py-12 px-4 sm:px-8">
-        <div className="max-w-[600px] mx-auto flex flex-col gap-10">
+        <div className="max-w-[1200px] mx-auto">
 
-          {/* What happens next — two paths */}
-          <div>
-            <h3 className="font-serif font-bold text-lg mb-6 text-center text-[#0F2D5E]">Here&apos;s what happens after you reach out</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Desktop: left (paths + trust) / right (form) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+
+            {/* Left column: What happens next + trust stats + FAQ + contact */}
+            <div className="flex flex-col gap-8">
+
+              {/* What happens next — two paths */}
+              <div>
+                <h3 className="font-serif font-bold text-lg mb-6 text-[#0F2D5E]">Here&apos;s what happens after you reach out</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
               {/* Path 1: Visit in China */}
               <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
@@ -272,6 +278,8 @@ export default function EnquiryForm() {
                 </div>
               </form>
             )}
+          </div>
+            </div>
           </div>
 
           {/* FAQ */}
