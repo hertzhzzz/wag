@@ -26,11 +26,8 @@ async function getTransporter() {
 // Validation schema
 const enquirySchema = z.object({
   fullName: z.string().min(1, 'Name is required').max(100),
-  companyName: z.string().min(1, 'Company name is required').max(200),
   email: z.string().email('Invalid email address'),
   phone: z.string().optional(),
-  industry: z.string().min(1, 'Industry is required').max(100),
-  customIndustry: z.string().optional(),
   lookingFor: z.string().min(1, 'Please describe what you need').max(5000),
 })
 
@@ -100,17 +97,12 @@ export async function POST(request: Request) {
     return addCorsHeaders(response, origin)
   }
 
-  const { fullName, companyName, email, phone, industry, customIndustry, lookingFor } = parseResult.data
-
-  // Determine display industry (show customIndustry if "other" is selected)
-  const displayIndustry = industry === 'other' && customIndustry ? customIndustry : industry
+  const { fullName, email, phone, lookingFor } = parseResult.data
 
   // Escape all user inputs for HTML display
   const safeFullName = escapeHtml(fullName)
-  const safeCompanyName = escapeHtml(companyName)
   const safeEmail = escapeHtml(email)
   const safePhone = escapeHtml(phone || '')
-  const safeIndustry = escapeHtml(displayIndustry)
   const safeLookingFor = escapeHtml(lookingFor)
 
   try {
@@ -119,7 +111,7 @@ export async function POST(request: Request) {
       from: `"Winning Adventure" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
       replyTo: email,
-      subject: `New Sourcing Enquiry — ${safeCompanyName}`,
+      subject: `New Sourcing Enquiry — ${safeFullName}`,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#0F2D5E">
           <div style="background:#0F2D5E;padding:24px 32px;">
@@ -133,20 +125,12 @@ export async function POST(request: Request) {
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;font-weight:600;">${safeFullName}</td>
               </tr>
               <tr>
-                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Company</td>
-                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;font-weight:600;">${safeCompanyName}</td>
-              </tr>
-              <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Email</td>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;"><a href="mailto:${safeEmail}" style="color:#0F2D5E;">${safeEmail}</a></td>
               </tr>
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Phone</td>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safePhone || '—'}</td>
-              </tr>
-              <tr>
-                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Industry</td>
-                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safeIndustry}</td>
               </tr>
             </table>
             <div style="margin-top:24px;">
