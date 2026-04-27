@@ -5,12 +5,14 @@ interface KeyboardAwareTextareaProps extends React.TextareaHTMLAttributes<HTMLTe
   label: string
   required?: boolean
   error?: string
+  onBlur?: () => void
 }
 
 export function KeyboardAwareTextarea({
   label,
   required = false,
   error,
+  onBlur,
   id,
   className,
   ...props
@@ -52,6 +54,7 @@ export function KeyboardAwareTextarea({
       <textarea
         ref={textareaRef}
         id={id}
+        onBlur={onBlur}
         data-testid={id === 'lookingFor' ? 'message' : undefined}
         className={`w-full py-3 px-4 border rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E] min-h-[120px] resize-y ${
           error ? 'border-red-400 focus:border-red-500' : 'border-gray-200'
