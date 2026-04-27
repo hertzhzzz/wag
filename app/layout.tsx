@@ -224,6 +224,17 @@ export default function RootLayout({
       </head>
       <body>
       {children}
+      {/* Meta Pixel noscript fallback — rendered by browsers with JS disabled */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: 'none' }}
+          src="https://www.facebook.com/tr?id=935975895717524&ev=PageView&noscript=1"
+          alt=""
+        />
+      </noscript>
       <ScrollTracker />
     </body>
     </html>
