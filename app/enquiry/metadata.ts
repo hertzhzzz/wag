@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
-  description: 'Adelaide-based China sourcing agent helping Australian SMEs cut through supplier risk. Factory tours, OEM product sourcing and quality verification. Book your free discovery call.',
-  keywords: ['china sourcing agent australia', 'australian business china sourcing', 'china factory tour', 'OEM sourcing china', 'chinese supplier verification', 'china procurement agent adelaide'],
+  title: 'Contact WAG | Request a Free Discovery Call',
+  description: 'Get in touch for China sourcing consultation. Factory tours, supplier verification, and bulk procurement support for Australian businesses. Book your free discovery call today.',
+  keywords: ['china sourcing consultation', 'factory tour enquiry', 'australian business china', 'contact wag', 'supplier verification quote', 'china procurement help'],
   openGraph: {
-    title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
-    description: 'Factory tours, OEM sourcing and supplier verification — backed by a listed Chinese partner. Book your free discovery call.',
+    title: 'Contact Winning Adventure Global',
+    description: 'Get expert China sourcing help. Book your free discovery call.',
     url: 'https://www.winningadventure.com.au/enquiry',
     siteName: 'Winning Adventure Global',
     images: [
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'China Sourcing Agent for Australian Businesses',
-    description: 'Factory tours, OEM sourcing and supplier verification — backed by a listed Chinese partner.',
+    title: 'Contact Winning Adventure Global',
+    description: 'Get expert China sourcing help. Book your free discovery call.',
     images: ['https://www.winningadventure.com.au/og-image.jpg'],
   },
   alternates: {
