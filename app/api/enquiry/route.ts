@@ -28,6 +28,8 @@ const enquirySchema = z.object({
   fullName: z.string().min(1, 'Name is required').max(100),
   email: z.string().email('Invalid email address'),
   phone: z.string().optional(),
+  company: z.string().optional(),
+  industry: z.string().optional(),
   lookingFor: z.string().min(1, 'Please describe what you need').max(5000),
 })
 
@@ -97,12 +99,14 @@ export async function POST(request: Request) {
     return addCorsHeaders(response, origin)
   }
 
-  const { fullName, email, phone, lookingFor } = parseResult.data
+  const { fullName, email, phone, company, industry, lookingFor } = parseResult.data
 
   // Escape all user inputs for HTML display
   const safeFullName = escapeHtml(fullName)
   const safeEmail = escapeHtml(email)
   const safePhone = escapeHtml(phone || '')
+  const safeCompany = escapeHtml(company || '')
+  const safeIndustry = escapeHtml(industry || '')
   const safeLookingFor = escapeHtml(lookingFor)
 
   try {
@@ -131,6 +135,14 @@ export async function POST(request: Request) {
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Phone</td>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safePhone || '—'}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Company</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safeCompany || '—'}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Industry</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safeIndustry || '—'}</td>
               </tr>
             </table>
             <div style="margin-top:24px;">
