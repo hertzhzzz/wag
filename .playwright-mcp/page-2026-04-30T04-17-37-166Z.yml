@@ -1,0 +1,236 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Pocket Up" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: Pocket Up
+      - generic [ref=e8]:
+        - img [ref=e9]
+        - searchbox "Search listings" [ref=e11]
+      - navigation [ref=e13]:
+        - link "Browse" [ref=e14] [cursor=pointer]:
+          - /url: /browse
+        - link "Sell" [ref=e15] [cursor=pointer]:
+          - /url: /sell
+  - generic:
+    - navigation:
+      - link "Browse":
+        - /url: /browse
+      - link "Sell":
+        - /url: /sell
+      - link "Sign In":
+        - /url: /login
+      - link "Create Account":
+        - /url: /register
+  - main [ref=e17]:
+    - main [ref=e19]:
+      - generic [ref=e21]:
+        - paragraph [ref=e22]: Australia's C2C Marketplace
+        - heading "Buy & Sell Without Worry" [level=1] [ref=e24]
+        - paragraph [ref=e25]: Australia's trusted C2C marketplace with escrow protection and verified sellers.
+        - generic [ref=e27]:
+          - searchbox "Search for items..." [ref=e28]
+          - button "Search" [ref=e29]:
+            - img [ref=e30]
+            - text: Search
+        - generic [ref=e32]:
+          - button "Start Selling" [ref=e33]
+          - button "Browse Listings" [ref=e34]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: 50K+
+          - paragraph [ref=e42]: Active Users
+        - generic [ref=e43]:
+          - paragraph [ref=e44]: $2.5M+
+          - paragraph [ref=e45]: Transactions Protected
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: 4.9★
+          - paragraph [ref=e48]: Average Rating
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: "0"
+          - paragraph [ref=e51]: Scam Reports
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - paragraph [ref=e55]: Why Pocket Up
+          - heading "Trade With Trust" [level=2] [ref=e57]
+        - generic [ref=e58]:
+          - img
+          - generic [ref=e59]:
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - img [ref=e63]
+                - link "Learn more about escrow protection" [ref=e65] [cursor=pointer]:
+                  - /url: /browse
+                  - img [ref=e66]
+              - heading "Escrow Protection" [level=3] [ref=e68]
+              - paragraph [ref=e69]: Your payment is held safely until you confirm receipt. Full protection on every transaction.
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - img [ref=e73]
+                - link "Learn more about verification" [ref=e75] [cursor=pointer]:
+                  - /url: /settings/verification
+                  - img [ref=e76]
+              - heading "Verified Sellers" [level=3] [ref=e78]
+              - paragraph [ref=e79]: All sellers complete identity verification. Trade with confidence knowing who you're dealing with.
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - img [ref=e83]
+                - link "Learn more about dispute resolution" [ref=e85] [cursor=pointer]:
+                  - /url: /browse
+                  - img [ref=e86]
+              - heading "Admin Mediation" [level=3] [ref=e88]
+              - paragraph [ref=e89]: If something goes wrong, our admin team reviews evidence and resolves disputes fairly.
+      - generic [ref=e91]:
+        - generic [ref=e92]:
+          - paragraph [ref=e93]: Browse Categories
+          - heading "Shop by Category" [level=2] [ref=e95]
+        - generic [ref=e96]:
+          - button "Electronics Browse Electronics Shop Electronics" [ref=e97]:
+            - generic [ref=e98]:
+              - img "Electronics" [ref=e101]
+              - link "Browse Electronics" [ref=e102] [cursor=pointer]:
+                - /url: /browse?category=Electronics
+                - img [ref=e103]
+            - paragraph [ref=e105]: Shop
+            - heading "Electronics" [level=3] [ref=e107]
+          - button "Fashion Browse Fashion Shop Fashion" [ref=e108]:
+            - generic [ref=e109]:
+              - img "Fashion" [ref=e112]
+              - link "Browse Fashion" [ref=e113] [cursor=pointer]:
+                - /url: /browse?category=Fashion
+                - img [ref=e114]
+            - paragraph [ref=e116]: Shop
+            - heading "Fashion" [level=3] [ref=e118]
+          - button "Home & Garden Browse Home & Garden Shop Home & Garden" [ref=e119]:
+            - generic [ref=e120]:
+              - img "Home & Garden" [ref=e123]
+              - link "Browse Home & Garden" [ref=e124] [cursor=pointer]:
+                - /url: /browse?category=Home%20%26%20Garden
+                - img [ref=e125]
+            - paragraph [ref=e127]: Shop
+            - heading "Home & Garden" [level=3] [ref=e129]
+          - button "Sports Browse Sports Shop Sports" [ref=e130]:
+            - generic [ref=e131]:
+              - img "Sports" [ref=e134]
+              - link "Browse Sports" [ref=e135] [cursor=pointer]:
+                - /url: /browse?category=Sports
+                - img [ref=e136]
+            - paragraph [ref=e138]: Shop
+            - heading "Sports" [level=3] [ref=e140]
+          - button "Books Browse Books Shop Books" [ref=e141]:
+            - generic [ref=e142]:
+              - img "Books" [ref=e145]
+              - link "Browse Books" [ref=e146] [cursor=pointer]:
+                - /url: /browse?category=Books
+                - img [ref=e147]
+            - paragraph [ref=e149]: Shop
+            - heading "Books" [level=3] [ref=e151]
+          - button "Toys Browse Toys Shop Toys" [ref=e152]:
+            - generic [ref=e153]:
+              - img "Toys" [ref=e156]
+              - link "Browse Toys" [ref=e157] [cursor=pointer]:
+                - /url: /browse?category=Toys
+                - img [ref=e158]
+            - paragraph [ref=e160]: Shop
+            - heading "Toys" [level=3] [ref=e162]
+      - generic [ref=e165]:
+        - generic [ref=e166]:
+          - paragraph [ref=e167]: Featured
+          - heading "Featured Listings" [level=2] [ref=e169]
+        - link "View all" [ref=e170] [cursor=pointer]:
+          - /url: /browse?is_featured=true
+      - generic [ref=e194]:
+        - generic [ref=e195]:
+          - paragraph [ref=e196]: Fresh Arrivals
+          - heading "Recently Added" [level=2] [ref=e198]
+        - link "View all" [ref=e199] [cursor=pointer]:
+          - /url: /browse?sort=newest
+      - generic [ref=e242]:
+        - heading "Ready to Buy or Sell?" [level=2] [ref=e243]
+        - paragraph [ref=e244]: Join thousands of Australians trading safely on PocketUp.
+        - generic [ref=e245]:
+          - button "Get Started — It's Free" [ref=e246]
+          - button "Browse Listings" [ref=e247]
+  - generic "Notifications"
+  - contentinfo [ref=e248]:
+    - generic [ref=e249]:
+      - heading "We're always here when you need us." [level=2] [ref=e250]
+      - generic [ref=e251]:
+        - generic [ref=e252]:
+          - heading "Marketplace" [level=3] [ref=e253]
+          - list [ref=e254]:
+            - listitem [ref=e255]:
+              - link "Browse Listings" [ref=e256] [cursor=pointer]:
+                - /url: /browse
+            - listitem [ref=e257]:
+              - link "Sell an Item" [ref=e258] [cursor=pointer]:
+                - /url: /sell
+            - listitem [ref=e259]:
+              - link "How It Works" [ref=e260] [cursor=pointer]:
+                - /url: /how-it-works
+        - generic [ref=e261]:
+          - heading "Support" [level=3] [ref=e262]
+          - list [ref=e263]:
+            - listitem [ref=e264]:
+              - link "Help Centre" [ref=e265] [cursor=pointer]:
+                - /url: /help
+            - listitem [ref=e266]:
+              - link "Contact Us" [ref=e267] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e268]:
+              - link "Safety Tips" [ref=e269] [cursor=pointer]:
+                - /url: /safety
+        - generic [ref=e270]:
+          - heading "Company" [level=3] [ref=e271]
+          - list [ref=e272]:
+            - listitem [ref=e273]:
+              - link "About Us" [ref=e274] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e275]:
+              - link "Blog" [ref=e276] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e277]:
+              - link "Careers" [ref=e278] [cursor=pointer]:
+                - /url: /careers
+        - generic [ref=e279]:
+          - heading "Legal" [level=3] [ref=e280]
+          - list [ref=e281]:
+            - listitem [ref=e282]:
+              - link "Terms of Service" [ref=e283] [cursor=pointer]:
+                - /url: /terms
+            - listitem [ref=e284]:
+              - link "Privacy Policy" [ref=e285] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e286]:
+              - link "Cookie Policy" [ref=e287] [cursor=pointer]:
+                - /url: /cookies
+      - generic [ref=e289]:
+        - generic [ref=e290]:
+          - generic [ref=e291]: © 2026 Pocket Up
+          - generic [ref=e292]: •
+          - link "Terms" [ref=e293] [cursor=pointer]:
+            - /url: /terms
+          - generic [ref=e294]: •
+          - link "Privacy" [ref=e295] [cursor=pointer]:
+            - /url: /privacy
+          - generic [ref=e296]: •
+          - link "Cookies" [ref=e297] [cursor=pointer]:
+            - /url: /cookies
+        - generic [ref=e298]:
+          - link "Follow us on LinkedIn" [ref=e299] [cursor=pointer]:
+            - /url: https://linkedin.com/company/pocketup
+            - img [ref=e300]
+          - link "Follow us on Facebook" [ref=e302] [cursor=pointer]:
+            - /url: https://facebook.com/pocketup
+            - img [ref=e303]
+          - link "Follow us on X" [ref=e305] [cursor=pointer]:
+            - /url: https://x.com/pocketup
+            - img [ref=e306]
+          - link "Subscribe to our YouTube channel" [ref=e308] [cursor=pointer]:
+            - /url: https://youtube.com/@pocketup
+            - img [ref=e309]
+  - button "Open Next.js Dev Tools" [ref=e316] [cursor=pointer]:
+    - img [ref=e317]
+  - img [ref=e321] [cursor=pointer]

@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTABand from '@/components/CTABand'
 import Hero from './components/Hero'
+import BlogPreview from './components/BlogPreview'
 import DirectorySection from './components/DirectorySection'
 import HowItWorks from './components/HowItWorks'
 import TwoWaysAccess from './components/TwoWaysAccess'
@@ -63,6 +64,7 @@ export default function Home() {
       <CaseStudies />
       <HowItWorks />
       <DirectorySection />
+      <BlogPreview />
       <FAQ faqs={homepageFaqs} />
       <CTABand />
       <Footer />

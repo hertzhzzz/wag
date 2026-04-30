@@ -18,6 +18,7 @@ export interface Frontmatter {
   coverImage?: string
   updatedDate?: string
   takeaways?: string[]
+  tags?: string[]
   ctaTitle: string
   ctaText: string
   ctaButtonText: string

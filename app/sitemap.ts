@@ -4,6 +4,30 @@ import path from 'path'
 import matter from 'gray-matter'
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
+const CASE_STUDIES_DIR = path.join(process.cwd(), 'content/case-studies')
+
+const CASE_STUDY_SLUGS = [
+  'aesthetics-cosmetics',
+  'agricultural-drones',
+  'chemical-industrial',
+  'fashion-apparel',
+  'food-beverage',
+  'healthcare-medical',
+  'construction-building',
+  'technology-electronics',
+  'furniture-homewares',
+  'av-smart-systems',
+  'packaging-print',
+  'agriculture-farming',
+  'automotive-transport',
+  'energy-environment',
+  'robotics-automation',
+  'textiles-home-textiles',
+  'lighting-products',
+  'toys-juvenile-products',
+  'sporting-goods-equipment',
+  'machinery-equipment',
+]
 
 function getAllArticles() {
   return fs
@@ -30,6 +54,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
+
+  const caseStudyUrls = [
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    ...CASE_STUDY_SLUGS.map(slug => ({
+      url: `${baseUrl}/case-studies/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+  ]
 
   return [
     {
@@ -110,6 +149,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    ...caseStudyUrls,
     ...blogUrls,
   ]
 }
