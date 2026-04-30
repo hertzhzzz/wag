@@ -10,7 +10,7 @@ import { KeyboardAwareTextarea } from './components/KeyboardAwareTextarea'
 
 export default function EnquiryForm() {
   const [formData, setFormData] = useState({
-    fullName: '', email: '', lookingFor: '',
+    fullName: '', email: '', phone: '', company: '', industry: '', lookingFor: '',
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [touched, setTouched] = useState<Record<string, boolean>>({})
@@ -41,6 +41,11 @@ export default function EnquiryForm() {
     if (errors[field]) {
       setErrors((prev) => { const next = { ...prev }; delete next[field]; return next })
     }
+  }
+
+  // Blur validation for new fields
+  const handleBlurExtra = (field: string) => {
+    setTouched({ ...touched, [field]: true })
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -243,6 +248,57 @@ export default function EnquiryForm() {
                     autoComplete="email"
                     error={touched.email ? errors.email : undefined}
                   />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <KeyboardAwareInput
+                      id="phone"
+                      type="tel"
+                      label="Phone"
+                      value={formData.phone}
+                      onChange={(e) => handleChange('phone', e.target.value)}
+                      onBlur={() => handleBlurExtra('phone')}
+                      placeholder="+61 4xx xxx xxx"
+                      autoComplete="tel"
+                    />
+
+                    <KeyboardAwareInput
+                      id="company"
+                      label="Company"
+                      value={formData.company}
+                      onChange={(e) => handleChange('company', e.target.value)}
+                      onBlur={() => handleBlurExtra('company')}
+                      placeholder="Your company name"
+                      autoComplete="organization"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="industry"
+                      className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
+                    >
+                      Industry
+                    </label>
+                    <select
+                      id="industry"
+                      value={formData.industry}
+                      onChange={(e) => handleChange('industry', e.target.value)}
+                      onBlur={() => handleBlurExtra('industry')}
+                      className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E] transition-colors bg-white"
+                    >
+                      <option value="">Select your industry...</option>
+                      <option value="av-audio-visual">AV & Audio-Visual Equipment</option>
+                      <option value="automotive">Automotive Parts & Accessories</option>
+                      <option value="agricultural">Agricultural Machinery & Equipment</option>
+                      <option value="engineering">Engineering & Heavy Equipment</option>
+                      <option value="electronics">Consumer Electronics</option>
+                      <option value="homewares">Homewares & Furnishings</option>
+                      <option value="beauty">Beauty & Aesthetics</option>
+                      <option value="fashion">Fashion & Textiles</option>
+                      <option value="food-beverage">Food & Beverage</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
 
                   <KeyboardAwareTextarea
                     id="lookingFor"

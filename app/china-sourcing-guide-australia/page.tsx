@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     title: 'China Sourcing Agent Australia | WAG',
     description:
       'Hire a China sourcing agent in Australia. WAG provides factory tours, supplier verification and procurement support for Australian businesses.',
-    url: 'https://www.winningadventure.com.au/china-sourcing-agent-australia',
+    url: 'https://www.winningadventure.com.au/china-sourcing-guide-australia',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',
   },
   alternates: {
-    canonical: 'https://www.winningadventure.com.au/china-sourcing-agent-australia',
+    canonical: 'https://www.winningadventure.com.au/china-sourcing-guide-australia',
   },
 }
 

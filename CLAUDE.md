@@ -196,6 +196,20 @@ Custom domain `winningadventure.com.au` is configured.
 | Duplicate section headings on About page | "Your Australian Point of Contact" appeared twice | Check `about/page.tsx` for accidental duplication after copy-paste |
 | Playwright MCP connection timeout | Extension fails to attach on first try | Refresh/re-navigate the page to retry |
 | Sitemap `changeFrequency` type error | TypeScript error: `string is not assignable to "weekly" \| "monthly" \| ...` | Add `as const` to string literals in sitemap URL arrays (e.g., `'monthly' as const`) |
+| vercel.json redirect loop | `ERR_TOO_MANY_REDIRECTS` on sitemap.xml or static assets | Use only one redirect rule for non-www → www. Vercel handles HTTPS/www automatically. Duplicate redirect rules cause loops |
+| Canonical URL mismatch | Page indexed but Google-selected canonical differs from user-declared | Always match canonical to actual page URL path exactly |
+| GSC "Page with redirect" | URL Inspection shows "Page is not indexed: Page with redirect" | This is CORRECT — redirected pages should not be indexed. Verify Google-selected canonical is the target URL |
+
+## SEO Debugging
+
+| Tool | Location | Usage |
+|------|----------|-------|
+| GSC Query | `~/.claude/skills/seo/scripts/gsc_query.py` | `python gsc_query.py --property sc-domain:winningadventure.com.au --json` |
+| GSC Inspect | `~/.claude/skills/seo/scripts/gsc_inspect.py` | `python gsc_inspect.py <url> --json` |
+| GSC Config | `~/.config/claude-seo/google-api.json` | Must have absolute path for `service_account_path` |
+
+| curl URL testing | `curl -sI <URL>` shows headers; `curl -s <URL>` follows redirects | Use `-sI` to check HTTP status without following |
+| next.config.ts redirects | Also affect routing alongside vercel.json | Check both when debugging redirect issues |
 
 ## Image Rules
 
