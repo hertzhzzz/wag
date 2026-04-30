@@ -195,6 +195,7 @@ Custom domain `winningadventure.com.au` is configured.
 | Image 404 in blog posts | Console errors for missing `/social/linkedin-post/...` images | Blog posts must only use images from `public/social/blog/{slug}/` |
 | Duplicate section headings on About page | "Your Australian Point of Contact" appeared twice | Check `about/page.tsx` for accidental duplication after copy-paste |
 | Playwright MCP connection timeout | Extension fails to attach on first try | Refresh/re-navigate the page to retry |
+| Sitemap `changeFrequency` type error | TypeScript error: `string is not assignable to "weekly" \| "monthly" \| ...` | Add `as const` to string literals in sitemap URL arrays (e.g., `'monthly' as const`) |
 
 ## Image Rules
 

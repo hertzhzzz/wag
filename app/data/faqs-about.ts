@@ -19,10 +19,6 @@ export const aboutFaqs = [
     answer: 'Our 12-point verification includes business license verification, factory facility audits, quality management system reviews, export history checks, financial stability assessment, and direct reference checks from existing clients.',
   },
   {
-    question: 'Do you only work with large businesses?',
-    answer: 'No, we work with businesses of all sizes. Whether you are a small enterprise placing your first order or a large corporation seeking to optimise your supply chain, we tailor our services to your needs.',
-  },
-  {
     question: 'What geographic areas do you serve in Australia?',
     answer: 'We are based in Adelaide, South Australia, and serve businesses throughout Australia. All services are delivered in English and we coordinate everything remotely before your China visit.',
   },
@@ -41,17 +37,5 @@ export const aboutFaqs = [
   {
     question: 'How do you handle language barriers with Chinese factories?',
     answer: 'All our guides are bilingual in English and Mandarin. They handle all communication — from initial introductions to detailed technical discussions. You receive full translation of key documents and negotiations.',
-  },
-  {
-    question: 'What is your cancellation and refund policy?',
-    answer: 'We understand circumstances can change. Cancellations made 3+ weeks before your trip receive a full refund minus any non-recoverable costs. Later cancellations may incur fees depending on already incurred expenses.',
-  },
-  {
-    question: 'Can WAG help with ongoing supplier relationship management?',
-    answer: 'Yes, we offer continued support after your initial sourcing trip. This includes periodic quality checks, factory audits, sample coordination, and acting as a communication bridge between you and your suppliers.',
-  },
-  {
-    question: 'What are your office hours and response times?',
-    answer: 'We operate during Australian business hours (ACST) and typically respond to enquiries within 24 hours. Our team in Adelaide is available for consultations via phone, email, or video call.',
   },
 ]

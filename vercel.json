@@ -7,6 +7,13 @@
       "has": [{ "type": "host", "value": "winningadventure.com.au" }],
       "destination": "https://www.winningadventure.com.au/:path*",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.winningadventure.com.au" }],
+      "protocol": "http",
+      "destination": "https://www.winningadventure.com.au/:path*",
+      "permanent": true
     }
   ]
 }
