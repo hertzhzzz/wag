@@ -6,12 +6,12 @@
 
 | Category | Technology |
 |----------|------------|
-| Framework | Next.js 16.1 (App Router) |
+| Framework | Next.js 16.2 (App Router) |
 | Language | TypeScript 5 |
 | Styling | Tailwind CSS 3.4 |
 | Email | Nodemailer (Gmail SMTP) |
 | Rate Limiting | Upstash Redis (+ in-memory fallback) |
-| Media | Remotion (视频动画) |
+| Media | Remotion (video animation) |
 | Charts | ECharts |
 | Content | MDX + gray-matter + next-mdx-remote |
 | Validation | Zod |
@@ -19,76 +19,74 @@
 ## Commands
 
 ```bash
-# 开发
-npm run dev          # 开发服务器 (localhost:3000)
+# development
+npm run dev          # dev server (localhost:3000)
+npm run build       # production build [required before commit]
+npm run lint        # ESLint check
 
-# 构建
-npm run build       # 生产构建 [必须提交前通过]
-npm run lint        # ESLint 检查
-
-# 部署
-git push origin master  # GitHub 自动部署到 Vercel
+# deployment
+git push origin master  # GitHub auto-deploys to Vercel
 ```
 
 ## Project Structure
 
 ```
-wag-frontend/              # 项目根目录
-├── app/                  # Next.js App Router [部署到 Vercel]
-│   ├── page.tsx          # 首页 (/)
-│   ├── layout.tsx        # 根布局
-│   ├── services/         # 服务页面
-│   ├── about/            # 关于页面
-│   ├── resources/        # 博客列表 + [slug] 动态路由
-│   ├── enquiry/          # 询价表单页面 + components/
-│   ├── api/              # API 路由
-│   │   ├── enquiry/      # POST /api/enquiry (Zod验证 + Nodemailer)
+wag-frontend/              # project root
+├── app/                  # Next.js App Router
+│   ├── page.tsx          # homepage (/)
+│   ├── layout.tsx        # root layout
+│   ├── services/         # services page
+│   ├── about/            # about page
+│   ├── resources/        # blog list + [slug] dynamic route
+│   ├── enquiry/          # enquiry form page + components/
+│   ├── api/              # API routes
+│   │   ├── enquiry/      # POST /api/enquiry (Zod + Nodemailer)
 │   │   └── newsletter/   # POST /api/newsletter
-│   ├── components/        # 共享组件 (Navbar, Footer, Hero...)
-│   └── data/             # FAQ 数据文件
-├── content/blog/         # MDX 博客内容 [部署到 Vercel]
-│   └── *.mdx             # 博客文章，通过 /resources/[slug] 访问
-├── lib/                  # 工具函数
-│   └── rate-limit.ts     # Upstash Redis 限流 (+内存备援)
-├── public/               # 静态资源 [部署到 Vercel]
-│   └── social/           # 博客配图 [SINGLE SOURCE - 不可删除]
-│       ├── blog/          # 博客文章专用配图
+│   ├── components/        # shared components (Navbar, Footer, Hero...)
+│   └── data/             # FAQ data files
+├── content/blog/         # MDX blog content
+│   └── *.mdx             # articles, accessed via /resources/[slug]
+├── lib/                  # utilities
+│   └── rate-limit.ts     # Upstash Redis rate limiting (+ in-memory fallback)
+├── public/               # static assets (deployed to Vercel)
+│   └── social/           # blog images [SINGLE SOURCE]
+│       ├── blog/          # per-article images
 │       │   └── {article-slug}/*.png
-│       └── linkedin-post/ # 博客引用的配图（与文章同名的 date-topic 目录）
+│       └── linkedin-post/ # social media assets
 │           └── {YYYY-MM-DD-topic}/imgs/*.png
-├── social/               # 社交媒体内容资产 (4.9M)
-│   └── linkedin-post/    # LinkedIn post 图片
-├── .claude/skills/wag-linkedin-post/  # 社交媒体内容 skill
-│   ├── social/            # 全部内容：linkedin-post, x-post, facebook-post,
-│   │   │                  # cold-email, 生成脚本, prompts, 发布预览 HTML
-│   ├── SKILL.md           # 内容 hub skill 定义
+├── social/               # social content assets (4.9M) — NOT deployed
+│   └── linkedin-post/    # source files for AI image generation
+├── .claude/skills/wag-linkedin-post/  # content hub skill
+│   ├── social/            # content: linkedin-post, x-post, facebook-post,
+│   │   │                  # cold-email, scripts, prompts, preview HTML
+│   ├── SKILL.md           # content hub skill definition
 │   └── references/        # master-prompts.md, publish-preview-template.html
-└── vercel.json           # Vercel 配置
+└── vercel.json           # Vercel config
 ```
 
 ## Content Hub (wag-linkedin-post)
 
-**社交媒体内容 skill** — `.claude/skills/wag-linkedin-post/`
+**Social media content skill** — `.claude/skills/wag-linkedin-post/`
 
-**内容生命周期：**
-1. **创建内容骨架** → `python social/generate_content.py --topic "xxx" --type single-post|carousel`
-2. **AI 填充内容** → 参考 `references/master-prompts.md` 生成高质量初稿
-3. **配图** → 使用 `prompts/*.md` 中的 AI 生图 prompt
-4. **预览** → `python social/generate_preview.py --topic "YYYY-MM-DD-topic" --type single-post`
-5. **分发** → 浏览器打开 `publish-preview.html` 一键复制到各平台
-6. **归档** → 发布后归档到 `social/{platform}/archive/`
+**Content lifecycle:**
+1. **Create skeleton** → `python social/generate_content.py --topic "xxx" --type single-post|carousel`
+2. **AI fill content** → reference `references/master-prompts.md` for high-quality draft
+3. **Generate images** → use AI image prompts from `prompts/*.md`
+4. **Preview** → `python social/generate_preview.py --topic "YYYY-MM-DD-topic" --type single-post`
+5. **Distribute** → open `publish-preview.html` in browser, copy to platforms
+6. **Archive** → after posting, archive to `social/{platform}/archive/`
 
-**图片存储规则 (SINGLE SOURCE):**
-- 博客配图：存储在 `public/social/` — 这是网站静态资源，Vercel 部署用
-- 博客 MDX 引用格式：`/social/blog/{article-slug}/*.png`
-- AI 生图 prompt 输出到 `prompts/*.md`，生成后存入 `public/social/.../imgs/`
+**Image storage (SINGLE SOURCE):**
+- Blog images: stored in `public/social/` — website static assets, deployed to Vercel
+- MDX reference format: `/social/blog/{article-slug}/*.png`
+- AI image prompts output to `prompts/*.md`, generated images saved to `public/social/.../imgs/`
 
 ## API Routes
 
 | Route | Method | Purpose |
 |-------|--------|---------|
-| `/api/enquiry` | POST | 询价表单提交，Zod验证+Nodemailer发邮件 |
-| `/api/newsletter` | POST | Newsletter 订阅 |
+| `/api/enquiry` | POST | enquiry form (Zod validation + Nodemailer) |
+| `/api/newsletter` | POST | newsletter subscription |
 
 ## Content (Blog)
 
@@ -105,20 +103,19 @@ wag-frontend/              # 项目根目录
 | **GitHub Repo** | https://github.com/hertzhzzz/wag |
 | **Auto-deploy** | Enabled (push to master triggers Vercel) |
 
-**部署方式**：推送到 GitHub master 分支自动触发部署
+Push to GitHub master to deploy:
 ```bash
 git add .
-git commit -m "描述改动"
+git commit -m "description"
 git push origin master
 ```
 
-**手动部署**（如需立即部署）：
+Manual deploy (immediate):
 ```bash
 vercel --prod
 ```
 
-**自定义域名配置**：
-- ✅ 已配置 `winningadventure.com.au`
+Custom domain `winningadventure.com.au` is configured.
 
 ## Conventions
 
@@ -146,32 +143,49 @@ vercel --prod
   - Exception: Comments in code
   - This rule supersedes all other considerations — any Chinese text found on pages must be fixed immediately
 - **禁止 "WA" 缩写** — Use "Winning Adventure Global" or "WAG"
+- **WAG team structure**: WAG has Australia-based and China-based teams. The founder is NOT Australian. Use "Australia-based" or "based in Australia" — never "Australian-owned" or "Chinese-owned"
+- **Ads/post skill**: WAG-poster-prompt skill generates to `ads/post/YYYY-MM-DD/[topic]/` (not `ads/YYYY-MM-DD/`)
+- **Video content**: `/Users/mark/Projects/wag/ads/video/` — Remotion/video projects for WAG
 
 ### Standard Rules
-- 提交前必须：`npm run build` && `npm run lint`
-- 5 个页面必须可访问：`/`, `/services`, `/about`, `/resources`, `/enquiry`
-- **本地 build 成功 ≠ 线上可访问** — 部署后必须用 `curl -sI <URL>` 验证
+- Must run before commit: `npm run build` && `npm run lint`
+- 5 pages must be accessible: `/`, `/services`, `/about`, `/resources`, `/enquiry`
+- **Local build success != production access** — after deploy, verify with `curl -sI <URL>`
 
 ## Env
 
 ```
-.env.local  # 环境变量 (不要提交到版本控制)
+.env.local  # environment variables (do not commit to version control)
 ```
 
 **Required variables**:
 - `GMAIL_USER` — Gmail address for SMTP sender
 - `GMAIL_APP_PASSWORD` — Gmail App Password (not regular password)
-- `UPSTASH_REDIS_REST_URL` — Upstash Redis URL (可选，缺失时用内存限流)
-- `UPSTASH_REDIS_REST_TOKEN` — Upstash Redis token (可选)
+- `UPSTASH_REDIS_REST_URL` — Upstash Redis URL (optional, falls back to in-memory rate limiting)
+- `UPSTASH_REDIS_REST_TOKEN` — Upstash Redis token (optional)
 
 ## Validation Checklist
 
 ```
-[ ] npm run build 通过
-[ ] npm run lint 无错误
-[ ] 5 个页面均可访问
-[ ] 询价表单正常工作
+[ ] npm run build passes
+[ ] npm run lint has no errors
+[ ] 5 pages accessible: /, /services, /about, /resources, /enquiry
+[ ] enquiry form works
 ```
+
+## Directory Restructuring
+
+- `wag-frontend/` moved to `wag/frontend/` (2026-04-29)
+- GitHub/Vercel connection unaffected — `.git/` is inside frontend/
+- Parent directory change does not break `git remote -v` or Vercel deployment
+- `wag/` is a local-only monorepo container, not git-connected
+
+## Claude Code 自动化
+
+| 类型 | 配置 |
+|------|------|
+| MCP 服务器 | context7（通过 `.mcp.json` 配置，询问 Next.js/React 文档时自动激活） |
+| 技能 | `new-component`（`/new-component`）、`pr-check`（`/pr-check`） |
 
 ## Debugging & Gotchas
 
@@ -185,46 +199,40 @@ vercel --prod
 ## Image Rules
 
 - **Blog MDX images**: Must be in `public/social/blog/{article-slug}/` — this is the single source for website images
-- **LinkedIn/social images**: Stored in `public/social/linkedin-post/{date-topic}/imgs/` — these are social media assets, NOT blog images
+- **LinkedIn/social images**: Source files in `social/linkedin-post/`, generated outputs go to `public/social/linkedin-post/{date-topic}/imgs/`
 - **MDX reference format**: `/social/blog/{article-slug}/image.png` (no `/public/` prefix in URLs)
 - **AI image prompts**: Output to `prompts/*.md`, generated images saved to appropriate `public/social/` subdirectory
 
 ## Design Context
 
 ### Users
-- **目标用户**: 害怕在 1688/Alibaba 等线上平台采购踩坑的澳大利亚企业
-- **用户痛点**: 担心质量问题、欺诈风险、沟通障碍
-- **核心需求**: 想要实地考察中国工厂，获得专业的线下服务保障
-- **使用场景**: 首次采购或已有供应链想要优化升级的企业决策者
+- Australian businesses worried about being scammed on 1688/Alibaba
+- Pain points: quality issues, fraud risk, communication barriers
+- Need: factory visits in China with professional offline support
+- Decision-makers optimizing or starting their supply chain
 
-### Brand Personality
-- **品牌调性**: 高端定制 + 权威专业
-- **核心信息**: 帮助企业安全、高效地连接中国优质制造商
-- **情感目标**: 建立信任、消除焦虑、彰显专业价值
-- **品牌个性 (3词)**: 可靠、专业、专属
+### Brand
+- **Positioning**: Premium bespoke + authoritative expertise
+- **Core message**: Connect safely and efficiently with quality Chinese manufacturers
+- **Emotional goals**: Build trust, reduce anxiety, demonstrate professional value
+- **3 words**: Reliable, Professional, Exclusive
 
-### Aesthetic Direction
-- **视觉风格**: 综合平衡 - 大胆现代 + 精致优雅 + 务实可信
-- **优化策略**: 基于现有设计系统优化，提升专业度
-- **配色**: Navy (#0F2D5E) + Amber (#F59E0B)，IBM Plex 字体
-- **主题**: 浅色模式
-
-### UX 优化重点
-- **移动端优化**: 确保在各尺寸设备上体验一致
-- **交互体验**: 优化表单、按钮、导航等交互元素
+### Aesthetic
+- Bold-modern + refined-elegant + pragmatic-trustworthy
+- Navy (#0F2D5E) + Amber (#F59E0B), IBM Plex fonts, light mode
 
 ### Design Principles
-1. **专业感优先**: 每一处细节都要体现专业水准
-2. **信任可视化**: 成功案例、数据背书、资质展示
-3. **简化决策**: 清晰的服务介绍，降低选择难度
-4. **情感共鸣**: 理解用户担忧，提供安全感
-5. **高端不张扬**: 质感升级但不俗气
-6. **移动端优先**: 移动端体验与桌面端同等重要
-7. **交互一致性**: 所有可交互元素有清晰的视觉反馈
+1. **Professionalism first** — every detail reflects expertise
+2. **Trust visualization** — case studies, data endorsements, credentials
+3. **Simplified decisions** — clear service descriptions, reduce choice paralysis
+4. **Emotional resonance** — acknowledge concerns, provide security
+5. **Premium without ostentation** — upgraded texture, not gaudy
+6. **Mobile-first** — same experience on all device sizes
+7. **Consistent interaction** — clear visual feedback on all interactive elements
 
 ---
 
-*Updated: 2026-04-10*
+*Updated: 2026-04-29*
 
 <!-- GSD:profile-start -->
 ## Developer Profile

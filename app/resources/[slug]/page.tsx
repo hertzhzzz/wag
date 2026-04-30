@@ -35,10 +35,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return {}
 
   const { frontmatter: fm } = article
+  // Build dynamic keywords from frontmatter tags and category
+  const tagKeywords = Array.isArray(fm.tags) ? fm.tags : []
+  const categoryKeyword = fm.category ? [fm.category] : []
+  const dynamicKeywords = [...categoryKeyword, ...tagKeywords]
+
   return {
     title: fm.title,
     description: fm.description,
-    keywords: ['China factory tour', 'factory visit China', 'Australian business China sourcing', 'supplier verification', 'Guangdong manufacturing'],
+    keywords: dynamicKeywords.length > 0 ? dynamicKeywords : ['China factory tour', 'factory visit China', 'Australian business China sourcing', 'supplier verification'],
     authors: [{ name: fm.author }],
     openGraph: {
       title: fm.title,

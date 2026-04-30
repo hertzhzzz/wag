@@ -1,8 +1,16 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service',
-  description: 'Terms of Service for Winning Adventure Global — governing your use of our factory sourcing and business travel services.',
+  title: 'Terms of Service | Winning Adventure Global',
+  description: 'Terms of Service for Winning Adventure Global — governing your use of our factory sourcing, supplier verification, and business travel services in China.',
+  keywords: ['terms of service winning adventure global', 'WAG terms', 'china sourcing service terms'],
+  openGraph: {
+    title: 'Terms of Service | Winning Adventure Global',
+    description: 'Terms governing your use of our factory sourcing and China business travel services.',
+  },
+  alternates: {
+    canonical: 'https://www.winningadventure.com.au/terms',
+  },
 }
 
 export default function TermsPage() {

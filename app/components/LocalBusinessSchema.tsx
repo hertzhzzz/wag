@@ -4,13 +4,12 @@ export default function LocalBusinessSchema() {
     "@type": "LocalBusiness",
     "name": "Winning Adventure Global",
     "url": "https://www.winningadventure.com.au",
-    "image": "https://www.winningadventure.com.au/social/og-image.png",
-    "telephone": "+61 0416 588 198",
-    "email": "mark@winningadventure.com.au",
-    "priceRange": "$$",
+    "image": "https://www.winningadventure.com.au/logos/logo.png",
+    "telephone": "+61-416588198",
+    "priceRange": "Contact for quote",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Unit 5, 54 Melbourne St",
+      "streetAddress": "5, 54 Melbourne St",
       "addressLocality": "North Adelaide",
       "addressRegion": "SA",
       "postalCode": "5006",
@@ -18,8 +17,8 @@ export default function LocalBusinessSchema() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": -34.9071,
-      "longitude": 138.5986
+      "latitude": -34.9067,
+      "longitude": 138.5765
     },
     "openingHoursSpecification": [
       {
@@ -32,10 +31,10 @@ export default function LocalBusinessSchema() {
           "Friday"
         ],
         "opens": "09:00",
-        "closes": "17:30"
+        "closes": "18:00"
       }
     ],
-    "description": "Winning Adventure Global is an Australian China sourcing agency based in North Adelaide. We guide Australian businesses through guided factory visits in China, supplier verification, and end-to-end procurement coordination.",
+    "description": "Winning Adventure Global is an Adelaide-based China sourcing agency. We guide Australian businesses through guided factory visits in China, supplier verification, and end-to-end procurement coordination.",
     "areaServed": {
       "@type": "Country",
       "name": "Australia"
