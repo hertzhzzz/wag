@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import DOMPurify from 'isomorphic-dompurify'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
@@ -97,7 +98,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
           <div className="lg:col-span-2">
             <div
               className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-navy prose-p:text-gray-700 prose-li:text-gray-700"
-              dangerouslySetInnerHTML={{ __html: content }}
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
             />
           </div>
 

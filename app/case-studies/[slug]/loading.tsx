@@ -73,8 +73,8 @@ export default function Loading() {
               <div key={i} className="bg-white border-2 border-gray-200 p-7">
                 <div className="h-4 w-20 bg-gray-200 rounded animate-pulse mb-4" />
                 <div className="h-5 w-3/4 bg-gray-200 rounded animate-pulse mb-3" />
-                <div className="h-3 w-full bg-gray-100 rounded animate-pulse mb-2" />
-                <div className="h-3 w-2/3 bg-gray-100 rounded animate-pulse" />
+                <div className="h-3 w-full bg-gray-200 rounded animate-pulse mb-2" />
+                <div className="h-3 w-2/3 bg-gray-200 rounded animate-pulse" />
               </div>
             ))}
           </div>
