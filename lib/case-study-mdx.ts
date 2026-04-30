@@ -1,24 +1,27 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { z } from 'zod'
 
-export interface CaseStudyFrontmatter {
-  title: string
-  description: string
-  date: string
-  industry: string
-  slug: string
-  companyType: string
-  location: string
-  product: string
-  units: string
-  wagActions: string[]
-  savings: string
-  verification: string
-  quote: string
-  quoteAttribution: string
-  coverImage?: string
-}
+const CaseStudyFrontmatterSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  date: z.string(),
+  industry: z.string(),
+  slug: z.string(),
+  companyType: z.string(),
+  location: z.string(),
+  product: z.string(),
+  units: z.string(),
+  wagActions: z.array(z.string()),
+  savings: z.string(),
+  verification: z.string(),
+  quote: z.string(),
+  quoteAttribution: z.string(),
+  coverImage: z.string().optional(),
+})
+
+export type CaseStudyFrontmatter = z.infer<typeof CaseStudyFrontmatterSchema>
 
 export function getCaseStudyBySlug(
   slug: string,
@@ -28,7 +31,12 @@ export function getCaseStudyBySlug(
   if (!fs.existsSync(filename)) return null
   const raw = fs.readFileSync(filename, 'utf-8')
   const { data, content } = matter(raw)
-  return { frontmatter: data as CaseStudyFrontmatter, content }
+  const parsed = CaseStudyFrontmatterSchema.safeParse(data)
+  if (!parsed.success) {
+    console.error(`[case-study-mdx] Invalid frontmatter for slug "${slug}":`, parsed.error.flatten())
+    return null
+  }
+  return { frontmatter: parsed.data, content }
 }
 
 export function getAllCaseStudySlugs(): string[] {
