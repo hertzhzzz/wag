@@ -83,12 +83,12 @@ export default function Hero() {
             </svg>
           </Link>
           <a
-            href="#howitworks"
+            href="/visiting-chinese-factories"
             className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 no-underline text-sm min-h-11 backdrop-blur-sm"
           >
-            Or arrange a factory visit →
+            How factory visits work
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
         </div>
