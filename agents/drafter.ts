@@ -257,7 +257,14 @@ WAG offers free initial consultations for qualifying Australian businesses. We'r
   }
 
   private async checkOriginality(content: string): Promise<number> {
-    const result = await checkOriginality(content);
-    return result.score;
+    // Title is approximate since we don't have it at this point
+    const result = await checkOriginality(content, {
+      title: 'Generated Content',
+      localThreshold: 0.2,
+      webThreshold: 0.3,
+    });
+    // Convert to score: isOriginal=true means 100, maxSimilarity=1 means 0
+    const score = result.isOriginal ? 95 : Math.round((1 - result.maxSimilarity) * 100);
+    return score;
   }
 }
