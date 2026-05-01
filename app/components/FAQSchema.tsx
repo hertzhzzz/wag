@@ -1,5 +1,3 @@
-'use client'
-
 import { faqs as defaultFaqs } from '@/data/faqs'
 
 type FAQItem = {
