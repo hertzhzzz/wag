@@ -142,7 +142,7 @@ export async function generateMetadata(
   }
 
   const content = cityContent[cityLower]
-  const baseUrl = 'https://winningadventure.com.au'
+  const baseUrl = 'https://www.winningadventure.com.au'
   const cityName = cityLower.charAt(0).toUpperCase() + cityLower.slice(1)
 
   return {
