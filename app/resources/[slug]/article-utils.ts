@@ -11,9 +11,21 @@ const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 // ============================================
 
 export function getAllSlugs(): string[] {
-  return fs.readdirSync(BLOG_DIR)
-    .filter(f => f.endsWith('.mdx'))
-    .map(f => f.replace('.mdx', ''))
+  function scanDir(dir: string): string[] {
+    const results: string[] = []
+    if (!fs.existsSync(dir)) return results
+    const entries = fs.readdirSync(dir, { withFileTypes: true })
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name)
+      if (entry.isDirectory()) {
+        results.push(...scanDir(fullPath))
+      } else if (entry.isFile() && entry.name.endsWith('.mdx')) {
+        results.push(fullPath.replace(BLOG_DIR + '/', '').replace('.mdx', ''))
+      }
+    }
+    return results
+  }
+  return scanDir(BLOG_DIR)
 }
 
 export function getArticle(slug: string): Article | null {

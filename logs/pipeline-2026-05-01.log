@@ -1,0 +1,28 @@
+[2026-05-01T08:06:03.983Z] [INFO] No existing keyword storage found, starting fresh
+[2026-05-01T08:06:03.983Z] [INFO] SEOPipeline initialized
+[2026-05-01T08:06:03.983Z] [INFO] Pipeline starting for keyword: china factory tours
+[2026-05-01T08:06:03.983Z] [INFO] Research phase starting (attempt 1)
+[2026-05-01T08:06:03.983Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:06:20.024Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:06:21.381Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-01T08:06:22.731Z] [INFO] Found 5 papers for: china factory tours
+[2026-05-01T08:06:37.031Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:06:38.117Z] [INFO] Found 5 papers for: china factory tours
+[2026-05-01T08:06:56.038Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:07:00.599Z] [INFO] Found 5 papers for: china factory tours
+[2026-05-01T08:07:19.045Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:07:34.054Z] [WARN] Pipeline attempt 1 failed: EXA_API_KEY environment variable is required
+[2026-05-01T08:07:34.055Z] [INFO] Research phase starting (attempt 2)
+[2026-05-01T08:07:34.055Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:07:35.848Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-01T08:07:44.392Z] [INFO] Found 5 papers for: china factory tours
+[2026-05-01T08:07:50.061Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:08:07.070Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:08:07.401Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-01T08:08:09.121Z] [INFO] Found 5 papers for: china factory tours
+[2026-05-01T08:08:26.079Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:08:28.673Z] [INFO] Found 5 papers for: china factory tours
+[2026-05-01T08:08:49.087Z] [INFO] Researcher starting for: china factory tours
+[2026-05-01T08:09:04.093Z] [WARN] Pipeline attempt 2 failed: EXA_API_KEY environment variable is required
+[2026-05-01T08:09:04.094Z] [INFO] Research phase starting (attempt 3)
+[2026-05-01T08:09:04.094Z] [INFO] Researcher starting for: china factory tours
