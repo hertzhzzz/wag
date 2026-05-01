@@ -135,9 +135,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Winning Adventure Global",
+              "alternateName": "WAG",
               "url": "https://www.winningadventure.com.au",
               "logo": "https://www.winningadventure.com.au/logos/logo.png",
-              "description": "WAG connects Australian businesses with verified Chinese manufacturers across all industries. Pre-screened suppliers, factory tours, supplier verification, and end-to-end procurement support.",
+              "description": "Factory tours and sourcing services in China for Australian businesses. We connect you with verified manufacturers and accompany you on in-person factory visits.",
+              "foundingDate": "2018",
               "founder": {
                 "@type": "Person",
                 "name": "Andy Liu",
@@ -162,6 +164,7 @@ export default function RootLayout({
                 "longitude": 138.6065758
               },
               "telephone": "+61-416588198",
+              "email": "info@winningadventure.com.au",
               "ABN": "30 659 034 919",
               "areaServed": {
                 "@type": "Country",
@@ -169,6 +172,22 @@ export default function RootLayout({
               },
               "serviceType": ["Factory Tour", "Procurement Support", "Supplier Verification"],
               "priceRange": "Contact for quote",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "China Sourcing Services",
+                "description": "Factory tours, supplier verification, and end-to-end procurement support for Australian businesses",
+                "url": "https://www.winningadventure.com.au/services"
+              },
+              "knowsAbout": [
+                "Chinese manufacturing",
+                "China business tours",
+                "factory verification",
+                "supply chain sourcing",
+                "China factory tours",
+                "supplier vetting",
+                "import from China",
+                "Australian business procurement"
+              ],
               "sameAs": [
                 "https://www.google.com/maps/place/Winning+Adventure+Global/@-34.9074705,138.6065758,15z/data=!4m6!3m5!1s0x6ad870f9565fbbb3:0x64f74ad4a0ab7b43!8m2!3d-34.9076802!4d138.6063284!16s%2Fg%2F11yyg4dg4j",
                 "https://www.linkedin.com/company/winning-adventure-global",
@@ -176,7 +195,21 @@ export default function RootLayout({
                 "https://www.youtube.com/@winningadventure",
                 "https://www.instagram.com/winningadventureglobal",
                 "https://share.google/qQBUJkAAn1ZChq7Mc"
-              ]
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+61-416588198",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "Mandarin", "Cantonese"],
+                "areaServed": "AU",
+                "hoursAvailable": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "17:00",
+                  "timeZone": "Australia/Adelaide"
+                }
+              }
             })
           }}
         />
