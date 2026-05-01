@@ -1,5 +1,3 @@
-'use client'
-
 export default function ServiceSchema() {
   const schema = {
     "@context": "https://schema.org",
