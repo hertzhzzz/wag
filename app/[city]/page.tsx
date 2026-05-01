@@ -157,6 +157,10 @@ export async function generateMetadata(
       locale: 'en_AU',
       alternateLocale: 'en_US',
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: {
       canonical: `${baseUrl}/${cityLower}`,
     },
