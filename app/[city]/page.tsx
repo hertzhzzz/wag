@@ -158,7 +158,7 @@ export async function generateMetadata(
       alternateLocale: 'en_US',
     },
     robots: {
-      index: false,
+      index: true,
       follow: true,
     },
     alternates: {

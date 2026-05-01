@@ -1,0 +1,479 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2730]:
+    - generic [ref=e2731]:
+      - link "Winning Adventure Global" [ref=e2732] [cursor=pointer]:
+        - /url: /
+        - img "Winning Adventure Global" [ref=e2733]
+      - list [ref=e2734]:
+        - listitem [ref=e2735]:
+          - link "Home" [ref=e2736] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e2737]:
+          - link "Services" [ref=e2738] [cursor=pointer]:
+            - /url: /services
+        - listitem [ref=e2739]:
+          - link "Resources" [ref=e2740] [cursor=pointer]:
+            - /url: /resources
+        - listitem [ref=e2741]:
+          - link "About Us" [ref=e2742] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e2743]:
+          - link "Enquiry" [ref=e2744] [cursor=pointer]:
+            - /url: /enquiry
+      - generic [ref=e2745]:
+        - link "Call Us Today +61 0416588198" [ref=e2746] [cursor=pointer]:
+          - /url: tel:+61416588198
+          - generic [ref=e2747]: Call Us Today
+          - generic [ref=e2748]: +61 0416588198
+        - link "Get a Free Quote →" [ref=e2749] [cursor=pointer]:
+          - /url: /enquiry
+    - generic [ref=e2750]:
+      - generic [ref=e2751]:
+        - generic [ref=e2752]: Menu
+        - button "Close navigation menu" [ref=e2753] [cursor=pointer]:
+          - img [ref=e2754]
+      - list [ref=e2757]:
+        - listitem [ref=e2758]:
+          - link "Home" [ref=e2759] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e2760]:
+          - link "Services" [ref=e2761] [cursor=pointer]:
+            - /url: /services
+        - listitem [ref=e2762]:
+          - link "Resources" [ref=e2763] [cursor=pointer]:
+            - /url: /resources
+        - listitem [ref=e2764]:
+          - link "About" [ref=e2765] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e2766]:
+          - link "Enquiry" [ref=e2767] [cursor=pointer]:
+            - /url: /enquiry
+  - generic [ref=e2769]:
+    - paragraph [ref=e2770]: Knowledge Hub
+    - heading "Resources & Insights" [level=1] [ref=e2771]
+    - paragraph [ref=e2772]: Expert guides on China sourcing, factory visits, and cross-border trade for Australian B2B businesses.
+  - generic [ref=e2774]:
+    - button "All Articles" [ref=e2775] [cursor=pointer]
+    - button "China Factory Tour" [ref=e2776] [cursor=pointer]
+    - button "China Business Travel" [ref=e2777] [cursor=pointer]
+    - button "Factory Verification" [ref=e2778] [cursor=pointer]
+    - button "China Sourcing" [ref=e2779] [cursor=pointer]
+    - button "China Sourcing Risks" [ref=e2780] [cursor=pointer]
+    - button "Bulk Purchase Procurement Trip" [ref=e2781] [cursor=pointer]
+  - generic [ref=e2782]:
+    - generic [ref=e2783]:
+      - 'link "How to Verify a Chinese Supplier: Real Factory vs Trading Company China Factory Tour" [ref=e2784] [cursor=pointer]':
+        - /url: /resources/verify-chinese-supplier
+        - 'img "How to Verify a Chinese Supplier: Real Factory vs Trading Company" [ref=e2785]'
+        - generic [ref=e2786]: China Factory Tour
+      - generic [ref=e2787]:
+        - paragraph [ref=e2788]: Featured Article · 8 Mar 2026 · 9 min read
+        - 'link "How to Verify a Chinese Supplier: Real Factory vs Trading Company" [ref=e2789] [cursor=pointer]':
+          - /url: /resources/verify-chinese-supplier
+          - 'heading "How to Verify a Chinese Supplier: Real Factory vs Trading Company" [level=2] [ref=e2790]'
+        - paragraph [ref=e2791]: This guide shows you exactly how to verify a Chinese supplier [Sydney](/sydney) businesses before paying a deposit. Use this 6-step framework to check business licenses, company registries, addresses, and conduct factory audits.
+        - link "Read Full Guide" [ref=e2792] [cursor=pointer]:
+          - /url: /resources/verify-chinese-supplier
+    - generic [ref=e2793]:
+      - generic [ref=e2794]:
+        - link "The Complete Guide to China Business Travel for Australian Companies (2026 Edition) China Business Travel" [ref=e2795] [cursor=pointer]:
+          - /url: /resources/china-business-travel-guide-2026
+          - img "The Complete Guide to China Business Travel for Australian Companies (2026 Edition)" [ref=e2796]
+          - generic [ref=e2797]: China Business Travel
+        - generic [ref=e2798]:
+          - paragraph [ref=e2799]: 4 Mar 2026 · 12 min read
+          - link "The Complete Guide to China Business Travel for Australian Companies (2026 Edition)" [ref=e2800] [cursor=pointer]:
+            - /url: /resources/china-business-travel-guide-2026
+            - heading "The Complete Guide to China Business Travel for Australian Companies (2026 Edition)" [level=3] [ref=e2801]
+          - paragraph [ref=e2802]: From market trends to factory visits — everything Australian companies need to know about doing business in China this year.
+          - link "Read Article →" [ref=e2803] [cursor=pointer]:
+            - /url: /resources/china-business-travel-guide-2026
+      - generic [ref=e2804]:
+        - 'link "What Happens When You Skip Supplier Verification: A Real Story Factory Verification" [ref=e2805] [cursor=pointer]':
+          - /url: /resources/what-happens-when-verification-is-skipped
+          - 'img "What Happens When You Skip Supplier Verification: A Real Story" [ref=e2806]'
+          - generic [ref=e2807]: Factory Verification
+        - generic [ref=e2808]:
+          - paragraph [ref=e2809]: 31 Mar 2026 · 8 min read
+          - 'link "What Happens When You Skip Supplier Verification: A Real Story" [ref=e2810] [cursor=pointer]':
+            - /url: /resources/what-happens-when-verification-is-skipped
+            - 'heading "What Happens When You Skip Supplier Verification: A Real Story" [level=3] [ref=e2811]'
+          - paragraph [ref=e2812]: When Australian businesses skip supplier verification, the consequences go beyond lost deposits. This article walks through a real case and the three verification steps that could have prevented it.
+          - link "Read Article →" [ref=e2813] [cursor=pointer]:
+            - /url: /resources/what-happens-when-verification-is-skipped
+      - generic [ref=e2814]:
+        - link "7 Things I Learned Visiting Chinese Factories for 8 Years — What Australian Buyers Must Know Before They Board the Plane China Factory Tour" [ref=e2815] [cursor=pointer]:
+          - /url: /resources/china-factory-tour-guide
+          - img "7 Things I Learned Visiting Chinese Factories for 8 Years — What Australian Buyers Must Know Before They Board the Plane" [ref=e2816]
+          - generic [ref=e2817]: China Factory Tour
+        - generic [ref=e2818]:
+          - paragraph [ref=e2819]: 26 Feb 2026 · 15 min read
+          - link "7 Things I Learned Visiting Chinese Factories for 8 Years — What Australian Buyers Must Know Before They Board the Plane" [ref=e2820] [cursor=pointer]:
+            - /url: /resources/china-factory-tour-guide
+            - heading "7 Things I Learned Visiting Chinese Factories for 8 Years — What Australian Buyers Must Know Before They Board the Plane" [level=3] [ref=e2821]
+          - paragraph [ref=e2822]: From spotting a subcontracting operation in Foshan to knowing why a fast yes is a red flag — practical insights from 200+ factory visits.
+          - link "Read Article →" [ref=e2823] [cursor=pointer]:
+            - /url: /resources/china-factory-tour-guide
+      - generic [ref=e2824]:
+        - 'link "How to Verify Chinese Factories for Event Hire Equipment: The 3-Step Framework Every Australia [Perth](/perth) event companiesn Company Needs China Sourcing" [ref=e2825] [cursor=pointer]':
+          - /url: /resources/event-hire-china-factory-verification
+          - 'img "How to Verify Chinese Factories for Event Hire Equipment: The 3-Step Framework Every Australia [Perth](/perth) event companiesn Company Needs" [ref=e2826]'
+          - generic [ref=e2827]: China Sourcing
+        - generic [ref=e2828]:
+          - paragraph [ref=e2829]: 2026-04-10 · 7 min read
+          - 'link "How to Verify Chinese Factories for Event Hire Equipment: The 3-Step Framework Every Australia [Perth](/perth) event companiesn Company Needs" [ref=e2830] [cursor=pointer]':
+            - /url: /resources/event-hire-china-factory-verification
+            - 'heading "How to Verify Chinese Factories for Event Hire Equipment: The 3-Step Framework Every Australia [Perth](/perth) event companiesn Company Needs" [level=3] [ref=e2831]'
+          - paragraph [ref=e2832]: Before you rent or import event equipment from China, verify the supplier is actually a factory. Learn the 3-step verification framework that protects Australian event hire [Sydney](/sydney) event hire companies companies from costly mistakes.
+          - link "Read Article →" [ref=e2833] [cursor=pointer]:
+            - /url: /resources/event-hire-china-factory-verification
+      - generic [ref=e2834]:
+        - 'link "AV Equipment Procurement from China: A Complete Guide for Australian Businesses China Sourcing" [ref=e2835] [cursor=pointer]':
+          - /url: /resources/av-equipment-procurement-china
+          - 'img "AV Equipment Procurement from China: A Complete Guide for Australian Businesses" [ref=e2836]'
+          - generic [ref=e2837]: China Sourcing
+        - generic [ref=e2838]:
+          - paragraph [ref=e2839]: 2026-04-02 · 10 min read
+          - 'link "AV Equipment Procurement from China: A Complete Guide for Australian Businesses" [ref=e2840] [cursor=pointer]':
+            - /url: /resources/av-equipment-procurement-china
+            - 'heading "AV Equipment Procurement from China: A Complete Guide for Australian Businesses" [level=3] [ref=e2841]'
+          - paragraph [ref=e2842]: Sourcing AV equipment from China presents unique challenges for Australian businesses. Learn how to navigate supplier reliability, quality verification, and fraud prevention.
+          - link "Read Article →" [ref=e2843] [cursor=pointer]:
+            - /url: /resources/av-equipment-procurement-china
+      - generic [ref=e2844]:
+        - 'link "How to Verify Chinese Factories for AV Equipment: The 3-Step Guide Australian Brands Need China Sourcing" [ref=e2845] [cursor=pointer]':
+          - /url: /resources/av-equipment-china-factory-verification-guide
+          - 'img "How to Verify Chinese Factories for AV Equipment: The 3-Step Guide Australian Brands Need" [ref=e2846]'
+          - generic [ref=e2847]: China Sourcing
+        - generic [ref=e2848]:
+          - paragraph [ref=e2849]: 2026-04-01 · 8 min read
+          - 'link "How to Verify Chinese Factories for AV Equipment: The 3-Step Guide Australian Brands Need" [ref=e2850] [cursor=pointer]':
+            - /url: /resources/av-equipment-china-factory-verification-guide
+            - 'heading "How to Verify Chinese Factories for AV Equipment: The 3-Step Guide Australian Brands Need" [level=3] [ref=e2851]'
+          - paragraph [ref=e2852]: Before you import pro audio or stage lighting from China, verify the factory is real. Learn the 3-step verification process that protects your deposit and your supply chain.
+          - link "Read Article →" [ref=e2853] [cursor=pointer]:
+            - /url: /resources/av-equipment-china-factory-verification-guide
+      - generic [ref=e2854]:
+        - link "How to Verify Chinese Factories on 1688 Before Paying a Deposit Factory Verification" [ref=e2855] [cursor=pointer]:
+          - /url: /resources/how-to-verify-chinese-factories-1688
+          - img "How to Verify Chinese Factories on 1688 Before Paying a Deposit" [ref=e2856]
+          - generic [ref=e2857]: Factory Verification
+        - generic [ref=e2858]:
+          - paragraph [ref=e2859]: 2026-03-21 · 6 min read
+          - link "How to Verify Chinese Factories on 1688 Before Paying a Deposit" [ref=e2860] [cursor=pointer]:
+            - /url: /resources/how-to-verify-chinese-factories-1688
+            - heading "How to Verify Chinese Factories on 1688 Before Paying a Deposit" [level=3] [ref=e2861]
+          - paragraph [ref=e2862]: "Most Australian businesses discover this truth too late: the 1688 supplier who seemed reliable was never a factory at all. Learn the 3 verification steps before you pay any deposit."
+          - link "Read Article →" [ref=e2863] [cursor=pointer]:
+            - /url: /resources/how-to-verify-chinese-factories-1688
+      - generic [ref=e2864]:
+        - 'link "How to Import from China: A Practical Guide for Australian Businesses China Factory Tour" [ref=e2865] [cursor=pointer]':
+          - /url: /resources/how-to-import-from-china
+          - 'img "How to Import from China: A Practical Guide for Australian Businesses" [ref=e2866]'
+          - generic [ref=e2867]: China Factory Tour
+        - generic [ref=e2868]:
+          - paragraph [ref=e2869]: 18 Mar 2026 · 10 min read
+          - 'link "How to Import from China: A Practical Guide for Australian Businesses" [ref=e2870] [cursor=pointer]':
+            - /url: /resources/how-to-import-from-china
+            - 'heading "How to Import from China: A Practical Guide for Australian Businesses" [level=3] [ref=e2871]'
+          - paragraph [ref=e2872]: From finding verified suppliers to navigating Australian customs and quarantine requirements, this comprehensive guide walks you through the complete import process with practical steps you can apply immediately.
+          - link "Read Article →" [ref=e2873] [cursor=pointer]:
+            - /url: /resources/how-to-import-from-china
+      - generic [ref=e2874]:
+        - 'link "Direct Factory Sourcing vs Alibaba: Which is Better for Australian Businesses? China Sourcing" [ref=e2875] [cursor=pointer]':
+          - /url: /resources/china-vs-alibaba
+          - 'img "Direct Factory Sourcing vs Alibaba: Which is Better for Australian Businesses?" [ref=e2876]'
+          - generic [ref=e2877]: China Sourcing
+        - generic [ref=e2878]:
+          - paragraph [ref=e2879]: 18 Mar 2026 · 8 min read
+          - 'link "Direct Factory Sourcing vs Alibaba: Which is Better for Australian Businesses?" [ref=e2880] [cursor=pointer]':
+            - /url: /resources/china-vs-alibaba
+            - 'heading "Direct Factory Sourcing vs Alibaba: Which is Better for Australian Businesses?" [level=3] [ref=e2881]'
+          - paragraph [ref=e2882]: Alibaba offers convenience and variety. Direct factory sourcing offers better pricing and relationships. This guide helps Australian businesses choose the right approach.
+          - link "Read Article →" [ref=e2883] [cursor=pointer]:
+            - /url: /resources/china-vs-alibaba
+      - generic [ref=e2884]:
+        - 'link "China Sourcing Risks & How to Mitigate Them: An Australian Business Guide China Sourcing Risks" [ref=e2885] [cursor=pointer]':
+          - /url: /resources/china-sourcing-risks
+          - 'img "China Sourcing Risks & How to Mitigate Them: An Australian Business Guide" [ref=e2886]'
+          - generic [ref=e2887]: China Sourcing Risks
+        - generic [ref=e2888]:
+          - paragraph [ref=e2889]: 18 Mar 2026 · 10 min read
+          - 'link "China Sourcing Risks & How to Mitigate Them: An Australian Business Guide" [ref=e2890] [cursor=pointer]':
+            - /url: /resources/china-sourcing-risks
+            - 'heading "China Sourcing Risks & How to Mitigate Them: An Australian Business Guide" [level=3] [ref=e2891]'
+          - paragraph [ref=e2892]: Common risks of sourcing from China include quality variability, communication gaps, fraud, and logistics delays. This guide shows Australian businesses how to identify and mitigate each risk.
+          - link "Read Article →" [ref=e2893] [cursor=pointer]:
+            - /url: /resources/china-sourcing-risks
+      - generic [ref=e2894]:
+        - 'link "Australia Import Tips: Essential Guide for First-Time Importers China Factory Tour" [ref=e2895] [cursor=pointer]':
+          - /url: /resources/australia-import-tips
+          - 'img "Australia Import Tips: Essential Guide for First-Time Importers" [ref=e2896]'
+          - generic [ref=e2897]: China Factory Tour
+        - generic [ref=e2898]:
+          - paragraph [ref=e2899]: 18 Mar 2026 · 8 min read
+          - 'link "Australia Import Tips: Essential Guide for First-Time Importers" [ref=e2900] [cursor=pointer]':
+            - /url: /resources/australia-import-tips
+            - 'heading "Australia Import Tips: Essential Guide for First-Time Importers" [level=3] [ref=e2901]'
+          - paragraph [ref=e2902]: From registering for an ABN to clearing customs and meeting Australian standards, this guide covers the essential requirements every Australian importer must understand.
+          - link "Read Article →" [ref=e2903] [cursor=pointer]:
+            - /url: /resources/australia-import-tips
+      - generic [ref=e2904]:
+        - 'link "Visiting Chinese Factories: An Australian Business Owner''s Complete Checklist (2026) China Factory Tour" [ref=e2905] [cursor=pointer]':
+          - /url: /resources/visiting-chinese-factories-australian-business-checklist
+          - 'img "Visiting Chinese Factories: An Australian Business Owner''s Complete Checklist (2026)" [ref=e2906]'
+          - generic [ref=e2907]: China Factory Tour
+        - generic [ref=e2908]:
+          - paragraph [ref=e2909]: 14 Apr 2026 · 12 min read
+          - 'link "Visiting Chinese Factories: An Australian Business Owner''s Complete Checklist (2026)" [ref=e2910] [cursor=pointer]':
+            - /url: /resources/visiting-chinese-factories-australian-business-checklist
+            - 'heading "Visiting Chinese Factories: An Australian Business Owner''s Complete Checklist (2026)" [level=3] [ref=e2911]'
+          - paragraph [ref=e2912]: This guide walks Australian business owners through the complete factory visit process — from verifying a supplier before you fly, to asking the right questions on the factory floor, to negotiating terms after you get home.
+          - link "Read Article →" [ref=e2913] [cursor=pointer]:
+            - /url: /resources/visiting-chinese-factories-australian-business-checklist
+      - generic [ref=e2914]:
+        - 'link "China Factory Visits for Sydney Businesses: Sourcing Strategy for NSW SME Importers China Sourcing" [ref=e2915] [cursor=pointer]':
+          - /url: /resources/sydney-china-factory-visits
+          - 'img "China Factory Visits for Sydney Businesses: Sourcing Strategy for NSW SME Importers" [ref=e2916]'
+          - generic [ref=e2917]: China Sourcing
+        - generic [ref=e2918]:
+          - paragraph [ref=e2919]: 14 Apr 2026 · 12 min read
+          - 'link "China Factory Visits for Sydney Businesses: Sourcing Strategy for NSW SME Importers" [ref=e2920] [cursor=pointer]':
+            - /url: /resources/sydney-china-factory-visits
+            - 'heading "China Factory Visits for Sydney Businesses: Sourcing Strategy for NSW SME Importers" [level=3] [ref=e2921]'
+          - paragraph [ref=e2922]: Sydney businesses importing from China can access a structured factory visit program that delivers verified supplier relationships without the risk of speculative travel. WAG coordinates every step from initial consultation through to shipped inventory.
+          - link "Read Article →" [ref=e2923] [cursor=pointer]:
+            - /url: /resources/sydney-china-factory-visits
+      - generic [ref=e2924]:
+        - 'link "Supplier Verification Checklist for Chinese Factories: Step-by-Step Guide China Factory Tour" [ref=e2925] [cursor=pointer]':
+          - /url: /resources/supplier-verification-checklist-china
+          - 'img "Supplier Verification Checklist for Chinese Factories: Step-by-Step Guide" [ref=e2926]'
+          - generic [ref=e2927]: China Factory Tour
+        - generic [ref=e2928]:
+          - paragraph [ref=e2929]: 14 Apr 2026 · 10 min read
+          - 'link "Supplier Verification Checklist for Chinese Factories: Step-by-Step Guide" [ref=e2930] [cursor=pointer]':
+            - /url: /resources/supplier-verification-checklist-china
+            - 'heading "Supplier Verification Checklist for Chinese Factories: Step-by-Step Guide" [level=3] [ref=e2931]'
+          - paragraph [ref=e2932]: "Before you pay a deposit to any Chinese supplier, complete these 7 verification steps. Each step rated: how long it takes, what it costs, and what it catches that previous steps missed."
+          - link "Read Article →" [ref=e2933] [cursor=pointer]:
+            - /url: /resources/supplier-verification-checklist-china
+      - generic [ref=e2934]:
+        - link "Should You Pay a Deposit to a Chinese Supplier? What Australian Businesses Need to Know China Factory Tour" [ref=e2935] [cursor=pointer]:
+          - /url: /resources/should-i-pay-deposit-chinese-supplier
+          - img "Should You Pay a Deposit to a Chinese Supplier? What Australian Businesses Need to Know" [ref=e2936]
+          - generic [ref=e2937]: China Factory Tour
+        - generic [ref=e2938]:
+          - paragraph [ref=e2939]: 14 Apr 2026 · 6 min read
+          - link "Should You Pay a Deposit to a Chinese Supplier? What Australian Businesses Need to Know" [ref=e2940] [cursor=pointer]:
+            - /url: /resources/should-i-pay-deposit-chinese-supplier
+            - heading "Should You Pay a Deposit to a Chinese Supplier? What Australian Businesses Need to Know" [level=3] [ref=e2941]
+          - paragraph [ref=e2942]: For Brisbane importers, WAG recommends verification before any deposit is sent to a Chinese supplier. Before you pay a deposit, understand what is standard practice, what are the red flags, and how to structure payments that protect your order without destroying your supplier relationship.
+          - link "Read Article →" [ref=e2943] [cursor=pointer]:
+            - /url: /resources/should-i-pay-deposit-chinese-supplier
+      - generic [ref=e2944]:
+        - 'link "China Factory Visits for Perth Businesses: Direct Sourcing for WA SME Importers China Sourcing" [ref=e2945] [cursor=pointer]':
+          - /url: /resources/perth-china-factory-visits
+          - 'img "China Factory Visits for Perth Businesses: Direct Sourcing for WA SME Importers" [ref=e2946]'
+          - generic [ref=e2947]: China Sourcing
+        - generic [ref=e2948]:
+          - paragraph [ref=e2949]: 14 Apr 2026 · 10 min read
+          - 'link "China Factory Visits for Perth Businesses: Direct Sourcing for WA SME Importers" [ref=e2950] [cursor=pointer]':
+            - /url: /resources/perth-china-factory-visits
+            - 'heading "China Factory Visits for Perth Businesses: Direct Sourcing for WA SME Importers" [level=3] [ref=e2951]'
+          - paragraph [ref=e2952]: Western Australia's geographic distance from Eastern States suppliers makes direct China sourcing particularly valuable for Perth businesses. WAG's factory visit program delivers verified manufacturer relationships without requiring Perth businesses to navigate China logistics alone.
+          - link "Read Article →" [ref=e2953] [cursor=pointer]:
+            - /url: /resources/perth-china-factory-visits
+      - generic [ref=e2954]:
+        - 'link "China Factory Visits for Melbourne Businesses: Direct Sourcing for Victorian SME Importers China Sourcing" [ref=e2955] [cursor=pointer]':
+          - /url: /resources/melbourne-china-factory-visits
+          - 'img "China Factory Visits for Melbourne Businesses: Direct Sourcing for Victorian SME Importers" [ref=e2956]'
+          - generic [ref=e2957]: China Sourcing
+        - generic [ref=e2958]:
+          - paragraph [ref=e2959]: 14 Apr 2026 · 11 min read
+          - 'link "China Factory Visits for Melbourne Businesses: Direct Sourcing for Victorian SME Importers" [ref=e2960] [cursor=pointer]':
+            - /url: /resources/melbourne-china-factory-visits
+            - 'heading "China Factory Visits for Melbourne Businesses: Direct Sourcing for Victorian SME Importers" [level=3] [ref=e2961]'
+          - paragraph [ref=e2962]: "Melbourne businesses sourcing from China through trading companies and online platforms consistently face the same friction: inflated prices, quality inconsistencies, and slow communication. WAG's factory visit program delivers direct manufacturer relationships for Victorian SME owners."
+          - link "Read Article →" [ref=e2963] [cursor=pointer]:
+            - /url: /resources/melbourne-china-factory-visits
+      - generic [ref=e2964]:
+        - 'link "How to Negotiate with a Chinese Factory: What Australian Businesses Get Wrong China Factory Tour" [ref=e2965] [cursor=pointer]':
+          - /url: /resources/how-to-negotiate-with-chinese-factory
+          - 'img "How to Negotiate with a Chinese Factory: What Australian Businesses Get Wrong" [ref=e2966]'
+          - generic [ref=e2967]: China Factory Tour
+        - generic [ref=e2968]:
+          - paragraph [ref=e2969]: 14 Apr 2026 · 7 min read
+          - 'link "How to Negotiate with a Chinese Factory: What Australian Businesses Get Wrong" [ref=e2970] [cursor=pointer]':
+            - /url: /resources/how-to-negotiate-with-chinese-factory
+            - 'heading "How to Negotiate with a Chinese Factory: What Australian Businesses Get Wrong" [level=3] [ref=e2971]'
+          - paragraph [ref=e2972]: Negotiating with Chinese factories is different from negotiating with Australian suppliers. Here is what we have learned from 200+ visits about what works, what does not, and why the approach matters as much as the price.
+          - link "Read Article →" [ref=e2973] [cursor=pointer]:
+            - /url: /resources/how-to-negotiate-with-chinese-factory
+      - generic [ref=e2974]:
+        - 'link "Factory vs Trading Company: How to Tell Who You''re Actually Dealing With China Factory Tour" [ref=e2975] [cursor=pointer]':
+          - /url: /resources/factory-vs-trading-company-china-guide
+          - 'img "Factory vs Trading Company: How to Tell Who You''re Actually Dealing With" [ref=e2976]'
+          - generic [ref=e2977]: China Factory Tour
+        - generic [ref=e2978]:
+          - paragraph [ref=e2979]: 14 Apr 2026 · 7 min read
+          - 'link "Factory vs Trading Company: How to Tell Who You''re Actually Dealing With" [ref=e2980] [cursor=pointer]':
+            - /url: /resources/factory-vs-trading-company-china-guide
+            - 'heading "Factory vs Trading Company: How to Tell Who You''re Actually Dealing With" [level=3] [ref=e2981]'
+          - paragraph [ref=e2982]: Most Australian buyers don't find out their supplier was a trading company until after they've paid a deposit. These 5 signs and 3 questions tell you who you're actually dealing with.
+          - link "Read Article →" [ref=e2983] [cursor=pointer]:
+            - /url: /resources/factory-vs-trading-company-china-guide
+      - generic [ref=e2984]:
+        - 'link "Chinese Supplier Quality Not as Promised: What to Do When Goods Don''t Match China Factory Tour" [ref=e2985] [cursor=pointer]':
+          - /url: /resources/chinese-supplier-quality-not-as-promised
+          - 'img "Chinese Supplier Quality Not as Promised: What to Do When Goods Don''t Match" [ref=e2986]'
+          - generic [ref=e2987]: China Factory Tour
+        - generic [ref=e2988]:
+          - paragraph [ref=e2989]: 14 Apr 2026 · 8 min read
+          - 'link "Chinese Supplier Quality Not as Promised: What to Do When Goods Don''t Match" [ref=e2990] [cursor=pointer]':
+            - /url: /resources/chinese-supplier-quality-not-as-promised
+            - 'heading "Chinese Supplier Quality Not as Promised: What to Do When Goods Don''t Match" [level=3] [ref=e2991]'
+          - paragraph [ref=e2992]: When quality problems surface after importing from China, what you do in the first 48 hours determines whether you recover your losses. Here's the process we use with clients.
+          - link "Read Article →" [ref=e2993] [cursor=pointer]:
+            - /url: /resources/chinese-supplier-quality-not-as-promised
+      - generic [ref=e2994]:
+        - 'link "China Factory Visits for Brisbane Businesses: Direct Sourcing for Queensland SME Importers China Sourcing" [ref=e2995] [cursor=pointer]':
+          - /url: /resources/brisbane-china-factory-visits
+          - 'img "China Factory Visits for Brisbane Businesses: Direct Sourcing for Queensland SME Importers" [ref=e2996]'
+          - generic [ref=e2997]: China Sourcing
+        - generic [ref=e2998]:
+          - paragraph [ref=e2999]: 14 Apr 2026 · 10 min read
+          - 'link "China Factory Visits for Brisbane Businesses: Direct Sourcing for Queensland SME Importers" [ref=e3000] [cursor=pointer]':
+            - /url: /resources/brisbane-china-factory-visits
+            - 'heading "China Factory Visits for Brisbane Businesses: Direct Sourcing for Queensland SME Importers" [level=3] [ref=e3001]'
+          - paragraph [ref=e3002]: Queensland businesses importing from China face specific challenges around logistics, supplier verification, and maintaining quality standards across long international supply chains. WAG's factory visit program addresses all three.
+          - link "Read Article →" [ref=e3003] [cursor=pointer]:
+            - /url: /resources/brisbane-china-factory-visits
+      - generic [ref=e3004]:
+        - 'link "China Factory Visits for Adelaide Businesses: A Practical Guide for SME Importers China Sourcing" [ref=e3005] [cursor=pointer]':
+          - /url: /resources/adelaide-china-factory-visits
+          - 'img "China Factory Visits for Adelaide Businesses: A Practical Guide for SME Importers" [ref=e3006]'
+          - generic [ref=e3007]: China Sourcing
+        - generic [ref=e3008]:
+          - paragraph [ref=e3009]: 14 Apr 2026 · 10 min read
+          - 'link "China Factory Visits for Adelaide Businesses: A Practical Guide for SME Importers" [ref=e3010] [cursor=pointer]':
+            - /url: /resources/adelaide-china-factory-visits
+            - 'heading "China Factory Visits for Adelaide Businesses: A Practical Guide for SME Importers" [level=3] [ref=e3011]'
+          - paragraph [ref=e3012]: "Adelaide businesses importing from China often face a common challenge: how do you verify quality without spending thousands on failed shipments? Direct factory visits through WAG give Adelaide SME owners a structured, risk-managed approach to sourcing from China manufacturers."
+          - link "Read Article →" [ref=e3013] [cursor=pointer]:
+            - /url: /resources/adelaide-china-factory-visits
+      - generic [ref=e3014]:
+        - link "How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order Bulk Purchase Procurement Trip" [ref=e3015] [cursor=pointer]:
+          - /url: /resources/bulk-procurement-china-guide
+          - img "How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order" [ref=e3016]
+          - generic [ref=e3017]: Bulk Purchase Procurement Trip
+        - generic [ref=e3018]:
+          - paragraph [ref=e3019]: 1 Feb 2026 · 14 min read
+          - link "How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order" [ref=e3020] [cursor=pointer]:
+            - /url: /resources/bulk-procurement-china-guide
+            - heading "How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order" [level=3] [ref=e3021]
+          - paragraph [ref=e3022]: What bulk procurement in China actually involves when done right — from price negotiation to golden samples to customs clearance.
+          - link "Read Article →" [ref=e3023] [cursor=pointer]:
+            - /url: /resources/bulk-procurement-china-guide
+      - generic [ref=e3024]:
+        - link "How to Plan a China Business Sourcing Tour That Actually Pays Off China Factory Tour" [ref=e3025] [cursor=pointer]:
+          - /url: /resources/china-business-sourcing-tour
+          - img "How to Plan a China Business Sourcing Tour That Actually Pays Off" [ref=e3026]
+          - generic [ref=e3027]: China Factory Tour
+        - generic [ref=e3028]:
+          - paragraph [ref=e3029]: 07 Apr 2026 · 12 min read
+          - link "How to Plan a China Business Sourcing Tour That Actually Pays Off" [ref=e3030] [cursor=pointer]:
+            - /url: /resources/china-business-sourcing-tour
+            - heading "How to Plan a China Business Sourcing Tour That Actually Pays Off" [level=3] [ref=e3031]
+          - paragraph [ref=e3032]: Most Australian buyers who go to China alone come back with brochures, not factories. This guide shows what a structured sourcing tour looks like — and why the preparation before you board the plane matters more than the trip itself.
+          - link "Read Article →" [ref=e3033] [cursor=pointer]:
+            - /url: /resources/china-business-sourcing-tour
+  - generic [ref=e3035]:
+    - heading "Stay Ahead of the Supply Chain" [level=2] [ref=e3036]
+    - paragraph [ref=e3037]: Monthly insights on China sourcing, delivered to Australian importers who want an edge.
+    - generic [ref=e3038]:
+      - textbox "Email address" [ref=e3039]:
+        - /placeholder: Your business email
+      - button "Subscribe Free" [ref=e3040] [cursor=pointer]
+  - contentinfo [ref=e3041]:
+    - generic [ref=e3042]:
+      - generic [ref=e3043]:
+        - generic [ref=e3044]:
+          - link "Winning Adventure Global" [ref=e3045] [cursor=pointer]:
+            - /url: /
+            - img "Winning Adventure Global" [ref=e3046]
+          - paragraph [ref=e3047]: Connecting Australian businesses with China's finest manufacturers. Your trusted partner for factory sourcing and business travel.
+          - link "Winning Adventure Global on LinkedIn" [ref=e3048] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/winning-adventure-global
+            - img [ref=e3049]
+            - text: Follow us on LinkedIn
+        - generic [ref=e3051]:
+          - heading "Services" [level=4] [ref=e3052]
+          - list [ref=e3053]:
+            - listitem [ref=e3054]:
+              - link "Business Discovery Trip" [ref=e3055] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e3056]:
+              - link "Procurement Support" [ref=e3057] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e3058]:
+              - link "Factory Verification" [ref=e3059] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e3060]:
+              - link "Quality Inspection" [ref=e3061] [cursor=pointer]:
+                - /url: /services
+        - generic [ref=e3062]:
+          - heading "Industries" [level=4] [ref=e3063]
+          - list [ref=e3064]:
+            - listitem [ref=e3065]:
+              - link "Drones & Robotics" [ref=e3066] [cursor=pointer]:
+                - /url: /#industries
+            - listitem [ref=e3067]:
+              - link "Beauty & Aesthetics" [ref=e3068] [cursor=pointer]:
+                - /url: /#industries
+            - listitem [ref=e3069]:
+              - link "Chemical & Materials" [ref=e3070] [cursor=pointer]:
+                - /url: /#industries
+            - listitem [ref=e3071]:
+              - link "Fashion & Textiles" [ref=e3072] [cursor=pointer]:
+                - /url: /#industries
+            - listitem [ref=e3073]:
+              - link "AV & Electronics" [ref=e3074] [cursor=pointer]:
+                - /url: /#industries
+        - generic [ref=e3075]:
+          - heading "Company" [level=4] [ref=e3076]
+          - list [ref=e3077]:
+            - listitem [ref=e3078]:
+              - link "About Us" [ref=e3079] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e3080]:
+              - link "How It Works" [ref=e3081] [cursor=pointer]:
+                - /url: /#howitworks
+            - listitem [ref=e3082]:
+              - link "Resources" [ref=e3083] [cursor=pointer]:
+                - /url: /resources
+            - listitem [ref=e3084]:
+              - link "Contact Us" [ref=e3085] [cursor=pointer]:
+                - /url: /enquiry
+            - listitem [ref=e3086]:
+              - link "Privacy Policy" [ref=e3087] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e3088]:
+              - link "Terms of Service" [ref=e3089] [cursor=pointer]:
+                - /url: /terms
+          - generic [ref=e3090]:
+            - generic [ref=e3091]:
+              - paragraph [ref=e3092]: Adelaide Office
+              - paragraph [ref=e3093]:
+                - text: 5/54 Melbourne St
+                - text: North Adelaide SA 5006
+            - link "mark@winningadventure.com.au" [ref=e3095] [cursor=pointer]:
+              - /url: mailto:mark@winningadventure.com.au
+            - link "Google Business Profile" [ref=e3097] [cursor=pointer]:
+              - /url: https://share.google/qQBUJkAAn1ZChq7Mc
+              - img [ref=e3098]
+              - text: Google Business Profile
+      - generic [ref=e3100]:
+        - generic [ref=e3101]: © 2026 Winning Adventure Global. All rights reserved.
+        - generic [ref=e3103]: "ABN: 30 659 034 919"
+  - alert [ref=e2462]: China Sourcing Resources | Factory Tour Guides & Supplier Verification | Winning Adventure Global
+  - img [ref=e2464] [cursor=pointer]
