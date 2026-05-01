@@ -28,13 +28,16 @@ export default function ArticleSchema({
     "author": {
       "@type": "Person",
       "name": author,
-      "jobTitle": "Managing Director",
+      "jobTitle": "Founder",
       "url": "https://www.winningadventure.com.au/about",
       "worksFor": {
         "@type": "Organization",
         "name": "Winning Adventure Global",
         "url": "https://www.winningadventure.com.au"
-      }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/winning-adventure-global"
+      ]
     },
     "publisher": {
       "@type": "Organization",

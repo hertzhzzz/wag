@@ -1,0 +1,304 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2465]:
+    - generic [ref=e2466]:
+      - link "Winning Adventure Global" [ref=e2467] [cursor=pointer]:
+        - /url: /
+        - img "Winning Adventure Global" [ref=e2468]
+      - list [ref=e2469]:
+        - listitem [ref=e2470]:
+          - link "Home" [ref=e2471] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e2472]:
+          - link "Services" [ref=e2473] [cursor=pointer]:
+            - /url: /services
+        - listitem [ref=e2474]:
+          - link "Resources" [ref=e2475] [cursor=pointer]:
+            - /url: /resources
+        - listitem [ref=e2476]:
+          - link "About Us" [ref=e2477] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e2478]:
+          - link "Enquiry" [ref=e2479] [cursor=pointer]:
+            - /url: /enquiry
+      - generic [ref=e2480]:
+        - link "Call Us Today +61 0416588198" [ref=e2481] [cursor=pointer]:
+          - /url: tel:+61416588198
+          - generic [ref=e2482]: Call Us Today
+          - generic [ref=e2483]: +61 0416588198
+        - link "Get a Free Quote →" [ref=e2484] [cursor=pointer]:
+          - /url: /enquiry
+    - generic [ref=e2485]:
+      - generic [ref=e2486]:
+        - generic [ref=e2487]: Menu
+        - button "Close navigation menu" [ref=e2488] [cursor=pointer]:
+          - img [ref=e2489]
+      - list [ref=e2492]:
+        - listitem [ref=e2493]:
+          - link "Home" [ref=e2494] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e2495]:
+          - link "Services" [ref=e2496] [cursor=pointer]:
+            - /url: /services
+        - listitem [ref=e2497]:
+          - link "Resources" [ref=e2498] [cursor=pointer]:
+            - /url: /resources
+        - listitem [ref=e2499]:
+          - link "About" [ref=e2500] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e2501]:
+          - link "Enquiry" [ref=e2502] [cursor=pointer]:
+            - /url: /enquiry
+  - heading "We exist because Australian businesses deserve direct access to Chinese manufacturing — without the guesswork." [level=1] [ref=e2504]:
+    - text: We exist because Australian businesses deserve
+    - emphasis [ref=e2505]: direct access
+    - text: to Chinese manufacturing — without the guesswork.
+  - generic [ref=e2506]:
+    - generic [ref=e2507]: The Founder's Story
+    - heading "I've Spent Years Building the Bridges Most Businesses Never Find" [level=2] [ref=e2508]
+    - paragraph [ref=e2509]: When Andy Liu moved from China to Adelaide, the gap was immediately apparent. Australian businesses were leaving millions on the table — not because Chinese suppliers didn't want to work with them, but because no one was doing the translation work. Not just language. Trust. Process. Relationships.
+    - paragraph [ref=e2510]: Andy has spent years inside Chinese manufacturing hubs — Shenzhen, Foshan, Guangzhou. He knows which suppliers deliver on time, which ones cut corners on quality, and which ones are genuinely excited to build long-term partnerships with Australian B2B buyers.
+    - blockquote [ref=e2511]: "\"The suppliers are ready. The opportunity is real. You just need someone who's already on the ground to open the right doors.\""
+    - paragraph [ref=e2512]: Winning Adventure Global is the bridge Andy Liu wished had existed when he was helping his first Australian client source from China. We don't guess. We verify, match, and deliver.
+  - generic [ref=e2513]:
+    - generic [ref=e2514]:
+      - generic [ref=e2515]: "01"
+      - heading "Verified First, Always" [level=3] [ref=e2516]
+      - paragraph [ref=e2517]: Every supplier in our network passes a 12-point verification process before we recommend them to any Australian client.
+    - generic [ref=e2518]:
+      - generic [ref=e2519]: "02"
+      - heading "Relationships Over Transactions" [level=3] [ref=e2520]
+      - paragraph [ref=e2521]: We build long-term partnerships, not one-off deals. Your supply chain should be a competitive advantage.
+    - generic [ref=e2522]:
+      - generic [ref=e2523]: "03"
+      - heading "Clarity at Every Step" [level=3] [ref=e2524]
+      - paragraph [ref=e2525]: No jargon, no surprises. You get plain-English reports with real data, real contacts, and real timelines.
+  - generic [ref=e2526]:
+    - generic [ref=e2527]:
+      - generic [ref=e2528]: Australian Perspective
+      - heading "What Australian B2B Businesses Need" [level=2] [ref=e2529]
+      - paragraph [ref=e2530]: You're not looking for the cheapest factory on Alibaba. You need reliable partners who understand quality standards, respond in English, and can scale with your business.
+      - paragraph [ref=e2531]: You need suppliers who won't ghost you after the first order. Who understand Australian compliance requirements. Who see you as a long-term partner, not a one-off transaction.
+      - list [ref=e2532]:
+        - listitem [ref=e2533]:
+          - generic [ref=e2534]: ✓
+          - text: Verified supplier credentials
+        - listitem [ref=e2535]:
+          - generic [ref=e2536]: ✓
+          - text: English-responsive communication
+        - listitem [ref=e2537]:
+          - generic [ref=e2538]: ✓
+          - text: Australian compliance knowledge
+        - listitem [ref=e2539]:
+          - generic [ref=e2540]: ✓
+          - text: Transparent pricing structures
+        - listitem [ref=e2541]:
+          - generic [ref=e2542]: ✓
+          - text: Long-term partnership mindset
+        - listitem [ref=e2543]:
+          - generic [ref=e2544]: ✓
+          - text: Fast turnaround on quotes
+    - generic [ref=e2545]:
+      - generic [ref=e2546]: Chinese Resources
+      - heading "What Chinese Suppliers Offer" [level=2] [ref=e2547]
+      - paragraph [ref=e2548]: China has the manufacturing capacity, the technical expertise, and the willingness to work with Australian businesses. The challenge isn't capability — it's connection.
+      - paragraph [ref=e2549]: Our network of 500+ verified suppliers across Guangdong Province — Shenzhen, Foshan, and Guangzhou — are actively seeking Australian B2B partners. They're ready. You just need the introduction.
+      - list [ref=e2550]:
+        - listitem [ref=e2551]:
+          - generic [ref=e2552]: ✓
+          - text: 7+ industries covered
+        - listitem [ref=e2553]:
+          - generic [ref=e2554]: ✓
+          - text: 500+ verified factory partners
+        - listitem [ref=e2555]:
+          - generic [ref=e2556]: ✓
+          - text: 6 Chinese provinces
+        - listitem [ref=e2557]:
+          - generic [ref=e2558]: ✓
+          - text: English-speaking liaisons
+        - listitem [ref=e2559]:
+          - generic [ref=e2560]: ✓
+          - text: Export compliance experience
+        - listitem [ref=e2561]:
+          - generic [ref=e2562]: ✓
+          - text: Competitive pricing at scale
+  - generic [ref=e2563]:
+    - heading "We are the bridge between these two worlds" [level=3] [ref=e2564]
+    - generic [ref=e2565]:
+      - generic [ref=e2566]:
+        - heading "Australian Business" [level=4] [ref=e2567]
+        - paragraph [ref=e2568]: You know your market. You know what your customers need. You need a reliable supply chain.
+      - generic [ref=e2569]: →
+      - generic [ref=e2570]:
+        - heading "Winning Adventure Global" [level=4] [ref=e2571]
+        - paragraph [ref=e2572]: We verify suppliers. We translate needs. We open doors. We stay with you through the entire relationship.
+      - generic [ref=e2573]: →
+      - generic [ref=e2574]:
+        - heading "Chinese Supplier" [level=4] [ref=e2575]
+        - paragraph [ref=e2576]: They have capacity. They want Australian partners. They need someone who speaks both languages.
+  - generic [ref=e2578]:
+    - heading "Contact Us" [level=2] [ref=e2579]
+    - generic [ref=e2580]:
+      - generic [ref=e2581]:
+        - paragraph [ref=e2582]: Address
+        - paragraph [ref=e2583]:
+          - text: 5, 54 Melbourne St
+          - text: North Adelaide SA 5006
+          - text: Australia
+      - generic [ref=e2584]:
+        - paragraph [ref=e2585]: Phone
+        - paragraph [ref=e2586]:
+          - link "0416 588 198" [ref=e2587] [cursor=pointer]:
+            - /url: tel:+61416588198
+      - generic [ref=e2588]:
+        - paragraph [ref=e2589]: ABN
+        - paragraph [ref=e2590]:
+          - text: 30 659 034 919
+          - link "(Verify)" [ref=e2591] [cursor=pointer]:
+            - /url: https://abr.business.gov.au/Search/ResultsActive?SearchText=30659034919
+      - generic [ref=e2592]:
+        - paragraph [ref=e2593]: Google
+        - link "Business Profile" [ref=e2594] [cursor=pointer]:
+          - /url: https://share.google/qQBUJkAAn1ZChq7Mc
+          - text: Business Profile
+          - img [ref=e2595]
+  - generic [ref=e2598]:
+    - generic [ref=e2599]: Our Location
+    - heading "Strategically Positioned in Adelaide, South Australia" [level=2] [ref=e2600]
+    - generic [ref=e2601]:
+      - generic [ref=e2602]:
+        - paragraph [ref=e2603]: Based in Adelaide's North Adelaide precinct, WAG is positioned at the heart of South Australia's business community. Our CBD proximity gives us direct access to major transportation networks, including the Port Adelaide container terminals and the Adelaide Airport freight facilities.
+        - paragraph [ref=e2604]: South Australia is rapidly becoming a hub for advanced manufacturing and export-oriented businesses. The Adelaide CBD houses key industry clusters in defense, health, and technology sectors, while surrounding warehouse districts in Dry Creek, Wingfield, and Port Adelaide provide essential logistics infrastructure for import-export operations.
+        - paragraph [ref=e2605]: From our North Adelaide office, we coordinate factory tour programs across China's manufacturing heartlands while maintaining close relationships with South Australian businesses ready to expand their supplier networks internationally.
+      - generic [ref=e2606]:
+        - generic [ref=e2607]: Key Locations We Serve
+        - list [ref=e2608]:
+          - listitem [ref=e2609]:
+            - generic [ref=e2610]: Adelaide CBD
+            - generic [ref=e2611]: Business district and professional services hub
+          - listitem [ref=e2612]:
+            - generic [ref=e2613]: Port Adelaide
+            - generic [ref=e2614]: Primary container port and freight hub
+          - listitem [ref=e2615]:
+            - generic [ref=e2616]: Dry Creek / Wingfield
+            - generic [ref=e2617]: Warehouse districts and logistics centers
+          - listitem [ref=e2618]:
+            - generic [ref=e2619]: South Australia
+            - generic [ref=e2620]: State-wide manufacturing and export sector
+  - generic [ref=e2622]:
+    - generic [ref=e2623]:
+      - paragraph [ref=e2624]: Frequently Asked Questions
+      - heading "Everything You Need to Know" [level=2] [ref=e2625]
+    - generic [ref=e2627]:
+      - paragraph [ref=e2628]: Frequently Asked Questions
+      - heading "Everything You Need to Know" [level=2] [ref=e2629]
+      - generic [ref=e2630]:
+        - button "Why was Winning Adventure Global founded? +" [ref=e2632] [cursor=pointer]:
+          - generic [ref=e2633]: Why was Winning Adventure Global founded?
+          - generic [ref=e2634]: +
+        - button "What makes WAG different from other sourcing companies? +" [ref=e2636] [cursor=pointer]:
+          - generic [ref=e2637]: What makes WAG different from other sourcing companies?
+          - generic [ref=e2638]: +
+        - button "How long has WAG been operating? +" [ref=e2640] [cursor=pointer]:
+          - generic [ref=e2641]: How long has WAG been operating?
+          - generic [ref=e2642]: +
+        - button "What is your verification process for suppliers? +" [ref=e2644] [cursor=pointer]:
+          - generic [ref=e2645]: What is your verification process for suppliers?
+          - generic [ref=e2646]: +
+        - button "What geographic areas do you serve in Australia? +" [ref=e2648] [cursor=pointer]:
+          - generic [ref=e2649]: What geographic areas do you serve in Australia?
+          - generic [ref=e2650]: +
+        - button "How do you ensure quality when working with Chinese factories? +" [ref=e2652] [cursor=pointer]:
+          - generic [ref=e2653]: How do you ensure quality when working with Chinese factories?
+          - generic [ref=e2654]: +
+        - button "What happens after I find a supplier through WAG? +" [ref=e2656] [cursor=pointer]:
+          - generic [ref=e2657]: What happens after I find a supplier through WAG?
+          - generic [ref=e2658]: +
+        - button "What industries does WAG have experience working with? +" [ref=e2660] [cursor=pointer]:
+          - generic [ref=e2661]: What industries does WAG have experience working with?
+          - generic [ref=e2662]: +
+        - button "How do you handle language barriers with Chinese factories? +" [ref=e2664] [cursor=pointer]:
+          - generic [ref=e2665]: How do you handle language barriers with Chinese factories?
+          - generic [ref=e2666]: +
+  - contentinfo [ref=e2667]:
+    - generic [ref=e2668]:
+      - generic [ref=e2669]:
+        - generic [ref=e2670]:
+          - link "Winning Adventure Global" [ref=e2671] [cursor=pointer]:
+            - /url: /
+            - img "Winning Adventure Global" [ref=e2672]
+          - paragraph [ref=e2673]: Connecting Australian businesses with China's finest manufacturers. Your trusted partner for factory sourcing and business travel.
+          - link "Winning Adventure Global on LinkedIn" [ref=e2674] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/winning-adventure-global
+            - img [ref=e2675]
+            - text: Follow us on LinkedIn
+        - generic [ref=e2677]:
+          - heading "Services" [level=4] [ref=e2678]
+          - list [ref=e2679]:
+            - listitem [ref=e2680]:
+              - link "Business Discovery Trip" [ref=e2681] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e2682]:
+              - link "Procurement Support" [ref=e2683] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e2684]:
+              - link "Factory Verification" [ref=e2685] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e2686]:
+              - link "Quality Inspection" [ref=e2687] [cursor=pointer]:
+                - /url: /services
+        - generic [ref=e2688]:
+          - heading "Industries" [level=4] [ref=e2689]
+          - list [ref=e2690]:
+            - listitem [ref=e2691]:
+              - link "Drones & Robotics" [ref=e2692] [cursor=pointer]:
+                - /url: /#industries
+            - listitem [ref=e2693]:
+              - link "Beauty & Aesthetics" [ref=e2694] [cursor=pointer]:
+                - /url: /#industries
+            - listitem [ref=e2695]:
+              - link "Chemical & Materials" [ref=e2696] [cursor=pointer]:
+                - /url: /#industries
+            - listitem [ref=e2697]:
+              - link "Fashion & Textiles" [ref=e2698] [cursor=pointer]:
+                - /url: /#industries
+            - listitem [ref=e2699]:
+              - link "AV & Electronics" [ref=e2700] [cursor=pointer]:
+                - /url: /#industries
+        - generic [ref=e2701]:
+          - heading "Company" [level=4] [ref=e2702]
+          - list [ref=e2703]:
+            - listitem [ref=e2704]:
+              - link "About Us" [ref=e2705] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e2706]:
+              - link "How It Works" [ref=e2707] [cursor=pointer]:
+                - /url: /#howitworks
+            - listitem [ref=e2708]:
+              - link "Resources" [ref=e2709] [cursor=pointer]:
+                - /url: /resources
+            - listitem [ref=e2710]:
+              - link "Contact Us" [ref=e2711] [cursor=pointer]:
+                - /url: /enquiry
+            - listitem [ref=e2712]:
+              - link "Privacy Policy" [ref=e2713] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e2714]:
+              - link "Terms of Service" [ref=e2715] [cursor=pointer]:
+                - /url: /terms
+          - generic [ref=e2716]:
+            - generic [ref=e2717]:
+              - paragraph [ref=e2718]: Adelaide Office
+              - paragraph [ref=e2719]:
+                - text: 5/54 Melbourne St
+                - text: North Adelaide SA 5006
+            - link "mark@winningadventure.com.au" [ref=e2721] [cursor=pointer]:
+              - /url: mailto:mark@winningadventure.com.au
+            - link "Google Business Profile" [ref=e2723] [cursor=pointer]:
+              - /url: https://share.google/qQBUJkAAn1ZChq7Mc
+              - img [ref=e2724]
+              - text: Google Business Profile
+      - generic [ref=e2726]:
+        - generic [ref=e2727]: © 2026 Winning Adventure Global. All rights reserved.
+        - generic [ref=e2729]: "ABN: 30 659 034 919"
+  - alert [ref=e2462]: About WAG | Australia China Sourcing Experts & Factory Tour Guides | Winning Adventure Global
+  - img [ref=e2464] [cursor=pointer]
