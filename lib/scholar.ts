@@ -1,3 +1,6 @@
+import { logToFile, getLogPath } from './notify';
+import { retryWithBackoff } from './retry';
+
 // lib/scholar.ts
 
 export interface PaperResult {
@@ -22,15 +25,16 @@ export async function searchPapers(
   options: SearchPapersOptions = {}
 ): Promise<PaperResult[]> {
   const { limit = 10, year } = options;
+  const logPath = getLogPath();
 
-  const params = new URLSearchParams({
-    query,
-    limit: limit.toString(),
-    fields: 'title,authors,abstract,year,citationCount,url,venue',
-    ...(year && { year }),
-  });
+  const operation = async () => {
+    const params = new URLSearchParams({
+      query,
+      limit: limit.toString(),
+      fields: 'title,authors,abstract,year,citationCount,url,venue',
+      ...(year && { year }),
+    });
 
-  try {
     const response = await fetch(`${SEMANTIC_SCHOLAR_API}/paper/search?${params}`, {
       headers: {
         'Accept': 'application/json',
@@ -52,8 +56,14 @@ export async function searchPapers(
       url: (paper.url || `https://www.semanticscholar.org/paper/${paper.paperId}`) as string,
       venue: paper.venue as string | undefined,
     }));
+  };
+
+  try {
+    const results = await retryWithBackoff(operation, `Scholar: ${query}`);
+    await logToFile(logPath, `Found ${results.length} papers for: ${query}`, 'info');
+    return results;
   } catch (error) {
-    console.error('Semantic Scholar API error:', error);
+    await logToFile(logPath, `Semantic Scholar search failed: ${(error as Error).message}`, 'warn');
     return [];
   }
 }
