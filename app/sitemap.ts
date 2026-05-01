@@ -30,18 +30,24 @@ const CASE_STUDY_SLUGS = [
 ]
 
 function getAllArticles() {
-  return fs
-    .readdirSync(BLOG_DIR)
-    .filter(f => f.endsWith('.mdx'))
-    .map(filename => {
-      const slug = filename.replace('.mdx', '')
-      const raw = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf-8')
-      const { data } = matter(raw)
-      return {
-        slug,
-        date: data.date || '2026-01-01',
+  function scanDir(dir: string): Array<{ slug: string; date: string }> {
+    const results: Array<{ slug: string; date: string }> = []
+    if (!fs.existsSync(dir)) return results
+    const entries = fs.readdirSync(dir, { withFileTypes: true })
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name)
+      if (entry.isDirectory()) {
+        results.push(...scanDir(fullPath))
+      } else if (entry.isFile() && entry.name.endsWith('.mdx')) {
+        const slug = fullPath.replace(BLOG_DIR + '/', '').replace('.mdx', '')
+        const raw = fs.readFileSync(fullPath, 'utf-8')
+        const { data } = matter(raw)
+        results.push({ slug, date: data.date || '2026-01-01' })
       }
-    })
+    }
+    return results
+  }
+  return scanDir(BLOG_DIR)
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
