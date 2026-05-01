@@ -29,11 +29,15 @@ export function getAllSlugs(): string[] {
 }
 
 export function getArticle(slug: string): Article | null {
+  // Handle both top-level MDX (e.g. "china-factory-tour-guide")
+  // and subdirectory MDX (e.g. "china-business-tours/canton-fair-tour")
   const filePath = path.join(BLOG_DIR, `${slug}.mdx`)
-  if (!fs.existsSync(filePath)) return null
-  const raw = fs.readFileSync(filePath, 'utf-8')
-  const { data, content } = matter(raw)
-  return { frontmatter: data as Frontmatter, content, slug }
+  if (fs.existsSync(filePath)) {
+    const raw = fs.readFileSync(filePath, 'utf-8')
+    const { data, content } = matter(raw)
+    return { frontmatter: data as Frontmatter, content, slug }
+  }
+  return null
 }
 
 // ============================================
