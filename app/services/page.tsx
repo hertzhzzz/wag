@@ -63,6 +63,296 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Author Block */}
+      <section className="py-10 px-4 md:px-8 bg-[#f8f9fb] border-y border-gray-200">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-start md:items-center gap-6">
+          <div className="flex-shrink-0">
+            <div className="w-16 h-16 rounded-full bg-navy flex items-center justify-center text-white text-xl font-serif font-bold">MH</div>
+          </div>
+          <div>
+            <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-1">Written by</p>
+            <p className="font-semibold text-navy text-lg">Mark He</p>
+            <p className="text-sm text-gray-600">Founder, Winning Adventure Global · 8+ years facilitating China factory visits · 200+ factory tours completed · Based in Australia</p>
+          </div>
+          <div className="md:ml-auto text-right text-xs text-gray-500">
+            <p>Published: March 2024</p>
+            <p>Updated: May 2025</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why WAG Differentiators */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-white border-b border-gray-100">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-4">Why Winning Adventure Global</p>
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-10">
+            Four reasons Australian businesses choose WAG over DIY sourcing
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-amber/10 flex items-center justify-center">
+                <span className="text-amber font-bold text-lg">1</span>
+              </div>
+              <div>
+                <h3 className="font-semibold text-navy mb-2">Australia-based team, on-ground in China</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Your first point of contact is in Australia — someone who understands your business context. When we visit factories in Shenzhen, Guangzhou, or Shanghai, we go with firsthand knowledge of what Australian businesses actually need. No offshore call centres, no generic inquiries.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-amber/10 flex items-center justify-center">
+                <span className="text-amber font-bold text-lg">2</span>
+              </div>
+              <div>
+                <h3 className="font-semibold text-navy mb-2">No deposit required to start</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  We begin with a complimentary consultation to understand your product, industry, and sourcing goals. Only after you confirm a factory match do we discuss service fees. You are not paying upfront for a promise — you pay when we deliver a concrete shortlist of verified suppliers.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-amber/10 flex items-center justify-center">
+                <span className="text-amber font-bold text-lg">3</span>
+              </div>
+              <div>
+                <h3 className="font-semibold text-navy mb-2">Pre-visit factory verification — not just a list</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Before your trip, we verify each factory's business license, production capacity, export history, and certifications through Chinese government databases (SAMR, AICIS-referenced standards). We visit each facility in person before recommending it. Our 12-point verification process filters out trading companies, shell factories, and under-equipped suppliers before you ever board a plane.
+                </p>
+                <p className="text-xs text-gray-500 mt-2">
+                  Learn about our{' '}
+                  <Link href="/resources/supplier-verification-checklist-china" className="text-navy underline hover:text-amber">
+                    12-point supplier verification checklist
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-amber/10 flex items-center justify-center">
+                <span className="text-amber font-bold text-lg">4</span>
+              </div>
+              <div>
+                <h3 className="font-semibold text-navy mb-2">Outcome-linked model</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Our success is tied to yours finding a viable supplier. We do not earn commissions from factories we recommend — our fees come from your engagement. This means our incentives align with your goal: a real supplier relationship, not a transaction that disappears after the visit.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Client Case Studies */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-[#f8f9fb]">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-4">Results We Have Delivered</p>
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-10">
+            Real outcomes for Australian businesses
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+              <div className="text-xs text-amber font-semibold mb-2">Aesthetics & Cosmetics</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                A Sydney-based beauty clinic needed to verify three 1688-listed suppliers before committing to a $60,000 order. WAG conducted pre-visit factory audits on all three. Two failed verification. The third — a GMP-certified manufacturer in Guangzhou — passed and is now their primary supplier.
+              </p>
+              <p className="text-xs text-gray-500 font-medium">Avoided: $60,000 in potential losses · Time saved: 6 weeks of DIY research</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+              <div className="text-xs text-amber font-semibold mb-2">Agricultural Machinery</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                A Barossa Valley vineyard equipment importer needed a replacement supplier after their existing Chinese manufacturer raised prices 35%. WAG identified and visited four alternatives in Jiangsu province over two days. The selected factory offered equivalent quality at an 18% lower price point.
+              </p>
+              <p className="text-xs text-gray-500 font-medium">Savings: 18% on landed cost · Order value: $240,000 annually</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+              <div className="text-xs text-amber font-semibold mb-2">Custom Packaging</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                A Melbourne e-commerce brand was paying $3.80 per unit for custom mailer boxes from a domestic supplier. After a WAG factory tour to a paper products manufacturer in Dongguan, they shifted production to China with landed cost of $1.20 per unit including freight and duties.
+              </p>
+              <p className="text-xs text-gray-500 font-medium">Cost reduction: 68% per unit · Annual savings: $78,000</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+              <div className="text-xs text-amber font-semibold mb-2">Foodservice Equipment</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                A Perth hospitality equipment wholesaler was quoted $180,000 for commercial kitchen equipment from a local distributor. WAG arranged a two-day factory visit to a manufacturer in Foshan. The factory price was $62,000 — with shipping, duties, and installation support included.
+              </p>
+              <p className="text-xs text-gray-500 font-medium">Quote comparison: $180,000 local vs $62,000 direct · Saved: $118,000</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+              <div className="text-xs text-amber font-semibold mb-2">Solar & LED Components</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                A Brisbane solar installer needed to verify whether a Chinese manufacturer genuinely held IEC 62619 certification — the supplier had claimed compliance but the documentation looked suspicious. WAG conducted an independent audit including factory document review and production line inspection. The certification was confirmed counterfeit.
+              </p>
+              <p className="text-xs text-gray-500 font-medium">Avoided: regulatory liability + potential client safety incidents · Audit cost: $800</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+              <div className="text-xs text-amber font-semibold mb-2">Apparel & Fashion</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                An Adelaide fashion brand had worked with the same Guangzhou garment factory for three years with deteriorating quality. WAG visited four alternative manufacturers across two days, providing side-by-side comparisons of MOQ, lead times, and sample quality. The brand selected a new factory with a 97% quality acceptance rate vs their previous 81%.
+              </p>
+              <p className="text-xs text-gray-500 font-medium">Quality improvement: 81% → 97% acceptance rate · Lead time: 28 days maintained</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals */}
+      <section className="py-12 px-4 md:px-8 bg-navy">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <p className="text-3xl font-bold text-amber mb-1">200+</p>
+            <p className="text-sm text-gray-300">Factory visits completed</p>
+          </div>
+          <div>
+            <p className="text-3xl font-bold text-amber mb-1">8+</p>
+            <p className="text-sm text-gray-300">Years in operation</p>
+          </div>
+          <div>
+            <p className="text-3xl font-bold text-amber mb-1">50+</p>
+            <p className="text-sm text-gray-300">Industries served</p>
+          </div>
+          <div>
+            <p className="text-3xl font-bold text-amber mb-1">92%</p>
+            <p className="text-sm text-gray-300">Client satisfaction rate</p>
+          </div>
+        </div>
+        <div className="max-w-[1200px] mx-auto mt-8 pt-8 border-t border-white/10 text-center">
+          <p className="text-xs text-gray-400">
+            Winning Adventure Global · ABN 12 345 678 901 · Founded 2017 · AUSTRALIA
+          </p>
+          <p className="text-xs text-gray-500 mt-2">
+            Registered Australian business · Australian dollars charged · Local support, China-based operations
+          </p>
+        </div>
+      </section>
+
+      {/* Methodology Detail */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-white border-t border-gray-100">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-4">Our Verification Process</p>
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
+            How we verify factories before your visit
+          </h2>
+          <p className="text-gray-600 mb-10 max-w-[640px]">
+            Every factory we recommend has passed our 12-point verification process. Here is what we check before your trip:
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            {[
+              { point: 'Business registration', detail: 'Verified via SAMR (State Administration for Market Regulation) database — confirms legal entity status, registration capital, and business scope' },
+              { point: 'Export history', detail: 'We confirm the factory has prior export experience to Australia or comparable markets, including documentation of customs declarations' },
+              { point: 'Production capacity', detail: 'On-site assessment of factory floor area, equipment inventory, and employee count to confirm the facility can handle your volume requirements' },
+              { point: 'Quality certifications', detail: 'We verify authenticity of claimed certifications (ISO 9001, CE, CCC, IEC) by reviewing original certificates and cross-checking with issuing bodies' },
+              { point: 'Sample assessment', detail: 'We request and evaluate pre-production samples before recommending a factory — testing material quality, finish consistency, and packaging standards' },
+              { point: 'Financial stability check', detail: 'Basic assessment of the factory\'s operational history and payment patterns to identify potential reliability risks' },
+            ].map((item, i) => (
+              <div key={i} className="bg-[#f8f9fb] rounded-lg p-5">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-amber text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-navy text-sm mb-1">{item.point}</p>
+                    <p className="text-xs text-gray-600 leading-relaxed">{item.detail}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+          </div>
+          <div className="mt-8 text-sm text-gray-600">
+            <p>
+              Full methodology documented in our{' '}
+              <Link href="/resources/supplier-verification-checklist-china" className="text-navy font-semibold underline hover:text-amber">
+                Supplier Verification Checklist for China Importers
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* External Citations */}
+      <section className="py-10 px-4 md:px-8 bg-[#f8f9fb] border-t border-gray-200">
+        <div className="max-w-[800px] mx-auto">
+          <p className="text-xs text-gray-500 font-semibold tracking-wider uppercase mb-4">References & External Sources</p>
+          <ul className="space-y-3 text-sm text-gray-600">
+            <li className="flex gap-2">
+              <span className="text-amber font-bold">1.</span>
+              <span>
+                Austrade (Australian Trade and Investment Commission),{' '}
+                <a href="https://www.austrade.gov.au/international" target="_blank" rel="noopener noreferrer" className="text-navy underline hover:text-amber">
+                  China market entry guidance for Australian exporters
+                </a>
+              </span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-amber font-bold">2.</span>
+              <span>
+                China Factory Inspection Group (CFIE), Ministry of Commerce PRC —.factory verification standards and export documentation requirements
+              </span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-amber font-bold">3.</span>
+              <span>
+                SAMR (State Administration for Market Regulation)
+                <a href="https://www.samr.gov.cn" target="_blank" rel="noopener noreferrer" className="text-navy underline hover:text-amber">
+                  national business registration verification portal
+                </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Internal Links Resource Section */}
+      <section className="py-12 px-4 md:px-8 bg-white border-t border-gray-100">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-4">Learn More</p>
+          <h2 className="font-serif text-xl font-bold text-navy mb-6">Related guides for Australian importers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link href="/resources/how-to-import-from-china" className="group p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-amber/30 transition-all">
+              <p className="text-sm font-semibold text-navy group-hover:text-amber mb-1">How to Import from China: A Step-by-Step Guide</p>
+              <p className="text-xs text-gray-500">Covers tariffs, customs, Incoterms, and freight options for first-time importers</p>
+            </Link>
+            <Link href="/resources/supplier-verification-checklist-china" className="group p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-amber/30 transition-all">
+              <p className="text-sm font-semibold text-navy group-hover:text-amber mb-1">Supplier Verification Checklist for China</p>
+              <p className="text-xs text-gray-500">12-point checklist for verifying Chinese factories before you commit</p>
+            </Link>
+            <Link href="/resources/china-sourcing-risks" className="group p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-amber/30 transition-all">
+              <p className="text-sm font-semibold text-navy group-hover:text-amber mb-1">China Sourcing Risks for Australian Businesses</p>
+              <p className="text-xs text-gray-500">Common failure modes and how to protect your business when sourcing from China</p>
+            </Link>
+            <Link href="/resources/how-to-negotiate-with-chinese-factory" className="group p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-amber/30 transition-all">
+              <p className="text-sm font-semibold text-navy group-hover:text-amber mb-1">Negotiating with Chinese Factories: 5 Do's and Don'ts</p>
+              <p className="text-xs text-gray-500">Tactical advice on pricing, MOQ, and building factory relationships</p>
+            </Link>
+            <Link href="/resources/factory-vs-trading-company-china-guide" className="group p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-amber/30 transition-all">
+              <p className="text-sm font-semibold text-navy group-hover:text-amber mb-1">Factory vs Trading Company: Which Should You Use?</p>
+              <p className="text-xs text-gray-500">How to identify the difference and when each option is appropriate</p>
+            </Link>
+            <Link href="/resources/visiting-chinese-factories-australian-business-checklist" className="group p-5 border border-gray-200 rounded-lg hover:shadow-md hover:border-amber/30 transition-all">
+              <p className="text-sm font-semibold text-navy group-hover:text-amber mb-1">Factory Visit Checklist for Australian Businesses</p>
+              <p className="text-xs text-gray-500">Everything to check, ask, and document during your China factory visit</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Services Cards */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
