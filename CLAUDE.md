@@ -236,6 +236,58 @@ Direct `node --input-type=module` testing skips the full build — useful for ra
 | MCP 服务器 | context7（通过 `.mcp.json` 配置，询问 Next.js/React 文档时自动激活） |
 | 技能 | `new-component`（`/new-component`）、`pr-check`（`/pr-check`） |
 
+## Subagent 工作流规范
+
+**核心原则：永远使用 subagents 执行批量任务，不占用当前 context。**
+
+当任务符合以下条件时，必须使用 subagent：
+- 需要对 5+ 个文件执行相同的编辑操作（如批量更新 frontmatter、扩展 FAQ）
+- 需要在任务执行期间持续监控构建状态
+- 耗时的研究任务（如关键词扩展、内容验证）
+- 任何会污染当前 context 的重复性工作
+
+**Subagent 类型选择：**
+| 任务类型 | subagent_type |
+|---------|--------------|
+| 批量文件编辑（已知文件列表） | `general-purpose` |
+| 并行研究/搜索（多角度探索） | `Explore` |
+| 持续监控（构建、部署） | `general-purpose`（后台运行） |
+| 复杂多步骤协调 | `general-purpose`（带 team） |
+
+**标准工作流（以博客 FAQ 扩展为例）：**
+```typescript
+// 1. 主 session：启动后台 agent 处理批量任务
+Agent({
+  description: "Expand blog MDX FAQs",
+  prompt: "对 17 个 MDX 文件执行 FAQ 扩展...",
+  run_in_background: true,
+  subagent_type: "general-purpose"
+})
+
+// 2. 同时启动 build 监控 agent
+Agent({
+  description: "Build monitor",
+  prompt: "每 30 秒运行 npm run build，报告错误...",
+  run_in_background: true,
+  subagent_type: "general-purpose"
+})
+
+// 3. 主 session 继续其他工作，不占用 context
+// 两个 agent 完成后会自动通知
+```
+
+**后台 agent 约束：**
+- 必须设置 `run_in_background: true`
+- 必须指定 `description` 和 `subagent_type`
+- 永远不要在后台 agent 中使用 `run_in_background: false`（会阻塞等待）
+- 不要 `Read` 或 `tail` output 文件 — 会 overflow context
+- 通过 notification 机制跟踪进度，不要主动 poll
+
+**Subagent 内使用 Edit 工具：**
+- 永远先 `Read` 文件，再用 `Edit`（不能跳过 Read）
+- 批量文件操作时，每个文件都要先 Read 再 Edit
+- 不要在 subagent 中使用 `Write` — 用 `Edit` 代替
+
 ## Debugging & Gotchas
 
 | Issue | Symptom | Solution |
