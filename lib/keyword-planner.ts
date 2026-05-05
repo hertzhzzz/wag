@@ -16,6 +16,7 @@ export interface KeywordPlannerOptions {
   language?: string;
   location?: string;
   browserName?: string;
+  kwUrl?: string;
 }
 
 const BH_BIN = '/Users/mark/Projects/browser-harness/.venv/bin/browser-harness';
@@ -164,8 +165,7 @@ export async function getKeywordIdeas(
     await logToFile(logPath, `Keyword Planner search for: ${seedKeyword}`, 'info');
 
     // Use the exact Keyword Planner URL with campaign session params
-    const kwUrl = options['kwUrl'] as string | undefined;
-    const targetUrl = kwUrl || KW_PLANNER_URL;
+    const targetUrl = options.kwUrl || KW_PLANNER_URL;
 
     const script = `
 goto_url('${targetUrl}')
