@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
     'South Australia import agent',
     'Sydney Melbourne Brisbane Perth China sourcing',
   ],
+  authors: [{ name: 'Mark He', url: 'https://www.linkedin.com/in/mark-zhe-he/' }],
   openGraph: {
     title: 'About WAG | Australia China Sourcing Experts',
     description: 'Adelaide-based China sourcing agency with 12+ years experience arranging factory tours and verifying suppliers for Australian businesses across China.',
@@ -38,13 +40,43 @@ export default function AboutPage() {
         { name: 'About', url: 'https://www.winningadventure.com.au/about' }
       ]} />
 
-      {/* Hero */}
-      <div className="py-8 md:py-10 px-4 md:px-12 max-w-[90%] mx-auto mt-8">
-        <h1 className="font-serif text-[clamp(1.75rem,5vw,3.5rem)] font-normal leading-[1.15] mb-0 text-navy">
-          We exist because Australian businesses deserve <em className="italic text-amber">direct access</em> to Chinese manufacturing — without the guesswork.
-        </h1>
+      {/* Hero - Mobile: static image */}
+      <div className="md:hidden relative w-full" style={{ height: '280px' }}>
+        <Image
+          src="/hero-image.webp"
+          alt="Winning Adventure Global team bridging Australian businesses with Chinese manufacturers"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+        <div className="relative z-10 flex flex-col justify-end h-full px-4 pb-6 max-w-[90%] mx-auto">
+          <h1 className="font-serif text-[1.75rem] font-normal leading-[1.15] text-white">
+            We exist because Australian businesses deserve <em className="italic text-amber">direct access</em> to Chinese manufacturing — without the guesswork.
+          </h1>
+        </div>
       </div>
 
+      {/* Hero - Desktop: video */}
+      <div className="hidden md:block relative w-full" style={{ height: 'clamp(280px, 50vw, 480px)' }}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/hero-image.webp"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="https://pub-543b90f0e56147e5bdd93d5e7cc36c10.r2.dev/hero_vid.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+        <div className="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-8 md:pb-12 max-w-[90%] mx-auto">
+          <h1 className="font-serif text-[clamp(1.75rem,5vw,3.5rem)] font-normal leading-[1.15] text-white">
+            We exist because Australian businesses deserve <em className="italic text-amber">direct access</em> to Chinese manufacturing — without the guesswork.
+          </h1>
+        </div>
+      </div>
 
       {/* Founder Story */}
       <div className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto">
@@ -267,7 +299,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-
 
       {/* Contact Info */}
       <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
