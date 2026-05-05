@@ -200,6 +200,9 @@ Custom domain `winningadventure.com.au` is configured.
 | vercel.json redirect loop | `ERR_TOO_MANY_REDIRECTS` on sitemap.xml or static assets | Use only one redirect rule for non-www → www. Vercel handles HTTPS/www automatically. Duplicate redirect rules cause loops |
 | Canonical URL mismatch | Page indexed but Google-selected canonical differs from user-declared | Always match canonical to actual page URL path exactly |
 | GSC "Page with redirect" | URL Inspection shows "Page is not indexed: Page with redirect" | This is CORRECT — redirected pages should not be indexed. Verify Google-selected canonical is the target URL |
+| MDX `style` prop crash | `The style prop expects a mapping from style properties to values, not a string` | MDX compiler passes `style="..."` as string, React requires object. Use `<FloatImage>` component, not raw HTML with inline styles |
+| FloatImage spacing | Image touches text with no margin | Use `marginInlineEnd` (CSS logical property) — works for both left and right floats |
+| Unsplash source.unsplash.com | Returns 503 / OAuth error | Use direct photo IDs: `curl -sL "https://images.unsplash.com/photo-{ID}?w=800&q=80" -o ...` |
 
 ## SEO Debugging
 
@@ -218,6 +221,7 @@ Custom domain `winningadventure.com.au` is configured.
 - **LinkedIn/social images**: Source files in `social/linkedin-post/`, generated outputs go to `public/social/linkedin-post/{date-topic}/imgs/`
 - **MDX reference format**: `/social/blog/{article-slug}/image.png` (no `/public/` prefix in URLs)
 - **AI image prompts**: Output to `prompts/*.md`, generated images saved to appropriate `public/social/` subdirectory
+- **Every article paragraph needs a contextual image**: Use `<FloatImage src="..." alt="..." align="right" width={280} />` in MDX. Alternate `align="right"` and `align="left"` for visual interest — never stack all images on the same side. Use direct Unsplash URLs (e.g., `https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80`) — do NOT download images to disk. Author must be "Mark He" for all articles.
 
 ## Design Context
 
@@ -248,7 +252,7 @@ Custom domain `winningadventure.com.au` is configured.
 
 ---
 
-*Updated: 2026-04-29*
+*Updated: 2026-05-05*
 
 <!-- GSD:profile-start -->
 ## Developer Profile

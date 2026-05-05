@@ -124,5 +124,13 @@ export function createMdxComponents(ctaTitle: string, ctaText: string, ctaButton
     blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => (
       <blockquote className="border-l-4 border-[#F59E0B] pl-4 my-4 italic text-gray-600" {...props} />
     ),
+
+    // Float image component: use as <FloatImage src="..." alt="..." align="right" width={280} />
+    // src can be full URL (https://images.unsplash.com/...) or relative path (/social/blog/...)
+    FloatImage: ({ src, alt, align = 'right', width = 280 }: { src: string; alt: string; align?: 'left' | 'right'; width?: number }) => (
+      <figure className={`my-8 float-${align}`} style={{ width: `${width}px`, marginInlineEnd: '1.5rem', marginInlineStart: '0', marginBlockStart: '0.25rem', marginBlockEnd: '0.25rem' }}>
+        <img src={src} alt={alt} className="rounded-lg w-full" />
+      </figure>
+    ),
   }
 }
