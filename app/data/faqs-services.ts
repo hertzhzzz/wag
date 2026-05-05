@@ -38,4 +38,12 @@ export const serviceFaqs = [
     question: 'Can you help with first-time importers who have never sourced from China?',
     answer: 'Absolutely. We specialize in helping first-time importers navigate the entire process. We provide guidance on import regulations, documentation requirements, and connect you with freight forwarders who handle customs clearance.',
   },
+  {
+    question: 'What should I expect on a typical factory visit day in China?',
+    answer: 'A typical visit day runs from 8:30am to 5pm. Your bilingual guide will collect you from your hotel at 8:30am. The first factory visit runs from 9:30am to 12pm, covering production lines, quality control, and meeting production managers. Lunch is arranged near the factory district from 12pm to 1:30pm. The second factory visit runs from 2pm to 4:30pm for deeper assessment or a different product line. Your guide debriefs with you from 4:30pm to 5pm on the same day, summarising observations and next steps while details are fresh.',
+  },
+  {
+    question: 'What are the warning signs of a problematic Chinese supplier?',
+    answer: 'The most common red flags include: refusing or repeatedly delaying video calls of their facility; unable to provide verifiable business license information; addresses that do not match industrial zones on maps; asking for large deposits before any verification; refusing to accommodate third-party inspections; offering prices significantly below market rates; using generic or stock photos rather than real facility images; lack of export experience to Australia or similar markets; vague answers about production capacity or equipment; and inconsistency between what is described in communication versus what is seen on-site.',
+  },
 ]
