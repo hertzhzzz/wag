@@ -234,7 +234,7 @@ Direct `node --input-type=module` testing skips the full build — useful for ra
 | 类型 | 配置 |
 |------|------|
 | MCP 服务器 | context7（通过 `.mcp.json` 配置，询问 Next.js/React 文档时自动激活） |
-| 技能 | `new-component`（`/new-component`）、`pr-check`（`/pr-check`） |
+| 技能 | `new-component`（`/new-component`）、`pr-check`（`/pr-check`）、`wag-start-team`（`/wag-start-team`） |
 
 ## Subagent 工作流规范
 
@@ -287,6 +287,35 @@ Agent({
 - 永远先 `Read` 文件，再用 `Edit`（不能跳过 Read）
 - 批量文件操作时，每个文件都要先 Read 再 Edit
 - 不要在 subagent 中使用 `Write` — 用 `Edit` 代替
+
+## Deployment 工作流
+
+**标准部署命令：**
+```bash
+vercel --prod   # 直接部署到生产环境
+```
+
+**Preflight 检查（每次 deploy 前必须执行）：**
+1. `which vercel && vercel --version` — 确认 CLI 可用
+2. `ls .vercel/project.json` — 确认项目已 linked
+3. `git status --porcelain` — 检查是否有未提交更改
+4. 检查 `turbo.json` / `pnpm-workspace.yaml` — 判断是否 monorepo
+
+**Subagent 与 Deploy 的交互原则：**
+- Subagent 处理批量任务期间，**不要**立即 deploy
+- 等 subagent 完成并 commit 所有更改后，再执行 deploy
+- 未提交的 subagent 更改不会被 deploy，包含在当前 HEAD 的内容才会被部署
+- 如果需要立即 deploy，先 commit 已完成的部分
+
+**Preflight 未提交更改的决策矩阵：**
+
+| 情况 | 推荐操作 |
+|------|---------|
+| Subagent 还在运行 | 等完成 → commit → deploy |
+| 部分 subagent 文件已完成 | 可选：先 commit 已完成的 → deploy（跳过未完成文件）|
+| 所有文件已完成但未 commit | Commit 所有 → deploy |
+
+**Build 监控：** Subagent 运行期间 npm build 可能因文件未完成而失败，这是正常现象。Subagent 完成后 build 自动通过。
 
 ## Debugging & Gotchas
 
