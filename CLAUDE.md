@@ -98,6 +98,24 @@ wag-frontend/              # project root
 - **Rendering**: `next-mdx-remote` + `remark-gfm` + `remark-html`
 - **Slug routing**: `/resources/[slug]`
 
+### MDX Frontmatter Standards
+
+| Field | Purpose | Example |
+|-------|---------|---------|
+| `date` | Original publication | `14 Apr 2026` |
+| `updatedDate` | Last substantive update | `5 May 2026` |
+| `author` | Content creator | `Mark He` |
+| `tags` | Content taxonomy | `["China sourcing", "Factory audit"]` |
+
+Always use `updatedDate` for content refreshes — this signals freshness to Google.
+
+### MDX FAQ Pattern
+
+FAQ sections use level-3 headings: `### Question text` (NOT `## FAQ`)
+- `### ` headings = individual FAQ entries
+- `## ` headings = major section breaks
+- Blog posts should reach 10 FAQs for comprehensive coverage
+
 ## Deployment
 
 | Item | Value |
@@ -172,9 +190,11 @@ Custom domain `winningadventure.com.au` is configured.
 
 **Required variables**:
 - `GMAIL_USER` — Gmail address for SMTP sender
-- `GMAIL_APP_PASSWORD` — Gmail App Password (not regular password)
+- `GMAIL_APP_PASSWORD` — Gmail App Password (16-char, no spaces)
 - `UPSTASH_REDIS_REST_URL` — Upstash Redis URL (optional, falls back to in-memory rate limiting)
 - `UPSTASH_REDIS_REST_TOKEN` — Upstash Redis token (optional)
+
+**Gmail credential rotation:** SMTP failure → generate new App Password → verify locally → remove old from Vercel → add new → `vercel --prod` redeploy. Env vars do NOT hot-reload in Vercel serverless — always redeploy required.
 
 ## Validation Checklist
 
@@ -201,6 +221,14 @@ Binary: `/Users/mark/Projects/browser-harness/.venv/bin/browser-harness`
 Direct URL: `https://trends.google.com/trends/explore?q={keyword}&geo=AU`
 Input aria-label is "Search term" (not "Add a search term").
 Available helpers: `goto_url`, `wait_for_load`, `wait`, `js`, `type_text`, `press_key`, `page_info`, `list_tabs`, `switch_tab`. Use `js("element.click()")` instead of `click()`.
+
+**Chrome CDP profile requirement:** Chrome must run with dedicated `--user-data-dir` for CDP:
+```
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --user-data-dir=/tmp/chrome-automation-default --remote-debugging-port=9222
+```
+Normal Chrome (without `--user-data-dir`) causes "dedicated automation Chrome running?" error.
+
+**Enquiry form full verification:** Both API test (`curl`) AND browser test (browser-harness fills form + checks success page). API `{"ok":true}` confirms email sent; browser test confirms frontend redirect works.
 
 **Testing lib modules directly** (no build needed):
 ```bash
@@ -317,6 +345,22 @@ vercel --prod   # 直接部署到生产环境
 
 **Build 监控：** Subagent 运行期间 npm build 可能因文件未完成而失败，这是正常现象。Subagent 完成后 build 自动通过。
 
+## Thin Content Diagnostics
+
+GSC "discovered but not indexed" is a content depth problem, NOT a code problem.
+
+| Check | GSC Symptom | Root Cause |
+|-------|-------------|------------|
+| Thin content | Discovered but not indexed | <1500 words (blog) / <500 words (city page) |
+| Missing schema | Not indexed | No Article/FAQ/LocalBusiness schema |
+| No E-E-A-T | Not indexed | No author credentials, date stamps, external citations |
+| Internal links | Not indexed | <5 links from indexed pages |
+
+Fix: Expand word count → add FAQPage/Article schema → add author/date signals → add internal links from indexed pages.
+
+This codebase is technically sound — `npm run build` passes consistently.
+If Google is "discovered but not indexed" the issue is ALWAYS content depth, not code quality.
+
 ## Debugging & Gotchas
 
 | Issue | Symptom | Solution |
@@ -334,6 +378,7 @@ vercel --prod   # 直接部署到生产环境
 | FloatImage spacing | Image touches text with no margin | Use `marginInlineEnd` (CSS logical property) — works for both left and right floats |
 | parseTrendsBody() pattern order | Rising queries with `+4,250%` fail if `isNoise(val)` runs first. Always check `+X,XXX%` pattern before isNoise() in value-lookup loops |
 | `npx tsc` intercepted | Shows "This is not the tsc command you are looking for" wrapper message | Use `./node_modules/.bin/tsc` directly |
+| browser-harness CDP `.click()` on React | "Object reference chain is too long" error on React buttons/inputs | Use `js("element.click()")` instead — executes native DOM click bypassing React synthetic events |
 | heredoc for Python scripts | Complex JS inside Python `-c "..."` causes quoting issues | Write script to `/tmp/script.py` via `cat > /tmp/script.py << 'PYEOF'` then `python3 /tmp/script.py` |
 
 ## SEO Debugging
