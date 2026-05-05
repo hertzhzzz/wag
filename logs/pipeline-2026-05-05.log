@@ -1,0 +1,556 @@
+[2026-05-05T03:30:34.601Z] [INFO] No existing keyword storage found, starting fresh
+[2026-05-05T03:30:34.604Z] [INFO] Seeded keyword library with 7 seed keywords
+[2026-05-05T03:30:47.391Z] [INFO] Loaded 7 keywords from storage
+[2026-05-05T03:30:47.392Z] [INFO] SEOPipeline initialized
+[2026-05-05T03:30:47.392Z] [INFO] Pipeline starting for keyword: china factory tours australia
+[2026-05-05T03:30:47.392Z] [INFO] Research phase starting (attempt 1)
+[2026-05-05T03:30:47.392Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:31:03.488Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:31:05.165Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:31:20.496Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:31:21.659Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:31:38.335Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:31:39.503Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:31:57.055Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:32:02.509Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:32:17.517Z] [WARN] Pipeline attempt 1 failed: EXA_API_KEY environment variable is required
+[2026-05-05T03:32:17.517Z] [INFO] Research phase starting (attempt 2)
+[2026-05-05T03:32:17.518Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:32:20.638Z] [INFO] Found 5 papers for: china factory tours australia
+[2026-05-05T03:32:33.525Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:32:34.609Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:32:50.532Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:32:50.593Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:32:59.431Z] [INFO] Found 5 papers for: china factory tours australia
+[2026-05-05T03:33:09.538Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:33:26.880Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:33:32.546Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:33:47.550Z] [WARN] Pipeline attempt 2 failed: EXA_API_KEY environment variable is required
+[2026-05-05T03:33:47.550Z] [INFO] Research phase starting (attempt 3)
+[2026-05-05T03:33:47.551Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:33:50.000Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:34:03.557Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:34:05.480Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:34:20.563Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:34:20.951Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:34:29.662Z] [INFO] Found 5 papers for: china factory tours australia
+[2026-05-05T03:34:39.569Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:34:57.418Z] [WARN] Semantic Scholar search failed: Semantic Scholar search failed: 
+[2026-05-05T03:35:02.577Z] [INFO] Researcher starting for: china factory tours australia
+[2026-05-05T03:35:17.582Z] [WARN] Pipeline attempt 3 failed: EXA_API_KEY environment variable is required
+[2026-05-05T03:35:17.582Z] [ERROR] Pipeline FAILED: EXA_API_KEY environment variable is required
+[2026-05-05T06:05:03.217Z] [INFO] Keyword Planner search for: china factory tours
+[2026-05-05T06:05:03.223Z] [WARN] browser-harness call failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+wait_for_load()
+wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 1: syntax error near unexpected token `)'
+/bin/sh: -c: line 1: `goto_url(\'https://ads.google.com/aw/keywordplanner/home\')'
+
+[2026-05-05T06:05:03.223Z] [WARN] Keyword Planner failed: browser-harness failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+wait_for_load()
+wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 1: syntax error near unexpected token `)'
+/bin/sh: -c: line 1: `goto_url(\'https://ads.google.com/aw/keywordplanner/home\')'
+
+[2026-05-05T06:08:58.330Z] [INFO] Keyword Planner search for: china factory tours
+[2026-05-05T06:08:58.335Z] [WARN] browser-harness call failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+wait_for_load()
+wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 1: syntax error near unexpected token `)'
+/bin/sh: -c: line 1: `goto_url(\'https://ads.google.com/aw/keywordplanner/home\')'
+
+[2026-05-05T06:08:58.335Z] [WARN] Keyword Planner failed: browser-harness failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+wait_for_load()
+wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 1: syntax error near unexpected token `)'
+/bin/sh: -c: line 1: `goto_url(\'https://ads.google.com/aw/keywordplanner/home\')'
+
+[2026-05-05T06:10:19.191Z] [INFO] Keyword Planner search for: china factory tours
+[2026-05-05T06:10:19.196Z] [WARN] browser-harness call failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+# First check for existing Keyword Planner tab and switch to it
+tabs = list_tabs()
+kwp_tab = None
+for t in tabs:
+    if \'keywordplanner\' in t.get(\'url\', \'\'):
+        kwp_tab = t
+        break
+
+if kwp_tab:
+    switch_tab(kwp_tab)
+    wait(1)
+else:
+    goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+    wait_for_load()
+    wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 5: syntax error near unexpected token `('
+/bin/sh: -c: line 5: `    if \'keywordplanner\' in t.get(\'url\', \'\'):'
+
+[2026-05-05T06:10:19.196Z] [WARN] Keyword Planner failed: browser-harness failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+# First check for existing Keyword Planner tab and switch to it
+tabs = list_tabs()
+kwp_tab = None
+for t in tabs:
+    if \'keywordplanner\' in t.get(\'url\', \'\'):
+        kwp_tab = t
+        break
+
+if kwp_tab:
+    switch_tab(kwp_tab)
+    wait(1)
+else:
+    goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+    wait_for_load()
+    wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 5: syntax error near unexpected token `('
+/bin/sh: -c: line 5: `    if \'keywordplanner\' in t.get(\'url\', \'\'):'
+
+[2026-05-05T06:11:15.269Z] [INFO] Keyword Planner search for: china factory tours
+[2026-05-05T06:11:15.274Z] [WARN] browser-harness call failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+# First check for existing Keyword Planner tab and switch to it
+tabs = list_tabs()
+kwp_tab = None
+for t in tabs:
+    if \'keywordplanner\' in t.get(\'url\', \'\'):
+        kwp_tab = t
+        break
+
+if kwp_tab:
+    switch_tab(kwp_tab)
+    wait(1)
+else:
+    goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+    wait_for_load()
+    wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 5: syntax error near unexpected token `('
+/bin/sh: -c: line 5: `    if \'keywordplanner\' in t.get(\'url\', \'\'):'
+
+[2026-05-05T06:11:15.274Z] [WARN] Keyword Planner failed: browser-harness failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+# First check for existing Keyword Planner tab and switch to it
+tabs = list_tabs()
+kwp_tab = None
+for t in tabs:
+    if \'keywordplanner\' in t.get(\'url\', \'\'):
+        kwp_tab = t
+        break
+
+if kwp_tab:
+    switch_tab(kwp_tab)
+    wait(1)
+else:
+    goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+    wait_for_load()
+    wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 5: syntax error near unexpected token `('
+/bin/sh: -c: line 5: `    if \'keywordplanner\' in t.get(\'url\', \'\'):'
+
+[2026-05-05T06:11:45.602Z] [INFO] Keyword Planner search for: china factory tours
+[2026-05-05T06:11:45.607Z] [WARN] browser-harness call failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+# First check for existing Keyword Planner tab and switch to it
+tabs = list_tabs()
+kwp_tab = None
+for t in tabs:
+    if \'keywordplanner\' in t.get(\'url\', \'\'):
+        kwp_tab = t
+        break
+
+if kwp_tab:
+    switch_tab(kwp_tab)
+    wait(1)
+else:
+    goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+    wait_for_load()
+    wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 5: syntax error near unexpected token `('
+/bin/sh: -c: line 5: `    if \'keywordplanner\' in t.get(\'url\', \'\'):'
+
+[2026-05-05T06:11:45.608Z] [WARN] Keyword Planner failed: browser-harness failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+# First check for existing Keyword Planner tab and switch to it
+tabs = list_tabs()
+kwp_tab = None
+for t in tabs:
+    if \'keywordplanner\' in t.get(\'url\', \'\'):
+        kwp_tab = t
+        break
+
+if kwp_tab:
+    switch_tab(kwp_tab)
+    wait(1)
+else:
+    goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+    wait_for_load()
+    wait(2)
+
+# Scroll to main content area
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+
+# Type the seed keyword into the textarea
+type_text(\'china factory tours\')
+wait(0.5)
+
+# Press Enter to search
+press_key(\'Enter\')
+wait_for_load()
+wait(3)
+
+# Dismiss any overlay that appeared
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]") || document.querySelector(".clear-button")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+
+# Scroll to results
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+
+# Get page text
+body = js(\'document.body.innerText\')
+print(\'PAGE_CONTENT_START\')
+print(body)
+print(\'PAGE_CONTENT_END\')
+'
+/bin/sh: -c: line 5: syntax error near unexpected token `('
+/bin/sh: -c: line 5: `    if \'keywordplanner\' in t.get(\'url\', \'\'):'
+
+[2026-05-05T06:12:27.528Z] [INFO] Keyword Planner search for: china factory tours
+[2026-05-05T06:12:27.533Z] [WARN] browser-harness call failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+wait_for_load()
+wait(2)
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+type_text(\'china factory tours\')
+wait(0.5)
+press_key(\'Enter\')
+wait_for_load()
+wait(4)
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+body = js(\'document.body.innerText\')
+print(\'PAGE_START\')
+print(body)
+print(\'PAGE_END\')
+'
+/bin/sh: -c: line 1: syntax error near unexpected token `)'
+/bin/sh: -c: line 1: `goto_url(\'https://ads.google.com/aw/keywordplanner/home\')'
+
+[2026-05-05T06:12:27.534Z] [WARN] Keyword Planner failed: browser-harness failed: Command failed: /Users/mark/Projects/browser-harness/.venv/bin/browser-harness -c '
+goto_url(\'https://ads.google.com/aw/keywordplanner/home\')
+wait_for_load()
+wait(2)
+js(\'window.scrollTo(0, 400)\')
+wait(1)
+type_text(\'china factory tours\')
+wait(0.5)
+press_key(\'Enter\')
+wait_for_load()
+wait(4)
+try:
+    dismiss = js(\'document.querySelector("[aria-label=dismiss]") || document.querySelector("[aria-label=close]")\')
+    if dismiss: dismiss.click()
+except: pass
+wait(1)
+js(\'window.scrollTo(0, 600)\')
+wait(1)
+body = js(\'document.body.innerText\')
+print(\'PAGE_START\')
+print(body)
+print(\'PAGE_END\')
+'
+/bin/sh: -c: line 1: syntax error near unexpected token `)'
+/bin/sh: -c: line 1: `goto_url(\'https://ads.google.com/aw/keywordplanner/home\')'
+
+[2026-05-05T06:13:28.085Z] [INFO] Keyword Planner search for: china factory tours
+[2026-05-05T06:13:37.998Z] [INFO] Keyword Planner extracted 1 keywords for "china factory tours"
+[2026-05-05T06:13:45.096Z] [INFO] Keyword Planner search for: factory tours china
+[2026-05-05T06:13:54.967Z] [INFO] Keyword Planner extracted 1 keywords for "factory tours china"
+[2026-05-05T06:14:04.787Z] [INFO] Keyword Planner search for: china manufacturing

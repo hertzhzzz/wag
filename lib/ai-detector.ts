@@ -150,8 +150,7 @@ function detectFlags(content: string, sentences: string[]): string[] {
   // Check for uniform paragraph structure
   const paragraphs = content.split(/\n\n+/);
   if (paragraphs.length >= 3) {
-    const paraLengths = paragraphs.map(p => p.split(/\s+/).length);
-    const variance = calculateSentenceLengthVariance(paragraphs.map(p => ({ length: p.split(/\s+/).length } as unknown as string)));
+    const variance = calculateSentenceLengthVariance(paragraphs);
     if (variance < 0.2) {
       flags.push('Uniform paragraph structure');
     }
