@@ -192,6 +192,43 @@ Custom domain `winningadventure.com.au` is configured.
 - Parent directory change does not break `git remote -v` or Vercel deployment
 - `wag/` is a local-only monorepo container, not git-connected
 
+## Google Trends Scraping
+
+Uses browser-harness CDP (Chrome DevTools Protocol) via skill at `~/.claude/skills/browser-harness/SKILL.md`.
+No API key required — connects to user's logged-in Chrome via `BU_NAME=default`.
+Binary: `/Users/mark/Projects/browser-harness/.venv/bin/browser-harness`
+
+Direct URL: `https://trends.google.com/trends/explore?q={keyword}&geo=AU`
+Input aria-label is "Search term" (not "Add a search term").
+Available helpers: `goto_url`, `wait_for_load`, `wait`, `js`, `type_text`, `press_key`, `page_info`, `list_tabs`, `switch_tab`. Use `js("element.click()")` instead of `click()`.
+
+**Testing lib modules directly** (no build needed):
+```bash
+node --input-type=module -e "import { fn } from './lib/xxx.ts'; ..."
+```
+For browser-harness Python scripts, use heredoc to avoid shell-escaping issues:
+```bash
+python3 - << 'PYEOF'
+# script here
+PYEOF
+```
+
+## lib/ SEO Modules
+
+| File | Purpose |
+|------|---------|
+| `lib/google-trends.ts` | Google Trends scraping (browser-harness CDP) |
+| `lib/exa.ts` | Exa Search API research |
+| `lib/keyword-planner.ts` | Keyword planning + Google Ads data |
+| `lib/scholar.ts` | Semantic Scholar academic papers |
+| `lib/originality.ts` | Plagiarism/originality detection |
+| `lib/ai-detector.ts` | AI content detection |
+| `lib/notify.ts` | Slack/Email notifications |
+
+`★ Insight ─────────────────────────────────────`
+Direct `node --input-type=module` testing skips the full build — useful for rapid debugging of lib modules without triggering Vercel or webpack.
+`─────────────────────────────────────────────────`
+
 ## Claude Code 自动化
 
 | 类型 | 配置 |
@@ -214,7 +251,9 @@ Custom domain `winningadventure.com.au` is configured.
 | GSC "Page with redirect" | URL Inspection shows "Page is not indexed: Page with redirect" | This is CORRECT — redirected pages should not be indexed. Verify Google-selected canonical is the target URL |
 | MDX `style` prop crash | `The style prop expects a mapping from style properties to values, not a string` | MDX compiler passes `style="..."` as string, React requires object. Use `<FloatImage>` component, not raw HTML with inline styles |
 | FloatImage spacing | Image touches text with no margin | Use `marginInlineEnd` (CSS logical property) — works for both left and right floats |
-| Unsplash source.unsplash.com | Returns 503 / OAuth error | Use direct photo IDs: `curl -sL "https://images.unsplash.com/photo-{ID}?w=800&q=80" -o ...` |
+| parseTrendsBody() pattern order | Rising queries with `+4,250%` fail if `isNoise(val)` runs first. Always check `+X,XXX%` pattern before isNoise() in value-lookup loops |
+| `npx tsc` intercepted | Shows "This is not the tsc command you are looking for" wrapper message | Use `./node_modules/.bin/tsc` directly |
+| heredoc for Python scripts | Complex JS inside Python `-c "..."` causes quoting issues | Write script to `/tmp/script.py` via `cat > /tmp/script.py << 'PYEOF'` then `python3 /tmp/script.py` |
 
 ## SEO Debugging
 
@@ -264,7 +303,7 @@ Custom domain `winningadventure.com.au` is configured.
 
 ---
 
-*Updated: 2026-05-05*
+*Updated: 2026-05-05 6:00pm*
 
 <!-- GSD:profile-start -->
 ## Developer Profile
