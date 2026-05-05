@@ -21,11 +21,14 @@
 ```bash
 # development
 npm run dev          # dev server (localhost:3000)
-npm run build       # production build [required before commit]
-npm run lint        # ESLint check
+npm run build        # production build [required before commit]
+npm run lint         # ESLint check
 
-# deployment
-git push origin master  # GitHub auto-deploys to Vercel
+# pre-deploy verification (run locally before git push)
+vercel --prod        # verify with Vercel CLI first
+
+# deployment (after local verification passes)
+git push origin master  # GitHub Actions security scan → Vercel auto-deploy
 ```
 
 ## Project Structure
@@ -101,18 +104,27 @@ wag-frontend/              # project root
 |------|-------|
 | **Production URL** | https://www.winningadventure.com.au |
 | **GitHub Repo** | https://github.com/hertzhzzz/wag |
-| **Auto-deploy** | Enabled (push to master triggers Vercel) |
+| **Auto-deploy** | Push to master triggers GitHub Actions → Vercel |
 
-Push to GitHub master to deploy:
+**Required workflow — must pass in this order before production:**
+
+1. **Local build check**: `vercel --prod` (Vercel CLI runs full build, catches TypeScript/module errors)
+2. **GitHub security scan**: `.github/workflows/security.yml` (npm audit + build on Node.js 24)
+3. **Vercel deploy**: automatic after GitHub Actions passes
+
 ```bash
+# Step 1: run locally first
+vercel --prod
+
+# Step 2: only push after step 1 succeeds
 git add .
 git commit -m "description"
 git push origin master
 ```
 
-Manual deploy (immediate):
+Manual deploy (bypasses GitHub scan — use only for hotfixes):
 ```bash
-vercel --prod
+vercel --prod --yes
 ```
 
 Custom domain `winningadventure.com.au` is configured.
