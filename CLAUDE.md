@@ -124,6 +124,55 @@ FAQ sections use level-3 headings: `### Question text` (NOT `## FAQ`)
 | **GitHub Repo** | https://github.com/hertzhzzz/wag |
 | **Auto-deploy** | Push to master triggers GitHub Actions → Vercel |
 
+### Deployment Workflow (Always Follow This Order)
+
+**Step 1 — Preflight Checks** (stop on failure):
+
+```bash
+# 1. CLI available?
+which vercel && vercel --version
+
+# 2. Project linked?
+ls .vercel/project.json
+
+# 3. Uncommitted changes?
+git status --porcelain
+# If non-empty: commit first, or acknowledge uncommitted changes won't be deployed
+
+# 4. Observability preflight (production only)
+# Check if drains are configured (no drains = warning, not blocker)
+```
+
+**Step 2 — Plan** (state before executing):
+
+- **Preview deploy**: `vercel` — isolated URL, no production impact
+- **Production deploy**: `vercel --prod` — live site, requires explicit user confirmation
+
+If deploying to production, get explicit "yes" before proceeding.
+
+**Step 3 — Execute**:
+
+```bash
+# Preview
+vercel
+
+# Production (requires confirmation)
+vercel --prod
+```
+
+**Step 4 — Verify**:
+
+```bash
+# Check deployment state
+vercel ls
+
+# On failure — fetch build logs
+vercel logs <deployment-url>
+
+# On success — post-deploy error scan (production)
+sleep 60 && vercel logs <deployment-url> --level error --since 1h
+```
+
 **Required workflow — must pass in this order before production:**
 
 1. **Local build check**: `vercel --prod` (Vercel CLI runs full build, catches TypeScript/module errors)
@@ -140,10 +189,25 @@ git commit -m "description"
 git push origin master
 ```
 
-Manual deploy (bypasses GitHub scan — use only for hotfixes):
-```bash
-vercel --prod --yes
-```
+**Observability reminders:**
+- ⚠️ No drains configured = production errors won't be forwarded — set up Vercel drains or Sentry before next production deploy
+- Post-deploy error scan runs automatically for production deploys (60s after READY)
+
+### Subagent Interaction Principles
+- Subagent 处理批量任务期间，**不要**立即 deploy
+- 等 subagent 完成并 commit 所有更改后，再执行 deploy
+- 未提交的 subagent 更改不会被 deploy，包含在当前 HEAD 的内容才会被部署
+- 如果需要立即 deploy，先 commit 已完成的部分
+
+**Subagent 未提交更改的决策矩阵：**
+
+| 情况 | 推荐操作 |
+|------|---------|
+| Subagent 还在运行 | 等完成 → commit → deploy |
+| 部分 subagent 文件已完成 | 可选：先 commit 已完成的 → deploy（跳过未完成文件）|
+| 所有文件已完成但未 commit | Commit 所有 → deploy |
+
+**Build 监控：** Subagent 运行期间 npm build 可能因文件未完成而失败，这是正常现象。Subagent 完成后 build 自动通过。
 
 Custom domain `winningadventure.com.au` is configured.
 
@@ -315,35 +379,6 @@ Agent({
 - 永远先 `Read` 文件，再用 `Edit`（不能跳过 Read）
 - 批量文件操作时，每个文件都要先 Read 再 Edit
 - 不要在 subagent 中使用 `Write` — 用 `Edit` 代替
-
-## Deployment 工作流
-
-**标准部署命令：**
-```bash
-vercel --prod   # 直接部署到生产环境
-```
-
-**Preflight 检查（每次 deploy 前必须执行）：**
-1. `which vercel && vercel --version` — 确认 CLI 可用
-2. `ls .vercel/project.json` — 确认项目已 linked
-3. `git status --porcelain` — 检查是否有未提交更改
-4. 检查 `turbo.json` / `pnpm-workspace.yaml` — 判断是否 monorepo
-
-**Subagent 与 Deploy 的交互原则：**
-- Subagent 处理批量任务期间，**不要**立即 deploy
-- 等 subagent 完成并 commit 所有更改后，再执行 deploy
-- 未提交的 subagent 更改不会被 deploy，包含在当前 HEAD 的内容才会被部署
-- 如果需要立即 deploy，先 commit 已完成的部分
-
-**Preflight 未提交更改的决策矩阵：**
-
-| 情况 | 推荐操作 |
-|------|---------|
-| Subagent 还在运行 | 等完成 → commit → deploy |
-| 部分 subagent 文件已完成 | 可选：先 commit 已完成的 → deploy（跳过未完成文件）|
-| 所有文件已完成但未 commit | Commit 所有 → deploy |
-
-**Build 监控：** Subagent 运行期间 npm build 可能因文件未完成而失败，这是正常现象。Subagent 完成后 build 自动通过。
 
 ## Thin Content Diagnostics
 

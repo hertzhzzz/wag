@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Metadata } from 'next'
-import DOMPurify from 'isomorphic-dompurify'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
@@ -96,10 +97,9 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Main content */}
           <div className="lg:col-span-2">
-            <div
-              className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-navy prose-p:text-gray-700 prose-li:text-gray-700"
-              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
-            />
+            <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-navy prose-p:text-gray-700 prose-li:text-gray-700">
+              <MDXRemote source={content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+            </div>
           </div>
 
           {/* Sidebar */}
