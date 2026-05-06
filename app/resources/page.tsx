@@ -26,44 +26,40 @@ interface Article {
   title: string
   category: string
   date: string
+  updatedDate?: string
   readTime: string
   coverImage?: string
   desc?: string
   description?: string
+  featured?: boolean
 }
 
 function getArticles(): Article[] {
   const articles = fs
     .readdirSync(BLOG_DIR)
     .filter(f => f.endsWith('.mdx'))
-    .map((filename, index) => {
+    .map((filename) => {
       const slug = filename.replace('.mdx', '')
       const raw = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf-8')
       const { data } = matter(raw)
       return {
         slug,
-        index: index + 1,
         title: data.title || '',
         category: data.category || 'Uncategorized',
         date: data.date || '',
+        updatedDate: data.updatedDate,
         readTime: data.readTime || '',
         coverImage: data.coverImage,
         desc: data.desc,
         description: data.description,
+        featured: data.featured || false,
       } as Article
-    })
-    .sort((a, b) => {
-      const dateA = a.date
-      const dateB = b.date
-      if (!dateA || !dateB) return 0
-      return dateA < dateB ? 1 : -1
     })
   return articles
 }
 
 export default function ResourcesPage() {
   const articles = getArticles()
-  const categories = ['All Articles', ...Array.from(new Set(articles.map((a) => a.category).filter(Boolean)))]
 
   return (
     <>
@@ -71,7 +67,7 @@ export default function ResourcesPage() {
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
         { name: 'Resources', url: 'https://www.winningadventure.com.au/resources' }
       ]} />
-      <ResourcesContent articles={articles} categories={categories} />
+      <ResourcesContent articles={articles} />
     </>
   )
 }

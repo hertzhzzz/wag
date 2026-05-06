@@ -4,32 +4,32 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 
 interface Article {
   slug: string
   title: string
   category: string
   date: string
+  updatedDate?: string
   readTime: string
   coverImage?: string
   desc?: string
   description?: string
+  featured?: boolean
 }
 
 interface ResourcesContentProps {
   articles: Article[]
-  categories: string[]
 }
 
-export default function ResourcesContent({ articles, categories }: ResourcesContentProps) {
-  const [activeCategory, setActiveCategory] = useState('All Articles')
-
-  const filteredArticles = activeCategory === 'All Articles'
-    ? articles
-    : articles.filter((a) => a.category === activeCategory)
-
-  const [featured, ...rest] = filteredArticles
+export default function ResourcesContent({ articles }: ResourcesContentProps) {
+  const sortedArticles = useMemo(() => {
+    return [...articles].sort((a, b) => {
+      if (!a.date || !b.date) return 0
+      return a.date < b.date ? 1 : -1
+    })
+  }, [articles])
 
   const [email, setEmail] = useState('')
   const [subscribeStatus, setSubscribeStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -81,114 +81,49 @@ export default function ResourcesContent({ articles, categories }: ResourcesCont
         </div>
       </div>
 
-      {/* Filter bar */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-[1200px] mx-auto px-4 md:px-12 flex gap-0 overflow-x-auto">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`block px-5 py-4 text-[13px] font-semibold border-b-[3px] whitespace-nowrap transition-colors ${
-                activeCategory === cat
-                  ? 'text-[#0F2D5E] border-[#F59E0B]'
-                  : 'text-gray-500 border-transparent hover:text-[#0F2D5E]'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* Content */}
       <div className="max-w-[1200px] mx-auto px-4 md:px-12 py-12">
 
-        {/* Featured card — left image / right text */}
-        {featured && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 mb-12 overflow-hidden">
-            {/* Left: image */}
-            <Link href={`/resources/${featured.slug}`} className="relative min-h-[320px] bg-[#0F2D5E] flex items-center justify-center overflow-hidden group">
-              {featured.coverImage && (
-                <Image
-                  src={featured.coverImage} width={800} height={400}
-                  alt={featured.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-50 transition-opacity"
-                />
-              )}
-              <span className="absolute top-5 left-5 z-10 bg-[#F59E0B] text-[#0F2D5E] py-1 px-3 text-[11px] font-bold uppercase tracking-wide">
-                {featured.category}
-              </span>
-            </Link>
-
-            {/* Right: text */}
-            <div className="bg-white p-6 md:p-10 flex flex-col">
-              <p className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-4">
-                Featured Article &nbsp;·&nbsp; {featured.date} &nbsp;·&nbsp; {featured.readTime}
-              </p>
-              <Link href={`/resources/${featured.slug}`} className="block">
-                <h2 className="font-serif text-[26px] font-semibold leading-snug text-[#0F2D5E] mb-4 hover:text-[#F59E0B] transition-colors">
-                  {featured.title}
-                </h2>
-              </Link>
-              <p className="text-[15px] text-gray-600 leading-relaxed mb-8 flex-1">
-                {featured.desc || featured.description}
-              </p>
+        {/* Article cards - Vertical Masonry */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            {sortedArticles.map((article) => (
               <Link
-                href={`/resources/${featured.slug}`}
-                className="self-start bg-[#0F2D5E] text-white px-6 py-3 text-[13px] font-bold tracking-wide hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors min-h-11"
-              >
-                Read Full Guide
-              </Link>
-            </div>
-          </div>
-        )}
-
-        {/* 3-column grid */}
-        {rest.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {rest.map((article) => (
-              <div
                 key={article.slug}
-                className="bg-white border border-gray-200 overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(15,45,94,0.1)] transition-all duration-200"
+                href={`/resources/${article.slug}`}
+                className="block bg-white border border-gray-200 overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(15,45,94,0.1)] transition-all duration-200 break-inside-avoid"
               >
                 {/* Card image */}
-                <Link href={`/resources/${article.slug}`} className="relative h-[180px] bg-[#0F2D5E] flex items-center justify-center overflow-hidden block group">
-                  {article.coverImage && (
+                <div className="relative bg-[#0F2D5E] flex items-center justify-center overflow-hidden">
+                  {article.coverImage ? (
                     <Image
-                      src={article.coverImage} width={400} height={200}
+                      src={article.coverImage}
+                      width={400}
+                      height={200}
                       alt={article.title}
-                      className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-40 transition-opacity"
+                      className="w-full object-cover opacity-60 group-hover:opacity-50 transition-opacity"
                     />
+                  ) : (
+                    <div className="w-full aspect-video bg-[#0F2D5E]/30" />
                   )}
                   <span className="absolute top-3 left-3 z-10 bg-[#F59E0B] text-[#0F2D5E] py-1 px-2.5 text-[10px] font-bold uppercase tracking-wide">
                     {article.category}
                   </span>
-                </Link>
-
+                </div>
                 {/* Card body */}
-                <div className="p-6">
+                <div className="p-5">
                   <p className="text-[11px] text-gray-400 uppercase tracking-widest mb-2">
-                    {article.date} &nbsp;·&nbsp; {article.readTime}
+                    {article.date} · {article.readTime}
                   </p>
-                  <Link href={`/resources/${article.slug}`} className="block">
-                    <h3 className="font-serif text-[18px] font-semibold text-[#0F2D5E] leading-snug mb-3 hover:text-[#F59E0B] transition-colors">
-                      {article.title}
-                    </h3>
-                  </Link>
-                  <p className="text-[14px] text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                  <h3 className="font-serif text-[16px] font-semibold text-[#0F2D5E] leading-snug mb-3 hover:text-[#F59E0B] transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-[13px] text-gray-600 leading-relaxed">
                     {article.desc || article.description}
                   </p>
-                  <Link
-                    href={`/resources/${article.slug}`}
-                    className="text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors"
-                  >
-                    Read Article →
-                  </Link>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
-        )}
       </div>
 
       {/* Newsletter */}

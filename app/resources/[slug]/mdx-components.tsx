@@ -52,7 +52,7 @@ function createHeadingComponent(level: 2 | 3) {
 
   return function Heading({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement> & { children?: React.ReactNode }) {
     const id = slugify(String(children))
-    return <Tag id={id} className={className} {...props}>{children}</Tag>
+    return <Tag id={id} className={className} style={{ clear: 'both' }} {...props}>{children}</Tag>
   }
 }
 
@@ -107,10 +107,10 @@ export function createMdxComponents(ctaTitle: string, ctaText: string, ctaButton
     tr: (props: React.HTMLAttributes<HTMLTableRowElement>) => (
       <tr className="border-b border-gray-200" {...props} />
     ),
-    th: (props: React.HTMLAttributes<HTMLTableCellElement>) => (
+    th: (props: React.ThHTMLAttributes<HTMLTableHeaderCellElement>) => (
       <th className="border border-gray-200 px-4 py-3 text-left text-sm font-semibold" {...props} />
     ),
-    td: (props: React.HTMLAttributes<HTMLTableCellElement>) => (
+    td: (props: React.TdHTMLAttributes<HTMLTableDataCellElement>) => (
       <td className="border border-gray-200 px-4 py-3 text-sm" {...props} />
     ),
 
@@ -127,10 +127,13 @@ export function createMdxComponents(ctaTitle: string, ctaText: string, ctaButton
 
     // Float image component: use as <FloatImage src="..." alt="..." align="right" width={280} />
     // src can be full URL (https://images.unsplash.com/...) or relative path (/social/blog/...)
-    FloatImage: ({ src, alt, align = 'right', width = 280 }: { src: string; alt: string; align?: 'left' | 'right'; width?: number }) => (
-      <figure className={`my-8 float-${align}`} style={{ width: `${width}px`, marginInlineEnd: '1.5rem', marginInlineStart: '0', marginBlockStart: '0.25rem', marginBlockEnd: '0.25rem' }}>
-        <img src={src} alt={alt} className="rounded-lg w-full" />
-      </figure>
-    ),
+    FloatImage: ({ src, alt, align = 'right', width = 280 }: { src: string; alt: string; align?: 'left' | 'right'; width?: number }) => {
+      const floatClass = align === 'left' ? 'float-left' : 'float-right'
+      return (
+        <figure className={`my-8 ${floatClass}`} style={{ width: `${width}px`, marginInlineEnd: align === 'right' ? '2.5rem' : '0', marginInlineStart: align === 'left' ? '2.5rem' : '0', marginBlockStart: '1.5rem', marginBlockEnd: '1.5rem' }}>
+          <img src={src} alt={alt} className="rounded-lg w-full" />
+        </figure>
+      )
+    },
   }
 }
