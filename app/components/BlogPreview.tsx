@@ -71,15 +71,26 @@ export default function BlogPreview() {
               visit planning — written for Australian businesses.
             </p>
           </div>
-          <Link
-            href="/resources"
-            className="self-start md:self-auto text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors whitespace-nowrap flex items-center gap-1.5 min-h-11"
-          >
-            All Articles
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-px">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Link
+              href="/resources"
+              className="self-start md:self-auto text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors whitespace-nowrap flex items-center gap-1.5 min-h-11"
+            >
+              View All Resources
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-px">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="self-start md:self-auto text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors whitespace-nowrap flex items-center gap-1.5 min-h-11"
+            >
+              Explore Case Studies
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-px">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+          </div>
         </div>
 
         {/* Article cards — 3-column grid */}

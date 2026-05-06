@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import { CheckCircle } from 'lucide-react'
 import { Metadata } from 'next'
 import ServiceSchema from '@/components/ServiceSchema'
@@ -47,8 +48,42 @@ export default function ServicesPage() {
       ]} />
 
       {/* Hero */}
-      <section className="bg-navy py-12 md:py-16 px-4 md:px-8">
-        <div className="max-w-[1200px] mx-auto">
+      <section className="relative min-h-[50vh] md:min-h-[600px] flex items-center overflow-hidden">
+        {/* Hero Image - Mobile: show only (no video to block LCP) */}
+        <div className="absolute inset-0 md:hidden">
+          <Image
+            src="/hero-image.webp"
+            alt="Chinese manufacturing facility"
+            fill
+            priority={true}
+            loading="eager"
+            fetchPriority="high"
+            sizes="(max-width: 768px) 100vw, 1200px"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
+        </div>
+
+        {/* Video Background - Desktop only */}
+        <div className="hidden md:block absolute inset-0" aria-hidden="true">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            className="w-full h-full object-cover"
+            poster="/hero-image.webp"
+          >
+            <source src="https://pub-543b90f0e56147e5bdd93d5e7cc36c10.r2.dev/hero_vid.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
+        </div>
+
+        {/* Text Content */}
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 md:px-8 py-12 md:py-16">
           <div className="text-xs text-gray-400 mb-4">
             <Link href="/" className="hover:text-white">Home</Link>
             <span className="mx-2">›</span>
@@ -57,27 +92,9 @@ export default function ServicesPage() {
           <h1 className="font-serif font-bold text-[clamp(2rem,4vw,3rem)] text-white mb-4 leading-tight">
             Our Services
           </h1>
-          <p className="text-lg text-gray-300 max-w-[600px]">
+          <p className="text-lg text-white/80 max-w-[600px]">
             From supplier discovery to factory visits and end-to-end China procurement — we handle every step of your China sourcing journey.
           </p>
-        </div>
-      </section>
-
-      {/* Author Block */}
-      <section className="py-10 px-4 md:px-8 bg-[#f8f9fb] border-y border-gray-200">
-        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-start md:items-center gap-6">
-          <div className="flex-shrink-0">
-            <div className="w-16 h-16 rounded-full bg-navy flex items-center justify-center text-white text-xl font-serif font-bold">MH</div>
-          </div>
-          <div>
-            <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-1">Written by</p>
-            <p className="font-semibold text-navy text-lg">Mark He</p>
-            <p className="text-sm text-gray-600">Founder, Winning Adventure Global · 8+ years facilitating China factory visits · 200+ factory tours completed · Based in Australia</p>
-          </div>
-          <div className="md:ml-auto text-right text-xs text-gray-500">
-            <p>Published: March 2024</p>
-            <p>Updated: May 2025</p>
-          </div>
         </div>
       </section>
 

@@ -339,7 +339,8 @@ export default function VisitingChineseFactoriesPage() {
               A Typical Factory Visit Day — Hour by Hour
             </h2>
             <p className="text-lg text-navy/60 mt-4 leading-relaxed">
-              Most visit days run from 8:30am to 5pm across two factory sites. Here is exactly how a structured day unfolds — based on dozens of trips we have run for Australian businesses in 2026.
+              Most visit days run from 8:30am to 5pm across two factory sites. Here is exactly how a structured day unfolds — based on dozens of trips we have run for Australian businesses in 2026. For a complete overview of planning your trip, see our{' '}
+              <Link href="/resources/china-factory-tour-guide" className="text-navy underline hover:text-amber">China Factory Tour Guide</Link>.
             </p>
           </div>
 

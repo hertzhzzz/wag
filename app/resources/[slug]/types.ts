@@ -23,6 +23,7 @@ export interface Frontmatter {
   ctaText: string
   ctaButtonText: string
   faqs?: FAQItem[]
+  featured?: boolean
 }
 
 export interface Article {
