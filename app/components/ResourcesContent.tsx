@@ -126,6 +126,57 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
           </div>
       </div>
 
+      {/* Explore More Section */}
+      <div className="max-w-[1200px] mx-auto px-4 md:px-12 py-12 mt-8">
+        <h2 className="font-serif text-2xl font-bold text-navy mb-8 text-center">
+          Explore More
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Link
+            href="/case-studies"
+            className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
+              Case Studies
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              Success Stories
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Real results from Australian businesses who sourced with WAG.
+            </p>
+          </Link>
+          <Link
+            href="/services"
+            className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
+              Services
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              What We Offer
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Factory tours, supplier verification, and end-to-end procurement support.
+            </p>
+          </Link>
+          <Link
+            href="/adelaide"
+            className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
+              Factory Directory
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              Adelaide
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Verified manufacturers ready to work with Australian businesses.
+            </p>
+          </Link>
+        </div>
+      </div>
+
       {/* Newsletter */}
       <div className="bg-[#0F2D5E] py-16 px-4 md:px-12 mt-16">
         <div className="max-w-[600px] mx-auto text-center">

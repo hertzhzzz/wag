@@ -10,7 +10,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import PersonSchema from '@/components/PersonSchema'
 
 export const metadata: Metadata = {
-  title: 'About WAG | Australia China Sourcing Experts & Factory Tour Guides',
+  title: 'About Winning Adventure Global | Australia China Sourcing Experts & Factory Tour Guides',
   description: 'Adelaide-based China sourcing agency with 12+ years experience. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement.',
   keywords: [
     'Adelaide China procurement consultant',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mark He', url: 'https://www.linkedin.com/in/mark-zhe-he/' }],
   openGraph: {
-    title: 'About WAG | Australia China Sourcing Experts',
+    title: 'About Winning Adventure Global | Australia China Sourcing Experts',
     description: 'Adelaide-based China sourcing agency with 12+ years experience arranging factory tours and verifying suppliers for Australian businesses across China.',
     url: 'https://www.winningadventure.com.au/about',
   },
@@ -51,9 +51,9 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
         <div className="relative z-10 flex flex-col justify-end h-full px-4 pb-6 max-w-[90%] mx-auto">
-          <h1 className="font-serif text-[1.75rem] font-normal leading-[1.15] text-white">
+          <p className="font-serif text-[1.75rem] font-normal leading-[1.15] text-white">
             We exist because Australian businesses deserve <em className="italic text-amber">direct access</em> to Chinese manufacturing — without the guesswork.
-          </h1>
+          </p>
         </div>
       </div>
 

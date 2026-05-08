@@ -94,7 +94,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
+    <html lang="en-AU" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
       <head>
         {/* Preload hero image for LCP — rendered by Hero.tsx on desktop */}
         <link

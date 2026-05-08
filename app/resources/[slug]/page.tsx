@@ -6,7 +6,6 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import ArticleSchema from '@/components/ArticleSchema'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
-import HowToSchema from '@/components/HowToSchema'
 import FAQSchema from '@/components/FAQSchema'
 import { ReadingProgressBar } from './ReadingProgressBar'
 import { BackToTopButton } from './BackToTopButton'
@@ -110,15 +109,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         image={fm.coverImage}
         category={fm.category}
       />
-
-      {howToData && (
-        <HowToSchema
-          name={howToData.name}
-          description={howToData.description}
-          image={fm.coverImage}
-          steps={howToData.steps}
-        />
-      )}
 
       {articleFaqs.length > 0 && <FAQSchema faqs={articleFaqs} />}
 
