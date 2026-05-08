@@ -13,13 +13,13 @@ import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Agent Australia | Factory Tours & Supplier Verification | WAG',
+  title: 'China Sourcing Agent Australia | Factory Tours & Supplier Verification',
   description: 'Australian-owned China sourcing agent. We arrange factory tours in Shenzhen, Guangzhou & Shanghai, verify suppliers, and protect Australian businesses from fraud. Serving Adelaide, Sydney, Melbourne.',
   keywords: ['china sourcing agent australia', 'china sourcing company', 'australian business china', 'verified suppliers china', 'factory tour china', 'supplier verification', 'china factory visit', 'australian import china'],
   openGraph: {
     locale: 'en_AU',
     alternateLocale: 'en_US',
-    title: 'WAG | Australia\'s China Sourcing Agent | Factory Tours & Supplier Verification',
+    title: 'Winning Adventure Global | Australia\'s China Sourcing Agent | Factory Tours & Supplier Verification',
     description: 'Australian-owned and operated. We escort Australian businesses on factory tours in China, verify suppliers, and ensure your sourcing is safe and successful.',
     url: 'https://www.winningadventure.com.au/',
     siteName: 'Winning Adventure Global',

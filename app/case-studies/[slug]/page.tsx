@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import CaseStudySchema from '@/components/CaseStudySchema'
 import { industries } from '@/components/industries'
 import { getCaseStudyBySlug, getAllCaseStudySlugs } from '@/lib/case-study-mdx'
 
@@ -62,6 +63,15 @@ export default async function CaseStudyDetailPage({ params }: Props) {
             url: `https://www.winningadventure.com.au/case-studies/${slug}`,
           },
         ]}
+      />
+      <CaseStudySchema
+        title={frontmatter.title}
+        description={frontmatter.description}
+        url={`https://www.winningadventure.com.au/case-studies/${slug}`}
+        author="Mark He"
+        datePublished="2026-04-14"
+        dateModified="2026-05-06"
+        industry={frontmatter.industry}
       />
       <Navbar />
 

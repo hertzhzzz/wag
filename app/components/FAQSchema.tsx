@@ -10,23 +10,7 @@ interface FAQSchemaProps {
 }
 
 export default function FAQSchema({ faqs = defaultFaqs }: FAQSchemaProps) {
-  const faqData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-    />
-  )
+  // FAQPage schema deprecated by Google in May 2024 for rich results
+  // Keep FAQ content in HTML for search engines to crawl
+  return null
 }
