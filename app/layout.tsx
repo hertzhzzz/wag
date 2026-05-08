@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WAG | China Sourcing Agent for Australian Businesses',
+    title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
     description: 'Verified Chinese manufacturers across all industries. Factory tours, supplier verification, and procurement support.',
     images: ['/og-image.jpg'],
   },
