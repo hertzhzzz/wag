@@ -7,6 +7,8 @@ interface ArticleSchemaProps {
   dateModified?: string
   image?: string
   category?: string
+  tags?: string[]
+  content?: string
 }
 
 export default function ArticleSchema({
@@ -18,7 +20,11 @@ export default function ArticleSchema({
   dateModified,
   image,
   category,
+  tags,
+  content,
 }: ArticleSchemaProps) {
+  const wordCount = content ? content.split(/\s+/).filter(Boolean).length : 0
+  const timeToRead = Math.max(1, Math.round(wordCount / 200))
   const schema = {
     "@context": "https://schema.org",
     "@type": ["Article", "BlogPosting"],
@@ -54,6 +60,8 @@ export default function ArticleSchema({
       "@id": url
     },
     "articleSection": category,
+    "keywords": tags ? tags.join(", ") : undefined,
+    "timeToRead": timeToRead,
     "image": image ? {
       "@type": "ImageObject",
       "url": image,

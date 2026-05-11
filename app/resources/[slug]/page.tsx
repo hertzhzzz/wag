@@ -115,7 +115,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
         { name: 'Resources', url: 'https://www.winningadventure.com.au/resources' },
-        { name: fm.category, url: `https://www.winningadventure.com.au/resources/${slug}` },
+        { name: fm.title, url: `https://www.winningadventure.com.au/resources/${slug}` },
       ]} />
 
       {/* Hero Section */}
