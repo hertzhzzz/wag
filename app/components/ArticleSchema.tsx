@@ -28,7 +28,7 @@ export default function ArticleSchema({
     "author": {
       "@type": "Person",
       "name": author,
-      "jobTitle": "Founder",
+      "jobTitle": author === "Andy Liu" ? "Founder" : "Managing Director",
       "url": "https://www.winningadventure.com.au/about",
       "worksFor": {
         "@type": "Organization",
