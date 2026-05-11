@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-import { CheckCircle, XCircle, Minus } from 'lucide-react'
+import { XCircle, Minus } from 'lucide-react'
 import { Metadata } from 'next'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 

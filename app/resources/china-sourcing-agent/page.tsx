@@ -1,7 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-import { CheckCircle, Globe, Shield, Truck, Users, ArrowRight } from 'lucide-react'
+import { CheckCircle, Globe, Shield, Users, ArrowRight } from 'lucide-react'
 import { Metadata } from 'next'
 import ServiceSchema from '@/components/ServiceSchema'
 import FAQ from '@/components/FAQ'
