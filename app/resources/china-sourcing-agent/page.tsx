@@ -9,7 +9,7 @@ import FAQSchema from '@/components/FAQSchema'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
+  title: 'China Sourcing Agent Services',
   description:
     'Dedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-end procurement support. Adelaide-based team with feet on the ground in China.',
   keywords: [
