@@ -11,7 +11,7 @@ import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Services for Australian Businesses | Winning Adventure Global',
+  title: 'China Sourcing Services for Australian Businesses',
   description: 'Adelaide-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China. Pre-screened factories, no upfront cost.',
   keywords: [
     'Australia China sourcing agent',
