@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'factory visit china',
   ],
   openGraph: {
-    title: 'China Sourcing Services for Australian Businesses | Winning Adventure Global',
+    title: 'China Sourcing Services for Australian Businesses',
     description: 'Adelaide-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China.',
     url: 'https://www.winningadventure.com.au/services',
     siteName: 'Winning Adventure Global',

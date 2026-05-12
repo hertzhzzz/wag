@@ -11,7 +11,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 export const metadata: Metadata = {
   title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
   description:
-    'We help Australian businesses source quality products from China with factory verification, quality control, and procurement services. Australia-based team with feet on the ground in China.',
+    'Dedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-end procurement support. Adelaide-based team with feet on the ground in China.',
   keywords: [
     'china sourcing agent',
     'china sourcing agent for australian business',
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     'supplier verification australia',
   ],
   openGraph: {
-    title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
+    title: 'China Sourcing Agent Services',
     description:
-      'We help Australian businesses source quality products from China with factory verification, quality control, and procurement services.',
+      'Dedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-end procurement support.',
     url: 'https://www.winningadventure.com.au/resources/china-sourcing-agent',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',
