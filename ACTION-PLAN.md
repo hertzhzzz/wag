@@ -290,19 +290,9 @@ export const metadata = {
 
 ## 🟢 LOW（后续处理）
 
-### 14. 添加 AggregateRating Schema（客户评价星星）
-**问题：** 无星星评分信号，信任度不足
-**位置：** ServiceSchema 或 Homepage 组件
-
-```tsx
-"aggregateRating": {
-  "@type": "AggregateRating",
-  "ratingValue": "4.9",
-  "reviewCount": "47",
-  "bestRating": "5",
-  "worstRating": "1"
-}
-```
+### 14. 添加 AggregateRating Schema（客户评价星星）✅ COMPLETED
+**文件：** `app/components/LocalBusinessSchema.tsx` — 已添加 aggregateRating 字段
+**验证：** build passed，committed and pushed
 
 ---
 
