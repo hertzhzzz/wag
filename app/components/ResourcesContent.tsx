@@ -131,7 +131,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
         <h2 className="font-serif text-2xl font-bold text-navy mb-8 text-center">
           Explore More
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <Link
             href="/case-studies"
             className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
@@ -158,6 +158,20 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
             </h3>
             <p className="text-sm text-gray-600 leading-relaxed">
               Factory tours, supplier verification, and end-to-end procurement support.
+            </p>
+          </Link>
+          <Link
+            href="/resources/china-sourcing-agent"
+            className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
+              Service Page
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              China Sourcing Agent
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Direct factory access without middleman markups. Start your quote.
             </p>
           </Link>
           <Link
