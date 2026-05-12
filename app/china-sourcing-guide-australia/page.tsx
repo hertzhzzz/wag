@@ -186,6 +186,66 @@ export default function ChinaSourcingAgentPage() {
         </div>
       </section>
 
+      {/* Why Australian SMEs Turn to Procurement Agents */}
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-[#f8f9fb]">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-[640px] mb-12">
+            <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Market Context</p>
+            <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
+              Why Australian SMEs Are Increasingly Turning to Procurement Agents
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Rising freight costs, tightening quality requirements, and a marked increase in factory fraud targeting Australian buyers have fundamentally changed the calculus of direct-from-China sourcing. Post-COVID, the landscape is harder to navigate: counterfeit certifications are widespread, contract terms are increasingly complex, and verifying a factory's actual production capacity from overseas has become genuinely difficult. For Australian SMEs without Mandarin-speaking staff or on-the-ground presence, the risk of a bad supplier relationship — or worse, a fraudulent transaction — now outweighs the perceived cost savings of going direct. WAG was built in response to this real market need: giving Australian businesses a trusted, Adelaide-based representative who can verify, negotiate, and protect their interests on the ground in China.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Real Risks of Direct Sourcing */}
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-[640px] mb-12">
+            <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Know the Risks</p>
+            <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
+              The Real Risks of Sourcing Directly from Chinese Factories
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Australian businesses that attempt direct sourcing often encounter a set of risks that are rarely visible until significant money has changed hands. Shell factories — operations that market themselves as manufacturers but sub-contract all actual production — are more common than most buyers realise. Counterfeit certifications are widespread, particularly CE and FCC markings on products that have never been tested. Contract terms presented in Chinese frequently contain clauses that lock in unfavourable pricing, IP transfer obligations, or jurisdiction terms that favour the seller. Perhaps most insidiously, the sample phase — when a factory requests prototypes, blueprints, or technical specifications — carries genuine IP theft risk, with designs presented in good faith used to produce competing product for other buyers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* First China Factory Visit */}
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-[#f8f9fb]">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-[640px] mb-12">
+            <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Factory Visits</p>
+            <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
+              Your First China Factory Visit: What to Expect and How to Prepare
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              A factory visit in China is an intensive experience — typically 2 to 4 factories per day, with tight appointment windows and significant ground transport between cities. Come with a clear bill of materials, a device with your product specs accessible offline, and a structured checklist of questions. Ask about production capacity, defect rates, their current export markets, and how they handle quality disputes. Observe the factory floor directly: machinery age and condition, staff organisation, whether the same workers are on the same stations across multiple visits — these are honest indicators of operational maturity. WAG briefs every client before departure on how to read facility condition and what body language signals suggest a factory under stress or operating beyond its stated capacity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Factory Verification in Practice */}
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-[640px] mb-12">
+            <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Verification</p>
+            <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
+              What Factory Verification Actually Looks Like in Practice
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              A thorough WAG factory verification typically runs 3 to 5 days on the ground, covering 2 to 3 factories per visit. On-site, the team cross-checks business registration documents, photographs production lines and warehouse stock, interviews floor managers about process capability, and verifies claimed certifications against issuing bodies. Red flags include registration numbers that do not match public records, production line footage that contradicts stated capacity, and staff reluctance to answer basic questions about production scheduling. The written post-visit report — covering production capacity, quality controls, financial stability indicators, and our outright recommendation — is what separates a genuine shortlist from an optimistic guess.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Industries */}
       <section className="py-16 md:py-24 px-4 md:px-8 bg-[#f8f9fb]">
         <div className="max-w-[1200px] mx-auto">

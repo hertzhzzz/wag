@@ -165,41 +165,46 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 // ============================================
 
 function HeroSection({ fm }: { fm: Frontmatter }) {
+  const hasCover = !!fm.coverImage
   return (
-    <section className="bg-white pt-8 pb-6 px-6 border-b border-gray-100">
-      <div className="max-w-[900px] mx-auto">
-        {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-gray-400 uppercase tracking-wider mb-4">
-          <Link href="/" className="hover:text-[#0F2D5E] transition-colors">Home</Link>
-          <span>›</span>
-          <Link href="/resources" className="hover:text-[#0F2D5E] transition-colors">Resources</Link>
-        </nav>
-
-        {/* Category */}
-        <p className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase mb-3">{fm.category}</p>
-
-        {/* Title */}
-        <h1 className="font-serif font-bold text-[clamp(1.5rem,3vw,2.25rem)] text-[#0F2D5E] leading-tight mb-4 max-w-3xl">
-          {fm.title}
-        </h1>
-
-        {/* Subtitle - Hook */}
-        {fm.subtitle && (
-          <p className="text-lg text-gray-600 leading-relaxed mb-4 max-w-2xl">
-            {fm.subtitle}
-          </p>
-        )}
-
-        {/* Meta bar */}
-        <div className="flex items-center gap-4 text-sm text-gray-500 border-t border-gray-100 pt-4">
-          <Link href="/about" className="font-medium text-[#0F2D5E] hover:text-[#F59E0B] transition-colors">{fm.author}</Link>
-          <span className="text-gray-300">·</span>
-          <span>{fm.date}</span>
-          <span className="text-gray-300">·</span>
-          <span>{fm.readTime}</span>
+    <>
+      <section className={`relative pt-8 pb-6 px-6 border-b border-gray-100 ${hasCover ? 'text-white' : 'bg-white'}`}
+        style={hasCover ? {
+          backgroundImage: `url(${fm.coverImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        } : undefined}
+      >
+        {hasCover && <div className="absolute inset-0 bg-[#0F2D5E]/75" />}
+        <div className="relative max-w-[900px] mx-auto">
+          <nav className="flex items-center gap-2 text-xs uppercase tracking-wider mb-4">
+            <Link href="/" className={`hover:text-[#F59E0B] transition-colors ${hasCover ? 'text-white/70' : 'text-gray-400'}`}>Home</Link>
+            <span className={hasCover ? 'text-white/50' : 'text-gray-300'}>›</span>
+            <Link href="/resources" className={`hover:text-[#F59E0B] transition-colors ${hasCover ? 'text-white/70' : 'text-gray-400'}`}>Resources</Link>
+          </nav>
+          <p className="text-xs font-bold tracking-widest uppercase mb-3 text-[#F59E0B]">{fm.category}</p>
+          <h1 className={`font-serif font-bold text-[clamp(1.5rem,3vw,2.25rem)] leading-tight mb-4 max-w-3xl ${hasCover ? '' : 'text-[#0F2D5E]'}`}>
+            {fm.title}
+          </h1>
+          {fm.subtitle && (
+            <p className={`text-lg leading-relaxed mb-4 max-w-2xl ${hasCover ? 'text-white/80' : 'text-gray-600'}`}>
+              {fm.subtitle}
+            </p>
+          )}
+        </div>
+      </section>
+      <div className="bg-white px-6 py-3 border-b border-gray-100">
+        <div className="max-w-[900px] mx-auto">
+          <div className="flex items-center gap-4 text-sm text-gray-500">
+            <Link href="/about" className="font-medium text-[#0F2D5E] hover:text-[#F59E0B] transition-colors">{fm.author}</Link>
+            <span className="text-gray-300">·</span>
+            <span>{fm.date}</span>
+            <span className="text-gray-300">·</span>
+            <span>{fm.readTime}</span>
+          </div>
         </div>
       </div>
-    </section>
+    </>
   )
 }
 

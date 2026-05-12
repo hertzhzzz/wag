@@ -162,6 +162,51 @@ export default function ChinaSourcingComparisonPage() {
           </div>
         ))}
 
+        {/* Prose Sections */}
+        <div className="max-w-[700px] mx-auto mt-4 space-y-10">
+
+          {/* Section 1 */}
+          <div className="mb-12">
+            <h3 className="font-serif text-xl font-bold text-[#0F2D5E] mb-3">
+              Why Australian Businesses Fail at DIY China Sourcing
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              The most common failure mode is not product quality — it is contract interpretation. Chinese factories routinely make verbal commitments that do not appear in written agreements, and without fluent Mandarin speakers on your team, there is no way to catch the gap before production starts. A second major risk is factory verification: Australian businesses cannot independently check whether a supplier holds a valid business license, operates from the claimed address, or has a history of disputes. Fraud rates on unwatched direct-import channels remain significant. A third issue is quality timeline: problems are typically discovered only when the shipment arrives in Australia, at which point退货 and re-production cost far more than a proper pre-shipment inspection would have.
+            </p>
+          </div>
+
+          {/* Section 2 */}
+          <div className="mb-12">
+            <h3 className="font-serif text-xl font-bold text-[#0F2D5E] mb-3">
+              When Alibaba Is Enough — and When It Is Not
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Alibaba and 1688 are practical for businesses with low-to-moderate order volumes, straightforward products, and internal China experience to manage negotiations and quality checks independently. If your product is technically complex, requires certification (CE, FCC, SAA), or involves orders above $50,000, platform sourcing alone carries too much unsupervised risk. Factory ratings and reviews on platforms are public and manipulable — a Chinese-language search on 工厂骗子 will surface dozens of documented fraud cases that do not appear in any supplier profile.
+            </p>
+          </div>
+
+          {/* Section 3 */}
+          <div className="mb-12">
+            <h3 className="font-serif text-xl font-bold text-[#0F2D5E] mb-3">
+              The Hidden Cost of Factory Visits Without an Agent
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              A solo factory visit to China typically costs $4,000–$8,000 in airfare, accommodation, interpreter hire, and on-the-ground logistics — before factoring in the time your team is offline. Three or four factory visits per year quickly surpasses $20,000 with limited accountability on what was actually verified. Without a Mandarin-speaking agent present, you rely on factory-provided translators, which means the factory controls what you learn. WAG service fees cover pre-trip verification, on-site inspection, and post-visit written reporting — effectively turning factory visits into a managed, auditable process rather than an expensive fact-finding trip with limited oversight.
+            </p>
+          </div>
+
+          {/* Section 4 */}
+          <div className="mb-12">
+            <h3 className="font-serif text-xl font-bold text-[#0F2D5E] mb-3">
+              How to Choose the Right Sourcing Model
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Start with three questions: What is the order value? How technically complex is the product? What quality standard must it meet? Orders above $30,000 on technically demanding products with compliance requirements point strongly toward a procurement agent. Low-value, straightforward product orders with no certification requirements can work on Alibaba if you have the internal bandwidth to manage quality independently. If you answered yes to any of the following — certified quality required, supplier fraud concerns, or Mandarin limitations — the honest answer is that a sourcing agent will likely save more than it costs. Start a conversation with Winning Adventure Global and we will tell you exactly where your situation falls.
+            </p>
+          </div>
+
+        </div>
+
         {/* Summary */}
         <div className="bg-[#f8f9fb] rounded-xl p-8 mt-8">
           <h2 className="font-serif text-xl font-bold text-[#0F2D5E] mb-4">Which option is right for my business?</h2>

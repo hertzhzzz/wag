@@ -3,6 +3,7 @@ import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import ScrollTracker from './components/ScrollTracker'
+import MarkHeSchema from './components/MarkHeSchema'
 
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
   alternates: {
-    canonical: 'https://www.winningadventure.com.au',
+    canonical: 'https://www.winningadventure.com.au/',
     languages: {
-      en: 'https://www.winningadventure.com.au',
+      en: 'https://www.winningadventure.com.au/',
     },
   },
   verification: {
@@ -160,8 +161,8 @@ export default function RootLayout({
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": -34.9074705,
-                "longitude": 138.6065758
+                "latitude": -34.9258,
+                "longitude": 138.5898
               },
               "telephone": "+61-416588198",
               "email": "info@winningadventure.com.au",
@@ -186,7 +187,8 @@ export default function RootLayout({
                 "China factory tours",
                 "supplier vetting",
                 "import from China",
-                "Australian business procurement"
+                "Australian business procurement",
+                "Pearl River Delta manufacturing"
               ],
               "sameAs": [
                 "https://www.google.com/maps/place/Winning+Adventure+Global/@-34.9074705,138.6065758,15z/data=!4m6!3m5!1s0x6ad870f9565fbbb3:0x64f74ad4a0ab7b43!8m2!3d-34.9076802!4d138.6063284!16s%2Fg%2F11yyg4dg4j",
@@ -213,6 +215,7 @@ export default function RootLayout({
             })
           }}
         />
+        <MarkHeSchema />
       </head>
       <body>
       {children}

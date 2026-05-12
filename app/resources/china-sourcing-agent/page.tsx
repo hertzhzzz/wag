@@ -232,6 +232,51 @@ export default function ChinaSourcingAgentPage() {
         </div>
       </div>
 
+      {/* Narrative Sections */}
+      <div className="max-w-[1200px] mx-auto px-4 md:px-12 py-16 space-y-14">
+
+        {/* Section 1: Pricing Transparency */}
+        <div>
+          <h3 className="font-serif text-[clamp(1.3rem,2.5vw,1.75rem)] font-bold text-[#0F2D5E] mb-4">
+            What a China Sourcing Agent Costs — and What You Actually Get
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            We offer a free initial consultation — no obligation, no upfront cost. From there, service fees are structured around your specific product, volume, and the complexity of the sourcing challenge. We work both on a fixed-fee per project basis and a commission model depending on what makes sense for your situation. The key thing is this: we do not take factory commissions, so our incentives are fully aligned with getting you a reliable supplier at a fair price — not with steering you toward a specific factory. Before any engagement begins, you will receive a clear scope and fee proposal. No hidden costs, no surprises.
+          </p>
+        </div>
+
+        {/* Section 2: 12-Point Verification Detail */}
+        <div>
+          <h3 className="font-serif text-[clamp(1.3rem,2.5vw,1.75rem)] font-bold text-[#0F2D5E] mb-4">
+            12-Point Verification: What Each Check Actually Covers
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            Every factory we recommend has passed all 12 checks before we present them to you. The SAMR business license check confirms the entity is legally registered and operating. Export history tells us whether the factory has genuine experience shipping to other markets. Production capacity assessment — measured in square metres and machine count, not claimed annual output — confirms they can meet your volumes. Quality certifications are cross-checked directly with the issuing bodies, not just photocopied. Sample evaluations run through your actual product specifications. Financial stability review uses trade data and public records to confirm the business is not at risk of collapse mid-order. Each check is documented in a written report before you set foot on the factory floor.
+          </p>
+        </div>
+
+        {/* Section 3: Australian Business Examples */}
+        <div>
+          <h3 className="font-serif text-[clamp(1.3rem,2.5vw,1.75rem)] font-bold text-[#0F2D5E] mb-4">
+            Australian Businesses We Have Helped
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            We have worked with Australian businesses across a wide range of industries — from agricultural machinery importers sourcing heavy equipment from Shandong, to aesthetics clinic operators finding LED therapy devices, to food and beverage companies arranging custom packaging from Guangdong factories. Some came to us early in their sourcing journey; others came after a bad experience with a supplier found on Alibaba. What they share is a need for on-the-ground verification, clear communication, and someone who understands both Australian import expectations and Chinese factory operations. If you are bringing a physical product into Australia from China, we can help.
+          </p>
+        </div>
+
+        {/* Section 4: Post-Delivery Support */}
+        <div>
+          <h3 className="font-serif text-[clamp(1.3rem,2.5vw,1.75rem)] font-bold text-[#0F2D5E] mb-4">
+            What Happens If Your Factory Fails Quality After Shipment
+          </h3>
+          <p className="text-gray-600 leading-relaxed">
+            Our relationship with your supplier does not end when the goods leave the factory. If a quality issue emerges after delivery, we act on your behalf — coordinating re-inspection, presenting documented findings to the factory, and negotiating corrective action. This includes follow-up site visits if the dispute requires it, and ongoing communication to ensure the supplier follows through. We provide you with written dispute summaries at every stage. While we cannot guarantee outcomes against deliberate fraud, our documentation process and on-ground presence give you a significantly stronger position than dealing with the factory directly from Australia.
+          </p>
+        </div>
+
+      </div>
+
       {/* FAQ */}
       <div className="bg-white py-16 px-4 md:px-12">
         <div className="max-w-[800px] mx-auto">
