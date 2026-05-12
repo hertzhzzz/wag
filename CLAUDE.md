@@ -89,6 +89,10 @@ curl -sI <URL>  # HTTP status check
 
 Blog images: `public/social/blog/{slug}/` — only source. MDX: `/social/blog/{slug}/image.png`
 
+**Known states:** ServiceSchema already referenced at `/services` line 42 — do not re-add
+**Lint principle:** Pre-existing errors in agents/ and lib/ are historical tech debt — do not fix unless in scope
+**GSC tools:** `python ~/.claude/skills/seo/scripts/gsc_inspect.py <url> --json` and `gsc_query.py`
+
 ## Env
 
 `.env.local` — `GMAIL_USER` · `GMAIL_APP_PASSWORD` · `UPSTASH_REDIS_REST_URL` · `UPSTASH_REDIS_REST_TOKEN`
