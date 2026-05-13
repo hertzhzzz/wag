@@ -159,7 +159,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-white/40 text-xs">© 2026 Winning Adventure Global. All rights reserved.</span>
+          <span className="text-white/40 text-xs">© 2026 Winning Adventure Global Pty Ltd. All rights reserved.</span>
           <div className="flex items-center gap-6 text-white/40 text-xs">
             <span>ABN: 94 697 886 150</span>
           </div>

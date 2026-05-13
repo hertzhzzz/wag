@@ -83,7 +83,7 @@ export async function POST(request: Request) {
     try {
       const transporter = await getTransporter()
       await transporter.sendMail({
-        from: `"Winning Adventure" <${process.env.GMAIL_USER}>`,
+        from: `"Winning Adventure Global Pty Ltd" <${process.env.GMAIL_USER}>`,
         to: process.env.GMAIL_USER,
         replyTo: email,
         subject: `New Factory Directory Access Request`,
@@ -91,7 +91,7 @@ export async function POST(request: Request) {
           <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#0F2D5E">
             <div style="background:#0F2D5E;padding:24px 32px;">
               <p style="color:#F59E0B;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px">Factory Directory Access</p>
-              <h1 style="color:#fff;font-size:22px;margin:0">Winning Adventure Global</h1>
+              <h1 style="color:#fff;font-size:22px;margin:0">Winning Adventure Global Pty Ltd</h1>
             </div>
             <div style="padding:32px;border:1px solid #e5e7eb;border-top:none;">
               <p style="font-size:14px;line-height:1.6;color:#374151;">
