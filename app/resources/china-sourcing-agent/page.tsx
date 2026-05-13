@@ -11,7 +11,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 export const metadata: Metadata = {
   title: 'China Sourcing Agent Services',
   description:
-    'Dedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-end procurement support. Adelaide-based team with feet on the ground in China.',
+    'Dedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-end procurement support. Australia-based team with feet on the ground in China.',
   keywords: [
     'china sourcing agent',
     'china sourcing agent for australian business',
@@ -131,7 +131,7 @@ export default function ChinaSourcingAgentPage() {
             China Sourcing Agent for Australian Businesses
           </h1>
           <p className="text-base text-gray-300 max-w-[560px] leading-relaxed">
-            We help Australian businesses source quality products from China with factory verification, quality control, and procurement services. An Adelaide-based team with feet on the ground in China.
+            We help Australian businesses source quality products from China with factory verification, quality control, and procurement services. An Australia-based team with feet on the ground in China.
           </p>
         </div>
       </div>

@@ -375,7 +375,7 @@ export default function EnquiryForm() {
               {([
                 [CheckCircle, 'Verified Suppliers Only'],
                 [DollarSign, 'No Hidden Fees'],
-                [Building2, 'Adelaide-Based Team'],
+                [Building2, 'Australia-Based Team'],
               ] as [React.ElementType, string][]).map(([Icon, label]) => (
                 <div key={label} className="flex items-center gap-3 text-sm font-semibold text-[#0F2D5E]">
                   <div className="w-8 h-8 bg-[#0F2D5E] rounded-full flex items-center justify-center flex-shrink-0">

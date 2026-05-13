@@ -20,7 +20,7 @@ export const aboutFaqs = [
   },
   {
     question: 'What geographic areas do you serve in Australia?',
-    answer: 'We are based in Adelaide, South Australia, and serve businesses throughout Australia. All services are delivered in English and we coordinate everything remotely before your China visit.',
+    answer: 'We are based in Australia, and serve businesses throughout Australia. All services are delivered in English and we coordinate everything remotely before your China visit.',
   },
   {
     question: 'How do you ensure quality when working with Chinese factories?',

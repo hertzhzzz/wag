@@ -12,7 +12,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   title: 'Our Services | Winning Adventure Global',
-  description: 'Adelaide-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China. Pre-screened factories, no upfront cost.',
+  description: 'Australia-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China. Pre-screened factories, no upfront cost.',
   keywords: [
     'Australia China sourcing agent',
     'Australian business China factory tour',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     'Melbourne import from China',
     'Brisbane Alibaba alternative',
     'Perth China sourcing',
-    'Adelaide factory visit',
+    'Australia-based factory visit',
     'China factory verification',
     'china sourcing tour',
     'factory visit china',
   ],
   openGraph: {
     title: 'Our Services | Winning Adventure Global',
-    description: 'Adelaide-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China.',
+    description: 'Australia-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China.',
     url: 'https://www.winningadventure.com.au/services',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',

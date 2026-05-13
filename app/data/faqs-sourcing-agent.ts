@@ -20,10 +20,10 @@ export const sourcingAgentFaqs = [
   },
   {
     question: 'What makes WAG different from other China sourcing agents?',
-    answer: 'WAG is Adelaide-based with a team physically present in China. We provide full factory pre-screening, bilingual on-site support, and a structured post-visit written assessment — tailored to your specific industry and product requirements.',
+    answer: 'WAG is Australia-based with a team physically present in China. We provide full factory pre-screening, bilingual on-site support, and a structured post-visit written assessment — tailored to your specific industry and product requirements.',
   },
   {
     question: 'Is WAG based in Australia?',
-    answer: 'Yes. WAG is based in North Adelaide, South Australia, with a local account manager and an on-ground team in China managing factory relationships and coordinating visits.',
+    answer: 'Yes. WAG is based in Australia, with a local account manager and an on-ground team in China managing factory relationships and coordinating visits.',
   },
 ]

@@ -11,9 +11,9 @@ import PersonSchema from '@/components/PersonSchema'
 
 export const metadata: Metadata = {
   title: 'About Us | Winning Adventure Global',
-  description: 'Adelaide-based China sourcing agency with 12+ years experience. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement.',
+  description: 'Australia-based China sourcing agency with 12+ years experience. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement.',
   keywords: [
-    'Adelaide China procurement consultant',
+    'Australia-based China procurement consultant',
     'Australian owned China sourcing company',
     'South Australia import agent',
     'Sydney Melbourne Brisbane Perth China sourcing',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'About Winning Adventure Global | Australia China Sourcing Experts',
-    description: 'Adelaide-based China sourcing agency with 12+ years experience arranging factory tours and verifying suppliers for Australian businesses across China.',
+    description: 'Australia-based China sourcing agency with 12+ years experience arranging factory tours and verifying suppliers for Australian businesses across China.',
     url: 'https://www.winningadventure.com.au/about',
   },
 }

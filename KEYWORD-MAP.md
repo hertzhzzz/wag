@@ -14,7 +14,7 @@
 | Type | Keywords |
 |------|----------|
 | **Primary** | china sourcing tour, china factory tour, factory visit china, supplier verification china |
-| **Secondary** | australia china sourcing agent, sydney china procurement, melbourne import from china, brisbane alibaba alternative, perth china sourcing, adelaide factory visit |
+| **Secondary** | australia china sourcing agent, sydney china procurement, melbourne import from china, brisbane alibaba alternative, perth china sourcing, Australia-based factory visit |
 
 **SERP intent:** Users searching "china sourcing tours" or "factory visit china" want to understand the service category and compare options. The `/services` page serves as the category hub.
 
@@ -82,10 +82,10 @@
 | Element | Current | Recommended |
 |---------|---------|-------------|
 | **Title** | "China Sourcing Tour Services \| Factory Visits & Supplier Verification" | "China Sourcing Services for Australian Businesses \| Winning Adventure Global" |
-| **Description** | "Join guided China sourcing tours in Shenzhen, Guangzhou & Shanghai..." | "Adelaide-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China. Pre-screened factories, no upfront cost." |
+| **Description** | "Join guided China sourcing tours in Shenzhen, Guangzhou & Shanghai..." | "Australia-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China. Pre-screened factories, no upfront cost." |
 | **Primary keyword** | "China Sourcing Tour Services" | "China Sourcing Services" + Australian modifier |
 
-**Rationale:** "China Sourcing Services" is broader and captures tour + procurement + agent queries. Australian city signals ("Adelaide-based") reinforce local credibility.
+**Rationale:** "China Sourcing Services" is broader and captures tour + procurement + agent queries. Australian city signals ("Australia-based") reinforce local credibility.
 
 ---
 
@@ -94,7 +94,7 @@
 | Element | Current | Recommended |
 |---------|---------|-------------|
 | **Title** | "China Sourcing Agent for Australian Businesses \| Winning Adventure Global" | "China Sourcing Agent Services \| Factory Verification & Procurement Support" |
-| **Description** | "We help Australian businesses source quality products from China with factory verification, quality control, and procurement services. Australia-based team with feet on the ground in China." | "Dedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-end procurement support. Adelaide-based team with feet on the ground in China." |
+| **Description** | "We help Australian businesses source quality products from China with factory verification, quality control, and procurement services. Australia-based team with feet on the ground in China." | "Dedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-end procurement support. Australia-based team with feet on the ground in China." |
 | **Primary keyword** | "China Sourcing Agent" | Keep "china sourcing agent" as primary; add "factory verification" and "procurement support" to description |
 
 **Rationale:** Current title is close but repeats "for Australian Businesses" in both title and description. Adding "Factory Verification & Procurement Support" gives search engines more semantic signal about what the agent actually does. Description removes redundant phrase "with feet on the ground in China" (already in hero text) and adds concrete capabilities.
