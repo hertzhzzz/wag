@@ -154,7 +154,7 @@ export default function RootLayout({
               },
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "5, 54 Melbourne St",
+                "streetAddress": "5/54 Melbourne St",
                 "addressLocality": "North Adelaide",
                 "addressRegion": "SA",
                 "postalCode": "5006",
@@ -167,7 +167,7 @@ export default function RootLayout({
               },
               "telephone": "+61-416588198",
               "email": "info@winningadventure.com.au",
-              "ABN": "30 659 034 919",
+              "ABN": "94 697 886 150",
               "areaServed": {
                 "@type": "Country",
                 "name": "Australia"

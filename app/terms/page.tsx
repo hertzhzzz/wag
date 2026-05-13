@@ -98,7 +98,7 @@ export default function TermsPage() {
             <p className="text-gray-600 text-sm">
               Email: <a href="mailto:mark@winningadventure.com.au" className="text-navy hover:text-amber transition-colors">mark@winningadventure.com.au</a>
             </p>
-            <p className="text-gray-600 text-sm mt-2">ABN: 30 659 034 919</p>
+            <p className="text-gray-600 text-sm mt-2">ABN: 94 697 886 150 · ACN: 697 886 150 · TFN: 236 473 171</p>
           </div>
 
         </div>

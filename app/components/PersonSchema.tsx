@@ -22,7 +22,7 @@ export default function PersonSchema() {
       "url": "https://www.winningadventure.com.au",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "5, 54 Melbourne St",
+        "streetAddress": "5/54 Melbourne St",
         "addressLocality": "North Adelaide",
         "addressRegion": "SA",
         "postalCode": "5006",

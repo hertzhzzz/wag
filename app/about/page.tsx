@@ -312,7 +312,7 @@ export default function AboutPage() {
             <div>
               <p className="text-xs font-semibold text-amber uppercase tracking-wider mb-2">Address</p>
               <p className="text-gray-700">
-                5, 54 Melbourne St<br/>
+                5/54 Melbourne St<br/>
                 North Adelaide SA 5006<br/>
                 Australia
               </p>
@@ -326,9 +326,9 @@ export default function AboutPage() {
             <div>
               <p className="text-xs font-semibold text-amber uppercase tracking-wider mb-2">ABN</p>
               <p className="text-gray-700">
-                30 659 034 919
+                94 697 886 150
                 <a
-                  href="https://abr.business.gov.au/Search/ResultsActive?SearchText=30659034919"
+                  href="https://abr.business.gov.au/Search/ResultsActive?SearchText=94697886150"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="ml-2 text-amber hover:underline text-xs"

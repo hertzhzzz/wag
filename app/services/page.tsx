@@ -255,7 +255,7 @@ export default function ServicesPage() {
         </div>
         <div className="max-w-[1200px] mx-auto mt-8 pt-8 border-t border-white/10 text-center">
           <p className="text-xs text-gray-400">
-            Winning Adventure Global · ABN 12 345 678 901 · Founded 2017 · AUSTRALIA
+            Winning Adventure Global · ABN 94 697 886 150 · Founded 2017 · AUSTRALIA
           </p>
           <p className="text-xs text-gray-500 mt-2">
             Registered Australian business · Australian dollars charged · Local support, China-based operations
