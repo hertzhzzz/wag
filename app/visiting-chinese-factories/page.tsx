@@ -9,9 +9,10 @@ import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import HowToSchema from '@/components/HowToSchema'
 
 export const metadata: Metadata = {
-  title: 'Visiting Chinese Factories | Guided Factory Tours for Australian Businesses',
+  title: 'Factory Visits in China | Winning Adventure Global',
   description: 'Plan your China factory visit with confidence. WAG provides guided factory tours with bilingual support, pre-screened suppliers, and full logistics across Shenzhen, Guangzhou, and Shanghai.',
   keywords: [
     'visiting Chinese factories',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mark He', url: 'https://www.winningadventure.com.au/about' }],
   openGraph: {
-    title: 'Visiting Chinese Factories | Guided Factory Tours for Australian Businesses',
+    title: 'Factory Visits in China | Winning Adventure Global',
     description: 'Plan your China factory visit with confidence. WAG provides guided factory tours with bilingual support, pre-screened suppliers, and full logistics.',
     url: 'https://www.winningadventure.com.au/visiting-chinese-factories',
     siteName: 'Winning Adventure Global',
@@ -36,6 +37,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/visiting-chinese-factories',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/visiting-chinese-factories',
+      'x-default': 'https://www.winningadventure.com.au/visiting-chinese-factories',
+    },
   },
 }
 
@@ -46,6 +51,22 @@ export default function VisitingChineseFactoriesPage() {
     <>
       <ServiceSchema />
       <FAQSchema faqs={visitFaqs} />
+      <HowToSchema
+        name="How to Visit Chinese Factories with Confidence"
+        description="A step-by-step guide for Australian businesses planning factory visits in China, covering pre-trip research, supplier verification, visit coordination, and post-visit follow-up."
+        steps={[
+          { name: "Define Your Sourcing Requirements", text: "Identify the product you need to manufacture, your volume requirements, quality specifications, and timeline before searching for factories in China." },
+          { name: "Research and Shortlist Factories", text: "Use WAG's verified directory or conduct online research to identify potential factories. Filter for direct manufacturers, not trading companies." },
+          { name: "Verify Supplier Credentials", text: "Before committing to a visit, verify the factory's business license, export history, certifications, and production capacity through WAG's 12-point verification process." },
+          { name: "Plan Your Factory Visit Itinerary", text: "Coordinate with WAG to schedule visits to 2-3 pre-screened factories. Arrange flights, accommodation, ground transport, and a bilingual guide for the trip." },
+          { name: "Conduct the Factory Visit", text: "Visit the factory in person with your bilingual guide. Inspect production lines, quality control stations, warehouse, and meet the production manager and owner." },
+          { name: "Evaluate and Debrief", text: "After the visit, review the supplier assessment report from WAG. Evaluate which factories warrant sample requests and further negotiation." },
+          { name: "Request and Review Samples", text: "Request pre-production samples from your shortlisted factories. Coordinate shipping through WAG and inspect samples against your specifications before placing bulk orders." },
+          { name: "Negotiate and Confirm Terms", text: "Work with WAG to negotiate pricing, MOQ, lead times, and payment terms directly with the factory. Use the on-site observations as leverage in negotiations." },
+          { name: "Arrange Pre-Shipment Inspection", text: "Before shipment, arrange a third-party inspection (SGS, Bureau Veritas, or equivalent) to confirm goods match approved samples and purchase order specifications." },
+          { name: "Manage Logistics and Delivery", text: "Coordinate sea or air freight, customs documentation, and delivery to your Australian location. WAG provides full logistics support and transparent landed pricing." }
+        ]}
+      />
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },

@@ -11,7 +11,7 @@ import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Services for Australian Businesses',
+  title: 'Our Services | Winning Adventure Global',
   description: 'Adelaide-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China. Pre-screened factories, no upfront cost.',
   keywords: [
     'Australia China sourcing agent',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'factory visit china',
   ],
   openGraph: {
-    title: 'China Sourcing Services for Australian Businesses',
+    title: 'Our Services | Winning Adventure Global',
     description: 'Adelaide-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China.',
     url: 'https://www.winningadventure.com.au/services',
     siteName: 'Winning Adventure Global',
@@ -35,6 +35,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/services',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/services',
+      'x-default': 'https://www.winningadventure.com.au/services',
+    },
   },
 }
 

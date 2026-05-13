@@ -8,10 +8,9 @@ import FAQSchema from '@/components/FAQSchema'
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import PersonSchema from '@/components/PersonSchema'
-import MarkHeSchema from '@/components/MarkHeSchema'
 
 export const metadata: Metadata = {
-  title: 'About Winning Adventure Global | Australia China Sourcing Experts & Factory Tour Guides',
+  title: 'About Us | Winning Adventure Global',
   description: 'Adelaide-based China sourcing agency with 12+ years experience. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement.',
   keywords: [
     'Adelaide China procurement consultant',
@@ -19,14 +18,18 @@ export const metadata: Metadata = {
     'South Australia import agent',
     'Sydney Melbourne Brisbane Perth China sourcing',
   ],
-  authors: [{ name: 'Mark He', url: 'https://www.linkedin.com/in/mark-zhe-he/' }],
+  authors: [{ name: 'Mark He' }],
+  alternates: {
+    canonical: 'https://www.winningadventure.com.au/about',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/about',
+      'x-default': 'https://www.winningadventure.com.au/about',
+    },
+  },
   openGraph: {
     title: 'About Winning Adventure Global | Australia China Sourcing Experts',
     description: 'Adelaide-based China sourcing agency with 12+ years experience arranging factory tours and verifying suppliers for Australian businesses across China.',
     url: 'https://www.winningadventure.com.au/about',
-  },
-  alternates: {
-    canonical: 'https://www.winningadventure.com.au/about',
   },
 }
 
@@ -35,7 +38,6 @@ export default function AboutPage() {
     <>
       <FAQSchema faqs={aboutFaqs} />
       <PersonSchema />
-      <MarkHeSchema />
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },

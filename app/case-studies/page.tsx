@@ -6,7 +6,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { industries } from '@/components/industries'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Case Studies | 20 Industries Verified | Winning Adventure Global',
+  title: 'Case Studies | Winning Adventure Global',
   description:
     '20 detailed case studies of Australian businesses who sourced safely from China. See how we verified suppliers, arranged factory visits, and delivered results.',
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Australian importer China success',
   ],
   openGraph: {
-    title: 'China Sourcing Case Studies | Winning Adventure Global',
+    title: 'Case Studies | Winning Adventure Global',
     description:
       '20 detailed case studies of Australian businesses who sourced safely from China.',
     url: 'https://www.winningadventure.com.au/case-studies',
@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/case-studies',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/case-studies',
+      'x-default': 'https://www.winningadventure.com.au/case-studies',
+    },
   },
 }
 
