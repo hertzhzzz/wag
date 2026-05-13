@@ -60,6 +60,17 @@ git push origin master  # deploy after local verification passes
 - **Address**: 5/54 Melbourne St, North Adelaide SA 5006
 - All legal pages, schemas, and API from-fields reflect PTY LTD entity
 
+## Company Info Location
+All ABN/ACN/TFN/address data is scattered across ~9 files in `app/`. Before changing company
+registration info: grep all old values first. Key files: layout.tsx, privacy/page.tsx,
+terms/page.tsx, about/page.tsx, services/page.tsx, components/Footer.tsx,
+components/PersonSchema.tsx, api/*/route.ts. ACN/TFN only in privacy/terms footnotes.
+
+## Known Gotchas
+- `app/services/page.tsx` once had placeholder ABN `12 345 678 901` — always verify this file
+- Address format: always use `5/54 Melbourne St` (slash, not comma)
+- "Winning Adventure Global Pty Ltd" = legal entity; "Winning Adventure Global" = brand name
+
 ### STRICT
 - No emoji anywhere in codebase
 - No Chinese in page content / UI (exception: blog MDX content)
