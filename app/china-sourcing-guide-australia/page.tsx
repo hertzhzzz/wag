@@ -56,7 +56,7 @@ const steps = [
 const comparisonRows = [
   ['Factory Verification', false, false, true],
   ['Bilingual On-Site Support', false, false, true],
-  ['Adelaide-Based Account Manager', false, false, true],
+  ['Australia-Based Account Manager', false, false, true],
   ['Guided Factory Tour', false, false, true],
   ['Post-Trip Written Assessment', false, false, true],
 ]
@@ -195,7 +195,7 @@ export default function ChinaSourcingAgentPage() {
               Why Australian SMEs Are Increasingly Turning to Procurement Agents
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Rising freight costs, tightening quality requirements, and a marked increase in factory fraud targeting Australian buyers have fundamentally changed the calculus of direct-from-China sourcing. Post-COVID, the landscape is harder to navigate: counterfeit certifications are widespread, contract terms are increasingly complex, and verifying a factory's actual production capacity from overseas has become genuinely difficult. For Australian SMEs without Mandarin-speaking staff or on-the-ground presence, the risk of a bad supplier relationship — or worse, a fraudulent transaction — now outweighs the perceived cost savings of going direct. WAG was built in response to this real market need: giving Australian businesses a trusted, Adelaide-based representative who can verify, negotiate, and protect their interests on the ground in China.
+              Rising freight costs, tightening quality requirements, and a marked increase in factory fraud targeting Australian buyers have fundamentally changed the calculus of direct-from-China sourcing. Post-COVID, the landscape is harder to navigate: counterfeit certifications are widespread, contract terms are increasingly complex, and verifying a factory's actual production capacity from overseas has become genuinely difficult. For Australian SMEs without Mandarin-speaking staff or on-the-ground presence, the risk of a bad supplier relationship — or worse, a fraudulent transaction — now outweighs the perceived cost savings of going direct. WAG was built in response to this real market need: giving Australian businesses a trusted, Australia-based representative who can verify, negotiate, and protect their interests on the ground in China.
             </p>
           </div>
         </div>
@@ -323,7 +323,7 @@ export default function ChinaSourcingAgentPage() {
       <section className="py-12 md:py-20 px-4 md:px-8 bg-navy">
         <div className="max-w-[760px] mx-auto text-center">
           <h2 className="font-serif text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-white mb-4">
-            Ready to speak with an Adelaide-based China sourcing agent?
+            Ready to speak with an Australia-based China sourcing agent?
           </h2>
           <p className="text-gray-300 mb-8 leading-relaxed">
             Tell us what you are looking to source. We will shortlist factories, coordinate your visit, and provide full bilingual on-site support — at no cost for the initial consultation.
