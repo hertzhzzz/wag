@@ -6,16 +6,20 @@ import matter from 'gray-matter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Resources | Factory Tour Guides & Supplier Verification',
+  title: 'Resources | Winning Adventure Global',
   description: 'Free guides on verifying Chinese suppliers, planning factory visits, and import strategies. Expert resources for Australian businesses sourcing from China.',
   keywords: ['china manufacturing resources', 'factory guide australia', 'supplier tips china', 'china sourcing guide', 'australian import china', 'verify chinese suppliers'],
   openGraph: {
-    title: 'China Sourcing Resources | Factory Tour Guides',
+    title: 'Resources | Winning Adventure Global',
     description: 'Expert guides on planning factory visits in China for Australian businesses. Includes supplier verification checklists and import tips.',
     url: 'https://www.winningadventure.com.au/resources',
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/resources',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/resources',
+      'x-default': 'https://www.winningadventure.com.au/resources',
+    },
   },
 }
 
@@ -55,7 +59,11 @@ function getArticles(): Article[] {
         featured: data.featured || false,
       } as Article
     })
-  return articles
+  return articles.sort((a, b) => {
+    const dateA = new Date(a.date).getTime()
+    const dateB = new Date(b.date).getTime()
+    return isNaN(dateA) ? 0 : dateA - dateB
+  })
 }
 
 export default function ResourcesPage() {

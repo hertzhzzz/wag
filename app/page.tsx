@@ -9,6 +9,7 @@ import TwoWaysAccess from './components/TwoWaysAccess'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import CaseStudies from '@/components/CaseStudies'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
 
@@ -182,6 +183,9 @@ export default function Home() {
       <Navbar />
       <WebsiteSchema />
       <FAQSchema faqs={homepageFaqs} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.winningadventure.com.au' }
+      ]} />
       <Hero />
       <TwoWaysAccess />
       <WhyChooseUs />

@@ -66,7 +66,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.winningadventure.com.au/',
     languages: {
-      en: 'https://www.winningadventure.com.au/',
+      'en-AU': 'https://www.winningadventure.com.au/',
+      'x-default': 'https://www.winningadventure.com.au/',
     },
   },
   verification: {
