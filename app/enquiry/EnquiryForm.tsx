@@ -361,7 +361,7 @@ export default function EnquiryForm() {
               <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">Direct Contact</h4>
               <div className="flex items-start gap-2.5 text-sm text-gray-600 mb-2">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
-                <span>5, 54 Melbourne St, North Adelaide SA 5006</span>
+                <span>5/54 Melbourne St, North Adelaide SA 5006</span>
               </div>
               <div className="flex items-center gap-2.5 text-sm mb-4">
                 <Mail size={16} className="flex-shrink-0" />

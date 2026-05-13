@@ -54,6 +54,12 @@ git push origin master  # deploy after local verification passes
 
 ## Rules
 
+### Company Information
+- **Legal Entity**: WINNING ADVENTURE GLOBAL PTY LTD (ACN 697 886 150, ABN 94 697 886 150, TFN 236 473 171)
+- **Registered**: South Australia under Corporations Act 2001 since 8 May 2026
+- **Address**: 5/54 Melbourne St, North Adelaide SA 5006
+- All legal pages, schemas, and API from-fields reflect PTY LTD entity
+
 ### STRICT
 - No emoji anywhere in codebase
 - No Chinese in page content / UI (exception: blog MDX content)
@@ -100,4 +106,4 @@ Gmail rotation: SMTP fail → new App Password → verify locally → update Ver
 
 ---
 
-*Updated: 2026-05-06*
+*Updated: 2026-05-13*
