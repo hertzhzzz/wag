@@ -7,11 +7,10 @@ import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
-import PersonSchema from '@/components/PersonSchema'
 
 export const metadata: Metadata = {
   title: 'About Us | Winning Adventure Global',
-  description: 'Australia-based China sourcing agency with 12+ years experience. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement.',
+  description: 'Australia-based China sourcing agency, Founded 2025. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement.',
   keywords: [
     'Australia-based China procurement consultant',
     'Australian owned China sourcing company',
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'About Winning Adventure Global | Australia China Sourcing Experts',
-    description: 'Australia-based China sourcing agency with 12+ years experience arranging factory tours and verifying suppliers for Australian businesses across China.',
+    description: 'Australia-based China sourcing agency, Founded 2025, arranging factory tours and verifying suppliers for Australian businesses across China.',
     url: 'https://www.winningadventure.com.au/about',
   },
 }
@@ -37,8 +36,7 @@ export default function AboutPage() {
   return (
     <>
       <FAQSchema faqs={aboutFaqs} />
-      <PersonSchema />
-      <Navbar />
+            <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
         { name: 'About', url: 'https://www.winningadventure.com.au/about' }

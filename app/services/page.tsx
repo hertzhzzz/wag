@@ -11,8 +11,8 @@ import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'Our Services | Winning Adventure Global',
-  description: 'Australia-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China. Pre-screened factories, no upfront cost.',
+  title: 'Our Services',
+  description: 'Australia-based factory tour and sourcing agent for Australian businesses. Supplier verification, procurement support, and China visit coordination.',
   keywords: [
     'Australia China sourcing agent',
     'Australian business China factory tour',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     'factory visit china',
   ],
   openGraph: {
-    title: 'Our Services | Winning Adventure Global',
-    description: 'Australia-based team offering factory visits, supplier verification and procurement support for Australian businesses importing from China.',
+    title: 'Our Services',
+    description: 'Australia-based factory tour and sourcing agent for Australian businesses.',
     url: 'https://www.winningadventure.com.au/services',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',
@@ -255,7 +255,7 @@ export default function ServicesPage() {
         </div>
         <div className="max-w-[1200px] mx-auto mt-8 pt-8 border-t border-white/10 text-center">
           <p className="text-xs text-gray-400">
-            Winning Adventure Global · ABN 94 697 886 150 · Founded 2017 · AUSTRALIA
+            Winning Adventure Global · ABN 94 697 886 150 · Founded 2025 · AUSTRALIA
           </p>
           <p className="text-xs text-gray-500 mt-2">
             Registered Australian business · Australian dollars charged · Local support, China-based operations

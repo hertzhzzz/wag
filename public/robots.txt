@@ -4,26 +4,26 @@ Allow: /
 # AI Crawler Rules — allow all but respect Crawl-delay
 User-agent: GPTBot
 Allow: /
-Crawl-delay: 10
+Crawl-delay: 1
 
 User-agent: ChatGPT-User
 Allow: /
-Crawl-delay: 10
+Crawl-delay: 1
 
 User-agent: ClaudeBot
 Allow: /
-Crawl-delay: 10
+Crawl-delay: 1
 
 User-agent: Claude-Web
 Allow: /
-Crawl-delay: 10
+Crawl-delay: 1
 
 User-agent: PerplexityBot
 Allow: /
-Crawl-delay: 10
+Crawl-delay: 1
 
 User-agent: Google-Extended
 Allow: /
-Crawl-delay: 10
+Crawl-delay: 1
 
 Sitemap: https://www.winningadventure.com.au/sitemap.xml
