@@ -137,14 +137,14 @@ function OurProcess() {
 }
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Agent Australia | Factory Tours & Supplier Verification',
-  description: 'Australian-owned China sourcing agent. We arrange factory tours in Shenzhen, Guangzhou & Shanghai, verify suppliers, and protect Australian businesses from fraud. Serving Adelaide, Sydney, Melbourne.',
-  keywords: ['china sourcing agent australia', 'china sourcing company', 'australian business china', 'verified suppliers china', 'factory tour china', 'supplier verification', 'china factory visit', 'australian import china'],
+  title: 'Factory Tours China | Face-to-Face Sourcing | Winning Adventure Global',
+  description: 'We accompany Australian businesses on factory tours in Shenzhen, Guangzhou & Shanghai. Face-to-face supplier meetings with on-ground support.',
+  keywords: ['factory tours china', 'china sourcing agent', 'supplier verification china', 'australian business china', 'china factory visit', 'shenzhen factory tour', 'guangzhou sourcing'],
   openGraph: {
     locale: 'en_AU',
     alternateLocale: 'en_US',
-    title: 'Winning Adventure Global | Australia\'s China Sourcing Agent | Factory Tours & Supplier Verification',
-    description: 'Australian-owned and operated. We escort Australian businesses on factory tours in China, verify suppliers, and ensure your sourcing is safe and successful.',
+    title: 'Factory Tours China | Face-to-Face Sourcing | Winning Adventure Global',
+    description: 'We accompany Australian businesses on factory tours in Shenzhen, Guangzhou & Shanghai. Face-to-face supplier meetings with on-ground support.',
     url: 'https://www.winningadventure.com.au/',
     siteName: 'Winning Adventure Global',
   },

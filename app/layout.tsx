@@ -106,6 +106,9 @@ export default function RootLayout({
           fetchPriority="high"
           crossOrigin="anonymous"
         />
+        <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
+        <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="lazyOnload" />
         <Script id="google-analytics" strategy="lazyOnload">
           {`
@@ -141,7 +144,7 @@ export default function RootLayout({
               "url": "https://www.winningadventure.com.au",
               "logo": "https://www.winningadventure.com.au/logos/logo.png",
               "description": "Factory tours and sourcing services in China for Australian businesses. We connect you with verified manufacturers and accompany you on in-person factory visits.",
-              "foundingDate": "2018",
+              "foundingDate": "2025",
               "founder": {
                 "@type": "Person",
                 "name": "Andy Liu",

@@ -14,7 +14,7 @@ export const homepageFaqs = [
   },
   {
     question: 'What are China business tours and how do they work for Australian importers?',
-    answer: 'China business tours are structured programmes that take Australian businesses to visit factories and manufacturers in China. Winning Adventure Global has been running China business tours since 2017, helping Australian companies source products directly from verified Chinese manufacturers. Our tours cover major manufacturing hubs including Shenzhen, Foshan, and Guangzhou. Each business tour includes pre-vetted supplier introductions, on-ground logistics, bilingual support, and quality inspection coordination. Australian businesses can visit up to 8 factories per week with our team handling all coordination. Tours start from AUD $2,000 per person with group packages available.',
+    answer: 'China business tours are structured programmes that take Australian businesses to visit factories and manufacturers in China. Winning Adventure Global has been running China business tours since 2025, helping Australian companies source products directly from verified Chinese manufacturers. Our tours cover major manufacturing hubs including Shenzhen, Foshan, and Guangzhou. Each business tour includes pre-vetted supplier introductions, on-ground logistics, bilingual support, and quality inspection coordination. Australian businesses can visit up to 8 factories per week with our team handling all coordination. Tours start from AUD $2,000 per person with group packages available.',
   },
   {
     question: 'How can Australian businesses find reliable Chinese wholesalers?',
@@ -42,7 +42,7 @@ export const faqs = [
   },
   {
     question: 'What are China business tours and how do they work for Australian importers?',
-    answer: 'China business tours are structured programmes that take Australian businesses to visit factories and manufacturers in China. Winning Adventure Global has been running China business tours since 2017, helping Australian companies source products directly from verified Chinese manufacturers. Our tours cover major manufacturing hubs including Shenzhen, Foshan, and Guangzhou. Each business tour includes pre-vetted supplier introductions, on-ground logistics, bilingual support, and quality inspection coordination. Australian businesses can visit up to 8 factories per week with our team handling all coordination. Tours start from AUD $2,000 per person with group packages available.',
+    answer: 'China business tours are structured programmes that take Australian businesses to visit factories and manufacturers in China. Winning Adventure Global has been running China business tours since 2025, helping Australian companies source products directly from verified Chinese manufacturers. Our tours cover major manufacturing hubs including Shenzhen, Foshan, and Guangzhou. Each business tour includes pre-vetted supplier introductions, on-ground logistics, bilingual support, and quality inspection coordination. Australian businesses can visit up to 8 factories per week with our team handling all coordination. Tours start from AUD $2,000 per person with group packages available.',
   },
   {
     question: 'How can Australian businesses find reliable Chinese wholesalers?',
