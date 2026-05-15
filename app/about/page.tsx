@@ -9,7 +9,7 @@ import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'About Us | Winning Adventure Global',
+  title: 'About Us',
   description: 'Australia-based China sourcing agency, Founded 2025. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement.',
   keywords: [
     'Australia-based China procurement consultant',
