@@ -100,7 +100,17 @@ python ~/.claude/skills/seo/scripts/gsc_inspect.py <url> --json  # URL Inspectio
 curl -sI <URL>  # HTTP status check
 ```
 
-**Thin content fix:** If GSC shows "discovered but not indexed" → expand to 1500+ words, add FAQPage schema, add author/date stamps.
+**Thin content fix:** If GSC shows "discovered but not indexed" → expand to 1500+ words, add ArticleSchema, add author/date stamps. FAQPage schema is deprecated (Google May 2026) — not eligible for B2B sites anyway.
+
+## Structured Data (Schema)
+
+Current schemas in `app/components/`:
+- `ArticleSchema.tsx` — BlogPosting + Article dual-type for blog MDX pages
+- `CaseStudySchema.tsx` — Dedicated case study pages (`/case-studies/[slug]`)
+- `BreadcrumbSchema.tsx` — Navigation path
+- `FAQSchema.tsx` — Deprecated (returns null); FAQ content kept as static HTML for crawlability
+
+FAQPage schema NOT needed: Google deprecated FAQ rich results May 2026; eligibility restricted to government/health sites only. Static HTML FAQ content suffices for SEO.
 
 ## Image Rules
 
@@ -117,4 +127,4 @@ Gmail rotation: SMTP fail → new App Password → verify locally → update Ver
 
 ---
 
-*Updated: 2026-05-13*
+*Updated: 2026-05-18*
