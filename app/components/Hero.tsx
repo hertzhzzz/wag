@@ -33,7 +33,7 @@ export default function Hero() {
           playsInline
           preload="none"
           className="w-full h-full object-cover"
-          poster="/hero-image.webp"
+          poster="/og-image-poster.jpg"
         >
           <source src="/hero_vid_h264.mp4" type="video/mp4" />
         </video>
