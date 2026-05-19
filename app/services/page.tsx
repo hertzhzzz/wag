@@ -54,36 +54,19 @@ export default function ServicesPage() {
       ]} />
 
       {/* Hero */}
-      <section className="relative min-h-[50vh] md:min-h-[600px] flex items-center overflow-hidden">
-        {/* Hero Image - Mobile: show only (no video to block LCP) */}
-        <div className="absolute inset-0 md:hidden">
+      <section className="relative min-h-[36vh] md:min-h-[360px] flex items-center overflow-hidden">
+        {/* Image Background */}
+        <div className="absolute inset-0" aria-hidden="true">
           <Image
-            src="/hero-image.webp"
+            src="/og-image.jpg"
             alt="Chinese manufacturing facility"
             fill
             priority={true}
             loading="eager"
             fetchPriority="high"
-            sizes="(max-width: 768px) 100vw, 1200px"
+            sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
-        </div>
-
-        {/* Video Background - Desktop only */}
-        <div className="hidden md:block absolute inset-0" aria-hidden="true">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            className="w-full h-full object-cover"
-            poster="/hero-image.webp"
-          >
-            <source src="/hero_vid_h264.mp4" type="video/mp4" />
-          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
         </div>
@@ -95,12 +78,14 @@ export default function ServicesPage() {
             <span className="mx-2">›</span>
             <span>Services</span>
           </div>
-          <h1 className="font-serif font-bold text-[clamp(2rem,4vw,3rem)] text-white mb-4 leading-tight">
-            Our Services
-          </h1>
-          <p className="text-lg text-white/80 max-w-[600px]">
-            From supplier discovery to factory visits and end-to-end China procurement — we handle every step of your China sourcing journey.
-          </p>
+          <div className="max-w-[480px]">
+            <h1 className="font-serif font-bold text-[clamp(2rem,4vw,3rem)] text-white mb-4 leading-tight">
+              Our Services
+            </h1>
+            <p className="text-lg text-white/80">
+              From supplier discovery to factory visits and end-to-end China procurement — we handle every step of your China sourcing journey.
+            </p>
+          </div>
         </div>
       </section>
 
