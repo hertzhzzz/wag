@@ -110,6 +110,7 @@ export default function RootLayout({
           fetchPriority="high"
           crossOrigin="anonymous"
         />
+        <link rel="preload" as="video" href="/hero_vid_h264.mp4" fetchPriority="high" />
         <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
