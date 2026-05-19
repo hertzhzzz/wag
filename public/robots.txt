@@ -26,4 +26,8 @@ User-agent: Google-Extended
 Allow: /
 Crawl-delay: 1
 
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 1
+
 Sitemap: https://www.winningadventure.com.au/sitemap.xml
