@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -13,7 +15,7 @@ export default function Hero() {
           priority={true}
           loading="eager"
           fetchPriority="high"
-          quality={75}
+          quality={80}
           sizes="(max-width: 768px) 100vw, 1200px"
           className="object-cover"
         />
@@ -46,8 +48,8 @@ export default function Hero() {
 
       {/* Text Content - Left Side with improved hierarchy */}
       <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
-        {/* Brand tag - more refined */}
-        <div className="flex items-center gap-3 mb-6">
+        {/* Brand tag */}
+        <div className="flex items-center gap-3 mb-6 hero-brand-tag is-visible">
           <span className="h-px w-8 bg-amber/70" />
           <p className="text-[11px] font-medium tracking-[0.2em] uppercase text-white/70">
             Australia
@@ -55,28 +57,28 @@ export default function Hero() {
         </div>
 
         <h1 className="max-w-[780px]">
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white hero-headline-line-1 is-visible">
             No middleman margins.
           </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(32px,4.8vw,58px)] text-amber">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(32px,4.8vw,58px)] text-amber hero-headline-line-2 is-visible">
             Face-to-face with the factory.
           </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white hero-headline-line-3 is-visible">
             We do the sourcing.
           </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(22px,3.2vw,38px)] text-white/70">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(22px,3.2vw,38px)] text-white/70 hero-headline-line-4 is-visible">
             You do the business.
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-10">
+        <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-10 hero-description is-visible">
           Australian businesses use WAG to source directly from verified Chinese manufacturers — without paying trader markups. Free quote to start. Face-to-face access via our China team or guided factory visits.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 hero-buttons is-visible">
           <Link
             href="/enquiry"
-            className="inline-flex items-center gap-3 bg-amber text-navy px-8 py-4 font-bold hover:bg-[#d97706] transition-all duration-300 no-underline min-h-11 shadow-lg hover:shadow-xl hover:shadow-amber/20 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-3 bg-amber text-navy px-8 py-4 font-bold hover:bg-[#d97706] transition-all duration-300 no-underline min-h-11 shadow-lg hover:shadow-xl hover:shadow-amber/20 hero-cta-primary"
           >
             Get a Free Quote
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +87,7 @@ export default function Hero() {
           </Link>
           <Link
             href="/visiting-chinese-factories"
-            className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 no-underline text-sm min-h-11 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 no-underline text-sm min-h-11 backdrop-blur-sm hero-cta-secondary"
           >
             How factory visits work
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,21 +96,21 @@ export default function Hero() {
           </Link>
         </div>
 
-        {/* Trust indicators - professional B2B element */}
-        <div className="flex flex-wrap items-center gap-8 mt-14 pt-8 pb-2 border-t border-white/10">
-          <div className="flex items-center gap-2 text-white/60 text-sm">
+        {/* Trust indicators */}
+        <div className="flex flex-wrap items-center gap-8 mt-14 pt-8 pb-2 border-t border-white/10 hero-trust is-visible">
+          <div className="flex items-center gap-2 text-white/60 text-sm trust-item">
             <svg className="w-5 h-5 text-amber" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span>Across 50+ Industries</span>
           </div>
-          <div className="flex items-center gap-2 text-white/60 text-sm">
+          <div className="flex items-center gap-2 text-white/60 text-sm trust-item">
             <svg className="w-5 h-5 text-amber" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span>500+ Verified Suppliers</span>
           </div>
-          <div className="flex items-center gap-2 text-white/60 text-sm">
+          <div className="flex items-center gap-2 text-white/60 text-sm trust-item">
             <svg className="w-5 h-5 text-amber" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
