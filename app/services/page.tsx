@@ -58,7 +58,7 @@ export default function ServicesPage() {
         {/* Image Background */}
         <div className="absolute inset-0" aria-hidden="true">
           <Image
-            src="/og-image.jpg"
+            src="/og-image-poster.webp"
             alt="Chinese manufacturing facility"
             fill
             priority={true}
