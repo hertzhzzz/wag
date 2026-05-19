@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
     description: 'Verified Chinese manufacturers across all industries. Factory tours, supplier verification, and procurement support.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.webp'],
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/',
@@ -106,7 +106,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/hero-image.webp"
+          href="/og-image-poster.webp"
           fetchPriority="high"
           crossOrigin="anonymous"
         />
