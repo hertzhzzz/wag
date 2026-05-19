@@ -3,7 +3,6 @@ import Footer from '@/components/Footer'
 import CTABand from '@/components/CTABand'
 import Hero from './components/Hero'
 import BlogPreview from './components/BlogPreview'
-import DirectorySection from './components/DirectorySection'
 import HowItWorks from './components/HowItWorks'
 import TwoWaysAccess from './components/TwoWaysAccess'
 import FAQ from '@/components/FAQ'
@@ -192,7 +191,6 @@ export default function Home() {
       <OurProcess />
       <CaseStudies />
       <HowItWorks />
-      <DirectorySection />
       <BlogPreview />
       <FAQ faqs={homepageFaqs} />
       <CTABand />

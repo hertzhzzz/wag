@@ -82,7 +82,7 @@ export default function ServicesPage() {
             className="w-full h-full object-cover"
             poster="/hero-image.webp"
           >
-            <source src="https://pub-543b90f0e56147e5bdd93d5e7cc36c10.r2.dev/hero_vid.mp4" type="video/mp4" />
+            <source src="/hero_vid_h264.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
