@@ -84,6 +84,10 @@ export const metadata: Metadata = {
   },
 }
 
+export const links = () => [
+  { rel: 'preload', href: '/og-image-poster.webp', as: 'image' },
+]
+
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
