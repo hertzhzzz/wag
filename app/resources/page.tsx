@@ -6,7 +6,7 @@ import matter from 'gray-matter'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Resources | Winning Adventure Global',
+  title: 'Resources',
   description: 'Free guides on verifying Chinese suppliers, planning factory visits, and import strategies. Expert resources for Australian businesses sourcing from China.',
   keywords: ['china manufacturing resources', 'factory guide australia', 'supplier tips china', 'china sourcing guide', 'australian import china', 'verify chinese suppliers'],
   openGraph: {
