@@ -30,4 +30,8 @@ User-agent: Bytespider
 Allow: /
 Crawl-delay: 1
 
+# Training crawler — block from site
+User-agent: CCBot
+Disallow: /
+
 Sitemap: https://www.winningadventure.com.au/sitemap.xml

@@ -89,6 +89,18 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Definition block — AI citability */}
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-navy/5 border-b border-gray-100">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-[800px]">
+            <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-4">What is a China Sourcing Agent?</p>
+            <p className="text-base leading-relaxed text-gray-700">
+              A China sourcing agent is a professional service that connects international buyers — particularly Australian businesses — with verified manufacturers in China. Unlike trading companies or brokers, a sourcing agent works directly on the buyer&apos;s behalf, conducting factory verification, coordinating visits, and managing quality inspection before products ship.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Why WAG Differentiators */}
       <section className="py-16 md:py-20 px-4 md:px-8 bg-white border-b border-gray-100">
         <div className="max-w-[1200px] mx-auto">

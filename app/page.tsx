@@ -72,32 +72,32 @@ function OurProcess() {
   const steps = [
     {
       number: '01',
-      title: 'Initial Consultation',
+      title: 'What happens in the initial consultation?',
       description: 'Tell us what you need to manufacture. We discuss your specifications, volume, timeline, and budget to identify suitable factory categories.',
     },
     {
       number: '02',
-      title: 'Factory Matching',
+      title: 'How does factory matching work?',
       description: 'We pre-screen our directory and identify 3-5 factories that match your requirements. You receive detailed profiles including capabilities, certifications, and sample pricing.',
     },
     {
       number: '03',
-      title: 'Schedule Factory Visits',
+      title: 'How do we schedule factory visits in China?',
       description: 'We coordinate your visit itinerary in Shenzhen, Guangzhou, or Shanghai. Our team accompanies you to each factory, handling translation and technical questions.',
     },
     {
       number: '04',
-      title: 'Sample Evaluation',
+      title: 'How does sample evaluation work?',
       description: 'Request samples from your shortlisted factories. We coordinate shipping, customs documentation, and delivery to your Australian address.',
     },
     {
       number: '05',
-      title: 'Order Confirmation',
+      title: 'How do we confirm an order with a factory?',
       description: 'Once you select a factory, we assist with contract review, payment terms, and production scheduling. All communication goes through us for clarity.',
     },
     {
       number: '06',
-      title: 'Quality Inspection',
+      title: 'What does quality inspection involve?',
       description: 'Before shipment, we conduct pre-shipment inspection at the factory. You receive a detailed report with photos and quality verification.',
     },
   ]
