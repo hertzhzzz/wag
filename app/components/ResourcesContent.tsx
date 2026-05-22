@@ -133,20 +133,6 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <Link
-            href="/case-studies"
-            className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
-          >
-            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
-              Case Studies
-            </span>
-            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
-              Success Stories
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Real results from Australian businesses who sourced with WAG.
-            </p>
-          </Link>
-          <Link
             href="/services"
             className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
           >
@@ -175,7 +161,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
             </p>
           </Link>
           <Link
-            href="/adelaide"
+            href="/resources"
             className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">

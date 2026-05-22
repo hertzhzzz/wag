@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'China Factory Tours from Australia'. Clean layout with navy background (#0F2D5E). Top: white title 'China Factory Tours from Australia'. Amber accent. Center: Australia-China flight path with factory icons. Bottom right: small WAG brand mark. Professional travel-sourcing aesthetic. 16:9.

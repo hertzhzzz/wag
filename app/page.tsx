@@ -5,67 +5,12 @@ import Hero from './components/Hero'
 import BlogPreview from './components/BlogPreview'
 import HowItWorks from './components/HowItWorks'
 import TwoWaysAccess from './components/TwoWaysAccess'
+import WhyChooseUs from '@/components/WhyChooseUs'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
-
-function WhyChooseUs() {
-  const reasons = [
-    {
-      title: 'Direct Factory Access',
-      description: 'No traders, no middlemen. We introduce you directly to manufacturers and accompany you through every meeting, translation, and negotiation.',
-    },
-    {
-      title: 'Australia-Based Team',
-      description: 'Our Adelaide office manages your project with Australian standards of communication and professionalism, while our Shenzhen team provides on-ground support.',
-    },
-    {
-      title: 'Verified Suppliers Only',
-      description: 'Every factory in our directory has been physically vetted. We verify business licenses, production capacity, quality control systems, and sample quality.',
-    },
-    {
-      title: 'Risk Mitigation',
-      description: 'We help Australian businesses avoid common pitfalls: fraud, quality failures, and communication breakdowns that plague unsolicited factory contacts.',
-    },
-    {
-      title: 'Industry Agnostic',
-      description: 'From consumer electronics to industrial equipment, from packaging to custom components — we source across all manufacturing categories in the Pearl River Delta.',
-    },
-    {
-      title: 'End-to-End Support',
-      description: 'Factory matching, visit coordination, quality inspection, shipping logistics, and customs clearance — we can support as little or as much as you need.',
-    },
-  ]
-
-  return (
-    <section className="bg-navy/5 py-16 md:py-20 px-6 md:px-10">
-      <div className="max-w-[1120px] mx-auto">
-        <div className="max-w-2xl mb-12">
-          <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
-            Our Commitment
-          </p>
-          <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight mb-4">
-            Why Winning Adventure Global
-          </h2>
-          <p className="text-navy/70 text-lg leading-relaxed">
-            We founded Winning Adventure Global because Australian businesses deserve better than dealing with factories through brokers or cold outreach. Our model is simple: introduce you directly to verified manufacturers, accompany you through the process, and ensure every box gets inspected before it leaves China.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, idx) => (
-            <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-navy/5">
-              <h3 className="text-lg font-semibold text-navy mb-3">{reason.title}</h3>
-              <p className="text-navy/60 text-sm leading-relaxed">{reason.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 export const metadata: Metadata = {
   title: 'Factory Tours China | Face-to-Face Sourcing | Winning Adventure Global',

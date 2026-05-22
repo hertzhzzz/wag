@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Electronics Factory Tour Guide 2026'. Clean layout with navy background (#0F2D5E). Top: white title 'Electronics Factory Tour Guide 2026'. Amber accent. Center: circuit board and electronic component icons. Bottom right: small WAG brand mark. Professional tech manufacturing aesthetic. 16:9.

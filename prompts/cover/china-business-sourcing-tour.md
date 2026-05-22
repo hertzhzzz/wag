@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How to Plan a China Business Sourcing Tour'. Clean layout with navy background (#0F2D5E). Top: white title 'How to Plan a China Sourcing Tour'. Amber accent. Center: roadmap and sourcing icons. Bottom right: small WAG brand mark. Professional procurement aesthetic. 16:9.

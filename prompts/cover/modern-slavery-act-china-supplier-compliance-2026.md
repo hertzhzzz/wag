@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Modern Slavery Act 2026: China Supplier Compliance'. Clean layout with navy background (#0F2D5E). Top: white title 'Modern Slavery Act Compliance'. Amber accent. Center: compliance document and ethics icons. Bottom right: small WAG brand mark. Legal compliance aesthetic. 16:9.

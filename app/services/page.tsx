@@ -2,13 +2,15 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, Sparkles, Tractor, Package, UtensilsCrossed, Sun, Shirt } from 'lucide-react'
 import { Metadata } from 'next'
 import ServiceSchema from '@/components/ServiceSchema'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import ScrollReveal from './ScrollReveal'
+import './services-animations.css'
 
 export const metadata: Metadata = {
   title: 'Our Services',
@@ -85,12 +87,27 @@ export default function ServicesPage() {
             <p className="text-lg text-white/80">
               From supplier discovery to factory visits and end-to-end China procurement — we handle every step of your China sourcing journey.
             </p>
+            <div className="flex flex-col sm:flex-row gap-3 mt-6">
+              <Link
+                href="#services-cards"
+                className="inline-block bg-amber text-navy py-3 px-6 text-sm font-semibold text-center transition-colors hover:bg-amber/90 min-h-11"
+              >
+                Explore Our Services
+              </Link>
+              <Link
+                href="/enquiry"
+                className="inline-block bg-white/10 text-white py-3 px-6 text-sm font-semibold text-center transition-colors hover:bg-white/20 border border-white/30 min-h-11"
+              >
+                Get a Free Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Definition block — AI citability */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-navy/5 border-b border-gray-100">
+      <ScrollReveal>
+      <section id="definition" className="py-12 md:py-16 px-4 md:px-8 bg-navy/5 border-b border-gray-100">
         <div className="max-w-[1200px] mx-auto">
           <div className="max-w-[800px]">
             <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-4">What is a China Sourcing Agent?</p>
@@ -100,6 +117,108 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
+
+      {/* Services Cards */}
+      <ScrollReveal>
+      <section id="services-cards" className="py-12 md:py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-4">Our Services</p>
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-10">
+            Two ways to source from China
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            {/* Card 1: China Factory Tour */}
+            <div className="border-2 border-gray-200 p-10 flex flex-col gap-5 transition-all hover:shadow-[0_8px_32px_rgba(15,45,94,0.1)] hover:-translate-y-0.5">
+              <div className="text-[0.7rem] font-semibold tracking-wider uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit">
+                Business Discovery Trip
+              </div>
+              <div className="font-serif text-[1.35rem] font-bold text-navy leading-tight">
+                China Factory Tour
+              </div>
+              <div className="text-2xl font-bold text-amber">POA</div>
+              <p className="text-xs text-gray-500 mb-1">Service fee available on request</p>
+              <p className="text-[0.95rem] text-gray-600 leading-relaxed">
+                We take you directly to 2-3 pre-screened Chinese factories for your supplier sourcing needs. Your bilingual guide handles all logistics — scheduling, transport, translation, and factory introductions. You visit, ask questions, and decide independently. Best for: businesses exploring new suppliers or verifying existing ones before committing.
+              </p>
+              <ul className="list-none flex flex-col gap-2">
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  2-3 pre-screened factories
+                </li>
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  Bilingual guide included
+                </li>
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  All logistics handled
+                </li>
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  Factory introductions
+                </li>
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  Independent decision-making
+                </li>
+              </ul>
+              <Link
+                href="/resources/china-factory-tour-guide"
+                className="inline-block bg-navy text-white py-3 px-6 text-sm font-semibold text-center transition-colors hover:bg-[#1a4080] mt-auto min-h-11"
+              >
+                Learn More About Factory Tours →
+              </Link>
+            </div>
+
+            {/* Card 2: Bulk Purchase Procurement Trip */}
+            <div className="border-2 border-gray-200 p-10 flex flex-col gap-5 transition-all hover:shadow-[0_8px_32px_rgba(15,45,94,0.1)] hover:-translate-y-0.5">
+              <div className="text-[0.7rem] font-semibold tracking-wider uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit">
+                End-to-End Procurement Support
+              </div>
+              <div className="font-serif text-[1.35rem] font-bold text-navy leading-tight">
+                Bulk Purchase Procurement Trip
+              </div>
+              <div className="text-2xl font-bold text-amber">POA</div>
+              <p className="text-xs text-gray-500 mb-1">Service fee available on request</p>
+              <p className="text-[0.95rem] text-gray-600 leading-relaxed">
+                Already know what you want to source? We accompany you through the full procurement process — supplier negotiation, sample coordination, quality checks, and logistics setup. You get a dedicated bilingual partner from first factory visit through to purchase order. Best for: businesses ready to commit and place bulk orders.
+              </p>
+              <ul className="list-none flex flex-col gap-2">
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  Supplier negotiation
+                </li>
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  Sample coordination
+                </li>
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  Quality checks
+                </li>
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  Logistics setup
+                </li>
+                <li className="text-sm text-navy flex items-center gap-2">
+                  <CheckCircle size={16} className="text-amber flex-shrink-0" />
+                  Dedicated bilingual partner
+                </li>
+              </ul>
+              <Link
+                href="/resources/bulk-procurement-china-guide"
+                className="inline-block bg-navy text-white py-3 px-6 text-sm font-semibold text-center transition-colors hover:bg-[#1a4080] mt-auto min-h-11"
+              >
+                Learn More About Procurement Trips →
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      </ScrollReveal>
 
       {/* Why WAG Differentiators */}
       <section className="py-16 md:py-20 px-4 md:px-8 bg-white border-b border-gray-100">
@@ -178,53 +297,89 @@ export default function ServicesPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-              <div className="text-xs text-amber font-semibold mb-2">Aesthetics & Cosmetics</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            {/* Aesthetics & Cosmetics */}
+            <ScrollReveal delay={0}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Sparkles size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Aesthetics &amp; Cosmetics</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
                 A Sydney-based beauty clinic needed to verify three 1688-listed suppliers before committing to a $60,000 order. WAG conducted pre-visit factory audits on all three. Two failed verification. The third — a GMP-certified manufacturer in Guangzhou — passed and is now their primary supplier.
               </p>
-              <p className="text-xs text-gray-500 font-medium">Avoided: $60,000 in potential losses · Time saved: 6 weeks of DIY research</p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">Avoided: $60,000 in potential losses · Time saved: 6 weeks of DIY research</p>
             </div>
+            </ScrollReveal>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            {/* Agricultural Machinery */}
+            <ScrollReveal delay={80}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Tractor size={20} className="text-amber" />
+              </div>
               <div className="text-xs text-amber font-semibold mb-2">Agricultural Machinery</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
                 A Barossa Valley vineyard equipment importer needed a replacement supplier after their existing Chinese manufacturer raised prices 35%. WAG identified and visited four alternatives in Jiangsu province over two days. The selected factory offered equivalent quality at an 18% lower price point.
               </p>
-              <p className="text-xs text-gray-500 font-medium">Savings: 18% on landed cost · Order value: $240,000 annually</p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">Savings: 18% on landed cost · Order value: $240,000 annually</p>
             </div>
+            </ScrollReveal>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            {/* Custom Packaging */}
+            <ScrollReveal delay={160}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Package size={20} className="text-amber" />
+              </div>
               <div className="text-xs text-amber font-semibold mb-2">Custom Packaging</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
                 A Melbourne e-commerce brand was paying $3.80 per unit for custom mailer boxes from a domestic supplier. After a WAG factory tour to a paper products manufacturer in Dongguan, they shifted production to China with landed cost of $1.20 per unit including freight and duties.
               </p>
-              <p className="text-xs text-gray-500 font-medium">Cost reduction: 68% per unit · Annual savings: $78,000</p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">Cost reduction: 68% per unit · Annual savings: $78,000</p>
             </div>
+            </ScrollReveal>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            {/* Foodservice Equipment */}
+            <ScrollReveal delay={240}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <UtensilsCrossed size={20} className="text-amber" />
+              </div>
               <div className="text-xs text-amber font-semibold mb-2">Foodservice Equipment</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
                 A Perth hospitality equipment wholesaler was quoted $180,000 for commercial kitchen equipment from a local distributor. WAG arranged a two-day factory visit to a manufacturer in Foshan. The factory price was $62,000 — with shipping, duties, and installation support included.
               </p>
-              <p className="text-xs text-gray-500 font-medium">Quote comparison: $180,000 local vs $62,000 direct · Saved: $118,000</p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">Quote comparison: $180,000 local vs $62,000 direct · Saved: $118,000</p>
             </div>
+            </ScrollReveal>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-              <div className="text-xs text-amber font-semibold mb-2">Solar & LED Components</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            {/* Solar & LED Components */}
+            <ScrollReveal delay={320}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Sun size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Solar &amp; LED Components</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
                 A Brisbane solar installer needed to verify whether a Chinese manufacturer genuinely held IEC 62619 certification — the supplier had claimed compliance but the documentation looked suspicious. WAG conducted an independent audit including factory document review and production line inspection. The certification was confirmed counterfeit.
               </p>
-              <p className="text-xs text-gray-500 font-medium">Avoided: regulatory liability + potential client safety incidents · Audit cost: $800</p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">Avoided: regulatory liability + potential client safety incidents · Audit cost: $800</p>
             </div>
+            </ScrollReveal>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-              <div className="text-xs text-amber font-semibold mb-2">Apparel & Fashion</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            {/* Apparel & Fashion */}
+            <ScrollReveal delay={400}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Shirt size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Apparel &amp; Fashion</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
                 An Adelaide fashion brand had worked with the same Guangzhou garment factory for three years with deteriorating quality. WAG visited four alternative manufacturers across two days, providing side-by-side comparisons of MOQ, lead times, and sample quality. The brand selected a new factory with a 97% quality acceptance rate vs their previous 81%.
               </p>
-              <p className="text-xs text-gray-500 font-medium">Quality improvement: 81% → 97% acceptance rate · Lead time: 28 days maintained</p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">Quality improvement: 81% → 97% acceptance rate · Lead time: 28 days maintained</p>
             </div>
+            </ScrollReveal>
 
           </div>
         </div>
@@ -234,20 +389,20 @@ export default function ServicesPage() {
       <section className="py-12 px-4 md:px-8 bg-navy">
         <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <p className="text-3xl font-bold text-amber mb-1">200+</p>
-            <p className="text-sm text-gray-300">Factory visits completed</p>
+            <p className="text-3xl font-bold text-amber mb-1">20+</p>
+            <p className="text-sm text-white">Factory visits completed</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-amber mb-1">8+</p>
-            <p className="text-sm text-gray-300">Years in operation</p>
+            <p className="text-3xl font-bold text-amber mb-1">1+</p>
+            <p className="text-sm text-white">Years in operation</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-amber mb-1">50+</p>
-            <p className="text-sm text-gray-300">Industries served</p>
+            <p className="text-3xl font-bold text-amber mb-1">5+</p>
+            <p className="text-sm text-white">Industries served</p>
           </div>
           <div>
             <p className="text-3xl font-bold text-amber mb-1">92%</p>
-            <p className="text-sm text-gray-300">Client satisfaction rate</p>
+            <p className="text-sm text-white">Client satisfaction rate</p>
           </div>
         </div>
         <div className="max-w-[1200px] mx-auto mt-8 pt-8 border-t border-white/10 text-center">
@@ -306,36 +461,40 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* External Citations */}
+      {/* External Citations — collapsible */}
       <section className="py-10 px-4 md:px-8 bg-[#f8f9fb] border-t border-gray-200">
         <div className="max-w-[800px] mx-auto">
-          <p className="text-xs text-gray-500 font-semibold tracking-wider uppercase mb-4">References & External Sources</p>
-          <ul className="space-y-3 text-sm text-gray-600">
-            <li className="flex gap-2">
-              <span className="text-amber font-bold">1.</span>
-              <span>
-                Austrade (Australian Trade and Investment Commission),{' '}
-                <a href="https://www.austrade.gov.au/international" target="_blank" rel="noopener noreferrer" className="text-navy underline hover:text-amber">
-                  China market entry guidance for Australian exporters
-                </a>
-              </span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-amber font-bold">2.</span>
-              <span>
-                China Factory Inspection Group (CFIE), Ministry of Commerce PRC —.factory verification standards and export documentation requirements
-              </span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-amber font-bold">3.</span>
-              <span>
-                SAMR (State Administration for Market Regulation)
-                <a href="https://www.samr.gov.cn" target="_blank" rel="noopener noreferrer" className="text-navy underline hover:text-amber">
-                  national business registration verification portal
-                </a>
-              </span>
-            </li>
-          </ul>
+          <details className="group">
+            <summary className="text-xs text-gray-500 font-semibold tracking-wider uppercase mb-4 cursor-pointer hover:text-gray-700 list-none">
+              <span className="text-amber mr-1">▶</span> References & External Sources
+            </summary>
+            <ul className="space-y-3 text-sm text-gray-600 mt-4">
+              <li className="flex gap-2">
+                <span className="text-amber font-bold">1.</span>
+                <span>
+                  Austrade (Australian Trade and Investment Commission),{' '}
+                  <a href="https://www.austrade.gov.au/international" target="_blank" rel="noopener noreferrer" className="text-navy underline hover:text-amber">
+                    China market entry guidance for Australian exporters
+                  </a>
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-amber font-bold">2.</span>
+                <span>
+                  China Factory Inspection Group (CFIE), Ministry of Commerce PRC — factory verification standards and export documentation requirements
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-amber font-bold">3.</span>
+                <span>
+                  SAMR (State Administration for Market Regulation){' '}
+                  <a href="https://www.samr.gov.cn" target="_blank" rel="noopener noreferrer" className="text-navy underline hover:text-amber">
+                    national business registration verification portal
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </details>
         </div>
       </section>
 
@@ -373,97 +532,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services Cards */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          {/* Card 1: China Factory Tour */}
-          <div className="border-2 border-gray-200 p-10 flex flex-col gap-5 transition-all hover:shadow-[0_8px_32px_rgba(15,45,94,0.1)] hover:-translate-y-0.5">
-            <div className="text-[0.7rem] font-semibold tracking-wider uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit">
-              Business Discovery Trip
-            </div>
-            <div className="font-serif text-[1.35rem] font-bold text-navy leading-tight">
-              China Factory Tour
-            </div>
-            <div className="text-2xl font-bold text-amber">POA</div>
-            <p className="text-[0.95rem] text-gray-600 leading-relaxed">
-              We take you directly to 2-3 pre-screened Chinese factories for your supplier sourcing needs. Your bilingual guide handles all logistics — scheduling, transport, translation, and factory introductions. You visit, ask questions, and decide independently. Best for: businesses exploring new suppliers or verifying existing ones before committing.
-            </p>
-            <ul className="list-none flex flex-col gap-2">
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                2-3 pre-screened factories
-              </li>
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                Bilingual guide included
-              </li>
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                All logistics handled
-              </li>
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                Factory introductions
-              </li>
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                Independent decision-making
-              </li>
-            </ul>
-            <Link
-              href="/resources/china-factory-tour-guide"
-              className="inline-block bg-navy text-white py-3 px-6 text-sm font-semibold text-center transition-colors hover:bg-[#1a4080] mt-auto min-h-11"
-            >
-              Learn More About Factory Tours →
-            </Link>
-          </div>
-
-          {/* Card 2: Bulk Purchase Procurement Trip */}
-          <div className="border-2 border-gray-200 p-10 flex flex-col gap-5 transition-all hover:shadow-[0_8px_32px_rgba(15,45,94,0.1)] hover:-translate-y-0.5">
-            <div className="text-[0.7rem] font-semibold tracking-wider uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit">
-              End-to-End Procurement Support
-            </div>
-            <div className="font-serif text-[1.35rem] font-bold text-navy leading-tight">
-              Bulk Purchase Procurement Trip
-            </div>
-            <div className="text-2xl font-bold text-amber">POA</div>
-            <p className="text-[0.95rem] text-gray-600 leading-relaxed">
-              Already know what you want to source? We accompany you through the full procurement process — supplier negotiation, sample coordination, quality checks, and logistics setup. You get a dedicated bilingual partner from first factory visit through to purchase order. Best for: businesses ready to commit and place bulk orders.
-            </p>
-            <ul className="list-none flex flex-col gap-2">
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                Supplier negotiation
-              </li>
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                Sample coordination
-              </li>
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                Quality checks
-              </li>
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                Logistics setup
-              </li>
-              <li className="text-sm text-navy flex items-center gap-2">
-                <CheckCircle size={16} className="text-amber flex-shrink-0" />
-                Dedicated bilingual partner
-              </li>
-            </ul>
-            <Link
-              href="/resources/bulk-procurement-china-guide"
-              className="inline-block bg-navy text-white py-3 px-6 text-sm font-semibold text-center transition-colors hover:bg-[#1a4080] mt-auto min-h-11"
-            >
-              Learn More About Procurement Trips →
-            </Link>
-          </div>
-
-        </div>
-      </section>
-
       {/* Process */}
       <section className="py-20 md:py-28 px-6 md:px-10 bg-[#f8f9fb]">
         <div className="max-w-[1400px] mx-auto">
@@ -481,9 +549,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 mb-16 relative">
-            {/* Connecting line - desktop only */}
-            <div className="hidden md:block absolute top-16 left-[12%] right-[12%] h-px bg-gradient-to-r from-amber/50 via-amber/20 to-amber/50 z-0" />
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4 mb-16">
 
             {[
               {
@@ -515,17 +581,13 @@ export default function ServicesPage() {
               const isFirst = idx === 0
               const isLast = idx === 4
               return (
-                <div
-                  key={idx}
-                  className={`relative z-10 transition-all duration-700 ${
-                    isLast ? 'opacity-100 translate-y-0' : 'opacity-100 translate-y-0'
-                  }`}
-                >
-                  <div className={`bg-white rounded-2xl p-6 h-full border transition-shadow duration-300 ${
-                    isLast
-                      ? 'border-amber/30 shadow-[0_8px_32px_rgba(245,158,11,0.15)]'
-                      : 'border-navy/5 shadow-[0_4px_24px_rgba(15,45,94,0.06)]'
-                  }`}>
+                <ScrollReveal key={idx} delay={idx * 90} className="process-step">
+                  <div
+                    className={`bg-white rounded-2xl p-6 h-full border transition-shadow duration-300 ${
+                      isLast
+                        ? 'border-amber/30 shadow-[0_8px_32px_rgba(245,158,11,0.15)]'
+                        : 'border-navy/5 shadow-[0_4px_24px_rgba(15,45,94,0.06)]'
+                    }`}>
                     {/* Step number badge */}
                     <div className={`rounded-full font-semibold text-sm flex items-center justify-center mb-4 ${
                       isFirst
@@ -545,7 +607,7 @@ export default function ServicesPage() {
                       {step.desc}
                     </p>
                   </div>
-                </div>
+                </ScrollReveal>
               )
             })}
           </div>

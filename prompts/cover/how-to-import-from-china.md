@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How to Import from China: A Practical Guide'. Clean layout with navy background (#0F2D5E). Top: white title 'How to Import from China'. Amber accent. Center: step-by-step process icons with China-Australia logistics imagery. Bottom right: small WAG brand mark. Practical how-to business aesthetic. 16:9.

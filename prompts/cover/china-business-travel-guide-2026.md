@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'The Complete Guide to China Business Travel'. Clean layout with navy background (#0F2D5E). Top: white title 'China Business Travel Guide'. Amber accent. Center: passport, plane, and business icons. Bottom right: small WAG brand mark. Travel planning aesthetic. 16:9.

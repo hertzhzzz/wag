@@ -33,6 +33,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/china-sourcing-guide-australia',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/china-sourcing-guide-australia',
+      'x-default': 'https://www.winningadventure.com.au/china-sourcing-guide-australia',
+    },
   },
 }
 

@@ -61,6 +61,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     alternates: {
       canonical: `https://www.winningadventure.com.au/resources/${slug}`,
+      languages: {
+        'en-AU': `https://www.winningadventure.com.au/resources/${slug}`,
+        'x-default': `https://www.winningadventure.com.au/resources/${slug}`,
+      },
     },
   }
 }

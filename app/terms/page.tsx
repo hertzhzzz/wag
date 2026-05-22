@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/terms',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/terms',
+      'x-default': 'https://www.winningadventure.com.au/terms',
+    },
   },
 }
 

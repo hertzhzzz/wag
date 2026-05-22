@@ -58,10 +58,10 @@ export default function TwoWaysAccess() {
   }, [])
 
   return (
-    <section className="bg-white py-14 md:py-18 px-6 md:px-10">
+    <section className="bg-white py-14 md:py-18 px-8 md:px-20">
       <div className="max-w-[1120px] mx-auto">
         {/* Section header */}
-        <div className="max-w-2xl mb-12">
+        <div className="max-w-[1120px] mx-auto mb-12">
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
             Our Services
           </p>

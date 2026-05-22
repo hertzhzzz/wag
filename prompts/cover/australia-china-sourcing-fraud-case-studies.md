@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How Australian Businesses Lose 50M+ to China Supplier Scams'. Clean layout with navy background (#0F2D5E). Top: white title 'China Supplier Scams'. Amber warning accent. Center: warning triangle and fraud alert icons. Bottom right: small WAG brand mark. Serious warning aesthetic. 16:9.

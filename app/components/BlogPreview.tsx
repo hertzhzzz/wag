@@ -17,8 +17,18 @@ interface Article {
   description?: string
 }
 
-function getRecentArticles(count = 3): Article[] {
-  return fs
+// Top articles by GSC impressions (last 28 days)
+// Fetched via: python ~/.claude/skills/seo/scripts/gsc_query.py --property "sc-domain:winningadventure.com.au" --json --dimension page
+const TOP_SLUGS = [
+  'china-home-sales-drop',
+  '2026-australian-federal-budget-import-duty-changes',
+  'iran-war-australia-china-supply-chain',
+  'verify-chinese-supplier',
+  '2026-australia-federal-budget-china-sourcing-impact',
+]
+
+function getTopArticles(count = 3): Article[] {
+  const all = fs
     .readdirSync(BLOG_DIR)
     .filter((f) => f.endsWith('.mdx'))
     .map((filename) => {
@@ -42,21 +52,29 @@ function getRecentArticles(count = 3): Article[] {
       } as Article
     })
     .filter((a) => a.title && a.date)
-    .sort((a, b) => {
-      if (!a.date || !b.date) return 0
-      return a.date < b.date ? 1 : -1
-    })
-    .slice(0, count)
+
+  // Preserve TOP_SLUGS order for top articles
+  const topMap = new Map(TOP_SLUGS.map((slug, i) => [slug, i]))
+  const sorted = [...all].sort((a, b) => {
+    const ai = topMap.get(a.slug)
+    const bi = topMap.get(b.slug)
+    if (ai !== undefined && bi !== undefined) return ai - bi
+    if (ai !== undefined) return -1
+    if (bi !== undefined) return 1
+    if (!a.date || !b.date) return 0
+    return a.date < b.date ? 1 : -1
+  })
+  return sorted.slice(0, count)
 }
 
 export default function BlogPreview() {
-  const articles = getRecentArticles(3)
+  const articles = getTopArticles(3)
 
   if (articles.length === 0) return null
 
   return (
     <section className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-[960px] mx-auto px-4 md:px-12 py-16">
+      <div className="max-w-[1120px] mx-auto px-4 md:px-12 py-16">
         {/* Section header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <div>
@@ -66,7 +84,7 @@ export default function BlogPreview() {
             <h2 className="font-serif text-[#0F2D5E] text-[28px] md:text-[34px] font-semibold leading-tight">
               From Our Blog
             </h2>
-            <p className="text-gray-500 text-[15px] mt-2 max-w-[480px]">
+            <p className="text-gray-500 text-[15px] mt-2">
               Practical guides on China sourcing, supplier verification, and factory
               visit planning — written for Australian businesses.
             </p>
@@ -85,7 +103,7 @@ export default function BlogPreview() {
         </div>
 
         {/* Article cards — 3-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article, i) => (
             <article
               key={article.slug}

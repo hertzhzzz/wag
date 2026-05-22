@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How to Plan a China Business Trip'. Clean layout with navy background (#0F2D5E). Top: white title 'Plan a China Business Trip'. Amber accent. Center: planning calendar and travel icons. Bottom right: small WAG brand mark. Organized travel planning aesthetic. 16:9.

@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How the 2026 Australian Federal Budget Reshapes Import Duty Rates'. Clean layout with navy background (#0F2D5E). Top: white title '2026 Budget Import Duty Changes'. Amber policy accent. Center: budget/finance icons with import symbols. Bottom right: small WAG brand mark. Government policy aesthetic. 16:9.

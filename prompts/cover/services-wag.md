@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'China Factory Visit Services by Winning Adventure Global'. Clean layout with navy background (#0F2D5E). Top: white title 'Factory Visit Services'. Amber WAG accent. Center: service icons showing factory tour experience. Bottom right: small WAG brand mark. Professional services aesthetic. 16:9.

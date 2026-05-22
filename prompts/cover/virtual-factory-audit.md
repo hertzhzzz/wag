@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Virtual Factory Audit Guide 2026'. Clean layout with navy background (#0F2D5E). Top: white title 'Virtual Factory Audit Guide 2026'. Amber accent. Center: video call and remote audit icons. Bottom right: small WAG brand mark. Modern remote operations aesthetic. 16:9.

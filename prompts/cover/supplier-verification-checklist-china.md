@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Supplier Verification Checklist for Chinese Factories'. Clean layout with navy background (#0F2D5E). Top: white title 'Supplier Verification Checklist'. Amber accent. Center: checklist with factory audit icons. Bottom right: small WAG brand mark. Due diligence aesthetic. 16:9.

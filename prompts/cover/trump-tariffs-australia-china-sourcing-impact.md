@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Trump Tariffs Flood Australia with Cheap Chinese Goods'. Clean layout with navy background (#0F2D5E). Top: white title 'Trump Tariffs Impact on Australia'. Amber trade accent. Center: tariff and trade flow icons. Bottom right: small WAG brand mark. Trade policy aesthetic. 16:9.

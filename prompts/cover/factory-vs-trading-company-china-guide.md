@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Factory vs Trading Company'. Clean layout with navy background (#0F2D5E). Top: white title 'Factory vs Trading Company'. Amber comparison accent. Center: factory icon vs trading company icons comparison layout. Bottom right: small WAG brand mark. Sourcing strategy aesthetic. 16:9.

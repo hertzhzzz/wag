@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Chinese Supplier Quality Not as Promised'. Clean layout with navy background (#0F2D5E). Top: white title 'When Quality Is Not as Promised'. Amber alert accent. Center: quality comparison icons, broken promise visual. Bottom right: small WAG brand mark. Quality control aesthetic. 16:9.

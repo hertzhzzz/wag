@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Why Silver Prices Are Your Early Warning Signal for China Manufacturing Costs'. Clean layout with navy background (#0F2D5E). Top: white title 'Silver Prices and Manufacturing Costs'. Amber market accent. Center: silver commodity chart with manufacturing icons. Bottom right: small WAG brand mark. Financial analysis aesthetic. 16:9.

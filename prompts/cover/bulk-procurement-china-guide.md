@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How Bulk Procurement in China Actually Works'. Clean layout with navy background (#0F2D5E). Top: white title 'Bulk Procurement in China'. Amber accent. Center: bulk shipping and quantity discount icons. Bottom right: small WAG brand mark. Cost-saving business aesthetic. 16:9.

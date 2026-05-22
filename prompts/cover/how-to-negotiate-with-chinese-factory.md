@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How to Negotiate with a Chinese Factory'. Clean layout with navy background (#0F2D5E). Top: white title 'Negotiate with Chinese Factory'. Amber accent. Center: handshake and negotiation icons. Bottom right: small WAG brand mark. Business negotiation aesthetic. 16:9.

@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How to Import from China | Australian Business Guide'. Clean layout with navy background (#0F2D5E). Top: white title 'Import from China Guide'. Amber accent. Center: logistics and import process icons. Bottom right: small WAG brand mark. Authoritative guide aesthetic. 16:9.

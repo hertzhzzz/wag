@@ -65,6 +65,20 @@ const nextConfig = {
     ],
   },
   async headers() {
+    if (process.env.NODE_ENV === 'development') {
+      return [
+        {
+          source: '/:path*',
+          headers: [
+            { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+            { key: 'X-Frame-Options', value: 'DENY' },
+            { key: 'X-Content-Type-Options', value: 'nosniff' },
+            { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+            { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.winningadventure.com.au https://images.unsplash.com; frame-src https://www.facebook.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;" }
+          ]
+        }
+      ]
+    }
     return [
       {
         source: '/:path*',

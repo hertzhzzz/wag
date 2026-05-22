@@ -1,0 +1,1 @@
+Professional infographic blog cover for '2026 Australia Federal Budget: What It Means for Your China Sourcing Strategy'. Clean layout with navy background (#0F2D5E). Top: white title '2026 Budget: China Sourcing Impact'. Amber policy accent. Center: budget document with sourcing strategy icons. Bottom right: small WAG brand mark. Government policy business impact aesthetic. 16:9.

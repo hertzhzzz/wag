@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Factory Visits in China'. Clean layout with navy background (#0F2D5E). Top: white title 'Factory Visits in China'. Amber accent line. Center: diverse factory icons with globe showing China-Australia connection. Bottom right: small WAG brand mark. Professional international business aesthetic. 16:9.

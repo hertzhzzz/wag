@@ -25,6 +25,31 @@ export const metadata: Metadata = {
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
+// Sorted by GSC impressions (highest first)
+// Fetched: python ~/.claude/skills/seo/scripts/gsc_query.py --property "sc-domain:winningadventure.com.au" --json --dimension page
+const SLUGS_BY_IMPRESSIONS = [
+  'china-home-sales-drop',
+  '2026-australian-federal-budget-import-duty-changes',
+  'iran-war-australia-china-supply-chain',
+  'verify-chinese-supplier',
+  '2026-australia-federal-budget-china-sourcing-impact',
+  'australian-retail-trends-grilld-coles',
+  'us-export-ban-australian-manufacturers',
+  'negative-gearing-properties',
+  'el-nino-food-supply-chain-australia',
+  'china-factory-tour-guide',
+  'cba-share-price-impact-australian-procurement',
+  'silver-price-impact-china-manufacturing-cost',
+  'thucydides-trap-australia-china-supply-chain',
+  'australia-import-tips',
+  'how-to-plan',
+  'bulk-procurement-china-guide',
+  'albanese-family-trust-tax-2026',
+  'australian-supermarket-china-sourcing-secrets',
+  'bunnings-wholesale-guide',
+  'china-business-tours',
+]
+
 interface Article {
   slug: string
   title: string
@@ -59,7 +84,15 @@ function getArticles(): Article[] {
         featured: data.featured || false,
       } as Article
     })
+
+  // Sort by GSC impressions order, then by date for articles not in the list
+  const impressionsMap = new Map(SLUGS_BY_IMPRESSIONS.map((slug, i) => [slug, i]))
   return articles.sort((a, b) => {
+    const aIdx = impressionsMap.get(a.slug)
+    const bIdx = impressionsMap.get(b.slug)
+    if (aIdx !== undefined && bIdx !== undefined) return aIdx - bIdx
+    if (aIdx !== undefined) return -1
+    if (bIdx !== undefined) return 1
     const dateA = new Date(a.date).getTime()
     const dateB = new Date(b.date).getTime()
     return isNaN(dateA) ? 0 : dateA - dateB

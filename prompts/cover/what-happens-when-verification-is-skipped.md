@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'What Happens When You Skip Supplier Verification'. Clean layout with navy background (#0F2D5E). Top: white title 'Skipping Supplier Verification'. Amber warning accent. Center: warning icons showing consequences. Bottom right: small WAG brand mark. Cautionary tale aesthetic. 16:9.
