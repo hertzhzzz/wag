@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Australia Import Tips: Essential Guide for First-Time Importers'. Clean layout with navy background (#0F2D5E). Top: white title 'Australia Import Tips'. Amber accent. Center: checklist icons and shipping container imagery. Bottom right: small WAG brand mark. Professional import guide aesthetic. 16:9.

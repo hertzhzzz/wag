@@ -1,0 +1,45 @@
+{
+  "jobs": 5,
+  "tasks": [
+    {
+      "id": "illicit-tobacco-trade",
+      "prompt": "Professional B2B blog cover image for article about Australia's illicit tobacco trade and customs enforcement. Design: bento grid infographic style with icons representing tobacco products, customs inspection, duty stamps, and enforcement. Color palette: navy blue (#0F2D5E) and amber (#F59E0B). Clean, corporate style suitable for business audience. No text. Aspect ratio 16:9.",
+      "image": "public/social/blog/illicit-tobacco-trade/cover.png",
+      "provider": "minimax",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "kenya-sourcing-destination",
+      "prompt": "Professional B2B blog cover image for article about Kenya as a sourcing destination for Australian businesses. Design: bento grid infographic style with icons representing Africa map, manufacturing, trade routes, and supply chain. Color palette: navy blue (#0F2D5E) and amber (#F59E0B). Clean, corporate style suitable for business audience. No text. Aspect ratio 16:9.",
+      "image": "public/social/blog/kenya-sourcing-destination/cover.png",
+      "provider": "minimax",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "bunnings-wholesale-guide",
+      "prompt": "Professional B2B blog cover image for article about Bunnings wholesale and building materials sourcing from China. Design: bento grid infographic style with icons representing hardware store, building materials, wholesale distribution, and factory. Color palette: navy blue (#0F2D5E) and amber (#F59E0B). Clean, corporate style suitable for business audience. No text. Aspect ratio 16:9.",
+      "image": "public/social/blog/bunnings-wholesale-guide/cover.png",
+      "provider": "minimax",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "china-home-sales-drop",
+      "prompt": "Professional B2B blog cover image for article about China home sales drop and impact on Australian importers. Design: bento grid infographic style with icons representing China property market decline, factory output, negotiation, and trade. Color palette: navy blue (#0F2D5E) and amber (#F59E0B). Clean, corporate style suitable for business audience. No text. Aspect ratio 16:9.",
+      "image": "public/social/blog/china-home-sales-drop/cover.png",
+      "provider": "minimax",
+      "ar": "16:9",
+      "quality": "2k"
+    },
+    {
+      "id": "negative-gearing-properties",
+      "prompt": "Professional B2B blog cover image for article about negative gearing property tax changes in Australia. Design: bento grid infographic style with icons representing property investment, tax calculations, housing market, and financial impact. Color palette: navy blue (#0F2D5E) and amber (#F59E0B). Clean, corporate style suitable for business audience. No text. Aspect ratio 16:9.",
+      "image": "public/social/blog/negative-gearing-properties/cover.png",
+      "provider": "minimax",
+      "ar": "16:9",
+      "quality": "2k"
+    }
+  ]
+}

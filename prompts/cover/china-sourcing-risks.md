@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'China Sourcing Risks and How to Mitigate Them'. Clean layout with navy background (#0F2D5E). Top: white title 'China Sourcing Risks'. Amber warning accent. Center: risk warning icons with mitigation checkmarks. Bottom right: small WAG brand mark. Risk management aesthetic. 16:9.

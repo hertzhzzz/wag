@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How to Negotiate with Chinese Factories | WAG Strategy Guide'. Clean layout with navy background (#0F2D5E). Top: white title 'Chinese Factory Negotiation Strategy'. Amber accent. Center: strategy framework and negotiation icons. Bottom right: small WAG brand mark. Strategic business aesthetic. 16:9.

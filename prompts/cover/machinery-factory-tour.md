@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Machinery Factory Tour Guide 2026'. Clean layout with navy background (#0F2D5E). Top: white title 'Machinery Factory Tour Guide 2026'. Amber accent. Center: gear and machinery icons. Bottom right: small WAG brand mark. Professional industrial aesthetic. 16:9.

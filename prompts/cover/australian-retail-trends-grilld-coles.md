@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Australian Retail Trends 2026: What Grilld and Coles Signal About Supply Chain'. Clean layout with navy background (#0F2D5E). Top: white title 'Australian Retail Trends 2026'. Amber retail accent. Center: retail store icons with trend charts. Bottom right: small WAG brand mark. Retail market analysis aesthetic. 16:9.

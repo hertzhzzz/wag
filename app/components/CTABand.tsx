@@ -1,9 +1,30 @@
 'use client'
 
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { trackCTAClick } from '@/lib/analytics'
 
 export default function CTABand() {
+  const [visible, setVisible] = useState(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   const handleStartClick = () => {
     trackCTAClick('Start Your China Trip', 'CTABand')
   }
@@ -13,8 +34,13 @@ export default function CTABand() {
   }
 
   return (
-    <section className="bg-white border-t border-gray-200 py-12 px-4 md:px-10 w-full relative overflow-hidden">
-      <div className="max-w-[880px] mx-auto flex items-center justify-between gap-10 flex-wrap relative z-[1]">
+    <section className="bg-white border-t border-gray-200 py-12 px-8 md:px-20 w-full relative overflow-hidden">
+      <div
+        ref={sectionRef}
+        className={`max-w-[880px] mx-auto flex items-center justify-between gap-10 flex-wrap relative z-[1] transition-all duration-700 ${
+          visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <div>
           <h2 className="font-serif text-[2rem] font-semibold text-navy mb-2.5">
             Your Suppliers Are Ready. Are You?

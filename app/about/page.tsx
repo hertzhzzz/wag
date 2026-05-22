@@ -7,10 +7,12 @@ import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import ScrollReveal from '@/services/ScrollReveal'
+import { CheckCircle, Sparkles, Tractor, Package, UtensilsCrossed, Sun, Building2, Users, Globe, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Australia-based China sourcing agency, Founded 2025. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement.',
+  title: 'Australia China Sourcing Agency | Factory Tours & Supplier Verification | Winning Adventure Global',
+  description: 'Australia-based China sourcing agency, Founded 2025. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement. Contact us today.',
   keywords: [
     'Australia-based China procurement consultant',
     'Australian owned China sourcing company',
@@ -29,6 +31,16 @@ export const metadata: Metadata = {
     title: 'About Winning Adventure Global | Australia China Sourcing Experts',
     description: 'Australia-based China sourcing agency, Founded 2025, arranging factory tours and verifying suppliers for Australian businesses across China.',
     url: 'https://www.winningadventure.com.au/about',
+    siteName: 'Winning Adventure Global',
+    locale: 'en_AU',
+    type: 'website',
+    images: [{ url: 'https://www.winningadventure.com.au/og-image.jpg', width: 1200, height: 630, alt: 'Winning Adventure Global' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Winning Adventure Global | Australia China Sourcing Experts',
+    description: 'Australia-based China sourcing agency, Founded 2025, arranging factory tours and verifying suppliers for Australian businesses across China.',
+    images: ['https://www.winningadventure.com.au/og-image.jpg'],
   },
 }
 
@@ -36,7 +48,7 @@ export default function AboutPage() {
   return (
     <>
       <FAQSchema faqs={aboutFaqs} />
-            <Navbar />
+      <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
         { name: 'About', url: 'https://www.winningadventure.com.au/about' }
@@ -80,90 +92,51 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Founder Story */}
-      <div className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto">
-        <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-5">
-          The Founder&apos;s Story
+      {/* Australia Leadership - Position 2: Mark He first for trust */}
+      {/* Centered layout when image hidden, 2-col grid when image available */}
+      <div className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto md:text-left text-center">
+        <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-3">
+          Australia Team
         </div>
         <h2 className="font-serif text-[34px] font-normal leading-tight mb-7">
-          I&apos;ve Spent Years Building the Bridges Most Businesses Never Find
+          Your Australian Point of Contact for China Sourcing
         </h2>
         <p className="text-base leading-relaxed text-gray-700 mb-5">
-          When Andy Liu moved from China to Adelaide, the gap was immediately apparent. Australian businesses were leaving millions on the table — not because Chinese suppliers didn&apos;t want to work with them, but because no one was doing the translation work. Not just language. Trust. Process. Relationships.
+          As Managing Director of WAG&apos;s Australia office, I bridge the gap between Australian businesses and Chinese manufacturing. Based in Adelaide, I work directly with clients across Australia — from initial supplier search through to final delivery.
         </p>
         <p className="text-base leading-relaxed text-gray-700 mb-5">
-          Andy has spent years inside Chinese manufacturing hubs — Shenzhen, Foshan, Guangzhou. He knows which suppliers deliver on time, which ones cut corners on quality, and which ones are genuinely excited to build long-term partnerships with Australian B2B buyers.
+          My focus is simple: helping Australian businesses source with confidence. Whether you are establishing your first supply chain or optimising an existing one, I bring local accountability and direct access to WAG&apos;s verified factory network in China.
         </p>
         <blockquote className="border-l-4 border-amber py-4 px-6 bg-[#fffbf0] my-8 font-serif italic text-lg leading-relaxed text-navy">
-          &quot;The suppliers are ready. The opportunity is real. You just need someone who&apos;s already on the ground to open the right doors.&quot;
+          &quot;You do not need to navigate this alone. I am here to translate the process, verify the suppliers, and make sure your interests are protected at every step.&quot;
         </blockquote>
-        <p className="text-base leading-relaxed text-gray-700">
-          Winning Adventure Global is the bridge Andy Liu wished had existed when he was helping his first Australian client source from China. We don&apos;t guess. We verify, match, and deliver.
+        <p className="text-base leading-relaxed text-gray-700 mb-5">
+          If you are evaluating suppliers, worried about quality consistency, or simply want to understand your options before committing — let us have a conversation. Straight talk about your sourcing challenges.
         </p>
-      </div>
-
-      {/* Australia Leadership */}
-      <div className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[1100px] mx-auto hidden">
-        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-12 md:gap-16 items-start">
-          {/* Profile Image */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-full aspect-[3/4] max-w-[280px] bg-gray-100 border-2 border-amber overflow-hidden">
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 text-gray-400">
-                <svg className="w-16 h-16 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <span className="text-xs text-gray-400 uppercase tracking-wider">Mark He</span>
-              </div>
-            </div>
-            <p className="mt-4 text-xs text-gray-500 text-center uppercase tracking-wider">
-              Managing Director, Australia
-            </p>
-          </div>
-
-          {/* Profile Content */}
-          <div>
-            <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-3">
-              Australia Team
-            </div>
-            <h2 className="font-serif text-[34px] font-normal leading-tight mb-7">
-              Your Australian Point of Contact for China Sourcing
-            </h2>
-            <p className="text-base leading-relaxed text-gray-700 mb-5">
-              As Managing Director of WAG&apos;s Australia office, I bridge the gap between Australian businesses and Chinese manufacturing. Based in Adelaide, I work directly with clients across Australia — from initial supplier search through to final delivery.
-            </p>
-            <p className="text-base leading-relaxed text-gray-700 mb-5">
-              My focus is simple: helping Australian businesses source with confidence. Whether you are establishing your first supply chain or optimising an existing one, I bring local accountability and direct access to WAG&apos;s verified factory network in China.
-            </p>
-            <blockquote className="border-l-4 border-amber py-4 px-6 bg-[#fffbf0] my-8 font-serif italic text-lg leading-relaxed text-navy">
-              &quot;You do not need to navigate this alone. I am here to translate the process, verify the suppliers, and make sure your interests are protected at every step.&quot;
-            </blockquote>
-            <p className="text-base leading-relaxed text-gray-700 mb-5">
-              If you are evaluating suppliers, worried about quality consistency, or simply want to understand your options before committing — let us have a conversation. No pressure, no obligations. Just straight talk about your sourcing challenges.
-            </p>
-            <div className="flex items-center gap-4 mt-6">
-              <a
-                href="https://www.linkedin.com/in/mark-zhe-he/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-navy text-white text-sm font-semibold py-3 px-6 tracking-wide transition-opacity hover:opacity-85 min-h-11"
-              >
-                Connect on LinkedIn
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-              <Link
-                href="/enquiry"
-                className="inline-block bg-amber text-navy text-sm font-semibold py-3 px-8 tracking-wide transition-opacity hover:opacity-85 min-h-11"
-              >
-                Book a Consultation
-              </Link>
-            </div>
-          </div>
+        <div className="flex items-center gap-4 mt-6 md:justify-start justify-center">
+          <a
+            href="https://www.linkedin.com/in/mark-zhe-he/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-navy text-white text-sm font-semibold py-3 px-6 tracking-wide transition-opacity hover:opacity-85 min-h-11"
+          >
+            Connect on LinkedIn
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <Link
+            href="/enquiry"
+            className="inline-block bg-amber text-navy text-sm font-semibold py-3 px-8 tracking-wide transition-opacity hover:opacity-85 min-h-11"
+          >
+            Book a Consultation
+          </Link>
         </div>
+
+        {/* TODO: Add professional headshot for Mark He when available - insert here */}
       </div>
 
-      {/* Values Strip */}
+      {/* Values Strip - Position 3: Principles before narrative */}
       <div className="bg-navy py-12 px-4 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-px">
         <div className="py-8 px-8 border-r border-white/10">
           <div className="text-[11px] font-semibold text-amber tracking-[0.1em] mb-3">01</div>
@@ -188,7 +161,29 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Split Section */}
+      {/* Founder Story - Position 4: Origin story after trust established */}
+      <div className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto">
+        <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-5">
+          The Founder&apos;s Story
+        </div>
+        <h2 className="font-serif text-[34px] font-normal leading-tight mb-7">
+          I&apos;ve Spent Years Building the Bridges Most Businesses Never Find
+        </h2>
+        <p className="text-base leading-relaxed text-gray-700 mb-5">
+          When Andy Liu moved from China to Adelaide, the gap was immediately apparent. Australian businesses were leaving millions on the table — not because Chinese suppliers didn&apos;t want to work with them, but because no one was doing the translation work. Not just language. Trust. Process. Relationships.
+        </p>
+        <p className="text-base leading-relaxed text-gray-700 mb-5">
+          Andy has spent years inside Chinese manufacturing hubs — Shenzhen, Foshan, Guangzhou. He knows which suppliers deliver on time, which ones cut corners on quality, and which ones are genuinely excited to build long-term partnerships with Australian B2B buyers.
+        </p>
+        <blockquote className="border-l-4 border-amber py-4 px-6 bg-[#fffbf0] my-8 font-serif italic text-lg leading-relaxed text-navy">
+          &quot;The suppliers are ready. The opportunity is real. You just need someone who&apos;s already on the ground to open the right doors.&quot;
+        </blockquote>
+        <p className="text-base leading-relaxed text-gray-700">
+          Winning Adventure Global is the bridge Andy Liu wished had existed when he was helping his first Australian client source from China. We don&apos;t guess. We verify, match, and deliver.
+        </p>
+      </div>
+
+      {/* Split Section - Position 5 */}
       <div className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
         <div className="bg-[#F9FAFB] py-12 md:py-20 px-4 md:px-[60px] border-r border-gray-200">
           <div className="text-[11px] font-semibold text-amber tracking-[0.15em] uppercase mb-4">
@@ -273,36 +268,222 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Bridge Visual */}
-      <div className="py-10 md:py-[60px] px-4 md:px-20 bg-navy text-center">
-        <h3 className="font-serif text-[28px] text-white mb-10">
-          We are the bridge between these two worlds
-        </h3>
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 flex-wrap">
-          <div className="flex-1 max-w-[280px] bg-white/5 border-2 border-white/15 py-8 px-6 text-center">
-            <h4 className="text-base font-semibold text-white mb-2">Australian Business</h4>
-            <p className="text-xs text-[#8a9bb0] leading-relaxed">
-              You know your market. You know what your customers need. You need a reliable supply chain.
-            </p>
+      {/* Stats Bar - Position 6 */}
+      <div className="bg-navy py-12 px-4 md:px-20">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <p className="text-3xl font-bold text-amber mb-1">500+</p>
+            <p className="text-sm text-white">Verified Factory Partners</p>
           </div>
-          <div className="text-[32px] text-amber px-5">→</div>
-          <div className="flex-1 max-w-[280px] bg-amber border-2 border-amber py-8 px-6 text-center">
-            <h4 className="text-base font-semibold text-white mb-2">Winning Adventure Global</h4>
-            <p className="text-xs text-navy leading-relaxed">
-              We verify suppliers. We translate needs. We open doors. We stay with you through the entire relationship.
-            </p>
+          <div>
+            <p className="text-3xl font-bold text-amber mb-1">6</p>
+            <p className="text-sm text-white">Chinese Provinces</p>
           </div>
-          <div className="text-[32px] text-amber px-5">→</div>
-          <div className="flex-1 max-w-[280px] bg-white/5 border-2 border-white/15 py-8 px-6 text-center">
-            <h4 className="text-base font-semibold text-white mb-2">Chinese Supplier</h4>
-            <p className="text-xs text-[#8a9bb0] leading-relaxed">
-              They have capacity. They want Australian partners. They need someone who speaks both languages.
-            </p>
+          <div>
+            <p className="text-3xl font-bold text-amber mb-1">7+</p>
+            <p className="text-sm text-white">Industries Covered</p>
           </div>
         </div>
       </div>
 
-      {/* Contact Info */}
+      {/* Client Case Studies - Position 7 */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-[#f8f9fb]">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-xs text-amber font-semibold tracking-wider uppercase mb-4">Results We Have Delivered</p>
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-10">
+            Real outcomes for Australian businesses
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {/* Medical Equipment */}
+            <ScrollReveal delay={0}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <CheckCircle size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Medical Equipment</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
+                An Adelaide-based clinic needed a verified supplier for theatre-grade instruments. WAG audit found documentation gaps at two factories. Third visit confirmed GMP compliance.
+              </p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">Avoided: compliance risk · Verification cost: $1,200</p>
+            </div>
+            </ScrollReveal>
+
+            {/* Fitness Equipment */}
+            <ScrollReveal delay={80}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Sparkles size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Fitness Equipment</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
+                A Melbourne retailer faced a 40% tariff pass-through from their local distributor. WAG identified three manufacturers in Jiangsu/Zhejiang. Selected factory delivered equivalent spec at 22% below tariff-adjusted local price.
+              </p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">22% cost reduction · Order value: $180,000</p>
+            </div>
+            </ScrollReveal>
+
+            {/* Food Ingredients */}
+            <ScrollReveal delay={160}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Package size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Food Ingredients</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
+                A Sydney importer needed a backup supplier after their Shanghai factory failed due to port congestion. WAG arranged audit and sample run from an alternative Guangdong facility in 12 days.
+              </p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">12-day backup supplier secured · Avoided: 6-week delay</p>
+            </div>
+            </ScrollReveal>
+
+            {/* Industrial Components */}
+            <ScrollReveal delay={240}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Tractor size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Industrial Components</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
+                A Brisbane manufacturer discovered their Ningbo supplier&apos;s quality had degraded over 18 months. WAG conducted a three-way comparison visit. New supplier selected with 99.2% defect rate vs previous 94.1%.
+              </p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">Quality: 94.1% to 99.2% defect rate · MOQ: 500 units</p>
+            </div>
+            </ScrollReveal>
+
+            {/* Building Materials */}
+            <ScrollReveal delay={320}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <UtensilsCrossed size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Building Materials</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
+                A Perth hardware importer sourced from the same Guangzhou factory for 5 years. A price increase prompted a search for alternatives. WAG visited two facilities in Foshan — second offered 15% reduction with equal ASTM certification.
+              </p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">15% cost reduction · Maintained: ASTM compliance</p>
+            </div>
+            </ScrollReveal>
+
+            {/* Automotive Parts */}
+            <ScrollReveal delay={400}>
+            <div className="h-[220px] flex flex-col rounded-xl bg-white border border-gray-200 p-6">
+              <div className="w-10 h-10 rounded-full bg-amber/10 flex items-center justify-center mb-4">
+                <Sun size={20} className="text-amber" />
+              </div>
+              <div className="text-xs text-amber font-semibold mb-2">Automotive Parts</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4 line-clamp-3">
+                A regional NSW auto parts wholesaler needed a Chinese supplier who understood Australian Design Rules. WAG matched them with a Shenzhen manufacturer with prior ADR experience. Three-month onboarding included documentation review.
+              </p>
+              <p className="text-xs text-gray-500 font-medium mt-auto">ADR-compliant supplier matched · Onboarding: 3 months</p>
+            </div>
+            </ScrollReveal>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Bridge Visual - Position 8 */}
+      <section className="py-16 md:py-20 px-4 md:px-8 bg-navy">
+        <div className="max-w-[1100px] mx-auto">
+          <h3 className="font-serif text-[28px] text-white mb-12 text-center">
+            Bridging Australian Businesses with Chinese Manufacturers
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-6 md:gap-4 items-stretch">
+
+            {/* Australian Business */}
+            <div className="bg-white/5 border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center">
+              <div className="w-14 h-14 rounded-full bg-blue-500/20 flex items-center justify-center mb-5">
+                <Building2 size={28} className="text-blue-400" />
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-3">Australian Business</h4>
+              <p className="text-sm text-[#8a9bb0] leading-relaxed">
+                You know your market. You know what your customers need. You need a reliable supply chain.
+              </p>
+            </div>
+
+            {/* Arrow 1 */}
+            <div className="hidden md:flex flex-col items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-amber/20 flex items-center justify-center">
+                <ArrowRight size={20} className="text-amber" />
+              </div>
+            </div>
+
+            {/* WAG Bridge */}
+            <div className="bg-amber rounded-2xl p-8 flex flex-col items-center text-center">
+              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-5">
+                <Globe size={28} className="text-white" />
+              </div>
+              <h4 className="text-lg font-semibold text-navy mb-3">Winning Adventure Global</h4>
+              <p className="text-sm text-navy/80 leading-relaxed">
+                We verify suppliers. We translate needs. We open doors. We stay with you through the entire relationship.
+              </p>
+            </div>
+
+            {/* Arrow 2 */}
+            <div className="hidden md:flex flex-col items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-amber/20 flex items-center justify-center">
+                <ArrowRight size={20} className="text-amber" />
+              </div>
+            </div>
+
+            {/* Chinese Supplier */}
+            <div className="bg-white/5 border border-white/20 rounded-2xl p-8 flex flex-col items-center text-center">
+              <div className="w-14 h-14 rounded-full bg-red-500/20 flex items-center justify-center mb-5">
+                <Users size={28} className="text-red-400" />
+              </div>
+              <h4 className="text-lg font-semibold text-white mb-3">Chinese Supplier</h4>
+              <p className="text-sm text-[#8a9bb0] leading-relaxed">
+                They have capacity. They want Australian partners. They need someone who speaks both languages.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* South Australia Presence - Position 9 */}
+      <section className="py-12 md:py-16 px-4 md:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-[11px] font-semibold text-amber tracking-[0.15em] uppercase mb-4">
+            Our Location
+          </div>
+          <h2 className="font-serif text-[28px] md:text-[32px] font-normal mb-6 text-navy">
+            Australian-owned, China-based — the best of both worlds
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                Winning Adventure Global is Australian-owned and operated, with boots on the ground in both Adelaide and across China&apos;s manufacturing heartlands. We work with businesses Australia-wide — from Perth to Sydney, Brisbane to Melbourne — helping each client navigate the complexities of Chinese sourcing with local accountability.
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                Our Adelaide office serves as your local point of contact, managing client relationships and coordination. Our team in China handles factory verification, supplier matching, and on-the-ground logistics. This dual presence means you deal with someone in your timezone who understands your needs — while we manage the details on the ground.
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Whether you are based in Adelaide or Auckland, Darwin or Docklands, we bring the same rigor to every engagement. Your supply chain success is our priority, backed by boots-on-the-ground verification across Guangdong, Jiangsu, Zhejiang, and beyond.
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.007699036242!2d138.6085374!3d-34.906256299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c9234a2460b1%3A0x4e46dbce81f63d91!2s5%2F54%20Melbourne%20St%2C%20North%20Adelaide%20SA%205006!5e0!3m2!1sen!2sau!4v1779435144896!5m2!1sen!2sau"
+                width="100%"
+                height="280"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Winning Adventure Global - 5/54 Melbourne St, North Adelaide SA 5006"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section - Position 10: Before Contact for objection handling */}
+      {/* Note: FAQ component has its own header built-in */}
+      <FAQ faqs={aboutFaqs} />
+
+      {/* Contact Info - Position 11: At end for ready-to-act timing */}
       <section className="py-10 md:py-16 px-4 md:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-2xl text-navy mb-8">Contact Us</h2>
@@ -350,67 +531,6 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* South Australia Presence */}
-      <section className="py-12 md:py-16 px-4 md:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-[11px] font-semibold text-amber tracking-[0.15em] uppercase mb-4">
-            Our Location
-          </div>
-          <h2 className="font-serif text-[28px] md:text-[32px] font-normal mb-6 text-navy">
-            Strategically Positioned in Adelaide, South Australia
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                Based in Adelaide&apos;s North Adelaide precinct, WAG is positioned at the heart of South Australia&apos;s business community. Our CBD proximity gives us direct access to major transportation networks, including the Port Adelaide container terminals and the Adelaide Airport freight facilities.
-              </p>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                South Australia is rapidly becoming a hub for advanced manufacturing and export-oriented businesses. The Adelaide CBD houses key industry clusters in defense, health, and technology sectors, while surrounding warehouse districts in Dry Creek, Wingfield, and Port Adelaide provide essential logistics infrastructure for import-export operations.
-              </p>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                From our North Adelaide office, we coordinate factory tour programs across China&apos;s manufacturing heartlands while maintaining close relationships with South Australian businesses ready to expand their supplier networks internationally.
-              </p>
-            </div>
-            <div className="bg-gray-50 p-6">
-              <div className="text-[11px] font-semibold text-amber tracking-[0.12em] uppercase mb-3">
-                Key Locations We Serve
-              </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-amber font-bold">Adelaide CBD</span>
-                  <span className="text-sm text-gray-600">Business district and professional services hub</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-amber font-bold">Port Adelaide</span>
-                  <span className="text-sm text-gray-600">Primary container port and freight hub</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-amber font-bold">Dry Creek / Wingfield</span>
-                  <span className="text-sm text-gray-600">Warehouse districts and logistics centers</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-amber font-bold">South Australia</span>
-                  <span className="text-sm text-gray-600">State-wide manufacturing and export sector</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4 md:px-8 bg-[#f8f9fb]">
-        <div className="max-w-[800px] mx-auto">
-          <div className="text-center mb-12">
-            <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Frequently Asked Questions</p>
-            <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy">
-              Everything You Need to Know
-            </h2>
-          </div>
-          <FAQ faqs={aboutFaqs} />
         </div>
       </section>
 

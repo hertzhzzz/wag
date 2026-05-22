@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { faqs as defaultFaqs } from '@/data/faqs'
 
 type FAQItem = {
@@ -14,14 +14,38 @@ interface FAQProps {
 
 export default function FAQ({ faqs = defaultFaqs }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [visible, setVisible] = useState(false)
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
   }
 
   return (
-    <section className="bg-white py-14 px-4 md:px-6">
-      <div className="max-w-[640px] mx-auto">
+    <section className="bg-white py-14 px-8 md:px-20">
+      <div
+        ref={sectionRef}
+        className={`max-w-[640px] mx-auto transition-all duration-700 ${
+          visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}
+      >
         <p className="text-sm font-normal text-navy/50 mb-3">
           Frequently Asked Questions
         </p>

@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'China New Home Sales Drop: What It Means for Australian Importers'. Clean layout with navy background (#0F2D5E). Top: white title 'China Home Sales Drop'. Amber market accent. Center: declining chart with Australia connection icons. Bottom right: small WAG brand mark. Market analysis aesthetic. 16:9.

@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How to Verify Chinese Factories on 1688 Before Paying a Deposit'. Clean layout with navy background (#0F2D5E). Top: white title 'Verify Factories on 1688'. Amber accent. Center: 1688 platform icon with verification badge. Bottom right: small WAG brand mark. E-commerce safety aesthetic. 16:9.

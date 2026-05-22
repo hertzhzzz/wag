@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Shenzhen Factory Visit Guide 2026'. Clean layout with navy background (#0F2D5E). Top: white title 'Shenzhen Factory Visit Guide 2026'. Amber accent. Center: Shenzhen skyline with tech factory imagery. Bottom right: small WAG brand mark. Modern tech business aesthetic. 16:9.

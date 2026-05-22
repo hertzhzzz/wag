@@ -8,4 +8,11 @@ export const metadata: Metadata = {
     title: 'Resources | Winning Adventure Global',
     description: 'Free guides and checklists for Australian businesses sourcing from China.',
   },
+  alternates: {
+    canonical: 'https://www.winningadventure.com.au/resources',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/resources',
+      'x-default': 'https://www.winningadventure.com.au/resources',
+    },
+  },
 }

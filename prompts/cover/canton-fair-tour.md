@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Canton Fair Tour Guide 2026'. Clean layout with navy background (#0F2D5E). Top: white title 'Canton Fair Tour Guide 2026'. Amber accent. Center: exhibition hall icons with trade show imagery. Bottom right: small WAG brand mark. Professional trade exhibition aesthetic. 16:9.

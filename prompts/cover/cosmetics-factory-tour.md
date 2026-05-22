@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Cosmetics Factory Tour Guide 2026'. Clean layout with navy background (#0F2D5E). Top: white title 'Cosmetics Factory Tour Guide 2026'. Amber accent. Center: cosmetic bottle and skincare product icons. Bottom right: small WAG brand mark. Professional beauty/pharma business aesthetic. 16:9.

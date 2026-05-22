@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How the 2026 Trust Tax Changes Are Pushing Australian SMEs Toward China Sourcing'. Clean layout with navy background (#0F2D5E). Top: white title 'Trust Tax Changes and China Sourcing'. Amber finance accent. Center: tax document icons with sourcing imagery. Bottom right: small WAG brand mark. Tax strategy aesthetic. 16:9.

@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'China Factory Visits for Melbourne Businesses'. Clean layout with navy background (#0F2D5E). Top: white title 'China Factory Visits for Melbourne Businesses'. Amber accent. Center: Melbourne city icon connected to China factory icons. Bottom right: small WAG brand mark. Local Australian business aesthetic. 16:9.

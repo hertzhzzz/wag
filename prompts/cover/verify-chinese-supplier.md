@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How to Verify a Chinese Supplier'. Clean layout with navy background (#0F2D5E). Top: white title 'How to Verify a Chinese Supplier'. Amber accent. Center: magnifying glass over factory document icons. Bottom right: small WAG brand mark. Investigative trust-building aesthetic. 16:9.

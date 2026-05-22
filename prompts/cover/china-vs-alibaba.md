@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Direct Factory Sourcing vs Alibaba'. Clean layout with navy background (#0F2D5E). Top: white title 'Direct Factory vs Alibaba'. Amber comparison accent. Center: two-column comparison icons. Bottom right: small WAG brand mark. Comparison decision aesthetic. 16:9.

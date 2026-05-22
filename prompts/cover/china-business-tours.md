@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'China Business Tours for Australian Businesses'. Clean layout with navy background (#0F2D5E). Top: white title 'China Business Tours for Australian Businesses'. Amber accent. Center: business meeting icons bridging China and Australia. Bottom right: small WAG brand mark. Professional B2B aesthetic. 16:9.

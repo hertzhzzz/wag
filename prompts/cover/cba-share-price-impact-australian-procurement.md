@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'How CBA Share Price Movements Signal Changes in Australian Procurement'. Clean layout with navy background (#0F2D5E). Top: white title 'CBA Share Price and Procurement'. Amber finance accent. Center: stock chart icons with procurement imagery. Bottom right: small WAG brand mark. Financial market analysis aesthetic. 16:9.

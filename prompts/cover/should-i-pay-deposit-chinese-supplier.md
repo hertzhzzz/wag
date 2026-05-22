@@ -1,0 +1,1 @@
+Professional infographic blog cover for 'Should You Pay a Deposit to a Chinese Supplier?'. Clean layout with navy background (#0F2D5E). Top: white title 'Should You Pay a Deposit?'. Amber accent. Center: money and supplier icons with decision framework. Bottom right: small WAG brand mark. Decision-making business aesthetic. 16:9.
