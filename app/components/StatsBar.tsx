@@ -27,7 +27,7 @@ export default function StatsBar() {
 
   return (
     <div ref={statsRef} className="bg-navy">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 py-10 md:py-14 px-4 md:px-8">
+      <div className="max-w-[1120px] mx-auto grid grid-cols-2 md:grid-cols-4 py-10 md:py-14 px-4 md:px-8">
         <Stat icon={Building2} target={15} suffix="+" label="Industries" animate={hasAnimated} />
         <Stat icon={Factory} target={627} suffix="" label="Verified Suppliers" animate={hasAnimated} />
         <Stat icon={Clock} target={4} suffix="h" label="Response Time" animate={hasAnimated} />

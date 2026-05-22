@@ -47,7 +47,7 @@ export default function Hero() {
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-amber/5 to-transparent skew-x-12" />
 
       {/* Text Content - Left Side with improved hierarchy */}
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16">
         {/* Brand tag */}
         <div className="flex items-center gap-3 mb-6 hero-brand-tag is-visible">
           <span className="h-px w-8 bg-amber/70" />
@@ -114,7 +114,7 @@ export default function Hero() {
             <svg className="w-5 h-5 text-amber" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span>24hr Response Time</span>
+            <span>24hr Enquiry Response</span>
           </div>
         </div>
       </div>

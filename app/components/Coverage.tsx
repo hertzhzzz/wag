@@ -47,7 +47,7 @@ export default function Coverage() {
 
   return (
     <section className="bg-[#060e1f] text-[#e8eef7] py-20 px-6 pb-10">
-      <div className="max-w-[1100px] mx-auto">
+      <div className="max-w-[880px] mx-auto">
         <p className="text-xs font-semibold tracking-[2px] uppercase text-amber mb-3">
           Global Network
         </p>

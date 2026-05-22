@@ -9,7 +9,7 @@ export default function AnnouncementBar() {
 
   return (
     <div className="bg-amber text-navy w-full z-[200] relative">
-      <div className="max-w-[1200px] mx-auto px-6 py-2.5 flex items-center justify-center gap-3">
+      <div className="max-w-[960px] mx-auto px-6 py-2.5 flex items-center justify-center gap-3">
         <a
           href="#founding-clients"
           className="flex items-center gap-2 text-[13px] font-semibold hover:opacity-80 transition-opacity"

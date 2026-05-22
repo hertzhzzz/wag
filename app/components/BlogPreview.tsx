@@ -56,7 +56,7 @@ export default function BlogPreview() {
 
   return (
     <section className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-12 py-16">
+      <div className="max-w-[960px] mx-auto px-4 md:px-12 py-16">
         {/* Section header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <div>
@@ -77,15 +77,6 @@ export default function BlogPreview() {
               className="self-start md:self-auto text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors whitespace-nowrap flex items-center gap-1.5 min-h-11"
             >
               View All Resources
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-px">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
-            <Link
-              href="/case-studies"
-              className="self-start md:self-auto text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors whitespace-nowrap flex items-center gap-1.5 min-h-11"
-            >
-              Explore Case Studies
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-px">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
