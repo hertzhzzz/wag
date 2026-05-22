@@ -15,7 +15,7 @@ const steps = [
     num: '2',
     icon: ShieldCheck,
     title: 'We Review & Match',
-    desc: 'Within 3-7 days, we review your requirements and shortlist 2-3 pre-screened factories from our verified network.',
+    desc: 'Within 24-48 hours, we review your requirements and shortlist 2-3 pre-screened factories from our verified network.',
   },
   {
     num: '3',
@@ -60,7 +60,7 @@ export default function HowItWorks() {
 
   return (
     <section id="howitworks" className="bg-white py-14 md:py-18 px-6 md:px-10">
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1120px] mx-auto">
         {/* Section header - more professional */}
         <div className="max-w-2xl mb-12">
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">

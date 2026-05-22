@@ -7,7 +7,6 @@ import HowItWorks from './components/HowItWorks'
 import TwoWaysAccess from './components/TwoWaysAccess'
 import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
-import CaseStudies from '@/components/CaseStudies'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
@@ -42,7 +41,7 @@ function WhyChooseUs() {
 
   return (
     <section className="bg-navy/5 py-16 md:py-20 px-6 md:px-10">
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1120px] mx-auto">
         <div className="max-w-2xl mb-12">
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
             Our Commitment
@@ -60,73 +59,6 @@ function WhyChooseUs() {
             <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-navy/5">
               <h3 className="text-lg font-semibold text-navy mb-3">{reason.title}</h3>
               <p className="text-navy/60 text-sm leading-relaxed">{reason.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function OurProcess() {
-  const steps = [
-    {
-      number: '01',
-      title: 'What happens in the initial consultation?',
-      description: 'Tell us what you need to manufacture. We discuss your specifications, volume, timeline, and budget to identify suitable factory categories.',
-    },
-    {
-      number: '02',
-      title: 'How does factory matching work?',
-      description: 'We pre-screen our directory and identify 3-5 factories that match your requirements. You receive detailed profiles including capabilities, certifications, and sample pricing.',
-    },
-    {
-      number: '03',
-      title: 'How do we schedule factory visits in China?',
-      description: 'We coordinate your visit itinerary in Shenzhen, Guangzhou, or Shanghai. Our team accompanies you to each factory, handling translation and technical questions.',
-    },
-    {
-      number: '04',
-      title: 'How does sample evaluation work?',
-      description: 'Request samples from your shortlisted factories. We coordinate shipping, customs documentation, and delivery to your Australian address.',
-    },
-    {
-      number: '05',
-      title: 'How do we confirm an order with a factory?',
-      description: 'Once you select a factory, we assist with contract review, payment terms, and production scheduling. All communication goes through us for clarity.',
-    },
-    {
-      number: '06',
-      title: 'What does quality inspection involve?',
-      description: 'Before shipment, we conduct pre-shipment inspection at the factory. You receive a detailed report with photos and quality verification.',
-    },
-  ]
-
-  return (
-    <section className="bg-white py-16 md:py-20 px-6 md:px-10">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="max-w-2xl mb-12">
-          <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
-            How It Works
-          </p>
-          <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight mb-4">
-            Our Service Process
-          </h2>
-          <p className="text-navy/70 text-lg leading-relaxed">
-            Whether you join one of our scheduled group factory tours or arrange a private visit, our process ensures you leave China with qualified supplier relationships and clear next steps.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {steps.map((step, idx) => (
-            <div key={idx} className="relative">
-              <div className="text-6xl font-serif font-bold text-amber/10 absolute -top-2 -left-1">
-                {step.number}
-              </div>
-              <div className="relative pt-8">
-                <h3 className="text-lg font-semibold text-navy mb-2">{step.title}</h3>
-                <p className="text-navy/60 text-sm leading-relaxed">{step.description}</p>
-              </div>
             </div>
           ))}
         </div>
@@ -187,10 +119,8 @@ export default function Home() {
       ]} />
       <Hero />
       <TwoWaysAccess />
-      <WhyChooseUs />
-      <OurProcess />
-      <CaseStudies />
       <HowItWorks />
+      <WhyChooseUs />
       <BlogPreview />
       <FAQ faqs={homepageFaqs} />
       <CTABand />
