@@ -341,29 +341,33 @@ export default function EnquiryForm() {
             </div>
           </div>
 
-          {/* FAQ */}
-          <div className="border border-gray-200 rounded-lg divide-y divide-gray-100">
-            {[
-              { q: "Is there any upfront cost to enquire?", a: "None. The initial consultation is completely free." },
-              { q: "Do you push me towards specific suppliers?", a: "No. The decision is entirely yours." },
-              { q: "What if I'm not ready to travel yet?", a: "Book a call to discuss — we can plan well in advance." },
-            ].map((item, i) => (
-              <div key={i} className="px-6 py-5">
-                <p className="text-sm font-semibold text-[#0F2D5E] mb-1.5">{item.q}</p>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.a}</p>
-              </div>
-            ))}
-          </div>
+          {/* FAQ + Contact — 3-column: FAQ stacked | Direct Contact | Trust badges */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-          {/* Contact */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Column 1: FAQ stack */}
+            <div className="border border-gray-200 rounded-lg divide-y divide-gray-100">
+              <div className="px-6 py-5">
+                <p className="text-sm font-semibold text-[#0F2D5E] mb-1.5">Is there any upfront cost to enquire?</p>
+                <p className="text-sm text-gray-500 leading-relaxed">None. The initial consultation is completely free.</p>
+              </div>
+              <div className="px-6 py-5">
+                <p className="text-sm font-semibold text-[#0F2D5E] mb-1.5">Do you push me towards specific suppliers?</p>
+                <p className="text-sm text-gray-500 leading-relaxed">No. The decision is entirely yours.</p>
+              </div>
+              <div className="px-6 py-5">
+                <p className="text-sm font-semibold text-[#0F2D5E] mb-1.5">What if I&apos;m not ready to travel yet?</p>
+                <p className="text-sm text-gray-500 leading-relaxed">Book a call to discuss — we can plan well in advance.</p>
+              </div>
+            </div>
+
+            {/* Column 2: Direct Contact */}
             <div className="border border-gray-200 rounded-lg p-6">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">Direct Contact</h4>
-              <div className="flex items-start gap-2.5 text-sm text-gray-600 mb-2">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">Direct Contact</p>
+              <div className="flex items-start gap-2.5 text-sm text-gray-600 mb-3">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
                 <span>5/54 Melbourne St, North Adelaide SA 5006</span>
               </div>
-              <div className="flex items-center gap-2.5 text-sm mb-4">
+              <div className="flex items-center gap-2.5 text-sm">
                 <Mail size={16} className="flex-shrink-0" />
                 <a href="mailto:mark@winningadventure.com.au" className="text-[#0F2D5E] font-medium hover:text-[#F59E0B]">
                   mark@winningadventure.com.au
@@ -371,6 +375,7 @@ export default function EnquiryForm() {
               </div>
             </div>
 
+            {/* Column 3: Trust badges */}
             <div className="bg-[#f3f4f6] border border-gray-200 rounded-lg p-6 flex flex-col justify-center gap-4">
               {([
                 [CheckCircle, 'Verified Suppliers Only'],
@@ -385,6 +390,7 @@ export default function EnquiryForm() {
                 </div>
               ))}
             </div>
+
           </div>
 
         </div>
