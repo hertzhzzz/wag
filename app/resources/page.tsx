@@ -8,7 +8,6 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Resources',
   description: 'Free guides on verifying Chinese suppliers, planning factory visits, and import strategies. Expert resources for Australian businesses sourcing from China.',
-  keywords: ['china manufacturing resources', 'factory guide australia', 'supplier tips china', 'china sourcing guide', 'australian import china', 'verify chinese suppliers'],
   openGraph: {
     title: 'Resources | Winning Adventure Global',
     description: 'Expert guides on planning factory visits in China for Australian businesses. Includes supplier verification checklists and import tips.',
@@ -102,8 +101,29 @@ function getArticles(): Article[] {
 export default function ResourcesPage() {
   const articles = getArticles()
 
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'China Sourcing Agent Resources',
+    description: 'Expert guides on China sourcing, factory visits, and cross-border trade for Australian B2B businesses.',
+    url: 'https://www.winningadventure.com.au/resources',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: articles.map((article, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: article.title,
+        url: `https://www.winningadventure.com.au/resources/${article.slug}`,
+      })),
+    },
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
         { name: 'Resources', url: 'https://www.winningadventure.com.au/resources' }

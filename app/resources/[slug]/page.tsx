@@ -11,7 +11,8 @@ import { ReadingProgressBar } from './ReadingProgressBar'
 import { BackToTopButton } from './BackToTopButton'
 import { ShareButtons } from './ShareButtons'
 import { ArticleNavigation } from './ArticleNavigation'
-import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema } from './article-utils'
+import { RecommendedSidebar } from './RecommendedSidebar'
+import { getArticle, getAllSlugs, getPrevNextArticles, getRecommendedArticles, splitContent, extractFaqsFromContent, formatDateForSchema } from './article-utils'
 import { HOW_TO_ARTICLES } from './how-to-data'
 import { createMdxComponents } from './mdx-components'
 import type { Frontmatter } from './types'
@@ -81,6 +82,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { frontmatter: fm, content } = article
   const takeaways: string[] = fm.takeaways || []
   const { prevArticle, nextArticle } = getPrevNextArticles(slug)
+  const recommended = getRecommendedArticles(slug, fm.category)
   const { intro, body } = splitContent(content)
   // Extract FAQs from MDX content for JSON-LD schema
   const articleFaqs = extractFaqsFromContent(content)
@@ -126,38 +128,52 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <HeroSection fm={fm} />
 
       {/* Article Body */}
-      <article className="py-10 px-6">
-        <div className="max-w-[900px] mx-auto">
+      <div className="py-10 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Main article content */}
+            <main className="flex-1 min-w-0 max-w-[900px]">
+              <article>
+                <div className="max-w-[900px] mx-auto">
 
-          {/* Key Takeaways - positioned early for scannability */}
-          {takeaways.length > 0 && <KeyTakeaways items={takeaways} />}
+                  {/* Key Takeaways - positioned early for scannability */}
+                  {takeaways.length > 0 && <KeyTakeaways items={takeaways} />}
 
-          {/* Article Meta with Share */}
-          <div className="flex items-center justify-between py-3 border-b border-gray-200 mb-6">
-            <div className="flex items-center gap-4 text-sm text-gray-400">
-              <span>{fm.date}</span>
-            </div>
-            <ShareButtons
-              title={fm.title}
-              url={`https://www.winningadventure.com.au/resources/${slug}`}
-            />
+                  {/* Article Meta with Share */}
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200 mb-6">
+                    <div className="flex items-center gap-4 text-sm text-gray-400">
+                      <span>{fm.date}</span>
+                    </div>
+                    <ShareButtons
+                      title={fm.title}
+                      url={`https://www.winningadventure.com.au/resources/${slug}`}
+                    />
+                  </div>
+
+                  {/* Intro Section - The Hook */}
+                  <div className="pb-8 border-b border-gray-200 mb-8">
+                    <MDXRemote source={intro} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+                  </div>
+
+                  {/* Body Content */}
+                  <MDXRemote source={body} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+
+                  {/* Bottom CTA */}
+                  <BottomCTA fm={fm} />
+
+                  {/* Previous / Next Navigation */}
+                  <ArticleNavigation prevArticle={prevArticle} nextArticle={nextArticle} />
+                </div>
+              </article>
+            </main>
+
+            {/* Recommended Reading Sidebar */}
+            <aside className="w-full lg:w-80 flex-shrink-0">
+              <RecommendedSidebar articles={recommended} />
+            </aside>
           </div>
-
-          {/* Intro Section - The Hook */}
-          <div className="pb-8 border-b border-gray-200 mb-8">
-            <MDXRemote source={intro} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
-          </div>
-
-          {/* Body Content */}
-          <MDXRemote source={body} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
-
-          {/* Bottom CTA */}
-          <BottomCTA fm={fm} />
-
-          {/* Previous / Next Navigation */}
-          <ArticleNavigation prevArticle={prevArticle} nextArticle={nextArticle} />
         </div>
-      </article>
+      </div>
 
       <Footer />
     </>

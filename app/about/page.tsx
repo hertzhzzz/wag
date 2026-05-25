@@ -8,7 +8,7 @@ import FAQSchema from '@/components/FAQSchema'
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import ScrollReveal from '@/services/ScrollReveal'
-import { CheckCircle, Sparkles, Tractor, Package, UtensilsCrossed, Sun, Building2, Users, Globe, ArrowRight } from 'lucide-react'
+import { CheckCircle, Sparkles, Tractor, Package, UtensilsCrossed, Sun, Building2, Users, Globe, ArrowRight, Briefcase } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Australia China Sourcing Agency | Factory Tours & Supplier Verification | Winning Adventure Global',
@@ -271,15 +271,24 @@ export default function AboutPage() {
       {/* Stats Bar - Position 6 */}
       <div className="bg-navy py-12 px-4 md:px-20">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 rounded-full bg-amber/10 flex items-center justify-center mb-3">
+              <Building2 className="w-6 h-6 text-amber" />
+            </div>
             <p className="text-3xl font-bold text-amber mb-1">500+</p>
             <p className="text-sm text-white">Verified Factory Partners</p>
           </div>
-          <div>
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 rounded-full bg-amber/10 flex items-center justify-center mb-3">
+              <Globe className="w-6 h-6 text-amber" />
+            </div>
             <p className="text-3xl font-bold text-amber mb-1">6</p>
             <p className="text-sm text-white">Chinese Provinces</p>
           </div>
-          <div>
+          <div className="flex flex-col items-center">
+            <div className="w-12 h-12 rounded-full bg-amber/10 flex items-center justify-center mb-3">
+              <Briefcase className="w-6 h-6 text-amber" />
+            </div>
             <p className="text-3xl font-bold text-amber mb-1">7+</p>
             <p className="text-sm text-white">Industries Covered</p>
           </div>

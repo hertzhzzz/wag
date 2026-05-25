@@ -52,7 +52,6 @@ export function getPrevNextArticles(currentSlug: string): PrevNextArticles {
     return {}
   }
 
-  // Pre-fetch both articles in a single pass
   const articlesCache = new Map<string, ArticleNavItem | null>()
 
   const prevSlug = currentIndex > 0 ? allSlugs[currentIndex - 1] : null
@@ -80,6 +79,54 @@ export function getPrevNextArticles(currentSlug: string): PrevNextArticles {
     prevArticle: prevSlug ? articlesCache.get(prevSlug) ?? undefined : undefined,
     nextArticle: nextSlug ? articlesCache.get(nextSlug) ?? undefined : undefined,
   }
+}
+
+// ============================================
+// RECOMMENDED ARTICLES
+// ============================================
+
+export interface RecommendedArticle {
+  slug: string
+  title: string
+  category: string
+  readTime: string
+  date: string
+  coverImage?: string
+  desc?: string
+}
+
+/**
+ * Get recommended articles based on same category.
+ * Excludes current article, returns up to 4 most recent in same category.
+ */
+export function getRecommendedArticles(currentSlug: string, category: string): RecommendedArticle[] {
+  const allSlugs = getAllSlugs()
+  const recommended: RecommendedArticle[] = []
+
+  for (const slug of allSlugs) {
+    if (slug === currentSlug) continue
+    const article = getArticle(slug)
+    if (!article) continue
+    if (article.frontmatter.category !== category) continue
+    recommended.push({
+      slug,
+      title: article.frontmatter.title,
+      category: article.frontmatter.category,
+      readTime: article.frontmatter.readTime,
+      date: article.frontmatter.date,
+      coverImage: article.frontmatter.coverImage,
+      desc: (article.frontmatter as any).desc || article.frontmatter.description,
+    })
+  }
+
+  // Sort by date descending (most recent first)
+  recommended.sort((a, b) => {
+    const dateA = new Date(a.date).getTime()
+    const dateB = new Date(b.date).getTime()
+    return dateB - dateA
+  })
+
+  return recommended.slice(0, 4)
 }
 
 // ============================================

@@ -85,7 +85,7 @@ export const metadata: Metadata = {
 }
 
 export const links = () => [
-  { rel: 'preload', href: '/og-image-poster.webp', as: 'image' },
+  { rel: 'preload', href: '/hero-image.webp', as: 'image' },
 ]
 
 export const viewport = {
@@ -115,7 +115,7 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="lazyOnload" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -124,7 +124,7 @@ export default function RootLayout({
             gtag('config', 'G-VEGJ1YL8YR');
           `}
         </Script>
-        <Script id="meta-pixel" strategy="lazyOnload" dangerouslySetInnerHTML={{
+        <Script id="meta-pixel" strategy="afterInteractive" dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -138,7 +138,7 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `
         }} />
-        <Script async src="https://analytics.ahrefs.com/analytics.js" data-key="jnLQ8HPV22LB0X0XwFMCxw" strategy="lazyOnload" />
+        <Script async src="https://analytics.ahrefs.com/analytics.js" data-key="jnLQ8HPV22LB0X0XwFMCxw" strategy="afterInteractive" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
