@@ -86,6 +86,8 @@ export const metadata: Metadata = {
 
 export const links = () => [
   { rel: 'preload', href: '/hero-image.webp', as: 'image' },
+  { rel: 'preconnect', href: 'https://www.winningadventure.com.au' },
+  { rel: 'preload', href: '/logos/logo-nav-trans.png', as: 'image' },
 ]
 
 export const viewport = {
