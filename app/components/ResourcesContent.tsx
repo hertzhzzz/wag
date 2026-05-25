@@ -4,7 +4,9 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
+
+const PAGE_SIZE = 9
 
 interface Article {
   slug: string
@@ -24,12 +26,9 @@ interface ResourcesContentProps {
 }
 
 export default function ResourcesContent({ articles }: ResourcesContentProps) {
-  const sortedArticles = useMemo(() => {
-    return [...articles].sort((a, b) => {
-      if (!a.date || !b.date) return 0
-      return a.date < b.date ? 1 : -1
-    })
-  }, [articles])
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = Math.ceil(articles.length / PAGE_SIZE)
+  const visibleArticles = articles.slice(0, currentPage * PAGE_SIZE)
 
   const [email, setEmail] = useState('')
   const [subscribeStatus, setSubscribeStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -86,7 +85,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
 
         {/* Article cards - Vertical Masonry */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {sortedArticles.map((article) => (
+            {visibleArticles.map((article) => (
               <Link
                 key={article.slug}
                 href={`/resources/${article.slug}`}
@@ -124,6 +123,18 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
               </Link>
             ))}
           </div>
+
+          {currentPage < totalPages && (
+            <div className="text-center mt-10">
+              <button
+                onClick={() => setCurrentPage(p => p + 1)}
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0F2D5E] text-white text-[13px] font-bold hover:bg-[#0F2D5E]/90 transition-colors"
+              >
+                Load More Articles
+                <span className="text-[11px] opacity-70">({visibleArticles.length} of {articles.length})</span>
+              </button>
+            </div>
+          )}
       </div>
 
       {/* Explore More Section */}
@@ -161,17 +172,31 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
             </p>
           </Link>
           <Link
-            href="/resources"
-            className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
+            href="/resources/china-sourcing-agent"
+            className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
           >
-            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
-              Factory Directory
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
+              Service Page
             </span>
             <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
-              Adelaide
+              China Sourcing Agent
             </h3>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Verified manufacturers ready to work with Australian businesses.
+              Direct factory access without middleman markups. Start your quote.
+            </p>
+          </Link>
+          <Link
+            href="/enquiry"
+            className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
+              Get Started
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              Book a Consultation
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Tell us what you need. Free 30-minute consultation for Australian businesses.
             </p>
           </Link>
         </div>
@@ -194,9 +219,14 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
               <h2 className="font-serif text-white text-[28px] font-semibold mb-3">
                 Stay Ahead of the Supply Chain
               </h2>
-              <p className="text-gray-300 text-[15px] mb-8">
+              <p className="text-gray-300 text-[15px] mb-6">
                 Monthly insights on China sourcing, delivered to Australian importers who want an edge.
               </p>
+              <ul className="text-gray-300 text-[13px] space-y-1.5 mb-8 text-left max-w-[360px] mx-auto">
+                <li>Monthly: Factory cost trends affecting Australian importers</li>
+                <li>Quarterly: Supplier verification checklists</li>
+                <li>Ad-hoc: Tariff and customs updates for Australian businesses</li>
+              </ul>
               <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row gap-4 max-w-[440px] mx-auto">
                 <input
                   type="email"
@@ -214,7 +244,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
                   disabled={subscribeStatus === 'loading'}
                   className="bg-[#F59E0B] text-[#0F2D5E] px-6 py-4 text-[13px] font-bold whitespace-nowrap hover:bg-amber-400 transition-colors disabled:opacity-50 min-h-11"
                 >
-                  {subscribeStatus === 'loading' ? 'Subscribing...' : 'Subscribe Free'}
+                  {subscribeStatus === 'loading' ? 'Subscribing...' : 'Send Me the Briefing'}
                 </button>
               </form>
               {subscribeStatus === 'error' && (
