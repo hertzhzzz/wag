@@ -111,6 +111,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="preload" as="video" href="/hero_vid_h264.mp4" fetchPriority="high" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
@@ -158,7 +159,6 @@ export default function RootLayout({
                 "sameAs": [
                   "https://www.linkedin.com/company/winning-adventure-global"
                 ],
-                "knowsAbout": ["China Manufacturing", "Supply Chain Management", "Factory Verification", "International Trade", "Pearl River Delta Manufacturing"]
               },
               "address": {
                 "@type": "PostalAddress",
