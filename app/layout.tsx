@@ -115,7 +115,7 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="afterInteractive" />
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="afterInteractive" type="text/partytown" />
         <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -124,7 +124,7 @@ export default function RootLayout({
             gtag('config', 'G-VEGJ1YL8YR');
           `}
         </Script>
-        <Script id="meta-pixel" strategy="afterInteractive" dangerouslySetInnerHTML={{
+        <Script id="meta-pixel" strategy="afterInteractive" type="text/partytown" dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -138,7 +138,10 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `
         }} />
-        <Script async src="https://analytics.ahrefs.com/analytics.js" data-key="jnLQ8HPV22LB0X0XwFMCxw" strategy="afterInteractive" />
+        <Script async src="https://analytics.ahrefs.com/analytics.js" data-key="jnLQ8HPV22LB0X0XwFMCxw" strategy="afterInteractive" type="text/partytown" />
+        <Script id="partytown-config" type="text/partytown">
+          {`partytown = { lib: "/~partytown/", forward: ["dataLayer.push", "gtag", "fbq"] }`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
