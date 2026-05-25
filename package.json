@@ -12,6 +12,7 @@
     "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.3",
     "@remotion/animation-utils": "^4.0.429",
     "@remotion/player": "^4.0.429",
     "@upstash/ratelimit": "^2.0.0",

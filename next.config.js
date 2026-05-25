@@ -4,7 +4,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const nextConfig = {
-  transpilePackages: ['react-globe.gl', 'three-globe', 'globe.gl'],
+  transpilePackages: ['react-globe.gl', 'three-globe', 'globe.gl', '@builder.io/partytown'],
   reactStrictMode: true,
   async redirects() {
     return [
