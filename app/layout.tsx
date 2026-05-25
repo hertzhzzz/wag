@@ -91,7 +91,7 @@ export const links = () => [
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({
