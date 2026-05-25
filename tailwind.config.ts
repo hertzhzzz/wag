@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         navy: '#0F2D5E',
-        amber: '#F59E0B',
+        amber: '#C97A0A',
       },
       fontFamily: {
         sans: ['var(--font-ibm-plex-sans)'],
