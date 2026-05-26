@@ -35,7 +35,7 @@ export default function Hero() {
           className="w-full h-full object-cover"
           poster="/og-image-1920.webp"
         >
-          <source src="/hero_vid_h264.mp4" type="video/mp4" />
+          <source src="/hero_vid_compressed.mp4" type="video/mp4" />
         </video>
 
         {/* Professional gradient overlay - more sophisticated than simple solid */}
