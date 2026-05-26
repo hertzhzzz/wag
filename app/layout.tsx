@@ -7,13 +7,13 @@ import MarkHeSchema from './components/MarkHeSchema'
 
 
 const ibmPlexSans = IBM_Plex_Sans({
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '600'],
   subsets: ['latin'],
   variable: '--font-ibm-plex-sans',
 })
 
 const ibmPlexSerif = IBM_Plex_Serif({
-  weight: ['300', '400', '600', '700'],
+  weight: ['400', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-ibm-plex-serif',
@@ -64,10 +64,10 @@ export const metadata: Metadata = {
     images: ['/og-image.webp'],
   },
   alternates: {
-    canonical: 'https://www.winningadventure.com.au/',
+    canonical: 'https://www.winningadventure.com.au',
     languages: {
-      'en-AU': 'https://www.winningadventure.com.au/',
-      'x-default': 'https://www.winningadventure.com.au/',
+      'en-AU': 'https://www.winningadventure.com.au',
+      'x-default': 'https://www.winningadventure.com.au',
     },
   },
   verification: {
@@ -85,7 +85,6 @@ export const metadata: Metadata = {
 }
 
 export const links = () => [
-  { rel: 'preload', href: '/hero-image.webp', as: 'image' },
   { rel: 'preconnect', href: 'https://www.winningadventure.com.au' },
   { rel: 'preload', href: '/logos/logo-nav-trans.png', as: 'image' },
 ]
@@ -104,15 +103,14 @@ export default function RootLayout({
   return (
     <html lang="en-AU" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
       <head>
-        {/* Preload hero image for LCP — rendered by Hero.tsx on desktop */}
+        {/* Preload hero poster for LCP — rendered by Hero.tsx */}
         <link
           rel="preload"
           as="image"
-          href="/og-image-poster.webp"
+          href="/hero-video-first-frame.webp"
           fetchPriority="high"
           crossOrigin="anonymous"
         />
-        <link rel="preload" as="video" href="/hero_vid_h264.mp4" crossOrigin="anonymous" />
         <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
