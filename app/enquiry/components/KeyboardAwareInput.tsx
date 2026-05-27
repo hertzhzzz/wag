@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 interface KeyboardAwareInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string
   required?: boolean
+  optional?: boolean
   error?: string
   onBlur?: () => void
 }
@@ -11,6 +12,7 @@ interface KeyboardAwareInputProps extends React.InputHTMLAttributes<HTMLInputEle
 export function KeyboardAwareInput({
   label,
   required = false,
+  optional = false,
   error,
   onBlur,
   id,
@@ -49,7 +51,7 @@ export function KeyboardAwareInput({
         htmlFor={id}
         className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
       >
-        {label} {required && <span className="text-[#F59E0B]">*</span>}
+        {label} {required && <span className="text-[#F59E0B]">*</span>}{!required && optional && <span className="text-gray-400 font-normal normal-case tracking-wide lowercase ml-1">(optional)</span>}
       </label>
       <input
         ref={inputRef}

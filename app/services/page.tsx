@@ -57,11 +57,10 @@ export default function ServicesPage() {
 
       {/* Hero */}
       <section className="relative min-h-[36vh] md:min-h-[360px] flex items-center overflow-hidden">
-        {/* Image Background */}
         <div className="absolute inset-0" aria-hidden="true">
           <Image
-            src="/og-image-poster.webp"
-            alt="Chinese manufacturing facility"
+            src="/services-hero.webp"
+            alt="Chinese manufacturing facility with Australian business team"
             fill
             priority={true}
             loading="eager"
@@ -69,6 +68,7 @@ export default function ServicesPage() {
             sizes="100vw"
             className="object-cover"
           />
+          <div className="absolute inset-0 bg-navy/60" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
         </div>

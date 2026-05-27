@@ -1,44 +1,46 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Hero() {
+  const [videoPlaying, setVideoPlaying] = useState(false)
+
   return (
     <section className="relative min-h-[60vh] md:min-h-[720px] flex items-center overflow-hidden">
-      {/* Hero Image - Mobile: show only (no video to block LCP) */}
-      <div className="absolute inset-0 md:hidden">
-        <Image
-          src="/hero-image.webp"
-          alt="Chinese manufacturing facility with Australian business team"
-          fill
-          priority={true}
-          loading="eager"
-          fetchPriority="high"
-          quality={80}
-          sizes="(max-width: 768px) 100vw, 1200px"
-          className="object-cover"
-        />
-        {/* Gradient overlay for mobile */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
-      </div>
+      {/* Poster Image - fades out when video starts playing on all devices */}
+      {!videoPlaying && (
+        <div className="absolute inset-0">
+          <Image
+            src="/hero-video-first-frame.webp"
+            alt="Chinese manufacturing facility with Australian business team"
+            fill
+            priority={true}
+            loading="eager"
+            fetchPriority="high"
+            quality={80}
+            sizes="1200px"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
+        </div>
+      )}
 
-      {/* Video Background - Desktop only (not on mobile to fix LCP) */}
-      <div className="hidden md:block absolute inset-0" aria-hidden="true">
+      {/* Video Background - all devices */}
+      <div className="absolute inset-0" aria-hidden="true">
         <video
           autoPlay
           muted
           loop
           playsInline
-          preload="none"
+          preload="auto"
           className="w-full h-full object-cover"
-          poster="/og-image-1920.webp"
+          onLoadedData={() => setVideoPlaying(true)}
         >
           <source src="/hero_vid_compressed.mp4" type="video/mp4" />
         </video>
-
-        {/* Professional gradient overlay - more sophisticated than simple solid */}
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
       </div>

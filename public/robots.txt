@@ -34,4 +34,8 @@ Crawl-delay: 1
 User-agent: CCBot
 Disallow: /
 
+# Block duplicate/non-primary resource pages
+User-agent: *
+Disallow: /resources/resource-
+
 Sitemap: https://www.winningadventure.com.au/sitemap.xml

@@ -5,6 +5,20 @@ import matter from 'gray-matter'
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
+const BLOCKED_SLUGS = [
+  'apparel-factory-tour',
+  'canton-fair-tour',
+  'china-factory-tours-australia',
+  'china-vs-alibaba',
+  'electronics-factory-tour',
+  'case-study-aesthetics-cosmetics',
+  'case-study-fashion-apparel',
+  'case-study-food-beverage',
+  'case-study-healthcare-medical',
+  'case-study-lighting-products',
+  'case-study-textiles-home-textiles',
+]
+
 function getAllArticles() {
   function scanDir(dir: string): Array<{ slug: string; date: string }> {
     const results: Array<{ slug: string; date: string }> = []
@@ -16,9 +30,10 @@ function getAllArticles() {
         results.push(...scanDir(fullPath))
       } else if (entry.isFile() && entry.name.endsWith('.mdx')) {
         const slug = fullPath.replace(BLOG_DIR + '/', '').replace('.mdx', '')
+        if (BLOCKED_SLUGS.includes(slug)) continue
         const raw = fs.readFileSync(fullPath, 'utf-8')
         const { data } = matter(raw)
-        results.push({ slug, date: data.date || '2026-01-01' })
+        results.push({ slug, date: data.date || data.published || '2026-01-01' })
       }
     }
     return results
