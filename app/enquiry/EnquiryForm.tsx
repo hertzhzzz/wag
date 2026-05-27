@@ -70,6 +70,14 @@ export default function EnquiryForm() {
       })
       if (res.ok) {
         setSubmitted(true)
+        // Fire Meta Pixel Lead event
+        if (typeof window !== 'undefined' && (window as Window & { fbq?: Function }).fbq) {
+          ;(window as Window & { fbq?: Function }).fbq('track', 'Lead', {
+            content_name: 'Enquiry Form Submission',
+            content_category: formData.industry || 'not provided',
+            currency: 'AUD',
+          })
+        }
       } else {
         const data = await res.json()
         const errorMsg = data.details
