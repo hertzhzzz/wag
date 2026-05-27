@@ -71,8 +71,9 @@ export default function EnquiryForm() {
       if (res.ok) {
         setSubmitted(true)
         // Fire Meta Pixel Lead event
-        if (typeof window !== 'undefined' && (window as Window & { fbq?: Function }).fbq) {
-          ;(window as Window & { fbq?: Function }).fbq('track', 'Lead', {
+        const win = window as Window & { fbq?: Function }
+        if (typeof window !== 'undefined' && win.fbq) {
+          win.fbq('track', 'Lead', {
             content_name: 'Enquiry Form Submission',
             content_category: formData.industry || 'not provided',
             currency: 'AUD',
