@@ -97,10 +97,10 @@ export default function EnquiryForm() {
             <span className="text-[#0F2D5E] font-semibold">Enquiry</span>
           </nav>
           <h1 className="font-serif font-bold text-[clamp(1.75rem,3vw,2.5rem)] text-[#0F2D5E] leading-tight mb-3">
-            Your Direct Line to China&apos;s Best Factories —<br className="hidden sm:block" /> No Alibaba Guesswork Required
+            Your Direct Line to China&apos;s Best Factories
           </h1>
           <p className="text-base text-gray-600 max-w-[560px]">
-            We connect Australian businesses with verified Chinese manufacturers — and vet every supplier before you sign anything. Tell us what you need.
+            We connect Australian businesses with verified manufacturers — and vet every supplier before you sign anything. Tell us what you need.
           </p>
         </div>
       </section>
@@ -108,10 +108,154 @@ export default function EnquiryForm() {
       <section className="py-12 px-4 sm:px-8">
         <div className="max-w-[1200px] mx-auto">
 
-          {/* Desktop: left (paths + trust) / right (form) */}
+          {/* Desktop: left (form) / right (paths + trust) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
-            {/* Left column: What happens next + trust stats */}
+            {/* Left column: Form card */}
+            <div>
+          <div className="bg-white border border-gray-200 rounded-lg p-8">
+            <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Get in Touch</p>
+            <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-6">
+              Submit Your Sourcing Enquiry
+            </h2>
+
+            {submitted ? (
+              <div className="text-center py-12">
+                <div className="w-14 h-14 bg-[#0F2D5E] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle size={28} className="text-[#F59E0B]" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-[#0F2D5E] mb-3">
+                  Your Enquiry Is In Our Hands
+                </h3>
+                <p className="text-gray-600 max-w-[360px] mx-auto mb-8">
+                  We&apos;ll review your requirements and reach out within 4 business hours.
+                </p>
+                <Link href="/" className="px-6 py-2.5 bg-[#0F2D5E] text-white text-sm font-semibold hover:bg-[#0a2148] transition-colors no-underline">
+                  Back to Home
+                </Link>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} noValidate className="pb-20 md:pb-0">
+                <div className="flex flex-col gap-5">
+                  <KeyboardAwareInput
+                    id="fullName"
+                    label="Full Name"
+                    required
+                    value={formData.fullName}
+                    onChange={(e) => handleChange('fullName', e.target.value)}
+                    onBlur={() => handleBlur('fullName')}
+                    placeholder="Jane Smith"
+                    autoComplete="name"
+                    error={touched.fullName ? errors.fullName : undefined}
+                  />
+
+                  <KeyboardAwareInput
+                    id="email"
+                    type="email"
+                    label="Email Address"
+                    required
+                    value={formData.email}
+                    onChange={(e) => handleChange('email', e.target.value)}
+                    onBlur={() => handleBlur('email')}
+                    placeholder="jane@company.com.au"
+                    autoComplete="email"
+                    error={touched.email ? errors.email : undefined}
+                  />
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <KeyboardAwareInput
+                      id="phone"
+                      type="tel"
+                      label="Phone"
+                      optional
+                      value={formData.phone}
+                      onChange={(e) => handleChange('phone', e.target.value)}
+                      onBlur={() => handleBlurExtra('phone')}
+                      placeholder="+61 4xx xxx xxx"
+                      autoComplete="tel"
+                    />
+
+                    <KeyboardAwareInput
+                      id="company"
+                      label="Company"
+                      optional
+                      value={formData.company}
+                      onChange={(e) => handleChange('company', e.target.value)}
+                      onBlur={() => handleBlurExtra('company')}
+                      placeholder="Your company name"
+                      autoComplete="organization"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="industry"
+                      className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
+                    >
+                      Industry <span className="text-gray-400 font-normal normal-case tracking-wide lowercase">(optional)</span>
+                    </label>
+                    <select
+                      id="industry"
+                      value={formData.industry}
+                      onChange={(e) => handleChange('industry', e.target.value)}
+                      onBlur={() => handleBlurExtra('industry')}
+                      className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E] transition-colors bg-white"
+                    >
+                      <option value="">Select your industry...</option>
+                      <option value="av-audio-visual">AV & Audio-Visual Equipment</option>
+                      <option value="automotive">Automotive Parts & Accessories</option>
+                      <option value="agricultural">Agricultural Machinery & Equipment</option>
+                      <option value="engineering">Engineering & Heavy Equipment</option>
+                      <option value="electronics">Consumer Electronics</option>
+                      <option value="homewares">Homewares & Furnishings</option>
+                      <option value="beauty">Beauty & Aesthetics</option>
+                      <option value="fashion">Fashion & Textiles</option>
+                      <option value="food-beverage">Food & Beverage</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <KeyboardAwareTextarea
+                    id="lookingFor"
+                    label="What do you need?"
+                    required
+                    value={formData.lookingFor}
+                    onChange={(e) => handleChange('lookingFor', e.target.value)}
+                    onBlur={() => handleBlur('lookingFor')}
+                    placeholder="Describe your product, quantity, quality requirements..."
+                    rows={4}
+                    error={touched.lookingFor ? errors.lookingFor : undefined}
+                  />
+
+                  {errors.submit && (
+                    <div className="p-3 bg-red-50 border border-red-200 rounded text-red-600 text-sm">
+                      {errors.submit}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full py-4 md:py-3.5 px-6 bg-[#0F2D5E] text-white font-semibold hover:bg-[#0a2148] active:bg-[#071a3a] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {submitting ? 'Sending…' : 'Submit Enquiry →'}
+                  </button>
+
+                  <a
+                    href="https://calendly.com/mark-winningadventure/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center text-sm text-[#0F2D5E] hover:text-[#F59E0B] mt-1"
+                  >
+                    Prefer to talk? Book a call →
+                  </a>
+                </div>
+              </form>
+            )}
+          </div>
+            </div>
+
+            {/* Right column: What happens next + trust stats */}
             <div className="flex flex-col gap-6">
 
               {/* What happens next — two paths */}
@@ -197,152 +341,10 @@ export default function EnquiryForm() {
               </div>
 
             </div>
-
-            {/* Right column: Form card */}
-            <div>
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Get in Touch</p>
-            <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-6">
-              Submit Your Sourcing Enquiry
-            </h2>
-
-            {submitted ? (
-              <div className="text-center py-12">
-                <div className="w-14 h-14 bg-[#0F2D5E] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle size={28} className="text-[#F59E0B]" />
-                </div>
-                <h3 className="font-serif text-2xl font-bold text-[#0F2D5E] mb-3">
-                  Your Enquiry Is In Our Hands
-                </h3>
-                <p className="text-gray-600 max-w-[360px] mx-auto mb-8">
-                  We&apos;ll review your requirements and reach out within 4 business hours.
-                </p>
-                <Link href="/" className="px-6 py-2.5 bg-[#0F2D5E] text-white text-sm font-semibold hover:bg-[#0a2148] transition-colors no-underline">
-                  Back to Home
-                </Link>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate className="pb-20 md:pb-0">
-                <div className="flex flex-col gap-5">
-                  <KeyboardAwareInput
-                    id="fullName"
-                    label="Full Name"
-                    required
-                    value={formData.fullName}
-                    onChange={(e) => handleChange('fullName', e.target.value)}
-                    onBlur={() => handleBlur('fullName')}
-                    placeholder="Jane Smith"
-                    autoComplete="name"
-                    error={touched.fullName ? errors.fullName : undefined}
-                  />
-
-                  <KeyboardAwareInput
-                    id="email"
-                    type="email"
-                    label="Email Address"
-                    required
-                    value={formData.email}
-                    onChange={(e) => handleChange('email', e.target.value)}
-                    onBlur={() => handleBlur('email')}
-                    placeholder="jane@company.com.au"
-                    autoComplete="email"
-                    error={touched.email ? errors.email : undefined}
-                  />
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <KeyboardAwareInput
-                      id="phone"
-                      type="tel"
-                      label="Phone"
-                      value={formData.phone}
-                      onChange={(e) => handleChange('phone', e.target.value)}
-                      onBlur={() => handleBlurExtra('phone')}
-                      placeholder="+61 4xx xxx xxx"
-                      autoComplete="tel"
-                    />
-
-                    <KeyboardAwareInput
-                      id="company"
-                      label="Company"
-                      value={formData.company}
-                      onChange={(e) => handleChange('company', e.target.value)}
-                      onBlur={() => handleBlurExtra('company')}
-                      placeholder="Your company name"
-                      autoComplete="organization"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="industry"
-                      className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
-                    >
-                      Industry
-                    </label>
-                    <select
-                      id="industry"
-                      value={formData.industry}
-                      onChange={(e) => handleChange('industry', e.target.value)}
-                      onBlur={() => handleBlurExtra('industry')}
-                      className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E] transition-colors bg-white"
-                    >
-                      <option value="">Select your industry...</option>
-                      <option value="av-audio-visual">AV & Audio-Visual Equipment</option>
-                      <option value="automotive">Automotive Parts & Accessories</option>
-                      <option value="agricultural">Agricultural Machinery & Equipment</option>
-                      <option value="engineering">Engineering & Heavy Equipment</option>
-                      <option value="electronics">Consumer Electronics</option>
-                      <option value="homewares">Homewares & Furnishings</option>
-                      <option value="beauty">Beauty & Aesthetics</option>
-                      <option value="fashion">Fashion & Textiles</option>
-                      <option value="food-beverage">Food & Beverage</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <KeyboardAwareTextarea
-                    id="lookingFor"
-                    label="What do you need?"
-                    required
-                    value={formData.lookingFor}
-                    onChange={(e) => handleChange('lookingFor', e.target.value)}
-                    onBlur={() => handleBlur('lookingFor')}
-                    placeholder="Describe your product, quantity, quality requirements..."
-                    rows={4}
-                    error={touched.lookingFor ? errors.lookingFor : undefined}
-                  />
-
-                  {errors.submit && (
-                    <div className="p-3 bg-red-50 border border-red-200 rounded text-red-600 text-sm">
-                      {errors.submit}
-                    </div>
-                  )}
-
-                  <button
-                    type="submit"
-                    disabled={submitting}
-                    className="w-full py-4 md:py-3.5 px-6 bg-[#0F2D5E] text-white font-semibold hover:bg-[#0a2148] active:bg-[#071a3a] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                  >
-                    {submitting ? 'Sending…' : 'Submit Enquiry →'}
-                  </button>
-
-                  <a
-                    href="https://calendly.com/mark-winningadventure/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-center text-sm text-[#0F2D5E] hover:text-[#F59E0B] mt-1"
-                  >
-                    Prefer to talk? Book a call →
-                  </a>
-                </div>
-              </form>
-            )}
-          </div>
-            </div>
           </div>
 
           {/* FAQ + Contact — 3-column: FAQ stacked | Direct Contact | Trust badges */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16">
 
             {/* Column 1: FAQ stack */}
             <div className="border border-gray-200 rounded-lg divide-y divide-gray-100">

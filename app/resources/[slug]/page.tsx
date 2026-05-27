@@ -11,8 +11,7 @@ import { ReadingProgressBar } from './ReadingProgressBar'
 import { BackToTopButton } from './BackToTopButton'
 import { ShareButtons } from './ShareButtons'
 import { ArticleNavigation } from './ArticleNavigation'
-import { RecommendedSidebar } from './RecommendedSidebar'
-import { getArticle, getAllSlugs, getPrevNextArticles, getRecommendedArticles, splitContent, extractFaqsFromContent, formatDateForSchema } from './article-utils'
+import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema } from './article-utils'
 import { HOW_TO_ARTICLES } from './how-to-data'
 import { createMdxComponents } from './mdx-components'
 import type { Frontmatter } from './types'
@@ -82,7 +81,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { frontmatter: fm, content } = article
   const takeaways: string[] = fm.takeaways || []
   const { prevArticle, nextArticle } = getPrevNextArticles(slug)
-  const recommended = getRecommendedArticles(slug, fm.category)
   const { intro, body } = splitContent(content)
   // Extract FAQs from MDX content for JSON-LD schema
   const articleFaqs = extractFaqsFromContent(content)
@@ -130,9 +128,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* Article Body */}
       <div className="py-10 px-6">
         <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Main article content */}
-            <main className="flex-1 min-w-0 max-w-[900px]">
+          <div className="flex flex-col">
+            {/* Main article content — centered, no sidebar */}
+            <main className="w-full max-w-[900px] mx-auto">
               <article>
                 <div className="max-w-[900px] mx-auto">
 
@@ -166,11 +164,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
               </article>
             </main>
-
-            {/* Recommended Reading Sidebar */}
-            <aside className="w-full lg:w-80 flex-shrink-0">
-              <RecommendedSidebar articles={recommended} />
-            </aside>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import Script from 'next/script'
 import './globals.css'
 import ScrollTracker from './components/ScrollTracker'
 import MarkHeSchema from './components/MarkHeSchema'
+import { FloatingEnquiryWidget } from './components/FloatingEnquiryWidget'
 
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -230,6 +231,7 @@ export default function RootLayout({
       </head>
       <body>
       {children}
+      <FloatingEnquiryWidget />
       {/* Meta Pixel noscript fallback — rendered by browsers with JS disabled */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <noscript>

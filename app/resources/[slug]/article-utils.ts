@@ -6,6 +6,20 @@ import type { Article, ArticleNavItem, PrevNextArticles, Frontmatter, Heading, F
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
+const BLOCKED_SLUGS = [
+  'apparel-factory-tour',
+  'canton-fair-tour',
+  'china-factory-tours-australia',
+  'china-vs-alibaba',
+  'electronics-factory-tour',
+  'case-study-aesthetics-cosmetics',
+  'case-study-fashion-apparel',
+  'case-study-food-beverage',
+  'case-study-healthcare-medical',
+  'case-study-lighting-products',
+  'case-study-textiles-home-textiles',
+]
+
 // ============================================
 // FILE SYSTEM HELPERS
 // ============================================
@@ -20,7 +34,9 @@ export function getAllSlugs(): string[] {
       if (entry.isDirectory()) {
         results.push(...scanDir(fullPath))
       } else if (entry.isFile() && entry.name.endsWith('.mdx')) {
-        results.push(fullPath.replace(BLOG_DIR + '/', '').replace('.mdx', ''))
+        const slug = fullPath.replace(BLOG_DIR + '/', '').replace('.mdx', '')
+        if (BLOCKED_SLUGS.includes(slug)) continue
+        results.push(slug)
       }
     }
     return results
@@ -29,6 +45,7 @@ export function getAllSlugs(): string[] {
 }
 
 export function getArticle(slug: string): Article | null {
+  if (BLOCKED_SLUGS.includes(slug)) return null
   // Handle both top-level MDX (e.g. "china-factory-tour-guide")
   // and subdirectory MDX (e.g. "china-business-tours/canton-fair-tour")
   const filePath = path.join(BLOG_DIR, `${slug}.mdx`)
