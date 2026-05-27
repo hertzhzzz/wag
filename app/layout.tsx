@@ -124,7 +124,7 @@ export default function RootLayout({
             gtag('config', 'G-VEGJ1YL8YR');
           `}
         </Script>
-        <Script id="meta-pixel" strategy="afterInteractive" dangerouslySetInnerHTML={{
+        <Script id="meta-pixel" strategy="beforeInteractive" dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
