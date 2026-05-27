@@ -124,7 +124,7 @@ export default function RootLayout({
             gtag('config', 'G-VEGJ1YL8YR');
           `}
         </Script>
-        <Script id="meta-pixel-2" strategy="afterInteractive" type="text/partytown" dangerouslySetInnerHTML={{
+        <Script id="meta-pixel" strategy="afterInteractive" type="text/partytown" dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -138,29 +138,14 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `
         }} />
-        <Script id="meta-pixel" strategy="afterInteractive" type="text/partytown" dangerouslySetInnerHTML={{
-          __html: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '935975895717524');
-            fbq('track', 'PageView');
-          `
-        }} />
         <Script async src="https://analytics.ahrefs.com/analytics.js" data-key="jnLQ8HPV22LB0X0XwFMCxw" strategy="afterInteractive" type="text/partytown" />
         <Script id="partytown-config" type="text/partytown">
           {`partytown = { lib: "/~partytown/", forward: ["dataLayer.push", "gtag", "fbq"] }`}
         </Script>
-        {/* Meta Pixel noscript fallback — rendered by browsers with JS disabled */}
+        {/* Meta Pixel noscript fallback */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=1302675338716439&ev=PageView&noscript=1" alt="" />
-          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=935975895717524&ev=PageView&noscript=1" alt="" />
         </noscript>
         <script
           type="application/ld+json"
