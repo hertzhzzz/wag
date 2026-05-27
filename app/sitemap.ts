@@ -6,11 +6,37 @@ import matter from 'gray-matter'
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
 const BLOCKED_SLUGS = [
-  'apparel-factory-tour',
-  'canton-fair-tour',
-  'china-factory-tours-australia',
-  'china-vs-alibaba',
-  'electronics-factory-tour',
+  // resource-* prefix = thin duplicate from early pipeline version
+  'resource-adelaide-china-factory-visits',
+  'resource-apparel-factory-tour',
+  'resource-australia-china-sourcing-fraud-case-studies',
+  'resource-av-equipment-china-factory-verification-guide',
+  'resource-av-equipment-procurement-china',
+  'resource-brisbane-china-factory-visits',
+  'resource-canton-fair-tour',
+  'resource-china-business-sourcing-tour',
+  'resource-china-factory-tours-australia',
+  'resource-china-sourcing-risks',
+  'resource-china-vs-alibaba',
+  'resource-chinese-supplier-quality-not-as-promised',
+  'resource-cosmetics-factory-tour',
+  'resource-electronics-factory-tour',
+  'resource-event-hire-china-factory-verification',
+  'resource-factory-vs-trading-company-china-guide',
+  'resource-guangzhou-factory-tour',
+  'resource-how-to-verify-chinese-factories-1688',
+  'resource-machinery-factory-tour',
+  'resource-melbourne-china-factory-visits',
+  'resource-modern-slavery-act-china-supplier-compliance-2026',
+  'resource-perth-china-factory-visits',
+  'resource-shenzhen-factory-visit',
+  'resource-should-i-pay-deposit-chinese-supplier',
+  'resource-supplier-verification-checklist-china',
+  'resource-trump-tariffs-australia-china-sourcing-impact',
+  'resource-virtual-factory-audit',
+  'resource-visiting-chinese-factories-australian-business-checklist',
+  'resource-what-happens-when-verification-is-skipped',
+  // case study pages — not published
   'case-study-aesthetics-cosmetics',
   'case-study-fashion-apparel',
   'case-study-food-beverage',
@@ -48,8 +74,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogUrls = articles.map(article => ({
     url: `${baseUrl}/resources/${article.slug}`,
     lastModified: new Date(article.date),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
   }))
 
   return [
