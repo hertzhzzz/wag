@@ -11,8 +11,8 @@ npm run lint       # ESLint check
 git push origin master  # deploy to Vercel
 ```
 
-**Key files:** `app/page.tsx` · `content/blog/*.mdx` · `app/api/enquiry/` · `public/social/`
-**5 pages:** `/` · `/services` · `/about` · `/resources` · `/enquiry`
+**Key files:** `app/page.tsx` · `content/*.mdx` · `app/api/enquiry/` · `public/social/`
+**Pages:** `/` · `/services` · `/about` · `/resources` · `/enquiry` · `/visiting-chinese-factories` · `/china-sourcing-guide-australia`
 
 ---
 
@@ -25,7 +25,7 @@ Next.js 16.2 (App Router) · TypeScript 5 · Tailwind CSS 3.4 · MDX + next-mdx-
 ```
 frontend/
 ├── app/              # pages, API routes, components
-├── content/blog/     # MDX articles → /resources/[slug]
+├── content/          # MDX articles → /resources/[slug]
 ├── lib/              # utilities (rate-limit.ts, seo/, etc.)
 ├── public/social/    # blog images [SINGLE SOURCE]
 └── social/           # source files for AI image generation (NOT deployed)
@@ -34,8 +34,8 @@ frontend/
 ## Commands
 
 ```bash
-vercel --prod        # pre-deploy verification (local build check)
-git push origin master  # deploy after local verification passes
+vercel --prod        # runs next build locally to verify build passes; MUST pass before commit
+git push origin master  # triggers Vercel production deployment
 ```
 
 ## Content (MDX)
