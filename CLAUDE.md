@@ -112,6 +112,22 @@ Current schemas in `app/components/`:
 
 FAQPage schema NOT needed: Google deprecated FAQ rich results May 2026; eligibility restricted to government/health sites only. Static HTML FAQ content suffices for SEO.
 
+## Image Performance (LCP Optimization)
+
+**Blog article hero cover images must use `next/image` with `priority` prop** — never CSS background-image.
+
+Correct pattern for hero/LCP images:
+```tsx
+<Image src={fm.coverImage} alt="" fill priority className="object-cover z-0" sizes="100vw" />
+```
+
+For FloatImage (MDX content images), use `next/image` with fixed width/height:
+```tsx
+<Image src={src} alt={alt} width={width} height={Math.round(width * 0.75)} />
+```
+
+**Why:** `next/image` enables WebP/AVIF auto-conversion, lazy loading, and explicit `priority` gives the browser a fetchpriority="high" hint — reducing LCP from ~7s to ~2-3s.
+
 ## Image Rules
 
 Blog images: `public/social/blog/{slug}/` — only source. MDX: `/social/blog/{slug}/image.png`

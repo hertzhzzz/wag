@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { slugify } from './string-utils'
 import { FAQ } from './FAQ'
 import type { TipProps, InlineCTAProps } from './types'
@@ -131,7 +132,7 @@ export function createMdxComponents(ctaTitle: string, ctaText: string, ctaButton
       const floatClass = align === 'left' ? 'float-left' : 'float-right'
       return (
         <figure className={`my-8 ${floatClass}`} style={{ width: `${width}px`, marginInlineEnd: align === 'right' ? '2.5rem' : '0', marginInlineStart: align === 'left' ? '2.5rem' : '0', marginBlockStart: '1.5rem', marginBlockEnd: '1.5rem' }}>
-          <img src={src} alt={alt} className="rounded-lg w-full" />
+          <Image src={src} alt={alt} width={width} height={Math.round(width * 0.75)} className="rounded-lg w-full" />
         </figure>
       )
     },
