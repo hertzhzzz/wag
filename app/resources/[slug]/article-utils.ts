@@ -7,11 +7,7 @@ import type { Article, ArticleNavItem, PrevNextArticles, Frontmatter, Heading, F
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
 const BLOCKED_SLUGS = [
-  'apparel-factory-tour',
-  'canton-fair-tour',
   'china-factory-tours-australia',
-  'china-vs-alibaba',
-  'electronics-factory-tour',
   'case-study-aesthetics-cosmetics',
   'case-study-fashion-apparel',
   'case-study-food-beverage',
