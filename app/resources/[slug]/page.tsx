@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
@@ -181,15 +182,19 @@ function HeroSection({ fm }: { fm: Frontmatter }) {
   const hasCover = !!fm.coverImage
   return (
     <>
-      <section className={`relative pt-8 pb-6 px-6 border-b border-gray-100 ${hasCover ? 'text-white' : 'bg-white'}`}
-        style={hasCover ? {
-          backgroundImage: `url(${fm.coverImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        } : undefined}
-      >
-        {hasCover && <div className="absolute inset-0 bg-[#0F2D5E]/75" />}
-        <div className="relative max-w-[900px] mx-auto">
+      <section className={`relative pt-8 pb-6 px-6 border-b border-gray-100 overflow-hidden ${hasCover ? 'text-white' : 'bg-white'}`}>
+        {hasCover && (
+          <Image
+            src={fm.coverImage as string}
+            alt=""
+            fill
+            priority
+            className="object-cover z-0"
+            sizes="100vw"
+          />
+        )}
+        {hasCover && <div className="absolute inset-0 bg-[#0F2D5E]/75 z-[1]" />}
+        <div className="relative z-10 max-w-[900px] mx-auto">
           <nav className="flex items-center gap-2 text-xs uppercase tracking-wider mb-4">
             <Link href="/" className={`hover:text-[#F59E0B] transition-colors ${hasCover ? 'text-white/70' : 'text-gray-400'}`}>Home</Link>
             <span className={hasCover ? 'text-white/50' : 'text-gray-300'}>›</span>

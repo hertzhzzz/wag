@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foshan Factory Visit Map — Winning Adventure Global</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; background: #f5f5f5; color: #222; }
+  h1 { font-size: 1.25rem; font-weight: 600; color: #0F2D5E; }
+  h2 { font-size: 1rem; font-weight: 600; color: #0F2D5E; margin-bottom: 0.5rem; }
+  .page-header { background: #0F2D5E; color: #fff; padding: 1rem 1.5rem; }
+  .page-header h1 { color: #fff; font-size: 1.1rem; }
+  .page-header p { font-size: 0.8rem; color: #cbd5e1; margin-top: 0.25rem; }
+  .container { display: grid; grid-template-columns: 340px 1fr; gap: 0; min-height: calc(100vh - 72px); }
+  .sidebar { background: #fff; border-right: 1px solid #e2e8f0; overflow-y: auto; }
+  .sidebar-section { padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0; }
+  .legend { display: flex; flex-direction: column; gap: 0.5rem; }
+  .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; }
+  .legend-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+  .legend-dot.factory { background: #dc2626; }
+  .legend-dot.hotel { background: #2563eb; }
+  .legend-dot.office { background: #7c3aed; }
+  .legend-dot.hanse-alt { background: #f59e0b; }
+  .location-list { display: flex; flex-direction: column; gap: 0.6rem; }
+  .location-item { padding: 0.6rem 0.75rem; border-radius: 6px; background: #f8fafc; border-left: 3px solid #ccc; font-size: 0.82rem; }
+  .location-item.factory { border-left-color: #dc2626; }
+  .location-item.hotel { border-left-color: #2563eb; }
+  .location-item.office { border-left-color: #7c3aed; }
+  .location-item.hanse-alt { border-left-color: #f59e0b; }
+  .location-name { font-weight: 600; margin-bottom: 0.15rem; }
+  .location-meta { color: #64748b; font-size: 0.78rem; line-height: 1.5; }
+  .location-contact { color: #334155; margin-top: 0.2rem; }
+  .distance-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+  .distance-table th { background: #0F2D5E; color: #fff; padding: 0.4rem 0.5rem; text-align: left; font-weight: 500; }
+  .distance-table td { padding: 0.35rem 0.5rem; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+  .distance-table tr:last-child td { border-bottom: none; }
+  .distance-table .from-cell { font-weight: 500; color: #0F2D5E; }
+  .distance-table .to-cell { color: #64748b; font-size: 0.74rem; }
+  .distance-table .metric { font-weight: 600; color: #334155; }
+  .badge { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.7rem; font-weight: 500; }
+  .badge-confirmed { background: #dcfce7; color: #166534; }
+  .badge-unconfirmed { background: #fef9c3; color: #854d0e; }
+  .badge-provisional { background: #fed7aa; color: #9a3412; }
+  .route-note { font-size: 0.78rem; color: #64748b; margin-top: 0.5rem; line-height: 1.5; }
+  .route-note strong { color: #334155; }
+  .itinerary { font-size: 0.82rem; }
+  .itinerary-day { margin-bottom: 0.75rem; }
+  .itinerary-day-title { font-weight: 600; color: #0F2D5E; margin-bottom: 0.25rem; }
+  .itinerary-step { display: flex; gap: 0.5rem; margin-bottom: 0.2rem; padding-left: 0.5rem; border-left: 2px solid #e2e8f0; }
+  .itinerary-step .time { font-weight: 600; color: #334155; min-width: 40px; }
+  .map-container { position: relative; }
+  #map { width: 100%; height: 100%; min-height: 500px; }
+  .leaflet-popup-content { font-size: 0.85rem; }
+  .popup-name { font-weight: 700; font-size: 0.95rem; margin-bottom: 0.3rem; color: #0F2D5E; }
+  .popup-row { display: flex; gap: 0.4rem; margin-bottom: 0.2rem; font-size: 0.82rem; }
+  .popup-label { font-weight: 500; color: #64748b; min-width: 60px; }
+  .popup-value { color: #1e293b; }
+  .osrm-note { font-size: 0.75rem; color: #94a3b8; margin-top: 0.5rem; text-align: center; padding: 0.5rem; background: #f8fafc; border-radius: 4px; }
+  @media (max-width: 768px) {
+    .container { grid-template-columns: 1fr; grid-template-rows: auto 500px; }
+    .sidebar { max-height: 50vh; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Foshan Factory Visit — Logistics Map</h1>
+  <p>Winning Adventure Global · 28 May 2026 · OSRM routing</p>
+</div>
+
+<div class="container">
+  <div class="sidebar">
+    <!-- Legend -->
+    <div class="sidebar-section">
+      <h2>Legend</h2>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot factory"></span>Factory (confirmed)</div>
+        <div class="legend-item"><span class="legend-dot hotel"></span>Hotel (recommended base)</div>
+        <div class="legend-item"><span class="legend-dot office"></span>Office / Reference</div>
+        <div class="legend-item"><span class="legend-dot hanse-alt"></span>Hanse (alternative address)</div>
+      </div>
+    </div>
+
+    <!-- Locations -->
+    <div class="sidebar-section">
+      <h2>Locations</h2>
+      <div class="location-list">
+
+        <!-- Hotels -->
+        <div class="location-item hotel">
+          <div class="location-name">InterContinental Foshan (Nanhai)</div>
+          <div class="location-meta">灯湖东路20号 · Nanhai District</div>
+          <div class="location-meta">⭐ Recommended hotel base</div>
+          <div class="location-contact">Driving to AMJ/Prima: ~35 km / 28–45 min</div>
+        </div>
+        <div class="location-item hotel">
+          <div class="location-name">InterContinental Foshan Dongping</div>
+          <div class="location-meta">文华南路8号 · Lecong, Shunde</div>
+          <div class="location-meta">Closer to Shenzhen route</div>
+          <div class="location-contact">Driving to AMJ/Prima: ~45–50 km / 36–65 min</div>
+        </div>
+
+        <!-- Factories -->
+        <div class="location-item factory">
+          <div class="location-name">AMJ Windows &amp; Doors</div>
+          <div class="location-meta">兴业园 B5栋 · Leping, Sanshui</div>
+          <div class="location-contact">Teresa · +86 173 7564 9626</div>
+          <span class="badge badge-confirmed">Confirmed</span>
+        </div>
+        <div class="location-item factory">
+          <div class="location-name">Prima Industry Co., Ltd.</div>
+          <div class="location-meta">念德村 361省道东50米 · Leping, Sanshui</div>
+          <div class="location-meta">（侨鑫生态园旁）</div>
+          <div class="location-contact">Gloria · +86 152 1518 1530</div>
+          <span class="badge badge-confirmed">Confirmed (Foshan factory)</span>
+        </div>
+        <div class="location-item office">
+          <div class="location-name">Prima Industry — Shenzhen Office</div>
+          <div class="location-meta">嘉安达大厦13楼 · Longhua, Shenzhen</div>
+          <div class="location-contact">Gloria · +86 152 1518 1530</div>
+          <span class="badge badge-unconfirmed">Confirm visit location</span>
+        </div>
+        <div class="location-item factory">
+          <div class="location-name">Hanse Industrial (Pho Charn)</div>
+          <div class="location-meta">陶创园1座 · 凤凰路11号 · Chancheng</div>
+          <div class="location-contact">Bella · +86 137 0226 8714</div>
+          <span class="badge badge-provisional">Provisional address — confirm with Bella</span>
+        </div>
+        <div class="location-item hanse-alt">
+          <div class="location-name">Hanse Industrial (Alt.)</div>
+          <div class="location-meta">吉华三路 · Chancheng (alternative)</div>
+          <div class="location-meta">Source: Report #1 secondary address</div>
+          <div class="location-contact">Bella · +86 137 0226 8714</div>
+          <span class="badge badge-provisional">Alternative — confirm with Bella</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Distance Matrix -->
+    <div class="sidebar-section">
+      <h2>Driving Distances (OSRM estimates)</h2>
+      <table class="distance-table">
+        <thead>
+          <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>Dist.</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="from-cell">IC Nanhai</td>
+            <td class="to-cell">AMJ</td>
+            <td class="metric">36.5 km</td>
+            <td>~28 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">IC Nanhai</td>
+            <td class="to-cell">Prima (FS)</td>
+            <td class="metric">31.2 km</td>
+            <td>~23 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">IC Nanhai</td>
+            <td class="to-cell">Hanse (陶创园)</td>
+            <td class="metric">14.4 km</td>
+            <td>~13 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">IC Dongping</td>
+            <td class="to-cell">AMJ</td>
+            <td class="metric">44.8 km</td>
+            <td>~36 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">IC Dongping</td>
+            <td class="to-cell">Prima (FS)</td>
+            <td class="metric">39.5 km</td>
+            <td>~31 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">IC Dongping</td>
+            <td class="to-cell">Hanse (陶创园)</td>
+            <td class="metric">9.3 km</td>
+            <td>~10 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">AMJ</td>
+            <td class="to-cell">Prima (FS)</td>
+            <td class="metric">~3 km</td>
+            <td>~10 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">AMJ</td>
+            <td class="to-cell">Hanse (陶创园)</td>
+            <td class="metric">~50 km</td>
+            <td>~55 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">Prima (FS)</td>
+            <td class="to-cell">Hanse (陶创园)</td>
+            <td class="metric">~48 km</td>
+            <td>~50 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">Prima (SZ)</td>
+            <td class="to-cell">AMJ</td>
+            <td class="metric">~135 km</td>
+            <td>~110 min</td>
+          </tr>
+          <tr>
+            <td class="from-cell">Prima (SZ)</td>
+            <td class="to-cell">Hanse (陶创园)</td>
+            <td class="metric">~125 km</td>
+            <td>~105 min</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="osrm-note">Estimates based on OSRM / public road data · May 2026 · Off-peak conditions</p>
+    </div>
+
+    <!-- Suggested Itinerary -->
+    <div class="sidebar-section">
+      <h2>Suggested Itinerary</h2>
+      <div class="itinerary">
+        <div class="itinerary-day">
+          <div class="itinerary-day-title">Day 1 — Sanshui (AMJ + Prima)</div>
+          <div class="itinerary-step"><span class="time">08:30</span>Depart IC Foshan Nanhai</div>
+          <div class="itinerary-step"><span class="time">08:53</span>Arrive Prima Industry (~23 min)</div>
+          <div class="itinerary-step"><span class="time">09:00</span>Factory visit with Gloria</div>
+          <div class="itinerary-step"><span class="time">11:45</span>Drive to AMJ (~10 min, same zone)</div>
+          <div class="itinerary-step"><span class="time">12:00</span>Factory visit with Teresa + lunch</div>
+          <div class="itinerary-step"><span class="time">14:30</span>Return to hotel (~28 min)</div>
+        </div>
+        <div class="itinerary-day">
+          <div class="itinerary-day-title">Day 2 — Chancheng (Hanse)</div>
+          <div class="itinerary-step"><span class="time">08:45</span>Depart hotel</div>
+          <div class="itinerary-step"><span class="time">09:00</span>Arrive Hanse Industrial (~13 min)</div>
+          <div class="itinerary-step"><span class="time">09:00</span>Factory visit with Bella</div>
+          <div class="itinerary-step"><span class="time">11:45</span>Return to hotel (~13 min)</div>
+        </div>
+      </div>
+      <p class="route-note"><strong>Hotel recommendation:</strong> InterContinental Foshan (Nanhai) saves ~72 km and ~100 min driving/day vs Dongping if Prima is in Foshan. Total daily return: ~164 km / 2h08min.</p>
+    </div>
+
+    <!-- Critical verification -->
+    <div class="sidebar-section">
+      <h2>⚠ Verify Before Booking</h2>
+      <div class="route-note">
+        <strong>1. Prima location:</strong> Contact Gloria (+86 152 1518 1530) — is the visit at Foshan factory (Sanshui) or Shenzhen office (Longhua)?<br><br>
+        <strong>2. Hanse address:</strong> Contact Bella (+86 137 0226 8714) — is it 凤凰路陶创园 or 吉华三路?<br><br>
+        <strong>3. AMJ access:</strong> Confirm with Teresa that B5 Xingye Yuan gate is accessible and factory is expecting visitors.
+      </div>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// ── Coordinates (WGS84) ──────────────────────────────────────────────────────
+// Hotels
+const IC_NANHAI   = [23.0178, 113.0754]; // 灯湖东路20号
+const IC_DONGPING = [22.9295, 113.0915]; // 文华南路8号
+// Factories — confirmed
+const AMJ         = [23.3083, 112.8969]; // 兴业园B5, Leping, Sanshui
+const PRIMA_FS    = [23.2920, 112.8820]; // 念德村 361省道东50米, Sanshui
+// Hanse — primary (陶创园 凤凰路)
+const HANSE_ALPHA = [23.0160, 113.0250]; // 凤凰路陶创园, Chancheng
+// Hanse — alternative (吉华三路)
+const HANSE_BETA  = [23.0200, 113.0500]; // 吉华三路, Chancheng (alt)
+// Shenzhen office
+const PRIMA_SZ    = [22.6910, 114.0570]; // 嘉安达大厦, Longhua, Shenzhen
+
+// ── Map setup ────────────────────────────────────────────────────────────────
+const map = L.map('map', { center: [23.15, 113.00], zoom: 11 });
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 18,
+}).addTo(map);
+
+// ── Custom markers ────────────────────────────────────────────────────────────
+const RED    = new L.DivIcon({ html: '<div style="background:#dc2626;width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.4)"></div>', className: '', iconSize: [16,16], iconAnchor: [8,8] });
+const BLUE   = new L.DivIcon({ html: '<div style="background:#2563eb;width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.4)"></div>', className: '', iconSize: [16,16], iconAnchor: [8,8] });
+const PURPLE = new L.DivIcon({ html: '<div style="background:#7c3aed;width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.4)"></div>', className: '', iconSize: [16,16], iconAnchor: [8,8] });
+const AMBER  = new L.DivIcon({ html: '<div style="background:#f59e0b;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,0.3)"></div>', className: '', iconSize: [14,14], iconAnchor: [7,7] });
+
+function popupContent(name, type, address, contact, status) {
+  const badge = status === 'confirmed' ? '<span class="badge badge-confirmed" style="margin-left:0.3rem">✓ Confirmed</span>'
+    : status === 'unconfirmed' ? '<span class="badge badge-unconfirmed" style="margin-left:0.3rem">⚠ Unconfirmed</span>'
+    : '<span class="badge badge-provisional" style="margin-left:0.3rem">~ Provisional</span>';
+  return `<div class="popup-name">${name}${badge}</div>
+<div class="popup-row"><span class="popup-label">Type</span><span class="popup-value">${type}</span></div>
+<div class="popup-row"><span class="popup-label">Address</span><span class="popup-value">${address}</span></div>
+${contact ? `<div class="popup-row"><span class="popup-label">Contact</span><span class="popup-value">${contact}</span></div>` : ''}`;
+}
+
+// ── Add markers ───────────────────────────────────────────────────────────────
+const markers = [
+  // Hotels
+  L.marker(IC_NANHAI, { icon: BLUE })
+    .addTo(map)
+    .bindPopup(popupContent(
+      'InterContinental Foshan (Nanhai)',
+      'Hotel — Recommended Base',
+      '灯湖东路20号, Nanhai District, Foshan',
+      null, 'confirmed')),
+  L.marker(IC_DONGPING, { icon: BLUE })
+    .addTo(map)
+    .bindPopup(popupContent(
+      'InterContinental Foshan Dongping',
+      'Hotel — Alternate',
+      '文华南路8号, Lecong, Shunde District, Foshan',
+      null, 'confirmed')),
+
+  // Factories
+  L.marker(AMJ, { icon: RED })
+    .addTo(map)
+    .bindPopup(popupContent(
+      'AMJ Windows & Doors',
+      'Factory',
+      '兴业园 B5栋, Leping Town, Sanshui District, Foshan',
+      'Teresa · +86 173 7564 9626', 'confirmed')),
+  L.marker(PRIMA_FS, { icon: RED })
+    .addTo(map)
+    .bindPopup(popupContent(
+      'Prima Industry Co., Ltd. (Foshan Factory)',
+      'Factory',
+      '念德村 361省道东50米 (侨鑫生态园旁), Leping, Sanshui',
+      'Gloria · +86 152 1518 1530', 'confirmed')),
+  L.marker(HANSE_ALPHA, { icon: RED })
+    .addTo(map)
+    .bindPopup(popupContent(
+      'Hanse Industrial (Pho Charn) — Primary',
+      'Factory',
+      '陶创园1座, 凤凰路11号, Chancheng District, Foshan',
+      'Bella · +86 137 0226 8714', 'provisional')),
+  L.marker(HANSE_BETA, { icon: AMBER })
+    .addTo(map)
+    .bindPopup(popupContent(
+      'Hanse Industrial — Alternative Address',
+      'Factory (alt.)',
+      '吉华三路, Chancheng District, Foshan',
+      'Bella · +86 137 0226 8714', 'provisional')),
+
+  // Shenzhen
+  L.marker(PRIMA_SZ, { icon: PURPLE })
+    .addTo(map)
+    .bindPopup(popupContent(
+      'Prima Industry — Shenzhen Office',
+      'Office (Reference)',
+      '嘉安达大厦13楼, 华繁路110号, Longhua District, Shenzhen',
+      'Gloria · +86 152 1518 1530', 'unconfirmed')),
+];
+
+// Auto-open first marker
+markers[0].openPopup();
+
+// ── OSRM route lines (display only — click marker to see route link) ───────────
+function osrmRouteUrl(from, to) {
+  return `https://www.openstreetmap.org/directions?engine=fossgis_osrm&route=${from[0]},${from[1]};${to[0]},${to[1]}#map=12/${(from[0]+to[0])/2}/${(from[1]+to[1])/2}`;
+}
+
+const routeLinks = `
+<div style="font-size:0.78rem;margin-top:0.4rem;border-top:1px solid #e2e8f0;padding-top:0.4rem">
+<strong>OSRM route links:</strong><br>
+<a href="${osrmRouteUrl(IC_NANHAI, AMJ)}" target="_blank" style="color:#2563eb">IC Nanhai → AMJ</a><br>
+<a href="${osrmRouteUrl(IC_NANHAI, PRIMA_FS)}" target="_blank" style="color:#2563eb">IC Nanhai → Prima (FS)</a><br>
+<a href="${osrmRouteUrl(IC_NANHAI, HANSE_ALPHA)}" target="_blank" style="color:#2563eb">IC Nanhai → Hanse</a><br>
+<a href="${osrmRouteUrl(IC_NANHAI, PRIMA_SZ)}" target="_blank" style="color:#2563eb">IC Nanhai → Prima (SZ)</a>
+</div>`;
+
+// Add route links to hotel popup
+markers[0].getPopup().setContent(
+  popupContent('InterContinental Foshan (Nanhai)', 'Hotel — Recommended Base', '灯湖东路20号, Nanhai District, Foshan', null, 'confirmed')
+  + routeLinks);
+</script>
+</body>
+</html>

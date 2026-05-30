@@ -71,14 +71,16 @@ export default function EnquiryForm() {
       if (res.ok) {
         setSubmitted(true)
         // Fire Meta Pixel Lead event
-        const win = window as Window & { fbq?: Function }
-        if (typeof window !== 'undefined' && win.fbq) {
-          win.fbq('track', 'Lead', {
-            content_name: 'Enquiry Form Submission',
-            content_category: formData.industry || 'not provided',
-            currency: 'AUD',
-          })
-        }
+        setTimeout(() => {
+          const win = window as Window & { fbq?: Function }
+          if (win.fbq) {
+            win.fbq('track', 'Lead', {
+              content_name: 'Enquiry Form Submission',
+              content_category: formData.industry || 'not provided',
+              currency: 'AUD',
+            })
+          }
+        }, 100)
       } else {
         const data = await res.json()
         const errorMsg = data.details

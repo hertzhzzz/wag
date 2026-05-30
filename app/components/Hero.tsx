@@ -60,21 +60,21 @@ export default function Hero() {
 
         <h1 className="max-w-[780px]">
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white hero-headline-line-1 is-visible">
-            No middleman margins.
+            We Find You
           </span>
           <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(32px,4.8vw,58px)] text-amber hero-headline-line-2 is-visible">
-            Face-to-face with the factory.
-          </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white hero-headline-line-3 is-visible">
-            We do the sourcing.
-          </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(22px,3.2vw,38px)] text-white/70 hero-headline-line-4 is-visible">
-            You do the business.
+            China's Best Factories
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-10 hero-description is-visible">
-          Australian businesses use WAG to source directly from verified Chinese manufacturers — without paying trader markups. Free quote to start. Face-to-face access via our China team or guided factory visits.
+        <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-3 hero-subtitle is-visible">
+          Verified manufacturers. Direct access. Zero middleman.
+        </p>
+        <p className="text-base md:text-lg font-light leading-[1.6] text-white/70 max-w-[520px] mb-3 hero-subtitle-line-2 is-visible">
+          Direct factory access. No agents. No traders.
+        </p>
+        <p className="text-base md:text-lg font-light leading-[1.6] text-white/70 max-w-[520px] mb-10 hero-subtitle-line-3 is-visible">
+          Start with a free quote. Tell us what you need.
         </p>
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 hero-buttons is-visible">

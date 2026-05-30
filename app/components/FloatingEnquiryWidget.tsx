@@ -20,31 +20,27 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const containerRef = useRef<HTMLDivElement>(null)
   // Initialize to an impossible value so first real pathname always differs
+  // (kept for future re-enablement of auto-open feature)
   const lastPathname = useRef<string | null>(null)
   const animationKey = useRef(0)
 
-  // Effect 1: track previous pathname values, detect article page changes
-  useEffect(() => {
-    const isArticle =
-      pathname &&
-      pathname.startsWith('/resources/') &&
-      pathname !== '/resources'
-
-    if (isArticle) {
-      // On first real pathname, lastPathname is null → auto-open
-      // On subsequent navigations between articles, pathname differs → auto-open
-      if (lastPathname.current !== pathname) {
-        animationKey.current += 1
-        setIsPanelVisible(true)
-        setIsDismissed(false)
-        lastPathname.current = pathname
-      }
-    } else {
-      lastPathname.current = pathname || null
-      setIsPanelVisible(false)
-      setIsDismissed(false)
-    }
-  }, [pathname])
+  // Auto-open on article pages — disabled
+  // Previously: auto-opened panel when pathname started with /resources/
+  // Removed to prevent disrupting the reading flow on blog article pages.
+  // User must manually click the trigger button to open the enquiry panel.
+  // useEffect(() => {
+  //   const isArticle = pathname && pathname.startsWith('/resources/') && pathname !== '/resources'
+  //   if (isArticle && lastPathname.current !== pathname) {
+  //     animationKey.current += 1
+  //     setIsPanelVisible(true)
+  //     setIsDismissed(false)
+  //     lastPathname.current = pathname
+  //   } else {
+  //     lastPathname.current = pathname || null
+  //     setIsPanelVisible(false)
+  //     setIsDismissed(false)
+  //   }
+  // }, [pathname])
 
   // Close on outside click
   useEffect(() => {
