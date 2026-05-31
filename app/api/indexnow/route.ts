@@ -17,7 +17,7 @@ const INDEXNOW_ENDPOINTS = {
 
 // API key must be hosted at: /api/indexnow?key=<key>
 // For production, set this in Vercel environment variables
-const INDEXNOW_API_KEY = process.env.INDEXNOW_API_KEY || ''
+const INDEXNOW_API_KEY_2 = process.env.INDEXNOW_API_KEY_2 || ''
 
 export async function POST(request: NextRequest) {
   try {
@@ -50,9 +50,9 @@ export async function POST(request: NextRequest) {
     // Build IndexNow payload
     const payload = {
       host: 'www.winningadventure.com.au',
-      key: INDEXNOW_API_KEY,
-      keyLocation: INDEXNOW_API_KEY
-        ? `https://www.winningadventure.com.au/api/indexnow?key=${INDEXNOW_API_KEY}`
+      key: INDEXNOW_API_KEY_2,
+      keyLocation: INDEXNOW_API_KEY_2
+        ? `https://www.winningadventure.com.au/api/indexnow?key=${INDEXNOW_API_KEY_2}`
         : undefined,
       urlList: Array.isArray(url) ? url : [url],
     }
@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const key = request.nextUrl.searchParams.get('key')
 
-  if (!key || key !== INDEXNOW_API_KEY) {
+  if (!key || key !== INDEXNOW_API_KEY_2) {
     return NextResponse.json(
       { error: 'Invalid or missing API key' },
       { status: 401 }
@@ -116,7 +116,7 @@ export async function GET(request: NextRequest) {
   }
 
   // Return the key for verification
-  return new NextResponse(INDEXNOW_API_KEY, {
+  return new NextResponse(INDEXNOW_API_KEY_2, {
     status: 200,
     headers: {
       'Content-Type': 'text/plain',
