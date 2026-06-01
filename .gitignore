@@ -34,3 +34,5 @@ next-env.d.ts
 .gstack/
 hermes_conversation_*.json
 .worktrees/
+infographic/
+*-backup.webp
