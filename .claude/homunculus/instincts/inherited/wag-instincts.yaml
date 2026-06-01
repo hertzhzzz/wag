@@ -1,0 +1,489 @@
+# Instincts generated from https://github.com/hertzhzzz/wag
+# Generated: 2026-04-10T11:37:16.793Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: wag-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: docs, feat, refactor, fix
+
+## Evidence
+
+- 23 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat: add Mark He Australia Team section, remove LiveChatAI (#1), refactor: refactor article page with modular components and improved layout
+
+---
+id: wag-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Commit Length
+
+## Action
+
+Write moderate-length commit messages (~51 characters)
+
+## Evidence
+
+- Average commit message length: 51 chars
+- Based on 23 commits
+
+---
+id: wag-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: wag-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: wag-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~13x per month
+- Files: app/about/*, app/components/*, app/*
+
+---
+id: wag-workflow-codebase-documentation-refresh
+trigger: "when doing codebase documentation refresh"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Workflow Codebase Documentation Refresh
+
+## Action
+
+Follow the codebase-documentation-refresh workflow:
+1. Edit or create markdown files in .planning/codebase/ (e.g., ARCHITECTURE.md, STACK.md, INTEGRATIONS.md, CONCERNS.md, CONVENTIONS.md, STRUCTURE.md, TESTING.md)
+2. Summarize or update each file with current information
+3. Commit all updated documentation files together
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .planning/codebase/ARCHITECTURE.md, .planning/codebase/STACK.md, .planning/codebase/INTEGRATIONS.md
+
+---
+id: wag-workflow-navbar-feature-or-style-update
+trigger: "when doing navbar feature or style update"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Workflow Navbar Feature Or Style Update
+
+## Action
+
+Follow the navbar-feature-or-style-update workflow:
+1. Edit app/components/Navbar.tsx to add or update feature (e.g., phone button, CTA, logo)
+2. Update related assets if needed (e.g., logo images in public/)
+3. Test Navbar visually and functionally
+4. Commit changes, often in small, focused commits
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: app/components/Navbar.tsx, public/logo-nav-trans-cropped.png, public/logo-nav-trans.png
+
+---
+id: wag-workflow-blog-or-social-content-publication
+trigger: "when doing blog or social content publication"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Workflow Blog Or Social Content Publication
+
+## Action
+
+Follow the blog-or-social-content-publication workflow:
+1. Create new .mdx file in content/blog/ for the article
+2. Add related images to public/social/[platform]/[post-slug]/imgs/
+3. Create outline, post, and prompt markdown files in social/[platform]-post/[date-slug]/
+4. Optionally add preview.html or batch.json for social publishing
+5. Commit all related files together
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: content/blog/*.mdx, public/social/[platform]*/[date-slug]*/imgs/*.png, social/[platform]-post/[date-slug]*/outline.md
+
+---
+id: wag-workflow-feature-development-with-planning-phase
+trigger: "when doing feature development with planning phase"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/hertzhzzz/wag
+---
+
+# Wag Workflow Feature Development With Planning Phase
+
+## Action
+
+Follow the feature-development-with-planning-phase workflow:
+1. Create or update planning files in .planning/ (e.g., PROJECT.md, ROADMAP.md, REQUIREMENTS.md, phases/*/CONTEXT.md, phases/*/RESEARCH.md, phases/*/PLAN.md, phases/*/SUMMARY.md)
+2. Implement feature in codebase (e.g., app/, .claude/, etc.)
+3. Commit planning and implementation files, sometimes in separate commits
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: .planning/PROJECT.md, .planning/ROADMAP.md, .planning/REQUIREMENTS.md
+
+---
+id: wag-instinct-file-naming-kebab-case
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct File Naming Kebab Case
+
+## Action
+
+Use kebab-case for file names
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Files like app/about/page.tsx
+
+---
+id: wag-instinct-function-naming-camelCase
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Function Naming CamelCase
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- TypeScript conventions in app/components/
+
+---
+id: wag-instinct-class-naming-PascalCase
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Class Naming PascalCase
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes
+- TypeScript conventions in app/components/
+
+---
+id: wag-instinct-constant-naming-SCREAMING_SNAKE_CASE
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Constant Naming SCREAMING_SNAKE_CASE
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: wag-instinct-import-style-mixed
+trigger: "When importing modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Import Style Mixed
+
+## Action
+
+Use either default or named imports as appropriate
+
+## Evidence
+
+- importStyle: mixed
+- Seen in app/components/PersonSchema.tsx
+
+---
+id: wag-instinct-export-style-mixed
+trigger: "When exporting modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Export Style Mixed
+
+## Action
+
+Use either default or named exports as appropriate
+
+## Evidence
+
+- exportStyle: mixed
+- Seen in app/components/Navbar.tsx
+
+---
+id: wag-instinct-test-location-mixed
+trigger: "When adding tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Test Location Mixed
+
+## Action
+
+Place test files alongside source files or in dedicated test folders as needed
+
+## Evidence
+
+- testLocation: mixed
+- Files like app/components/*.test.tsx
+
+---
+id: wag-instinct-test-feature-after-implementation
+trigger: "When a new feature is implemented"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Test Feature After Implementation
+
+## Action
+
+Add or update corresponding test files for the feature
+
+## Evidence
+
+- feature-development workflow includes test step
+- Files like **/*.test.*
+
+---
+id: wag-instinct-commit-conventional-format
+trigger: "When writing a commit message"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Commit Conventional Format
+
+## Action
+
+Use conventional commit prefixes (feat, fix, docs, refactor) followed by a short description
+
+## Evidence
+
+- commits.type: conventional
+- Examples: 'feat: add Mark He Australia Team section, remove LiveChatAI (#1)'
+
+---
+id: wag-instinct-commit-length-50-chars
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Commit Length 50 Chars
+
+## Action
+
+Keep the commit message around 50 characters on average
+
+## Evidence
+
+- averageLength: 51
+- Examples of commit messages
+
+---
+id: wag-instinct-codebase-docs-refresh
+trigger: "When onboarding, planning, or updating codebase documentation"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Codebase Docs Refresh
+
+## Action
+
+Edit or create markdown files in .planning/codebase/, summarize or update each file, and commit all updated documentation files together
+
+## Evidence
+
+- codebase-documentation-refresh workflow
+- Files in .planning/codebase/
+
+---
+id: wag-instinct-navbar-update
+trigger: "When adding, updating, or fixing Navbar features or styles"
+confidence: 0.93
+domain: workflow
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Navbar Update
+
+## Action
+
+Edit app/components/Navbar.tsx and related assets, test visually/functionally, and commit focused changes
+
+## Evidence
+
+- navbar-feature-or-style-update workflow
+- Files: app/components/Navbar.tsx, public/logo-nav-trans-cropped.png
+
+---
+id: wag-instinct-blog-social-publication
+trigger: "When publishing a new blog article or social media campaign"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Blog Social Publication
+
+## Action
+
+Create .mdx in content/blog/, add images to public/social/, create outline/post/prompt files in social/, and commit all related files together
+
+## Evidence
+
+- blog-or-social-content-publication workflow
+- Files: content/blog/*.mdx, public/social/*, social/*
+
+---
+id: wag-instinct-feature-with-planning-phase
+trigger: "When developing a significant new feature or major refactor"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: hertzhzzz/wag
+---
+
+# Wag Instinct Feature With Planning Phase
+
+## Action
+
+Create/update planning files in .planning/, implement the feature, and commit planning and implementation files (sometimes separately)
+
+## Evidence
+
+- feature-development-with-planning-phase workflow
+- Files: .planning/PROJECT.md, .claude/teams/wag-ai/state/*
+
