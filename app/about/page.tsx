@@ -54,16 +54,18 @@ export default function AboutPage() {
         { name: 'About', url: 'https://www.winningadventure.com.au/about' }
       ]} />
 
-      {/* Hero - Mobile: static image */}
-      <div className="md:hidden relative w-full" style={{ height: '280px' }}>
+      {/* Hero - Mobile: illustration */}
+      <div className="md:hidden relative w-full overflow-hidden" style={{ height: '140px' }}>
         <Image
-          src="/hero-image.webp"
-          alt="Winning Adventure Global team bridging Australian businesses with Chinese manufacturers"
-          fill
+          src="/about-hero.webp"
+          alt="Winning Adventure Global bridging Australian businesses with verified Chinese manufacturers — Australia-China sourcing bridge illustration"
+          width={3168}
+          height={1344}
           priority
-          className="object-cover"
+          className="absolute top-0 left-0 w-full h-auto"
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/65 to-navy/30" />
         <div className="relative z-10 flex flex-col justify-end h-full px-4 pb-6 max-w-[90%] mx-auto">
           <p className="font-serif text-[1.75rem] font-normal leading-[1.15] text-white">
             We exist because Australian businesses deserve <em className="italic text-amber">direct access</em> to Chinese manufacturing — without the guesswork.
@@ -71,20 +73,18 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Hero - Desktop: video */}
-      <div className="hidden md:block relative w-full" style={{ height: 'clamp(280px, 50vw, 480px)' }}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          poster="/hero-image.webp"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/hero_vid_h264.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+      {/* Hero - Desktop: illustration */}
+      <div className="hidden md:block relative w-full overflow-hidden" style={{ height: 'clamp(140px, 25vw, 240px)' }}>
+        <Image
+          src="/about-hero.webp"
+          alt="Winning Adventure Global bridging Australian businesses with verified Chinese manufacturers — Australia-China sourcing bridge illustration"
+          width={3168}
+          height={1344}
+          priority
+          className="absolute top-0 left-0 w-full h-auto"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/65 to-navy/30" />
         <div className="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-8 md:pb-12 max-w-[90%] mx-auto">
           <h1 className="font-serif text-[clamp(1.75rem,5vw,3.5rem)] font-normal leading-[1.15] text-white">
             We exist because Australian businesses deserve <em className="italic text-amber">direct access</em> to Chinese manufacturing — without the guesswork.

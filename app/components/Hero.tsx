@@ -58,11 +58,11 @@ export default function Hero() {
           </p>
         </div>
 
-        <h1 className="max-w-[780px]">
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(32px,4.8vw,58px)] text-white hero-headline-line-1 is-visible">
+        <h1 className="max-w-[860px]">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(41px,6.22vw,76px)] text-white hero-headline-line-1 is-visible">
             We Find You
           </span>
-          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(32px,4.8vw,58px)] text-amber hero-headline-line-2 is-visible">
+          <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(41px,6.22vw,76px)] text-amber hero-headline-line-2 is-visible">
             China's Best Factories
           </span>
         </h1>
