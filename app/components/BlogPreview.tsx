@@ -21,10 +21,10 @@ interface Article {
 // Fetched via: python ~/.claude/skills/seo/scripts/gsc_query.py --property "sc-domain:winningadventure.com.au" --json --dimension page
 const TOP_SLUGS = [
   'china-home-sales-drop',
+  'verify-chinese-supplier',
   '2026-australian-federal-budget-import-duty-changes',
   'iran-war-australia-china-supply-chain',
-  'verify-chinese-supplier',
-  '2026-australia-federal-budget-china-sourcing-impact',
+  'stateside-sports',
 ]
 
 function getTopArticles(count = 3): Article[] {
