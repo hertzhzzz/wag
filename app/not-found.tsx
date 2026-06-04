@@ -37,7 +37,7 @@ export default function NotFound() {
               Back to Home
             </Link>
             <Link
-              href="/services"
+              href="/solutions"
               className="border border-white/30 text-white px-8 py-4 text-sm font-semibold hover:bg-white/10 transition-colors"
             >
               View Services
@@ -55,7 +55,7 @@ export default function NotFound() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { href: '/', label: 'Home' },
-              { href: '/services', label: 'Services' },
+              { href: '/solutions', label: 'Solutions' },
               { href: '/resources', label: 'Resources' },
               { href: '/enquiry', label: 'Get in Touch' },
             ].map((link) => (

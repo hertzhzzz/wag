@@ -240,13 +240,13 @@ export default function ChinaSourcingComparisonPage() {
             Not sure which option is right for you?
           </h2>
           <p className="text-[#0F2D5E]/70 mb-6 leading-relaxed">
-            Book a free consultation and we will walk you through the honest answer — including whether we are the right fit.
+            Book a consultation and we will walk you through the honest answer — including whether we are the right fit.
           </p>
           <Link
             href="/enquiry"
             className="inline-block bg-[#0F2D5E] text-white py-3.5 px-8 text-base font-semibold transition-colors hover:bg-[#1a4080] min-h-11"
           >
-            Book a Free Consultation
+            Book a Consultation
           </Link>
         </div>
       </div>

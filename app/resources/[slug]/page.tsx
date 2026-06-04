@@ -12,7 +12,8 @@ import { ReadingProgressBar } from './ReadingProgressBar'
 import { BackToTopButton } from './BackToTopButton'
 import { ShareButtons } from './ShareButtons'
 import { ArticleNavigation } from './ArticleNavigation'
-import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema } from './article-utils'
+import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema, getRecommendedArticles } from './article-utils'
+import { RecommendedSidebar } from './RecommendedSidebar'
 import { HOW_TO_ARTICLES } from './how-to-data'
 import { createMdxComponents } from './mdx-components'
 import type { Frontmatter } from './types'
@@ -83,6 +84,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const takeaways: string[] = fm.takeaways || []
   const { prevArticle, nextArticle } = getPrevNextArticles(slug)
   const { intro, body } = splitContent(content)
+  const relatedArticles = getRecommendedArticles(slug, fm.category)
   // Extract FAQs from MDX content for JSON-LD schema
   const articleFaqs = extractFaqsFromContent(content)
 
@@ -162,6 +164,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
                   {/* Previous / Next Navigation */}
                   <ArticleNavigation prevArticle={prevArticle} nextArticle={nextArticle} />
+
+                  {/* Related Articles */}
+                  {relatedArticles.length > 0 && (
+                    <section className="mt-12 pt-8 border-t border-gray-200">
+                      <h2 className="font-serif text-2xl font-bold text-[#0F2D5E] mb-6">Related Articles</h2>
+                      <RecommendedSidebar articles={relatedArticles} />
+                    </section>
+                  )}
                 </div>
               </article>
             </main>
@@ -190,7 +200,8 @@ function HeroSection({ fm }: { fm: Frontmatter }) {
             fill
             priority
             className="object-cover z-0"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 900px, 1200px"
+            quality={85}
           />
         )}
         {hasCover && <div className="absolute inset-0 bg-[#0F2D5E]/75 z-[1]" />}

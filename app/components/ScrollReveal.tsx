@@ -1,50 +1,43 @@
-'use client'
+"use client"
 
-import { useEffect, useRef, useState, ReactNode } from 'react'
+import { useEffect, useRef } from "react"
 
-interface ScrollRevealProps {
-  children: ReactNode
-  className?: string
-  threshold?: number
-  delay?: number
-}
-
+/**
+ * ScrollReveal — wraps children in a div that fades up when it enters the viewport.
+ * The animation is driven by data-animate="true" + CSS in services-animations.css.
+ */
 export default function ScrollReveal({
   children,
-  className = '',
-  threshold = 0.1,
-  delay = 0
-}: ScrollRevealProps) {
-  const [visible, setVisible] = useState(false)
+  className = "",
+  delay = 0,
+}: {
+  children: React.ReactNode
+  className?: string
+  delay?: number
+}) {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
     const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setVisible(true)
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.dataset.animate = "true"
+          observer.disconnect()
         }
       },
-      { threshold }
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
+    if (delay > 0) el.style.transitionDelay = `${delay}ms`
+    observer.observe(el)
     return () => observer.disconnect()
-  }, [threshold])
+  }, [delay])
 
   return (
-    <div
-      ref={ref}
-      className={`transition-all duration-500 ease-out-quint ${
-        visible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-6'
-      } ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
+    <div ref={ref} className={`scroll-reveal ${className}`} data-animate="">
       {children}
     </div>
   )

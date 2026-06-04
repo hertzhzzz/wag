@@ -6,7 +6,7 @@ import FAQSchema from '@/components/FAQSchema'
 const enquiryFaqs = [
   {
     question: 'Is there any upfront cost to enquire?',
-    answer: 'None. The initial consultation is completely free.',
+    answer: 'A deposit is required to begin. This deposit is applied toward your sourcing project and covers the initial consultation and supplier shortlisting.',
   },
   {
     question: 'Do you push me towards specific suppliers?',
@@ -19,12 +19,12 @@ const enquiryFaqs = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Contact WAG | Request a Free Discovery Call',
-  description: 'Get in touch for China sourcing consultation. Factory tours, supplier verification, and bulk procurement support for Australian businesses. Book your free discovery call today.',
+  title: 'Contact WAG | Request a Discovery Call',
+  description: 'Get in touch for China sourcing consultation. Factory tours, supplier verification, and bulk procurement support for Australian businesses. Book your discovery call today.',
   keywords: ['china sourcing consultation', 'factory tour enquiry', 'australian business china', 'contact wag', 'supplier verification quote', 'china procurement help'],
   openGraph: {
     title: 'Contact Winning Adventure Global',
-    description: 'Get expert China sourcing help. Book your free discovery call.',
+    description: 'Get expert China sourcing help. Book your discovery call.',
     url: 'https://www.winningadventure.com.au/enquiry',
     siteName: 'Winning Adventure Global',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Winning Adventure Global',
-    description: 'Get expert China sourcing help. Book your free discovery call.',
+    description: 'Get expert China sourcing help. Book your discovery call.',
     images: ['https://www.winningadventure.com.au/og-image.jpg'],
   },
   alternates: {

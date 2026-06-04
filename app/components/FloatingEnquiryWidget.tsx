@@ -100,6 +100,24 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
       })
       if (res.ok) {
         setSubmitted(true)
+        // Fire GA4 and Meta Pixel conversion events
+        setTimeout(() => {
+          const win = window as Window & { fbq?: Function; gtag?: Function }
+          if (win.gtag) {
+            win.gtag('event', 'generate_lead', {
+              event_category: 'enquiry',
+              event_label: 'floating_widget',
+              value: 1,
+              currency: 'AUD',
+            })
+          }
+          if (win.fbq) {
+            win.fbq('track', 'Lead', {
+              content_name: 'Enquiry Form Submission (Widget)',
+              currency: 'AUD',
+            })
+          }
+        }, 100)
       } else {
         const data = await res.json()
         setErrors({ submit: data.error || 'Submission failed. Please try again.' })

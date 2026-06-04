@@ -7,7 +7,7 @@ import FAQ from '@/components/FAQ'
 import FAQSchema from '@/components/FAQSchema'
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
-import ScrollReveal from '@/services/ScrollReveal'
+import ScrollReveal from '@/components/ScrollReveal'
 import { CheckCircle, Sparkles, Tractor, Package, UtensilsCrossed, Sun, Building2, Users, Globe, ArrowRight, Briefcase } from 'lucide-react'
 
 export const metadata: Metadata = {

@@ -30,10 +30,15 @@
   transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.process-step[data-animate="true"] {
+[data-animate="true"] .process-step {
   opacity: 1;
   transform: translateY(0);
 }
+[data-animate="true"] .process-step:nth-child(1) { transition-delay: 0s; }
+[data-animate="true"] .process-step:nth-child(2) { transition-delay: 0.1s; }
+[data-animate="true"] .process-step:nth-child(3) { transition-delay: 0.2s; }
+[data-animate="true"] .process-step:nth-child(4) { transition-delay: 0.3s; }
+[data-animate="true"] .process-step:nth-child(5) { transition-delay: 0.4s; }
 
 /* ---- Differentiator Cards ---- */
 .diff-card {
@@ -42,7 +47,7 @@
   transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.diff-card[data-animate="true"] {
+[data-animate="true"] .diff-card {
   opacity: 1;
   transform: translateY(0);
 }
@@ -54,10 +59,22 @@
   transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.industry-card[data-animate="true"] {
+[data-animate="true"] .industry-card {
   opacity: 1;
   transform: translateY(0);
 }
+[data-animate="true"] .industry-card:nth-child(1) { transition-delay: 0s; }
+[data-animate="true"] .industry-card:nth-child(2) { transition-delay: 0.04s; }
+[data-animate="true"] .industry-card:nth-child(3) { transition-delay: 0.08s; }
+[data-animate="true"] .industry-card:nth-child(4) { transition-delay: 0.12s; }
+[data-animate="true"] .industry-card:nth-child(5) { transition-delay: 0.16s; }
+[data-animate="true"] .industry-card:nth-child(6) { transition-delay: 0.20s; }
+[data-animate="true"] .industry-card:nth-child(7) { transition-delay: 0.24s; }
+[data-animate="true"] .industry-card:nth-child(8) { transition-delay: 0.28s; }
+[data-animate="true"] .industry-card:nth-child(9) { transition-delay: 0.32s; }
+[data-animate="true"] .industry-card:nth-child(10) { transition-delay: 0.36s; }
+[data-animate="true"] .industry-card:nth-child(11) { transition-delay: 0.40s; }
+[data-animate="true"] .industry-card:nth-child(12) { transition-delay: 0.44s; }
 
 /* ---- Case Study Cards ---- */
 .svc-case-study {
@@ -66,10 +83,14 @@
   transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.svc-case-study[data-animate="true"] {
+[data-animate="true"] .svc-case-study {
   opacity: 1;
   transform: translateY(0);
 }
+[data-animate="true"] .svc-case-study:nth-child(1) { transition-delay: 0s; }
+[data-animate="true"] .svc-case-study:nth-child(2) { transition-delay: 0.1s; }
+[data-animate="true"] .svc-case-study:nth-child(3) { transition-delay: 0.2s; }
+[data-animate="true"] .svc-case-study:nth-child(4) { transition-delay: 0.3s; }
 
 /* ---- Hero CTA buttons pulse ---- */
 @keyframes cta-subtle {

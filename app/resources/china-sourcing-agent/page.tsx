@@ -38,7 +38,7 @@ const processSteps = [
   {
     num: '1',
     title: 'Requirements Gathering',
-    desc: 'We start with a free consultation to understand your product, industry, volume requirements, and quality standards.',
+    desc: 'We start with a consultation to understand your product, industry, volume requirements, and quality standards.',
   },
   {
     num: '2',
@@ -87,7 +87,7 @@ const faqs: Array<{ question: string; answer: string }> = [
   },
   {
     question: 'What does the service cost?',
-    answer: 'We offer a free initial consultation. Service fees are discussed after we understand your product and requirements — and only apply when you confirm a factory match. There is no upfront cost to start.',
+    answer: 'A deposit is required to begin. Service fees are discussed after we understand your product and requirements. You receive a clear scope and fee proposal before any engagement begins.',
   },
   {
     question: 'Do you handle logistics and shipping?',
@@ -241,7 +241,7 @@ export default function ChinaSourcingAgentPage() {
             What a China Sourcing Agent Costs — and What You Actually Get
           </h3>
           <p className="text-gray-600 leading-relaxed">
-            We offer a free initial consultation — no obligation, no upfront cost. From there, service fees are structured around your specific product, volume, and the complexity of the sourcing challenge. We work both on a fixed-fee per project basis and a commission model depending on what makes sense for your situation. The key thing is this: we do not take factory commissions, so our incentives are fully aligned with getting you a reliable supplier at a fair price — not with steering you toward a specific factory. Before any engagement begins, you will receive a clear scope and fee proposal. No hidden costs, no surprises.
+            A deposit is required to begin. From there, service fees are structured around your specific product, volume, and the complexity of the sourcing challenge. We work both on a fixed-fee per project basis and a commission model depending on what makes sense for your situation. The key thing is this: we do not take factory commissions, so our incentives are fully aligned with getting you a reliable supplier at a fair price — not with steering you toward a specific factory. Before any engagement begins, you will receive a clear scope and fee proposal. No hidden costs, no surprises.
           </p>
         </div>
 
@@ -303,13 +303,13 @@ export default function ChinaSourcingAgentPage() {
             Ready to source from China?
           </h2>
           <p className="text-[#0F2D5E]/70 mb-6 leading-relaxed">
-            Tell us what you are looking to source. We will shortlist factories, coordinate your visit, and provide full bilingual on-site support — at no cost for the initial consultation.
+            Tell us what you are looking to source. We will shortlist factories, coordinate your visit, and provide full bilingual on-site support.
           </p>
           <Link
             href="/enquiry"
             className="inline-block bg-[#0F2D5E] text-white py-3.5 px-8 text-base font-semibold transition-colors hover:bg-[#1a4080] min-h-11"
           >
-            Book a Free Consultation <ArrowRight className="inline ml-2" size={16} />
+            Book a Consultation <ArrowRight className="inline ml-2" size={16} />
           </Link>
         </div>
       </div>

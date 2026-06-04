@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { BookOpen, Clock, Calendar, ArrowRight } from 'lucide-react'
 import type { RecommendedArticle } from './article-utils'
 
@@ -30,11 +31,13 @@ export function RecommendedSidebar({ articles }: RecommendedSidebarProps) {
             >
               {/* Thumbnail */}
               {article.coverImage && (
-                <div className="aspect-video overflow-hidden">
-                  <img
+                <div className="aspect-video overflow-hidden relative">
+                  <Image
                     src={article.coverImage}
                     alt={article.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 300px"
                   />
                 </div>
               )}

@@ -12,11 +12,11 @@ export const sourcingAgentFaqs = [
   },
   {
     question: 'How do sourcing agents charge for their services?',
-    answer: 'Typically a flat project fee, a percentage of the order value, or a combination. WAG provides a free initial consultation so you understand the full cost structure before committing.',
+    answer: 'Typically a flat project fee, a percentage of the order value, or a combination. A deposit is required to begin. WAG provides a clear scope and fee proposal before any engagement.',
   },
   {
     question: "What's the minimum order size to make using an agent worthwhile?",
-    answer: 'Most valuable for orders above AUD $5,000–$10,000 per production run. For smaller orders, the agent fee may outweigh the savings. We tell you honestly during your free consultation if an agent is the right fit.',
+    answer: 'Most valuable for orders above AUD $5,000–$10,000 per production run. For smaller orders, the agent fee may outweigh the savings. We tell you honestly during your consultation if an agent is the right fit.',
   },
   {
     question: 'What makes WAG different from other China sourcing agents?',
