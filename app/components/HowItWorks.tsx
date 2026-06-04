@@ -133,7 +133,7 @@ export default function HowItWorks() {
         {/* CTA section */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-navy/10">
           <Link
-            href="/services"
+            href="/solutions"
             className="inline-flex items-center gap-3 bg-navy text-white px-8 py-4 text-sm font-semibold hover:bg-navy/90 transition-all duration-300 no-underline min-h-11 hover:gap-4"
           >
             View All Services

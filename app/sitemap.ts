@@ -78,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: baseUrl, lastModified: new Date() },
-    { url: `${baseUrl}/services`, lastModified: new Date() },
+    { url: `${baseUrl}/solutions`, lastModified: new Date() },
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/resources`, lastModified: new Date() },
     { url: `${baseUrl}/enquiry`, lastModified: new Date() },

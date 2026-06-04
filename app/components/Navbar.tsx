@@ -35,7 +35,7 @@ export default function Navbar() {
             <Link href="/" className="nav-link text-navy">Home</Link>
           </li>
           <li>
-            <Link href="/services" className="nav-link text-navy">Services</Link>
+            <Link href="/solutions" className="nav-link text-navy">Solutions</Link>
           </li>
           <li>
             <Link href="/resources" className="nav-link text-navy">Resources</Link>
@@ -112,11 +112,11 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/services"
+              href="/solutions"
               className="block min-h-11 px-4 flex items-center text-navy"
               onClick={handleLinkClick}
             >
-              Services
+              Solutions
             </Link>
           </li>
           <li>

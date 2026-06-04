@@ -315,7 +315,7 @@ export default function AIChatBox() {
                         View More Resources
                       </Link>
                       <Link
-                        href="/services"
+                        href="/solutions"
                         className="text-sm text-amber hover:text-amber/80 font-medium underline underline-offset-2"
                       >
                         Explore Our Services

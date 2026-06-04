@@ -70,9 +70,19 @@ export default function EnquiryForm() {
       })
       if (res.ok) {
         setSubmitted(true)
-        // Fire Meta Pixel Lead event
+        // Fire GA4 and Meta Pixel conversion events
         setTimeout(() => {
-          const win = window as Window & { fbq?: Function }
+          const win = window as Window & { fbq?: Function; gtag?: Function }
+          // GA4 conversion event
+          if (win.gtag) {
+            win.gtag('event', 'generate_lead', {
+              event_category: 'enquiry',
+              event_label: formData.industry || 'not provided',
+              value: 1,
+              currency: 'AUD',
+            })
+          }
+          // Meta Pixel Lead event
           if (win.fbq) {
             win.fbq('track', 'Lead', {
               content_name: 'Enquiry Form Submission',

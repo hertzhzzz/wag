@@ -28,29 +28,29 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Services */}
+          {/* Solutions */}
           <div>
             <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
-              Services
+              Solutions
             </h4>
             <ul className="list-none space-y-3">
               <li>
-                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/solutions#factory-tours" className="text-white/70 text-sm hover:text-white transition-colors">
                   Business Discovery Trip
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/solutions#procurement" className="text-white/70 text-sm hover:text-white transition-colors">
                   Procurement Support
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/solutions#verification" className="text-white/70 text-sm hover:text-white transition-colors">
                   Factory Verification
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/solutions#verification" className="text-white/70 text-sm hover:text-white transition-colors">
                   Quality Inspection
                 </Link>
               </li>

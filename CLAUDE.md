@@ -2,17 +2,20 @@
 
 > Winning Adventure Global 官网项目
 
-## Quick Reference
+## Commands
 
 ```bash
 npm run dev        # dev server (localhost:3000)
 npm run build      # production build [required before commit]
 npm run lint       # ESLint check
+vercel --prod      # local build verification [required before commit]
 git push origin master  # deploy to Vercel
 ```
 
+## Quick Reference
+
 **Key files:** `app/page.tsx` · `content/*.mdx` · `app/api/enquiry/` · `public/social/`
-**Pages:** `/` · `/services` · `/about` · `/resources` · `/enquiry` · `/visiting-chinese-factories` · `/china-sourcing-guide-australia`
+**Pages:** `/` · `/solutions` · `/about` · `/resources` · `/enquiry` · `/visiting-chinese-factories` · `/china-sourcing-guide-australia`
 
 ---
 
@@ -31,13 +34,6 @@ frontend/
 └── social/           # source files for AI image generation (NOT deployed)
 ```
 
-## Commands
-
-```bash
-vercel --prod        # runs next build locally to verify build passes; MUST pass before commit
-git push origin master  # triggers Vercel production deployment
-```
-
 ## Content (MDX)
 
 **Frontmatter:** `title` · `date` · `description` · `author: "Mark He"` · `updatedDate` · `tags`
@@ -54,34 +50,19 @@ git push origin master  # triggers Vercel production deployment
 
 ## Rules
 
-### Company Information
-- **Legal Entity**: WINNING ADVENTURE GLOBAL PTY LTD (ACN 697 886 150, ABN 94 697 886 150, TFN 236 473 171)
-- **Registered**: South Australia under Corporations Act 2001 since 8 May 2026
-- **Address**: 5/54 Melbourne St, North Adelaide SA 5006
-- All legal pages, schemas, and API from-fields reflect PTY LTD entity
+Root STRICT rules in `../CLAUDE.md § Rules` — summary of project-specific additions:
 
-## Company Info Location
+- Legal Entity: WINNING ADVENTURE GLOBAL PTY LTD (ACN 697 886 150, ABN 94 697 886 150, TFN 236 473 171) — registered South Australia since 8 May 2026
+- Address: 5/54 Melbourne St, North Adelaide SA 5006 (always use slash format)
+- All legal pages, schemas, and API from-fields reflect PTY LTD entity
+- "Winning Adventure Global Pty Ltd" = legal entity; "Winning Adventure Global" = brand name
+
+### Company Info Location
+
 All ABN/ACN/TFN/address data is scattered across ~9 files in `app/`. Before changing company
 registration info: grep all old values first. Key files: layout.tsx, privacy/page.tsx,
 terms/page.tsx, about/page.tsx, services/page.tsx, components/Footer.tsx,
 components/PersonSchema.tsx, api/*/route.ts. ACN/TFN only in privacy/terms footnotes.
-
-## Known Gotchas
-- `app/services/page.tsx` once had placeholder ABN `12 345 678 901` — always verify this file
-- Address format: always use `5/54 Melbourne St` (slash, not comma)
-- "Winning Adventure Global Pty Ltd" = legal entity; "Winning Adventure Global" = brand name
-
-### STRICT
-- No emoji anywhere in codebase
-- No Chinese in page content / UI (exception: blog MDX content)
-- No "WA" / "WAG" abbreviation — use "Winning Adventure Global"
-- WAG founder is NOT Australian — use "Australia-based", never "Australian-owned"
-- WAG-poster-prompt outputs to `ads/post/YYYY-MM-DD/[topic]/` (not `ads/YYYY-MM-DD/`)
-- Remotion projects: `/Users/mark/Projects/wag/ads/video/` · React 19 incompatible with `@react-three/fiber` — use `react@18.3.1`
-
-### Must Pass Before Commit
-- `npm run build` && `npm run lint`
-- 5 pages accessible: `/` · `/services` · `/about` · `/resources` · `/enquiry`
 
 ## Validation Checklist
 
@@ -92,15 +73,37 @@ components/PersonSchema.tsx, api/*/route.ts. ACN/TFN only in privacy/terms footn
 [ ] enquiry form submits successfully
 ```
 
-## SEO Debugging
+## Known Gotchas
 
-```bash
-python ~/.claude/skills/seo/scripts/gsc_query.py --property sc-domain:winningadventure.com.au --json  # GSC data
-python ~/.claude/skills/seo/scripts/gsc_inspect.py <url> --json  # URL Inspection
-curl -sI <URL>  # HTTP status check
+- `app/services/page.tsx` — 301 `permanentRedirect` to `/solutions` (was placeholder ABN `12 345 678 901`)
+- `app/solutions/page.tsx` — 9-section hub page with anchor nav: #factory-tours, #procurement, #verification, #case-studies, #how-it-works, #industries, #faq, #cta
+- Hero background: `public/solutions/hero-bg.webp` (122KB WebP, 1920x1080, Google Imagen)
+- ScrollReveal CSS: `.svc-case-study[data-animate]` → `[data-animate] .svc-case-study` — descendant selectors required because `data-animate` lives on ScrollReveal wrapper, not card elements
+- Address format: always use `5/54 Melbourne St` (slash, not comma)
+
+## Images
+
+### Performance (LCP)
+
+Blog article hero cover images must use `next/image` with `priority` prop — never CSS background-image.
+
+```tsx
+<Image src={fm.coverImage} alt="" fill priority className="object-cover z-0" sizes="100vw" />
 ```
 
-**Thin content fix:** If GSC shows "discovered but not indexed" → expand to 1500+ words, add ArticleSchema, add author/date stamps. FAQPage schema is deprecated (Google May 2026) — not eligible for B2B sites anyway.
+For FloatImage (MDX content images):
+```tsx
+<Image src={src} alt={alt} width={width} height={Math.round(width * 0.75)} />
+```
+
+`next/image` enables WebP/AVIF auto-conversion, lazy loading, and `priority` gives fetchpriority="high" — reducing LCP from ~7s to ~2-3s.
+
+### File Locations
+
+Blog images: `public/social/blog/{slug}/` — only source. MDX: `/social/blog/{slug}/image.png`
+Cover images (from content pipeline): `public/social/blog/{slug}/cover.png` — 16:9, generated via `baoyu-imagine` batch
+
+**Content Pipeline**: See `wag-content-pipeline` skill. Generates MDX articles + cover images + social posts to `ads/post/{YYYY-MM-DD}/{slug}/`.
 
 ## Structured Data (Schema)
 
@@ -110,37 +113,26 @@ Current schemas in `app/components/`:
 - `BreadcrumbSchema.tsx` — Navigation path
 - `FAQSchema.tsx` — Deprecated (returns null); FAQ content kept as static HTML for crawlability
 
-FAQPage schema NOT needed: Google deprecated FAQ rich results May 2026; eligibility restricted to government/health sites only. Static HTML FAQ content suffices for SEO.
+FAQPage schema NOT needed: Google deprecated FAQ rich results May 2026; eligibility restricted to government/health sites only.
 
-## Image Performance (LCP Optimization)
+## SEO Debugging
 
-**Blog article hero cover images must use `next/image` with `priority` prop** — never CSS background-image.
-
-Correct pattern for hero/LCP images:
-```tsx
-<Image src={fm.coverImage} alt="" fill priority className="object-cover z-0" sizes="100vw" />
+```bash
+python ~/.claude/skills/seo/scripts/gsc_query.py --property sc-domain:winningadventure.com.au --json  # GSC data
+python ~/.claude/skills/seo/scripts/gsc_inspect.py <url> --json  # URL Inspection
+curl -sI <URL>  # HTTP status check
 ```
 
-For FloatImage (MDX content images), use `next/image` with fixed width/height:
-```tsx
-<Image src={src} alt={alt} width={width} height={Math.round(width * 0.75)} />
-```
-
-**Why:** `next/image` enables WebP/AVIF auto-conversion, lazy loading, and explicit `priority` gives the browser a fetchpriority="high" hint — reducing LCP from ~7s to ~2-3s.
-
-## Image Rules
-
-Blog images: `public/social/blog/{slug}/` — only source. MDX: `/social/blog/{slug}/image.png`
-
-**Known states:** ServiceSchema already referenced at `/services` line 42 — do not re-add
-**Lint principle:** Pre-existing errors in agents/ and lib/ are historical tech debt — do not fix unless in scope
-**GSC tools:** `python ~/.claude/skills/seo/scripts/gsc_inspect.py <url> --json` and `gsc_query.py`
+**Thin content fix:** If GSC shows "discovered but not indexed" → expand to 1500+ words, add ArticleSchema, add author/date stamps.
 
 ## Env
 
 `.env.local` — `GMAIL_USER` · `GMAIL_APP_PASSWORD` · `UPSTASH_REDIS_REST_URL` · `UPSTASH_REDIS_REST_TOKEN`
 Gmail rotation: SMTP fail → new App Password → verify locally → update Vercel env → redeploy.
 
+**Known states:** ServiceSchema already referenced at `/solutions` — do not re-add
+**Lint principle:** Pre-existing errors in agents/ and lib/ are historical tech debt — do not fix unless in scope
+
 ---
 
-*Updated: 2026-05-18*
+*Updated: 2026-06-01*

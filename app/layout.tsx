@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.winningadventure.com.au'),
   title: {
     template: '%s | Winning Adventure Global',
-    default: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
+    default: 'China Factory Tours & Supplier Verification for Australian Businesses | Winning Adventure Global',
   },
-  description: 'WAG connects Australian businesses with verified Chinese manufacturers across all industries. Pre-screened suppliers, factory tours, and procurement support. No matter your product, we help you source from China with confidence.',
+  description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. In-person factory tours, supplier vetting, and end-to-end procurement support across all industries. Free initial consultation.',
   keywords: ['china sourcing agent', 'verified chinese suppliers', 'australian business china sourcing', 'china procurement support', 'supplier verification china', 'import from china guide', 'china manufacturing agent'],
   authors: [{ name: 'Andy Liu' }],
   creator: 'Winning Adventure Global',
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     url: 'https://www.winningadventure.com.au',
     siteName: 'Winning Adventure Global',
-    title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
-    description: 'WAG connects Australian businesses with verified Chinese manufacturers across all industries. Pre-screened suppliers, factory tours, and procurement support.',
+    title: 'China Factory Tours & Supplier Verification for Australian Businesses | Winning Adventure Global',
+    description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. In-person factory tours, supplier vetting, and end-to-end procurement support.',
     images: [
       {
         url: '/og-image.jpg',
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'China Sourcing Agent for Australian Businesses | Winning Adventure Global',
-    description: 'Verified Chinese manufacturers across all industries. Factory tours, supplier verification, and procurement support.',
+    title: 'China Factory Tours & Supplier Verification for Australian Businesses | Winning Adventure Global',
+    description: 'Verified Chinese manufacturers across all industries. Factory tours, supplier verification, and end-to-end procurement support.',
     images: ['/og-image.webp'],
   },
   alternates: {
@@ -193,7 +193,7 @@ export default function RootLayout({
                 "@type": "OfferCatalog",
                 "name": "China Sourcing Services",
                 "description": "Factory tours, supplier verification, and end-to-end procurement support for Australian businesses",
-                "url": "https://www.winningadventure.com.au/services"
+                "url": "https://www.winningadventure.com.au/solutions"
               },
               "knowsAbout": [
                 "Chinese manufacturing",

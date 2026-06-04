@@ -116,7 +116,7 @@ export default function VisitingChineseFactoriesPage() {
                 Plan My Factory Visit →
               </Link>
               <Link
-                href="/services"
+                href="/solutions"
                 className="inline-block border border-white/40 text-white py-3.5 px-8 text-base font-semibold text-center transition-colors hover:border-white min-h-11"
               >
                 View All Services
@@ -245,7 +245,7 @@ export default function VisitingChineseFactoriesPage() {
                   Visit 2-3 pre-screened factories with a bilingual guide. All logistics handled. Ideal for supplier discovery and verification.
                 </p>
                 <Link
-                  href="/services"
+                  href="/solutions"
                   className="inline-block bg-navy text-white py-3 px-6 text-sm font-semibold text-center transition-colors hover:bg-[#1a4080] mt-auto min-h-11"
                 >
                   View Service Details →
@@ -263,7 +263,7 @@ export default function VisitingChineseFactoriesPage() {
                   Full procurement support from factory visit through to purchase order. Includes negotiation, samples, quality checks, and logistics.
                 </p>
                 <Link
-                  href="/services"
+                  href="/solutions"
                   className="inline-block bg-navy text-white py-3 px-6 text-sm font-semibold text-center transition-colors hover:bg-[#1a4080] mt-auto min-h-11"
                 >
                   View Service Details →
@@ -662,7 +662,7 @@ export default function VisitingChineseFactoriesPage() {
               Plan My Factory Visit →
             </Link>
             <Link
-              href="/services"
+              href="/solutions"
               className="inline-block border border-white/40 text-white py-3.5 px-8 text-base font-semibold transition-colors hover:border-white min-h-11"
             >
               Explore All Services
@@ -688,7 +688,7 @@ export default function VisitingChineseFactoriesPage() {
               { label: 'Brisbane China Sourcing', href: '/resources/brisbane-china-factory-visits' },
               { label: 'China Sourcing Risks', href: '/resources/china-sourcing-risks' },
               { label: '1688 Verification Guide', href: '/resources/how-to-verify-chinese-factories-1688' },
-              { label: 'Our Services', href: '/services' },
+              { label: 'Solutions', href: '/solutions' },
             ].map((link, i) => (
               <Link key={i} href={link.href} className="text-xs text-navy/60 hover:text-amber border border-gray-200 rounded px-3 py-2 text-center transition-colors">
                 {link.label}

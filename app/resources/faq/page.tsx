@@ -41,7 +41,7 @@ export default function FAQPage() {
           Expert answers to 18 common questions about sourcing from China, visiting factories, and working with manufacturers. Whether you are new to importing or looking to optimise your existing supply chain, these FAQs will help you understand the process.
         </p>
         <p className="text-sm text-gray-600 leading-relaxed">
-          Learn more about our approach in our <Link href="/services" className="text-amber hover:underline">sourcing services</Link> or <Link href="/about" className="text-amber hover:underline">about us</Link>.
+          Learn more about our approach in our <Link href="/solutions" className="text-amber hover:underline">sourcing services</Link> or <Link href="/about" className="text-amber hover:underline">about us</Link>.
         </p>
       </div>
 

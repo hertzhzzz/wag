@@ -97,7 +97,7 @@ export default function DirectoryAccessModal({ isOpen, onClose }: DirectoryAcces
           <>
             <h3 className="text-xl font-semibold text-navy mb-2">Access Factory Directory</h3>
             <p className="text-navy/60 mb-6">
-              Enter your email to receive free access to our verified factory database.
+              Enter your email to receive access to our verified factory database.
             </p>
 
             <form onSubmit={handleSubmit}>

@@ -92,7 +92,7 @@ export default function ChinaSourcingAgentPage() {
             href="/enquiry"
             className="inline-block bg-amber text-navy py-3.5 px-8 text-base font-semibold transition-colors hover:bg-amber/90 min-h-11"
           >
-            Get a Free Discovery Call <ArrowRight className="inline ml-2" size={16} />
+            Book a Discovery Call <ArrowRight className="inline ml-2" size={16} />
           </Link>
         </div>
       </section>
@@ -330,17 +330,17 @@ export default function ChinaSourcingAgentPage() {
             Ready to speak with an Australia-based China sourcing agent?
           </h2>
           <p className="text-gray-300 mb-8 leading-relaxed">
-            Tell us what you are looking to source. We will shortlist factories, coordinate your visit, and provide full bilingual on-site support — at no cost for the initial consultation.
+            Tell us what you are looking to source. We will shortlist factories, coordinate your visit, and provide full bilingual on-site support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/enquiry"
               className="inline-block bg-amber text-navy py-3.5 px-8 text-base font-semibold transition-colors hover:bg-amber/90 min-h-11"
             >
-              Get a Free Discovery Call →
+              Book a Discovery Call →
             </Link>
             <Link
-              href="/services"
+              href="/solutions"
               className="inline-block border border-white/40 text-white py-3.5 px-8 text-base font-semibold transition-colors hover:border-white min-h-11"
             >
               View Our Services
