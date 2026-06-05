@@ -76,7 +76,10 @@ export function AnnotationButton({ memberId, slug, companyName, fieldName, field
       )}
 
       {open && !submitted && (
-        <div className="absolute right-0 top-0 w-80 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-20">
+        {/* Backdrop */}
+        <div className="fixed inset-0 bg-black/20 z-30" onClick={() => setOpen(false)} />
+        {/* Popup */}
+        <div className="absolute right-0 top-0 w-80 max-w-[calc(100vw-2rem)] bg-white border border-gray-300 rounded-lg shadow-xl p-4 z-40 max-h-[80vh] overflow-y-auto">
           <div className="flex items-center justify-between mb-3">
             <div>
               <span className="text-xs font-semibold text-navy block">

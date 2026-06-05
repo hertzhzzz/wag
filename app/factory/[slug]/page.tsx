@@ -75,7 +75,7 @@ export default async function FactoryDetailPage({
         {sections.map((section: { key: string; title: string; fields: string[] }) => (
           <section
             key={section.key}
-            className="bg-white rounded-lg border border-gray-200 overflow-hidden"
+            className="bg-white rounded-lg border border-gray-200 overflow-visible"
           >
             <h2 className="px-5 py-3 bg-gray-50 border-b border-gray-200 font-semibold text-gray-800 text-sm">
               {section.title}
