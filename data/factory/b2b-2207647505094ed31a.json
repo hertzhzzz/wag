@@ -1,0 +1,254 @@
+{
+  "member_id": "b2b-2207647505094ed31a",
+  "member_id_label": "Member ID",
+  "company_name": "广州恒宝钟表有限公司",
+  "company_name_label": "公司名称",
+  "province": "广东省",
+  "province_label": "省份",
+  "city": "广州市",
+  "city_label": "城市",
+  "district": "越秀区",
+  "district_label": "区/县",
+  "address": "",
+  "address_label": "地址",
+  "established": "2025.08.08",
+  "established_label": "成立时间",
+  "annual_revenue": "2000万以上",
+  "annual_revenue_label": "年营业额",
+  "factory_area": "340m²",
+  "factory_area_label": "工厂面积",
+  "employees": "50人",
+  "employees_label": "员工人数",
+  "export_ready": false,
+  "export_ready_label": "出口能力",
+  "custom_moq": "200个",
+  "custom_moq_label": "定制MOQ",
+  "certifications": [
+    "CCC",
+    "ISO 9000",
+    "INTERTEK"
+  ],
+  "certifications_label": "认证资质",
+  "rankings": [
+    "入围石英表热度榜 第1名"
+  ],
+  "rankings_label": "企业排名",
+  "platform_tags": [
+    "deep-audit",
+    "super-factory"
+  ],
+  "platform_tags_label": "平台标签",
+  "processing_methods": [
+    "清加工",
+    "包工包料",
+    "来样加工",
+    "来图加工"
+  ],
+  "processing_methods_label": "加工方式",
+  "special_processes": [
+    "电脑切带",
+    "激光切",
+    "雕刻加工",
+    "抹油加工",
+    "滴胶加工"
+  ],
+  "special_processes_label": "特殊工艺",
+  "monthly_output": "51~100万",
+  "monthly_output_label": "月产量",
+  "production_workers": "18人",
+  "production_workers_label": "生产人员",
+  "contact_person": "",
+  "contact_person_label": "联系人",
+  "credit_code": "440111008170662",
+  "credit_code_label": "统一社会信用代码",
+  "legal_rep": "詹晓丽",
+  "legal_rep_label": "法定代表人",
+  "registered_capital": "200万元",
+  "registered_capital_label": "注册资本",
+  "registered_address": "广州市白云区三元里大道930号20栋101房(部位:107房)",
+  "registered_address_label": "注册地址",
+  "company_type": "",
+  "company_type_label": "公司类型",
+  "biz_scope": "日用品批发;日用品销售;厨具卫具及日用杂品批发;电气机械设备销售;互联网销售（除销售需要许可的商品）;仪器仪表制造;钟表与计时仪器制造;服装服饰批发;电气设备销售;机械电气设备销售;五金产品批发;五金产品零售;日用木制品销售;电气信号设备装置销售;化妆品批发;信息咨询服务（不含许可类信息咨询服务）;化妆品零售;3D打印基础材料销售;3D打印服务;塑料制品销售;缝纫修补服务;办公设备销售;办公用品销售;办公设备耗材销售;办公服务;卫生洁具销售;技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广;服装服饰零售;钟表与计时仪器销售;鞋帽批发;珠宝首饰批发;塑料加工专用设备销售;鞋帽零售;箱包销售;家用视听设备销售;通信设备销售;电子元器件零售;咨询策划服务;厨具卫具及日用杂品零售;日用杂品销售;钟表销售;软木制品销售;日用家电零售;木制容器销售;皮革、毛皮及其制品加工专用设备销售;皮革销售;电子产品销售;家居用品销售;智能仪器仪表制造",
+  "biz_scope_label": "经营范围",
+  "reg_authority": "广州市白云区市场监督管理局",
+  "reg_authority_label": "登记机关",
+  "annual_report_year": "",
+  "annual_report_year_label": "年报年份",
+  "business_term": "2025年08月08日 至 长期",
+  "business_term_label": "营业期限",
+  "has_fca_report": true,
+  "has_fca_report_label": "有深度认证",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2207647505094ed31a",
+  "fca_url_label": "认证报告URL",
+  "fca_report_id": "CNIR2501SZ16500",
+  "fca_report_id_label": "报告编号",
+  "fca_report_date": "2025-01-11",
+  "fca_report_date_label": "报告日期",
+  "fca_total_equipment": "3台",
+  "fca_total_equipment_label": "设备总数",
+  "fca_equipment": [
+    {
+      "name": "大件打包机",
+      "count": "1 台"
+    },
+    {
+      "name": "小件打包机",
+      "count": "2 台"
+    }
+  ],
+  "fca_equipment_label": "设备清单",
+  "fca_oem_ratio": "40 %",
+  "fca_oem_ratio_label": "OEM占比",
+  "fca_odm_ratio": "40 %",
+  "fca_odm_ratio_label": "ODM占比",
+  "fca_annual_new_models": "50",
+  "fca_annual_new_models_label": "年均新品",
+  "fca_sample_cycle": "30 天/件",
+  "fca_sample_cycle_label": "打样周期",
+  "fca_warehouse_area": "150 m²",
+  "fca_warehouse_area_label": "仓库面积",
+  "fca_warehouse_type": "租赁",
+  "fca_warehouse_type_label": "仓库类型",
+  "fca_quality_inspection": "否",
+  "fca_quality_inspection_label": "质检方式",
+  "fca_store_url": "",
+  "fca_store_url_label": "店铺URL",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01uBmSRF1nV6aT1Ymb5_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN014iNjx21nV6aOgHLbn_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01HLygka1nV6aRpQDBP_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01oVrEDx1nV6aRvk4TG_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01fBaFxj1nV6aKKWMKm_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01bnK4091nV6aKKQekl_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN017njoYp1nV6aTTQ9ZY_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01XYV8XL1nV6aRX0Rxd_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01qTvjFN1nV6aRpGkVD_!!4611686018427386566-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01XMKYuK1nV6aOgDrD5_!!4611686018427386566-0-av-auth-doc.jpg"
+    }
+  ],
+  "evidence_images_label": "证据图片",
+  "_sections": {
+    "basic": {
+      "title": "基本信息",
+      "fields": [
+        "company_name",
+        "province",
+        "city",
+        "district",
+        "address",
+        "established",
+        "contact_person",
+        "platform_tags"
+      ]
+    },
+    "scale": {
+      "title": "工厂规模",
+      "fields": [
+        "factory_area",
+        "employees",
+        "production_workers",
+        "annual_revenue",
+        "monthly_output",
+        "export_ready",
+        "custom_moq"
+      ]
+    },
+    "certifications": {
+      "title": "认证与资质",
+      "fields": [
+        "certifications",
+        "rankings",
+        "processing_methods",
+        "special_processes"
+      ]
+    },
+    "business": {
+      "title": "工商信息",
+      "fields": [
+        "credit_code",
+        "legal_rep",
+        "registered_capital",
+        "registered_address",
+        "company_type",
+        "biz_scope",
+        "reg_authority",
+        "annual_report_year",
+        "business_term"
+      ]
+    },
+    "fca": {
+      "title": "深度认证报告",
+      "fields": [
+        "has_fca_report",
+        "fca_report_id",
+        "fca_report_date",
+        "fca_total_equipment",
+        "fca_equipment",
+        "fca_oem_ratio",
+        "fca_odm_ratio",
+        "fca_annual_new_models",
+        "fca_sample_cycle",
+        "fca_warehouse_area",
+        "fca_warehouse_type",
+        "fca_quality_inspection",
+        "fca_url",
+        "fca_store_url"
+      ]
+    },
+    "evidence": {
+      "title": "证据图片",
+      "fields": [
+        "evidence_images"
+      ]
+    }
+  },
+  "_sections_order": [
+    "basic",
+    "scale",
+    "certifications",
+    "business",
+    "fca",
+    "evidence"
+  ],
+  "_slug": "b2b-2207647505094ed31a"
+}
