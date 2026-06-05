@@ -81,7 +81,7 @@ export function AnnotationButton({ memberId, slug, companyName, fieldName, field
 
       {/* Drawer + backdrop */}
       {open && (
-        <>
+        <div>
           {/* Backdrop */}
           <div className="fixed inset-0 bg-black/30 z-40" onClick={() => setOpen(false)} />
 
@@ -183,7 +183,7 @@ export function AnnotationButton({ memberId, slug, companyName, fieldName, field
               </div>
             </form>
           </div>
-        </>
+        </div>
       )}
     </div>
   )
