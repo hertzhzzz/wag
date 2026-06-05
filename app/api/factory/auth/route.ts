@@ -25,14 +25,15 @@ export async function POST(request: NextRequest) {
       }, { status: 401 })
     }
 
-    const token = process.env.FACTORY_AUTH_TOKEN || "wag-factory-default-token"
+    const token = (process.env.FACTORY_AUTH_TOKEN || "wag-factory-default-token").trim()
+    const from = body.from || "/factory"
 
-    const response = NextResponse.json({ success: true })
+    const response = NextResponse.redirect(new URL(from, request.url))
     response.cookies.set("factory_auth", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 7, // 7 days
+      maxAge: 60 * 60 * 24 * 7,
       path: "/",
     })
 

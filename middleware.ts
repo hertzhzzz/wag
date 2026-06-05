@@ -18,7 +18,7 @@ export function middleware(request: NextRequest) {
   // Check for auth cookie
   const authToken = request.cookies.get("factory_auth")
 
-  if (!authToken || authToken.value !== process.env.FACTORY_AUTH_TOKEN) {
+  if (!authToken || authToken.value !== (process.env.FACTORY_AUTH_TOKEN || "").trim()) {
     const loginUrl = new URL("/factory/login", request.url)
     loginUrl.searchParams.set("from", pathname)
     return NextResponse.redirect(loginUrl)

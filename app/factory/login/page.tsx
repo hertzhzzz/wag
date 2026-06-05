@@ -1,13 +1,12 @@
 "use client"
 
 import { Suspense, useState } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useSearchParams } from "next/navigation"
 
 function LoginForm() {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
   const searchParams = useSearchParams()
   const from = searchParams.get("from") || "/factory"
 
@@ -20,14 +19,24 @@ function LoginForm() {
       const res = await fetch("/api/factory/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ password, from }),
+        redirect: "manual",
       })
 
+      if (res.type === "opaqueredirect" || res.redirected) {
+        // API did a set-cookie + redirect; do full page nav
+        window.location.href = from
+        return
+      }
+
       if (res.ok) {
-        router.push(from)
-        router.refresh()
-      } else {
-        setError("Invalid password")
+        window.location.href = from
+        return
+      }
+
+      const data = await res.json()
+      if (data.error) {
+        setError(data.error)
       }
     } catch {
       setError("Network error, try again")
