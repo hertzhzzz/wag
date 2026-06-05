@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import type { IssueType } from "@/lib/factory-annotations"
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
   companyName: string
   fieldName: string
   fieldLabel: string
-  actualValue: string  // What the scraper extracted (auto-filled)
+  actualValue: string
 }
 
 const ISSUE_TYPES: { value: IssueType; label: string; desc: string }[] = [
@@ -29,6 +29,16 @@ export function AnnotationButton({ memberId, slug, companyName, fieldName, field
   const [expectedValue, setExpectedValue] = useState("")
   const [comment, setComment] = useState("")
 
+  // Lock body scroll when drawer is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => { document.body.style.overflow = "" }
+  }, [open])
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!expectedValue.trim() && issueType !== "other") return
@@ -39,19 +49,14 @@ export function AnnotationButton({ memberId, slug, companyName, fieldName, field
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          memberId,
-          slug,
-          companyName,
-          fieldName,
-          fieldLabel,
-          issueType,
-          expectedValue: expectedValue.trim(),
-          actualValue,
-          comment: comment.trim(),
+          memberId, slug, companyName, fieldName, fieldLabel,
+          issueType, expectedValue: expectedValue.trim(),
+          actualValue, comment: comment.trim(),
         }),
       })
       if (res.ok) {
         setSubmitted(true)
+        setOpen(false)
       }
     } finally {
       setLoading(false)
@@ -59,8 +64,9 @@ export function AnnotationButton({ memberId, slug, companyName, fieldName, field
   }
 
   return (
-    <div className="relative shrink-0">
-      {!open && !submitted && (
+    <div className="shrink-0">
+      {/* Trigger button */}
+      {!submitted && !open && (
         <button
           onClick={() => setOpen(true)}
           className="opacity-0 group-hover:opacity-100 transition text-xs px-2 py-1 rounded border border-gray-200 hover:bg-amber-50 hover:border-amber-300 text-gray-400 hover:text-amber-700 whitespace-nowrap"
@@ -70,100 +76,114 @@ export function AnnotationButton({ memberId, slug, companyName, fieldName, field
       )}
 
       {submitted && (
-        <span className="text-xs text-green-600 font-medium whitespace-nowrap">
-          Reported
-        </span>
+        <span className="text-xs text-green-600 font-medium whitespace-nowrap">Reported</span>
       )}
 
-      {open && !submitted && (
-        {/* Backdrop */}
-        <div className="fixed inset-0 bg-black/20 z-30" onClick={() => setOpen(false)} />
-        {/* Popup */}
-        <div className="absolute right-0 top-0 w-80 max-w-[calc(100vw-2rem)] bg-white border border-gray-300 rounded-lg shadow-xl p-4 z-40 max-h-[80vh] overflow-y-auto">
-          <div className="flex items-center justify-between mb-3">
-            <div>
-              <span className="text-xs font-semibold text-navy block">
-                Report Issue: {fieldLabel}
-              </span>
-              <span className="text-[10px] text-gray-400">{companyName}</span>
-            </div>
-            <button
-              onClick={() => setOpen(false)}
-              className="text-gray-400 hover:text-gray-600 text-lg leading-none"
-            >
-              ×
-            </button>
-          </div>
+      {/* Drawer + backdrop */}
+      {open && (
+        <>
+          {/* Backdrop */}
+          <div className="fixed inset-0 bg-black/30 z-40" onClick={() => setOpen(false)} />
 
-          <form onSubmit={handleSubmit} className="space-y-3">
-            {/* Issue type */}
-            <div>
-              <label className="block text-xs font-medium text-gray-600 mb-1">
-                Issue Type
-              </label>
-              <select
-                value={issueType}
-                onChange={(e) => setIssueType(e.target.value as IssueType)}
-                className="w-full border border-gray-200 rounded p-1.5 text-xs focus:outline-none focus:border-navy"
-              >
-                {ISSUE_TYPES.map((t) => (
-                  <option key={t.value} value={t.value}>
-                    {t.label} — {t.desc}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Current value (what scraper got) */}
-            <div>
-              <label className="block text-xs font-medium text-gray-600 mb-1">
-                Scraper Extracted
-              </label>
-              <div className="w-full bg-gray-50 border border-gray-100 rounded p-2 text-xs text-gray-500 max-h-16 overflow-y-auto font-mono">
-                {actualValue || "(empty)"}
+          {/* Right-side drawer */}
+          <div className="fixed top-0 right-0 h-full w-[420px] max-w-[90vw] bg-white shadow-2xl z-50 overflow-y-auto">
+            {/* Header */}
+            <div className="sticky top-0 bg-navy text-white px-5 py-4 flex items-center justify-between">
+              <div>
+                <h2 className="text-sm font-semibold">Report Issue</h2>
+                <p className="text-xs text-gray-300 mt-0.5">{fieldLabel}</p>
               </div>
-            </div>
-
-            {/* Expected value (what 1688 actually shows) */}
-            <div>
-              <label className="block text-xs font-medium text-gray-600 mb-1">
-                Correct Value <span className="text-red-400">*</span>
-              </label>
-              <input
-                type="text"
-                value={expectedValue}
-                onChange={(e) => setExpectedValue(e.target.value)}
-                placeholder="What does the 1688 page actually show?"
-                className="w-full border border-gray-200 rounded p-1.5 text-xs focus:outline-none focus:border-navy"
-                autoFocus
-              />
-            </div>
-
-            {/* Optional comment */}
-            <div>
-              <label className="block text-xs font-medium text-gray-600 mb-1">
-                Note (optional)
-              </label>
-              <textarea
-                value={comment}
-                onChange={(e) => setComment(e.target.value)}
-                placeholder="Any additional context..."
-                className="w-full border border-gray-200 rounded p-1.5 text-xs resize-none h-14 focus:outline-none focus:border-navy"
-              />
-            </div>
-
-            <div className="flex justify-between items-center pt-1">
-              <span className="text-[10px] text-gray-400">{memberId}</span>
               <button
-                type="submit"
-                disabled={loading || (!expectedValue.trim() && issueType !== "other")}
-                className="px-4 py-1.5 bg-navy text-white text-xs rounded hover:bg-navy/90 disabled:opacity-50 transition font-medium"
+                onClick={() => setOpen(false)}
+                className="text-white/70 hover:text-white text-xl leading-none p-1"
               >
-                {loading ? "..." : "Submit Report"}
+                ×
               </button>
             </div>
-          </form>
-        </div>
+
+            <form onSubmit={handleSubmit} className="p-5 space-y-4">
+              {/* Factory context */}
+              <div className="bg-gray-50 rounded p-3 text-xs text-gray-500">
+                <span className="font-medium text-gray-700">{companyName}</span>
+                {" · "}{memberId}
+              </div>
+
+              {/* Issue type */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Issue Type
+                </label>
+                <select
+                  value={issueType}
+                  onChange={(e) => setIssueType(e.target.value as IssueType)}
+                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy"
+                >
+                  {ISSUE_TYPES.map((t) => (
+                    <option key={t.value} value={t.value}>
+                      {t.label} — {t.desc}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Scraper extracted (read-only) */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Scraper Extracted
+                </label>
+                <div className="w-full bg-red-50 border border-red-100 rounded-lg p-3 text-sm text-red-800 max-h-24 overflow-y-auto font-mono whitespace-pre-wrap break-words">
+                  {actualValue || "(empty)"}
+                </div>
+              </div>
+
+              {/* Expected value */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Correct Value <span className="text-red-400">*</span>
+                </label>
+                <input
+                  type="text"
+                  value={expectedValue}
+                  onChange={(e) => setExpectedValue(e.target.value)}
+                  placeholder="What does the 1688 page actually show?"
+                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500"
+                  autoFocus
+                />
+              </div>
+
+              {/* Comment */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Note (optional)
+                </label>
+                <textarea
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                  placeholder="Any additional context..."
+                  className="w-full border border-gray-300 rounded-lg p-2.5 text-sm resize-none h-24 focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy"
+                />
+              </div>
+
+              {/* Actions */}
+              <div className="flex gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="flex-1 px-4 py-2.5 border border-gray-300 text-gray-600 text-sm font-medium rounded-lg hover:bg-gray-50 transition"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  disabled={loading || (!expectedValue.trim() && issueType !== "other")}
+                  className="flex-1 px-4 py-2.5 bg-navy text-white text-sm font-medium rounded-lg hover:bg-navy/90 disabled:opacity-50 transition"
+                >
+                  {loading ? "Submitting..." : "Submit Report"}
+                </button>
+              </div>
+            </form>
+          </div>
+        </>
       )}
     </div>
   )
