@@ -1,49 +1,13 @@
 "use client"
 
-import { Suspense, useState } from "react"
+import { Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 
 function LoginForm() {
-  const [password, setPassword] = useState("")
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
   const searchParams = useSearchParams()
   const from = searchParams.get("from") || "/factory"
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setError("")
-    setLoading(true)
-
-    try {
-      const res = await fetch("/api/factory/auth", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password, from }),
-        redirect: "manual",
-      })
-
-      if (res.type === "opaqueredirect" || res.redirected) {
-        // API did a set-cookie + redirect; do full page nav
-        window.location.href = from
-        return
-      }
-
-      if (res.ok) {
-        window.location.href = from
-        return
-      }
-
-      const data = await res.json()
-      if (data.error) {
-        setError(data.error)
-      }
-    } catch {
-      setError("Network error, try again")
-    } finally {
-      setLoading(false)
-    }
-  }
+  // Check for error from query param (set by auth API on failure)
+  const errorParam = searchParams.get("error")
 
   return (
     <div className="bg-white rounded-lg border border-gray-200 p-8 w-full max-w-sm shadow-sm">
@@ -52,7 +16,10 @@ function LoginForm() {
         <p className="text-sm text-gray-500 mt-1">China Manufacturing Database</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Use native form POST — browser handles cookie + redirect natively */}
+      <form method="POST" action="/api/factory/auth" className="space-y-4">
+        <input type="hidden" name="from" value={from} />
+
         <div>
           <label
             htmlFor="password"
@@ -62,25 +29,26 @@ function LoginForm() {
           </label>
           <input
             id="password"
+            name="password"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
             className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy"
             placeholder="Enter access key"
             autoFocus
+            required
           />
         </div>
 
-        {error && (
-          <p className="text-sm text-red-600 bg-red-50 rounded p-2">{error}</p>
+        {errorParam && (
+          <p className="text-sm text-red-600 bg-red-50 rounded p-2">
+            {errorParam === "invalid" ? "Invalid access key" : errorParam}
+          </p>
         )}
 
         <button
           type="submit"
-          disabled={loading || !password}
-          className="w-full bg-navy text-white py-2 rounded-lg text-sm font-medium hover:bg-navy/90 disabled:opacity-50 transition"
+          className="w-full bg-navy text-white py-2 rounded-lg text-sm font-medium hover:bg-navy/90 transition"
         >
-          {loading ? "Verifying..." : "Access Wiki"}
+          Access Wiki
         </button>
       </form>
 

@@ -2,31 +2,46 @@ import { NextRequest, NextResponse } from "next/server"
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    const password = (body.password || "").trim()
+    let password: string
+    let from: string
+
+    // Handle both form-encoded (HTML form) and JSON (API clients)
+    const contentType = request.headers.get("content-type") || ""
+
+    if (contentType.includes("application/json")) {
+      const body = await request.json()
+      password = (body.password || "").trim()
+      from = body.from || "/factory"
+    } else {
+      const formData = await request.formData()
+      password = (formData.get("password") as string || "").trim()
+      from = (formData.get("from") as string) || "/factory"
+    }
 
     if (!password) {
-      return NextResponse.json({ error: "Password required" }, { status: 400 })
+      const loginUrl = new URL("/factory/login", request.url)
+      loginUrl.searchParams.set("error", "Password required")
+      loginUrl.searchParams.set("from", from)
+      return NextResponse.redirect(loginUrl)
     }
 
     const expectedPassword = (process.env.FACTORY_ACCESS_KEY || "").trim()
 
     if (!expectedPassword) {
       return NextResponse.json(
-        { error: `Auth not configured. Set FACTORY_ACCESS_KEY env var. Debug: keyLen=${(process.env.FACTORY_ACCESS_KEY || "").length}` },
+        { error: "Auth not configured. Set FACTORY_ACCESS_KEY env var." },
         { status: 500 }
       )
     }
 
     if (password !== expectedPassword) {
-      return NextResponse.json({
-        error: "Invalid password",
-        debug: { inputLen: password.length, expectedLen: expectedPassword.length },
-      }, { status: 401 })
+      const loginUrl = new URL("/factory/login", request.url)
+      loginUrl.searchParams.set("error", "invalid")
+      loginUrl.searchParams.set("from", from)
+      return NextResponse.redirect(loginUrl)
     }
 
     const token = (process.env.FACTORY_AUTH_TOKEN || "wag-factory-default-token").trim()
-    const from = body.from || "/factory"
 
     const response = NextResponse.redirect(new URL(from, request.url))
     response.cookies.set("factory_auth", token, {
