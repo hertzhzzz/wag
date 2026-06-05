@@ -3,6 +3,7 @@ import { join } from "path"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { AnnotationButton } from "../components/annotation-button"
+import { EvidenceImage } from "../components/evidence-image"
 
 export const metadata = {
   title: "Factory Detail - WAG Wiki",
@@ -152,14 +153,7 @@ function FieldValue({ field, value }: { field: string; value: unknown }) {
     return (
       <div className="grid grid-cols-3 md:grid-cols-4 gap-2 mt-1">
         {value.map((img: { url: string; section?: string }, i: number) => (
-          <a key={i} href={img.url} target="_blank" rel="noopener noreferrer">
-            <img
-              src={img.url}
-              alt={img.section || `Evidence ${i + 1}`}
-              className="w-full h-24 object-cover rounded border border-gray-200 hover:border-navy transition"
-              loading="lazy"
-            />
-          </a>
+          <EvidenceImage key={i} url={img.url} alt={img.section || `Evidence ${i + 1}`} />
         ))}
       </div>
     )
