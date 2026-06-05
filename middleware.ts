@@ -21,7 +21,7 @@ export function middleware(request: NextRequest) {
   if (!authToken || authToken.value !== (process.env.FACTORY_AUTH_TOKEN || "").trim()) {
     const loginUrl = new URL("/factory/login", request.url)
     loginUrl.searchParams.set("from", pathname)
-    return NextResponse.redirect(loginUrl)
+    return NextResponse.redirect(loginUrl, 302)  // 302: always GET, prevents POST→login 405
   }
 
   return NextResponse.next()
