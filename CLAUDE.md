@@ -125,6 +125,23 @@ curl -sI <URL>  # HTTP status check
 
 **Thin content fix:** If GSC shows "discovered but not indexed" → expand to 1500+ words, add ArticleSchema, add author/date stamps.
 
+## IndexNow
+
+IndexNow is fully implemented for Bing/Naver/Yandex indexing.
+
+**Key file:** `public/qXFgF78NEr0TmLkL6E2zK2gqmc088qwK.txt`
+- Accessible at `https://www.winningadventure.com.au/qXFgF78NEr0TmLkL6E2zK2gqmc088qwK.txt`
+- Bing verifies this file to accept URL submissions
+
+**API endpoint:** `POST /api/indexnow`
+```bash
+curl -X POST https://www.winningadventure.com.au/api/indexnow \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://www.winningadventure.com.au/resources/new-article"}'
+```
+
+**Auto-submission:** Not wired. Each new article needs manual POST, or wire into the content pipeline as a post-deploy hook.
+
 ## Env
 
 `.env.local` — `GMAIL_USER` · `GMAIL_APP_PASSWORD` · `UPSTASH_REDIS_REST_URL` · `UPSTASH_REDIS_REST_TOKEN`

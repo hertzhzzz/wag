@@ -124,7 +124,7 @@ export default function RootLayout({
             gtag('config', 'G-VEGJ1YL8YR');
           `}
         </Script>
-        <Script id="meta-pixel" strategy="beforeInteractive" dangerouslySetInnerHTML={{
+        <Script id="meta-pixel" strategy="lazyOnload" dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -152,8 +152,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": ["Organization", "LocalBusiness"],
               "name": "Winning Adventure Global",
+              "@id": "https://www.winningadventure.com.au/#organization",
               "url": "https://www.winningadventure.com.au",
               "logo": "https://www.winningadventure.com.au/logos/logo.png",
               "description": "Factory tours and sourcing services in China for Australian businesses. We connect you with verified manufacturers and accompany you on in-person factory visits.",
