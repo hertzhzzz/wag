@@ -150,10 +150,38 @@ function FieldValue({ field, value }: { field: string; value: unknown }) {
   }
 
   if (field === "evidence_images" && Array.isArray(value)) {
+    // Group by section
+    const SECTION_ORDER = [
+      "营业执照信息", "办公场所信息", "厂房信息", "生产设备",
+      "研发设计能力", "质量管控能力", "供应链运营能力", "仓储与物流",
+    ]
+    const groups: Record<string, { url: string; section?: string }[]> = {}
+    for (const img of value) {
+      const sec = img.section || "其他"
+      if (!groups[sec]) groups[sec] = []
+      groups[sec].push(img)
+    }
+    // Sort sections by predefined order, then alphabetically
+    const sortedSections = Object.keys(groups).sort((a, b) => {
+      const ai = SECTION_ORDER.indexOf(a)
+      const bi = SECTION_ORDER.indexOf(b)
+      if (ai >= 0 && bi >= 0) return ai - bi
+      if (ai >= 0) return -1
+      if (bi >= 0) return 1
+      return a.localeCompare(b)
+    })
+
     return (
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-2 mt-1">
-        {value.map((img: { url: string; section?: string }, i: number) => (
-          <EvidenceImage key={i} url={img.url} alt={img.section || `Evidence ${i + 1}`} />
+      <div className="space-y-4 mt-1">
+        {sortedSections.map((sec) => (
+          <div key={sec}>
+            <h4 className="text-xs font-medium text-gray-500 mb-2 uppercase tracking-wide">{sec}</h4>
+            <div className="grid grid-cols-3 md:grid-cols-4 gap-2">
+              {groups[sec].map((img: { url: string; section?: string }, i: number) => (
+                <EvidenceImage key={i} url={img.url} alt={img.section || `Evidence ${i + 1}`} />
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     )
