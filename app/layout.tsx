@@ -235,7 +235,9 @@ export default function RootLayout({
         <MarkHeSchema />
       </head>
       <body>
-      {children}
+      <main id="main-content">
+        {children}
+      </main>
       <FloatingEnquiryWidget />
       <ScrollTracker />
     </body>

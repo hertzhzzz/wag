@@ -131,6 +131,7 @@ export default function TwoWaysAccess() {
                 >
                   {card.cta}
                   <svg
+                    aria-hidden="true"
                     className="w-4 h-4"
                     fill="none"
                     stroke="currentColor"
@@ -151,6 +152,7 @@ export default function TwoWaysAccess() {
                 >
                   {card.cta}
                   <svg
+                    aria-hidden="true"
                     className="w-4 h-4"
                     fill="none"
                     stroke="currentColor"

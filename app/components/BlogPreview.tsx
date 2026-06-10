@@ -95,7 +95,7 @@ export default function BlogPreview() {
               className="self-start md:self-auto text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors whitespace-nowrap flex items-center gap-1.5 min-h-11"
             >
               View All Resources
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-px">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-px">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
@@ -156,7 +156,7 @@ export default function BlogPreview() {
                   className="self-start text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors flex items-center gap-1 min-h-8"
                 >
                   Read Guide
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="mt-px">
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" className="mt-px">
                     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>

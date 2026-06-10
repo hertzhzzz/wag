@@ -83,7 +83,7 @@ function createFactoryIcon(factories: number, isPrimary = false, showCount = fal
         flex-shrink: 0;
         position: relative;
       ">
-        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 55%; height: 55%; flex-shrink: 0;">
+        <svg aria-hidden="true" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" style="width: 55%; height: 55%; flex-shrink: 0;">
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#FFFFFF"/>
               <circle cx="12" cy="9" r="2.5" fill="#0F2D5E"/>
             </svg>

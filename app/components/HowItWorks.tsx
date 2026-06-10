@@ -137,7 +137,7 @@ export default function HowItWorks() {
             className="inline-flex items-center gap-3 bg-navy text-white px-8 py-4 text-sm font-semibold hover:bg-navy/90 transition-all duration-300 no-underline min-h-11 hover:gap-4"
           >
             View All Services
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
@@ -147,6 +147,7 @@ export default function HowItWorks() {
           >
             <span className="text-sm font-medium">Industries We Cover</span>
             <svg
+              aria-hidden="true"
               className="w-5 h-5 transition-transform group-hover:translate-y-1"
               fill="none"
               stroke="currentColor"
