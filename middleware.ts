@@ -4,8 +4,25 @@ import type { NextRequest } from "next/server"
 const PROTECTED_PATHS = ["/factory"]
 const PUBLIC_PATHS = ["/factory/login", "/api/factory/auth"]
 
+// Permanently deleted pages — return 410 Gone so Google stops crawling them
+const GONE_PATHS = [
+  "/case-studies",
+  "/adelaide",
+  "/perth",
+  "/brisbane",
+  "/melbourne",
+  "/resources/china-supplier-verification",
+]
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  // Return 410 Gone for permanently deleted pages
+  for (const gonePath of GONE_PATHS) {
+    if (pathname === gonePath || pathname.startsWith(gonePath + "/")) {
+      return new NextResponse("Gone", { status: 410 })
+    }
+  }
 
   // Check if path is under a protected prefix
   const isProtected = PROTECTED_PATHS.some((prefix) => pathname.startsWith(prefix))
@@ -28,5 +45,14 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/factory/:path*", "/api/factory/:path*"],
+  matcher: [
+    "/factory/:path*",
+    "/api/factory/:path*",
+    "/case-studies/:path*",
+    "/adelaide",
+    "/perth",
+    "/brisbane",
+    "/melbourne",
+    "/resources/china-supplier-verification",
+  ],
 }
