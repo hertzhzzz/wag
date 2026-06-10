@@ -3,6 +3,36 @@
   "outputDirectory": ".next",
   "redirects": [
     {
+      "source": "/case-studies/:path*",
+      "destination": "/gone",
+      "statusCode": 410
+    },
+    {
+      "source": "/adelaide",
+      "destination": "/gone",
+      "statusCode": 410
+    },
+    {
+      "source": "/perth",
+      "destination": "/gone",
+      "statusCode": 410
+    },
+    {
+      "source": "/brisbane",
+      "destination": "/gone",
+      "statusCode": 410
+    },
+    {
+      "source": "/melbourne",
+      "destination": "/gone",
+      "statusCode": 410
+    },
+    {
+      "source": "/resources/china-supplier-verification",
+      "destination": "/gone",
+      "statusCode": 410
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "winningadventure.com.au" }],
       "destination": "https://www.winningadventure.com.au/:path*",
