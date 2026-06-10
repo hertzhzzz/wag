@@ -242,7 +242,7 @@ function KeyTakeaways({ items }: { items: string[] }) {
     <div className="bg-gray-50 border border-gray-200 text-[#0F2D5E] p-6 rounded-xl mb-6 shadow-sm">
       <div className="flex items-center gap-3 mb-4">
         <div className="w-9 h-9 rounded-lg bg-[#F59E0B] flex items-center justify-center">
-          <svg className="w-5 h-5 text-[#0F2D5E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg aria-hidden="true" className="w-5 h-5 text-[#0F2D5E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>

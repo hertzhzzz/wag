@@ -288,7 +288,7 @@ export default function EnquiryForm() {
                   <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
                     <div className="flex items-center gap-2.5 mb-4">
                       <div className="w-7 h-7 rounded-full bg-[#0F2D5E] text-white flex items-center justify-center flex-shrink-0">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
+                        <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
                       </div>
                       <p className="text-xs font-bold uppercase tracking-wider text-[#0F2D5E]">Path 1 — Visit Factories in China</p>
                     </div>
@@ -317,7 +317,7 @@ export default function EnquiryForm() {
                   <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
                     <div className="flex items-center gap-2.5 mb-4">
                       <div className="w-7 h-7 rounded-full bg-[#0F2D5E] text-white flex items-center justify-center flex-shrink-0">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                       </div>
                       <p className="text-xs font-bold uppercase tracking-wider text-[#0F2D5E]">Path 2 — Remote Verification</p>
                     </div>

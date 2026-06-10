@@ -99,6 +99,7 @@ export default function DirectorySection() {
           >
             View Full Directory
             <svg
+              aria-hidden="true"
               className="w-4 h-4"
               fill="none"
               stroke="currentColor"
