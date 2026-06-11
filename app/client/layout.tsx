@@ -54,7 +54,7 @@ export default async function ClientLayout({
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans pt-[72px]">
+    <div className="min-h-screen bg-gray-50 font-sans">
       <Navbar rightContent={null} />
       {children}
     </div>
