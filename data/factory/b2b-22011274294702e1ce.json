@@ -3,89 +3,199 @@
   "member_id_label": "Member ID",
   "company_name": "乐清彬炫电气有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "浙江省",
   "province_label": "省份",
-  "city": "",
+  "city": "温州市",
   "city_label": "城市",
   "district": "",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2017.03.07",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "2000万以上",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "1986m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "17人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": false,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "5个",
   "custom_moq_label": "定制MOQ",
-  "certifications": "",
+  "certifications": [
+    "CCC",
+    "INTERTEK",
+    "FCC",
+    "CE"
+  ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围行程开关热度榜 第6名"
+  ],
   "rankings_label": "企业排名",
-  "platform_tags": "",
+  "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "包工包料",
+    "来样加工",
+    "来图加工"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "电工SMT贴片",
+    "商标定制",
+    "生产调试",
+    "图纸设计",
+    "线芯制作大小"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "101~200万",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "13人",
   "production_workers_label": "生产人员",
   "contact_person": "",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "91330382MA2947405T",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "高建飞",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "50万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "乐清市柳市镇柳黄路417号",
   "registered_address_label": "注册地址",
-  "company_type": "",
+  "company_type": "有限责任公司(自然人投资或控股)",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "一般项目：配电开关控制设备制造；配电开关控制设备销售；输配电及控制设备制造；智能输配电及控制设备销售；输变配电监测控制设备制造；输变配电监测控制设备销售；电力设施器材制造；电力设施器材销售；机械电气设备制造；机械电气设备销售；电容器及其配套设备制造；电容器及其配套设备销售；电器辅件制造；电器辅件销售；电线、电缆经营；电子元器件制造；电子元器件批发；电子元器件零售；电力电子元器件制造；电力电子元器件销售；塑料制品制造；塑料制品销售；货物进出口；技术进出口；气压动力机械及元件制造；气压动力机械及元件销售；液气密元件及系统制造；液气密元件及系统销售；液压动力机械及元件制造；液压动力机械及元件销售；智能家庭网关制造；智能家庭消费设备制造；智能家庭消费设备销售；家用电器制造；家用电器销售；建筑材料销售；建筑装饰材料销售；电子元器件与机电组件设备制造；电子元器件与机电组件设备销售；仪器仪表制造；仪器仪表销售；电子产品销售；五金产品制造；五金产品批发；五金产品零售；日用百货销售；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；通信设备制造；通信设备销售(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "乐清市市场监督管理局",
   "reg_authority_label": "登记机关",
-  "annual_report_year": "",
+  "annual_report_year": "2026",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2017年03月07日 至 长期",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-22011274294702e1ce",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "CNIR2603SH05017",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2026-03-11",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "20台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "贴片机",
+      "count": "2 台"
+    },
+    {
+      "name": "电烙铁",
+      "count": "15 台"
+    },
+    {
+      "name": "灌胶机",
+      "count": "2 台"
+    },
+    {
+      "name": "烤板机",
+      "count": "1 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "30 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "70 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "10",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "3 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "943 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "自有",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
   "fca_store_url": "",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01WbTVlz2JpJs1CP4EI_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01ZIeGJn2JpJs03dTGY_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN013mWQuJ2JpJs0HywMp_!!4611686018427381086-2-av-auth-doc.png"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Z5G24m2JpJs0FaYWc_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01SwsbNd2JpJs0Fi0aG_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01R7zciS2JpJrzxitrS_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01ryABJb2JpJrzIHu8h_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01KGPhI42JpJs1CYrs8_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01LVl6VP2JpJrzbUwJa_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01JF2Ski2JpJrzru41I_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN019rtm0O2JpJrzIJaCA_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01ZH01jv2JpJs0IClgX_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01yzAKVI2JpJrzTFuxV_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01Mnljv62JpJrzfVYuc_!!4611686018427381086-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01ctPCxf2JpJruvmG63_!!4611686018427381086-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

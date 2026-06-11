@@ -3,91 +3,180 @@
   "member_id_label": "Member ID",
   "company_name": "东莞市莫小仙服饰有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "广东省",
   "province_label": "省份",
-  "city": "",
+  "city": "广州市",
   "city_label": "城市",
-  "district": "",
+  "district": "白云区",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2026.03.17",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "501~1000万",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "1005m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "22人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": false,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "20件",
   "custom_moq_label": "定制MOQ",
   "certifications": [
     "INTERTEK"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围女式T恤热度榜 第11名"
+  ],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "来图加工",
+    "来样加工"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "打版",
+    "整烫",
+    "雪花洗",
+    "喷马骝",
+    "发泡"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "201~500万",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "14人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "封伟冰",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "441900014986155",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "杨学兵",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "10.0万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "广东省东莞市麻涌镇麻涌大道56号3001室",
   "registered_address_label": "注册地址",
   "company_type": "",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "一般项目：服装服饰批发；服装服饰零售；咨询策划服务；图文设计制作；广告设计、代理；平面设计；化妆品批发；日用品批发；专业设计服务；照相器材及望远镜批发；针纺织品及原料销售；眼镜销售（不含隐形眼镜）；日用品销售；销售代理；礼品花卉销售；箱包销售；户外用品销售；互联网销售（除销售需要许可的商品）；包装服务；鞋帽批发；珠宝首饰零售；体育用品及器材零售；文具用品零售；化妆品零售；鞋帽零售；珠宝首饰批发；文具用品批发；绣花加工；纺纱加工；面料纺织加工；服饰制造；服装制造；货物进出口；技术进出口；进出口代理。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "东莞市市场监督管理局",
   "reg_authority_label": "登记机关",
   "annual_report_year": "",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2026年03月17日 至 长期",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2215043146218fe181",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "CNIR2601SH16497",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2026-01-30",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "65台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "缝纫机",
+      "count": "52 台"
+    },
+    {
+      "name": "平领机",
+      "count": "4 台"
+    },
+    {
+      "name": "全自动切布条机",
+      "count": "1 台"
+    },
+    {
+      "name": "熨烫机",
+      "count": "8 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "50 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "50 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "30",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "3 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "105 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "租赁",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
-  "fca_store_url": "",
+  "fca_store_url": "https://shop73g1l49566l74.1688.com",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01Dgkmbq1vntrFl0l8N_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01BXk4vq1vntrGDSg6f_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01hwwimN1vntrGHMUvf_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01JtcUug1vntrFiylYl_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01Cxty5G1vntrFmLg8J_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01yhXcAI1vntrFdj8my_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01NFMthU1vntrFv6TWB_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01yLxqhP1vntrFdi4Ow_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01NCiqT91vntrEyaLlY_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN011A2ZAd1vntrEyZD4Z_!!4611686018427380202-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01xnUkcR1vntrFLcR5U_!!4611686018427380202-2-av-auth-doc.png"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01L1Ofj91vntrFLc28r_!!4611686018427380202-2-av-auth-doc.png"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

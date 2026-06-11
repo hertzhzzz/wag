@@ -3,91 +3,227 @@
   "member_id_label": "Member ID",
   "company_name": "张家港中意毛绒有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "江苏省",
   "province_label": "省份",
-  "city": "",
+  "city": "苏州市",
   "city_label": "城市",
   "district": "",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2002.05.30",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "2000万以上",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "15400m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "93人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": false,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "500米",
   "custom_moq_label": "定制MOQ",
   "certifications": [
     "INTERTEK"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "清加工",
+    "包工包料",
+    "来样加工",
+    "来图加工"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "染整加工",
+    "磨毛",
+    "复合",
+    "织造",
+    "整理"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "201~500万",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "71人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "吴大江",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "91320582737847409C",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "钱红兵",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "123.239581万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "张家港市塘桥镇鹿苑金桥西路58号",
   "registered_address_label": "注册地址",
-  "company_type": "",
+  "company_type": "有限责任公司(自然人投资或控股)",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "许可项目：道路货物运输(不含危险货物)(依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以审批结果为准)一般项目：针织或钩针编织物及其制品制造；针纺织品销售；货物进出口(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "张家港市数据局",
   "reg_authority_label": "登记机关",
   "annual_report_year": "",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2002年05月30日 至 长期",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2033012866",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "CNIR2603SH10463",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2026-03-23",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "111台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "圆机",
+      "count": "60 台"
+    },
+    {
+      "name": "剪毛机",
+      "count": "10 台"
+    },
+    {
+      "name": "滚球机",
+      "count": "8 台"
+    },
+    {
+      "name": "缩呢机",
+      "count": "1 台"
+    },
+    {
+      "name": "针刺机",
+      "count": "12 台"
+    },
+    {
+      "name": "摇粒机",
+      "count": "2 台"
+    },
+    {
+      "name": "定型机",
+      "count": "1 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "40 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "40 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "10",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "5 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "5800 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "租赁",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
   "fca_store_url": "",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN018Y5NJc1X2gFofxVC1_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01e2swhQ1X2gFoSppVM_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN015p5SCI1X2gFoESOIO_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN015Eq27g1X2gFnmdgd5_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01sMHcuJ1X2gFogwJE2_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01CsyX9R1X2gFoIGyKb_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN017eTRet1X2gFoRfZKR_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01LubOBu1X2gFo6VIVM_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01K94Avv1X2gFjQBGSF_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01lZ5QCL1X2gFoRreZL_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01l378931X2gFpgJOZU_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01IhdYcN1X2gFogOpM5_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Jy4UuS1X2gFnn8puk_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01nxO0Mw1X2gFogH6kU_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 7,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01NPYM611X2gFoT3au2_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "研发设计能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01oPDJTi1X2gFoT5Gq4_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "研发设计能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01svxGnb1X2gFoZ2uH4_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01N2mPca1X2gFogS2yP_!!4611686018427383938-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01HpW7EO1X2gFohHBfW_!!4611686018427383938-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

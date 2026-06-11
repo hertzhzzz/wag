@@ -3,25 +3,25 @@
   "member_id_label": "Member ID",
   "company_name": "安徽瑞图通信设备有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "安徽省",
   "province_label": "省份",
-  "city": "",
+  "city": "滁州市",
   "city_label": "城市",
-  "district": "",
+  "district": "来安县",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2017.01.16",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "2000万以上",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "13115m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "86人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": true,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "10000件",
   "custom_moq_label": "定制MOQ",
   "certifications": [
     "SGS",
@@ -30,67 +30,213 @@
     "BSCI"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围塑料罐热度榜 第15名"
+  ],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "清加工",
+    "包工包料",
+    "来样加工",
+    "来图加工"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "凹印",
+    "彩印",
+    "热转印",
+    "丝印",
+    "挤压"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "500万以上",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "32人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "王琪",
   "contact_person_label": "联系人",
   "credit_code": "",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "王超武",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "500万元万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "安徽来安汊河经济开发区长宁路东侧、荣华路北侧",
   "registered_address_label": "注册地址",
   "company_type": "",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "许可项目：食品用塑料包装容器工具制品生产；发电业务、输电业务、供（配）电业务；供电业务（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）一般项目：塑料包装箱及容器制造；塑料制品制造；塑料制品销售；新材料技术研发；新材料技术推广服务；五金产品研发；五金产品制造；五金产品批发；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；城市轨道交通设备制造；轨道交通专用设备、关键系统及部件销售；轨道交通工程机械及部件销售；太阳能热发电产品销售；太阳能发电技术服务；光伏设备及元器件制造；光伏设备及元器件销售；货物进出口；技术进出口；进出口代理（除许可业务外，可自主依法经营法律法规非禁止或限制的项目）",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "来安县市场监督管理局",
   "reg_authority_label": "登记机关",
   "annual_report_year": "",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2017年01月16日 至 9999年09月09日",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-22132817013699efef",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "CNIR2602SH04403",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2026-02-09",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "50台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "拌料机",
+      "count": "10 台"
+    },
+    {
+      "name": "挤吹机",
+      "count": "16 台"
+    },
+    {
+      "name": "注吹机",
+      "count": "5 台"
+    },
+    {
+      "name": "注塑机",
+      "count": "22 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "80 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "10 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "500",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "7 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "9000 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "自有",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
   "fca_store_url": "",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01QxJ6bM1Lz3KwGtC7h_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01xRoobT1Lz3Kw9iZU5_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01NJVJY71Lz3KuPwZZs_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01V8Hgq21Lz3KxCuh0U_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN019Azjck1Lz3Kx54rdv_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01YweSrK1Lz3KwVZPpl_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN017vxyFf1Lz3KqvUbbL_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN011af2Ug1Lz3KvtK3o5_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01fUAeFH1Lz3KvtKOc8_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01HxeFC11Lz3KwJXJMD_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01GYHKbi1Lz3KvjOeDe_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01cRPnCE1Lz3KvtEU7J_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01PRzI4t1Lz3KqvMoim_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01Ng24ZB1Lz3KwVSVC0_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01CqUHJg1Lz3KwH5okT_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01a3mI3V1Lz3KwH4wj4_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01XGcGDD1Lz3Kvx8Wdw_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN018nuSvw1Lz3KvuZrwK_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01AJctVz1Lz3KxEUAj5_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01ILjLFK1Lz3KwQuXD2_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01qK5KCy1Lz3KvjYFLL_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01En3n0l1Lz3KwA7LC4_!!4611686018427387385-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN015Q5k1D1Lz3KwJirE8_!!4611686018427387385-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

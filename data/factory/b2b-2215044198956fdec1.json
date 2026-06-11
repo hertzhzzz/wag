@@ -3,91 +3,221 @@
   "member_id_label": "Member ID",
   "company_name": "温州永创智能设备有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "浙江省",
   "province_label": "省份",
-  "city": "",
+  "city": "温州市",
   "city_label": "城市",
-  "district": "",
+  "district": "瓯海区",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2022.09.15",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "2000万以上",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "24794m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "248人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": false,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "1架",
   "custom_moq_label": "定制MOQ",
   "certifications": [
     "TUV"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围封口机械实力榜 第4名"
+  ],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "清加工",
+    "包工包料"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "500万以上",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "117人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "阮德会",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "91330303MAC0GPCY9D",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "周柯胜",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "2200万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "瓯海区郭溪街道兵营路73号13栋14栋1楼",
   "registered_address_label": "注册地址",
-  "company_type": "",
+  "company_type": "有限责任公司(自然人投资或控股)",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "一般项目：通用设备制造（不含特种设备制造）；包装服务；包装专用设备制造；工业机器人制造；智能控制系统集成；人工智能通用应用系统；包装材料及制品销售；包装专用设备销售；模具制造；模具销售；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；专业设计服务；工业设计服务；专用设备制造（不含许可类专业设备制造）；机械设备研发；食品、酒、饮料及茶生产专用设备制造；食品用塑料包装容器工具制品销售；制浆和造纸专用设备制造；制浆和造纸专用设备销售；农副食品加工专用设备制造；农副食品加工专用设备销售；机械设备销售；货物进出口；技术进出口(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。许可项目：食品用塑料包装容器工具制品生产；食品用纸包装、容器制品生产(依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以审批结果为准)。",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "温州市瓯海区市场监督管理局",
   "reg_authority_label": "登记机关",
-  "annual_report_year": "",
+  "annual_report_year": "2026",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2022年09月15日 至 长期",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2215044198956fdec1",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "TP2603242604",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2026-04-03",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "80台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "加工中心",
+      "count": "30 台"
+    },
+    {
+      "name": "数控车床",
+      "count": "10 台"
+    },
+    {
+      "name": "线切割",
+      "count": "6 台"
+    },
+    {
+      "name": "组装线",
+      "count": "7 台"
+    },
+    {
+      "name": "折弯机",
+      "count": "10 台"
+    },
+    {
+      "name": "喷塑线",
+      "count": "1 台"
+    },
+    {
+      "name": "激光下料机",
+      "count": "6 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "30 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "40 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "15",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "7 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "8000 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "自有",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
   "fca_store_url": "",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01jtZpbx2G1uITyMSNA_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01tquSCP2G1uITyMahR_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01Flw9Y72G1uIUiBqGM_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01StWwik2G1uIU3k3iu_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01EgvT8V2G1uITy79Lb_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01YNILHS2G1uIUKfuTt_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01FfWWbw2G1uIUB7G0d_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN015uzvZ42G1uIP7Rn3Q_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01yaCCAi2G1uITkNI2i_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01u1Iumr2G1uIU8HLHx_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01HhHRrN2G1uIU3VpHS_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN015xNX7S2G1uITkSWdw_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01TCOIu02G1uIVM37qp_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01MHPlW82G1uITkVkX0_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01DfGJfD2G1uIU6Wg6t_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01zQ3Nov2G1uIVLwkUL_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "研发设计能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN019GYgDC2G1uITUmvfR_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01J24YNJ2G1uIUJ8GHE_!!4611686018427384364-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01wq6loX2G1uIUJAXcT_!!4611686018427384364-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

@@ -3,91 +3,261 @@
   "member_id_label": "Member ID",
   "company_name": "浙江巨森建材科技有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "浙江省",
   "province_label": "省份",
-  "city": "",
+  "city": "嘉兴市",
   "city_label": "城市",
-  "district": "",
+  "district": "海盐县",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2014.06.06",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "2000万以上",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "4000m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "43人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": true,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "50片",
   "custom_moq_label": "定制MOQ",
   "certifications": [
     "SGS"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围金属建材实力榜 第8名"
+  ],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "来样加工",
+    "来图加工"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "外套裁剪",
+    "断料开料",
+    "喷漆",
+    "包装",
+    "组装"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "101~200万",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "23人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "成喜奎",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "91330424307335673L",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "成喜奎",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "1000万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "海盐县通元镇三友村",
   "registered_address_label": "注册地址",
-  "company_type": "",
+  "company_type": "有限责任公司(自然人投资或控股)",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "一般项目：新型建筑材料制造（不含危险化学品）；轻质建筑材料制造；新材料技术研发；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；金属材料制造；金属制日用品制造；金属结构制造；家具制造；家居用品制造；金属制品研发；轻质建筑材料销售；建筑材料销售；建筑装饰材料销售；金属结构销售；金属材料销售；厨具卫具及日用杂品批发；家居用品销售；建筑用金属配件销售；门窗销售；地板销售；紧固件销售；五金产品批发；五金产品零售；物联网技术研发；物联网技术服务；工业设计服务；货物进出口；技术进出口；家具销售；日用品批发(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "海盐县市场监督管理局",
   "reg_authority_label": "登记机关",
-  "annual_report_year": "",
+  "annual_report_year": "2026",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2014年06月06日 至 2064年06月05日",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2212191070187c31b6",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "HGHWT00371559",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2026-03-25",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "21台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "封边机",
+      "count": "1 台"
+    },
+    {
+      "name": "打孔机",
+      "count": "1 台"
+    },
+    {
+      "name": "开料机",
+      "count": "1 台"
+    },
+    {
+      "name": "全自动蜂窝板生产线",
+      "count": "1 台"
+    },
+    {
+      "name": "冷压机",
+      "count": "12 台"
+    },
+    {
+      "name": "裁边机",
+      "count": "2 台"
+    },
+    {
+      "name": "淋胶机",
+      "count": "1 台"
+    },
+    {
+      "name": "平贴机",
+      "count": "2 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "60 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "20 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "200",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "7 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "500 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "租赁",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
-  "fca_store_url": "",
+  "fca_store_url": "https://shop136a4582e4973.1688.com",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01ggfZNi1DFhC6PawFA_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01xMuiXf1DFhC6O9Cf0_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01TtNRzd1DFhC6Pc0lg_!!4611686018427381739-2-av-auth-doc.png"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01HH1pWa1DFhC6kAe7m_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01OG3yLa1DFhC6aO0xu_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN012owvk41DFhC6l2yqz_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN0105SoCo1DFhC74IIpt_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01JayugE1DFhC1i2nSp_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01oHS30c1DFhC6yLVo0_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01pjhVCN1DFhC74FQ2B_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01FTBuQc1DFhC6kH5b7_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01wjilHu1DFhC662HbX_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN014Bjdyb1DFhC6kFocS_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01ixbJB51DFhC74HlfE_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Vy5sys1DFhC6aQhTO_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01ylTgjl1DFhC1i5Y9e_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN019SpKnv1DFhC6EzMSX_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "研发设计能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01hBIFXA1DFhC6xjbKX_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01u2C50R1DFhC72nDNN_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01irKobn1DFhC6PjfFB_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01YeaZA11DFhC6qTSJE_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Gb1YPN1DFhC72pA0Z_!!4611686018427381739-2-av-auth-doc.png"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01R4jmHU1DFhC6YK0nn_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01tJpyr31DFhC6hLllf_!!4611686018427381739-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01vzPQU61DFhC72qRDg_!!4611686018427381739-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

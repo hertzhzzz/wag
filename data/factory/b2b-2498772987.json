@@ -3,91 +3,179 @@
   "member_id_label": "Member ID",
   "company_name": "义乌市霓裳包装材料有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "浙江省",
   "province_label": "省份",
-  "city": "",
+  "city": "金华市",
   "city_label": "城市",
   "district": "",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2026.03.12",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "1000万~2000万",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "5000m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "11人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": false,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "10000个",
   "custom_moq_label": "定制MOQ",
   "certifications": [
     "TUV"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围鲜花花艺制品热度榜 第16名"
+  ],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "清加工"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "烫金",
+    "压痕",
+    "凹凸"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "101~200万",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "10人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "李永波",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "330782008305111",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "李永波",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "2.0万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "浙江省金华市义乌市廿三里街道惠民路700号605室",
   "registered_address_label": "注册地址",
   "company_type": "",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "一般项目：塑料制品制造；包装材料及制品销售；塑料包装箱及容器制造；塑料制品销售；玻璃纤维增强塑料制品销售；工程塑料及合成树脂销售；食品用塑料包装容器工具制品销售；金属包装容器及材料销售；互联网销售（除销售需要许可的商品）；日用百货销售；日用品批发；日用品销售；纸制品销售；个人卫生用品销售；体育用品及器材批发；体育用品及器材零售；针纺织品及原料销售；针纺织品销售；玩具销售；工艺美术品及收藏品零售（象牙及其制品除外）；办公用品销售；工艺美术品及收藏品批发（象牙及其制品除外）；美发饰品销售；国内贸易代理；技术进出口；货物进出口（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）。",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "义乌市市场监督管理局",
   "reg_authority_label": "登记机关",
   "annual_report_year": "",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2026年03月12日 至 9999年09月09日",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2498772987",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "TP2603240601",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2026-04-02",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "15台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "切片机",
+      "count": "12 台"
+    },
+    {
+      "name": "打卷机",
+      "count": "3 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "5 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "90 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "300",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "2 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "3950 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "租赁",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "否",
   "fca_quality_inspection_label": "质检方式",
   "fca_store_url": "",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01e1Dl251Xw6BEpfkDQ_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01VGUKTj1Xw6BEKO99O_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01x6ArVG1Xw6BETIitF_!!4611686018427387899-2-av-auth-doc.png"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN012bYcdM1Xw6BElOkBM_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01Yekh5X1Xw6BETqM9U_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01bw91081Xw6BEPA7YR_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01BEfJVD1Xw6BEFDTYM_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01LxVmzk1Xw6BDvbCK5_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01RnXOqm1Xw6BDvd0eY_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN019nSd1m1Xw6BETvrO4_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01Zc6oSz1Xw6BEcQ4WF_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01l2E01S1Xw6BEU1V6T_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01en75Vt1Xw6BEqPKRh_!!4611686018427387899-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN011vHnDX1Xw6BEk4BU6_!!4611686018427387899-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {
