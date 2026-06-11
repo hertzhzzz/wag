@@ -1,75 +1,87 @@
 {
   "member_id": "b2b-1859550998",
   "member_id_label": "Member ID",
-  "company_name": "深圳旭佳珠宝设计有限公司",
+  "company_name": "深圳市宏观盛光电有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "广东省",
   "province_label": "省份",
-  "city": "",
+  "city": "深圳市",
   "city_label": "城市",
   "district": "",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2025.10.20",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "2000万以上",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "2050m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "49人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": false,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "3000米",
   "custom_moq_label": "定制MOQ",
   "certifications": [
-    "SGS"
+    "TUV",
+    "CE"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围电子线热度榜 第2名"
+  ],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "来图加工",
+    "来样加工",
+    "包工包料"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "线材",
+    "打端子",
+    "线芯制作大小",
+    "压力加工成材"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "500万以上",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "20人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "庄少流",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "440300227183013",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "庄少流",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "10万元万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "深圳市龙岗区龙岗街道五联社区将军帽小区23号-25号亿嘉工业园A栋111",
   "registered_address_label": "注册地址",
   "company_type": "",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "一般经营项目：光电子器件销售；电线、电缆经营；供应链管理服务；金属丝绳及其制品销售；塑料制品销售；紧固件销售；五金产品零售；五金产品批发；合成材料销售；轴承、齿轮和传动部件销售；金属工具销售；金属材料销售；电气设备销售；弹簧销售；电子元器件零售。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：电线、电缆制造。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "深圳市市场监督管理局",
   "reg_authority_label": "登记机关",
   "annual_report_year": "",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2025年10月20日 至 长期",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2074655507",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "CNIR2601SH11349",
   "fca_report_id_label": "报告编号",
   "fca_report_date": "",
   "fca_report_date_label": "报告日期",
   "fca_total_equipment": "",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [],
   "fca_equipment_label": "设备清单",
   "fca_oem_ratio": "",
   "fca_oem_ratio_label": "OEM占比",
@@ -87,7 +99,68 @@
   "fca_quality_inspection_label": "质检方式",
   "fca_store_url": "",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "其他",
+      "index": 1,
+      "url": "https://gw.alicdn.com/i3/O1CN01iaGqyG1Mbyzzx5TAq_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 2,
+      "url": "https://gw.alicdn.com/i1/O1CN01JHs0BI1Mbyzzwnuni_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 3,
+      "url": "https://gw.alicdn.com/i3/O1CN017PGyZY1Mbz002519X_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 4,
+      "url": "https://gw.alicdn.com/i1/O1CN01toJxdM1MbyzzeW6hD_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 5,
+      "url": "https://gw.alicdn.com/i4/O1CN01RZ8a0F1Mbz00Ed7cp_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 6,
+      "url": "https://gw.alicdn.com/i4/O1CN01VGNpbR1MbyzzxBZnl_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 7,
+      "url": "https://gw.alicdn.com/i4/O1CN01j805k61Mbz00qSDRp_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 8,
+      "url": "https://gw.alicdn.com/i4/O1CN01RSLAKX1MbyzzfLig7_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 9,
+      "url": "https://gw.alicdn.com/i4/O1CN01Clk00i1MbyzzfLzK7_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 10,
+      "url": "https://gw.alicdn.com/i1/O1CN01grQDgJ1MbyzzwpSXg_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 11,
+      "url": "https://gw.alicdn.com/i3/O1CN01f98l8D1MbyzyqHZSm_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 12,
+      "url": "https://gw.alicdn.com/i1/O1CN01pztTRk1MbyzzeNiYE_!!4611686018427380062-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

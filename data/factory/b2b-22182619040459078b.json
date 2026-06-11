@@ -3,91 +3,172 @@
   "member_id_label": "Member ID",
   "company_name": "佛山超印维度科技有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "广东省",
   "province_label": "省份",
-  "city": "",
+  "city": "佛山市",
   "city_label": "城市",
-  "district": "",
+  "district": "顺德区",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2024.07.05",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "50~100万",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "1005m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "31人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": false,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "100个",
   "custom_moq_label": "定制MOQ",
   "certifications": [
     "SGS"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围其他益智玩具服务榜 第11名"
+  ],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "清加工",
+    "包工包料",
+    "来样加工",
+    "来图加工"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "包装",
+    "组装"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "51~100万",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "14人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "袁吕洋",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "91440606MADNX3GQ47",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "何峙岳",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "100万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "顺德区陈村镇赤花社区广隆工业园兴业4路顺联机械城第17栋02层2027号铺(住所申报)",
   "registered_address_label": "注册地址",
-  "company_type": "",
+  "company_type": "有限责任公司(自然人投资或控股)",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；工艺美术品及礼仪用品制造（象牙及其制品除外）；塑料制品制造；模具制造；摩托车零配件制造；医护人员防护用品生产（Ⅰ类医疗器械）；3D打印服务；信息技术咨询服务；信息系统集成服务；计算机系统服务；工业设计服务；商务代理代办服务；信息咨询服务（不含许可类信息咨询服务）；教育咨询服务（不含涉许可审批的教育培训活动）；计算机及办公设备维修；3D打印基础材料销售；互联网销售（除销售需要许可的商品）；电子产品销售；计算机软硬件及辅助设备批发；计算机软硬件及辅助设备零售；办公设备销售；通信设备销售；新型膜材料销售；新型金属功能材料销售；新型陶瓷材料销售；建筑装饰材料销售；工艺美术品及礼仪用品销售（象牙及其制品除外）；模具销售；五金产品批发；五金产品零售；日用品批发；日用品销售；塑料制品销售；家具销售；销售代理；摩托车及零配件批发；摩托车及零配件零售；贸易经纪；国内贸易代理；技术进出口；货物进出口。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）（生产场地另设）",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "佛山市顺德区市场监督管理局",
   "reg_authority_label": "登记机关",
-  "annual_report_year": "",
+  "annual_report_year": "2026",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2024年07月05日 至 长期",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-22182619040459078b",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "CANWT00474160",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2025-11-07",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "600台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "3D打印机",
+      "count": "600 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "30 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "70 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "200",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "3 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "200 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "租赁",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
-  "fca_store_url": "",
+  "fca_store_url": "https://shop6196055257r10.1688.com",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01gw7xyx1fkfBkY0X7b_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN0127eBun1fkfBm0NcXy_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN015eym6O1fkfBlj22el_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01a0ff8l1fkfBlFr1gg_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01DLRRhO1fkfBkZOk0J_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01wRBKv21fkfBlM9V5B_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01DpXfEN1fkfBldnSfb_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01yxiwI31fkfBkYk7Lo_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01wCqOtL1fkfBljda2g_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "研发设计能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN019gMSKc1fkfBfs525j_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01DVzyLc1fkfBlR0dhf_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01AyzH8v1fkfBmEuvQ7_!!4611686018427386541-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01u94HYp1fkfBljkxyA_!!4611686018427386541-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

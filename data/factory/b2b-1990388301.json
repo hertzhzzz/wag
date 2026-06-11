@@ -1,43 +1,53 @@
 {
   "member_id": "b2b-1990388301",
   "member_id_label": "Member ID",
-  "company_name": "东莞市百优电子有限公司",
+  "company_name": "中山市福仕得健身器材有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "广东省",
   "province_label": "省份",
-  "city": "",
+  "city": "中山市",
   "city_label": "城市",
   "district": "",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2012.06.07",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "2000万以上",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "24000m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "295人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": true,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "500件",
   "custom_moq_label": "定制MOQ",
   "certifications": [
-    "SGS"
+    "TUV",
+    "CE"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [
+    "入围浴室凳实力榜 第2名"
+  ],
   "rankings_label": "企业排名",
-  "platform_tags": "",
+  "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "来样加工",
+    "来图加工",
+    "包工包料"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "冲床",
+    "激光切"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "500万以上",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "206人",
   "production_workers_label": "生产人员",
   "contact_person": "",
   "contact_person_label": "联系人",
@@ -61,15 +71,15 @@
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-1855898517",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "NGBWT00606105",
+  "fca_report_id": "CANWT00480323",
   "fca_report_id_label": "报告编号",
   "fca_report_date": "",
   "fca_report_date_label": "报告日期",
   "fca_total_equipment": "",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [],
   "fca_equipment_label": "设备清单",
   "fca_oem_ratio": "",
   "fca_oem_ratio_label": "OEM占比",
@@ -87,7 +97,73 @@
   "fca_quality_inspection_label": "质检方式",
   "fca_store_url": "",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "其他",
+      "index": 1,
+      "url": "https://gw.alicdn.com/i4/O1CN017LqcYl1uQiD4SABMM_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 2,
+      "url": "https://gw.alicdn.com/i4/O1CN01PPlN4b1uQiD5HjP9A_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 3,
+      "url": "https://gw.alicdn.com/i4/O1CN0178Tklf1uQiD4vz9UE_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 4,
+      "url": "https://gw.alicdn.com/i4/O1CN01Bgjcrd1uQiD4nXX2m_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 5,
+      "url": "https://gw.alicdn.com/i1/O1CN01BDYdeJ1uQiD4SnaVd_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 6,
+      "url": "https://gw.alicdn.com/i1/O1CN01a7i5Ii1uQiD07jpig_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 7,
+      "url": "https://gw.alicdn.com/i4/O1CN01YCEm8u1uQiD6HgczB_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 8,
+      "url": "https://gw.alicdn.com/i4/O1CN01LldD871uQiD6HgIFJ_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 9,
+      "url": "https://gw.alicdn.com/i4/O1CN01EoFUb41uQiD4ohsnh_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 10,
+      "url": "https://gw.alicdn.com/i1/O1CN01s9tFNa1uQiD07FYj5_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 11,
+      "url": "https://gw.alicdn.com/i2/O1CN01xl2eEs1uQiD4nAhen_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 12,
+      "url": "https://gw.alicdn.com/i4/O1CN01izE3mu1uQiD4q76fm_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    },
+    {
+      "section": "其他",
+      "index": 13,
+      "url": "https://gw.alicdn.com/i2/O1CN014KAPKO1uQiD4vBbkL_!!4611686018427383728-0-av-auth-doc.jpg_Q75.jpg_.webp"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

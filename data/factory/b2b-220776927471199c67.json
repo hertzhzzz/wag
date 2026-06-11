@@ -3,91 +3,231 @@
   "member_id_label": "Member ID",
   "company_name": "俏福圣药业有限公司",
   "company_name_label": "公司名称",
-  "province": "",
+  "province": "河南省",
   "province_label": "省份",
-  "city": "",
+  "city": "郑州市",
   "city_label": "城市",
-  "district": "",
+  "district": "中原区",
   "district_label": "区/县",
   "address": "",
   "address_label": "地址",
-  "established": "",
+  "established": "2019.11.28",
   "established_label": "成立时间",
-  "annual_revenue": "",
+  "annual_revenue": "2000万以上",
   "annual_revenue_label": "年营业额",
-  "factory_area": "",
+  "factory_area": "1626m²",
   "factory_area_label": "工厂面积",
-  "employees": "",
+  "employees": "117人",
   "employees_label": "员工人数",
-  "export_ready": "",
+  "export_ready": true,
   "export_ready_label": "出口能力",
-  "custom_moq": "",
+  "custom_moq": "5000个",
   "custom_moq_label": "定制MOQ",
   "certifications": [
-    "SGS"
+    "SGS",
+    "ISO 9001"
   ],
   "certifications_label": "认证资质",
-  "rankings": "",
+  "rankings": [],
   "rankings_label": "企业排名",
   "platform_tags": [],
   "platform_tags_label": "平台标签",
-  "processing_methods": "",
+  "processing_methods": [
+    "来图加工",
+    "来样加工",
+    "包工包料",
+    "清加工"
+  ],
   "processing_methods_label": "加工方式",
-  "special_processes": "",
+  "special_processes": [
+    "复合",
+    "烫金",
+    "压光",
+    "压痕",
+    "淋膜"
+  ],
   "special_processes_label": "特殊工艺",
-  "monthly_output": "",
+  "monthly_output": "500万以上",
   "monthly_output_label": "月产量",
-  "production_workers": "",
+  "production_workers": "34人",
   "production_workers_label": "生产人员",
-  "contact_person": "",
+  "contact_person": "姚丹",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "91410100MA47RMFE8B",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "马傲云",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "5000万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "郑州高新技术产业开发区莲花街316号10幢5层503号",
   "registered_address_label": "注册地址",
-  "company_type": "",
+  "company_type": "有限责任公司(自然人投资或控股)",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "中成药、中药饮片、消毒剂、抑菌剂、保健用品、卫生用品、化妆品、艾制品、第一、二类医疗器械的研发生产及销售；生物技术、医药技术研发、技术转让；货物或技术进出口；企业营销策划；会议会展；品牌推广；健康管理咨询服务；中草药销售；销售：洗化用品、日化用品、日用百货、计生用品、母婴用品、预包装食品、酒、保健食品。",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "郑州市高新技术产业开发区市场监督管理局",
   "reg_authority_label": "登记机关",
-  "annual_report_year": "",
+  "annual_report_year": "2026",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2019年11月28日 至 长期",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
-  "fca_url": "",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-220776927471199c67",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "TSNWT00123207",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2026-01-16",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "7台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": "",
+  "fca_equipment": [
+    {
+      "name": "磁力泵灌装机",
+      "count": "3 台"
+    },
+    {
+      "name": "热合机",
+      "count": "2 台"
+    },
+    {
+      "name": "喷码机",
+      "count": "1 台"
+    },
+    {
+      "name": "打包机",
+      "count": "1 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "40 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "30 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "100",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "0 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "400 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "租赁",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
   "fca_store_url": "",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": "",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01hLmh8u1kfgz4LAwDB_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01oR8lhw1kfgz3Za0Tg_!!4611686018427382103-2-av-auth-doc.png"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01wv2CDR1kfgz4XsHHT_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01RbEX2q1kfgz4Alu6h_!!4611686018427382103-2-av-auth-doc.png"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Wr6wHx1kfgz3boVSH_!!4611686018427382103-2-av-auth-doc.png"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01VrZ11F1kfgyz1a7Xi_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN014Qd9K11kfgz4Su2j6_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01unPKBO1kfgz4lpShW_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 7,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN012aZjTs1kfgz4Y1Tgx_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01gAXm7G1kfgz4NIBaw_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01LBhOjh1kfgz42tLed_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01QHFEAR1kfgz3bj8KI_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01DyAJNM1kfgz4NIaYU_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01l4Av0Z1kfgz4DT7sq_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01iuQNGF1kfgz3LLibD_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01dFUk201kfgz4SZ1tn_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01gv6lqM1kfgz5LfI8C_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01CjSs7W1kfgyz29uBJ_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01EUeaUQ1kfgz4TR4g5_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN017iPa2x1kfgz4CsfMi_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01zZHTwK1kfgz4SnQRe_!!4611686018427382103-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01pclpBI1kfgz42jPaZ_!!4611686018427382103-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {
