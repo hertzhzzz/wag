@@ -1,0 +1,139 @@
+{
+  "slug": "aaron-sansoni",
+  "client_name": "Neal Walters",
+  "client_company": "Aaron Sansoni Group International Pty Ltd",
+  "access_code_hash": "$2b$10$PLACEHOLDER_HASH",
+  "projects": [
+    {
+      "slug": "tv-studio-build",
+      "name": "TV Studio Build — South Melbourne",
+      "location": "84-88 Montague Street, South Melbourne VIC 3205",
+      "status": "active",
+      "executive_summary": "Complete TV studio fitout for live events and two podcast studios. Equipment sourced from Guangzhou-based manufacturers with on-site factory visits scheduled for 5-10 July 2026. Single-container delivery targeted for September 2026. Audio equipment sourced separately from Australian supplier.",
+      "deliverables": [
+        {
+          "id": "itc-baolun",
+          "type": "due_diligence_report",
+          "title": "ITC Baolun Electronics — Supplier Due Diligence White Paper",
+          "supplier": "Guangdong Baolun Electronics Co., Ltd. (ITC)",
+          "category": "LED Displays, Conference Systems, Control Systems",
+          "date": "2026-06-11",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "itc-baolun"
+        },
+        {
+          "id": "land-guangzhou",
+          "type": "due_diligence_report",
+          "title": "Rand Electronics — Supplier Due Diligence White Paper",
+          "supplier": "Guangzhou Rand Electronic Technology Co., Ltd.",
+          "category": "Stage Lighting, Stage Machinery, Drapes, Systems Integration",
+          "date": "2026-06-11",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "land-guangzhou"
+        },
+        {
+          "id": "aud01",
+          "type": "inspection_report",
+          "title": "ITC Baolun Factory Inspection Report",
+          "supplier": "Guangdong Baolun Electronics Co., Ltd. (ITC)",
+          "date": "2026-06-12",
+          "status": "draft",
+          "client_reviewed": false
+        },
+        {
+          "id": "aud02",
+          "type": "inspection_report",
+          "title": "Rand Electronics Factory Inspection Report",
+          "supplier": "Guangzhou Rand Electronic Technology Co., Ltd.",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": true
+        },
+        {
+          "id": "pc01",
+          "type": "price_comparison",
+          "title": "LED Display & AV Equipment Price Comparison — Q2 2026",
+          "date": "2026-06-08",
+          "status": "final",
+          "client_reviewed": true
+        },
+        {
+          "id": "it01",
+          "type": "itinerary",
+          "title": "Guangzhou Factory Visit Itinerary — July 2026",
+          "date": "2026-06-10",
+          "status": "delivered",
+          "client_reviewed": false
+        }
+      ],
+      "product_matrix": [
+        {
+          "product": "LED Screen (4K)",
+          "supplier": "ITC Baolun",
+          "match": "Excellent"
+        },
+        {
+          "product": "Lighting / grandMA / DMX",
+          "supplier": "Rand Electronics",
+          "match": "Excellent"
+        },
+        {
+          "product": "Truss + Roof Motors",
+          "supplier": "Rand Electronics",
+          "match": "Excellent"
+        },
+        {
+          "product": "Drapes",
+          "supplier": "Rand Electronics",
+          "match": "Excellent"
+        },
+        {
+          "product": "Conference / Podcast Systems",
+          "supplier": "ITC Baolun",
+          "match": "Excellent"
+        },
+        {
+          "product": "Stage",
+          "supplier": "Rand Electronics",
+          "match": "Good"
+        },
+        {
+          "product": "Cables / Racks / Cases",
+          "supplier": "Both",
+          "match": "Good"
+        },
+        {
+          "product": "Tripods / Camera Equipment",
+          "supplier": "TBD",
+          "match": "Pending"
+        },
+        {
+          "product": "Tables & Chairs / Trolleys",
+          "supplier": "TBD",
+          "match": "Pending"
+        }
+      ],
+      "itinerary": {
+        "dates": "5-10 July 2026",
+        "base_city": "Guangzhou",
+        "travelers": 3,
+        "departure_from": "Melbourne",
+        "status": "pending_confirmation",
+        "suppliers_to_visit": [
+          {
+            "name": "ITC Baolun Electronics",
+            "city": "Guangzhou (Panyu)",
+            "category": "LED Displays, Conference Systems"
+          },
+          {
+            "name": "Rand Electronic Technology",
+            "city": "Guangzhou (Tianhe)",
+            "category": "Stage Lighting, Machinery, Drapes"
+          }
+        ]
+      }
+    }
+  ]
+}
