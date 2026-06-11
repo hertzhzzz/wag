@@ -83,7 +83,7 @@ export function Sidebar({
     <div className="flex flex-col h-full bg-navy text-white">
       {/* Header */}
       <div className="px-5 py-4 border-b border-white/10">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-amber-400">
+        <p className="text-[10px] font-semibold tracking-[0.05em] text-amber-400">
           {clientCompany}
         </p>
         <Link

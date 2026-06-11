@@ -236,7 +236,7 @@ export default async function ProjectDashboardPage({ params }: { params: Promise
       <div className="px-6 pb-6 lg:px-8 lg:pb-8 space-y-6">
         {/* Page header */}
         <div>
-          <p className="text-xs font-bold tracking-[0.15em] uppercase text-amber-600 mb-1">{client.client_company}</p>
+          <p className="text-xs font-bold tracking-[0.05em] text-amber-600 mb-1">{client.client_company}</p>
           <h1 className="font-sans text-2xl font-bold text-navy tracking-tight">{project.name}</h1>
           <div className="flex flex-wrap items-center gap-3 mt-2">
             {project.location && <span className="text-sm text-gray-500">{project.location}</span>}
