@@ -131,11 +131,11 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
   font-family: var(--font-ibm-plex-sans);
   background: #fff;
@@ -154,4 +154,29 @@ body {
 .touch-target {
   min-height: 44px;
   min-width: 44px;
+}
+
+/* Report TOC scrollbar — always visible */
+.toc-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 transparent;
+}
+.toc-scroll::-webkit-scrollbar {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 8px !important;
+}
+.toc-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9 !important;
+  border-radius: 4px !important;
+}
+.toc-scroll::-webkit-scrollbar-thumb {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background: #94a3b8 !important;
+  border-radius: 4px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+.toc-scroll::-webkit-scrollbar-thumb:hover {
+  background: #64748b !important;
 }
