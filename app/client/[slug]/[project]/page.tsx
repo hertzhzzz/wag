@@ -6,7 +6,6 @@ import {
   getProjectConfig,
   getDeliverableDisplayStatus,
   getStatusBadgeStyle,
-  getMatchRatingStyle,
   getDeliverableTypeLabel,
 } from "@/lib/clients"
 import { logAccess } from "@/lib/access-log"
@@ -70,10 +69,10 @@ function StatsRow({
 }
 
 // ---------------------------------------------------------------------------
-// Product-Supplier Matrix
+// Product Requirements List
 // ---------------------------------------------------------------------------
 
-function ProductMatrix({
+function ProductRequirements({
   matrix,
 }: {
   matrix: ExtendedClientProject["product_matrix"]
@@ -81,56 +80,22 @@ function ProductMatrix({
   if (!matrix || matrix.length === 0) return null
 
   return (
-    <section className={`${card} overflow-hidden`}>
-      <div className={`${cardPad} border-b border-gray-100`}>
-        <h2 className={sectionTitle}>Product &ndash; Supplier Matrix</h2>
-        <p className="text-sm text-gray-500 mt-1">
-          How your sourcing requirements map to vetted suppliers
-        </p>
-      </div>
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-gray-50/50 text-left">
-              <th className="px-6 py-3 font-semibold text-gray-500 text-xs uppercase tracking-wider">
-                Product Requirement
-              </th>
-              <th className="px-6 py-3 font-semibold text-gray-500 text-xs uppercase tracking-wider">
-                Matched Supplier
-              </th>
-              <th className="px-6 py-3 font-semibold text-gray-500 text-xs uppercase tracking-wider text-center">
-                Fit
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-50">
-            {matrix.map((row, i) => {
-              const style = getMatchRatingStyle(row.match)
-              return (
-                <tr key={i} className="hover:bg-gray-50/30 transition-colors">
-                  <td className="px-6 py-3.5 text-gray-900 font-medium">
-                    {row.product}
-                  </td>
-                  <td className="px-6 py-3.5 text-gray-600">
-                    {row.supplier === "TBD" ? (
-                      <span className="text-gray-400 italic">In progress</span>
-                    ) : (
-                      row.supplier
-                    )}
-                  </td>
-                  <td className="px-6 py-3.5 text-center">
-                    <span
-                      className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${style.bg} ${style.text}`}
-                    >
-                      {style.label}
-                    </span>
-                  </td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
-      </div>
+    <section className={`${card} ${cardPad}`}>
+      <h2 className={sectionTitle}>Product Requirements</h2>
+      <p className="text-sm text-gray-500 mt-1 mb-4">
+        Equipment and items required for the TV Studio build
+      </p>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        {matrix.map((row, i) => (
+          <li
+            key={i}
+            className="flex items-center gap-2.5 text-sm text-gray-700 py-1.5 px-3 rounded-lg hover:bg-gray-50 transition-colors"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
+            {row.product}
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }
@@ -468,7 +433,7 @@ export default async function ProjectDashboardPage({
         <StatsRow deliverables={deliverables} itinerary={(project.itinerary as Record<string, unknown>) || {}} />
 
         {/* Product Matrix */}
-        <ProductMatrix matrix={project.product_matrix} />
+        <ProductRequirements matrix={project.product_matrix} />
 
         {/* Two-column: Deliverables + Itinerary */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
