@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 interface Heading {
   level: number
@@ -13,14 +13,14 @@ interface Props {
 }
 
 export function ReportTOC({ headings }: Props) {
-  const [activeId, setActiveId] = useState<string>("")
+  const [activeId, setActiveId] = useState<string>(headings[0]?.id || "")
+  const navRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     if (headings.length === 0) return
 
     const observer = new IntersectionObserver(
       (entries) => {
-        // Find the first (topmost) visible heading
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => {
@@ -54,6 +54,15 @@ export function ReportTOC({ headings }: Props) {
     }
   }, [headings])
 
+  // Auto-scroll TOC to keep active link in view
+  useEffect(() => {
+    if (!activeId || !navRef.current) return
+    const link = navRef.current.querySelector(`a[href="#${activeId}"]`) as HTMLElement | null
+    if (link) {
+      link.scrollIntoView({ block: "nearest", behavior: "smooth" })
+    }
+  }, [activeId])
+
   if (headings.length === 0) {
     return (
       <nav aria-label="Table of contents">
@@ -66,7 +75,7 @@ export function ReportTOC({ headings }: Props) {
   }
 
   return (
-    <nav aria-label="Table of contents">
+    <nav ref={navRef} aria-label="Table of contents">
       <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
         Contents
       </h4>
