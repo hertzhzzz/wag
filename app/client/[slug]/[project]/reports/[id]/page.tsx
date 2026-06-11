@@ -18,6 +18,10 @@ import {
 import { logAccess } from "@/lib/access-log"
 import { FeedbackForm } from "./FeedbackForm"
 import { ReportTOC } from "./ReportTOC"
+import { ReportImage } from "./ReportImage"
+import { resolveReportImagePath } from "./imagePath"
+import { FootnoteEnhancer } from "./FootnoteEnhancer"
+import { ProductShowcase, ProductCard } from "./ProductShowcase"
 import { Sidebar } from "@/client/Sidebar"
 import type { ExtendedDeliverable } from "@/lib/clients"
 
@@ -94,13 +98,15 @@ function Figure({
   alt,
   caption,
   number,
+  clientSlug,
 }: {
   src: string
   alt: string
   caption: string
   number: number
+  clientSlug: string
 }) {
-  const publicPath = src.startsWith("/") ? src : `/${src}`
+  const publicPath = resolveReportImagePath(src, clientSlug)
   return (
     <figure className="my-8">
       <div className="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
@@ -109,7 +115,7 @@ function Figure({
           alt={alt}
           width={800}
           height={500}
-          className="object-contain w-full"
+          className="object-contain max-w-2xl mx-auto h-auto max-h-[420px] w-auto"
           sizes="(max-width: 768px) 100vw, 700px"
           unoptimized
           loading="lazy"
@@ -122,41 +128,23 @@ function Figure({
   )
 }
 
-function Footnote({
-  id,
-  children,
-}: {
-  id: string
-  children: React.ReactNode
-}) {
-  const noteId = `fn-${id}`
-  return (
-    <sup className="relative group" id={`fn-ref-${id}`}>
-      <a
-        href={`#${noteId}`}
-        className="cursor-help text-amber-600 font-bold text-xs no-underline hover:text-amber-700"
-        aria-describedby={noteId}
-      >
-        [{id}]
-      </a>
-      <span
-        id={noteId}
-        role="tooltip"
-        className="invisible group-hover:visible group-focus-within:visible absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-20 w-72"
-      >
-        <span className="block bg-navy text-white text-xs rounded-lg p-3 leading-relaxed shadow-lg">
-          {children}
-        </span>
-        <span className="block w-2 h-2 bg-navy rotate-45 mx-auto -mt-1" />
-      </span>
-    </sup>
+function createMdxComponents(clientSlug: string) {
+  const FigureWithSlug = (props: Omit<React.ComponentProps<typeof Figure>, "clientSlug">) => (
+    <Figure {...props} clientSlug={clientSlug} />
   )
-}
 
-function createMdxComponents() {
   return {
-    Figure,
-    Footnote,
+    Figure: FigureWithSlug,
+    ProductShowcase,
+    ProductCard,
+    img: ({
+      src,
+      alt,
+      className,
+      ...props
+    }: React.ImgHTMLAttributes<HTMLImageElement> & { className?: string }) => (
+      <ReportImage src={src} alt={alt} clientSlug={clientSlug} className={className} {...props} />
+    ),
     h2: ({
       children,
       id,
@@ -453,14 +441,14 @@ export default async function ReportDetailPage({
     // silent
   }
 
-  const mdxComponents = createMdxComponents()
+  const mdxComponents = createMdxComponents(clientSlug)
   const client = getClientConfig(clientSlug)
   const deliverables = ((project.deliverables || []) as ExtendedDeliverable[]).map((d) => ({ id: d.id, title: d.title, report_id: (d as ExtendedDeliverable).report_id ?? null }))
 
   return (
     <>
       <Sidebar clientSlug={clientSlug} projectSlug={projectSlug} projectName={project.name} clientCompany={client?.client_company || ""} deliverables={deliverables} />
-      <div className="p-6 lg:p-8 max-w-6xl">
+      <div className="px-6 pb-6 lg:px-8 lg:pb-8">
         <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6">
           <Link href={`/client/${clientSlug}/${projectSlug}`} className="hover:text-navy transition">
             &larr; {project.name}
@@ -471,16 +459,18 @@ export default async function ReportDetailPage({
 
         <div className="flex gap-8 lg:gap-12">
           <aside className="hidden lg:block w-56 shrink-0">
-            <div className="sticky top-8 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div className="toc-scroll sticky top-4 max-h-[calc(100vh-2rem)] overflow-y-scroll" style={{ scrollbarGutter: "stable" }}>
               <ReportTOC headings={report.headings} />
             </div>
           </aside>
 
-          <main className="flex-1 min-w-0 max-w-[720px]">
+          <main className="flex-1 min-w-0">
             <article>
               <ReportHeader frontmatter={report.frontmatter} />
-              <div className="prose prose-slate max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-amber-700 prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2.5 prose-th:text-xs prose-th:font-medium prose-th:uppercase prose-th:tracking-wide prose-td:px-4 prose-td:py-2.5 prose-td:text-sm">
-                <MDXRemote source={report.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+              <div className="prose prose-slate max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-amber-700 prose-a:no-underline hover:prose-a:underline prose-img:mx-auto prose-img:h-auto prose-img:max-w-full prose-img:max-h-[420px] prose-img:rounded-lg prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2.5 prose-th:text-xs prose-th:font-medium prose-th:uppercase prose-th:tracking-wide prose-td:px-4 prose-td:py-2.5 prose-td:text-sm">
+                <FootnoteEnhancer>
+                  <MDXRemote source={report.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+                </FootnoteEnhancer>
               </div>
             </article>
             <ReportNavigation prev={prev} next={next} clientSlug={clientSlug} projectSlug={projectSlug} />

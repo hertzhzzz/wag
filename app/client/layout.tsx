@@ -31,7 +31,7 @@ export default async function ClientLayout({ children }: { children: React.React
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-gray-50 font-sans -mt-[72px] pt-4">
       <div className="lg:pl-60">
         {children}
       </div>

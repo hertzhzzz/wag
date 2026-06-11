@@ -233,7 +233,7 @@ export default async function ProjectDashboardPage({ params }: { params: Promise
         deliverables={deliverables as Array<{ id: string; title: string; report_id?: string | null }>}
       />
 
-      <div className="p-6 lg:p-8 space-y-6 max-w-5xl">
+      <div className="px-6 pb-6 lg:px-8 lg:pb-8 space-y-6">
         {/* Page header */}
         <div>
           <p className="text-xs font-bold tracking-[0.15em] uppercase text-amber-600 mb-1">{client.client_company}</p>

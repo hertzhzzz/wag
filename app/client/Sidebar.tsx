@@ -3,12 +3,11 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-import { Menu, X, LayoutDashboard, FileText, Map, ChevronDown } from "lucide-react"
+import { Menu, X, LayoutDashboard, FileText, Map } from "lucide-react"
 
 interface NavGroup {
   label: string
   items: NavItem[]
-  defaultOpen?: boolean
 }
 
 interface NavItem {
@@ -74,9 +73,10 @@ export function Sidebar({
 
   function isActive(href: string): boolean {
     if (href.includes("#")) {
-      return pathname === href.split("#")[0]
+      const [basePath, hash] = href.split("#")
+      return pathname === basePath && typeof window !== "undefined" && window.location.hash === `#${hash}`
     }
-    return pathname === href || pathname.startsWith(href + "/")
+    return pathname === href
   }
 
   const sidebar = (
@@ -96,17 +96,17 @@ export function Sidebar({
 
       {/* Nav */}
       <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-6">
-        {navGroups.map((group, gi) => (
-          <div key={gi}>
+        {navGroups.map((group) => (
+          <div key={group.label}>
             <p className="px-3 mb-1.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-white/40">
               {group.label}
             </p>
             <ul className="space-y-0.5">
-              {group.items.map((item, ii) => {
+              {group.items.map((item) => {
                 const Icon = iconMap[item.icon]
                 const active = isActive(item.href)
                 return (
-                  <li key={ii}>
+                  <li key={item.href}>
                     <Link
                       href={item.href}
                       className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
