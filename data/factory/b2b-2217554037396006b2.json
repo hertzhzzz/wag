@@ -1,0 +1,268 @@
+{
+  "member_id": "b2b-2217554037396006b2",
+  "member_id_label": "Member ID",
+  "company_name": "义乌市悦凯工艺品有限公司",
+  "company_name_label": "公司名称",
+  "province": "浙江省",
+  "province_label": "省份",
+  "city": "金华市",
+  "city_label": "城市",
+  "district": "浦江县",
+  "district_label": "区/县",
+  "address": "",
+  "address_label": "地址",
+  "established": "2025.11.05",
+  "established_label": "成立时间",
+  "annual_revenue": "101~500万",
+  "annual_revenue_label": "年营业额",
+  "factory_area": "10000m²",
+  "factory_area_label": "工厂面积",
+  "employees": "14人",
+  "employees_label": "员工人数",
+  "export_ready": false,
+  "export_ready_label": "出口能力",
+  "custom_moq": "1000个",
+  "custom_moq_label": "定制MOQ",
+  "certifications": [
+    "INTERTEK"
+  ],
+  "certifications_label": "认证资质",
+  "rankings": [
+    "入围扇子实力榜 第18名"
+  ],
+  "rankings_label": "企业排名",
+  "platform_tags": [],
+  "platform_tags_label": "平台标签",
+  "processing_methods": [
+    "清加工",
+    "来样加工",
+    "来图加工",
+    "包工包料"
+  ],
+  "processing_methods_label": "加工方式",
+  "special_processes": [],
+  "special_processes_label": "特殊工艺",
+  "monthly_output": "51~100万",
+  "monthly_output_label": "月产量",
+  "production_workers": "7人",
+  "production_workers_label": "生产人员",
+  "contact_person": "刘则庆",
+  "contact_person_label": "联系人",
+  "credit_code": "330782007900494",
+  "credit_code_label": "统一社会信用代码",
+  "legal_rep": "刘俊鹏",
+  "legal_rep_label": "法定代表人",
+  "registered_capital": "3万元万元",
+  "registered_capital_label": "注册资本",
+  "registered_address": "浙江省金华市义乌市北苑街道机场路633号2楼213室",
+  "registered_address_label": "注册地址",
+  "company_type": "",
+  "company_type_label": "公司类型",
+  "biz_scope": "一般项目：工艺美术品及礼仪用品制造（象牙及其制品除外）；工艺美术品及礼仪用品销售（象牙及其制品除外）；工艺美术品及收藏品批发（象牙及其制品除外）；工艺美术品及收藏品零售（象牙及其制品除外）；日用杂品制造；日用杂品销售；互联网销售（除销售需要许可的商品）；日用品销售；日用百货销售；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；软件开发；信息咨询服务（不含许可类信息咨询服务）；信息技术咨询服务；健康咨询服务（不含诊疗服务）；工程和技术研究和试验发展；珠宝首饰批发；珠宝首饰零售；文化用品设备出租；服装服饰批发；服装服饰零售；服装辅料销售；塑料制品销售；纸制品销售；家具销售；针纺织品及原料销售；产业用纺织制成品销售；母婴用品销售；鞋帽批发；鞋帽零售；箱包销售；汽车装饰用品销售；电子产品销售；美发饰品销售；橡胶制品销售；皮革制品销售；皮革销售；玩具、动漫及游艺用品销售；文具用品批发；文具用品零售；办公用品销售；户外用品销售；体育用品及器材批发；体育用品及器材零售；五金产品零售；五金产品批发；厨具卫具及日用杂品批发；厨具卫具及日用杂品零售；日用玻璃制品销售；化妆品批发；化妆品零售；个人卫生用品销售；货物进出口；技术进出口；家居用品销售；食品销售（仅销售预包装食品）；食品互联网销售（仅销售预包装食品）；产业用纺织制成品制造；家居用品制造；箱包制造；家具制造；纸制品制造(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。",
+  "biz_scope_label": "经营范围",
+  "reg_authority": "义乌市市场监督管理局",
+  "reg_authority_label": "登记机关",
+  "annual_report_year": "",
+  "annual_report_year_label": "年报年份",
+  "business_term": "2025年11月05日 至 9999年09月09日",
+  "business_term_label": "营业期限",
+  "has_fca_report": true,
+  "has_fca_report_label": "有深度认证",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2217554037396006b2",
+  "fca_url_label": "认证报告URL",
+  "fca_report_id": "CNIR2508SH03579",
+  "fca_report_id_label": "报告编号",
+  "fca_report_date": "2025-08-07",
+  "fca_report_date_label": "报告日期",
+  "fca_total_equipment": "29台",
+  "fca_total_equipment_label": "设备总数",
+  "fca_equipment": [
+    {
+      "name": "自动绑枝机",
+      "count": "21 台"
+    },
+    {
+      "name": "拉条机",
+      "count": "8 台"
+    }
+  ],
+  "fca_equipment_label": "设备清单",
+  "fca_oem_ratio": "",
+  "fca_oem_ratio_label": "OEM占比",
+  "fca_odm_ratio": "100 %",
+  "fca_odm_ratio_label": "ODM占比",
+  "fca_annual_new_models": "600",
+  "fca_annual_new_models_label": "年均新品",
+  "fca_sample_cycle": "7 天/件",
+  "fca_sample_cycle_label": "打样周期",
+  "fca_warehouse_area": "5000 m²",
+  "fca_warehouse_area_label": "仓库面积",
+  "fca_warehouse_type": "租赁",
+  "fca_warehouse_type_label": "仓库类型",
+  "fca_quality_inspection": "是",
+  "fca_quality_inspection_label": "质检方式",
+  "fca_store_url": "",
+  "fca_store_url_label": "店铺URL",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN0172M1Xd24VQNqYHLSW_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01IhRmce24VQNrPEppr_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN016YQ6uI24VQNqu6ASr_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01WCsEO724VQNqYWFWY_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN019Vxyeu24VQNr38srv_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01pPaihU24VQNq3LV0N_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01mZSN4B24VQNqIDeyD_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01vA4tjz24VQNqZ1wKg_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01m9LMrc24VQNq3sWsi_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01LDWyLP24VQNpK3O25_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN018Q7Py424VQNkY5XX1_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01ThkpoK24VQNkY3nQf_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01iZNQkl24VQNq46tYe_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01MBIIcO24VQNqLXxHY_!!4611686018427382420-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01G1DBcu24VQNqZNkvD_!!4611686018427382420-0-av-auth-doc.jpg"
+    }
+  ],
+  "evidence_images_label": "证据图片",
+  "_sections": {
+    "basic": {
+      "title": "基本信息",
+      "fields": [
+        "company_name",
+        "province",
+        "city",
+        "district",
+        "address",
+        "established",
+        "contact_person",
+        "platform_tags"
+      ]
+    },
+    "scale": {
+      "title": "工厂规模",
+      "fields": [
+        "factory_area",
+        "employees",
+        "production_workers",
+        "annual_revenue",
+        "monthly_output",
+        "export_ready",
+        "custom_moq"
+      ]
+    },
+    "certifications": {
+      "title": "认证与资质",
+      "fields": [
+        "certifications",
+        "rankings",
+        "processing_methods",
+        "special_processes"
+      ]
+    },
+    "business": {
+      "title": "工商信息",
+      "fields": [
+        "credit_code",
+        "legal_rep",
+        "registered_capital",
+        "registered_address",
+        "company_type",
+        "biz_scope",
+        "reg_authority",
+        "annual_report_year",
+        "business_term"
+      ]
+    },
+    "fca": {
+      "title": "深度认证报告",
+      "fields": [
+        "has_fca_report",
+        "fca_report_id",
+        "fca_report_date",
+        "fca_total_equipment",
+        "fca_equipment",
+        "fca_oem_ratio",
+        "fca_odm_ratio",
+        "fca_annual_new_models",
+        "fca_sample_cycle",
+        "fca_warehouse_area",
+        "fca_warehouse_type",
+        "fca_quality_inspection",
+        "fca_url",
+        "fca_store_url"
+      ]
+    },
+    "evidence": {
+      "title": "证据图片",
+      "fields": [
+        "evidence_images"
+      ]
+    }
+  },
+  "_sections_order": [
+    "basic",
+    "scale",
+    "certifications",
+    "business",
+    "fca",
+    "evidence"
+  ],
+  "_slug": "b2b-2217554037396006b2"
+}
