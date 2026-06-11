@@ -31,8 +31,9 @@ export function FootnoteEnhancer({ children }: { children: React.ReactNode }) {
     const rect = trigger.getBoundingClientRect()
     const popoverH = 200 // estimated max popover height
     const below = rect.bottom + popoverH < window.innerHeight - 16
+    const dd = def.nextElementSibling as HTMLElement | null
     setTooltip({
-      html: def.innerHTML,
+      html: dd?.innerHTML || def.innerHTML,
       top: below ? rect.bottom + 6 : rect.top - popoverH - 6,
       left: rect.left,
       below,
