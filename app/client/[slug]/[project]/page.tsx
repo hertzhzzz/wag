@@ -26,12 +26,13 @@ const sectionTitle = "font-sans text-base font-semibold text-navy tracking-tight
 // ---------------------------------------------------------------------------
 
 function StatsRow({ deliverables, itinerary }: { deliverables: ExtendedDeliverable[]; itinerary: Record<string, unknown> }) {
-  const total = deliverables.length
-  const reviewed = deliverables.filter((d) => getDeliverableDisplayStatus(d) === "client_reviewed" || d.status === "final").length
-  const pending = deliverables.filter((d) => getDeliverableDisplayStatus(d) === "delivered").length
+  const reports = deliverables.filter((d) => d.type === "due_diligence_report")
+  const total = reports.length
+  const reviewed = reports.filter((d) => getDeliverableDisplayStatus(d) === "client_reviewed" || d.status === "final").length
+  const pending = reports.filter((d) => getDeliverableDisplayStatus(d) === "delivered").length
 
   const stats = [
-    { label: "Deliverables", value: String(total), hint: "Total" },
+    { label: "Reports", value: String(total), hint: "Supplier assessments" },
     { label: "Reviewed", value: String(reviewed), hint: "Approved" },
     { label: "Pending", value: String(pending), hint: "Needs action" },
     { label: "Trip", value: itinerary?.status === "completed" ? "Done" : "Scheduled", hint: (itinerary?.dates as string) || "TBC" },
@@ -106,52 +107,72 @@ const typeCfg: Record<string, { bg: string; text: string; abbr: string; label: s
 // Deliverables Section
 // ---------------------------------------------------------------------------
 
-function DeliverablesSection({ deliverables, clientSlug, projectSlug }: { deliverables: ExtendedDeliverable[]; clientSlug: string; projectSlug: string }) {
+function DeliverableItem({ d, clientSlug, projectSlug }: { d: ExtendedDeliverable; clientSlug: string; projectSlug: string }) {
+  const link = d.report_id ? `/client/${clientSlug}/${projectSlug}/reports/${d.report_id}` : null
+  const status = getDeliverableDisplayStatus(d)
+  const cfg = typeCfg[d.type]
   return (
-    <section className={`${card} overflow-hidden`}>
-      <div className={`${cardPad} border-b border-gray-100 flex items-center justify-between`}>
-        <div>
-          <h2 className={sectionTitle}>Deliverables</h2>
-          <p className="text-sm text-gray-500 mt-0.5">{deliverables.length} items &middot; {deliverables.filter((d) => getDeliverableDisplayStatus(d) === "delivered").length} pending</p>
+    <div className="px-6 py-4 flex items-start gap-4 hover:bg-gray-50/30 transition-colors">
+      <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${cfg?.bg || "bg-gray-50"} ${cfg?.text || "text-gray-600"}`} title={cfg?.label || d.type}>{cfg?.abbr || "?"}</div>
+      <div className="flex-1 min-w-0">
+        {link ? (
+          <Link href={link} className="text-sm font-semibold text-navy hover:text-navy-light transition-colors">{d.title}</Link>
+        ) : (
+          <p className="text-sm font-semibold text-gray-900">{d.title}</p>
+        )}
+        <div className="flex items-center gap-3 mt-1.5 flex-wrap">
+          <DeliverableStatusBadge deliverable={d} />
+          <span className="text-xs text-gray-400">{cfg?.label || getDeliverableTypeLabel(d.type)}</span>
+          {d.supplier && <span className="text-xs text-gray-400">&middot; {d.supplier}</span>}
+          {d.date && <span className="text-xs text-gray-400">&middot; {d.date}</span>}
         </div>
       </div>
+      <div className="flex items-center gap-2 shrink-0">
+        {link && <Link href={link} className="text-xs font-medium text-navy hover:text-navy-light transition-colors">View &rarr;</Link>}
+        {status === "delivered" && <MarkAsReviewedButton clientSlug={clientSlug} projectSlug={projectSlug} deliverableId={d.id} />}
+      </div>
+    </div>
+  )
+}
 
-      {deliverables.length === 0 ? (
-        <div className={`${cardPad} text-center`}>
-          <p className="text-sm text-gray-400">No deliverables yet. Check back soon.</p>
+function DeliverablesSection({ deliverables, clientSlug, projectSlug }: { deliverables: ExtendedDeliverable[]; clientSlug: string; projectSlug: string }) {
+  const reports = deliverables.filter((d) => d.type === "due_diligence_report")
+  const itineraries = deliverables.filter((d) => d.type === "itinerary")
+
+  return (
+    <div className="space-y-6">
+      {/* Reports */}
+      <section className={`${card} overflow-hidden`}>
+        <div className={`${cardPad} border-b border-gray-100 flex items-center justify-between`}>
+          <div>
+            <h2 className={sectionTitle}>Reports</h2>
+            <p className="text-sm text-gray-500 mt-0.5">Supplier Due Diligence & Capability Assessment &middot; {reports.length} {reports.length === 1 ? "report" : "reports"}</p>
+          </div>
         </div>
-      ) : (
-        <div className="divide-y divide-gray-50">
-          {deliverables.map((d) => {
-            const link = d.report_id ? `/client/${clientSlug}/${projectSlug}/reports/${d.report_id}` : null
-            const status = getDeliverableDisplayStatus(d)
-            const cfg = typeCfg[d.type]
-            return (
-              <div key={d.id} className="px-6 py-4 flex items-start gap-4 hover:bg-gray-50/30 transition-colors">
-                <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-xs font-bold shrink-0 ${cfg?.bg || "bg-gray-50"} ${cfg?.text || "text-gray-600"}`} title={cfg?.label || d.type}>{cfg?.abbr || "?"}</div>
-                <div className="flex-1 min-w-0">
-                  {link ? (
-                    <Link href={link} className="text-sm font-semibold text-navy hover:text-navy-light transition-colors">{d.title}</Link>
-                  ) : (
-                    <p className="text-sm font-semibold text-gray-900">{d.title}</p>
-                  )}
-                  <div className="flex items-center gap-3 mt-1.5 flex-wrap">
-                    <DeliverableStatusBadge deliverable={d} />
-                    <span className="text-xs text-gray-400">{cfg?.label || getDeliverableTypeLabel(d.type)}</span>
-                    {d.supplier && <span className="text-xs text-gray-400">&middot; {d.supplier}</span>}
-                    {d.date && <span className="text-xs text-gray-400">&middot; {d.date}</span>}
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 shrink-0">
-                  {link && <Link href={link} className="text-xs font-medium text-navy hover:text-navy-light transition-colors">View &rarr;</Link>}
-                  {status === "delivered" && <MarkAsReviewedButton clientSlug={clientSlug} projectSlug={projectSlug} deliverableId={d.id} />}
-                </div>
-              </div>
-            )
-          })}
-        </div>
+        {reports.length === 0 ? (
+          <div className={`${cardPad} text-center`}>
+            <p className="text-sm text-gray-400">No reports yet.</p>
+          </div>
+        ) : (
+          <div className="divide-y divide-gray-50">
+            {reports.map((d) => <DeliverableItem key={d.id} d={d} clientSlug={clientSlug} projectSlug={projectSlug} />)}
+          </div>
+        )}
+      </section>
+
+      {/* Itinerary */}
+      {itineraries.length > 0 && (
+        <section className={`${card} overflow-hidden`}>
+          <div className={`${cardPad} border-b border-gray-100`}>
+            <h2 className={sectionTitle}>Itinerary</h2>
+            <p className="text-sm text-gray-500 mt-0.5">Travel planning &middot; {itineraries.length} {itineraries.length === 1 ? "item" : "items"}</p>
+          </div>
+          <div className="divide-y divide-gray-50">
+            {itineraries.map((d) => <DeliverableItem key={d.id} d={d} clientSlug={clientSlug} projectSlug={projectSlug} />)}
+          </div>
+        </section>
       )}
-    </section>
+    </div>
   )
 }
 

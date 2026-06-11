@@ -50,7 +50,7 @@ export function Sidebar({
       ],
     },
     {
-      label: "Deliverables",
+      label: "Reports",
       items: deliverables
         .filter((d) => d.report_id)
         .map((d) => ({
