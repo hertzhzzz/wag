@@ -1,0 +1,263 @@
+{
+  "member_id": "b2b-2217689114022bbb65",
+  "member_id_label": "Member ID",
+  "company_name": "淄博良沛智能科技有限公司",
+  "company_name_label": "公司名称",
+  "province": "山东省",
+  "province_label": "省份",
+  "city": "淄博市",
+  "city_label": "城市",
+  "district": "淄川区",
+  "district_label": "区/县",
+  "address": "",
+  "address_label": "地址",
+  "established": "2026.01.06",
+  "established_label": "成立时间",
+  "annual_revenue": "101~500万",
+  "annual_revenue_label": "年营业额",
+  "factory_area": "3000m²",
+  "factory_area_label": "工厂面积",
+  "employees": "41人",
+  "employees_label": "员工人数",
+  "export_ready": false,
+  "export_ready_label": "出口能力",
+  "custom_moq": "10台",
+  "custom_moq_label": "定制MOQ",
+  "certifications": [
+    "INTERTEK"
+  ],
+  "certifications_label": "认证资质",
+  "rankings": [
+    "入围冷水机服务榜 第9名"
+  ],
+  "rankings_label": "企业排名",
+  "platform_tags": [],
+  "platform_tags_label": "平台标签",
+  "processing_methods": [
+    "清加工",
+    "包工包料",
+    "来样加工",
+    "来图加工"
+  ],
+  "processing_methods_label": "加工方式",
+  "special_processes": [
+    "组装",
+    "热处理",
+    "表面处理",
+    "焊接工艺",
+    "雕刻、打号"
+  ],
+  "special_processes_label": "特殊工艺",
+  "monthly_output": "11~20万",
+  "monthly_output_label": "月产量",
+  "production_workers": "24人",
+  "production_workers_label": "生产人员",
+  "contact_person": "贾鸿瑜",
+  "contact_person_label": "联系人",
+  "credit_code": "370302200253712",
+  "credit_code_label": "统一社会信用代码",
+  "legal_rep": "贾军东",
+  "legal_rep_label": "法定代表人",
+  "registered_capital": "2万元",
+  "registered_capital_label": "注册资本",
+  "registered_address": "山东省淄博市淄川区钟楼街道夏庄村村委西199米",
+  "registered_address_label": "注册地址",
+  "company_type": "",
+  "company_type_label": "公司类型",
+  "biz_scope": "许可项目：建筑智能化系统设计。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）一般项目：电气设备销售；电子元器件与机电组件设备销售；机械电气设备销售；电力电子元器件销售；电子专用设备销售；环境保护专用设备销售；电子产品销售；机械设备销售；金属制品销售；高速精密齿轮传动装置销售；高速精密重载轴承销售；轨道交通工程机械及部件销售；机械零件、零部件销售；制冷、空调设备销售；机械设备租赁；气体压缩机械销售；通用设备修理；专用设备修理；电气设备修理；普通机械设备安装服务；计算机系统服务；气体、液体分离及纯净设备销售；电子元器件零售；制冷、空调设备制造；气体压缩机械制造；信息系统集成服务；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；机械设备研发；金属制品研发；工业设计服务；电机及其控制系统研发；五金产品研发；软件开发。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+  "biz_scope_label": "经营范围",
+  "reg_authority": "淄博市淄川区市场监督管理局",
+  "reg_authority_label": "登记机关",
+  "annual_report_year": "",
+  "annual_report_year_label": "年报年份",
+  "business_term": "2026年01月06日 至 长期",
+  "business_term_label": "营业期限",
+  "has_fca_report": true,
+  "has_fca_report_label": "有深度认证",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-2217689114022bbb65",
+  "fca_url_label": "认证报告URL",
+  "fca_report_id": "CNIR2512SH12581",
+  "fca_report_id_label": "报告编号",
+  "fca_report_date": "2025-12-19",
+  "fca_report_date_label": "报告日期",
+  "fca_total_equipment": "3台",
+  "fca_total_equipment_label": "设备总数",
+  "fca_equipment": [
+    {
+      "name": "盘管机",
+      "count": "1 台"
+    },
+    {
+      "name": "冷水机生产线",
+      "count": "1 台"
+    },
+    {
+      "name": "自动塑封机",
+      "count": "1 台"
+    }
+  ],
+  "fca_equipment_label": "设备清单",
+  "fca_oem_ratio": "100 %",
+  "fca_oem_ratio_label": "OEM占比",
+  "fca_odm_ratio": "",
+  "fca_odm_ratio_label": "ODM占比",
+  "fca_annual_new_models": "",
+  "fca_annual_new_models_label": "年均新品",
+  "fca_sample_cycle": "2 天/件",
+  "fca_sample_cycle_label": "打样周期",
+  "fca_warehouse_area": "800 m²",
+  "fca_warehouse_area_label": "仓库面积",
+  "fca_warehouse_type": "租赁",
+  "fca_warehouse_type_label": "仓库类型",
+  "fca_quality_inspection": "是",
+  "fca_quality_inspection_label": "质检方式",
+  "fca_store_url": "",
+  "fca_store_url_label": "店铺URL",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01E1UtLq1fa85Z69pDB_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01AscNzZ1fa85Zx2dSz_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01zbsC4S1fa85Zc9fW9_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01WZa33J1fa85Zbh0Nq_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01vRwyKa1fa85ZzPKKx_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01eGg6Ms1fa85YjkKS4_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN014dgDeq1fa85ZWTNxk_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01XoatYF1fa85ZWXorc_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01OxRxtz1fa85Z0x7In_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN011yYG4T1fa85ZePuos_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01vFhb4Q1fa85YfVMtO_!!4611686018427381158-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01TK1P4b1fa85Z9Dobu_!!4611686018427381158-0-av-auth-doc.jpg"
+    }
+  ],
+  "evidence_images_label": "证据图片",
+  "_sections": {
+    "basic": {
+      "title": "基本信息",
+      "fields": [
+        "company_name",
+        "province",
+        "city",
+        "district",
+        "address",
+        "established",
+        "contact_person",
+        "platform_tags"
+      ]
+    },
+    "scale": {
+      "title": "工厂规模",
+      "fields": [
+        "factory_area",
+        "employees",
+        "production_workers",
+        "annual_revenue",
+        "monthly_output",
+        "export_ready",
+        "custom_moq"
+      ]
+    },
+    "certifications": {
+      "title": "认证与资质",
+      "fields": [
+        "certifications",
+        "rankings",
+        "processing_methods",
+        "special_processes"
+      ]
+    },
+    "business": {
+      "title": "工商信息",
+      "fields": [
+        "credit_code",
+        "legal_rep",
+        "registered_capital",
+        "registered_address",
+        "company_type",
+        "biz_scope",
+        "reg_authority",
+        "annual_report_year",
+        "business_term"
+      ]
+    },
+    "fca": {
+      "title": "深度认证报告",
+      "fields": [
+        "has_fca_report",
+        "fca_report_id",
+        "fca_report_date",
+        "fca_total_equipment",
+        "fca_equipment",
+        "fca_oem_ratio",
+        "fca_odm_ratio",
+        "fca_annual_new_models",
+        "fca_sample_cycle",
+        "fca_warehouse_area",
+        "fca_warehouse_type",
+        "fca_quality_inspection",
+        "fca_url",
+        "fca_store_url"
+      ]
+    },
+    "evidence": {
+      "title": "证据图片",
+      "fields": [
+        "evidence_images"
+      ]
+    }
+  },
+  "_sections_order": [
+    "basic",
+    "scale",
+    "certifications",
+    "business",
+    "fca",
+    "evidence"
+  ],
+  "_slug": "b2b-2217689114022bbb65"
+}

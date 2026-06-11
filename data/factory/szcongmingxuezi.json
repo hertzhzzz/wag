@@ -1,0 +1,430 @@
+{
+  "member_id": "szcongmingxuezi",
+  "member_id_label": "Member ID",
+  "company_name": "深圳市学之友科技有限公司",
+  "company_name_label": "公司名称",
+  "province": "",
+  "province_label": "省份",
+  "city": "",
+  "city_label": "城市",
+  "district": "",
+  "district_label": "区/县",
+  "address": "",
+  "address_label": "地址",
+  "established": "2005.06.10",
+  "established_label": "成立时间",
+  "annual_revenue": "2000万以上",
+  "annual_revenue_label": "年营业额",
+  "factory_area": "7958m²",
+  "factory_area_label": "工厂面积",
+  "employees": "134人",
+  "employees_label": "员工人数",
+  "export_ready": false,
+  "export_ready_label": "出口能力",
+  "custom_moq": "2000台",
+  "custom_moq_label": "定制MOQ",
+  "certifications": [
+    "SGS"
+  ],
+  "certifications_label": "认证资质",
+  "rankings": [
+    "入围平板电脑服务榜 第10名"
+  ],
+  "rankings_label": "企业排名",
+  "platform_tags": [],
+  "platform_tags_label": "平台标签",
+  "processing_methods": [
+    "清加工",
+    "包工包料",
+    "来样加工",
+    "来图加工"
+  ],
+  "processing_methods_label": "加工方式",
+  "special_processes": [],
+  "special_processes_label": "特殊工艺",
+  "monthly_output": "500万以上",
+  "monthly_output_label": "月产量",
+  "production_workers": "95人",
+  "production_workers_label": "生产人员",
+  "contact_person": "",
+  "contact_person_label": "联系人",
+  "credit_code": "91440300775587222C",
+  "credit_code_label": "统一社会信用代码",
+  "legal_rep": "杨奇",
+  "legal_rep_label": "法定代表人",
+  "registered_capital": "700万元",
+  "registered_capital_label": "注册资本",
+  "registered_address": "龙岗区南湾街道布澜路21号联创科技园6号厂房2楼",
+  "registered_address_label": "注册地址",
+  "company_type": "有限责任公司",
+  "company_type_label": "公司类型",
+  "biz_scope": "一般经营项目：电子产品（包括计算机终端产品、点读笔、学习机、多媒体一体机、多功能教学机、平板电脑、教学仪器、教学设备、电源适配器、带有图书的电子发声装置、通讯器材、音响器材、小型游乐设备、听力产品、声学产品、网络设备、电子元器件）的技术开发、销售；国内贸易（法律、行政法规、国务院决定规定在登记前须经批准的项目除外）；货物及技术进出口（法律、行政法规禁止的项目除外；法律、行政法规限制的项目须取得许可后方可经营）。电教器材、体育器材、广播器材、课堂学具、劳技设备、乐摇车、小型游乐设备、婴幼儿用品、办公用品、建筑装饰材料的购销；装饰、通讯、网络工程的设计施工；文化活动策划、市场营销策划。移动终端设备制造；可穿戴智能设备制造；可穿戴智能设备销售；移动终端设备销售；软件开发；软件销售；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；技术进出口；货物进出口；服务消费机器人制造；服务消费机器人销售；智能机器人的研发；智能机器人销售；工业机器人销售；照相机及器材制造；照相机及器材销售。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动） 许可经营项目：电子产品（包括计算机终端产品、点读笔、学习机、多媒体一体机、多功能教学机、平板电脑、教学仪器、教学设备、电源适配器、带有图书的电子发声装置、通讯器材、音响器材、小型游乐设备、听力产品、声学产品、网络设备、电子元器件）的生产加工出版物零售；电子出版物制作。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）",
+  "biz_scope_label": "经营范围",
+  "reg_authority": "深圳市市场监督管理局",
+  "reg_authority_label": "登记机关",
+  "annual_report_year": "2026",
+  "annual_report_year_label": "年报年份",
+  "business_term": "2005年06月10日 至 长期",
+  "business_term_label": "营业期限",
+  "has_fca_report": true,
+  "has_fca_report_label": "有深度认证",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=szcongmingxuezi",
+  "fca_url_label": "认证报告URL",
+  "fca_report_id": "SZXWT260052805",
+  "fca_report_id_label": "报告编号",
+  "fca_report_date": "2026-05-28",
+  "fca_report_date_label": "报告日期",
+  "fca_total_equipment": "42台",
+  "fca_total_equipment_label": "设备总数",
+  "fca_equipment": [
+    {
+      "name": "贴片机",
+      "count": "24 台"
+    },
+    {
+      "name": "回流焊",
+      "count": "4 台"
+    },
+    {
+      "name": "波峰焊",
+      "count": "1 台"
+    },
+    {
+      "name": "AOI",
+      "count": "2 台"
+    },
+    {
+      "name": "老化架",
+      "count": "10 台"
+    }
+  ],
+  "fca_equipment_label": "设备清单",
+  "fca_oem_ratio": "50 %",
+  "fca_oem_ratio_label": "OEM占比",
+  "fca_odm_ratio": "50 %",
+  "fca_odm_ratio_label": "ODM占比",
+  "fca_annual_new_models": "20",
+  "fca_annual_new_models_label": "年均新品",
+  "fca_sample_cycle": "1 天/件",
+  "fca_sample_cycle_label": "打样周期",
+  "fca_warehouse_area": "2000 m²",
+  "fca_warehouse_area_label": "仓库面积",
+  "fca_warehouse_type": "租赁",
+  "fca_warehouse_type_label": "仓库类型",
+  "fca_quality_inspection": "是",
+  "fca_quality_inspection_label": "质检方式",
+  "fca_store_url": "",
+  "fca_store_url_label": "店铺URL",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01cISfIi1uLDSZMblfQ_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01BMluAC1uLDSY93h63_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01rxtEKE1uLDSXdbPUA_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01f61v0c1uLDSXozEV8_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01p2FqbM1uLDSXuQQJ5_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01HtPNq71uLDSXuT2Qv_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN0161eX071uLDSXaoWn5_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01getutQ1uLDSY1Qmm2_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 7,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Y63G0v1uLDSXqhyj7_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 8,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01dMDYIz1uLDSXqh2XP_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 9,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01AcXH4Y1uLDSTGwgtj_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 10,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01dhXneU1uLDSTGuXp0_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 11,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01vFwjfu1uLDSXeRm1h_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 12,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01XjfDOt1uLDSXvGW3N_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 13,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01YjW6j51uLDSY1lQMP_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 14,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01hfqlsL1uLDSXeMbdN_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 15,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01dAQzyD1uLDSXddpIV_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01by77iw1uLDSXdhW7y_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01hSxTwG1uLDSXeUobf_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN015mKVaQ1uLDSXzmTEo_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN015oCXMi1uLDSY16Ckk_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN012ZyuAX1uLDSY2NIC7_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01ror7fF1uLDSXZ4mSQ_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01wmoi4i1uLDSXuUie3_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01dpK7aw1uLDSXeV5HW_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01FldwlR1uLDSXqeF1R_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01GNfvsK1uLDSXdqmdx_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01Aszfhy1uLDSXzwPH0_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 7,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01B06R9s1uLDSYNJhNM_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 8,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01YATD3V1uLDSXzxLbZ_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 9,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01NtAG1J1uLDSY02zAP_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 10,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN010KbGtC1uLDSXzwCxy_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01Aado0R1uLDSYNvE0Y_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01tjSFU71uLDSY0Uz0q_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01W7z2h81uLDSYO20T1_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01Knmi0i1uLDSXuVOuX_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01qZUkDC1uLDSXuTzYs_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN013Wn3mN1uLDSY3FnyF_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "质量管控能力",
+      "index": 7,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01xXqg931uLDSZNfUNr_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01ewMrTG1uLDSXvInjx_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01LpPIEb1uLDSY3BEzO_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01xxSV4I1uLDSXvQaOX_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Y0UL7x1uLDSXreTQa_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN017Cf4yG1uLDSXufsP3_!!4611686018427380980-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01eTjPlb1uLDSY0ltuz_!!4611686018427380980-0-av-auth-doc.jpg"
+    }
+  ],
+  "evidence_images_label": "证据图片",
+  "_sections": {
+    "basic": {
+      "title": "基本信息",
+      "fields": [
+        "company_name",
+        "province",
+        "city",
+        "district",
+        "address",
+        "established",
+        "contact_person",
+        "platform_tags"
+      ]
+    },
+    "scale": {
+      "title": "工厂规模",
+      "fields": [
+        "factory_area",
+        "employees",
+        "production_workers",
+        "annual_revenue",
+        "monthly_output",
+        "export_ready",
+        "custom_moq"
+      ]
+    },
+    "certifications": {
+      "title": "认证与资质",
+      "fields": [
+        "certifications",
+        "rankings",
+        "processing_methods",
+        "special_processes"
+      ]
+    },
+    "business": {
+      "title": "工商信息",
+      "fields": [
+        "credit_code",
+        "legal_rep",
+        "registered_capital",
+        "registered_address",
+        "company_type",
+        "biz_scope",
+        "reg_authority",
+        "annual_report_year",
+        "business_term"
+      ]
+    },
+    "fca": {
+      "title": "深度认证报告",
+      "fields": [
+        "has_fca_report",
+        "fca_report_id",
+        "fca_report_date",
+        "fca_total_equipment",
+        "fca_equipment",
+        "fca_oem_ratio",
+        "fca_odm_ratio",
+        "fca_annual_new_models",
+        "fca_sample_cycle",
+        "fca_warehouse_area",
+        "fca_warehouse_type",
+        "fca_quality_inspection",
+        "fca_url",
+        "fca_store_url"
+      ]
+    },
+    "evidence": {
+      "title": "证据图片",
+      "fields": [
+        "evidence_images"
+      ]
+    }
+  },
+  "_sections_order": [
+    "basic",
+    "scale",
+    "certifications",
+    "business",
+    "fca",
+    "evidence"
+  ],
+  "_slug": "szcongmingxuezi"
+}
