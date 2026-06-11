@@ -1,0 +1,287 @@
+{
+  "member_id": "b2b-221952480367443f9e",
+  "member_id_label": "Member ID",
+  "company_name": "庐山市奋发科技有限公司",
+  "company_name_label": "公司名称",
+  "province": "江西省",
+  "province_label": "省份",
+  "city": "九江市",
+  "city_label": "城市",
+  "district": "庐山市工业园区",
+  "district_label": "区/县",
+  "address": "",
+  "address_label": "地址",
+  "established": "2023.04.26",
+  "established_label": "成立时间",
+  "annual_revenue": "2000万以上",
+  "annual_revenue_label": "年营业额",
+  "factory_area": "7000m²",
+  "factory_area_label": "工厂面积",
+  "employees": "166人",
+  "employees_label": "员工人数",
+  "export_ready": true,
+  "export_ready_label": "出口能力",
+  "custom_moq": "500个",
+  "custom_moq_label": "定制MOQ",
+  "certifications": [
+    "TUV"
+  ],
+  "certifications_label": "认证资质",
+  "rankings": [
+    "入围手电筒热度榜 第12名"
+  ],
+  "rankings_label": "企业排名",
+  "platform_tags": [],
+  "platform_tags_label": "平台标签",
+  "processing_methods": [
+    "清加工",
+    "来样加工",
+    "来图加工",
+    "包工包料"
+  ],
+  "processing_methods_label": "加工方式",
+  "special_processes": [
+    "组装",
+    "LED",
+    "包装"
+  ],
+  "special_processes_label": "特殊工艺",
+  "monthly_output": "500万以上",
+  "monthly_output_label": "月产量",
+  "production_workers": "137人",
+  "production_workers_label": "生产人员",
+  "contact_person": "肖晓清",
+  "contact_person_label": "联系人",
+  "credit_code": "91360427MACHDKM347",
+  "credit_code_label": "统一社会信用代码",
+  "legal_rep": "刘细望",
+  "legal_rep_label": "法定代表人",
+  "registered_capital": "6633万元",
+  "registered_capital_label": "注册资本",
+  "registered_address": "庐山市工业园区管委会办公楼306室",
+  "registered_address_label": "注册地址",
+  "company_type": "其他有限责任公司",
+  "company_type_label": "公司类型",
+  "biz_scope": "一般项目：电力电子元器件制造，电力电子元器件销售，技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广，有色金属压延加工，有色金属铸造，有色金属合金制造，金属材料制造，金属丝绳及其制品制造，金属表面处理及热处理加工，金属制日用品制造，常用有色金属冶炼，金属链条及其他金属制品制造，金属结构制造，金属基复合材料和陶瓷基复合材料销售，新型金属功能材料销售，有色金属合金销售，金属废料和碎屑加工处理，高性能有色金属及合金材料销售，金属制品销售，金属材料销售，金属矿石销售，建筑装饰材料销售，五金产品研发，五金产品零售，五金产品批发，五金产品制造，家具零配件生产，家具销售，家具制造，家具安装和维修服务，家具零配件销售，卫生洁具制造，卫生洁具销售，卫生洁具研发，电线、电缆经营，机械零件、零部件销售，建筑材料销售，建筑用金属配件制造，楼梯销售，灯具销售，照明器具销售，照明器具制造，电子产品销售，门窗制造加工，门窗销售，室内木门窗安装服务，金属门窗工程施工，包装材料及制品销售（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+  "biz_scope_label": "经营范围",
+  "reg_authority": "庐山市市场监督管理局",
+  "reg_authority_label": "登记机关",
+  "annual_report_year": "2026",
+  "annual_report_year_label": "年报年份",
+  "business_term": "2023年04月26日 至 长期",
+  "business_term_label": "营业期限",
+  "has_fca_report": true,
+  "has_fca_report_label": "有深度认证",
+  "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-221952480367443f9e",
+  "fca_url_label": "认证报告URL",
+  "fca_report_id": "TP2603191605",
+  "fca_report_id_label": "报告编号",
+  "fca_report_date": "2026-04-03",
+  "fca_report_date_label": "报告日期",
+  "fca_total_equipment": "350台",
+  "fca_total_equipment_label": "设备总数",
+  "fca_equipment": [
+    {
+      "name": "机械臂",
+      "count": "200 台"
+    },
+    {
+      "name": "CNC加工中心",
+      "count": "150 台"
+    }
+  ],
+  "fca_equipment_label": "设备清单",
+  "fca_oem_ratio": "50 %",
+  "fca_oem_ratio_label": "OEM占比",
+  "fca_odm_ratio": "50 %",
+  "fca_odm_ratio_label": "ODM占比",
+  "fca_annual_new_models": "50",
+  "fca_annual_new_models_label": "年均新品",
+  "fca_sample_cycle": "3 天/件",
+  "fca_sample_cycle_label": "打样周期",
+  "fca_warehouse_area": "1000 m²",
+  "fca_warehouse_area_label": "仓库面积",
+  "fca_warehouse_type": "租赁",
+  "fca_warehouse_type_label": "仓库类型",
+  "fca_quality_inspection": "是",
+  "fca_quality_inspection_label": "质检方式",
+  "fca_store_url": "https://shop0735o64369681.1688.com",
+  "fca_store_url_label": "店铺URL",
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01Df5G9a1d0kHOUAy5C_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01dnRwYp1d0kHPCzmV5_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01Z8FNvw1d0kHIg4oFC_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01YTdvX31d0kHPNYVTp_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN011KHELz1d0kHIQQNI0_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Ogmlqh1d0kHIonmkD_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN010sKIqm1d0kHIquPY3_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01rBG9891d0kHIU4b6o_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01lGNLQn1d0kHIxMyvk_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01ZZW5UV1d0kHJtBsqw_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01adLUSJ1d0kHDddwUi_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01Ar24n91d0kHL5HzkT_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01lHNrHY1d0kHKdogb4_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01q03Nvs1d0kHQNv73c_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN018CmAYN1d0kHQH9HSg_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01AZge5E1d0kHQD7CvW_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01onKEGh1d0kHQAKvUL_!!4611686018427382874-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01YmNYKg1d0kHIgAqlp_!!4611686018427382874-0-av-auth-doc.jpg"
+    }
+  ],
+  "evidence_images_label": "证据图片",
+  "_sections": {
+    "basic": {
+      "title": "基本信息",
+      "fields": [
+        "company_name",
+        "province",
+        "city",
+        "district",
+        "address",
+        "established",
+        "contact_person",
+        "platform_tags"
+      ]
+    },
+    "scale": {
+      "title": "工厂规模",
+      "fields": [
+        "factory_area",
+        "employees",
+        "production_workers",
+        "annual_revenue",
+        "monthly_output",
+        "export_ready",
+        "custom_moq"
+      ]
+    },
+    "certifications": {
+      "title": "认证与资质",
+      "fields": [
+        "certifications",
+        "rankings",
+        "processing_methods",
+        "special_processes"
+      ]
+    },
+    "business": {
+      "title": "工商信息",
+      "fields": [
+        "credit_code",
+        "legal_rep",
+        "registered_capital",
+        "registered_address",
+        "company_type",
+        "biz_scope",
+        "reg_authority",
+        "annual_report_year",
+        "business_term"
+      ]
+    },
+    "fca": {
+      "title": "深度认证报告",
+      "fields": [
+        "has_fca_report",
+        "fca_report_id",
+        "fca_report_date",
+        "fca_total_equipment",
+        "fca_equipment",
+        "fca_oem_ratio",
+        "fca_odm_ratio",
+        "fca_annual_new_models",
+        "fca_sample_cycle",
+        "fca_warehouse_area",
+        "fca_warehouse_type",
+        "fca_quality_inspection",
+        "fca_url",
+        "fca_store_url"
+      ]
+    },
+    "evidence": {
+      "title": "证据图片",
+      "fields": [
+        "evidence_images"
+      ]
+    }
+  },
+  "_sections_order": [
+    "basic",
+    "scale",
+    "certifications",
+    "business",
+    "fca",
+    "evidence"
+  ],
+  "_slug": "b2b-221952480367443f9e"
+}
