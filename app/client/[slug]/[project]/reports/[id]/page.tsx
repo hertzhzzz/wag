@@ -81,12 +81,12 @@ function processFootnotes(source: string): string {
     const rows = sorted.map(([id, html]) => {
       const term = extractTermName(html)
       const num = id.slice(1)
-      return `<div class="grid grid-cols-[160px_1fr] gap-4 py-3 border-b border-gray-100 last:border-0">
-  <dt class="text-sm font-semibold text-navy shrink-0 pt-0.5" id="fn-${num}">${term}</dt>
-  <dd class="text-sm text-gray-600 leading-relaxed">${html.replace(/^\*\*[^*]+\*\*:\s*/, "")}</dd>
+      return `<div className="grid grid-cols-[160px_1fr] gap-4 py-3 border-b border-gray-100 last:border-0">
+  <dt className="text-sm font-semibold text-navy shrink-0 pt-0.5" id="fn-${num}">${term}</dt>
+  <dd className="text-sm text-gray-600 leading-relaxed">${html.replace(/^\*\*[^*]+\*\*:\s*/, "")}</dd>
 </div>`
     }).join("\n")
-    result += `\n\n<div class="terms-glossary not-prose mt-12 pt-8 border-t border-gray-200">\n<div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-5">Terms Glossary</div>\n<dl class="space-y-0">\n${rows}\n</dl>\n</div>\n`
+    result += `\n\n<div className="terms-glossary not-prose mt-12 pt-8 border-t border-gray-200">\n<div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-5">Terms Glossary</div>\n<dl className="space-y-0">\n${rows}\n</dl>\n</div>\n`
   }
   return result
 }
