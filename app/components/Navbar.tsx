@@ -49,7 +49,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
         </ul>
 
         <div className="hidden md:flex gap-3">
-          {rightContent || (
+          {rightContent !== undefined ? rightContent : (
             <>
               <a
                 href="tel:+61416588198"
