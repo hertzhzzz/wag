@@ -32,13 +32,21 @@ export async function POST(request: NextRequest) {
         { error: "invalid", status: 404, message: "Invalid client" })
     }
 
-    // Read bcrypt hashes from JSON file (env vars mangle $ signs)
-    const secretsPath = join(process.cwd(), "data", "clients", "secrets.json")
+    // Read bcrypt hashes from base64 env var (avoids $ mangling in dotenv)
     let secrets: Record<string, string> = {}
     try {
-      secrets = JSON.parse(readFileSync(secretsPath, "utf-8"))
+      const b64 = process.env.CLIENT_SECRETS_B64
+      if (b64) {
+        secrets = JSON.parse(Buffer.from(b64, "base64").toString("utf-8"))
+      }
     } catch {
-      // file not found — no auth configured
+      // Fallback: try JSON file (local dev)
+      try {
+        const secretsPath = join(process.cwd(), "data", "clients", "secrets.json")
+        secrets = JSON.parse(readFileSync(secretsPath, "utf-8"))
+      } catch {
+        // no auth configured
+      }
     }
     const clientCodeHash = secrets[slug]
     const masterCodeHash = secrets["master"]
