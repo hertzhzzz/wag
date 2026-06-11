@@ -1,6 +1,7 @@
 import { readFileSync } from "fs"
 import { join } from "path"
 import Link from "next/link"
+import Navbar from "@/components/Navbar"
 
 export const metadata = {
   title: "Factory Wiki - Winning Adventure Global",
@@ -34,23 +35,33 @@ export default async function FactoryPage() {
   const provinces = [...new Set(factories.map((f: FactoryItem) => f.province).filter(Boolean))].sort()
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="sticky top-0 bg-navy text-white z-10 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div>
-            <h1 className="text-lg font-bold">China Manufacturing Wiki</h1>
-            <p className="text-xs text-gray-300">{data.total} factories</p>
-          </div>
-          <div className="flex gap-3 text-sm">
-            <Link href="/factory/annotations" className="hover:text-amber-300 transition">
-              Annotations
-            </Link>
-            <Link href="/" className="text-gray-400 hover:text-white transition">
-              WAG Home
-            </Link>
+    <>
+      <Navbar rightContent={
+        <a
+          href="tel:+61416588198"
+          className="flex flex-col items-start px-[14px] py-[8px] text-navy bg-white/80 border border-navy/20 hover:bg-navy hover:text-white flex-shrink-0 transition-all leading-tight"
+        >
+          <span className="text-[10px] font-medium uppercase tracking-wide">Call Us Today</span>
+          <span className="text-[13px] font-semibold">+61 0416588198</span>
+        </a>
+      } />
+      <div className="min-h-screen bg-gray-50">
+        <div className="sticky top-[72px] bg-navy text-white z-10 shadow-md">
+          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div>
+              <h1 className="text-lg font-bold">China Manufacturing Wiki</h1>
+              <p className="text-xs text-gray-300">{data.total} factories</p>
+            </div>
+            <div className="flex gap-3 text-sm">
+              <Link href="/factory/annotations" className="hover:text-amber-300 transition">
+                Annotations
+              </Link>
+              <Link href="/" className="text-gray-400 hover:text-white transition">
+                WAG Home
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 py-6">
         {/* Filters */}
@@ -115,5 +126,6 @@ export default async function FactoryPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
