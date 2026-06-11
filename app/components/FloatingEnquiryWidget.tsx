@@ -139,6 +139,11 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
     }
   }
 
+  // Hide on client portal, factory wiki, and admin pages
+  if (pathname?.startsWith("/client") || pathname?.startsWith("/factory")) {
+    return null
+  }
+
   return (
     <div ref={containerRef} className={`fixed bottom-6 right-6 z-[9998] ${className}`}>
 
