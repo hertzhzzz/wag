@@ -1,6 +1,5 @@
 import { headers } from "next/headers"
 import Image from "next/image"
-import Link from "next/link"
 import Navbar from "@/components/Navbar"
 
 function isMobileDevice(userAgent: string): boolean {
@@ -55,19 +54,8 @@ export default async function ClientLayout({
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
-      <Navbar
-        rightContent={
-          <Link
-            href="/client"
-            className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-navy flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
-          >
-            Client Portal
-          </Link>
-        }
-      />
-      {/* Spacer for fixed navbar height */}
-      <div className="h-[72px]" />
+    <div className="min-h-screen bg-gray-50 font-sans pt-[72px]">
+      <Navbar rightContent={null} />
       {children}
     </div>
   )
