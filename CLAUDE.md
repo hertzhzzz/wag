@@ -28,9 +28,11 @@ Next.js 16.2 (App Router) · TypeScript 5 · Tailwind CSS 3.4 · MDX + next-mdx-
 ```
 frontend/
 ├── app/              # pages, API routes, components
-├── content/          # MDX articles → /resources/[slug]
-├── lib/              # utilities (rate-limit.ts, seo/, etc.)
+├── content/          # MDX articles → /resources/[slug] + reports → /client/[slug]/[project]/reports/[id]
+├── data/             # client configs (clients/{slug}.json), factory data
+├── lib/              # utilities (rate-limit.ts, clients.ts, seo/, etc.)
 ├── public/social/    # blog images [SINGLE SOURCE]
+├── public/reports/   # client report images (per-client subdirectory)
 └── social/           # source files for AI image generation (NOT deployed)
 ```
 
@@ -150,6 +152,57 @@ Gmail rotation: SMTP fail → new App Password → verify locally → update Ver
 **Known states:** ServiceSchema already referenced at `/solutions` — do not re-add
 **Lint principle:** Pre-existing errors in agents/ and lib/ are historical tech debt — do not fix unless in scope
 
+## Client Portal & Reports
+
+**Routes:** `/client/[slug]` → auth gate · `/client/[slug]/[project]` → dashboard · `/client/[slug]/[project]/reports/[id]` → report
+**Config:** `data/clients/{slug}.json` — client name, access_code_hash, projects, deliverables, product_matrix, itinerary
+**Auth:** Access code hashed with bcrypt, stored in `CLIENT_SECRETS_B64` env var (base64-encoded JSON to avoid `$` mangling by Next.js dotenv-expand)
+
+### Report MDX Pipeline
+
+1. MDX source: `content/reports/{client-slug}/{report-id}.mdx`
+2. `readReport()` → `gray-matter` frontmatter + `processFootnotes()` preprocessor
+3. `processFootnotes()`: regex converts `[^N]` → `<a data-footnote-ref>` + auto-generates `.terms-glossary` div at end
+4. `MDXRemote` with `remarkGfm` renders processed content
+5. `FootnoteEnhancer` (client component): event delegation on `a[data-footnote-ref]`, reads popover from `dt#fn-N + dd` sibling
+
+**Critical:** Do NOT add `## Terms Glossary` heading in MDX — it's auto-generated. Use `## Appendix: Terms Glossary` before footnote definitions.
+
+### Report Images
+
+- Images: `public/reports/{client-slug}/images/` → MDX reference: `images/filename.jpeg`
+- `resolveReportImagePath()` in `imagePath.ts` (non-client pure utility, NOT `use client`)
+- `ReportImage.tsx`: client component with `onError` fallback
+- `ProductShowcase` + `ProductCard`: client components with React Context lightbox
+
+### Report Content Conventions
+
+- Report titles: `Supplier Due Diligence & Capability Assessment` (NOT White Paper, NOT third-party verification)
+- Source categories: Public corporate registry records, Commercial business intelligence records, Supplier-disclosed materials, Public certification references
+- Structure: Exec Summary → Registration → Certifications → Capability → Portfolio → Risk → Supplier Engagement → Report Basis & Limitations → Appendix: Terms Glossary
+- Disclaimer: "prepared by Winning Adventure Global as a supplier due diligence and capability assessment for client review"
+
+## Browser Verification
+
+```bash
+# Screenshot + DOM check
+browser-harness <<'PY'
+new_tab("http://localhost:3000/client/aaron-sansoni/tv-studio-build/reports/itc-baolun")
+wait_for_load()
+capture_screenshot("/tmp/report.png")
+print(js('document.querySelector(".terms-glossary") !== null'))
+PY
+
+# Vision cross-check (each image independent, no context pollution)
+codex exec -i /tmp/report.png --skip-git-repo-check -s read-only <<< "prompt"
+```
+
+### CSS Gotchas
+
+- `overflow-x: clip` on html/body (NOT hidden) — enables `position: sticky` TOC
+- `body { padding-top: 72px }` compensated by client layout `-mt-[72px] pt-4`
+- `.toc-scroll` — webkit scrollbar styles with `scrollbarGutter: "stable"` for forced visibility
+
 ---
 
-*Updated: 2026-06-01*
+*Updated: 2026-06-11*
