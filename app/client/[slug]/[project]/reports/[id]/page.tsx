@@ -16,7 +16,6 @@ import {
   getDeliverableTypeLabel,
 } from "@/lib/clients"
 import { logAccess } from "@/lib/access-log"
-import { FeedbackForm } from "./FeedbackForm"
 import { ReportTOC } from "./ReportTOC"
 import { ReportImage } from "./ReportImage"
 import { resolveReportImagePath } from "./imagePath"
@@ -516,9 +515,6 @@ export default async function ReportDetailPage({
               </div>
             </article>
             <ReportNavigation prev={prev} next={next} clientSlug={clientSlug} projectSlug={projectSlug} />
-            <div className="mt-10 pt-6 border-t border-gray-200">
-              <FeedbackForm clientSlug={clientSlug} projectSlug={projectSlug} reportId={reportId} />
-            </div>
           </main>
         </div>
       </div>
