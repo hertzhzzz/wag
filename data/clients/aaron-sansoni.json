@@ -34,32 +34,6 @@
           "report_id": "land-guangzhou"
         },
         {
-          "id": "aud01",
-          "type": "inspection_report",
-          "title": "ITC Baolun Factory Inspection Report",
-          "supplier": "Guangdong Baolun Electronics Co., Ltd. (ITC)",
-          "date": "2026-06-12",
-          "status": "draft",
-          "client_reviewed": false
-        },
-        {
-          "id": "aud02",
-          "type": "inspection_report",
-          "title": "Rand Electronics Factory Inspection Report",
-          "supplier": "Guangzhou Rand Electronic Technology Co., Ltd.",
-          "date": "2026-06-12",
-          "status": "delivered",
-          "client_reviewed": true
-        },
-        {
-          "id": "pc01",
-          "type": "price_comparison",
-          "title": "LED Display & AV Equipment Price Comparison — Q2 2026",
-          "date": "2026-06-08",
-          "status": "final",
-          "client_reviewed": true
-        },
-        {
           "id": "it01",
           "type": "itinerary",
           "title": "Guangzhou Factory Visit Itinerary — July 2026",
