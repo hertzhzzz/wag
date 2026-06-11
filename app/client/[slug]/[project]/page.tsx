@@ -204,18 +204,19 @@ function ItineraryCard({ itinerary }: { itinerary: Record<string, unknown> }) {
       {suppliers && suppliers.length > 0 && (
         <>
           <hr className="my-4 border-gray-100" />
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Visiting</h3>
-          <ul className="space-y-2.5">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Candidate Suppliers</h3>
+          <ul className="space-y-2">
             {suppliers.map((s, i) => (
-              <li key={i} className="flex gap-3">
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-navy text-white text-[10px] font-bold flex items-center justify-center">{i + 1}</span>
-                <div className="min-w-0">
-                  <p className="text-sm font-medium text-gray-900 truncate">{s.name}</p>
-                  <p className="text-xs text-gray-400 mt-0.5">{s.city}{s.category ? ` · ${s.category}` : ""}</p>
+              <li key={i} className="flex gap-2.5 text-sm text-gray-500">
+                <span className="text-gray-300 mt-0.5">&bull;</span>
+                <div>
+                  <span className="text-gray-700">{s.name}</span>
+                  <span className="text-gray-400"> &middot; {s.city}{s.category ? ` · ${s.category}` : ""}</span>
                 </div>
               </li>
             ))}
           </ul>
+          <p className="text-xs text-gray-400 mt-3 italic">Visits not yet confirmed. Suppliers and schedule subject to change.</p>
         </>
       )}
     </section>
