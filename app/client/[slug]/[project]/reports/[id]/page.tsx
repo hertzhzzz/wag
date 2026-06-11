@@ -9,6 +9,7 @@ import remarkGfm from "remark-gfm"
 import Image from "next/image"
 
 import {
+  getClientConfig,
   getProjectConfig,
   getReportPrevNext,
   slugify,
@@ -17,6 +18,7 @@ import {
 import { logAccess } from "@/lib/access-log"
 import { FeedbackForm } from "./FeedbackForm"
 import { ReportTOC } from "./ReportTOC"
+import { Sidebar } from "@/client/Sidebar"
 import type { ExtendedDeliverable } from "@/lib/clients"
 
 // ---------------------------------------------------------------------------
@@ -452,71 +454,42 @@ export default async function ReportDetailPage({
   }
 
   const mdxComponents = createMdxComponents()
+  const client = getClientConfig(clientSlug)
+  const deliverables = ((project.deliverables || []) as ExtendedDeliverable[]).map((d) => ({ id: d.id, title: d.title, report_id: (d as ExtendedDeliverable).report_id ?? null }))
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-8">
-      {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6">
-        <Link
-          href={`/client/${clientSlug}`}
-          className="hover:text-navy transition"
-        >
-          Projects
-        </Link>
-        <span>/</span>
-        <Link
-          href={`/client/${clientSlug}/${projectSlug}`}
-          className="hover:text-navy transition"
-        >
-          {project.name}
-        </Link>
-        <span>/</span>
-        <span className="text-gray-600 truncate max-w-[200px]">
-          {report.frontmatter.title}
-        </span>
-      </nav>
+    <>
+      <Sidebar clientSlug={clientSlug} projectSlug={projectSlug} projectName={project.name} clientCompany={client?.client_company || ""} deliverables={deliverables} />
+      <div className="p-6 lg:p-8 max-w-6xl">
+        <nav className="flex items-center gap-2 text-xs text-gray-400 mb-6">
+          <Link href={`/client/${clientSlug}/${projectSlug}`} className="hover:text-navy transition">
+            &larr; {project.name}
+          </Link>
+          <span>/</span>
+          <span className="text-gray-600 truncate max-w-[300px]">{report.frontmatter.title}</span>
+        </nav>
 
-      {/* Sidebar + Main content layout */}
-      <div className="flex gap-8 lg:gap-12">
-        {/* Left sidebar — TOC */}
-        <aside className="hidden lg:block w-56 shrink-0">
-          <div className="sticky top-8 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <ReportTOC headings={report.headings} />
-          </div>
-        </aside>
-
-        {/* Main content */}
-        <main className="flex-1 min-w-0 max-w-[720px]">
-          <article>
-            <ReportHeader frontmatter={report.frontmatter} />
-
-            <div className="prose prose-slate max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-amber-700 prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2.5 prose-th:text-xs prose-th:font-medium prose-th:uppercase prose-th:tracking-wide prose-td:px-4 prose-td:py-2.5 prose-td:text-sm">
-              <MDXRemote
-                source={report.content}
-                components={mdxComponents}
-                options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
-              />
+        <div className="flex gap-8 lg:gap-12">
+          <aside className="hidden lg:block w-56 shrink-0">
+            <div className="sticky top-8 max-h-[calc(100vh-4rem)] overflow-y-auto">
+              <ReportTOC headings={report.headings} />
             </div>
-          </article>
+          </aside>
 
-          {/* Previous / Next navigation */}
-          <ReportNavigation
-            prev={prev}
-            next={next}
-            clientSlug={clientSlug}
-            projectSlug={projectSlug}
-          />
-
-          {/* Feedback section */}
-          <div className="mt-10 pt-6 border-t border-gray-200">
-            <FeedbackForm
-              clientSlug={clientSlug}
-              projectSlug={projectSlug}
-              reportId={reportId}
-            />
-          </div>
-        </main>
+          <main className="flex-1 min-w-0 max-w-[720px]">
+            <article>
+              <ReportHeader frontmatter={report.frontmatter} />
+              <div className="prose prose-slate max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-amber-700 prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2.5 prose-th:text-xs prose-th:font-medium prose-th:uppercase prose-th:tracking-wide prose-td:px-4 prose-td:py-2.5 prose-td:text-sm">
+                <MDXRemote source={report.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+              </div>
+            </article>
+            <ReportNavigation prev={prev} next={next} clientSlug={clientSlug} projectSlug={projectSlug} />
+            <div className="mt-10 pt-6 border-t border-gray-200">
+              <FeedbackForm clientSlug={clientSlug} projectSlug={projectSlug} reportId={reportId} />
+            </div>
+          </main>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
