@@ -51,6 +51,47 @@ interface Heading {
 // MDX helpers
 // ---------------------------------------------------------------------------
 
+function extractTermName(html: string): string {
+  const match = html.match(/^\*\*([^*]+)\*\*/)
+  if (match) {
+    // Remove Chinese characters in parentheses for cleaner display, trim trailing colon
+    return match[1].replace(/\s*\([^)]*[一-鿿][^)]*\)/, "").replace(/:$/, "").trim()
+  }
+  return ""
+}
+
+function processFootnotes(source: string): string {
+  const definitions: Record<string, string> = {}
+  // Extract definitions: [^N]: content
+  let result = source.replace(/^\[(\^\d+)\]:\s*(.+)$/gm, (_, id, content) => {
+    definitions[id] = content.trim()
+    return ""
+  })
+  // Replace references: [^N] → inline HTML
+  result = result.replace(/\[(\^\d+)\]/g, (_, id) => {
+    if (definitions[id]) {
+      const num = id.slice(1)
+      return `<sup><a href="#fn-${num}" id="fnref-${num}" data-footnote-ref>${num}</a></sup>`
+    }
+    return `[${id}]`
+  })
+  // Build Terms Glossary section
+  if (Object.keys(definitions).length > 0) {
+    const sorted = Object.entries(definitions)
+      .sort((a, b) => parseInt(a[0].slice(1)) - parseInt(b[0].slice(1)))
+    const rows = sorted.map(([id, html]) => {
+      const term = extractTermName(html)
+      const num = id.slice(1)
+      return `<div class="grid grid-cols-[160px_1fr] gap-4 py-3 border-b border-gray-100 last:border-0">
+  <dt class="text-sm font-semibold text-navy shrink-0 pt-0.5" id="fn-${num}">${term}</dt>
+  <dd class="text-sm text-gray-600 leading-relaxed">${html.replace(/^\*\*[^*]+\*\*:\s*/, "")}</dd>
+</div>`
+    }).join("\n")
+    result += `\n\n<div class="terms-glossary not-prose mt-12 pt-8 border-t border-gray-200">\n<div class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-5">Terms Glossary</div>\n<dl class="space-y-0">\n${rows}\n</dl>\n</div>\n`
+  }
+  return result
+}
+
 function extractHeadings(mdx: string): Heading[] {
   const headings: Heading[] = []
   const regex = /^(#{2,4})\s+(.+)$/gm
@@ -78,9 +119,10 @@ function readReport(slug: string, id: string): {
     )
     const raw = readFileSync(filePath, "utf-8")
     const { data, content } = matter(raw)
-    const headings = extractHeadings(content)
+    const processed = processFootnotes(content)
+    const headings = extractHeadings(processed)
     return {
-      content,
+      content: processed,
       frontmatter: data as ReportFrontmatter,
       headings,
     }
