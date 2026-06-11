@@ -91,15 +91,11 @@ export function FootnoteEnhancer({ children }: { children: React.ReactNode }) {
     }
   }, [showTooltip, scheduleHide])
 
-  // Hide bottom footnotes section on desktop
+  // Style the glossary section professionally
   useEffect(() => {
-    const section = document.querySelector("section.footnotes") as HTMLElement | null
-    if (section) {
-      section.style.display = "none"
-    }
-    return () => {
-      if (section) section.style.display = ""
-    }
+    const glossary = document.querySelector(".terms-glossary") as HTMLElement | null
+    if (!glossary) return
+    glossary.style.cssText = ""
   }, [])
 
   return (
