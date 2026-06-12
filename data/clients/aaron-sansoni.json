@@ -34,6 +34,17 @@
           "report_id": "land-guangzhou"
         },
         {
+          "id": "fengsheng-stage",
+          "type": "due_diligence_report",
+          "title": "Fengsheng Performance Equipment — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Fengsheng Performance Equipment Co., Ltd.",
+          "category": "Stage Truss, Stage Platforms, Rigging Systems",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "fengsheng-stage"
+        },
+        {
           "id": "it01",
           "type": "itinerary",
           "title": "Guangzhou Factory Visit Itinerary — July 2026",
