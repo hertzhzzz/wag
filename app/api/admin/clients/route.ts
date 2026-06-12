@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
 
     const clientsDir = join(process.cwd(), "data", "clients")
     let slugs: string[] = []
-    try { slugs = readdirSync(clientsDir).filter((f) => f.endsWith(".json")).map((f) => f.replace(".json", "")) } catch { slugs = [] }
+    try { slugs = readdirSync(clientsDir).filter((f) => f.endsWith(".json") && f !== "secrets.json").map((f) => f.replace(".json", "")) } catch { slugs = [] }
 
     let redis: Redis | null = null
     try { redis = Redis.fromEnv() } catch { /* */ }
