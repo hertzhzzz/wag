@@ -45,6 +45,17 @@
           "report_id": "haijixing-camera"
         },
         {
+          "id": "yushi-microphone",
+          "type": "due_diligence_report",
+          "title": "Yushi Electronics — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Enping Yushi Electronic Technology Co., Ltd.",
+          "category": "USB Microphones, Live-Streaming, Gaming Microphones",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "yushi-microphone"
+        },
+        {
           "id": "fengsheng-stage",
           "type": "due_diligence_report",
           "title": "Fengsheng Performance Equipment — Supplier Due Diligence & Capability Assessment",
