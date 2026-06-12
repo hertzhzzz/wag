@@ -4,7 +4,7 @@ import Link from "next/link"
 import { readdirSync, readFileSync } from "fs"
 import { join } from "path"
 import { validateAdminSession } from "@/lib/admin-auth"
-import { Redis } from "@upstash/redis/cloudflare"
+import { Redis } from "@upstash/redis"
 import type { AccessLogEntry } from "@/lib/access-log-kv"
 
 interface ClientSummary {
