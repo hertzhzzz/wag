@@ -87,6 +87,12 @@ const nextConfig = {
     }
     return [
       {
+        source: '/client/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        ]
+      },
+      {
         source: '/:path*',
         headers: [
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },

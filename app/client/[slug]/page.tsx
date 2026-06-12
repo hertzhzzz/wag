@@ -3,7 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import { getClientConfig } from "@/lib/clients"
-import { logAccess } from "@/lib/access-log"
+import { logAccess } from "@/lib/access-log-kv"
 import type { ClientConfig, ExtendedClientProject } from "@/lib/clients"
 
 function getProjectStatusColor(status: string): string {
@@ -232,15 +232,20 @@ export default async function ClientHomePage({
   // Log access (non-blocking best-effort)
   try {
     const headersList = await headers()
-    logAccess(
-      slug,
-      "",
-      `/client/${slug}`,
-      headersList.get("user-agent") || "",
-      headersList.get("x-forwarded-for") || "",
-      headersList.get("referer") || "",
-      "access-page",
-    )
+    const ip = headersList.get("x-forwarded-for")?.split(",")[0]?.trim()
+      || headersList.get("x-real-ip")
+      || ""
+    logAccess({
+      client_slug: slug,
+      project_slug: "",
+      path: `/client/${slug}`,
+      action_type: "access-page",
+      timestamp: new Date().toISOString(),
+      user_agent: headersList.get("user-agent") || "",
+      ip,
+      referer: headersList.get("referer") || "",
+      session_id: authCookie?.value?.slice(0, 8) || "",
+    }).catch(() => {})
   } catch {
     // silent
   }

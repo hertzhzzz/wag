@@ -1,65 +1,76 @@
-import { Ratelimit } from '@upstash/ratelimit'
-import { Redis } from '@upstash/redis'
+import { Ratelimit } from "@upstash/ratelimit"
+import { Redis } from "@upstash/redis"
 
-// Check if Redis is configured
 const isRedisConfigured = Boolean(
   process.env.UPSTASH_REDIS_REST_URL &&
   process.env.UPSTASH_REDIS_REST_TOKEN
 )
 
-// Fallback to in-memory if Redis not configured
-let ratelimit: Ratelimit | null = null
+let redis: Redis | null = null
+let generalLimiter: Ratelimit | null = null
+let authLimiter: Ratelimit | null = null
 
 if (isRedisConfigured) {
   try {
-    ratelimit = new Ratelimit({
-      redis: Redis.fromEnv(),
-      limiter: Ratelimit.slidingWindow(3, '60 s'),
+    redis = Redis.fromEnv()
+    generalLimiter = new Ratelimit({
+      redis,
+      limiter: Ratelimit.slidingWindow(3, "60 s"),
       analytics: true,
     })
+    authLimiter = new Ratelimit({
+      redis,
+      limiter: Ratelimit.slidingWindow(5, "15 m"),
+      analytics: true,
+      prefix: "ratelimit:auth",
+    })
   } catch (error) {
-    console.error('Failed to initialize rate limiter:', error)
+    console.error("Failed to initialize rate limiter:", error)
   }
 }
 
 // In-memory fallback
-const memoryRateLimitMap = new Map<string, { count: number; resetTime: number }>()
-const MEMORY_RATE_LIMIT = 3
-const MEMORY_WINDOW = 60 * 1000
+const memoryMap = new Map<string, { count: number; resetTime: number }>()
 
-/**
- * Check if a request should be rate limited
- * @param identifier - Unique identifier (usually IP address)
- * @returns true if request is allowed, false if rate limited
- */
-export async function checkRateLimit(identifier: string): Promise<boolean> {
-  // Use Redis rate limiter if available
-  if (ratelimit) {
-    try {
-      const result = await ratelimit.limit(identifier)
-      return result.success
-    } catch (error) {
-      console.error('Rate limit error:', error)
-      // Fall through to memory rate limit on error
-    }
-  }
-
-  // Fallback to in-memory
+function checkMemoryLimit(key: string, maxRequests: number, windowMs: number): boolean {
   const now = Date.now()
-  const record = memoryRateLimitMap.get(identifier)
+  const record = memoryMap.get(key)
 
   if (!record || now > record.resetTime) {
-    memoryRateLimitMap.set(identifier, {
-      count: 1,
-      resetTime: now + MEMORY_WINDOW,
-    })
+    memoryMap.set(key, { count: 1, resetTime: now + windowMs })
     return true
   }
 
-  if (record.count >= MEMORY_RATE_LIMIT) {
+  if (record.count >= maxRequests) {
     return false
   }
 
   record.count++
   return true
+}
+
+/** General-purpose rate limit: 3 requests per 60 seconds */
+export async function checkRateLimit(identifier: string): Promise<boolean> {
+  if (generalLimiter) {
+    try {
+      const result = await generalLimiter.limit(identifier)
+      return result.success
+    } catch (error) {
+      console.error("Rate limit error:", error)
+    }
+  }
+  return checkMemoryLimit(identifier, 3, 60_000)
+}
+
+/** Auth-specific rate limit: 5 attempts per 15 minutes */
+export async function checkAuthRateLimit(identifier: string): Promise<boolean> {
+  if (authLimiter) {
+    try {
+      const result = await authLimiter.limit(identifier)
+      return result.success
+    } catch (error) {
+      console.error("Auth rate limit error:", error)
+    }
+  }
+  return checkMemoryLimit(identifier, 5, 15 * 60_000)
 }

@@ -8,7 +8,7 @@ import {
   getStatusBadgeStyle,
   getDeliverableTypeLabel,
 } from "@/lib/clients"
-import { logAccess } from "@/lib/access-log"
+import { logAccess } from "@/lib/access-log-kv"
 import { Sidebar } from "@/client/Sidebar"
 import type { ClientConfig, ExtendedDeliverable, ExtendedClientProject } from "@/lib/clients"
 
@@ -238,7 +238,20 @@ export default async function ProjectDashboardPage({ params }: { params: Promise
 
   try {
     const hl = await headers()
-    logAccess(clientSlug, projectSlug, `/client/${clientSlug}/${projectSlug}`, hl.get("user-agent") || "", hl.get("x-forwarded-for") || "", hl.get("referer") || "", "dashboard")
+    const ip = hl.get("x-forwarded-for")?.split(",")[0]?.trim()
+      || hl.get("x-real-ip")
+      || ""
+    logAccess({
+      client_slug: clientSlug,
+      project_slug: projectSlug,
+      path: `/client/${clientSlug}/${projectSlug}`,
+      action_type: "dashboard",
+      timestamp: new Date().toISOString(),
+      user_agent: hl.get("user-agent") || "",
+      ip,
+      referer: hl.get("referer") || "",
+      session_id: cookieStore.get(`client_auth_${clientSlug}`)?.value?.slice(0, 8) || "",
+    }).catch(() => {})
   } catch { /* silent */ }
 
   const deliverables = (project.deliverables || []) as ExtendedDeliverable[]

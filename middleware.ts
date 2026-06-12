@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
-
+import { validateSession } from "@/lib/session-store"
 
 const PROTECTED_PATHS = ["/factory", "/client"]
 const PUBLIC_PATHS = [
@@ -61,13 +61,13 @@ function handleFactoryAuth(request: NextRequest): NextResponse {
   ) {
     const loginUrl = new URL("/factory/login", request.url)
     loginUrl.searchParams.set("from", request.nextUrl.pathname)
-    return NextResponse.redirect(loginUrl, 302) // 302: always GET, prevents POST→login 405
+    return NextResponse.redirect(loginUrl, 302)
   }
 
   return NextResponse.next()
 }
 
-function handleClientAuth(request: NextRequest): NextResponse {
+async function handleClientAuth(request: NextRequest): Promise<NextResponse> {
   const { pathname } = request.nextUrl
   const segments = pathname.split("/").filter(Boolean)
 
@@ -78,9 +78,15 @@ function handleClientAuth(request: NextRequest): NextResponse {
 
   const slug = segments[1]
 
-  // Fast path: check session marker cookie exists (avoids env var lookup)
-  const sessionCookie = request.cookies.get(`client_session_${slug}`)
-  if (!sessionCookie) {
+  // Check for auth cookie (client_auth_{slug}, not client_session_{slug})
+  const sessionCookie = request.cookies.get(`client_auth_${slug}`)
+  if (!sessionCookie?.value) {
+    return redirectToClientLogin(request, slug)
+  }
+
+  // Validate the session token against KV store
+  const valid = await validateSession(slug, sessionCookie.value)
+  if (!valid) {
     return redirectToClientLogin(request, slug)
   }
 

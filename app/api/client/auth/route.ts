@@ -4,6 +4,11 @@ import { join } from "path"
 import bcrypt from "bcryptjs"
 import crypto from "crypto"
 import { isValidClientSlug } from "@/lib/clients"
+import { createSession } from "@/lib/session-store"
+import { checkAuthRateLimit } from "@/lib/rate-limit"
+import { logAuthFailure } from "@/lib/access-log-kv"
+
+const SESSION_MAX_AGE = 60 * 60 * 24 // 24 hours
 
 export async function POST(request: NextRequest) {
   try {
@@ -32,7 +37,18 @@ export async function POST(request: NextRequest) {
         { error: "invalid", status: 404, message: "Invalid client" })
     }
 
-    // Read bcrypt hashes: env var (prod) or JSON file (local dev)
+    // Rate limit: 5 attempts per 15 min per IP+slug
+    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+      || request.headers.get("x-real-ip")
+      || "unknown"
+    const rateLimitKey = `auth:${slug}:${ip}`
+    const allowed = await checkAuthRateLimit(rateLimitKey)
+    if (!allowed) {
+      return respond(request, slug,
+        { error: "rate_limited", status: 429, message: "Too many attempts. Try again in 15 minutes." })
+    }
+
+    // Read bcrypt hashes
     let secrets: Record<string, string> = {}
     const b64 = process.env.CLIENT_SECRETS_B64
     if (b64) {
@@ -58,12 +74,19 @@ export async function POST(request: NextRequest) {
       || (masterCodeHash && bcrypt.compareSync(code, masterCodeHash))
 
     if (!isValid) {
+      // Log failed attempt for anomaly detection
+      const ua = request.headers.get("user-agent") || ""
+      await logAuthFailure(slug, "invalid_code", ip, ua)
+
       return respond(request, slug,
         { error: "invalid", status: 401, message: "Invalid access code" })
     }
 
-    // Generate session token — random, not derived from the user's code
+    // Generate session token and store in KV
     const sessionToken = crypto.randomUUID()
+    const ua = request.headers.get("user-agent") || ""
+    await createSession(slug, sessionToken, ip, ua)
+
     const redirectTo = from || `/client/${slug}`
     const isJson = contentType.includes("application/json")
 
@@ -97,11 +120,11 @@ function respond(request: NextRequest, slug: string, opts: {
 }
 
 function setSessionCookie(res: NextResponse, slug: string, token: string): void {
-  // Session cookie — expires when browser closes. No maxAge.
   res.cookies.set(`client_auth_${slug}`, token, {
     httpOnly: true,
     sameSite: "lax",
     path: "/",
     secure: process.env.NODE_ENV === "production",
+    maxAge: SESSION_MAX_AGE,
   })
 }
