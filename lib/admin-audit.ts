@@ -10,21 +10,23 @@ export interface AuditEntry {
 }
 
 function getRedis(): Redis | null {
-  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-    return Redis.fromEnv()
-  }
+  try {
+    if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+      return Redis.fromEnv()
+    }
+  } catch { /* module init might not have env vars ready */ }
   return null
 }
 
-const redis = getRedis()
-
 export async function logAudit(entry: AuditEntry): Promise<void> {
+  const redis = getRedis()
   if (!redis) return
   await redis.lpush("admin:audit", JSON.stringify(entry))
   await redis.ltrim("admin:audit", 0, MAX_ENTRIES)
 }
 
 export async function getAuditLogs(count: number = 50): Promise<AuditEntry[]> {
+  const redis = getRedis()
   if (!redis) return []
   const items = await redis.lrange("admin:audit", 0, count - 1)
   return items.map((i) => {

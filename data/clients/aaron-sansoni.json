@@ -34,6 +34,61 @@
           "report_id": "land-guangzhou"
         },
         {
+          "id": "fengsheng-stage",
+          "type": "due_diligence_report",
+          "title": "Fengsheng Performance Equipment — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Fengsheng Performance Equipment Co., Ltd.",
+          "category": "Stage Truss, Stage Platforms, Rigging Systems",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "fengsheng-stage"
+        },
+        {
+          "id": "ouye-led",
+          "type": "due_diligence_report",
+          "title": "Ouye Electronics — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Ouye Electronics Co., Ltd.",
+          "category": "LED Display Screens, Indoor LED Panels",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "ouye-led"
+        },
+        {
+          "id": "lingyin-audio",
+          "type": "due_diligence_report",
+          "title": "Lingyin Electronics — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Lingyin Electronic Equipment Co., Ltd.",
+          "category": "Public Broadcast Systems, Professional Loudspeakers, Microphones",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "lingyin-audio"
+        },
+        {
+          "id": "wanma-display",
+          "type": "due_diligence_report",
+          "title": "Wanma Electronics — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Shenzhen Wanma Electronic Technology Co., Ltd.",
+          "category": "Touch Displays, Digital Signage, Interactive Kiosks, Studio Monitors",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "wanma-display"
+        },
+        {
+          "id": "zhongyue-furniture",
+          "type": "due_diligence_report",
+          "title": "Zhongyue Bohua — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Xianghe Zhongyue Bohua Metal Products Co., Ltd.",
+          "category": "Control Consoles, Monitor Workstations, Lecterns, Technical Furniture",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "zhongyue-furniture"
+        },
+        {
           "id": "it01",
           "type": "itinerary",
           "title": "Guangzhou Factory Visit Itinerary — July 2026",

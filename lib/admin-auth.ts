@@ -10,20 +10,20 @@ export interface AdminSession {
 }
 
 function getRedis(): Redis | null {
-  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-    return Redis.fromEnv()
-  }
+  try {
+    if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+      return Redis.fromEnv()
+    }
+  } catch { /* module init might not have env vars ready */ }
   return null
 }
-
-const redis = getRedis()
 
 function sessionKey(token: string): string {
   return `admin:session:${token}`
 }
 
-/** Create admin session in KV. Returns signed token for cookie. */
 export async function createAdminSession(_ip: string): Promise<string | null> {
+  const redis = getRedis()
   if (!redis) return null
 
   const token = crypto.randomUUID()
@@ -40,11 +40,11 @@ export async function createAdminSession(_ip: string): Promise<string | null> {
   return signToken(token)
 }
 
-/** Validate admin session. Returns session data if valid, null otherwise. */
 export async function validateAdminSession(signed: string): Promise<AdminSession | null> {
   const token = await verifySignedToken(signed)
   if (!token) return null
 
+  const redis = getRedis()
   if (!redis) return null
 
   const raw = await redis.get<string>(sessionKey(token))
@@ -59,8 +59,8 @@ export async function validateAdminSession(signed: string): Promise<AdminSession
   return session
 }
 
-/** Revoke all admin sessions by incrementing version counter. */
 export async function revokeAllSessions(): Promise<void> {
+  const redis = getRedis()
   if (!redis) return
   await redis.incr("admin:session_version")
 }
