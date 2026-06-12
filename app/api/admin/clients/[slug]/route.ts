@@ -10,6 +10,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ slug: string }> },
 ) {
+  try {
   const { slug } = await params
   if (!SLUG_RE.test(slug)) {
     return NextResponse.json({ error: "Not Found" }, { status: 404 })
@@ -56,4 +57,5 @@ export async function GET(
   }
 
   return NextResponse.json({ clientName, clientCompany, logs, activeSessions, reportViewCounts })
+  } catch (e) { return NextResponse.json({ error: "Internal error" }, { status: 500 }) }
 }
