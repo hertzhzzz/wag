@@ -238,7 +238,7 @@ export default async function ProjectDashboardPage({ params }: { params: Promise
 
   try {
     const hl = await headers()
-    logAccess(clientSlug, projectSlug, `/client/${clientSlug}/${projectSlug}`, hl.get("user-agent") || "")
+    logAccess(clientSlug, projectSlug, `/client/${clientSlug}/${projectSlug}`, hl.get("user-agent") || "", hl.get("x-forwarded-for") || "", hl.get("referer") || "", "dashboard")
   } catch { /* silent */ }
 
   const deliverables = (project.deliverables || []) as ExtendedDeliverable[]
