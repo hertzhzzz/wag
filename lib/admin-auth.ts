@@ -1,4 +1,4 @@
-import { Redis } from "@upstash/redis/cloudflare"
+import { Redis } from "@upstash/redis"
 import crypto from "crypto"
 import { signToken, verifySignedToken } from "@/lib/admin-hmac"
 
