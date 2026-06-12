@@ -499,16 +499,16 @@ export default async function ReportDetailPage({
         </nav>
 
         <div className="flex gap-8 lg:gap-12">
-          <aside className="hidden lg:block w-56 shrink-0">
+          <aside className="hidden lg:block w-56 shrink-0 report-content">
             <div className="toc-scroll sticky top-4 max-h-[calc(100vh-2rem)] overflow-y-scroll" style={{ scrollbarGutter: "stable" }}>
               <ReportTOC headings={report.headings} />
             </div>
           </aside>
 
           <main className="flex-1 min-w-0">
-            <article>
+            <article className="report-content">
               <ReportHeader frontmatter={report.frontmatter} />
-              <div className="prose prose-slate max-w-none prose-headings:font-serif prose-headings:text-navy prose-a:text-amber-700 prose-a:no-underline hover:prose-a:underline prose-img:mx-auto prose-img:h-auto prose-img:max-w-full prose-img:max-h-[420px] prose-img:rounded-lg prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2.5 prose-th:text-xs prose-th:font-medium prose-th:uppercase prose-th:tracking-wide prose-td:px-4 prose-td:py-2.5 prose-td:text-sm">
+              <div className="prose prose-slate max-w-none report-content prose-headings:font-serif prose-headings:text-navy prose-a:text-amber-700 prose-a:no-underline hover:prose-a:underline prose-img:mx-auto prose-img:h-auto prose-img:max-w-full prose-img:max-h-[420px] prose-img:rounded-lg prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2.5 prose-th:text-xs prose-th:font-medium prose-th:uppercase prose-th:tracking-wide prose-td:px-4 prose-td:py-2.5 prose-td:text-sm">
                 <FootnoteEnhancer>
                   <MDXRemote source={report.content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
                 </FootnoteEnhancer>

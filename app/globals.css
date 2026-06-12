@@ -180,3 +180,12 @@ body {
 .toc-scroll::-webkit-scrollbar-thumb:hover {
   background: #64748b !important;
 }
+
+/* Report pages — disable text selection */
+.report-content,
+.report-content * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
