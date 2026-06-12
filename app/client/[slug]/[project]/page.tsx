@@ -9,7 +9,6 @@ import {
   getDeliverableTypeLabel,
 } from "@/lib/clients"
 import { logAccess } from "@/lib/access-log"
-import { MarkAsReviewedButton } from "./MarkAsReviewedButton"
 import { Sidebar } from "@/client/Sidebar"
 import type { ClientConfig, ExtendedDeliverable, ExtendedClientProject } from "@/lib/clients"
 
@@ -129,7 +128,6 @@ function DeliverableItem({ d, clientSlug, projectSlug }: { d: ExtendedDeliverabl
       </div>
       <div className="flex items-center gap-2 shrink-0">
         {link && <Link href={link} className="text-xs font-medium text-navy hover:text-navy-light transition-colors">View &rarr;</Link>}
-        {status === "delivered" && <MarkAsReviewedButton clientSlug={clientSlug} projectSlug={projectSlug} deliverableId={d.id} />}
       </div>
     </div>
   )
