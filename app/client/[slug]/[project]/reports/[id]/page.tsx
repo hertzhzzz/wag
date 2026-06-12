@@ -15,7 +15,7 @@ import {
   slugify,
   getDeliverableTypeLabel,
 } from "@/lib/clients"
-import { logAccess } from "@/lib/access-log"
+import { logAccess } from "@/lib/access-log-kv"
 import { ReportTOC } from "./ReportTOC"
 import { ReportImage } from "./ReportImage"
 import { resolveReportImagePath } from "./imagePath"
@@ -469,18 +469,23 @@ export default async function ReportDetailPage({
   // Prev/next navigation
   const { prev, next } = getReportPrevNext(clientSlug, projectSlug, reportId)
 
-  // Log access
+  // Log access — report view is the most important event for tracking
   try {
     const headersList = await headers()
-    logAccess(
-      clientSlug,
-      projectSlug,
-      `/client/${clientSlug}/${projectSlug}/reports/${reportId}`,
-      headersList.get("user-agent") || "",
-      headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "",
-      headersList.get("referer") || "",
-      cookieStore.get(`client_auth_${clientSlug}`)?.value?.slice(0, 8) || "unknown",
-    )
+    const ip = headersList.get("x-forwarded-for")?.split(",")[0]?.trim()
+      || headersList.get("x-real-ip")
+      || ""
+    logAccess({
+      client_slug: clientSlug,
+      project_slug: projectSlug,
+      path: `/client/${clientSlug}/${projectSlug}/reports/${reportId}`,
+      action_type: "report-view",
+      timestamp: new Date().toISOString(),
+      user_agent: headersList.get("user-agent") || "",
+      ip,
+      referer: headersList.get("referer") || "",
+      session_id: authCookie?.value?.slice(0, 8) || "",
+    }).catch(() => {})
   } catch {
     // silent
   }

@@ -34,6 +34,10 @@ Crawl-delay: 1
 User-agent: CCBot
 Disallow: /
 
+# Block client portal from all search engines
+User-agent: *
+Disallow: /client/
+
 # Block duplicate/non-primary resource pages
 User-agent: *
 Disallow: /resources/resource-
