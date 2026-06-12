@@ -7,21 +7,6 @@ import { validateAdminSession } from "@/lib/admin-auth"
 import { Redis } from "@upstash/redis"
 import type { AccessLogEntry } from "@/lib/access-log-kv"
 
-interface ClientSummary {
-  slug: string
-  client_name: string
-  client_company: string
-  lastAccess: string | null
-  reportViews: number
-}
-
-function getRedis(): Redis | null {
-  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-    return Redis.fromEnv()
-  }
-  return null
-}
-
 function formatAgo(iso: string): string {
   const ms = Date.now() - new Date(iso).getTime()
   const mins = Math.floor(ms / 60000)
@@ -39,6 +24,15 @@ const actionLabels: Record<string, string> = {
   "report-view": "Report",
 }
 
+function getRedis(): Redis | null {
+  try {
+    if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+      return Redis.fromEnv()
+    }
+  } catch { /* silent */ }
+  return null
+}
+
 export default async function AdminClientsPage() {
   const cookieStore = await cookies()
   const sessionCookie = cookieStore.get("admin_session")
@@ -48,7 +42,7 @@ export default async function AdminClientsPage() {
 
   const redis = getRedis()
 
-  // Load all client configs
+  // Load client configs
   const clientsDir = join(process.cwd(), "data", "clients")
   let slugs: string[] = []
   try {
@@ -59,28 +53,40 @@ export default async function AdminClientsPage() {
     slugs = []
   }
 
-  // Build client summaries
-  const clients: ClientSummary[] = []
+  // Build summaries (with try/catch per Redis op)
+  const clients: Array<{
+    slug: string
+    client_name: string
+    client_company: string
+    lastAccess: string | null
+    reportViews: number
+  }> = []
+
   for (const slug of slugs) {
     try {
       const raw = readFileSync(join(clientsDir, `${slug}.json`), "utf-8")
       const config = JSON.parse(raw)
-
       let lastAccess: string | null = null
       let reportViews = 0
+
       if (redis) {
-        const entries = await redis.lrange(`access_logs:${slug}`, 0, 0)
-        if (entries.length > 0) {
-          const latest = JSON.parse(entries[0] as string) as AccessLogEntry
-          lastAccess = latest.timestamp
-        }
-        const allEntries = await redis.lrange(`access_logs:${slug}`, 0, 999)
-        reportViews = allEntries
-          .map((e) => {
-            try { return JSON.parse(e as string) as AccessLogEntry } catch { return null }
-          })
-          .filter((e): e is AccessLogEntry => e !== null && e.action_type === "report-view")
-          .length
+        try {
+          const entries = await redis.lrange(`access_logs:${slug}`, 0, 0)
+          if (entries.length > 0) {
+            const latest = JSON.parse(entries[0] as string) as AccessLogEntry
+            lastAccess = latest.timestamp
+          }
+        } catch { /* Redis error */ }
+
+        try {
+          const allEntries = await redis.lrange(`access_logs:${slug}`, 0, 999)
+          reportViews = allEntries
+            .map((e) => {
+              try { return JSON.parse(e as string) as AccessLogEntry } catch { return null }
+            })
+            .filter((e): e is AccessLogEntry => e !== null && e.action_type === "report-view")
+            .length
+        } catch { /* Redis error */ }
       }
 
       clients.push({
@@ -90,12 +96,9 @@ export default async function AdminClientsPage() {
         lastAccess,
         reportViews,
       })
-    } catch {
-      // skip
-    }
+    } catch { /* skip broken configs */ }
   }
 
-  // Sort by recent
   clients.sort((a, b) => {
     if (!a.lastAccess && !b.lastAccess) return 0
     if (!a.lastAccess) return 1
@@ -107,13 +110,15 @@ export default async function AdminClientsPage() {
   let recentActivity: Array<AccessLogEntry & { client_name: string }> = []
   if (redis) {
     for (const c of clients.slice(0, 5)) {
-      const entries = await redis.lrange(`access_logs:${c.slug}`, 0, 9)
-      for (const e of entries) {
-        try {
-          const parsed = JSON.parse(e as string) as AccessLogEntry
-          recentActivity.push({ ...parsed, client_name: c.client_name })
-        } catch { /* skip */ }
-      }
+      try {
+        const entries = await redis.lrange(`access_logs:${c.slug}`, 0, 9)
+        for (const e of entries) {
+          try {
+            const parsed = JSON.parse(e as string) as AccessLogEntry
+            recentActivity.push({ ...parsed, client_name: c.client_name })
+          } catch { /* skip */ }
+        }
+      } catch { /* Redis error */ }
     }
     recentActivity.sort((a, b) => b.timestamp.localeCompare(a.timestamp))
     recentActivity = recentActivity.slice(0, 20)
@@ -122,8 +127,10 @@ export default async function AdminClientsPage() {
   // Last visit
   let lastVisit: string | null = null
   if (redis) {
-    lastVisit = await redis.get<string>("admin:last_visit")
-    await redis.set("admin:last_visit", new Date().toISOString())
+    try {
+      lastVisit = await redis.get<string>("admin:last_visit")
+      await redis.set("admin:last_visit", new Date().toISOString())
+    } catch { /* Redis error */ }
   }
 
   return (
@@ -195,7 +202,7 @@ export default async function AdminClientsPage() {
 
       {clients.length === 0 && (
         <div className="bg-white rounded-lg border border-gray-200 p-8 text-center">
-          <p className="text-gray-500 text-sm">No clients found. Add client configs to data/clients/.</p>
+          <p className="text-gray-500 text-sm">No clients found.</p>
         </div>
       )}
     </div>
