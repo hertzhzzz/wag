@@ -5,6 +5,7 @@ import { Redis } from "@upstash/redis"
 import { validateAdminSession } from "@/lib/admin-auth"
 
 export async function GET(request: NextRequest) {
+  try {
   const sessionCookie = request.cookies.get("admin_session")
   if (!sessionCookie?.value || !(await validateAdminSession(sessionCookie.value))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
@@ -56,4 +57,5 @@ export async function GET(request: NextRequest) {
   if (redis) { try { lastVisit = await redis.get<string>("admin:last_visit"); await redis.set("admin:last_visit", new Date().toISOString()) } catch { /* */ } }
 
   return NextResponse.json({ clients, activity, lastVisit })
+  } catch (e) { return NextResponse.json({ error: "Internal error" }, { status: 500 }) }
 }
