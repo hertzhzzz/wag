@@ -97,18 +97,10 @@ function respond(request: NextRequest, slug: string, opts: {
 }
 
 function setSessionCookie(res: NextResponse, slug: string, token: string): void {
+  // Session cookie — expires when browser closes. No maxAge.
   res.cookies.set(`client_auth_${slug}`, token, {
     httpOnly: true,
     sameSite: "lax",
-    maxAge: 30 * 24 * 60 * 60,
-    path: "/",
-    secure: process.env.NODE_ENV === "production",
-  })
-  // Also set a marker cookie so middleware can skip bcrypt
-  res.cookies.set(`client_session_${slug}`, "1", {
-    httpOnly: true,
-    sameSite: "lax",
-    maxAge: 30 * 24 * 60 * 60,
     path: "/",
     secure: process.env.NODE_ENV === "production",
   })

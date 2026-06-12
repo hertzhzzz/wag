@@ -477,6 +477,9 @@ export default async function ReportDetailPage({
       projectSlug,
       `/client/${clientSlug}/${projectSlug}/reports/${reportId}`,
       headersList.get("user-agent") || "",
+      headersList.get("x-forwarded-for") || headersList.get("x-real-ip") || "",
+      headersList.get("referer") || "",
+      cookieStore.get(`client_auth_${clientSlug}`)?.value?.slice(0, 8) || "unknown",
     )
   } catch {
     // silent

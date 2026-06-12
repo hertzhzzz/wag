@@ -237,6 +237,9 @@ export default async function ClientHomePage({
       "",
       `/client/${slug}`,
       headersList.get("user-agent") || "",
+      headersList.get("x-forwarded-for") || "",
+      headersList.get("referer") || "",
+      "access-page",
     )
   } catch {
     // silent
