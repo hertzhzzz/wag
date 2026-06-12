@@ -23,9 +23,9 @@ export function ReportImage({
 
   if (error || !resolved) {
     return (
-      <div className="bg-gray-100 rounded-lg p-8 text-center text-gray-400 text-sm my-6 border border-gray-200">
+      <span className="block bg-gray-100 rounded-lg p-8 text-center text-gray-400 text-sm my-6 border border-gray-200">
         {alt || "Image unavailable"}
-      </div>
+      </span>
     )
   }
 
@@ -36,7 +36,7 @@ export function ReportImage({
       alt={alt || ""}
       className={`rounded-lg max-w-2xl mx-auto h-auto max-h-[420px] object-contain my-6 border border-gray-200 bg-white ${className || ""}`}
       onError={() => setError(true)}
-      loading="lazy"
+      loading="eager"
       {...props}
     />
   )

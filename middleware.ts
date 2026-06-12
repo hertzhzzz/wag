@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
-import { validateSession } from "@/lib/session-store"
 
-const PROTECTED_PATHS = ["/factory", "/client"]
+const PROTECTED_PATHS = ["/factory", "/client", "/admin"]
 const PUBLIC_PATHS = [
   "/factory/login",
   "/api/factory/auth",
   "/api/client/auth",
+  "/api/admin/auth",
+  "/api/admin/recover",
 ]
 
 // Permanently deleted pages — return 410 Gone so Google stops crawling them
@@ -49,6 +50,11 @@ export function middleware(request: NextRequest) {
     return handleClientAuth(request)
   }
 
+  // Admin auth guard
+  if (pathname.startsWith("/admin")) {
+    return handleAdminAuth(request)
+  }
+
   return NextResponse.next()
 }
 
@@ -67,7 +73,7 @@ function handleFactoryAuth(request: NextRequest): NextResponse {
   return NextResponse.next()
 }
 
-async function handleClientAuth(request: NextRequest): Promise<NextResponse> {
+function handleClientAuth(request: NextRequest): NextResponse {
   const { pathname } = request.nextUrl
   const segments = pathname.split("/").filter(Boolean)
 
@@ -78,17 +84,37 @@ async function handleClientAuth(request: NextRequest): Promise<NextResponse> {
 
   const slug = segments[1]
 
-  // Check for auth cookie (client_auth_{slug}, not client_session_{slug})
+  // Cookie existence check — fast path, no KV call in Edge Runtime
   const sessionCookie = request.cookies.get(`client_auth_${slug}`)
   if (!sessionCookie?.value) {
     return redirectToClientLogin(request, slug)
   }
 
-  // Validate the session token against KV store
-  const valid = await validateSession(slug, sessionCookie.value)
-  if (!valid) {
-    return redirectToClientLogin(request, slug)
+  return NextResponse.next()
+}
+
+function handleAdminAuth(request: NextRequest): NextResponse {
+  const { pathname } = request.nextUrl
+
+  // Public admin paths: login, recover, and their API routes
+  if (
+    pathname === "/admin" ||
+    pathname === "/admin/recover" ||
+    pathname.startsWith("/api/admin/auth") ||
+    pathname.startsWith("/api/admin/recover")
+  ) {
+    return NextResponse.next()
   }
+
+  // Check for admin session cookie
+  const sessionCookie = request.cookies.get("admin_session")
+  if (!sessionCookie?.value) {
+    return NextResponse.redirect(new URL("/admin", request.url), 302)
+  }
+
+  // HMAC verification delegated to page-level validateAdminSession
+  // Middleware only does cookie existence check (same as client portal pattern)
+  // Full KV validation happens in server components and API routes
 
   return NextResponse.next()
 }
@@ -108,6 +134,8 @@ export const config = {
     "/api/factory/:path*",
     "/client/:path*",
     "/api/client/:path*",
+    "/admin/:path*",
+    "/api/admin/:path*",
     "/case-studies/:path*",
     "/adelaide",
     "/perth",

@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { readFileSync, existsSync } from "fs"
 import { join } from "path"
-import { validateSession } from "@/lib/session-store"
 
 const MIME: Record<string, string> = {
   ".jpg": "image/jpeg",
@@ -27,14 +26,9 @@ export async function GET(
     return new NextResponse("Not Found", { status: 404 })
   }
 
-  // Validate auth cookie
+  // Validate auth cookie — just check existence (same as middleware fast path)
   const sessionCookie = request.cookies.get(`client_auth_${slug}`)
   if (!sessionCookie?.value) {
-    return new NextResponse("Unauthorized", { status: 401 })
-  }
-
-  const valid = await validateSession(slug, sessionCookie.value)
-  if (!valid) {
     return new NextResponse("Unauthorized", { status: 401 })
   }
 

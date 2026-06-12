@@ -31,6 +31,7 @@ frontend/
 ├── content/          # MDX articles → /resources/[slug] + reports → /client/[slug]/[project]/reports/[id]
 ├── data/             # client configs (clients/{slug}.json), factory data
 ├── lib/              # utilities (rate-limit.ts, clients.ts, seo/, etc.)
+├── docs/solutions/  # documented solutions to past problems (bugs, best practices, workflow patterns), organized by category with YAML frontmatter
 ├── public/social/    # blog images [SINGLE SOURCE]
 ├── public/reports/   # client report images (per-client subdirectory)
 └── social/           # source files for AI image generation (NOT deployed)
