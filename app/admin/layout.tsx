@@ -1,6 +1,5 @@
 import { cookies } from "next/headers"
 import Link from "next/link"
-import { validateAdminSession } from "@/lib/admin-auth"
 
 export const metadata = {
   title: "Admin | Winning Adventure Global",
@@ -10,9 +9,9 @@ export const metadata = {
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const cookieStore = await cookies()
   const sessionCookie = cookieStore.get("admin_session")
-  const isLoggedIn = sessionCookie?.value && await validateAdminSession(sessionCookie.value)
+  const hasSession = !!sessionCookie?.value
 
-  if (!isLoggedIn) {
+  if (!hasSession) {
     return <>{children}</>
   }
 
