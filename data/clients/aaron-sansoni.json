@@ -34,6 +34,17 @@
           "report_id": "land-guangzhou"
         },
         {
+          "id": "haijixing-camera",
+          "type": "due_diligence_report",
+          "title": "Haijixing Technology — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Shenzhen Haijixing Technology Co., Ltd.",
+          "category": "Digital Cameras, Action Cameras, Body Cameras",
+          "date": "2026-06-12",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "haijixing-camera"
+        },
+        {
           "id": "fengsheng-stage",
           "type": "due_diligence_report",
           "title": "Fengsheng Performance Equipment — Supplier Due Diligence & Capability Assessment",
