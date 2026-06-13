@@ -1,8 +1,8 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { useParams, useRouter } from "next/navigation"
+import { cookies, headers } from "next/headers"
+import { redirect, notFound } from "next/navigation"
 import Link from "next/link"
+
+const SLUG_RE = /^[a-z0-9-]{2,64}$/
 
 interface LogEntry { action_type: string; path: string; timestamp: string; session_id: string }
 
@@ -21,26 +21,47 @@ function formatAgo(iso: string): string {
 }
 const actionLabels: Record<string, string> = { "access-page": "Page", "dashboard": "Dashboard", "report-view": "Report", "auth-failure": "Failed Login" }
 
-export default function AdminClientDetailPage() {
-  const { slug } = useParams()
-  const router = useRouter()
-  const [data, setData] = useState<{ clientName: string; clientCompany: string; logs: LogEntry[]; activeSessions: number; reportViewCounts: Record<string, number> } | null>(null)
-  const [loading, setLoading] = useState(true)
+export default async function AdminClientDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  if (!SLUG_RE.test(slug)) notFound()
 
-  useEffect(() => {
-    fetch(`/api/admin/clients/${slug}`)
-      .then((r) => { if (r.status === 401) { router.push("/admin"); return null }; if (r.status === 404) { router.push("/admin/clients"); return null }; return r.json() })
-      .then((d) => { if (d) setData(d); setLoading(false) })
-  }, [slug, router])
+  const cookieStore = await cookies()
+  const sessionCookie = cookieStore.get("admin_session")
+  if (!sessionCookie?.value) { redirect("/admin") }
 
-  if (loading) return <div className="p-8 text-gray-400 text-sm">Loading...</div>
-  if (!data) return <div className="p-8 text-gray-400 text-sm">Client not found.</div>
+  const headersList = await headers()
+  const host = headersList.get("host") || "localhost:3000"
+  const proto = headersList.get("x-forwarded-proto") || "http"
+
+  let clientName = ""
+  let clientCompany = ""
+  let logs: LogEntry[] = []
+  let activeSessions = 0
+  let reportViewCounts: Record<string, number> = {}
+
+  try {
+    const res = await fetch(`${proto}://${host}/api/admin/clients/${slug}`, {
+      headers: { Cookie: `admin_session=${sessionCookie.value}` }
+    })
+    if (res.ok) {
+      const data = await res.json()
+      clientName = data.clientName
+      clientCompany = data.clientCompany
+      logs = data.logs || []
+      activeSessions = data.activeSessions || 0
+      reportViewCounts = data.reportViewCounts || {}
+    } else if (res.status === 401) {
+      redirect("/admin")
+    } else if (res.status === 404) {
+      notFound()
+    }
+  } catch { /* API unavailable — show empty */ }
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-6"><div><Link href="/admin/clients" className="text-xs text-gray-400 hover:text-navy transition mb-1 inline-block">&larr; All Clients</Link><h1 className="font-serif text-2xl font-bold text-navy">{data.clientName}</h1><p className="text-sm text-gray-500">{data.clientCompany}</p></div><div className="flex items-center gap-4"><StatBadge label="Active Sessions" value={String(data.activeSessions)} /><StatBadge label="Total Views" value={String(data.logs.length)} /><StatBadge label="Reports" value={String(Object.keys(data.reportViewCounts).length)} /></div></div>
-      {Object.keys(data.reportViewCounts).length > 0 && (<section className="mb-8"><h2 className="text-base font-semibold text-navy mb-3">Report Views</h2><div className="bg-white rounded-lg border border-gray-200 p-4"><div className="space-y-2">{Object.entries(data.reportViewCounts).sort(([, a], [, b]) => b - a).map(([id, count]) => (<div key={id} className="flex items-center justify-between text-sm"><span className="text-gray-700 font-mono text-xs">{id}</span><span className="font-semibold text-navy">{count} views</span></div>))}</div></div></section>)}
-      <section><h2 className="text-base font-semibold text-navy mb-3">Access Log</h2>{data.logs.length === 0 ? (<div className="bg-white rounded-lg border border-gray-200 p-8 text-center"><p className="text-gray-400 text-sm">No access records yet.</p></div>) : (<div className="bg-white rounded-lg border border-gray-200 overflow-hidden"><table className="w-full text-sm"><thead><tr className="bg-gray-50 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"><th className="px-4 py-3">Time (ACST)</th><th className="px-4 py-3">Action</th><th className="px-4 py-3">Path</th><th className="px-4 py-3">Session</th><th className="px-4 py-3">When</th></tr></thead><tbody className="divide-y divide-gray-100">{data.logs.map((entry, i) => (<tr key={i} className="hover:bg-gray-50/50"><td className="px-4 py-2.5 text-gray-700 font-mono text-xs whitespace-nowrap">{formatTime(entry.timestamp)}</td><td className="px-4 py-2.5"><span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${entry.action_type === "report-view" ? "bg-blue-50 text-blue-700" : entry.action_type === "dashboard" ? "bg-purple-50 text-purple-700" : "bg-gray-100 text-gray-600"}`}>{actionLabels[entry.action_type] || entry.action_type}</span></td><td className="px-4 py-2.5 text-gray-600 font-mono text-xs max-w-[300px] truncate">{entry.path}</td><td className="px-4 py-2.5 text-gray-500 font-mono text-xs">{entry.session_id || "-"}</td><td className="px-4 py-2.5 text-gray-400 text-xs whitespace-nowrap">{formatAgo(entry.timestamp)}</td></tr>))}</tbody></table></div>)}</section>
+      <div className="flex items-center justify-between mb-6"><div><Link href="/admin/clients" className="text-xs text-gray-400 hover:text-navy transition mb-1 inline-block">&larr; All Clients</Link><h1 className="font-serif text-2xl font-bold text-navy">{clientName}</h1><p className="text-sm text-gray-500">{clientCompany}</p></div><div className="flex items-center gap-4"><StatBadge label="Active Sessions" value={String(activeSessions)} /><StatBadge label="Total Views" value={String(logs.length)} /><StatBadge label="Reports" value={String(Object.keys(reportViewCounts).length)} /></div></div>
+      {Object.keys(reportViewCounts).length > 0 && (<section className="mb-8"><h2 className="text-base font-semibold text-navy mb-3">Report Views</h2><div className="bg-white rounded-lg border border-gray-200 p-4"><div className="space-y-2">{Object.entries(reportViewCounts).sort(([, a], [, b]) => b - a).map(([id, count]) => (<div key={id} className="flex items-center justify-between text-sm"><span className="text-gray-700 font-mono text-xs">{id}</span><span className="font-semibold text-navy">{count} views</span></div>))}</div></div></section>)}
+      <section><h2 className="text-base font-semibold text-navy mb-3">Access Log</h2>{logs.length === 0 ? (<div className="bg-white rounded-lg border border-gray-200 p-8 text-center"><p className="text-gray-400 text-sm">No access records yet.</p></div>) : (<div className="bg-white rounded-lg border border-gray-200 overflow-hidden"><table className="w-full text-sm"><thead><tr className="bg-gray-50 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider"><th className="px-4 py-3">Time (ACST)</th><th className="px-4 py-3">Action</th><th className="px-4 py-3">Path</th><th className="px-4 py-3">Session</th><th className="px-4 py-3">When</th></tr></thead><tbody className="divide-y divide-gray-100">{logs.map((entry, i) => (<tr key={i} className="hover:bg-gray-50/50"><td className="px-4 py-2.5 text-gray-700 font-mono text-xs whitespace-nowrap">{formatTime(entry.timestamp)}</td><td className="px-4 py-2.5"><span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${entry.action_type === "report-view" ? "bg-blue-50 text-blue-700" : entry.action_type === "dashboard" ? "bg-purple-50 text-purple-700" : "bg-gray-100 text-gray-600"}`}>{actionLabels[entry.action_type] || entry.action_type}</span></td><td className="px-4 py-2.5 text-gray-600 font-mono text-xs max-w-[300px] truncate">{entry.path}</td><td className="px-4 py-2.5 text-gray-500 font-mono text-xs">{entry.session_id || "-"}</td><td className="px-4 py-2.5 text-gray-400 text-xs whitespace-nowrap">{formatAgo(entry.timestamp)}</td></tr>))}</tbody></table></div>)}</section>
     </div>
   )
 }
