@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
@@ -96,11 +97,13 @@ export const viewport = {
   maximumScale: 5,
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const headersList = await headers()
+  const isAdmin = headersList.get("x-is-admin") === "1"
   return (
     <html lang="en-AU" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
       <head>
@@ -238,7 +241,7 @@ export default function RootLayout({
       <main id="main-content">
         {children}
       </main>
-      <FloatingEnquiryWidget />
+      {!isAdmin && <FloatingEnquiryWidget />}
       <ScrollTracker />
     </body>
     </html>

@@ -1,8 +1,6 @@
-"use client"
-
-import { useEffect, useState } from "react"
+import { cookies, headers } from "next/headers"
+import { redirect } from "next/navigation"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 
 interface ClientData { slug: string; client_name: string; client_company: string; lastAccess: string | null; reportViews: number }
 interface ActivityItem { client_name: string; action_type: string; path: string; timestamp: string }
@@ -19,23 +17,32 @@ function formatAgo(iso: string): string {
 
 const actionLabels: Record<string, string> = { "access-page": "Page", "dashboard": "Dashboard", "report-view": "Report" }
 
-export default function AdminClientsPage() {
-  const router = useRouter()
-  const [clients, setClients] = useState<ClientData[]>([])
-  const [activity, setActivity] = useState<ActivityItem[]>([])
-  const [lastVisit, setLastVisit] = useState<string | null>(null)
-  const [loading, setLoading] = useState(true)
+export default async function AdminClientsPage() {
+  const cookieStore = await cookies()
+  const sessionCookie = cookieStore.get("admin_session")
+  if (!sessionCookie?.value) { redirect("/admin") }
 
-  useEffect(() => {
-    fetch("/api/admin/clients")
-      .then((r) => { if (r.status === 401) { router.push("/admin"); return null }; return r.json() })
-      .then((data) => {
-        if (data) { setClients(data.clients); setActivity(data.activity); setLastVisit(data.lastVisit) }
-        setLoading(false)
-      })
-  }, [router])
+  const headersList = await headers()
+  const host = headersList.get("host") || "localhost:3000"
+  const proto = headersList.get("x-forwarded-proto") || "http"
 
-  if (loading) return <div className="p-8 text-gray-400 text-sm">Loading...</div>
+  let clients: ClientData[] = []
+  let activity: ActivityItem[] = []
+  let lastVisit: string | null = null
+
+  try {
+    const res = await fetch(`${proto}://${host}/api/admin/clients`, {
+      headers: { Cookie: `admin_session=${sessionCookie.value}` }
+    })
+    if (res.ok) {
+      const data = await res.json()
+      clients = data.clients || []
+      activity = data.activity || []
+      lastVisit = data.lastVisit || null
+    } else if (res.status === 401) {
+      redirect("/admin")
+    }
+  } catch { /* API unavailable — show empty state */ }
 
   if (clients.length === 0) {
     return <div><h1 className="font-serif text-2xl font-bold text-navy mb-6">Clients</h1><div className="bg-white rounded-lg border border-gray-200 p-8 text-center"><p className="text-gray-500 text-sm">No clients found.</p></div></div>
