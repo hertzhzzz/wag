@@ -75,6 +75,8 @@ function createListComponent(type: 'ul' | 'ol') {
 
 export function createMdxComponents(ctaTitle: string, ctaText: string, ctaButtonText: string) {
   return {
+    // Next.js Image (available as <Image> in MDX, no import needed)
+    Image: (props: React.ComponentProps<typeof Image>) => <Image {...props} />,
     // Custom components
     Tip,
     InlineCTA: () => <InlineCTA ctaTitle={ctaTitle} ctaText={ctaText} ctaButtonText={ctaButtonText} />,
