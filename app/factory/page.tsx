@@ -1,23 +1,25 @@
 import { readFileSync } from "fs"
 import { join } from "path"
-import Link from "next/link"
+import type { Metadata } from "next"
+import { pinyin } from "pinyin-pro"
 import Navbar from "@/components/Navbar"
+import { FactoryDirectory } from "./factory-directory"
 
-export const metadata = {
-  title: "Factory Wiki - Winning Adventure Global",
-  description: "China manufacturing factory database",
+export const metadata: Metadata = {
+  title: "China Factory Directory — Search Verified Manufacturers | Winning Adventure Global",
+  description: "Browse 1,200+ verified Chinese factories across 30+ industries. Free to search — no signup needed.",
+  openGraph: {
+    title: "China Factory Directory — Search Verified Manufacturers",
+    description: "Browse 1,200+ verified Chinese factories. Free to search — no signup needed.",
+  },
 }
 
-async function getData() {
-  const indexPath = join(process.cwd(), "data/factory/index.json")
-  const raw = readFileSync(indexPath, "utf-8")
-  return JSON.parse(raw)
-}
-
-interface FactoryItem {
+export interface FactoryItem {
   member_id: string
   slug: string
   company_name: string
+  pinyin_name: string
+  category: string
   province: string
   city: string
   platform_tags: string[]
@@ -28,104 +30,72 @@ interface FactoryItem {
   biz_scope: string
 }
 
+async function getData() {
+  const indexPath = join(process.cwd(), "data/factory/index.json")
+  return JSON.parse(readFileSync(indexPath, "utf-8"))
+}
+
+function extractCategories(factories: FactoryItem[]): string[] {
+  const catMap: Record<string, string[]> = {
+    "Electronics": ["电子", "电器", "LED", "灯具", "照明", "电源", "传感器", "显示"],
+    "Sports & Outdoors": ["体育", "运动", "健身", "球", "户外", "器材"],
+    "Textiles & Apparel": ["服装", "纺织", "面料", "服饰", "鞋", "帽"],
+    "Packaging & Printing": ["包装", "印刷", "纸", "塑料", "袋", "盒"],
+    "Furniture": ["家具", "办公", "桌椅", "沙发", "床"],
+    "Hardware & Tools": ["五金", "工具", "金属", "机械", "模具", "自动化"],
+    "Auto & Parts": ["汽车", "配件", "摩托", "轮胎", "部件"],
+    "Construction": ["建筑", "建材", "陶瓷", "石材", "混凝土"],
+  }
+  const matched = new Set<string>()
+  for (const f of factories) {
+    for (const [cat, kws] of Object.entries(catMap)) {
+      if (kws.some((kw) => (f.biz_scope || "").toLowerCase().includes(kw))) matched.add(cat)
+    }
+  }
+  return [...matched].sort()
+}
+
 export default async function FactoryPage() {
   const data = await getData()
   const factories: FactoryItem[] = data.factories
+  const provinces = [...new Set(factories.map((f) => f.province).filter(Boolean))].sort()
+  const categories = extractCategories(factories)
 
-  const provinces = [...new Set(factories.map((f: FactoryItem) => f.province).filter(Boolean))].sort()
+  // Pre-compute category per factory (same catMap used by extractCategories)
+  const catMap: Record<string, string[]> = {
+    "Electronics": ["电子", "电器", "LED", "灯具", "照明", "电源", "传感器", "显示"],
+    "Sports & Outdoors": ["体育", "运动", "健身", "球", "户外", "器材"],
+    "Textiles & Apparel": ["服装", "纺织", "面料", "服饰", "鞋", "帽"],
+    "Packaging & Printing": ["包装", "印刷", "纸", "塑料", "袋", "盒"],
+    "Furniture": ["家具", "办公", "桌椅", "沙发", "床"],
+    "Hardware & Tools": ["五金", "工具", "金属", "机械", "模具", "自动化"],
+    "Auto & Parts": ["汽车", "配件", "摩托", "轮胎", "部件"],
+    "Construction": ["建筑", "建材", "陶瓷", "石材", "混凝土"],
+  }
+  const classifyFactory = (bizScope: string): string => {
+    const scope = bizScope.toLowerCase()
+    for (const [cat, kws] of Object.entries(catMap)) {
+      if (kws.some((kw) => scope.includes(kw))) return cat
+    }
+    return ""
+  }
+
+  // Add pinyin names and category
+  const factoriesWithPinyin: FactoryItem[] = factories.map((f: FactoryItem) => ({
+    ...f,
+    category: classifyFactory(f.biz_scope || ""),
+    pinyin_name: pinyin(f.company_name, { toneType: "none", type: "array" })
+      .map((s: string) => s.charAt(0).toUpperCase() + s.slice(1))
+      .join(" ")
+      .replace(/ You Xian Gong Si$/i, "")
+      .replace(/ Co Ltd$/i, "")
+      .trim(),
+  }))
 
   return (
     <>
-      <Navbar rightContent={
-        <a
-          href="tel:+61416588198"
-          className="flex flex-col items-start px-[14px] py-[8px] text-navy bg-white/80 border border-navy/20 hover:bg-navy hover:text-white flex-shrink-0 transition-all leading-tight"
-        >
-          <span className="text-[10px] font-medium uppercase tracking-wide">Call Us Today</span>
-          <span className="text-[13px] font-semibold">+61 0416588198</span>
-        </a>
-      } />
-      <div className="min-h-screen bg-gray-50">
-        <div className="sticky top-[72px] bg-navy text-white z-10 shadow-md">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div>
-              <h1 className="text-lg font-bold">China Manufacturing Wiki</h1>
-              <p className="text-xs text-gray-300">{data.total} factories</p>
-            </div>
-            <div className="flex gap-3 text-sm">
-              <Link href="/factory/annotations" className="hover:text-amber-300 transition">
-                Annotations
-              </Link>
-              <Link href="/" className="text-gray-400 hover:text-white transition">
-                WAG Home
-              </Link>
-            </div>
-          </div>
-        </div>
-
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        {/* Filters */}
-        <div className="mb-6 flex flex-wrap gap-2">
-          <a
-            href="?province="
-            className="px-3 py-1 rounded-full text-xs font-medium bg-navy text-white"
-          >
-            All ({factories.length})
-          </a>
-          {provinces.map((p) => (
-            <a
-              key={p}
-              href={`?province=${encodeURIComponent(p)}`}
-              className="px-3 py-1 rounded-full text-xs font-medium bg-white border border-gray-200 hover:border-navy hover:text-navy transition"
-            >
-              {p}
-            </a>
-          ))}
-        </div>
-
-        {/* Factory list */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {factories.map((f: FactoryItem) => (
-            <Link
-              key={f.member_id}
-              href={`/factory/${f.slug}`}
-              className="block bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-navy/30 transition group"
-            >
-              <h3 className="font-semibold text-gray-900 group-hover:text-navy transition truncate">
-                {f.company_name}
-              </h3>
-              <div className="mt-2 flex items-center gap-2 text-xs text-gray-500">
-                {f.province && <span>{f.province}</span>}
-                {f.city && <span>{f.city}</span>}
-              </div>
-              <div className="mt-2 flex flex-wrap gap-1">
-                {(f.platform_tags || []).map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2 py-0.5 rounded text-[10px] font-medium bg-amber-100 text-amber-800"
-                  >
-                    {tag}
-                  </span>
-                ))}
-                {(f.certifications || []).slice(0, 3).map((cert) => (
-                  <span
-                    key={cert}
-                    className="px-2 py-0.5 rounded text-[10px] font-medium bg-blue-50 text-blue-700"
-                  >
-                    {cert}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-2 text-xs text-gray-400 flex gap-3">
-                {f.factory_area && <span>{f.factory_area}</span>}
-                {f.employees && <span>{f.employees}</span>}
-                {f.fca_report_id && <span className="text-green-600">深度认证</span>}
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
+      <Navbar />
+      <FactoryDirectory factories={factoriesWithPinyin} provinces={provinces} categories={categories} />
     </>
   )
 }

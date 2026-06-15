@@ -1,7 +1,7 @@
 ---
 name: Winning Adventure Global
 description: China sourcing agency design system for Australian business audiences
-version: "1.0"
+version: "1.1"
 
 colors:
   navy: "#0F2D5E"
@@ -12,6 +12,10 @@ colors:
   amber-dark: "#D97706"
   surface: "#FFFFFF"
   surface-warm: "#FEF9F3"
+  surface-cool: "#F8FAFC"
+  green: "#059669"
+  green-light: "#D1FAE5"
+  red: "#DC2626"
   on-navy: "#FFFFFF"
   on-amber: "#0F2D5E"
   text-primary: "#0F2D5E"
@@ -75,6 +79,24 @@ typography:
     fontWeight: 600
     lineHeight: 1.4
     letterSpacing: 0.01em
+  badge:
+    fontFamily: "IBM Plex Sans"
+    fontSize: 10px
+    fontWeight: 600
+    lineHeight: 1.2
+    letterSpacing: 0.02em
+  stat-value:
+    fontFamily: "IBM Plex Sans"
+    fontSize: 14px
+    fontWeight: 600
+    lineHeight: 1.3
+    letterSpacing: 0
+  stat-label:
+    fontFamily: "IBM Plex Sans"
+    fontSize: 10px
+    fontWeight: 500
+    lineHeight: 1.2
+    letterSpacing: 0.04em
   serif-display:
     fontFamily: "IBM Plex Serif"
     fontSize: 32px
@@ -130,6 +152,81 @@ components:
     rounded: "{rounded.md}"
     padding: "{spacing.md} {spacing.lg}"
     border: "1px solid {colors.navy}"
+  factory-card:
+    backgroundColor: "{colors.surface}"
+    border: "1px solid {colors.border}"
+    rounded: "{rounded.lg}"
+    padding: "{spacing.lg}"
+    shadow: "none"
+  factory-card-hover:
+    borderColor: "{colors.border-navy}"
+    shadow: "{shadows.lg}"
+  factory-hero:
+    backgroundColor: "{colors.navy}"
+    textColor: "{colors.on-navy}"
+    paddingTop: "{spacing.2xl}"
+    paddingBottom: "{spacing.2xl}"
+  factory-stat:
+    backgroundColor: "{colors.surface-cool}"
+    border: "1px solid {colors.border}"
+    rounded: "{rounded.md}"
+    padding: "14px {spacing.md}"
+  factory-stat-fca:
+    backgroundColor: "{colors.green-light}"
+    borderColor: "rgba(5, 150, 105, 0.2)"
+  factory-sidebar-cta:
+    backgroundColor: "{colors.navy}"
+    textColor: "{colors.on-navy}"
+    rounded: "{rounded.lg}"
+    padding: "{spacing.lg}"
+  factory-search:
+    border: "1px solid {colors.border}"
+    rounded: "{rounded.md}"
+    padding: "12px {spacing.md}"
+    focusBorderColor: "{colors.navy}"
+    focusRing: "0 0 0 3px rgba(15, 45, 94, 0.15)"
+  factory-filter:
+    border: "1px solid {colors.border}"
+    rounded: "{rounded.full}"
+    padding: "6px 12px"
+    backgroundColor: "{colors.surface}"
+  badge-platform:
+    backgroundColor: "rgba(245, 158, 11, 0.15)"
+    textColor: "{colors.amber-dark}"
+    rounded: "{rounded.full}"
+    padding: "4px 10px"
+  badge-platform-on-dark:
+    backgroundColor: "rgba(255, 255, 255, 0.15)"
+    textColor: "{colors.on-navy}"
+    rounded: "{rounded.full}"
+    padding: "4px 10px"
+  badge-certification:
+    backgroundColor: "{colors.surface-cool}"
+    textColor: "{colors.navy-light}"
+    borderColor: "rgba(15, 45, 94, 0.15)"
+    rounded: "{rounded.full}"
+    padding: "4px 10px"
+  badge-certification-on-dark:
+    backgroundColor: "rgba(59, 130, 246, 0.2)"
+    textColor: "#BFDBFE"
+    borderColor: "rgba(59, 130, 246, 0.3)"
+    rounded: "{rounded.full}"
+    padding: "4px 10px"
+  badge-fca:
+    backgroundColor: "{colors.green-light}"
+    textColor: "{colors.green}"
+    borderColor: "rgba(5, 150, 105, 0.3)"
+    rounded: "{rounded.full}"
+    padding: "4px 10px"
+  factory-breadcrumb:
+    textColor: "{colors.text-muted}"
+    typography: "{typography.body-sm}"
+  factory-info-table:
+    border: "1px solid {colors.border}"
+    rounded: "{rounded.md}"
+  factory-info-table-row:
+    borderBottom: "1px solid {colors.border}"
+    padding: "10px {spacing.md}"
   card:
     backgroundColor: "{colors.surface}"
     borderColor: "{colors.border}"
@@ -390,6 +487,151 @@ nav-link:
 
 ---
 
+## Factory Directory Components
+
+The factory directory uses specialized components optimized for dense, scannable B2B data display while maintaining WAG's professional brand feel.
+
+### Factory Card (Listing Grid)
+
+The primary navigation element in the listing grid. Cards start flat (no shadow) and lift on hover.
+
+```yaml
+factory-card:
+  backgroundColor: "{colors.surface}"
+  border: "1px solid {colors.border}"
+  rounded: "{rounded.lg}"
+  padding: "{spacing.lg}"
+  shadow: "none"
+```
+
+**Hover state:** Border changes to navy tint, shadow elevates to `lg`. Transitions: 200ms ease-out.
+
+**Card anatomy (top to bottom):**
+1. Company name — `headline-sm` weight, navy, truncate single line
+2. Location row — `body-sm`, text-muted, "Province · City" format
+3. Badge row — platform tags (amber) + certifications (blue), max 3 certs
+4. Stats row — factory area, employee count, FCA badge if applicable
+5. The entire card is a clickable link
+
+**Grid:** 3 columns on desktop (≥1024px), 2 on tablet, 1 on mobile. `gap: 16px`.
+
+### Factory Hero (Detail Page)
+
+Full-width navy banner introducing the factory.
+
+```yaml
+factory-hero:
+  backgroundColor: "{colors.navy}"
+  textColor: "{colors.on-navy}"
+  paddingTop: "{spacing.2xl}"
+  paddingBottom: "{spacing.2xl}"
+```
+
+**Hero anatomy:**
+1. Breadcrumb — `body-sm`, text-muted with amber hover, "Factory Directory / Province / Company"
+2. Company name — `headline-lg`, white
+3. Location — `body-sm`, text-gray-300
+4. CTA button — `button-secondary` (amber), "Source from this factory →"
+5. Badge row — platform tags (translucent white), certs (translucent blue), FCA (green)
+
+### Factory Stat Tile
+
+Small data tiles used in stats grid and FCA assessment sections.
+
+```yaml
+factory-stat:
+  backgroundColor: "{colors.surface-cool}"
+  border: "1px solid {colors.border}"
+  rounded: "{rounded.md}"
+  padding: "14px {spacing.md}"
+```
+
+**FCA variant:** Green-tinted background and border for deep-certified data.
+```yaml
+factory-stat-fca:
+  backgroundColor: "{colors.green-light}"
+  borderColor: "rgba(5, 150, 105, 0.2)"
+```
+
+**Grid:** 2-3 columns depending on data density. Each tile: label (stat-label, uppercase, muted) + value (stat-value, bold).
+
+### Badge System
+
+Three badge types convey different information at a glance. All use `rounded.full` (pill shape) and consistent 4px/10px padding.
+
+| Badge | Background | Text | Use |
+|-------|-----------|------|-----|
+| `badge-platform` | amber-15%-opacity | amber-dark | Platform tags: 超级工厂, 深度认证 |
+| `badge-certification` | surface-cool | navy-light with border | ISO, BSCI, SGS, CE certifications |
+| `badge-fca` | green-light | green with green border | Factory Capability Assessment verified |
+
+**On dark backgrounds (hero section):** Use translucent white/blue variants instead.
+
+### Factory Search & Filters
+
+**Search:** Full-width input with search icon, `body-md` text, 12px vertical padding. Focus state has navy border + subtle ring.
+
+```yaml
+factory-search:
+  border: "1px solid {colors.border}"
+  rounded: "{rounded.md}"
+  padding: "12px {spacing.md}"
+  focusBorder: "{colors.navy}"
+  focusRing: "0 0 0 3px rgba(15, 45, 94, 0.15)"
+```
+
+**Filters:** Pill-shaped selects for province and category. `body-sm`, 6px/12px padding, border changes to navy-tint on hover.
+
+```yaml
+factory-filter:
+  border: "1px solid {colors.border}"
+  rounded: "{rounded.full}"
+  padding: "6px 12px"
+  backgroundColor: "{colors.surface}"
+```
+
+**Filter row layout:** Filter by label (muted, uppercase) + selects + "Clear filters" link + result count (right-aligned).
+
+### Factory Info Table
+
+Structured key-value data for business registration and company information.
+
+```yaml
+factory-info-table:
+  border: "1px solid {colors.border}"
+  rounded: "{rounded.md}"
+```
+
+**Row style:** Label column (w-1/3, text-muted, stat-label) + Value column (w-2/3, text-primary, body-sm). Alternating rows optional but not required. No zebra striping by default.
+
+### Factory Sidebar CTA
+
+Sticky sidebar card that follows the user on desktop. Primary conversion element.
+
+```yaml
+factory-sidebar-cta:
+  backgroundColor: "{colors.navy}"
+  textColor: "{colors.on-navy}"
+  rounded: "{rounded.lg}"
+  padding: "{spacing.lg}"
+```
+
+**Anatomy:** Headline (bold, white) → Benefit bullets (body-sm, gray-300) → CTA button (amber, full-width, "Get a Free Quote →") → "Free consultation · No obligation" micro-copy (10px, muted).
+
+**Position:** `position: sticky; top: 96px` (below navbar). Only on desktop; stacks naturally on mobile below main content.
+
+### Factory Breadcrumb
+
+```yaml
+factory-breadcrumb:
+  textColor: "{colors.text-muted}"
+  typography: "{typography.body-sm}"
+```
+
+**Format:** "Factory Directory / Province / Company Name". Intermediate segments are links with amber hover. Final segment is white text, not linked.
+
+---
+
 ## Do's and Don'ts
 
 ### Do
@@ -482,4 +724,4 @@ Use subtle pulse animation (`animate-pulse-ring`) for loading indicators — the
 
 ---
 
-*Document version: 1.0 — Last updated: 2026-05-13*
+*Document version: 1.1 — Last updated: 2026-06-15*

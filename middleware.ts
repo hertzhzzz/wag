@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
-const PROTECTED_PATHS = ["/factory", "/client", "/admin"]
+const PROTECTED_PATHS = ["/client", "/admin"]
 const PUBLIC_PATHS = [
-  "/factory/login",
-  "/api/factory/auth",
   "/api/client/auth",
   "/api/admin/auth",
   "/api/admin/recover",
@@ -43,9 +41,7 @@ export function middleware(request: NextRequest) {
 
   // Auth guards
   if (isProtected && !isPublic) {
-    if (pathname.startsWith("/factory")) {
-      response = handleFactoryAuth(request)
-    } else if (pathname.startsWith("/client")) {
+    if (pathname.startsWith("/client")) {
       response = handleClientAuth(request)
     } else if (pathname.startsWith("/admin")) {
       response = handleAdminAuth(request)
@@ -62,20 +58,6 @@ export function middleware(request: NextRequest) {
   }
 
   return response
-}
-
-function handleFactoryAuth(request: NextRequest): NextResponse {
-  const expected = process.env.FACTORY_AUTH_TOKEN?.trim()
-  if (!expected) {
-    return new NextResponse("Auth not configured", { status: 500 })
-  }
-  const authToken = request.cookies.get("factory_auth")
-  if (!authToken || authToken.value !== expected) {
-    const loginUrl = new URL("/factory/login", request.url)
-    loginUrl.searchParams.set("from", request.nextUrl.pathname)
-    return NextResponse.redirect(loginUrl, 302)
-  }
-  return NextResponse.next()
 }
 
 function handleClientAuth(request: NextRequest): NextResponse {
@@ -107,7 +89,6 @@ function handleAdminAuth(request: NextRequest): NextResponse {
 
 export const config = {
   matcher: [
-    "/factory/:path*", "/api/factory/:path*",
     "/client/:path*", "/api/client/:path*",
     "/admin/:path*", "/api/admin/:path*",
     "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne",
