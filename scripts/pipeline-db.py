@@ -26,11 +26,15 @@ BLOG_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "content", "
 
 def get_db():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA journal_mode=WAL")
-    conn.execute("PRAGMA foreign_keys=ON")
-    return conn
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        conn.execute("PRAGMA journal_mode=WAL")
+        conn.execute("PRAGMA foreign_keys=ON")
+        return conn
+    except sqlite3.Error as e:
+        print(f"ERROR: Cannot open database at {DB_PATH}: {e}", file=sys.stderr)
+        sys.exit(1)
 
 def init_db():
     conn = get_db()
@@ -93,13 +97,15 @@ def add_article(data):
         data = json.loads(data)
     conn = get_db()
     conn.execute("""
-        INSERT OR REPLACE INTO articles (slug, title, category, sub_type, traffic, word_count, date_created, cluster_name, status)
+        INSERT OR IGNORE INTO articles (slug, title, category, sub_type, traffic, word_count, date_created, cluster_name, status)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pending')
     """, (
         data["slug"], data["title"], data["category"], data.get("sub_type", ""),
         data.get("traffic", ""), data.get("word_count", 0), data["date"],
         data.get("cluster_name", "")
     ))
+    if conn.total_changes == 0:
+        print(f"WARNING: {data['slug']} already exists — not overwritten")
     conn.commit()
     conn.close()
     print(f"Article recorded: {data['slug']}")
@@ -147,9 +153,8 @@ def freq_summary():
     print(f"{'Category':<30} {'Sub-type':<25} {'Count':>5}  {'Limit':>5}")
     print("-" * 70)
     for r in rows:
-        limit = 3 if r["sub_type"] != "" else 3
         bar = "█" * min(r["cnt"], 10) + "░" * max(0, 10 - r["cnt"]) if r["cnt"] <= 10 else "█" * 10
-        print(f"{r['category']:<30} {r['sub_type']:<25} {r['cnt']:>5}  {limit:>5}  {bar}")
+        print(f"{r['category']:<30} {r['sub_type']:<25} {r['cnt']:>5}    {'':>5}  {bar}")
 
 def status():
     """Pipeline overview."""
@@ -301,25 +306,24 @@ def backfill():
     # Phase 2: Cross-reference with git log for deployment dates
     try:
         result = subprocess.run(
-            ["git", "log", "--oneline", "--name-only", "--diff-filter=A", "--", "content/blog/"],
+            ["git", "log", "--format=%H", "--name-only", "--diff-filter=A", "--", "content/blog/"],
             capture_output=True, text=True, cwd=os.path.dirname(BLOG_DIR)
         )
         current_commit = None
-        current_date = None
         for line in result.stdout.strip().split("\n"):
-            if line.startswith(" ") or not line:
+            line = line.strip()
+            if not line:
+                current_commit = None
                 continue
-            if " " in line and not line.startswith("content/"):
-                parts = line.split(" ", 1)
-                current_commit = parts[0]
-            elif line.startswith("content/blog/"):
+            if len(line) == 40 and all(c in "0123456789abcdef" for c in line):
+                current_commit = line
+            elif line.startswith("content/blog/") and current_commit:
                 fname = os.path.basename(line)
                 slug = fname.replace(".mdx", "")
-                if current_commit:
-                    conn.execute("""
-                        UPDATE articles SET commit_hash=?, status='deployed'
-                        WHERE slug=? AND commit_hash IS NULL
-                    """, (current_commit, slug))
+                conn.execute("""
+                    UPDATE articles SET commit_hash=?, status='deployed'
+                    WHERE slug=? AND commit_hash IS NULL
+                """, (current_commit, slug))
     except Exception:
         pass  # git may not be available
 
@@ -329,15 +333,18 @@ def backfill():
 
 def _extract_fm(content, field):
     """Extract a single frontmatter field value."""
+    in_frontmatter = False
     for line in content.split("\n"):
         line = line.strip()
-        if line.startswith(f"{field}:"):
+        if line == "---":
+            if not in_frontmatter:
+                in_frontmatter = True
+                continue
+            else:
+                break  # Closing delimiter
+        if in_frontmatter and line.startswith(f"{field}:"):
             val = line.split(":", 1)[1].strip()
             return val.strip('"')
-        if line == "---":
-            if field in ("slug", "title", "category", "date"):
-                continue  # First ---, keep going
-            break
     return ""
 
 def _classify_sub_type(title, category):
@@ -345,10 +352,14 @@ def _classify_sub_type(title, category):
     title_lower = title.lower()
     if " vs " in title_lower or " v " in title_lower:
         return "match"
-    if any(w in title_lower for w in ["results", "standings", "stats", "scores", "finals", "world cup", "league", "draft", "season"]):
+    if any(w in title_lower for w in ["grand prix", "standings", "finals", "scores", "tournament"]):
+        return "league"
+    if "world cup" in title_lower and "stats" in title_lower:
+        return "league"
+    if "draft" in title_lower:
         return "league"
     if category == "Sports Merchandise Sourcing":
-        return "player"  # Default sport article to player if not match/league
+        return "player"
     if "supply chain" in title_lower or "procurement" in title_lower:
         return "supply_chain"
     if "retail" in title_lower:
