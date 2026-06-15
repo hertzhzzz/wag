@@ -56,17 +56,6 @@
           "report_id": "ouye-led"
         },
         {
-          "id": "lingyin-audio",
-          "type": "due_diligence_report",
-          "title": "Lingyin Electronics — Supplier Due Diligence & Capability Assessment",
-          "supplier": "Guangzhou Lingyin Electronic Equipment Co., Ltd.",
-          "category": "Public Broadcast Systems, Professional Loudspeakers, Microphones",
-          "date": "2026-06-12",
-          "status": "delivered",
-          "client_reviewed": false,
-          "report_id": "lingyin-audio"
-        },
-        {
           "id": "wanma-display",
           "type": "due_diligence_report",
           "title": "Wanma Electronics — Supplier Due Diligence & Capability Assessment",
@@ -76,17 +65,6 @@
           "status": "delivered",
           "client_reviewed": false,
           "report_id": "wanma-display"
-        },
-        {
-          "id": "zhongyue-furniture",
-          "type": "due_diligence_report",
-          "title": "Zhongyue Bohua — Supplier Due Diligence & Capability Assessment",
-          "supplier": "Xianghe Zhongyue Bohua Metal Products Co., Ltd.",
-          "category": "Control Consoles, Monitor Workstations, Lecterns, Technical Furniture",
-          "date": "2026-06-12",
-          "status": "delivered",
-          "client_reviewed": false,
-          "report_id": "zhongyue-furniture"
         },
         {
           "id": "it01",
