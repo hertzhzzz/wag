@@ -67,6 +67,50 @@
           "report_id": "wanma-display"
         },
         {
+          "id": "saijia-acoustics",
+          "type": "due_diligence_report",
+          "title": "Saijia Acoustics — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Saijia Acoustics & Lighting Engineering Co., Ltd.",
+          "category": "Broadcast Studios, Recording Studios, Acoustic Engineering",
+          "date": "2026-06-15",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "saijia-acoustics"
+        },
+        {
+          "id": "ezpro-av",
+          "type": "due_diligence_report",
+          "title": "EZPro Acoustics & Lighting — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Shenzhen Ezpro Acoustics & Lighting Technology Co., Ltd.",
+          "category": "Professional AV Systems, Conference Systems, Lighting",
+          "date": "2026-06-15",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "ezpro-av"
+        },
+        {
+          "id": "evscn-engineering",
+          "type": "due_diligence_report",
+          "title": "EVSCN Engineering — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Evscn Electronics Co., Ltd.",
+          "category": "AV Systems Integration, Stage Engineering, Building Intelligence",
+          "date": "2026-06-15",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "evscn-engineering"
+        },
+        {
+          "id": "ceopa-audio",
+          "type": "due_diligence_report",
+          "title": "CEOPA Electronics — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Ceopa Electronic Technology Co., Ltd.",
+          "category": "Public Broadcast Systems, Conference Systems, Professional Audio",
+          "date": "2026-06-15",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "ceopa-audio"
+        },
+        {
           "id": "it01",
           "type": "itinerary",
           "title": "Guangzhou Factory Visit Itinerary — July 2026",
