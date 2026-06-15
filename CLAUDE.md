@@ -171,10 +171,18 @@ Gmail rotation: SMTP fail → new App Password → verify locally → update Ver
 
 ### Report Images
 
-- Images: `public/reports/{client-slug}/images/` → MDX reference: `images/filename.jpeg`
+- Images served via API route: `/api/client/reports/images/{slug}/{path}` → reads from `content/reports/{slug}/` at runtime
+- `public/reports/` is a SECONDARY copy — both `content/` and `public/` must be synced after image modifications
+- API route `Cache-Control: no-cache` — do NOT set `max-age`; browsers would cache stale images across redeploys
 - `resolveReportImagePath()` in `imagePath.ts` (non-client pure utility, NOT `use client`)
 - `ReportImage.tsx`: client component with `onError` fallback
 - `ProductShowcase` + `ProductCard`: client components with React Context lightbox
+- Product gallery images: `content/reports/{slug}/images/supplier-catalog/{factory}/` — NEVER use `1688-products` in paths
+- Product images from cbu01.alicdn.com need top 13.83% cropped to remove platform banner: `img.crop((0, int(h*0.1383), w, h))`
+
+### Report Content Blacklist
+
+NEVER include in any report: 1688/Alibaba references, FCA report IDs (CANWT/TP/SZXWT/CNIR/SZA), supplier operational metrics (pass rate/fulfillment), company structure/subsidiaries/branches, contact info (phone/email/website), financial data (revenue/brand value/IPO), Chinese text in body or product titles.
 
 ### Report Content Conventions
 
