@@ -41,9 +41,21 @@ export async function POST(request: NextRequest) {
       return NextResponse.redirect(loginUrl)
     }
 
-    const token = (process.env.FACTORY_AUTH_TOKEN || "wag-factory-default-token").trim()
+    const token = process.env.FACTORY_AUTH_TOKEN?.trim()
+    if (!token) throw new Error("FACTORY_AUTH_TOKEN not set")
 
-    const response = NextResponse.redirect(new URL(from, request.url))
+    // Validate redirect target to prevent open redirect
+    let redirectUrl: URL
+    try {
+      redirectUrl = new URL(from, request.url)
+    } catch {
+      redirectUrl = new URL("/factory", request.url)
+    }
+    if (redirectUrl.origin !== request.nextUrl.origin) {
+      redirectUrl = new URL("/factory", request.url)
+    }
+
+    const response = NextResponse.redirect(redirectUrl)
     response.cookies.set("factory_auth", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
@@ -53,7 +65,8 @@ export async function POST(request: NextRequest) {
     })
 
     return response
-  } catch {
+  } catch (e) {
+    console.error("Factory auth error:", e instanceof Error ? e.message : e)
     return NextResponse.json({ error: "Auth error" }, { status: 500 })
   }
 }

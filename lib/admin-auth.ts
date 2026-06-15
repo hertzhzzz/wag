@@ -37,11 +37,20 @@ export async function createAdminSession(_ip: string): Promise<string | null> {
   }
 
   await redis.set(sessionKey(token), JSON.stringify(session), { ex: SESSION_TTL })
-  return signToken(token)
+  try {
+    return await signToken(token)
+  } catch {
+    return null
+  }
 }
 
 export async function validateAdminSession(signed: string): Promise<AdminSession | null> {
-  const token = await verifySignedToken(signed)
+  let token: string | null
+  try {
+    token = await verifySignedToken(signed)
+  } catch {
+    return null
+  }
   if (!token) return null
 
   const redis = getRedis()

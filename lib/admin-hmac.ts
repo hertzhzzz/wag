@@ -1,6 +1,10 @@
 import crypto from "crypto"
 
-const SECRET = () => process.env.ADMIN_SESSION_SECRET || "dev-secret-change-me"
+const SECRET = () => {
+  const secret = process.env.ADMIN_SESSION_SECRET
+  if (!secret) throw new Error("ADMIN_SESSION_SECRET not set")
+  return secret
+}
 
 /** Sign token with HMAC-SHA256. Returns "{token}.{hex_signature}" */
 export async function signToken(token: string): Promise<string> {

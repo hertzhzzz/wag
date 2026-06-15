@@ -106,7 +106,7 @@ For FloatImage (MDX content images):
 Blog images: `public/social/blog/{slug}/` — only source. MDX: `/social/blog/{slug}/image.png`
 Cover images (from content pipeline): `public/social/blog/{slug}/cover.png` — 16:9, generated via `baoyu-imagine` batch
 
-**Content Pipeline**: See `wag-content-pipeline` skill. Generates MDX articles + cover images + social posts to `ads/post/{YYYY-MM-DD}/{slug}/`.
+**Content Pipeline**: See `ARCHITECTURE.md`. Generates MDX articles + cover images to `frontend/content/blog/`. Social posts to `content-engine/social/`.
 
 ## Structured Data (Schema)
 

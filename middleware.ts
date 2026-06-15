@@ -10,20 +10,28 @@ const PUBLIC_PATHS = [
   "/api/admin/recover",
 ]
 
-const GONE_PATHS = [
+// GONE_PATHS: paths returning HTTP 410 Gone. sitemap.ts uses its own BLOCKED_SLUGS list — update BOTH when adding/removing deleted article paths.
+export const GONE_PATHS = [
   "/case-studies",
   "/adelaide",
   "/perth",
   "/brisbane",
   "/melbourne",
   "/resources/china-supplier-verification",
+  "/resources/resource-",  // 29 deleted resource-* articles (Phase 1 cleanup)
 ]
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   for (const gonePath of GONE_PATHS) {
-    if (pathname === gonePath || pathname.startsWith(gonePath + "/")) {
+    // Prefix entries (ending with -) match as startsWith directly, e.g. /resources/resource-
+    // Exact entries match the path itself + sub-paths, e.g. /case-studies + /case-studies/...
+    if (gonePath.endsWith("-")) {
+      if (pathname.startsWith(gonePath)) {
+        return new NextResponse("Gone", { status: 410 })
+      }
+    } else if (pathname === gonePath || pathname.startsWith(gonePath + "/")) {
       return new NextResponse("Gone", { status: 410 })
     }
   }
@@ -57,8 +65,12 @@ export function middleware(request: NextRequest) {
 }
 
 function handleFactoryAuth(request: NextRequest): NextResponse {
+  const expected = process.env.FACTORY_AUTH_TOKEN?.trim()
+  if (!expected) {
+    return new NextResponse("Auth not configured", { status: 500 })
+  }
   const authToken = request.cookies.get("factory_auth")
-  if (!authToken || authToken.value !== (process.env.FACTORY_AUTH_TOKEN || "").trim()) {
+  if (!authToken || authToken.value !== expected) {
     const loginUrl = new URL("/factory/login", request.url)
     loginUrl.searchParams.set("from", request.nextUrl.pathname)
     return NextResponse.redirect(loginUrl, 302)
@@ -100,5 +112,6 @@ export const config = {
     "/admin/:path*", "/api/admin/:path*",
     "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne",
     "/resources/china-supplier-verification",
+    "/resources/resource-:path*",  // deleted resource-* articles → 410
   ],
 }
