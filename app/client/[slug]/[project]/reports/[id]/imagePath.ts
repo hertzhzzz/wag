@@ -1,11 +1,12 @@
 /**
- * Resolve a report image path to the auth-protected API route.
- * Images are served through /api/client/reports/images/{clientSlug}/{path}
- * which validates the client_auth_{slug} session cookie.
+ * Resolve a report image path.
+ * Relative paths (images embedded in MDX via ![]() syntax) are resolved to
+ * the static public/reports/ directory. Absolute paths (ProductCard src) are
+ * returned unchanged.
  */
 export function resolveReportImagePath(src: string, clientSlug: string): string {
   if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("/")) {
     return src
   }
-  return `/api/client/reports/images/${clientSlug}/${src}`
+  return `/reports/${clientSlug}/${src}`
 }
