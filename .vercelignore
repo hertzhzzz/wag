@@ -1,1 +1,7 @@
-content/reports/
+content/reports/**/*.jpg
+content/reports/**/*.jpeg
+content/reports/**/*.png
+content/reports/**/*.gif
+content/reports/**/*.webp
+content/reports/**/*.avif
+content/reports/**/*.bmp
