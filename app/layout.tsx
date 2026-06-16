@@ -127,6 +127,9 @@ export default async function RootLayout({
             gtag('config', 'G-VEGJ1YL8YR');
           `}
         </Script>
+        <Script id="google-ads" strategy="afterInteractive">
+          {`gtag('config', 'AW-18216448449');`}
+        </Script>
         <Script id="meta-pixel" strategy="lazyOnload" dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
