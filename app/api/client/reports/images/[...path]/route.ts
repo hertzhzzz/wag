@@ -32,11 +32,11 @@ export async function GET(
     return new NextResponse("Unauthorized", { status: 401 })
   }
 
-  // Read from content/reports/ (NOT public/ — would bloat Vercel function size)
-  const fullPath = join(process.cwd(), "content", "reports", slug, filePath)
+  // Read from public/reports/ — served as static assets, not bundled into function
+  const fullPath = join(process.cwd(), "public", "reports", slug, filePath)
 
   // Prevent directory traversal
-  if (!fullPath.startsWith(join(process.cwd(), "content", "reports"))) {
+  if (!fullPath.startsWith(join(process.cwd(), "public", "reports"))) {
     return new NextResponse("Forbidden", { status: 403 })
   }
 
