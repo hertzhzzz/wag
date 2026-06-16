@@ -45,17 +45,6 @@
           "report_id": "fengsheng-stage"
         },
         {
-          "id": "ouye-led",
-          "type": "due_diligence_report",
-          "title": "Ouye Electronics — Supplier Due Diligence & Capability Assessment",
-          "supplier": "Guangzhou Ouye Electronics Co., Ltd.",
-          "category": "LED Display Screens, Indoor LED Panels",
-          "date": "2026-06-12",
-          "status": "delivered",
-          "client_reviewed": false,
-          "report_id": "ouye-led"
-        },
-        {
           "id": "wanma-display",
           "type": "due_diligence_report",
           "title": "Wanma Electronics — Supplier Due Diligence & Capability Assessment",
@@ -65,6 +54,28 @@
           "status": "delivered",
           "client_reviewed": false,
           "report_id": "wanma-display"
+        },
+        {
+          "id": "zhaotong-video",
+          "type": "due_diligence_report",
+          "title": "STVIDEO Zhaotong — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Shenzhen Zhaotong Video-Film Technology Co., Ltd. (STVIDEO)",
+          "category": "Camera Cranes, Teleprompters, Broadcast Robotics, AV System Integration",
+          "date": "2026-06-16",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "zhaotong-video"
+        },
+        {
+          "id": "lax-audio",
+          "type": "due_diligence_report",
+          "title": "LAX Audio (Ruifeng Technology) — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Ruifeng Audio Technology Co., Ltd. (锐丰科技/LAX)",
+          "category": "Professional Audio, Speakers, Amplifiers, Conference Systems",
+          "date": "2026-06-16",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "lax-audio"
         },
         {
           "id": "it01",
@@ -112,9 +123,9 @@
           "match": "Good"
         },
         {
-          "product": "Tripods / Camera Equipment",
-          "supplier": "TBD",
-          "match": "Pending"
+          "product": "Camera Cranes / Teleprompters",
+          "supplier": "STVIDEO Zhaotong",
+          "match": "Good"
         },
         {
           "product": "Tables & Chairs / Trolleys",
@@ -138,6 +149,11 @@
             "name": "Rand Electronic Technology",
             "city": "Guangzhou (Tianhe)",
             "category": "Stage Lighting, Machinery, Drapes"
+          },
+          {
+            "name": "STVIDEO Zhaotong",
+            "city": "Shenzhen (Futian)",
+            "category": "Camera Cranes, Teleprompters, AV Integration"
           }
         ]
       }
