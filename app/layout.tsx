@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { headers } from 'next/headers'
 import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import ScrollTracker from './components/ScrollTracker'
 import MarkHeSchema from './components/MarkHeSchema'
@@ -246,6 +247,7 @@ export default async function RootLayout({
       </main>
       {!isAdmin && <FloatingEnquiryWidget />}
       <ScrollTracker />
+      <Analytics />
     </body>
     </html>
   )
