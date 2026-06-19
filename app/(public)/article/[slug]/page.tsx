@@ -5,8 +5,6 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
-import { readFileSync, existsSync } from 'fs'
-import { join } from 'path'
 import ArticleSchema from '@/components/ArticleSchema'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import FAQSchema from '@/components/FAQSchema'
@@ -14,25 +12,10 @@ import { ReadingProgressBar } from './ReadingProgressBar'
 import { BackToTopButton } from './BackToTopButton'
 import { ShareButtons } from './ShareButtons'
 import { ArticleNavigation } from './ArticleNavigation'
-import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema, getRecommendedArticles } from './article-utils'
-import { RecommendedSidebar } from './RecommendedSidebar'
+import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema } from './article-utils'
 import { HOW_TO_ARTICLES } from './how-to-data'
 import { createMdxComponents } from './mdx-components'
-import { RelatedFactoryLink } from './RelatedFactoryLink'
 import type { Frontmatter } from './types'
-
-function getRelatedFactories(articleSlug: string): Array<{ slug: string; name: string }> {
-  try {
-    const graphPath = join(process.cwd(), "data/link-graph.json")
-    if (!existsSync(graphPath)) return []
-    const graph = JSON.parse(readFileSync(graphPath, "utf-8"))
-    const refs: Array<{ slug: string; score: number; name: string }> = graph.article_to_factories?.[articleSlug] ?? []
-    return refs.slice(0, 4)
-  } catch (e) {
-    if ((e as NodeJS.ErrnoException).code !== "ENOENT") console.error("[link-graph]", e)
-    return []
-  }
-}
 
 // ============================================
 // STATIC GENERATION
@@ -100,7 +83,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const takeaways: string[] = fm.takeaways || []
   const { prevArticle, nextArticle } = getPrevNextArticles(slug)
   const { intro, body } = splitContent(content)
-  const relatedArticles = getRecommendedArticles(slug, fm.category)
   // Extract FAQs from MDX content for JSON-LD schema
   const articleFaqs = extractFaqsFromContent(content)
 
@@ -181,40 +163,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   {/* Previous / Next Navigation */}
                   <ArticleNavigation prevArticle={prevArticle} nextArticle={nextArticle} />
 
-                  {/* Related Factories */}
-                  {(() => {
-                    const relatedFactories = getRelatedFactories(slug)
-                    if (relatedFactories.length === 0) return null
-                    return (
-                      <section className="mt-12 pt-8 border-t border-gray-200">
-                        <h2 className="font-serif text-2xl font-bold text-[#0F2D5E] mb-2">Verified Factories for This Industry</h2>
-                        <p className="text-sm text-gray-500 mb-5">Manufacturers from our factory directory — each verified with on-site assessment.</p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          {relatedFactories.map((f) => (
-                            <RelatedFactoryLink
-                              key={f.slug}
-                              slug={f.slug}
-                              name={f.name}
-                              articleSlug={slug}
-                            />
-                          ))}
-                        </div>
-                        <div className="mt-3 text-right">
-                          <Link href="/factory" className="text-xs text-amber-600 hover:text-amber-700 font-medium transition">
-                            Browse all 1,200+ verified factories →
-                          </Link>
-                        </div>
-                      </section>
-                    )
-                  })()}
-
-                  {/* Related Articles */}
-                  {relatedArticles.length > 0 && (
-                    <section className="mt-12 pt-8 border-t border-gray-200">
-                      <h2 className="font-serif text-2xl font-bold text-[#0F2D5E] mb-6">Related Articles</h2>
-                      <RecommendedSidebar articles={relatedArticles} />
-                    </section>
-                  )}
                 </div>
               </article>
             </main>
