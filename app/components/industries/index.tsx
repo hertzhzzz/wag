@@ -98,6 +98,10 @@ export const moreIndustries: MoreIndustryCategory[] = [
     category: 'Energy & Environment',
     items: ['Solar Systems', 'Battery Storage', 'Water Treatment', 'Waste Management', 'EV Charging', 'Wind Components'],
   },
+  {
+    category: 'Others',
+    items: ['Custom Manufacturing', 'Industrial Equipment', 'Packaging Materials', 'Promotional Products', 'Specialty Items', 'Not Listed — Contact Us'],
+  },
 ]
 
 export default function Industries() {

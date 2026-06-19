@@ -88,6 +88,11 @@ export default function Footer() {
                   AV & Electronics
                 </Link>
               </li>
+              <li>
+                <Link href="/#industries" className="text-white/70 text-sm hover:text-white transition-colors">
+                  Others
+                </Link>
+              </li>
             </ul>
           </div>
 
