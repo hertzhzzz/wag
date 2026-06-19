@@ -110,6 +110,10 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
               value: 1,
               currency: 'AUD',
             })
+            // Google Ads conversion tracking
+            win.gtag('event', 'conversion', {
+              send_to: 'AW-18216448449/JvUBCMe4yMEcEMHjo-5D',
+            })
           }
           if (win.fbq) {
             win.fbq('track', 'Lead', {
