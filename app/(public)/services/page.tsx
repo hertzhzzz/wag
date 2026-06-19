@@ -316,6 +316,71 @@ export default function ServicesPage() {
       </ScrollReveal>
 
       {/* ============================================
+          #sourcing-agent — China Sourcing Agent
+          ============================================ */}
+      <ScrollReveal>
+        <section id="sourcing-agent" className="py-12 md:py-16 px-4 md:px-8 bg-white">
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-3xl text-navy mb-4">
+              China Sourcing Agent for Australian Businesses
+            </h2>
+            <p className="text-gray-600 mb-4 max-w-[720px] leading-relaxed">
+              We act as your on-the-ground procurement team in China — finding factories, negotiating prices,
+              managing quality control, and handling logistics. Unlike online platforms where you never know
+              who you are dealing with, we visit factories in person, verify their credentials, and stand
+              behind our recommendations.
+            </p>
+            <p className="text-gray-600 mb-6 max-w-[720px] leading-relaxed">
+              Whether you need a one-time bulk order or ongoing supply, we match you with pre-screened
+              manufacturers that fit your product, budget, and volume requirements.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/enquiry"
+                className="inline-block bg-navy text-white py-3 px-8 text-sm font-semibold hover:bg-navy/90 transition-colors min-h-11"
+              >
+                Get a Free Supplier Shortlist →
+              </Link>
+              <Link
+                href="/article/how-to-import-from-china"
+                className="inline-block border border-navy/20 text-navy py-3 px-8 text-sm font-semibold hover:border-navy transition-colors min-h-11"
+              >
+                How It Works
+              </Link>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* ============================================
+          #factory-audit — Factory Audit & Supplier Verification
+          ============================================ */}
+      <ScrollReveal>
+        <section id="factory-audit" className="py-12 md:py-16 px-4 md:px-8 bg-[#f0f4f8]">
+          <div className="max-w-[1100px] mx-auto">
+            <h2 className="font-serif text-3xl text-navy mb-4">
+              Factory Audit & Supplier Verification in China
+            </h2>
+            <p className="text-gray-600 mb-4 max-w-[720px] leading-relaxed">
+              Before you pay any deposit, we verify the factory exists, holds the certifications they claim,
+              and can produce to your specifications. Our audit covers business licence checks, production
+              floor assessment, equipment verification, and certificate authentication.
+            </p>
+            <p className="text-gray-600 mb-6 max-w-[720px] leading-relaxed">
+              You receive a written report with photos, licence documentation, and our assessment of whether
+              the supplier is a genuine manufacturer — not a trading company posing as one.
+            </p>
+            <Link
+              href="/enquiry"
+              className="inline-block bg-amber text-navy py-3 px-8 text-sm font-semibold hover:bg-amber/90 transition-colors min-h-11"
+            >
+              Request a Factory Audit →
+            </Link>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* ============================================
           #compare — Comparison Table
           ============================================ */}
       <ScrollReveal>
