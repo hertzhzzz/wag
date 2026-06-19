@@ -352,16 +352,16 @@ export default function EnquiryForm() {
               {/* Trust stats */}
               <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-100">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-[#0F2D5E]">Verified</p>
-                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Listed Partner</p>
+                  <p className="text-lg font-bold text-[#0F2D5E]">200+</p>
+                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Factory Visits</p>
                 </div>
                 <div className="text-center border-x border-gray-100">
                   <p className="text-lg font-bold text-[#0F2D5E]">4hrs</p>
-                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Response</p>
+                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Response Time</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-bold text-[#0F2D5E]">$0</p>
-                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Upfront</p>
+                  <p className="text-lg font-bold text-[#0F2D5E]">AU-Based</p>
+                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Team</p>
                 </div>
               </div>
 
