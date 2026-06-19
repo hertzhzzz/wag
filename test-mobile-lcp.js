@@ -96,7 +96,7 @@ async function runTest() {
   const pages = [
     { name: 'Homepage', url: 'https://www.winningadventure.com.au' },
     { name: '/about', url: 'https://www.winningadventure.com.au/about' },
-    { name: '/resources', url: 'https://www.winningadventure.com.au/resources' }
+    { name: '/article', url: 'https://www.winningadventure.com.au/article' }
   ];
 
   for (const p of pages) {

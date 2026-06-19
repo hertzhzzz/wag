@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
+import { isGonePath } from "@/lib/gone-paths"
 
 const PROTECTED_PATHS = ["/client", "/admin"]
 const PUBLIC_PATHS = [
@@ -8,30 +9,16 @@ const PUBLIC_PATHS = [
   "/api/admin/recover",
 ]
 
-// GONE_PATHS: paths returning HTTP 410 Gone. sitemap.ts uses its own BLOCKED_SLUGS list — update BOTH when adding/removing deleted article paths.
-export const GONE_PATHS = [
-  "/case-studies",
-  "/adelaide",
-  "/perth",
-  "/brisbane",
-  "/melbourne",
-  "/resources/china-supplier-verification",
-  "/resources/resource-",  // 29 deleted resource-* articles (Phase 1 cleanup)
-]
-
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl
+  const { pathname, hostname } = request.nextUrl
 
-  for (const gonePath of GONE_PATHS) {
-    // Prefix entries (ending with -) match as startsWith directly, e.g. /resources/resource-
-    // Exact entries match the path itself + sub-paths, e.g. /case-studies + /case-studies/...
-    if (gonePath.endsWith("-")) {
-      if (pathname.startsWith(gonePath)) {
-        return new NextResponse("Gone", { status: 410 })
-      }
-    } else if (pathname === gonePath || pathname.startsWith(gonePath + "/")) {
-      return new NextResponse("Gone", { status: 410 })
-    }
+  if (isGonePath(pathname)) {
+    return new NextResponse("Gone", { status: 410 })
+  }
+
+  // Block /factory in production (local dev only for now)
+  if (pathname.startsWith("/factory") && !hostname.includes("localhost") && !hostname.includes("127.0.0.1")) {
+    return new NextResponse("Not Found", { status: 404 })
   }
 
   const isProtected = PROTECTED_PATHS.some((prefix) => pathname.startsWith(prefix))
@@ -89,10 +76,10 @@ function handleAdminAuth(request: NextRequest): NextResponse {
 
 export const config = {
   matcher: [
+    "/factory/:path*",
     "/client/:path*", "/api/client/:path*",
     "/admin/:path*", "/api/admin/:path*",
     "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne",
-    "/resources/china-supplier-verification",
-    "/resources/resource-:path*",  // deleted resource-* articles → 410
+    "/article/resource-:path*",  // deleted resource-* articles → 410
   ],
 }

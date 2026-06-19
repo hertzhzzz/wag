@@ -25,11 +25,11 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
   const animationKey = useRef(0)
 
   // Auto-open on article pages — disabled
-  // Previously: auto-opened panel when pathname started with /resources/
+  // Previously: auto-opened panel when pathname started with /article/
   // Removed to prevent disrupting the reading flow on blog article pages.
   // User must manually click the trigger button to open the enquiry panel.
   // useEffect(() => {
-  //   const isArticle = pathname && pathname.startsWith('/resources/') && pathname !== '/resources'
+  //   const isArticle = pathname && pathname.startsWith('/article/') && pathname !== '/article'
   //   if (isArticle && lastPathname.current !== pathname) {
   //     animationKey.current += 1
   //     setIsPanelVisible(true)

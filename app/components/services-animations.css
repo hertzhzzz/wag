@@ -92,6 +92,33 @@
 [data-animate="true"] .svc-case-study:nth-child(3) { transition-delay: 0.2s; }
 [data-animate="true"] .svc-case-study:nth-child(4) { transition-delay: 0.3s; }
 
+/* ---- Service Tier Cards ---- */
+.svc-tier-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-animate="true"] .svc-tier-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-animate="true"] .svc-tier-card:nth-child(1) { transition-delay: 0s; }
+[data-animate="true"] .svc-tier-card:nth-child(2) { transition-delay: 0.1s; }
+[data-animate="true"] .svc-tier-card:nth-child(3) { transition-delay: 0.2s; }
+
+/* ---- Comparison Table Rows ---- */
+.compare-row {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-animate="true"] .compare-row {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ---- Hero CTA buttons pulse ---- */
 @keyframes cta-subtle {
   0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
@@ -117,7 +144,9 @@ citations-details[open] summary .citations-arrow {
   .process-step,
   .diff-card,
   .industry-card,
-  .svc-case-study {
+  .svc-case-study,
+  .svc-tier-card,
+  .compare-row {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

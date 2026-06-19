@@ -1,0 +1,323 @@
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import Link from 'next/link'
+import Image from 'next/image'
+import { notFound } from 'next/navigation'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
+import { readFileSync, existsSync } from 'fs'
+import { join } from 'path'
+import ArticleSchema from '@/components/ArticleSchema'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import FAQSchema from '@/components/FAQSchema'
+import { ReadingProgressBar } from './ReadingProgressBar'
+import { BackToTopButton } from './BackToTopButton'
+import { ShareButtons } from './ShareButtons'
+import { ArticleNavigation } from './ArticleNavigation'
+import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema, getRecommendedArticles } from './article-utils'
+import { RecommendedSidebar } from './RecommendedSidebar'
+import { HOW_TO_ARTICLES } from './how-to-data'
+import { createMdxComponents } from './mdx-components'
+import { RelatedFactoryLink } from './RelatedFactoryLink'
+import type { Frontmatter } from './types'
+
+function getRelatedFactories(articleSlug: string): Array<{ slug: string; name: string }> {
+  try {
+    const graphPath = join(process.cwd(), "data/link-graph.json")
+    if (!existsSync(graphPath)) return []
+    const graph = JSON.parse(readFileSync(graphPath, "utf-8"))
+    const refs: Array<{ slug: string; score: number; name: string }> = graph.article_to_factories?.[articleSlug] ?? []
+    return refs.slice(0, 4)
+  } catch (e) {
+    if ((e as NodeJS.ErrnoException).code !== "ENOENT") console.error("[link-graph]", e)
+    return []
+  }
+}
+
+// ============================================
+// STATIC GENERATION
+// ============================================
+
+export async function generateStaticParams() {
+  return getAllSlugs().map(slug => ({ slug }))
+}
+
+// ============================================
+// METADATA
+// ============================================
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const article = getArticle(slug)
+  if (!article) return {}
+
+  const { frontmatter: fm } = article
+  // Build dynamic keywords from frontmatter tags and category
+  const tagKeywords = Array.isArray(fm.tags) ? fm.tags : []
+  const categoryKeyword = fm.category ? [fm.category] : []
+  const dynamicKeywords = [...categoryKeyword, ...tagKeywords]
+
+  return {
+    title: fm.title,
+    description: fm.description,
+    keywords: dynamicKeywords.length > 0 ? dynamicKeywords : ['China factory tour', 'factory visit China', 'Australian business China sourcing', 'supplier verification'],
+    authors: [{ name: fm.author }],
+    openGraph: {
+      title: fm.title,
+      description: fm.description,
+      type: 'article',
+      publishedTime: fm.date,
+      authors: [fm.author],
+      images: fm.coverImage ? [{ url: fm.coverImage, width: 1200, height: 630, alt: fm.title }] : [],
+      url: `https://www.winningadventure.com.au/article/${slug}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: fm.title,
+      description: fm.description,
+      images: fm.coverImage ? [fm.coverImage] : [],
+    },
+    alternates: {
+      canonical: `https://www.winningadventure.com.au/article/${slug}`,
+      languages: {
+        'en-AU': `https://www.winningadventure.com.au/article/${slug}`,
+        'x-default': `https://www.winningadventure.com.au/article/${slug}`,
+      },
+    },
+  }
+}
+
+// ============================================
+// PAGE COMPONENT
+// ============================================
+
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const article = getArticle(slug)
+  if (!article) notFound()
+
+  const { frontmatter: fm, content } = article
+  const takeaways: string[] = fm.takeaways || []
+  const { prevArticle, nextArticle } = getPrevNextArticles(slug)
+  const { intro, body } = splitContent(content)
+  const relatedArticles = getRecommendedArticles(slug, fm.category)
+  // Extract FAQs from MDX content for JSON-LD schema
+  const articleFaqs = extractFaqsFromContent(content)
+
+  // Create MDX component mapping with article-specific CTA data
+  const components = createMdxComponents(fm.ctaTitle, fm.ctaText, fm.ctaButtonText)
+
+  // Check if this article has HowTo schema
+  const howToData = HOW_TO_ARTICLES[slug]
+
+  return (
+    <>
+      {/* Navigation */}
+      <Navbar />
+
+      {/* Scroll progress indicator */}
+      <ReadingProgressBar />
+
+      {/* Back to top floating button */}
+      <BackToTopButton />
+
+      {/* SEO Schemas */}
+      <ArticleSchema
+        title={fm.title}
+        description={fm.description}
+        url={`https://www.winningadventure.com.au/article/${slug}`}
+        author={fm.author}
+        datePublished={formatDateForSchema(fm.date)}
+        dateModified={fm.updatedDate ? formatDateForSchema(fm.updatedDate) : formatDateForSchema(fm.date)}
+        image={fm.coverImage}
+        category={fm.category}
+      />
+
+      {articleFaqs.length > 0 && <FAQSchema faqs={articleFaqs} />}
+
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: 'https://www.winningadventure.com.au' },
+        { name: 'Articles', url: 'https://www.winningadventure.com.au/article' },
+        { name: fm.title, url: `https://www.winningadventure.com.au/article/${slug}` },
+      ]} />
+
+      {/* Hero Section */}
+      <HeroSection fm={fm} />
+
+      {/* Article Body */}
+      <div className="py-10 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-col">
+            {/* Main article content — centered, no sidebar */}
+            <main className="w-full max-w-[900px] mx-auto">
+              <article>
+                <div className="max-w-[900px] mx-auto">
+
+                  {/* Key Takeaways - positioned early for scannability */}
+                  {takeaways.length > 0 && <KeyTakeaways items={takeaways} />}
+
+                  {/* Article Meta with Share */}
+                  <div className="flex items-center justify-between py-3 border-b border-gray-200 mb-6">
+                    <div className="flex items-center gap-4 text-sm text-gray-400">
+                      <span>{fm.date}</span>
+                    </div>
+                    <ShareButtons
+                      title={fm.title}
+                      url={`https://www.winningadventure.com.au/article/${slug}`}
+                    />
+                  </div>
+
+                  {/* Intro Section - The Hook */}
+                  <div className="pb-8 border-b border-gray-200 mb-8">
+                    <MDXRemote source={intro} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+                  </div>
+
+                  {/* Body Content */}
+                  <MDXRemote source={body} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+
+                  {/* Bottom CTA */}
+                  <BottomCTA fm={fm} />
+
+                  {/* Previous / Next Navigation */}
+                  <ArticleNavigation prevArticle={prevArticle} nextArticle={nextArticle} />
+
+                  {/* Related Factories */}
+                  {(() => {
+                    const relatedFactories = getRelatedFactories(slug)
+                    if (relatedFactories.length === 0) return null
+                    return (
+                      <section className="mt-12 pt-8 border-t border-gray-200">
+                        <h2 className="font-serif text-2xl font-bold text-[#0F2D5E] mb-2">Verified Factories for This Industry</h2>
+                        <p className="text-sm text-gray-500 mb-5">Manufacturers from our factory directory — each verified with on-site assessment.</p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          {relatedFactories.map((f) => (
+                            <RelatedFactoryLink
+                              key={f.slug}
+                              slug={f.slug}
+                              name={f.name}
+                              articleSlug={slug}
+                            />
+                          ))}
+                        </div>
+                        <div className="mt-3 text-right">
+                          <Link href="/factory" className="text-xs text-amber-600 hover:text-amber-700 font-medium transition">
+                            Browse all 1,200+ verified factories →
+                          </Link>
+                        </div>
+                      </section>
+                    )
+                  })()}
+
+                  {/* Related Articles */}
+                  {relatedArticles.length > 0 && (
+                    <section className="mt-12 pt-8 border-t border-gray-200">
+                      <h2 className="font-serif text-2xl font-bold text-[#0F2D5E] mb-6">Related Articles</h2>
+                      <RecommendedSidebar articles={relatedArticles} />
+                    </section>
+                  )}
+                </div>
+              </article>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  )
+}
+
+// ============================================
+// SUB-COMPONENTS (preserve exact original styles)
+// ============================================
+
+function HeroSection({ fm }: { fm: Frontmatter }) {
+  const hasCover = !!fm.coverImage
+  return (
+    <>
+      <section className={`relative pt-8 pb-6 px-6 border-b border-gray-100 overflow-hidden ${hasCover ? 'text-white' : 'bg-white'}`}>
+        {hasCover && (
+          <Image
+            src={fm.coverImage as string}
+            alt=""
+            fill
+            priority
+            className="object-cover z-0"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 900px, 1200px"
+            quality={85}
+          />
+        )}
+        {hasCover && <div className="absolute inset-0 bg-[#0F2D5E]/75 z-[1]" />}
+        <div className="relative z-10 max-w-[900px] mx-auto">
+          <nav className="flex items-center gap-2 text-xs uppercase tracking-wider mb-4">
+            <Link href="/" className={`hover:text-[#F59E0B] transition-colors ${hasCover ? 'text-white/70' : 'text-gray-400'}`}>Home</Link>
+            <span className={hasCover ? 'text-white/50' : 'text-gray-300'}>›</span>
+            <Link href="/article" className={`hover:text-[#F59E0B] transition-colors ${hasCover ? 'text-white/70' : 'text-gray-400'}`}>Resources</Link>
+          </nav>
+          <p className="text-xs font-bold tracking-widest uppercase mb-3 text-[#F59E0B]">{fm.category}</p>
+          <h1 className={`font-serif font-bold text-[clamp(1.5rem,3vw,2.25rem)] leading-tight mb-4 max-w-3xl ${hasCover ? '' : 'text-[#0F2D5E]'}`}>
+            {fm.title}
+          </h1>
+          {fm.subtitle && (
+            <p className={`text-lg leading-relaxed mb-4 max-w-2xl ${hasCover ? 'text-white/80' : 'text-gray-600'}`}>
+              {fm.subtitle}
+            </p>
+          )}
+        </div>
+      </section>
+      <div className="bg-white px-6 py-3 border-b border-gray-100">
+        <div className="max-w-[900px] mx-auto">
+          <div className="flex items-center gap-4 text-sm text-gray-500">
+            <Link href="/about" className="font-medium text-[#0F2D5E] hover:text-[#F59E0B] transition-colors">{fm.author}</Link>
+            <span className="text-gray-300">·</span>
+            <span>{fm.date}</span>
+            <span className="text-gray-300">·</span>
+            <span>{fm.readTime}</span>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+function KeyTakeaways({ items }: { items: string[] }) {
+  return (
+    <div className="bg-gray-50 border border-gray-200 text-[#0F2D5E] p-6 rounded-xl mb-6 shadow-sm">
+      <div className="flex items-center gap-3 mb-4">
+        <div className="w-9 h-9 rounded-lg bg-[#F59E0B] flex items-center justify-center">
+          <svg aria-hidden="true" className="w-5 h-5 text-[#0F2D5E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 className="font-serif font-bold text-lg text-[#0F2D5E]">Key Takeaways</h3>
+      </div>
+      <ul className="space-y-2">
+        {items.map((item, i) => (
+          <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+            <span className="w-5 h-5 rounded-full bg-[#0F2D5E] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+              {i + 1}
+            </span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function BottomCTA({ fm }: { fm: Frontmatter }) {
+  return (
+    <div className="border-2 border-[#0F2D5E] p-6 text-center mt-8 rounded-xl">
+      <p className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase mb-2">{fm.category}</p>
+      <h3 className="font-serif text-xl font-bold text-[#0F2D5E] mb-2">{fm.ctaTitle}</h3>
+      <p className="text-gray-600 mb-4 max-w-md mx-auto text-sm">{fm.ctaText}</p>
+      <Link
+        href="/enquiry"
+        className="inline-block bg-[#0F2D5E] text-white font-semibold px-6 py-3 hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors rounded-sm text-sm"
+      >
+        {fm.ctaButtonText}
+      </Link>
+      <p className="text-xs text-gray-400 mt-3">Free initial consultation · We respond within 4 business hours</p>
+    </div>
+  )
+}

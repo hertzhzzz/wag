@@ -91,7 +91,7 @@ export default function BlogPreview() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link
-              href="/resources"
+              href="/article"
               className="self-start md:self-auto text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors whitespace-nowrap flex items-center gap-1.5 min-h-11"
             >
               View All Resources
@@ -111,7 +111,7 @@ export default function BlogPreview() {
             >
               {/* Cover image */}
               <Link
-                href={`/resources/${article.slug}`}
+                href={`/article/${article.slug}`}
                 className="relative block h-[180px] bg-[#0F2D5E] flex items-center justify-center overflow-hidden group flex-shrink-0"
               >
                 {article.coverImage ? (
@@ -141,7 +141,7 @@ export default function BlogPreview() {
                   )}
                 </p>
 
-                <Link href={`/resources/${article.slug}`} className="block flex-1">
+                <Link href={`/article/${article.slug}`} className="block flex-1">
                   <h3 className="font-serif text-[18px] font-semibold text-[#0F2D5E] leading-snug mb-3 hover:text-[#F59E0B] transition-colors">
                     {article.title}
                   </h3>
@@ -152,7 +152,7 @@ export default function BlogPreview() {
                 </p>
 
                 <Link
-                  href={`/resources/${article.slug}`}
+                  href={`/article/${article.slug}`}
                   className="self-start text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors flex items-center gap-1 min-h-8"
                 >
                   Read Guide

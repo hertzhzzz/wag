@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fengsheng Image Crop Tool</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee; }
+  header { position: sticky; top: 0; z-index: 100; background: #16213e; padding: 12px 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border-bottom: 2px solid #0f3460; }
+  header h1 { font-size: 16px; white-space: nowrap; }
+  header label { font-size: 13px; display: flex; align-items: center; gap: 6px; }
+  header input[type=range] { width: 100px; }
+  header button { padding: 6px 14px; background: #e94560; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; }
+  header button:hover { background: #c73a53; }
+  header .info { font-size: 12px; color: #a0a0b0; }
+  #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; padding: 12px; }
+  .card { background: #16213e; border-radius: 6px; overflow: hidden; position: relative; }
+  .card.selected { outline: 3px solid #e94560; }
+  .img-wrap { position: relative; cursor: crosshair; overflow: hidden; line-height: 0; }
+  .img-wrap img { width: 100%; display: block; }
+  .crop-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(233,69,96,0.45); pointer-events: none; }
+  .crop-line { position: absolute; left: 0; right: 0; height: 2px; background: #e94560; pointer-events: none; }
+  .crop-line::after { content: attr(data-pct); position: absolute; right: 4px; top: -18px; background: #e94560; color: #fff; font-size: 11px; padding: 1px 5px; border-radius: 3px; }
+  .label { padding: 6px 8px; font-size: 11px; display: flex; justify-content: space-between; align-items: center; }
+  .label .name { color: #ccc; }
+  .label .pct { color: #e94560; font-weight: bold; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Fengsheng — Crop from Bottom</h1>
+  <label>默认裁剪%: <input type="range" id="defaultPct" min="0" max="30" value="10" step="0.5" oninput="setDefault(this.value)"></label>
+  <span id="defaultVal" class="info">10%</span>
+  <button onclick="applyToAll()">Apply to All</button>
+  <button onclick="copyData()">Copy Crop Data</button>
+  <span id="status" class="info"></span>
+</header>
+<div id="grid"></div>
+
+<script>
+const BASE = '/reports/aaron-sansoni/images/supplier-catalog/fengsheng/';
+const TOTAL = 187;
+const cropData = {};
+
+function setDefault(v) {
+  document.getElementById('defaultVal').textContent = v + '%';
+}
+
+function buildGrid() {
+  const grid = document.getElementById('grid');
+  for (let i = 1; i <= TOTAL; i++) {
+    const num = String(i).padStart(3, '0');
+    const fname = `fengsheng-${num}.jpg`;
+    cropData[fname] = 0;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.id = 'card-' + i;
+    card.innerHTML = `
+      <div class="img-wrap" data-file="${fname}">
+        <img src="${BASE}${fname}" loading="lazy" onerror="this.parentElement.parentElement.style.display='none'">
+        <div class="crop-overlay" style="height:0%"></div>
+        <div class="crop-line" style="bottom:0%" data-pct="0%"></div>
+      </div>
+      <div class="label"><span class="name">${fname}</span><span class="pct">0%</span></div>
+    `;
+    grid.appendChild(card);
+
+    const wrap = card.querySelector('.img-wrap');
+    wrap.addEventListener('click', function(e) {
+      const rect = this.getBoundingClientRect();
+      const y = e.clientY - rect.top;
+      const h = rect.height;
+      const pctFromBottom = ((h - y) / h * 100);
+      const pct = Math.max(0, Math.min(30, Math.round(pctFromBottom * 2) / 2));
+      updateCrop(this, pct);
+    });
+  }
+}
+
+function updateCrop(wrap, pct) {
+  const fname = wrap.dataset.file;
+  cropData[fname] = pct;
+  wrap.querySelector('.crop-overlay').style.height = pct + '%';
+  wrap.querySelector('.crop-line').style.bottom = pct + '%';
+  wrap.querySelector('.crop-line').dataset.pct = pct + '%';
+  wrap.closest('.card').querySelector('.pct').textContent = pct + '%';
+}
+
+function applyToAll() {
+  const pct = parseFloat(document.getElementById('defaultPct').value);
+  document.querySelectorAll('.img-wrap').forEach(wrap => updateCrop(wrap, pct));
+  document.getElementById('status').textContent = `Applied ${pct}% to all ${TOTAL} images`;
+}
+
+function copyData() {
+  const nonZero = Object.entries(cropData).filter(([k,v]) => v > 0);
+  const summary = `CROP_DATA: ${nonZero.length}/${TOTAL} images with crop > 0%\n` +
+    nonZero.map(([k,v]) => `${k}: ${v}%`).join('\n') +
+    `\n# Paste into conversation for batch crop`;
+  navigator.clipboard.writeText(summary).then(() => {
+    document.getElementById('status').textContent = `Copied! ${nonZero.length} images with crop data`;
+  });
+}
+
+buildGrid();
+</script>
+</body>
+</html>

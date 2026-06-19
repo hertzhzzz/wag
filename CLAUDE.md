@@ -15,7 +15,7 @@ git push origin master  # deploy to Vercel
 ## Quick Reference
 
 **Key files:** `app/page.tsx` · `content/*.mdx` · `app/api/enquiry/` · `public/social/`
-**Pages:** `/` · `/solutions` · `/about` · `/resources` · `/enquiry` · `/visiting-chinese-factories` · `/china-sourcing-guide-australia`
+**Pages:** `/` · `/services` · `/about` · `/article` · `/enquiry` · `/visiting-chinese-factories` · `/china-sourcing-guide-australia`
 
 ---
 
@@ -28,7 +28,7 @@ Next.js 16.2 (App Router) · TypeScript 5 · Tailwind CSS 3.4 · MDX + next-mdx-
 ```
 frontend/
 ├── app/              # pages, API routes, components
-├── content/          # MDX articles → /resources/[slug] + reports → /client/[slug]/[project]/reports/[id]
+├── content/          # MDX articles → /article/[slug] + reports → /client/[slug]/[project]/reports/[id]
 ├── data/             # client configs (clients/{slug}.json), factory data
 ├── lib/              # utilities (rate-limit.ts, clients.ts, seo/, etc.)
 ├── public/social/    # blog images [SINGLE SOURCE]
@@ -77,9 +77,9 @@ components/PersonSchema.tsx, api/*/route.ts. ACN/TFN only in privacy/terms footn
 
 ## Known Gotchas
 
-- `app/services/page.tsx` — 301 `permanentRedirect` to `/solutions` (was placeholder ABN `12 345 678 901`)
-- `app/solutions/page.tsx` — 9-section hub page with anchor nav: #factory-tours, #procurement, #verification, #case-studies, #how-it-works, #industries, #faq, #cta
-- Hero background: `public/solutions/hero-bg.webp` (122KB WebP, 1920x1080, Google Imagen)
+- `app/services/page.tsx` — 3-tier comparison page: One-Time Procurement / Factory Tour + Supply Chain / Remote Verification + Supply Chain, with feature comparison table
+- `app/solutions/page.tsx` — 301 `permanentRedirect` to `/services` (legacy URL preservation)
+- Services hero: CSS gradient-only (no background image currently)
 - ScrollReveal CSS: `.svc-case-study[data-animate]` → `[data-animate] .svc-case-study` — descendant selectors required because `data-animate` lives on ScrollReveal wrapper, not card elements
 - Address format: always use `5/54 Melbourne St` (slash, not comma)
 
@@ -139,7 +139,7 @@ IndexNow is fully implemented for Bing/Naver/Yandex indexing.
 ```bash
 curl -X POST https://www.winningadventure.com.au/api/indexnow \
   -H "Content-Type: application/json" \
-  -d '{"url": "https://www.winningadventure.com.au/resources/new-article"}'
+  -d '{"url": "https://www.winningadventure.com.au/article/new-article"}'
 ```
 
 **Auto-submission:** Not wired. Each new article needs manual POST, or wire into the content pipeline as a post-deploy hook.
@@ -149,7 +149,7 @@ curl -X POST https://www.winningadventure.com.au/api/indexnow \
 `.env.local` — `GMAIL_USER` · `GMAIL_APP_PASSWORD` · `UPSTASH_REDIS_REST_URL` · `UPSTASH_REDIS_REST_TOKEN`
 Gmail rotation: SMTP fail → new App Password → verify locally → update Vercel env → redeploy.
 
-**Known states:** ServiceSchema already referenced at `/solutions` — do not re-add
+**Known states:** ServiceSchema already referenced at `/services` — do not re-add
 **Lint principle:** Pre-existing errors in agents/ and lib/ are historical tech debt — do not fix unless in scope
 
 ## Client Portal & Reports

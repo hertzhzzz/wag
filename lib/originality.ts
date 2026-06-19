@@ -149,7 +149,7 @@ export async function checkOriginality(
     ...localResults.map((r) => ({
       source: 'local' as const,
       title: r.title,
-      url: `/resources/${r.slug}`,
+      url: `/article/${r.slug}`,
       similarity: r.similarity,
     })),
     ...webResults,

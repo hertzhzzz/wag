@@ -309,13 +309,13 @@ export default function AIChatBox() {
                     {/* View More Links */}
                     <div className="flex flex-col gap-2 mb-4">
                       <Link
-                        href="/resources"
+                        href="/article"
                         className="text-sm text-amber hover:text-amber/80 font-medium underline underline-offset-2"
                       >
                         View More Resources
                       </Link>
                       <Link
-                        href="/solutions"
+                        href="/services"
                         className="text-sm text-amber hover:text-amber/80 font-medium underline underline-offset-2"
                       >
                         Explore Our Services

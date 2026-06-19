@@ -3,56 +3,64 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
+const cleanupRedirects = require('./redirects')
 
 const nextConfig = {
   transpilePackages: ['@builder.io/partytown'],
   reactStrictMode: true,
   async redirects() {
     return [
+      ...cleanupRedirects,
+      // Legacy redirect: /resources/* → /article/*
+      {
+        source: '/resources/:slug*',
+        destination: '/article/:slug*',
+        permanent: true,
+      },
       // Blog slug redirects
       {
         source: '/verify-chinese-supplier',
-        destination: '/resources/verify-chinese-supplier',
+        destination: '/article/verify-chinese-supplier',
         permanent: true,
       },
       {
         source: '/china-factory-tour-guide',
-        destination: '/resources/china-factory-tour-guide',
+        destination: '/article/china-factory-tour-guide',
         permanent: true,
       },
       {
         source: '/china-sourcing-risks',
-        destination: '/resources/china-sourcing-risks',
+        destination: '/article/china-sourcing-risks',
         permanent: true,
       },
       {
         source: '/china-vs-alibaba',
-        destination: '/resources/china-vs-alibaba',
+        destination: '/article/china-vs-alibaba',
         permanent: true,
       },
       {
         source: '/bulk-procurement-china-guide',
-        destination: '/resources/bulk-procurement-china-guide',
+        destination: '/article/bulk-procurement-china-guide',
         permanent: true,
       },
       {
         source: '/china-business-travel-guide-2026',
-        destination: '/resources/china-business-travel-guide-2026',
+        destination: '/article/china-business-travel-guide-2026',
         permanent: true,
       },
       {
         source: '/australia-import-tips',
-        destination: '/resources/australia-import-tips',
+        destination: '/article/australia-import-tips',
         permanent: true,
       },
       {
         source: '/china-supplier-verification',
-        destination: '/resources/china-supplier-verification',
+        destination: '/article/china-supplier-verification',
         permanent: true,
       },
       {
         source: '/how-to-import-from-china',
-        destination: '/resources/how-to-import-from-china',
+        destination: '/article/how-to-import-from-china',
         permanent: true,
       },
     ]

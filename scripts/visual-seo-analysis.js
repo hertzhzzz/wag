@@ -17,7 +17,7 @@ async function analyze() {
   const context = await browser.newContext();
   const page = await context.newPage();
 
-  const pages = ['/', '/services', '/about', '/resources', '/enquiry'];
+  const pages = ['/', '/services', '/about', '/article', '/enquiry'];
   const viewports = [
     { name: 'desktop', width: 1920, height: 1080 },
     { name: 'mobile', width: 390, height: 844 }

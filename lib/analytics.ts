@@ -73,3 +73,16 @@ export function trackArticleReadProgress(pagePath: string, sectionsRead: number)
     timestamp: new Date().toISOString(),
   })
 }
+
+/**
+ * Track clicks on factory directory links from blog articles
+ */
+export function trackFactoryLinkClick(articleSlug: string, factorySlug: string): void {
+  if (typeof window === 'undefined' || !window.gtag) return
+
+  window.gtag('event', 'article_factory_link_click', {
+    article_slug: articleSlug,
+    factory_slug: factorySlug,
+    timestamp: new Date().toISOString(),
+  })
+}

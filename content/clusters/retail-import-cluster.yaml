@@ -1,0 +1,28 @@
+pillar: "Australian Retail Import Guide: China Sourcing for Major Retailers 2026"
+pillar_slug: "australian-retail-import-china-sourcing"
+description: "Hub page covering how major Australian retailers source from China — supply chain case studies, procurement strategies, and lessons for SME importers"
+clusters:
+  - type: retail_case
+    slug: bbq-galore-retail
+    title: "BBQ Galore Supply Chain 2026: China Sourcing Insights"
+    status: published
+  - type: retail_case
+    slug: target-australia-retail
+    title: "Target Australia Supply Chain: China Sourcing Lessons"
+    status: published
+  - type: retail_case
+    slug: bunnings-wesfarmers-merger-supply-chain
+    title: "Bunnings Wesfarmers Merger: Supply Chain Lessons"
+    status: published
+  - type: retail_case
+    slug: ""
+    title: ""
+    status: planned
+  - type: procurement_strategy
+    slug: ""
+    title: ""
+    status: planned
+  - type: procurement_strategy
+    slug: ""
+    title: ""
+    status: planned

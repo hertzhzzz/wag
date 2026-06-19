@@ -1,0 +1,40 @@
+pillar: "China Sourcing Strategy: The Complete Guide for Australian Importers 2026"
+pillar_slug: "china-sourcing-strategy-australia"
+description: "Hub page covering factory verification, supplier vetting, sourcing cost optimization, and strategic procurement from China for Australian businesses"
+clusters:
+  - type: factory_verification
+    slug: verify-chinese-supplier
+    title: "How to Verify a Chinese Supplier: 12-Step Checklist"
+    status: published
+  - type: factory_verification
+    slug: what-happens-when-verification-is-skipped
+    title: "What Happens When You Skip Supplier Verification"
+    status: published
+  - type: factory_verification
+    slug: ""
+    title: ""
+    status: planned
+  - type: cost_optimization
+    slug: minimum-wage-china-sourcing
+    title: "China Minimum Wage Rise: Sourcing Cost Strategies"
+    status: published
+  - type: cost_optimization
+    slug: ""
+    title: ""
+    status: planned
+  - type: company_case
+    slug: byd-melbourne-supply-chain
+    title: "BYD Zhengzhou-Melbourne Supply Chain Analysis"
+    status: published
+  - type: company_case
+    slug: ""
+    title: ""
+    status: planned
+  - type: industry_vertical
+    slug: asia-pacific-airline-procurement
+    title: "Asia-Pacific Airline Procurement from China"
+    status: published
+  - type: industry_vertical
+    slug: ""
+    title: ""
+    status: planned

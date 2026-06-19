@@ -18,7 +18,7 @@ const cards = [
       'Contract follow-up support',
     ],
     cta: 'See Our Services',
-    ctaHref: '/solutions',
+    ctaHref: '/services',
   },
   {
     isPrimary: false,

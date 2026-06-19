@@ -5,6 +5,25 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { EvidenceImage } from "../components/evidence-image"
 
+interface RelatedArticle {
+  slug: string
+  title: string
+  score: number
+}
+
+function getRelatedArticles(factorySlug: string): RelatedArticle[] {
+  try {
+    const graphPath = join(process.cwd(), "data/link-graph.json")
+    if (!existsSync(graphPath)) return []
+    const graph = JSON.parse(readFileSync(graphPath, "utf-8"))
+    const refs: Array<{slug: string; score: number; title: string}> = graph.factory_to_articles?.[factorySlug] ?? []
+    return refs.slice(0, 5)
+  } catch (e) {
+    if ((e as NodeJS.ErrnoException).code !== "ENOENT") console.error("[link-graph]", e)
+    return []
+  }
+}
+
 // Fields excluded from public display: address, registered_address, contact_person, legal_rep, credit_code
 const PUBLIC_FIELDS: Record<string, string> = {
   company_name: "Company Name",
@@ -50,21 +69,77 @@ async function getFactory(slug: string) {
 
 function generateIntro(factory: Record<string, unknown>): string {
   const name = (factory.company_name as string) || ""
-  const province = (factory.province_label as string) || (factory.province as string) || ""
-  const city = (factory.city_label as string) || (factory.city as string) || ""
+  const province = (factory.province as string) || ""
+  const city = (factory.city as string) || ""
+  const district = (factory.district as string) || ""
   const scope = (factory.biz_scope as string) || ""
   const established = (factory.established as string) || ""
-  const employees = (factory.employees_label as string) || (factory.employees as string) || ""
-  const area = (factory.factory_area_label as string) || (factory.factory_area as string) || ""
-  const exportReady = (factory.export_ready_label as string) || (factory.export_ready as string) || ""
-  const type = (factory.company_type_label as string) || (factory.company_type as string) || ""
+  const employees = (factory.employees as string) || ""
+  const area = (factory.factory_area as string) || ""
+  const exportReady = (factory.export_ready as string) || ""
+  const type = (factory.company_type as string) || ""
+  const certs = (factory.certifications as string[]) || []
+  const tags = (factory.platform_tags as string[]) || []
+  const fcaReportId = (factory.fca_report_id as string) || ""
+  const annualRevenue = (factory.annual_revenue as string) || ""
+  const monthlyOutput = (factory.monthly_output as string) || ""
+  const productionWorkers = (factory.production_workers as string) || ""
+
+  // Parse scope for key product categories (first 3 semicolon-separated items)
+  const scopeItems = scope.split(/[；;]/).filter(Boolean).slice(0, 3)
+  const scopeSummary = scopeItems.length > 0
+    ? scopeItems.map(s => s.trim()).join(", ").toLowerCase()
+    : "industrial manufacturing"
+
+  const location = [district, city, province].filter(Boolean).join(", ")
 
   const parts: string[] = []
-  parts.push(`${name} is a professional manufacturer based in ${city || province}, ${province} province, China.`)
-  if (established) parts.push(`Established in ${established}, the company operates as a ${type || "manufacturing enterprise"} specializing in ${scope.split("；")[0] || scope.split(";")[0] || "industrial manufacturing"}.`)
-  if (area) parts.push(`The factory spans ${area} of production space${employees ? ` with approximately ${employees} employees` : ""}.`)
-  if (exportReady) parts.push(`Export readiness: ${exportReady}.`)
-  parts.push(`This factory is part of the Winning Adventure Global factory directory — a free public resource for Australian businesses importing from China.`)
+
+  // Opening: company identity + location
+  parts.push(`${name} is a verified Chinese manufacturer based in ${location}, China. ` +
+    `The company specializes in ${scopeSummary}, serving both domestic and international markets.`)
+
+  // History + scale
+  const scaleDetails: string[] = []
+  if (established) scaleDetails.push(`founded in ${established}`)
+  if (area) scaleDetails.push(`operating from a ${area} production facility`)
+  if (employees) scaleDetails.push(`employing approximately ${employees} staff`)
+  if (productionWorkers) scaleDetails.push(`including ${productionWorkers} skilled production workers`)
+  if (scaleDetails.length > 0) {
+    parts.push(`${name} is ${scaleDetails.join(", ")}.`)
+  }
+
+  // Production capability
+  const capDetails: string[] = []
+  if (monthlyOutput) capDetails.push(`monthly production capacity of ${monthlyOutput}`)
+  if (annualRevenue) capDetails.push(`annual revenue of ${annualRevenue}`)
+  if (capDetails.length > 0) {
+    parts.push(`The factory has ${capDetails.join(" and ")}.`)
+  }
+
+  // Quality & certifications
+  if (certs.length > 0) {
+    const certNames = certs.slice(0, 5).join(", ")
+    parts.push(`Quality management is supported by certifications including ${certNames}.`)
+  }
+
+  // Export readiness
+  if (exportReady && exportReady !== "—" && exportReady !== "否") {
+    parts.push(`The factory is export-ready and experienced in international trade.`)
+  } else if (exportReady === "否") {
+    parts.push(`While primarily serving the domestic market, the factory is open to international partnership opportunities.`)
+  }
+
+  // Verification status
+  if (fcaReportId) {
+    parts.push(`This manufacturer has undergone a Factory Capability Assessment — a comprehensive on-site evaluation covering equipment, quality control processes, and production capacity — providing Australian importers with verified supplier intelligence.`)
+  }
+  if (tags.some(t => t.toLowerCase().includes("super"))) {
+    parts.push(`The factory holds Super Factory status, a designation for manufacturers meeting the highest standards of production capability and operational excellence.`)
+  }
+
+  // Closing — directory context + CTA
+  parts.push(`${name} is listed in the Winning Adventure Global factory directory, a free resource connecting Australian businesses with verified Chinese manufacturers across 30+ industries. Browse our directory to compare suppliers, review certifications, and find the right manufacturing partner for your sourcing needs.`)
 
   return parts.join(" ")
 }
@@ -271,6 +346,36 @@ export default async function FactoryDetailPage({ params }: { params: Promise<{ 
                 </table>
               </div>
             </section>
+
+            {/* Related Articles */}
+            {(() => {
+              const related = getRelatedArticles(slug)
+              if (related.length === 0) return null
+              return (
+                <section>
+                  <h2 className="text-lg font-bold text-navy mb-3">Related Sourcing Guides</h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {related.map((article) => (
+                      <Link
+                        key={article.slug}
+                        href={`/article/${article.slug}`}
+                        className="block bg-gray-50 rounded-lg p-3.5 hover:bg-navy/5 transition border border-gray-100"
+                      >
+                        <div className="text-xs text-gray-400 mb-0.5">Sourcing Guide</div>
+                        <div className="text-sm font-medium text-navy leading-snug line-clamp-2">
+                          {article.title}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-3 text-right">
+                    <Link href="/article" className="text-xs text-amber-600 hover:text-amber-700 font-medium transition">
+                      View all sourcing guides →
+                    </Link>
+                  </div>
+                </section>
+              )
+            })()}
           </div>
 
           {/* Sidebar */}

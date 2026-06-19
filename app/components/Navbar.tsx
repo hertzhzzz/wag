@@ -35,10 +35,10 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
             <Link href="/" className="nav-link text-navy">Home</Link>
           </li>
           <li>
-            <Link href="/solutions" className="nav-link text-navy">Solutions</Link>
+            <Link href="/services" className="nav-link text-navy">Services</Link>
           </li>
           <li>
-            <Link href="/resources" className="nav-link text-navy">Resources</Link>
+            <Link href="/article" className="nav-link text-navy">Articles</Link>
           </li>
           <li>
             <Link href="/about" className="nav-link text-navy">About Us</Link>
@@ -116,20 +116,20 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
           </li>
           <li>
             <Link
-              href="/solutions"
+              href="/services"
               className="block min-h-11 px-4 flex items-center text-navy"
               onClick={handleLinkClick}
             >
-              Solutions
+              Services
             </Link>
           </li>
           <li>
             <Link
-              href="/resources"
+              href="/article"
               className="block min-h-11 px-4 flex items-center text-navy"
               onClick={handleLinkClick}
             >
-              Resources
+              Articles
             </Link>
           </li>
           <li>

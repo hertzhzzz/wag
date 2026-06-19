@@ -1,0 +1,36 @@
+pillar: "Complete Guide to Australia-China Supply Chain & Trade Policy 2026"
+pillar_slug: "australia-china-supply-chain-trade"
+description: "Hub page covering supply chain dynamics, trade policy, logistics, and freight for Australian importers sourcing from China"
+clusters:
+  - type: supply_chain
+    slug: electric-vehicle-australia-supply-chain
+    title: "Australia EV Supply Chain 2026: SME Opportunities"
+    status: published
+  - type: supply_chain
+    slug: australia-data-centre-supply-chain
+    title: "Australia Data Centre Procurement: China Supply Chain"
+    status: published
+  - type: supply_chain
+    slug: electric-battery-china
+    title: "China Battery Tech 2026: Australia Storage Supply Chain"
+    status: published
+  - type: supply_chain
+    slug: ""
+    title: ""
+    status: planned
+  - type: logistics
+    slug: ""
+    title: ""
+    status: planned
+  - type: logistics
+    slug: ""
+    title: ""
+    status: planned
+  - type: tariff_regulation
+    slug: minimum-wage-china-sourcing
+    title: "China Minimum Wage 2026: Sourcing Cost Impact"
+    status: published
+  - type: tariff_regulation
+    slug: ""
+    title: ""
+    status: planned

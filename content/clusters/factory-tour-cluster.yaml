@@ -1,0 +1,44 @@
+pillar: "China Factory Tours: Complete Guide for Australian Businesses 2026"
+pillar_slug: "china-factory-tours-australia"
+description: "Hub page covering factory visit guides by Chinese city and product category — what Australian importers need to know before visiting factories"
+clusters:
+  - type: city_guide
+    slug: guangzhou-factory-tour-guide
+    title: "Guangzhou Factory Tour Guide: Furniture & Consumer Goods"
+    status: published
+  - type: city_guide
+    slug: shenzhen-factory-visit-guide
+    title: "Shenzhen Factory Visit Guide: Electronics & Tech Hardware"
+    status: published
+  - type: city_guide
+    slug: ""
+    title: ""
+    status: planned
+  - type: product_category
+    slug: apparel-factory-tour
+    title: "Apparel & Garment Factory Tour Guide 2026"
+    status: published
+  - type: product_category
+    slug: cosmetics-factory-tour
+    title: "Cosmetics Factory Tour Guide 2026"
+    status: published
+  - type: product_category
+    slug: electronics-factory-tour-guide
+    title: "Electronics Factory Tour Guide 2026"
+    status: published
+  - type: product_category
+    slug: machinery-factory-tour-guide
+    title: "Machinery Factory Tour Guide 2026"
+    status: published
+  - type: product_category
+    slug: ""
+    title: ""
+    status: planned
+  - type: travel_guide
+    slug: china-business-travel-guide-2026
+    title: "China Business Travel Guide for Australians 2026"
+    status: published
+  - type: travel_guide
+    slug: china-factory-tour-guide
+    title: "7 Lessons from 8 Years Visiting Chinese Factories"
+    status: published

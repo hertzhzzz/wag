@@ -24,18 +24,15 @@
   "custom_moq": "500个",
   "custom_moq_label": "定制MOQ",
   "certifications": [
-    "CCC",
-    "ISO 9000",
-    "ISO 9001"
+    "ISO 9001",
+    "INTERTEK"
   ],
   "certifications_label": "认证资质",
   "rankings": [
-    "入围匹克球拍热度榜 第11名"
+    "入围匹克球拍实力榜 第6名"
   ],
   "rankings_label": "企业排名",
-  "platform_tags": [
-    "super-factory"
-  ],
+  "platform_tags": [],
   "platform_tags_label": "平台标签",
   "processing_methods": [
     "来样加工",
@@ -58,53 +55,208 @@
   "production_workers_label": "生产人员",
   "contact_person": "蔡骥",
   "contact_person_label": "联系人",
-  "credit_code": "",
+  "credit_code": "91440101MA59FFB311",
   "credit_code_label": "统一社会信用代码",
-  "legal_rep": "",
+  "legal_rep": "蔡骥",
   "legal_rep_label": "法定代表人",
-  "registered_capital": "",
+  "registered_capital": "600万元",
   "registered_capital_label": "注册资本",
-  "registered_address": "",
+  "registered_address": "增城区新塘镇黄沙头村新沙大道北529号H楼1楼101室",
   "registered_address_label": "注册地址",
-  "company_type": "",
+  "company_type": "其他有限责任公司",
   "company_type_label": "公司类型",
-  "biz_scope": "",
+  "biz_scope": "新材料技术研发;机械设备销售;电气机械设备销售;合成纤维制造;箱包制造;体育用品及器材批发;体育用品制造;汽车零配件批发;汽车零部件及配件制造;自行车制造;自行车及零配件批发;助动自行车、代步车及零配件销售;电动自行车维修;电工机械专用设备制造;塑料制品制造;塑料包装箱及容器制造;美发饰品销售;合成纤维销售;金属制品销售;电子产品销售;工业机器人制造;智能机器人的研发;智能机器人销售;工程塑料及合成树脂销售;金属矿石销售;建筑装饰、水暖管道零件及其他建筑用金属制品制造;建筑装饰材料销售;包装专用设备销售;塑料加工专用设备制造;塑料加工专用设备销售;模具销售;模具制造;卫生用品和一次性使用医疗用品销售;劳动保护用品销售;劳动保护用品生产;特种劳动防护用品销售;特种劳动防护用品生产;汽车装饰用品销售;金属工具制造;金属工具销售;金属材料制造;金属材料销售;货物进出口;技术进出口;科技中介服务;技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广;进出口代理;卫生用品和一次性使用医疗用品生产",
   "biz_scope_label": "经营范围",
-  "reg_authority": "",
+  "reg_authority": "广州市增城区市场监督管理局",
   "reg_authority_label": "登记机关",
-  "annual_report_year": "",
+  "annual_report_year": "2025",
   "annual_report_year_label": "年报年份",
-  "business_term": "",
+  "business_term": "2016年10月21日 至 长期",
   "business_term_label": "营业期限",
   "has_fca_report": true,
   "has_fca_report_label": "有深度认证",
   "fca_url": "https://r.1688.com/auth/fcaReport.htm?_input_charset=GBK&showReport=true&mid=b2b-4140196829232e7",
   "fca_url_label": "认证报告URL",
-  "fca_report_id": "",
+  "fca_report_id": "CNIR2507SZ02101",
   "fca_report_id_label": "报告编号",
-  "fca_report_date": "",
+  "fca_report_date": "2025-07-04",
   "fca_report_date_label": "报告日期",
-  "fca_total_equipment": "",
+  "fca_total_equipment": "40台",
   "fca_total_equipment_label": "设备总数",
-  "fca_equipment": [],
+  "fca_equipment": [
+    {
+      "name": "激光雕刻机",
+      "count": "2 台"
+    },
+    {
+      "name": "热压罐",
+      "count": "1 台"
+    },
+    {
+      "name": "热压机",
+      "count": "15 台"
+    },
+    {
+      "name": "UV打印机",
+      "count": "2 台"
+    },
+    {
+      "name": "冲压机",
+      "count": "2 台"
+    },
+    {
+      "name": "喷砂机",
+      "count": "2 台"
+    },
+    {
+      "name": "裁切机",
+      "count": "2 台"
+    }
+  ],
   "fca_equipment_label": "设备清单",
-  "fca_oem_ratio": "",
+  "fca_oem_ratio": "50 %",
   "fca_oem_ratio_label": "OEM占比",
-  "fca_odm_ratio": "",
+  "fca_odm_ratio": "50 %",
   "fca_odm_ratio_label": "ODM占比",
-  "fca_annual_new_models": "",
+  "fca_annual_new_models": "200",
   "fca_annual_new_models_label": "年均新品",
-  "fca_sample_cycle": "",
+  "fca_sample_cycle": "7 天/件",
   "fca_sample_cycle_label": "打样周期",
-  "fca_warehouse_area": "",
+  "fca_warehouse_area": "1500 m²",
   "fca_warehouse_area_label": "仓库面积",
-  "fca_warehouse_type": "",
+  "fca_warehouse_type": "租赁",
   "fca_warehouse_type_label": "仓库类型",
-  "fca_quality_inspection": "",
+  "fca_quality_inspection": "是",
   "fca_quality_inspection_label": "质检方式",
-  "fca_store_url": "",
+  "fca_store_url": "https://shop78041452d9d07.1688.com",
   "fca_store_url_label": "店铺URL",
-  "evidence_images": [],
+  "evidence_images": [
+    {
+      "section": "营业执照信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01zNtocD20JjnsBjCuF_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01if80pC20Jjnsrm1PF_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01kHg8qb20Jjnr5QLyQ_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "营业执照信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01C9wp8K20Jjnt1Tqgt_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01aXdNX420JjnrxBb4r_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "办公场所信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN010IaiBc20Jjnt2rB4u_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01tJWVWT20JjntkyNRK_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01ZZKTfH20JjntSzoGE_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01XTCiad20JjnrwrBlf_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "厂房信息",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01OqPOgY20JjnsDDeLV_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01Nv002t20Jjnr6rJ6J_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN019gTOIT20JjnstDRhV_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01mzGAFw20Jjntkx6SZ_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 4,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01omhP0J20JjnsT7f87_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 5,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01954Ob820JjnstN77w_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 6,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01MXlmTU20Jjnt3dFOl_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 7,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN015DBhsQ20Jjnt3VzdC_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 8,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01ORoKWG20JjnstrarW_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 9,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01PrYjPu20JjnrxV06c_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "生产设备",
+      "index": 10,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01l1dRJL20JjnmGaGSo_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN01PSiil520Jjnr7vMxf_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i3/O1CN01IsXVFn20JjnsuUKQB_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "供应链运营能力",
+      "index": 3,
+      "url": "https://img.alicdn.com/imgextra/i2/O1CN015AqnLj20JjnsEUwBY_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 1,
+      "url": "https://img.alicdn.com/imgextra/i1/O1CN01YEFfFI20JjnsYdzS9_!!4611686018427380701-0-av-auth-doc.jpg"
+    },
+    {
+      "section": "仓储与物流",
+      "index": 2,
+      "url": "https://img.alicdn.com/imgextra/i4/O1CN01JOA7wB20JjntmXvGq_!!4611686018427380701-0-av-auth-doc.jpg"
+    }
+  ],
   "evidence_images_label": "证据图片",
   "_sections": {
     "basic": {

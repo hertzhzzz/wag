@@ -31,7 +31,7 @@ export default function StatsBar() {
         <Stat icon={Building2} target={15} suffix="+" label="Industries" animate={hasAnimated} />
         <Stat icon={Factory} target={627} suffix="" label="Verified Suppliers" animate={hasAnimated} />
         <Stat icon={Clock} target={4} suffix="h" label="Response Time" animate={hasAnimated} />
-        <Stat icon={MapPin} target={8} suffix="+" label="Chinese Provinces" animate={hasAnimated} />
+        <Stat icon={MapPin} target={10} suffix="+" label="Chinese Provinces" animate={hasAnimated} />
       </div>
     </div>
   )

@@ -19,6 +19,8 @@ import { logAccess } from "@/lib/access-log-kv"
 import { ReportTOC } from "./ReportTOC"
 import { ReportImage } from "./ReportImage"
 import { resolveReportImagePath } from "./imagePath"
+import { Watermark } from "./Watermark"
+import { AgreementGate } from "@/client/AgreementGate"
 import { FootnoteEnhancer } from "./FootnoteEnhancer"
 import { ProductShowcase, ProductCard } from "./ProductShowcase"
 import { Sidebar } from "@/client/Sidebar"
@@ -514,7 +516,9 @@ export default async function ReportDetailPage({
           </aside>
 
           <main className="flex-1 min-w-0">
-            <article className="report-content">
+            <AgreementGate clientCompany={client?.client_company || clientSlug}>
+            <article className="report-content relative">
+              <Watermark clientName={client?.client_company || clientSlug} />
               <ReportHeader frontmatter={report.frontmatter} />
               <div className="prose prose-slate max-w-none report-content prose-headings:font-serif prose-headings:text-navy prose-a:text-amber-700 prose-a:no-underline hover:prose-a:underline prose-img:mx-auto prose-img:h-auto prose-img:max-w-full prose-img:max-h-[420px] prose-img:rounded-lg prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2.5 prose-th:text-xs prose-th:font-medium prose-th:uppercase prose-th:tracking-wide prose-td:px-4 prose-td:py-2.5 prose-td:text-sm">
                 <FootnoteEnhancer>
@@ -522,6 +526,7 @@ export default async function ReportDetailPage({
                 </FootnoteEnhancer>
               </div>
             </article>
+            </AgreementGate>
             <ReportNavigation prev={prev} next={next} clientSlug={clientSlug} projectSlug={projectSlug} />
           </main>
         </div>

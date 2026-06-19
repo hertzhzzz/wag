@@ -88,7 +88,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
             {visibleArticles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/resources/${article.slug}`}
+                href={`/article/${article.slug}`}
                 className="block bg-white border border-gray-200 overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(15,45,94,0.1)] transition-all duration-200 break-inside-avoid"
               >
                 {/* Card image */}
@@ -144,7 +144,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <Link
-            href="/solutions"
+            href="/services"
             className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
@@ -158,7 +158,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
             </p>
           </Link>
           <Link
-            href="/resources/china-sourcing-agent"
+            href="/article/china-sourcing-agent"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
@@ -172,7 +172,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
             </p>
           </Link>
           <Link
-            href="/resources/china-sourcing-agent"
+            href="/article/china-sourcing-agent"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
