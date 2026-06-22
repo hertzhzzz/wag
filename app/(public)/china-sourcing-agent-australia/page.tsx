@@ -290,7 +290,32 @@ export default function ChinaSourcingAgentPage() {
         </div>
       </section>
 
-      {/* 7. Bottom CTA */}
+      {/* 7. Related Resources */}
+      <section className="py-20 px-4 md:px-8">
+        <div className="max-w-[800px] mx-auto">
+          <div className="text-center mb-12">
+            <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Learn More</p>
+            <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy">
+              Free China Sourcing Resources
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { title: 'How to Verify a Chinese Supplier', href: '/article/verify-chinese-supplier', desc: 'The 12-step verification framework we use for every supplier before Australian clients pay a deposit.' },
+              { title: 'China Sourcing Risks & How to Mitigate Them', href: '/article/china-sourcing-risks', desc: 'Common risks of sourcing from China and proven strategies to protect your business.' },
+              { title: 'Factory vs Trading Company', href: '/article/factory-vs-trading-company-china-guide', desc: 'How to tell who you are actually dealing with — the 5 signs that reveal the truth.' },
+              { title: 'How to Negotiate with Chinese Factories', href: '/article/how-to-negotiate-chinese-factory-guide', desc: 'What Australian businesses consistently get wrong and what actually works.' },
+            ].map((resource) => (
+              <Link key={resource.href} href={resource.href} className="block p-6 border border-gray-200 hover:border-amber/30 hover:shadow-md transition-all">
+                <h3 className="font-semibold text-navy mb-2">{resource.title}</h3>
+                <p className="text-sm text-gray-600">{resource.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Bottom CTA */}
       <section className="py-16 md:py-24 px-4 md:px-8 bg-navy">
         <div className="max-w-[760px] mx-auto text-center">
           <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-white mb-4">
