@@ -11,12 +11,6 @@ const nextConfig = {
   async redirects() {
     return [
       ...cleanupRedirects,
-      // Legacy redirect: /resources/* → /article/*
-      {
-        source: '/resources/:slug*',
-        destination: '/article/:slug*',
-        permanent: true,
-      },
       // Blog slug redirects
       {
         source: '/verify-chinese-supplier',

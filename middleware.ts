@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
-import { isGonePath } from "@/lib/gone-paths"
+import { getBlogRedirectTarget, isBlogGoneSlug, isGonePath } from "@/lib/gone-paths"
 
 const PROTECTED_PATHS = ["/client", "/admin"]
 const PUBLIC_PATHS = [
@@ -9,8 +9,33 @@ const PUBLIC_PATHS = [
   "/api/admin/recover",
 ]
 
+function getArticleSlug(pathname: string): string | null {
+  const match = pathname.match(/^\/article\/([^/]+)\/?$/)
+  return match ? decodeURIComponent(match[1]) : null
+}
+
+function getResourceSlug(pathname: string): string | null {
+  const match = pathname.match(/^\/resources\/([^/]+)\/?$/)
+  return match ? decodeURIComponent(match[1]) : null
+}
+
 export function middleware(request: NextRequest) {
   const { pathname, hostname } = request.nextUrl
+
+  const articleSlug = getArticleSlug(pathname)
+  if (articleSlug && isBlogGoneSlug(articleSlug)) {
+    return new NextResponse("Gone", { status: 410 })
+  }
+
+  const resourceSlug = getResourceSlug(pathname)
+  if (resourceSlug) {
+    if (isBlogGoneSlug(resourceSlug)) {
+      return new NextResponse("Gone", { status: 410 })
+    }
+
+    const redirectTarget = getBlogRedirectTarget(resourceSlug) || `/article/${resourceSlug}`
+    return NextResponse.redirect(new URL(redirectTarget, request.url), 301)
+  }
 
   if (isGonePath(pathname)) {
     return new NextResponse("Gone", { status: 410 })
@@ -80,6 +105,7 @@ export const config = {
     "/client/:path*", "/api/client/:path*",
     "/admin/:path*", "/api/admin/:path*",
     "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne",
-    "/article/resource-:path*",  // deleted resource-* articles → 410
+    "/article/:slug*",
+    "/resources/:slug*",
   ],
 }
