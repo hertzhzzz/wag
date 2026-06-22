@@ -5,7 +5,7 @@ import { CheckCircle, Globe, Shield, Users, ArrowRight } from 'lucide-react'
 import { Metadata } from 'next'
 import ServiceSchema from '@/components/ServiceSchema'
 import FAQ from '@/components/FAQ'
-import FAQSchema from '@/components/FAQSchema'
+
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
@@ -115,7 +115,7 @@ export default function ChinaSourcingAgentPage() {
   return (
     <>
       <ServiceSchema />
-      <FAQSchema faqs={faqs} />
+      {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },

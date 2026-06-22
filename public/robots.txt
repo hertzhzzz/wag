@@ -38,6 +38,10 @@ Disallow: /
 User-agent: *
 Disallow: /client/
 
+# Block admin pages from all search engines
+User-agent: *
+Disallow: /admin/
+
 # Block duplicate/non-primary resource pages
 User-agent: *
 Disallow: /resources/resource-

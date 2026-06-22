@@ -142,5 +142,30 @@ module.exports = [
   { source: '/resources/west-ham-united', destination: '/article/how-to-import-from-china', permanent: true },
   { source: '/resources/neale-daniher-death', destination: '/article/how-to-import-from-china', permanent: true },
   { source: '/resources/sri-lanka', destination: '/article/how-to-import-from-china', permanent: true },
-  { source: '/resources/eid-al-adha-sourcing', destination: '/article/007-first-light-sourcing', permanent: true }
+  { source: '/resources/eid-al-adha-sourcing', destination: '/article/007-first-light-sourcing', permanent: true },
+
+  // ============================================
+  // Category D article cleanup — 2026-06-22
+  // Removed sports/entertainment/news MDX files. 301 to /article index.
+  // ============================================
+  { source: '/article/tottenham-hotspur', destination: '/article', permanent: true },
+  { source: '/article/bunnings-wesfarmers-merger-supply-chain', destination: '/article', permanent: true },
+  { source: '/article/bbq-galore-retail', destination: '/article', permanent: true },
+  { source: '/article/australian-retail-trends-grilld-coles', destination: '/article', permanent: true },
+  { source: '/article/kmart-home-retail', destination: '/article', permanent: true },
+  { source: '/article/bhp', destination: '/article', permanent: true },
+  { source: '/article/droneshield', destination: '/article', permanent: true },
+  { source: '/article/reneweconomy', destination: '/article', permanent: true },
+  { source: '/article/fitbit-air-sourcing', destination: '/article', permanent: true },
+  { source: '/article/oura-ring-5-wearable-tech-china-sourcing-guide', destination: '/article', permanent: true },
+  { source: '/article/dashdot-property-collapse-asset-liquidation-guide', destination: '/article', permanent: true },
+  { source: '/article/007-first-light-sourcing', destination: '/article', permanent: true },
+  { source: '/article/adam-walton-policy-australian-businesses', destination: '/article', permanent: true },
+  { source: '/article/australian-business-bankruptcy-2026', destination: '/article', permanent: true },
+  { source: '/article/road-safety-australia-freight-operations', destination: '/article', permanent: true },
+  { source: '/article/australia-mining-capital-gains-tax-importers', destination: '/article', permanent: true },
+  { source: '/article/kyle-busch-china-auto-parts-sourcing', destination: '/article', permanent: true },
+  { source: '/article/extreme-weather-supply-chain-risk', destination: '/article', permanent: true },
+  { source: '/article/kenya-sourcing-destination', destination: '/article', permanent: true },
+  { source: '/article/dubai-international-airport-australia-china-freight', destination: '/article', permanent: true },
 ];

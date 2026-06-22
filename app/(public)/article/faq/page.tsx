@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import FAQ from '@/components/FAQ'
-import FAQSchema from '@/components/FAQSchema'
+
 import { faqs } from '@/data/faqs'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return (
     <>
-      <FAQSchema faqs={faqs} />
+      {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },

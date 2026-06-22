@@ -6,17 +6,18 @@ import { CheckCircle, MapPin, Users, Shield, Clock, Star } from 'lucide-react'
 import { Metadata } from 'next'
 import ServiceSchema from '@/components/ServiceSchema'
 import FAQ from '@/components/FAQ'
-import FAQSchema from '@/components/FAQSchema'
+
 import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'Factory Visits in China | Winning Adventure Global',
-  description: 'Plan your China factory visit with confidence. WAG provides guided factory tours with bilingual support, pre-screened suppliers, and full logistics across Shenzhen, Guangzhou, and Shanghai.',
+  title: 'Visiting Chinese Factories: Guided Tours | Winning Adventure',
+  description: 'We accompany Australian businesses to Chinese factories — verification, translation & negotiation included. Adelaide-based. Book a free consultation.',
   keywords: [
     'visiting Chinese factories',
     'China factory visit',
     'factory tour China',
+    'factory tour China Australia',
     'Chinese factory inspection',
     'Australia China factory tour',
     'Shenzhen factory visit',
@@ -24,11 +25,13 @@ export const metadata: Metadata = {
     'China supplier verification',
     'factory audit China',
     'guided factory tour China',
+    'visit factory China Australia',
+    'China factory tour guide',
   ],
   authors: [{ name: 'Mark He', url: 'https://www.winningadventure.com.au/about' }],
   openGraph: {
-    title: 'Factory Visits in China | Winning Adventure Global',
-    description: 'Plan your China factory visit with confidence. WAG provides guided factory tours with bilingual support, pre-screened suppliers, and full logistics.',
+    title: 'Visiting Chinese Factories: Guided Tours | Winning Adventure',
+    description: 'We accompany Australian businesses to Chinese factories — verification, translation & negotiation included. Adelaide-based. Book a free consultation.',
     url: 'https://www.winningadventure.com.au/visiting-chinese-factories',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',
@@ -49,7 +52,7 @@ export default function VisitingChineseFactoriesPage() {
   return (
     <>
       <ServiceSchema />
-      <FAQSchema faqs={visitFaqs} />
+      {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
@@ -151,11 +154,18 @@ export default function VisitingChineseFactoriesPage() {
           <div className="max-w-2xl mb-12">
             <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Why Visit In Person</p>
             <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
-              What You Can Only Learn On the Factory Floor
+              What Our Factory Visit Service Includes
             </h2>
             <p className="text-gray-600 leading-relaxed">
               Photos, certifications, and online profiles only tell part of the story. A factory visit reveals the full picture — and can save you from costly sourcing mistakes.
             </p>
+
+            <Link
+              href="/enquiry"
+              className="inline-block bg-amber text-navy py-3 px-6 text-sm font-semibold transition-colors hover:bg-amber/90 min-h-11 mt-4"
+            >
+              Book a Free Consultation →
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -208,9 +218,9 @@ export default function VisitingChineseFactoriesPage() {
 
             <div>
               <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Our Factory Visit Service</p>
-              <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-6">
+              <p className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-6">
                 Everything Handled. You Just Show Up.
-              </h2>
+              </p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 We handle every aspect of your China factory visit — from identifying and pre-screening factories to coordinating transport, providing on-site translation, and facilitating productive meetings.
               </p>
@@ -279,7 +289,7 @@ export default function VisitingChineseFactoriesPage() {
         <div className="max-w-[1200px] mx-auto">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Where We Operate</p>
           <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-2">
-            Key Manufacturing Hubs in China
+            Which Cities and Industries We Cover
           </h2>
           <p className="text-gray-600 mb-10 max-w-[560px]">
             We coordinate factory visits across China&apos;s major manufacturing regions, covering 6-8 core hubs in Jiangsu, Zhejiang, and Guangdong provinces.
@@ -340,7 +350,7 @@ export default function VisitingChineseFactoriesPage() {
               What to Expect
             </p>
             <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight">
-              A Typical Factory Visit Day — Hour by Hour
+              What Happens During a Guided Factory Visit
             </h2>
             <p className="text-lg text-navy/60 mt-4 leading-relaxed">
               Most visit days run from 8:30am to 5pm across two factory sites. Here is exactly how a structured day unfolds — based on dozens of trips we have run for Australian businesses in 2026. For a complete overview of planning your trip, see our{' '}
@@ -649,7 +659,7 @@ export default function VisitingChineseFactoriesPage() {
       <section className="py-12 md:py-20 px-4 md:px-8 bg-navy">
         <div className="max-w-[760px] mx-auto text-center">
           <h2 className="font-serif text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-white mb-4">
-            Ready to visit Chinese factories with confidence?
+            How to Book Your China Factory Tour
           </h2>
           <p className="text-gray-300 mb-8 leading-relaxed">
             Tell us what you are looking to source. We will shortlist factories, handle all logistics, and have a bilingual guide with you every step of the way.
@@ -659,7 +669,7 @@ export default function VisitingChineseFactoriesPage() {
               href="/enquiry"
               className="inline-block bg-amber text-navy py-3.5 px-8 text-base font-semibold transition-colors hover:bg-amber/90 min-h-11"
             >
-              Plan My Factory Visit →
+              Book a Free Consultation →
             </Link>
             <Link
               href="/services"

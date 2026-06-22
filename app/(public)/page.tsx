@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 import CTABand from '@/components/CTABand'
 import Hero from '@/components/Hero'
 import BlogPreview from '@/components/BlogPreview'
@@ -7,7 +8,7 @@ import HowItWorks from '@/components/HowItWorks'
 import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import FAQ from '@/components/FAQ'
-import FAQSchema from '@/components/FAQSchema'
+
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
@@ -58,11 +59,16 @@ export default function Home() {
     <>
       <Navbar />
       <WebsiteSchema />
-      <FAQSchema faqs={homepageFaqs} />
+      {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' }
       ]} />
       <Hero />
+      <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-6 text-center">
+        <Link href="/china-sourcing-agent-australia" className="inline-block bg-navy text-white py-3 px-8 font-semibold hover:bg-navy/90 transition-colors">
+          Learn About Our Full Sourcing Agent Service →
+        </Link>
+      </div>
       <TwoWaysAccess />
       <HowItWorks />
       <WhyChooseUs />

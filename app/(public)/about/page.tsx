@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import FAQ from '@/components/FAQ'
-import FAQSchema from '@/components/FAQSchema'
+
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <FAQSchema faqs={aboutFaqs} />
+      {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },

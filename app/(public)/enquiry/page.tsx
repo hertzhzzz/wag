@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import EnquiryForm from './EnquiryForm'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
-import FAQSchema from '@/components/FAQSchema'
+
 
 const enquiryFaqs = [
   {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 export default function EnquiryPage() {
   return (
     <>
-      <FAQSchema faqs={enquiryFaqs} />
+      {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
         { name: 'Enquiry', url: 'https://www.winningadventure.com.au/enquiry' }

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 import ServiceSchema from '@/components/ServiceSchema'
 import FAQ from '@/components/FAQ'
-import FAQSchema from '@/components/FAQSchema'
+
 import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -182,7 +182,7 @@ export default function ServicesPage() {
   return (
     <>
       <ServiceSchema />
-      <FAQSchema faqs={serviceFaqs} />
+      {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <Navbar />
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
