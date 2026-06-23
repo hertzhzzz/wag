@@ -236,7 +236,7 @@ export const BLOG_GONE_SLUGS = [
 export const BLOG_REDIRECT_TARGETS: Record<string, string> = {
   "resource-how-to-verify-chinese-factories-1688": "/article/verify-chinese-supplier",
   "resource-shenzhen-factory-visit": "/article/china-factory-tour-guide",
-  "resource-should-i-pay-deposit-chinese-supplier": "/article/how-to-negotiate-with-chinese-factory",
+  "resource-should-i-pay-deposit-chinese-supplier": "/article/how-to-negotiate-chinese-factory-guide",
   "resource-chinese-supplier-quality-not-as-promised": "/article/china-sourcing-risks",
 }
 

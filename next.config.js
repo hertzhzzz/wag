@@ -54,7 +54,33 @@ const nextConfig = {
       },
       {
         source: '/how-to-import-from-china',
-        destination: '/article/how-to-import-from-china',
+        destination: '/article/importing-from-china-australia-guide',
+        permanent: true,
+      },
+      // Duplicate article consolidation (301 -> canonical kept article)
+      {
+        source: '/article/how-to-import-from-china',
+        destination: '/article/importing-from-china-australia-guide',
+        permanent: true,
+      },
+      {
+        source: '/article/how-to-import-from-china-guide',
+        destination: '/article/importing-from-china-australia-guide',
+        permanent: true,
+      },
+      {
+        source: '/article/how-to-negotiate-with-chinese-factory',
+        destination: '/article/how-to-negotiate-chinese-factory-guide',
+        permanent: true,
+      },
+      {
+        source: '/article/byd-company-supply-chain-guide',
+        destination: '/article/byd-company-china-supply-chain-guide',
+        permanent: true,
+      },
+      {
+        source: '/article/electric-battery-supply-chain-china-sourcing-guide',
+        destination: '/article/electric-battery-china',
         permanent: true,
       },
     ]

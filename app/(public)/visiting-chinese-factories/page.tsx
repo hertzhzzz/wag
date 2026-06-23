@@ -688,10 +688,10 @@ export default function VisitingChineseFactoriesPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
               { label: 'Supplier Verification Checklist', href: '/article/supplier-verification-checklist-china' },
-              { label: 'How to Import from China', href: '/article/how-to-import-from-china' },
+              { label: 'How to Import from China', href: '/article/importing-from-china-australia-guide' },
               { label: 'Australia Import Tips', href: '/article/australia-import-tips' },
               { label: 'Factory vs Trading Company', href: '/article/factory-vs-trading-company-china-guide' },
-              { label: 'Negotiating with Chinese Factories', href: '/article/how-to-negotiate-with-chinese-factory' },
+              { label: 'Negotiating with Chinese Factories', href: '/article/how-to-negotiate-chinese-factory-guide' },
               { label: 'Perth China Sourcing', href: '/article/perth-china-factory-visits' },
               { label: 'Melbourne China Sourcing', href: '/article/melbourne-china-factory-visits' },
               { label: 'Adelaide China Sourcing', href: '/article/adelaide-china-factory-visits' },

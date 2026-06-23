@@ -342,7 +342,7 @@ export default function ServicesPage() {
                 Get a Free Supplier Shortlist →
               </Link>
               <Link
-                href="/article/how-to-import-from-china"
+                href="/article/importing-from-china-australia-guide"
                 className="inline-block border border-navy/20 text-navy py-3 px-8 text-sm font-semibold hover:border-navy transition-colors min-h-11"
               >
                 How It Works
