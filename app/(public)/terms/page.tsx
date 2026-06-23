@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Winning Adventure Global',
+  title: 'Terms of Service',
   description: 'Terms of Service for Winning Adventure Global — governing your use of our factory sourcing, supplier verification, and business travel services in China.',
   keywords: ['terms of service winning adventure global', 'WAG terms', 'china sourcing service terms'],
   openGraph: {

@@ -14,7 +14,7 @@ import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Factory Tours China | Face-to-Face Sourcing | Winning Adventure Global',
+  title: { absolute: 'China Sourcing Agent Australia | Verified Factories' },
   description: 'We accompany Australian businesses on factory tours in Shenzhen, Guangzhou & Shanghai. Face-to-face supplier meetings with on-ground support.',
   keywords: ['factory tours china', 'china sourcing agent', 'supplier verification china', 'australian business china', 'china factory visit', 'shenzhen factory tour', 'guangzhou sourcing'],
   openGraph: {

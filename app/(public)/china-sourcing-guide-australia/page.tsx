@@ -10,7 +10,7 @@ import { sourcingAgentFaqs } from '@/data/faqs-sourcing-agent'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Agent Australia | Factory Tours & Supplier Verification',
+  title: { absolute: 'China Sourcing Guide for Australian Importers' },
   description:
     'Hire a China sourcing agent in Australia. WAG provides factory tours, supplier verification and procurement support for Australian businesses. Free initial consultation.',
   keywords: [

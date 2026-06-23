@@ -11,7 +11,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { CheckCircle, Sparkles, Tractor, Package, UtensilsCrossed, Sun, Building2, Users, Globe, ArrowRight, Briefcase } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Australia China Sourcing Agency | Factory Tours & Supplier Verification',
+  title: 'Australia China Sourcing Agency',
   description: 'Australia-based China sourcing agency, Founded 2025. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement. Contact us today.',
   keywords: [
     'Australia-based China procurement consultant',

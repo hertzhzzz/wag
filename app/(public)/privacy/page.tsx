@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Winning Adventure Global',
+  title: 'Privacy Policy',
   description: 'Privacy Policy for Winning Adventure Global — how we collect, use, and protect your personal information when you use our China factory tours and sourcing services.',
   keywords: ['privacy policy winning adventure global', 'WAG privacy', 'china sourcing service privacy'],
   openGraph: {

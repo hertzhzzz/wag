@@ -20,7 +20,7 @@ import {
 import '@/components/services-animations.css'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Services | One-Time Procurement, Factory Tours & Remote Verification',
+  title: { absolute: 'China Sourcing Services | Tours, Procurement & Verification' },
   description: 'Three flexible service tiers for Australian businesses sourcing from China. Choose one-time procurement, guided factory tours with supply chain setup, or remote verification with ongoing procurement management.',
   keywords: ['china sourcing services', 'china factory tours', 'remote factory verification', 'china procurement australia', 'supplier verification china', 'bulk procurement china'],
   openGraph: {

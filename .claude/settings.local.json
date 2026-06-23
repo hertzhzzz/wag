@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf \"/Users/mark/.claude/plugins/marketplaces/thedotmack\")",
+      "Bash(rm -rf \"/Users/mark/.claude/plugins/cache/thedotmack\")"
+    ]
+  }
+}

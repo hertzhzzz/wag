@@ -9,7 +9,7 @@ import { sourcingAgentFaqs } from '@/data/faqs-sourcing-agent'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing Agent Australia: On-Ground Expert Support | Winning Adventure',
+  title: { absolute: 'China Sourcing Agent Australia | On-Ground Support' },
   description:
     'Adelaide-based China sourcing agent for Australian businesses. We verify factories, negotiate pricing, and accompany you to China. Book a free consultation.',
   keywords: [

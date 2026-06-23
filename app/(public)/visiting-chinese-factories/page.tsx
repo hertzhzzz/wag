@@ -11,7 +11,7 @@ import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'Visiting Chinese Factories: Guided Tours | Winning Adventure',
+  title: { absolute: 'Visiting Chinese Factories | Guided Tours for Australians' },
   description: 'We accompany Australian businesses to Chinese factories — verification, translation & negotiation included. Adelaide-based. Book a free consultation.',
   keywords: [
     'visiting Chinese factories',
