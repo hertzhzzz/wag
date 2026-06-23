@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 import { getBlogRedirectTarget, isBlogGoneSlug, isGonePath } from "@/lib/gone-paths"
+import { goneResponse } from "@/lib/gone-page"
 
 const PROTECTED_PATHS = ["/client", "/admin"]
 const PUBLIC_PATHS = [
@@ -24,13 +25,13 @@ export function middleware(request: NextRequest) {
 
   const articleSlug = getArticleSlug(pathname)
   if (articleSlug && isBlogGoneSlug(articleSlug)) {
-    return new NextResponse("Gone", { status: 410 })
+    return goneResponse()
   }
 
   const resourceSlug = getResourceSlug(pathname)
   if (resourceSlug) {
     if (isBlogGoneSlug(resourceSlug)) {
-      return new NextResponse("Gone", { status: 410 })
+      return goneResponse()
     }
 
     const redirectTarget = getBlogRedirectTarget(resourceSlug) || `/article/${resourceSlug}`
@@ -38,7 +39,7 @@ export function middleware(request: NextRequest) {
   }
 
   if (isGonePath(pathname)) {
-    return new NextResponse("Gone", { status: 410 })
+    return goneResponse()
   }
 
   // Block /factory in production (local dev only for now)

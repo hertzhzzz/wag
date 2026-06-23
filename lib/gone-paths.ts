@@ -12,6 +12,16 @@ export const GONE_SLUGS = [
 ]
 
 export const BLOG_GONE_SLUGS = [
+  // Removed 2026-06-24 — news-jacking / off-topic anchors (SEO audit, prepublish-check GATE A).
+  // These pulled near-zero qualified traffic and diluted topical authority. 410 = permanent.
+  "2026-australia-federal-budget-china-sourcing-impact",
+  "2026-australian-federal-budget-import-duty-changes",
+  "gold-precious-metals-china-supply-guide",
+  "silver-price-impact-china-manufacturing-cost",
+  "iran-war-australia-china-supply-chain",
+  "reserve-bank-australia-china-sourcing-costs",
+  "thucydides-trap-australia-china-supply-chain",
+  "us-export-ban-australian-manufacturers",
   "australian-house-price-forecast-china-materials",
   "resource-china-vs-alibaba",
   "trump-tariffs-australia-china-sourcing-impact",
