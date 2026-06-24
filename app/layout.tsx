@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { headers } from 'next/headers'
 import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
@@ -95,13 +94,11 @@ export const viewport = {
   maximumScale: 5,
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const headersList = await headers()
-  const isAdmin = headersList.get("x-is-admin") === "1"
   return (
     <html lang="en-AU" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
       <head>
@@ -233,7 +230,7 @@ export default async function RootLayout({
       <main id="main-content">
         {children}
       </main>
-      {!isAdmin && <FloatingEnquiryWidget />}
+      <FloatingEnquiryWidget />
       <ScrollTracker />
       <Analytics />
     </body>

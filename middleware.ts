@@ -7,11 +7,9 @@ function goneResponse(request: NextRequest): NextResponse {
   return NextResponse.rewrite(new URL("/gone", request.url), { status: 410 })
 }
 
-const PROTECTED_PATHS = ["/client", "/admin"]
+const PROTECTED_PATHS = ["/client"]
 const PUBLIC_PATHS = [
   "/api/client/auth",
-  "/api/admin/auth",
-  "/api/admin/recover",
 ]
 
 function getArticleSlug(pathname: string): string | null {
@@ -54,27 +52,12 @@ export function middleware(request: NextRequest) {
   const isProtected = PROTECTED_PATHS.some((prefix) => pathname.startsWith(prefix))
   const isPublic = PUBLIC_PATHS.some((prefix) => pathname.startsWith(prefix))
 
-  let response: NextResponse
-
-  // Auth guards
-  if (isProtected && !isPublic) {
-    if (pathname.startsWith("/client")) {
-      response = handleClientAuth(request)
-    } else if (pathname.startsWith("/admin")) {
-      response = handleAdminAuth(request)
-    } else {
-      response = NextResponse.next()
-    }
-  } else {
-    response = NextResponse.next()
+  // Auth guard — client portal only
+  if (isProtected && !isPublic && pathname.startsWith("/client")) {
+    return handleClientAuth(request)
   }
 
-  // Tag admin paths so root layout can suppress enquiry widget
-  if (pathname.startsWith("/admin")) {
-    response.headers.set("x-is-admin", "1")
-  }
-
-  return response
+  return NextResponse.next()
 }
 
 function handleClientAuth(request: NextRequest): NextResponse {
@@ -91,24 +74,10 @@ function handleClientAuth(request: NextRequest): NextResponse {
   return NextResponse.next()
 }
 
-function handleAdminAuth(request: NextRequest): NextResponse {
-  const { pathname } = request.nextUrl
-  if (pathname === "/admin" || pathname === "/admin/recover" ||
-      pathname.startsWith("/api/admin/auth") || pathname.startsWith("/api/admin/recover")) {
-    return NextResponse.next()
-  }
-  const sessionCookie = request.cookies.get("admin_session")
-  if (!sessionCookie?.value) {
-    return NextResponse.redirect(new URL("/admin", request.url), 302)
-  }
-  return NextResponse.next()
-}
-
 export const config = {
   matcher: [
     "/factory/:path*",
     "/client/:path*", "/api/client/:path*",
-    "/admin/:path*", "/api/admin/:path*",
     "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne",
     "/article/:slug*",
     "/resources/:slug*",
