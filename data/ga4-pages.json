@@ -1,0 +1,418 @@
+{
+  "property": "526384627",
+  "report": "top_organic_pages",
+  "date_range": {
+    "start": "2026-03-26",
+    "end": "2026-06-23"
+  },
+  "pages": [
+    {
+      "landing_page": "/",
+      "sessions": 116,
+      "users": 44,
+      "pageviews": 629,
+      "bounce_rate": 17.2,
+      "engagement_rate": 82.8
+    },
+    {
+      "landing_page": "(not set)",
+      "sessions": 35,
+      "users": 31,
+      "pageviews": 0,
+      "bounce_rate": 97.1,
+      "engagement_rate": 2.9
+    },
+    {
+      "landing_page": "/resources/netherlands-japan-football",
+      "sessions": 26,
+      "users": 26,
+      "pageviews": 30,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/resources/iran-war-australia-china-supply-chain",
+      "sessions": 19,
+      "users": 18,
+      "pageviews": 28,
+      "bounce_rate": 10.5,
+      "engagement_rate": 89.5
+    },
+    {
+      "landing_page": "/about",
+      "sessions": 17,
+      "users": 13,
+      "pageviews": 54,
+      "bounce_rate": 17.6,
+      "engagement_rate": 82.4
+    },
+    {
+      "landing_page": "/resources/verify-chinese-supplier",
+      "sessions": 17,
+      "users": 13,
+      "pageviews": 25,
+      "bounce_rate": 35.3,
+      "engagement_rate": 64.7
+    },
+    {
+      "landing_page": "/resources/bunnings-wesfarmers-merger-supply-chain",
+      "sessions": 11,
+      "users": 8,
+      "pageviews": 11,
+      "bounce_rate": 54.5,
+      "engagement_rate": 45.5
+    },
+    {
+      "landing_page": "/resources/dashdot-property-collapse-asset-liquidation-guide",
+      "sessions": 9,
+      "users": 8,
+      "pageviews": 15,
+      "bounce_rate": 33.3,
+      "engagement_rate": 66.7
+    },
+    {
+      "landing_page": "/resources/2026-australian-federal-budget-import-duty-changes",
+      "sessions": 8,
+      "users": 7,
+      "pageviews": 12,
+      "bounce_rate": 12.5,
+      "engagement_rate": 87.5
+    },
+    {
+      "landing_page": "/resources",
+      "sessions": 7,
+      "users": 4,
+      "pageviews": 65,
+      "bounce_rate": 14.3,
+      "engagement_rate": 85.7
+    },
+    {
+      "landing_page": "/resources/nestory-irankunda-football",
+      "sessions": 7,
+      "users": 7,
+      "pageviews": 7,
+      "bounce_rate": 71.4,
+      "engagement_rate": 28.6
+    },
+    {
+      "landing_page": "/resources/australia-citizenship-surge-2026",
+      "sessions": 6,
+      "users": 6,
+      "pageviews": 7,
+      "bounce_rate": 16.7,
+      "engagement_rate": 83.3
+    },
+    {
+      "landing_page": "/article/china-sourcing-risks",
+      "sessions": 5,
+      "users": 4,
+      "pageviews": 5,
+      "bounce_rate": 80.0,
+      "engagement_rate": 20.0
+    },
+    {
+      "landing_page": "/resources/australian-supermarket-china-sourcing-secrets",
+      "sessions": 5,
+      "users": 5,
+      "pageviews": 7,
+      "bounce_rate": 20.0,
+      "engagement_rate": 80.0
+    },
+    {
+      "landing_page": "/resources/avg-travels-liquidation",
+      "sessions": 5,
+      "users": 5,
+      "pageviews": 5,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/kimi-antonelli",
+      "sessions": 5,
+      "users": 5,
+      "pageviews": 5,
+      "bounce_rate": 80.0,
+      "engagement_rate": 20.0
+    },
+    {
+      "landing_page": "/resources/andrew-abdo",
+      "sessions": 4,
+      "users": 4,
+      "pageviews": 5,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/australian-telecom-price-hike-2026",
+      "sessions": 4,
+      "users": 4,
+      "pageviews": 5,
+      "bounce_rate": 25.0,
+      "engagement_rate": 75.0
+    },
+    {
+      "landing_page": "/resources/byd-company-supply-chain-guide",
+      "sessions": 4,
+      "users": 4,
+      "pageviews": 4,
+      "bounce_rate": 25.0,
+      "engagement_rate": 75.0
+    },
+    {
+      "landing_page": "/resources/china-home-sales-drop",
+      "sessions": 4,
+      "users": 4,
+      "pageviews": 4,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/resources/qantas-supply-chain-lessons-australian-smes",
+      "sessions": 4,
+      "users": 4,
+      "pageviews": 4,
+      "bounce_rate": 25.0,
+      "engagement_rate": 75.0
+    },
+    {
+      "landing_page": "/services",
+      "sessions": 4,
+      "users": 3,
+      "pageviews": 4,
+      "bounce_rate": 100.0,
+      "engagement_rate": 0.0
+    },
+    {
+      "landing_page": "/article",
+      "sessions": 3,
+      "users": 3,
+      "pageviews": 4,
+      "bounce_rate": 33.3,
+      "engagement_rate": 66.7
+    },
+    {
+      "landing_page": "/client/aaron-sansoni/tv-studio-build",
+      "sessions": 3,
+      "users": 2,
+      "pageviews": 14,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/australian-business-bankruptcy-2026",
+      "sessions": 3,
+      "users": 3,
+      "pageviews": 3,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/australian-retail-trends-grilld-coles",
+      "sessions": 3,
+      "users": 3,
+      "pageviews": 4,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/byd-company-china-supply-chain-guide",
+      "sessions": 3,
+      "users": 1,
+      "pageviews": 3,
+      "bounce_rate": 66.7,
+      "engagement_rate": 33.3
+    },
+    {
+      "landing_page": "/resources/cba-share-price-impact-australian-procurement",
+      "sessions": 3,
+      "users": 2,
+      "pageviews": 3,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/china-business-sourcing-tour",
+      "sessions": 3,
+      "users": 2,
+      "pageviews": 5,
+      "bounce_rate": 66.7,
+      "engagement_rate": 33.3
+    },
+    {
+      "landing_page": "/resources/star-wars-mandalorian-grogu-licensed-merchandise-sourcing-guide",
+      "sessions": 3,
+      "users": 3,
+      "pageviews": 3,
+      "bounce_rate": 33.3,
+      "engagement_rate": 66.7
+    },
+    {
+      "landing_page": "/resources/tennis-australia",
+      "sessions": 3,
+      "users": 3,
+      "pageviews": 4,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/us-export-ban-australian-manufacturers",
+      "sessions": 3,
+      "users": 3,
+      "pageviews": 3,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/article/australia-capital-gains-tax-sme-finance-guide",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 3,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/article/fitbit-air-sourcing",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/article/verify-chinese-supplier",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/client/aaron-sansoni",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 17,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/enquiry",
+      "sessions": 2,
+      "users": 1,
+      "pageviews": 4,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/albanese-tax-changes-sourcing",
+      "sessions": 2,
+      "users": 1,
+      "pageviews": 8,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/bhp",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/china-business-travel-guide-2026",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 3,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/resources/china-factory-tour-guide",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/how-to-plan",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/kane-williamson-cricket",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/liddell-power-station-manufacturing-energy",
+      "sessions": 2,
+      "users": 1,
+      "pageviews": 2,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/resources/resource-chinese-supplier-quality-not-as-promised",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/resources/the-backrooms-movie-entertainment-products-sourcing-guide",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/resources/thucydides-trap-australia-china-supply-chain",
+      "sessions": 2,
+      "users": 2,
+      "pageviews": 2,
+      "bounce_rate": 50.0,
+      "engagement_rate": 50.0
+    },
+    {
+      "landing_page": "/:1",
+      "sessions": 1,
+      "users": 1,
+      "pageviews": 3,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/article/australia-data-centre-supply-chain",
+      "sessions": 1,
+      "users": 1,
+      "pageviews": 2,
+      "bounce_rate": 0.0,
+      "engagement_rate": 100.0
+    },
+    {
+      "landing_page": "/article/australian-house-price-forecast-china-materials",
+      "sessions": 1,
+      "users": 1,
+      "pageviews": 1,
+      "bounce_rate": 100.0,
+      "engagement_rate": 0.0
+    }
+  ],
+  "total_organic_sessions": 447,
+  "quota_tokens_used": {
+    "daily_consumed": 2,
+    "daily_remaining": 199993,
+    "hourly_consumed": 2,
+    "hourly_remaining": 39993
+  },
+  "error": null
+}

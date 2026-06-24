@@ -35,12 +35,12 @@ export default function Footer() {
             </h4>
             <ul className="list-none space-y-3">
               <li>
-                <Link href="/china-sourcing-agent-australia" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/#capabilities" className="text-white/70 text-sm hover:text-white transition-colors">
                   China Sourcing Agent
                 </Link>
               </li>
               <li>
-                <Link href="/visiting-chinese-factories" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/#factory-visit" className="text-white/70 text-sm hover:text-white transition-colors">
                   Factory Tours & Visits
                 </Link>
               </li>
@@ -50,7 +50,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/china-sourcing-guide-australia" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/#capabilities" className="text-white/70 text-sm hover:text-white transition-colors">
                   China Sourcing Guide
                 </Link>
               </li>

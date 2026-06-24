@@ -1,12 +1,14 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
 import CTABand from '@/components/CTABand'
 import Hero from '@/components/Hero'
 import BlogPreview from '@/components/BlogPreview'
 import HowItWorks from '@/components/HowItWorks'
 import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
+import SourcingCapabilities from '@/components/SourcingCapabilities'
+import FactoryVisit from '@/components/FactoryVisit'
+import ClientOutcomes from '@/components/ClientOutcomes'
 import FAQ from '@/components/FAQ'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
@@ -15,13 +17,13 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: { absolute: 'China Sourcing Agent Australia | Verified Factories' },
-  description: 'We accompany Australian businesses on factory tours in Shenzhen, Guangzhou & Shanghai. Face-to-face supplier meetings with on-ground support.',
-  keywords: ['factory tours china', 'china sourcing agent', 'supplier verification china', 'australian business china', 'china factory visit', 'shenzhen factory tour', 'guangzhou sourcing'],
+  description: 'Adelaide-based China sourcing agent for Australian businesses. Factory tours, supplier verification, on-ground support across Guangdong, Zhejiang & Jiangsu. Free consultation.',
+  keywords: ['china sourcing agent australia', 'china sourcing agent', 'australia china sourcing', 'china factory visit', 'china factory tour', 'visiting chinese factories', 'factory verification china', 'supplier verification china', 'china procurement agent australia', 'guided factory tour china'],
   openGraph: {
     locale: 'en_AU',
     alternateLocale: 'en_US',
-    title: 'Factory Tours China | Face-to-Face Sourcing | Winning Adventure Global',
-    description: 'We accompany Australian businesses on factory tours in Shenzhen, Guangzhou & Shanghai. Face-to-face supplier meetings with on-ground support.',
+    title: 'China Sourcing Agent Australia | Factory Tours & Supplier Verification',
+    description: 'Adelaide-based. We accompany Australian businesses to verified Chinese factories — translation, negotiation & quality inspection included. Free consultation.',
     url: 'https://www.winningadventure.com.au/',
     siteName: 'Winning Adventure Global',
   },
@@ -64,14 +66,12 @@ export default function Home() {
         { name: 'Home', url: 'https://www.winningadventure.com.au' }
       ]} />
       <Hero />
-      <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-6 text-center">
-        <Link href="/china-sourcing-agent-australia" className="inline-block bg-navy text-white py-3 px-8 font-semibold hover:bg-navy/90 transition-colors">
-          Learn About Our Full Sourcing Agent Service →
-        </Link>
-      </div>
       <TwoWaysAccess />
       <HowItWorks />
       <WhyChooseUs />
+      <SourcingCapabilities />
+      <FactoryVisit />
+      <ClientOutcomes />
       <BlogPreview />
       <FAQ faqs={homepageFaqs} />
       <CTABand />

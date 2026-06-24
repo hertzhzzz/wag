@@ -88,7 +88,7 @@ export default function Hero() {
             </svg>
           </Link>
           <Link
-            href="/visiting-chinese-factories"
+            href="/#factory-visit"
             className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 no-underline text-sm min-h-11 backdrop-blur-sm hero-cta-secondary"
           >
             How factory visits work
