@@ -1,7 +1,11 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 import { getBlogRedirectTarget, isBlogGoneSlug, isGonePath } from "@/lib/gone-paths"
-import { goneResponse } from "@/lib/gone-page"
+
+// Render the branded /gone page (reuses real Navbar/Footer) with a true 410 status.
+function goneResponse(request: NextRequest): NextResponse {
+  return NextResponse.rewrite(new URL("/gone", request.url), { status: 410 })
+}
 
 const PROTECTED_PATHS = ["/client", "/admin"]
 const PUBLIC_PATHS = [
@@ -25,13 +29,13 @@ export function middleware(request: NextRequest) {
 
   const articleSlug = getArticleSlug(pathname)
   if (articleSlug && isBlogGoneSlug(articleSlug)) {
-    return goneResponse()
+    return goneResponse(request)
   }
 
   const resourceSlug = getResourceSlug(pathname)
   if (resourceSlug) {
     if (isBlogGoneSlug(resourceSlug)) {
-      return goneResponse()
+      return goneResponse(request)
     }
 
     const redirectTarget = getBlogRedirectTarget(resourceSlug) || `/article/${resourceSlug}`
@@ -39,7 +43,7 @@ export function middleware(request: NextRequest) {
   }
 
   if (isGonePath(pathname)) {
-    return goneResponse()
+    return goneResponse(request)
   }
 
   // Block /factory in production (local dev only for now)
