@@ -116,18 +116,9 @@ export default async function RootLayout({
         <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGJ1YL8YR" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-VEGJ1YL8YR');
-          `}
-        </Script>
-        <Script id="google-ads" strategy="afterInteractive">
-          {`gtag('config', 'AW-18216448449');`}
-        </Script>
+        {/* Google tag — raw <script> so Google Ads bot can detect it in server-rendered HTML */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18216448449"></script>
+        <script dangerouslySetInnerHTML={{__html:`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18216448449');gtag('config','G-VEGJ1YL8YR');`}} />
         <Script id="meta-pixel" strategy="lazyOnload" dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
