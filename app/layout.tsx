@@ -204,7 +204,9 @@ export default function RootLayout({
                 "https://www.linkedin.com/company/winning-adventure-global",
                 "https://www.facebook.com/winningadventureglobal",
                 "https://www.instagram.com/winningadventureglobal",
-                "https://share.google/Yrax86WiFoxFwFXqD"
+                "https://share.google/Yrax86WiFoxFwFXqD",
+                "https://yelp.com.au/biz/winning-adventure-global-north-adelaide",
+                "https://www.hotfrog.com.au/company/a2d70b0335d2d3fa4ef260449eede6f2/winning-adventure-global-pty-ltd/north-adelaide/business-organizations"
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
