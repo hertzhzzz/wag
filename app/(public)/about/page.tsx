@@ -528,7 +528,7 @@ export default function AboutPage() {
             <div>
               <p className="text-xs font-semibold text-amber uppercase tracking-wider mb-2">Google</p>
               <a
-                href="https://share.google/qQBUJkAAn1ZChq7Mc"
+                href="https://share.google/Yrax86WiFoxFwFXqD"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 hover:text-amber transition-colors text-sm flex items-center gap-1"

@@ -147,7 +147,7 @@ export default function Footer() {
               </div>
               <div>
                 <a
-                  href="https://share.google/qQBUJkAAn1ZChq7Mc"
+                  href="https://share.google/Yrax86WiFoxFwFXqD"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/60 hover:text-amber transition-colors text-xs flex items-center gap-1"
