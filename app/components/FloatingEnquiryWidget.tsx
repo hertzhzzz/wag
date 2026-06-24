@@ -90,6 +90,16 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
       return
     }
 
+    // Google Ads conversion fires on submit click
+    const _win = window as Window & { fbq?: Function; gtag?: Function }
+    if (_win.gtag) {
+      _win.gtag('event', 'conversion', {
+        send_to: 'AW-18216448449/6Uh5CLv_z8QcEMHjo-5D',
+        value: 1.0,
+        currency: 'AUD',
+      })
+    }
+
     setLoading(true)
     setErrors({})
     try {
@@ -100,7 +110,7 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
       })
       if (res.ok) {
         setSubmitted(true)
-        // Fire GA4 and Meta Pixel conversion events
+        // GA4 + Meta Pixel fire after API confirms success
         setTimeout(() => {
           const win = window as Window & { fbq?: Function; gtag?: Function }
           if (win.gtag) {
@@ -109,10 +119,6 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
               event_label: 'floating_widget',
               value: 1,
               currency: 'AUD',
-            })
-            // Google Ads conversion tracking
-            win.gtag('event', 'conversion', {
-              send_to: 'AW-18216448449/6Uh5CLv_z8QcEMHjo-5D',
             })
           }
           if (win.fbq) {

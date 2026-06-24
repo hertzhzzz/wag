@@ -60,6 +60,16 @@ export default function EnquiryForm() {
       setTouched({ fullName: true, email: true, lookingFor: true })
       return
     }
+    // Google Ads conversion fires on submit click
+    const _win = window as Window & { fbq?: Function; gtag?: Function }
+    if (_win.gtag) {
+      _win.gtag('event', 'conversion', {
+        send_to: 'AW-18216448449/6Uh5CLv_z8QcEMHjo-5D',
+        value: 1.0,
+        currency: 'AUD',
+      })
+    }
+
     setSubmitting(true)
     setErrors({})
     try {
@@ -70,10 +80,9 @@ export default function EnquiryForm() {
       })
       if (res.ok) {
         setSubmitted(true)
-        // Fire GA4 and Meta Pixel conversion events
+        // GA4 + Meta Pixel fire after API confirms success
         setTimeout(() => {
           const win = window as Window & { fbq?: Function; gtag?: Function }
-          // GA4 conversion event
           if (win.gtag) {
             win.gtag('event', 'generate_lead', {
               event_category: 'enquiry',
@@ -81,12 +90,7 @@ export default function EnquiryForm() {
               value: 1,
               currency: 'AUD',
             })
-            // Google Ads conversion tracking
-            win.gtag('event', 'conversion', {
-              send_to: 'AW-18216448449/6Uh5CLv_z8QcEMHjo-5D',
-            })
           }
-          // Meta Pixel Lead event
           if (win.fbq) {
             win.fbq('track', 'Lead', {
               content_name: 'Enquiry Form Submission',
