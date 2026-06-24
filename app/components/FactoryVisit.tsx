@@ -27,6 +27,16 @@ export default function FactoryVisit() {
   return (
     <section id="factory-visit" className="py-16 md:py-24 px-8 md:px-20 bg-[#f8f9fb]">
       <div className="max-w-[1200px] mx-auto">
+        {/* Stat badges */}
+        <div className="flex flex-wrap gap-x-12 gap-y-5 mb-14 pb-10 border-b border-gray-200">
+          {[['2/day', 'Factories per visit'], ['6', 'Manufacturing hubs covered'], ['100%', 'Bilingual support on-site']].map(([n, l]) => (
+            <div key={l}>
+              <div className="font-serif text-3xl md:text-4xl font-bold text-navy leading-none">{n}</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wide mt-2">{l}</div>
+            </div>
+          ))}
+        </div>
+
         {/* Timeline */}
         <div className="max-w-[640px] mb-14">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">What to Expect</p>

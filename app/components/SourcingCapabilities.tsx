@@ -16,7 +16,7 @@ export default function SourcingCapabilities() {
   return (
     <section id="capabilities" className="py-16 md:py-24 px-8 md:px-20 bg-white">
       <div className="max-w-[1200px] mx-auto">
-        <div className="max-w-[640px] mb-14">
+        <div className="max-w-[640px] mb-10">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">What We Do</p>
           <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
             Full-Service China Sourcing, Managed from Australia
@@ -24,6 +24,16 @@ export default function SourcingCapabilities() {
           <p className="text-gray-600 leading-relaxed">
             Unlike large-volume platforms that process RFQs through a centralised system, we are an Adelaide-based team with our own people on the ground in China. Every service is delivered by our team — never subcontracted to third-party inspectors or rebate-influenced agents. From factory verification through to freight, one team handles your project end to end.
           </p>
+        </div>
+
+        {/* Stat badges */}
+        <div className="flex flex-wrap gap-x-12 gap-y-5 mb-14 pb-10 border-b border-gray-100">
+          {[['50+', 'Industries served'], ['120+', 'Factories visited'], ['3–7 days', 'To shortlist 2–3 factories']].map(([n, l]) => (
+            <div key={l}>
+              <div className="font-serif text-3xl md:text-4xl font-bold text-navy leading-none">{n}</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wide mt-2">{l}</div>
+            </div>
+          ))}
         </div>
 
         {/* Services Grid */}

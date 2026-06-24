@@ -9,6 +9,7 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import SourcingCapabilities from '@/components/SourcingCapabilities'
 import FactoryVisit from '@/components/FactoryVisit'
 import ClientOutcomes from '@/components/ClientOutcomes'
+import BreathingBand from '@/components/BreathingBand'
 import FAQ from '@/components/FAQ'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
@@ -69,8 +70,17 @@ export default function Home() {
       <TwoWaysAccess />
       <HowItWorks />
       <WhyChooseUs />
+      <BreathingBand
+        stat="80+"
+        statement="Australian businesses already source through us — from Adelaide SMEs to Perth mining services firms."
+      />
       <SourcingCapabilities />
       <FactoryVisit />
+      <BreathingBand
+        stat="62%"
+        statement="of sourcing problems surface after the first shipment, not during the deal. That's why we go on the ground with you."
+        source="UTS Australian Business China Sourcing Research, 2025 · n=858"
+      />
       <ClientOutcomes />
       <BlogPreview />
       <FAQ faqs={homepageFaqs} />
