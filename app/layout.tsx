@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': 150,
+      'max-snippet': -1,
     },
   },
   openGraph: {
@@ -72,9 +72,6 @@ export const metadata: Metadata = {
       'en-AU': 'https://www.winningadventure.com.au',
       'x-default': 'https://www.winningadventure.com.au',
     },
-  },
-  verification: {
-    google: 'G-VEGJ1YL8YR',
   },
   icons: {
     icon: [
