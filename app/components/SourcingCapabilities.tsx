@@ -14,7 +14,7 @@ const services = [
 
 export default function SourcingCapabilities() {
   return (
-    <section id="capabilities" className="py-20 md:py-28 px-4 md:px-8 bg-white">
+    <section id="capabilities" className="py-16 md:py-24 px-8 md:px-20 bg-white">
       <div className="max-w-[1200px] mx-auto">
         <div className="max-w-[640px] mb-14">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">What We Do</p>

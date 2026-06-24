@@ -14,7 +14,7 @@ const stories = [
 
 export default function ClientOutcomes() {
   return (
-    <section id="outcomes" className="py-20 md:py-28 px-4 md:px-8 bg-white">
+    <section id="outcomes" className="py-16 md:py-24 px-8 md:px-20 bg-white">
       <div className="max-w-[1200px] mx-auto">
         {/* AV Case Study */}
         <div className="max-w-[640px] mb-14">

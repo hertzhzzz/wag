@@ -25,7 +25,7 @@ const redFlags = [
 
 export default function FactoryVisit() {
   return (
-    <section id="factory-visit" className="py-20 md:py-28 px-4 md:px-8 bg-[#f8f9fb]">
+    <section id="factory-visit" className="py-16 md:py-24 px-8 md:px-20 bg-[#f8f9fb]">
       <div className="max-w-[1200px] mx-auto">
         {/* Timeline */}
         <div className="max-w-[640px] mb-14">
