@@ -22,6 +22,11 @@ export const BLOG_GONE_SLUGS = [
   "reserve-bank-australia-china-sourcing-costs",
   "thucydides-trap-australia-china-supply-chain",
   "us-export-ban-australian-manufacturers",
+  // Removed 2026-06-24 (round 2) — news/event-anchored, off-topic.
+  "australia-data-centre-supply-chain",
+  "australian-energy-regulator-price-announcement",
+  "electric-battery-china",
+  "electric-vehicle-australia-supply-chain",
   "australian-house-price-forecast-china-materials",
   "resource-china-vs-alibaba",
   "trump-tariffs-australia-china-sourcing-impact",
