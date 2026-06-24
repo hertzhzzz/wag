@@ -26,8 +26,15 @@ export function middleware(request: NextRequest) {
   const { pathname, hostname } = request.nextUrl
 
   const articleSlug = getArticleSlug(pathname)
-  if (articleSlug && isBlogGoneSlug(articleSlug)) {
-    return goneResponse(request)
+  if (articleSlug) {
+    if (isBlogGoneSlug(articleSlug)) {
+      return goneResponse(request)
+    }
+    // resource- 旧版文章 301 → canonical 新版（传递权重）
+    const articleRedirect = getBlogRedirectTarget(articleSlug)
+    if (articleRedirect) {
+      return NextResponse.redirect(new URL(articleRedirect, request.url), 301)
+    }
   }
 
   const resourceSlug = getResourceSlug(pathname)

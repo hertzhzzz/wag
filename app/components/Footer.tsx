@@ -35,23 +35,23 @@ export default function Footer() {
             </h4>
             <ul className="list-none space-y-3">
               <li>
-                <Link href="/solutions#factory-tours" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Business Discovery Trip
+                <Link href="/china-sourcing-agent-australia" className="text-white/70 text-sm hover:text-white transition-colors">
+                  China Sourcing Agent
                 </Link>
               </li>
               <li>
-                <Link href="/solutions#procurement" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Procurement Support
+                <Link href="/visiting-chinese-factories" className="text-white/70 text-sm hover:text-white transition-colors">
+                  Factory Tours & Visits
                 </Link>
               </li>
               <li>
-                <Link href="/solutions#verification" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Factory Verification
+                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
+                  Sourcing Services
                 </Link>
               </li>
               <li>
-                <Link href="/solutions#verification" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Quality Inspection
+                <Link href="/china-sourcing-guide-australia" className="text-white/70 text-sm hover:text-white transition-colors">
+                  China Sourcing Guide
                 </Link>
               </li>
             </ul>

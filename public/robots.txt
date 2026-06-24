@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /client/
 
 # AI Crawler Rules — allow all but respect Crawl-delay
 User-agent: GPTBot
@@ -33,17 +34,5 @@ Crawl-delay: 1
 # Training crawler — block from site
 User-agent: CCBot
 Disallow: /
-
-# Block client portal from all search engines
-User-agent: *
-Disallow: /client/
-
-# Block admin pages from all search engines
-User-agent: *
-Disallow: /admin/
-
-# Block duplicate/non-primary resource pages
-User-agent: *
-Disallow: /resources/resource-
 
 Sitemap: https://www.winningadventure.com.au/sitemap.xml

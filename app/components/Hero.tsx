@@ -67,9 +67,9 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-3 hero-subtitle is-visible">
-          Verified manufacturers. Direct access. Zero middleman.
-        </p>
+        <h2 className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-3 hero-subtitle is-visible">
+          China Sourcing Agent for Australian Businesses. Verified Factories, Direct Access.
+        </h2>
         <p className="text-base md:text-lg font-light leading-[1.6] text-white/70 max-w-[520px] mb-3 hero-subtitle-line-2 is-visible">
           Direct factory access. No agents. No traders.
         </p>
