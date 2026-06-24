@@ -83,7 +83,7 @@ export default function EnquiryForm() {
             })
             // Google Ads conversion tracking
             win.gtag('event', 'conversion', {
-              send_to: 'AW-18216448449/JvUBCMe4yMEcEMHjo-5D',
+              send_to: 'AW-18216448449/6Uh5CLv_z8QcEMHjo-5D',
             })
           }
           // Meta Pixel Lead event
