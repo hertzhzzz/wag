@@ -45,6 +45,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/enquiry`, lastModified: new Date() },
     { url: `${baseUrl}/visiting-chinese-factories`, lastModified: new Date() },
     { url: `${baseUrl}/china-sourcing-guide-australia`, lastModified: new Date() },
+    { url: `${baseUrl}/china-sourcing-agent-australia`, lastModified: new Date() },
+    { url: `${baseUrl}/solutions`, lastModified: new Date() },
     { url: `${baseUrl}/article/faq`, lastModified: new Date() },
     { url: `${baseUrl}/privacy`, lastModified: new Date() },
     { url: `${baseUrl}/terms`, lastModified: new Date() },
