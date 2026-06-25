@@ -41,10 +41,11 @@ const reportSections = [
     icon: ClipboardCheck,
     title: '4. Product Portfolio & Samples',
     lines: [
-      { label: 'Product Categories', value: '[REDACTED] series across [REDACTED] product lines' },
-      { label: 'Sample Tested', value: '✓ Samples match specification. Photos attached.', clean: true },
+      { label: 'Product Categories', value: '[REDACTED] series across [REDACTED] lines' },
+      { label: 'Sample Tested', value: '✓ Matches spec. See attached photos.', clean: true },
       { label: 'Customisation', value: '✓ OEM/ODM capability confirmed', clean: true },
     ],
+    images: true,
   },
   {
     icon: Award,
@@ -85,11 +86,12 @@ const reportSections = [
   },
 ]
 
-const productImages = [
-  { src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&q=50&auto=format&fit=crop', label: 'Production line — PCB assembly' },
-  { src: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=200&q=50&auto=format&fit=crop', label: 'Warehouse — finished goods' },
-  { src: 'https://images.unsplash.com/photo-1563770554667-f8b6bdd719d5?w=200&q=50&auto=format&fit=crop', label: 'QC inspection station' },
-  { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=200&q=50&auto=format&fit=crop', label: 'Packaging & labelling area' },
+// 真实工厂审计风格图片（CC0 Unsplash — 验厂现场感）
+const auditImages = [
+  { src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&q=60&auto=format&fit=crop', label: 'Product sample — circuit board assembly' },
+  { src: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&q=60&auto=format&fit=crop', label: 'Factory floor — SMT production line' },
+  { src: 'https://images.unsplash.com/photo-1563770554667-f8b6bdd719d5?w=300&q=60&auto=format&fit=crop', label: 'QC inspection — measurement station' },
+  { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=300&q=60&auto=format&fit=crop', label: 'Warehouse — finished goods storage' },
 ]
 
 export default function SupplierReportPreview() {
@@ -127,6 +129,16 @@ export default function SupplierReportPreview() {
                 ))}
                 {section.lines.length > 2 && (
                   <span className="text-[9px] text-navy/25">+{section.lines.length - 2} more fields</span>
+                )}
+                {section.images && (
+                  <div className="flex gap-1.5 mt-2">
+                    {auditImages.map((img, i) => (
+                      <div key={i} className="flex-shrink-0 w-12 h-9 rounded overflow-hidden border border-navy/5 bg-navy/5">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={img.src} alt="" className="w-full h-full object-cover blur-[2px]" />
+                      </div>
+                    ))}
+                  </div>
                 )}
               </div>
             </div>
@@ -186,23 +198,20 @@ export default function SupplierReportPreview() {
                         </span>
                       </div>
                     ))}
+                    {section.images && (
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-2">
+                        {auditImages.map((img, i) => (
+                          <div key={i} className="border border-navy/10 rounded-lg overflow-hidden bg-navy/5">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={img.src} alt="" className="w-full aspect-[4/3] object-cover blur-[2px]" />
+                            <p className="text-[10px] text-navy/40 px-2 py-1">{img.label}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
-
-              {/* Product photos */}
-              <div className="border-t border-navy/10 pt-6">
-                <h3 className="font-semibold text-navy text-[15px] mb-4">Product &amp; Facility Photos</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                  {productImages.map((img, i) => (
-                    <div key={i} className="border border-navy/10 rounded-lg overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={img.src} alt="" className="w-full aspect-[4/3] object-cover" />
-                      <p className="text-[11px] text-navy/50 px-2 py-1.5">{img.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
             {/* Footer */}
