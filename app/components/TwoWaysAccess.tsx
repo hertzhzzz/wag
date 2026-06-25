@@ -65,7 +65,7 @@ export default function TwoWaysAccess() {
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
             Our Services
           </p>
-          <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight">
+          <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight text-balance">
             How Would You Like to Find Your Factory?
           </h2>
         </div>

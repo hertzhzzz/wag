@@ -45,7 +45,7 @@ export default function CTABand() {
           <h2 className="font-serif text-[2rem] font-semibold text-navy mb-2.5">
             Your Suppliers Are Ready. Are You?
           </h2>
-          <p className="text-base text-gray-500">
+          <p className="text-base text-navy/60">
             Book a 30-minute discovery call.
           </p>
         </div>

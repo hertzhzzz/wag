@@ -40,10 +40,10 @@ export default function FactoryVisit() {
         {/* Timeline */}
         <div className="max-w-[640px] mb-14">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">What to Expect</p>
-          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4 text-balance">
             A Typical Factory Visit Day — Start to Finish
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-navy/70 leading-relaxed">
             Two factories per day. Bilingual guide with you from pickup to drop-off. Here is exactly how a structured day unfolds — based on dozens of visits we have run for Australian businesses.
           </p>
         </div>
@@ -71,10 +71,10 @@ export default function FactoryVisit() {
         {/* Red Flags */}
         <div className="max-w-[640px] mb-10">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Supplier Due Diligence</p>
-          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4 text-balance">
             8 Red Flags to Watch For During a Factory Visit
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-navy/70 leading-relaxed">
             Seeing a factory in person reveals problems that documents and photos cannot. These are the warning signs our team looks for on every visit.
           </p>
         </div>

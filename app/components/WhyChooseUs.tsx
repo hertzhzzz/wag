@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
             Our Commitment
           </p>
-          <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight mb-4">
+          <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight mb-4 text-balance">
             Why Winning Adventure Global
           </h2>
           <p className="text-navy/70 text-lg leading-relaxed">

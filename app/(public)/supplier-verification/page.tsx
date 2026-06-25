@@ -225,7 +225,7 @@ export default function SupplierVerificationPage() {
                 Why it matters
               </p>
             </div>
-            <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] leading-tight mb-10 max-w-[760px]">
+            <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] leading-tight mb-10 max-w-[760px] text-balance">
               A deposit wired to the wrong supplier is the hardest money to get back
             </h2>
           </ScrollReveal>
@@ -274,7 +274,7 @@ export default function SupplierVerificationPage() {
         <section className="bg-navy/[0.03] border-y border-navy/10">
           <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
             <ScrollReveal>
-              <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] mb-12 text-center">
+              <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] mb-12 text-center text-balance">
                 How Verification Works
               </h2>
             </ScrollReveal>
@@ -311,7 +311,7 @@ export default function SupplierVerificationPage() {
                     Why us
                   </p>
                 </div>
-                <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] leading-tight mb-5">
+                <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] leading-tight mb-5 text-balance">
                   Every check is measured against real, comparable factories
                 </h2>
                 <p className="text-navy/70 text-lg leading-relaxed mb-6">

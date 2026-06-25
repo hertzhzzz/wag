@@ -18,10 +18,10 @@ export default function SourcingCapabilities() {
       <div className="max-w-[1200px] mx-auto">
         <div className="max-w-[640px] mb-10">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">What We Do</p>
-          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4">
+          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4 text-balance">
             Full-Service China Sourcing, Managed from Australia
           </h2>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-navy/70 leading-relaxed">
             Unlike large-volume platforms that process RFQs through a centralised system, we are an Adelaide-based team with our own people on the ground in China. Every service is delivered by our team — never subcontracted to third-party inspectors or rebate-influenced agents. From factory verification through to freight, one team handles your project end to end.
           </p>
         </div>
