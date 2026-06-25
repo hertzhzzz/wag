@@ -372,11 +372,19 @@ export default function EnquiryForm() {
                 </div>
               </div>
 
-              {/* Promo banner — pinned to bottom on desktop via lg:justify-between */}
-              <div className="border border-amber/40 rounded-lg px-5 py-3.5 text-center">
-                <p className="text-xs font-semibold text-navy/70 uppercase tracking-wider mb-0.5">Verified factory report from</p>
-                <p className="text-lg font-bold text-amber">$500 AUD</p>
-                <p className="text-xs text-gray-500">Pay only when you&apos;re ready to move forward</p>
+              {/* Promo banner — standalone verified report vs full service tiers */}
+              <div className="border border-amber/40 rounded-lg px-5 py-3.5">
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  Not ready for a full engagement? Get a{' '}
+                  <span className="font-semibold text-navy">Verified Factory Report</span>{' '}
+                  — supplier background check, license validation, and capability assessment —{' '}
+                  <span className="font-semibold text-amber">$500 AUD</span>.
+                </p>
+                <p className="text-xs text-gray-400 mt-1.5">
+                  Part of our{' '}
+                  <Link href="/services" className="text-navy underline hover:text-amber transition-colors">three service tiers</Link>
+                  , available standalone.
+                </p>
               </div>
 
             </div>
