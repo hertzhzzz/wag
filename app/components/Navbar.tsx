@@ -56,7 +56,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
                 className="flex flex-col items-start px-[14px] py-[8px] text-navy bg-white/80 border border-navy/20 hover:bg-navy hover:text-white flex-shrink-0 transition-all leading-tight"
               >
                 <span className="text-[10px] font-medium uppercase tracking-wide">Call Us Today</span>
-                <span className="text-[13px] font-semibold">+61 0416588198</span>
+                <span className="text-[13px] font-semibold">0416 588 198</span>
               </PhoneCallLink>
               <Link
                 href="/enquiry"
