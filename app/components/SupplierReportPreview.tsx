@@ -111,7 +111,7 @@ export default function SupplierReportPreview() {
         </div>
 
         {/* Section list — scrollable, stops before CTA */}
-        <div className="px-5 py-4 max-h-[480px] overflow-y-auto flex flex-col gap-0">
+        <div className="px-5 py-4 max-h-[340px] overflow-y-auto flex flex-col gap-0">
           {reportSections.map((section, i) => (
             <div key={i} className="py-2 border-b border-navy/5 last:border-0">
               <div className="flex items-center gap-2 mb-1">
@@ -158,7 +158,7 @@ export default function SupplierReportPreview() {
           onClick={() => setModalOpen(false)}
         >
           <div
-            className="bg-white w-full max-w-[780px] max-h-[85vh] overflow-y-auto shadow-2xl my-auto"
+            className="bg-white w-full max-w-[780px] max-h-[85vh] overflow-y-auto shadow-2xl mt-16 mb-8"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal header */}
