@@ -2,17 +2,14 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTABand from '@/components/CTABand'
 import Hero from '@/components/Hero'
-import BlogPreview from '@/components/BlogPreview'
 import HowItWorks from '@/components/HowItWorks'
 import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import ClientOutcomes from '@/components/ClientOutcomes'
 import SupplierReportPreview from '@/components/SupplierReportPreview'
 import BreathingBand from '@/components/BreathingBand'
-import FAQ from '@/components/FAQ'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
-import { homepageFaqs } from '@/data/faqs'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -129,8 +126,6 @@ export default function Home() {
         statement="Australian businesses already source through us — from Adelaide SMEs to Perth mining services firms."
         image="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=70&auto=format&fit=crop"
       />
-      <BlogPreview />
-      <FAQ faqs={homepageFaqs} />
       <CTABand />
       <Footer />
     </>
