@@ -118,23 +118,23 @@ export default function EnquiryForm() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#f8f9fb] border-b border-gray-200 py-12 px-4 sm:px-8">
+      <section className="bg-surface-warm border-b border-gray-200 py-14 sm:py-16 px-4 sm:px-8">
         <div className="max-w-[1200px] mx-auto">
-          <nav className="flex items-center gap-2 text-xs text-gray-400 uppercase tracking-wider mb-4">
-            <Link href="/" className="hover:text-[#0F2D5E]">Home</Link>
+          <nav className="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wider mb-4">
+            <Link href="/" className="hover:text-navy">Home</Link>
             <span>›</span>
-            <span className="text-[#0F2D5E] font-semibold">Enquiry</span>
+            <span className="text-navy font-semibold">Enquiry</span>
           </nav>
-          <h1 className="font-serif font-bold text-[clamp(1.75rem,3vw,2.5rem)] text-[#0F2D5E] leading-tight mb-3">
+          <h1 className="font-serif font-bold text-[clamp(1.75rem,3vw,2.5rem)] text-navy leading-tight mb-3 text-balance">
             Your Direct Line to China&apos;s Best Factories
           </h1>
-          <p className="text-base text-gray-600 max-w-[560px]">
+          <p className="text-base text-gray-600 max-w-[560px] text-pretty">
             We connect Australian businesses with verified manufacturers — and vet every supplier before you sign anything. Tell us what you need.
           </p>
         </div>
       </section>
 
-      <section className="py-12 px-4 sm:px-8">
+      <section className="py-14 sm:py-16 px-4 sm:px-8">
         <div className="max-w-[1200px] mx-auto">
 
           {/* Desktop: left (form) / right (paths + trust) */}
@@ -143,28 +143,28 @@ export default function EnquiryForm() {
             {/* Left column: Form card */}
             <div>
           <div className="bg-white border border-gray-200 rounded-lg p-8">
-            <p className="text-xs font-semibold tracking-widest text-[#F59E0B] uppercase mb-2">Get in Touch</p>
-            <h2 className="font-serif font-bold text-[1.375rem] text-[#0F2D5E] mb-6">
+            <p className="text-xs font-semibold tracking-widest text-navy/60 uppercase mb-2">Get in Touch</p>
+            <h2 className="font-serif font-bold text-[1.375rem] text-navy mb-6">
               Submit Your Sourcing Enquiry
             </h2>
 
             {submitted ? (
-              <div className="text-center py-12">
-                <div className="w-14 h-14 bg-[#0F2D5E] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle size={28} className="text-[#F59E0B]" />
+              <div role="status" aria-live="polite" className="text-center py-12">
+                <div className="w-14 h-14 bg-navy rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle size={28} className="text-amber" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-[#0F2D5E] mb-3">
+                <h3 className="font-serif text-2xl font-bold text-navy mb-3">
                   Your Enquiry Is In Our Hands
                 </h3>
                 <p className="text-gray-600 max-w-[360px] mx-auto mb-8">
                   We&apos;ll review your requirements and reach out within 4 business hours.
                 </p>
-                <Link href="/" className="px-6 py-2.5 bg-[#0F2D5E] text-white text-sm font-semibold hover:bg-[#0a2148] transition-colors no-underline">
+                <Link href="/" className="px-6 py-2.5 bg-navy text-white text-sm font-semibold hover:bg-navy-dark transition-colors duration-200 ease-out no-underline">
                   Back to Home
                 </Link>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="pb-20 md:pb-0">
+              <form onSubmit={handleSubmit} noValidate>
                 <div className="flex flex-col gap-5">
                   <KeyboardAwareInput
                     id="fullName"
@@ -221,14 +221,14 @@ export default function EnquiryForm() {
                       htmlFor="industry"
                       className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
                     >
-                      Industry <span className="text-gray-400 font-normal normal-case tracking-wide lowercase">(optional)</span>
+                      Industry <span className="text-gray-500 font-normal normal-case tracking-wide lowercase">(optional)</span>
                     </label>
                     <select
                       id="industry"
                       value={formData.industry}
                       onChange={(e) => handleChange('industry', e.target.value)}
                       onBlur={() => handleBlurExtra('industry')}
-                      className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E] transition-colors bg-white"
+                      className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-navy outline-none focus:border-navy transition-colors bg-white"
                     >
                       <option value="">Select your industry...</option>
                       <option value="av-audio-visual">AV & Audio-Visual Equipment</option>
@@ -265,7 +265,8 @@ export default function EnquiryForm() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-4 md:py-3.5 px-6 bg-[#0F2D5E] text-white font-semibold hover:bg-[#0a2148] active:bg-[#071a3a] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    aria-busy={submitting || undefined}
+                    className="w-full py-4 md:py-3.5 px-6 bg-navy text-white font-semibold hover:bg-navy-dark active:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/40 focus-visible:ring-offset-2 transition-colors duration-200 ease-out disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {submitting ? 'Sending…' : 'Submit Enquiry →'}
                   </button>
@@ -274,7 +275,7 @@ export default function EnquiryForm() {
                     href="https://calendly.com/mark-winningadventure/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-center text-sm text-[#0F2D5E] hover:text-[#F59E0B] mt-1"
+                    className="block text-center text-sm text-navy hover:text-amber mt-4 sm:mt-2"
                   >
                     Prefer to talk? Book a call →
                   </a>
@@ -289,18 +290,18 @@ export default function EnquiryForm() {
 
               {/* What happens next — two paths */}
               <div>
-                <h3 className="font-serif font-bold text-lg mb-6 text-[#0F2D5E]">Here&apos;s what happens after you reach out</h3>
+                <h3 className="font-serif font-bold text-lg mb-6 text-navy">Here&apos;s what happens after you reach out</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                   {/* Path 1: Visit in China */}
-                  <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
-                    <div className="flex items-center gap-2.5 mb-4">
-                      <div className="w-7 h-7 rounded-full bg-[#0F2D5E] text-white flex items-center justify-center flex-shrink-0">
+                  <div className="border-2 border-navy rounded-lg p-5">
+                    <div className="flex items-center gap-2.5 mb-3">
+                      <div className="w-7 h-7 rounded-full bg-navy text-white flex items-center justify-center flex-shrink-0">
                         <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
                       </div>
-                      <p className="text-xs font-bold uppercase tracking-wider text-[#0F2D5E]">Path 1 — Visit Factories in China</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-navy">Path 1 — Visit Factories in China</p>
                     </div>
-                    <div className="flex flex-col gap-2.5">
+                    <div className="flex flex-col gap-2">
                       {[
                         ['We get in touch', 'Within 4 business hours'],
                         ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
@@ -308,12 +309,12 @@ export default function EnquiryForm() {
                         ['You visit in person', 'Guided tours, technical meetings, quality inspection'],
                         ['Production & shipping', 'We monitor production and ship to your door'],
                       ].map(([title, sub], i) => (
-                        <div key={i} className="flex items-start gap-2.5">
-                          <div className="w-4 h-4 rounded-full bg-[#0F2D5E] text-[#F59E0B] text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div key={i} className="flex items-start gap-2">
+                          <div className="w-4 h-4 rounded-full bg-navy text-amber text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                             {i + 1}
                           </div>
                           <div>
-                            <span className="text-xs font-semibold text-[#0F2D5E]">{title} — </span>
+                            <span className="text-xs font-semibold text-navy">{title} — </span>
                             <span className="text-xs text-gray-500">{sub}</span>
                           </div>
                         </div>
@@ -322,14 +323,14 @@ export default function EnquiryForm() {
                   </div>
 
                   {/* Path 2: Remote / No travel */}
-                  <div className="border-2 border-[#0F2D5E] rounded-lg p-5">
-                    <div className="flex items-center gap-2.5 mb-4">
-                      <div className="w-7 h-7 rounded-full bg-[#0F2D5E] text-white flex items-center justify-center flex-shrink-0">
+                  <div className="border-2 border-navy rounded-lg p-5">
+                    <div className="flex items-center gap-2.5 mb-3">
+                      <div className="w-7 h-7 rounded-full bg-navy text-white flex items-center justify-center flex-shrink-0">
                         <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
                       </div>
-                      <p className="text-xs font-bold uppercase tracking-wider text-[#0F2D5E]">Path 2 — Remote Verification</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-navy">Path 2 — Remote Verification</p>
                     </div>
-                    <div className="flex flex-col gap-2.5">
+                    <div className="flex flex-col gap-2">
                       {[
                         ['We get in touch', 'Within 4 business hours'],
                         ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
@@ -337,12 +338,12 @@ export default function EnquiryForm() {
                         ['You review from here', 'No travel needed — full transparency from Australia'],
                         ['We arrange shipping', 'Production monitoring and delivery managed end-to-end'],
                       ].map(([title, sub], i) => (
-                        <div key={i} className="flex items-start gap-2.5">
-                          <div className="w-4 h-4 rounded-full bg-[#0F2D5E] text-[#F59E0B] text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div key={i} className="flex items-start gap-2">
+                          <div className="w-4 h-4 rounded-full bg-navy text-amber text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                             {i + 1}
                           </div>
                           <div>
-                            <span className="text-xs font-semibold text-[#0F2D5E]">{title} — </span>
+                            <span className="text-xs font-semibold text-navy">{title} — </span>
                             <span className="text-xs text-gray-500">{sub}</span>
                           </div>
                         </div>
@@ -354,18 +355,18 @@ export default function EnquiryForm() {
               </div>
 
               {/* Trust stats */}
-              <div className="grid grid-cols-3 gap-3 py-4 border-y border-gray-100">
+              <div className="grid grid-cols-3 gap-3 py-5 border-y border-gray-100">
                 <div className="text-center">
-                  <p className="text-lg font-bold text-[#0F2D5E]">200+</p>
-                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Factory Visits</p>
+                  <p className="text-lg font-bold text-navy">200+</p>
+                  <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Factory Visits</p>
                 </div>
                 <div className="text-center border-x border-gray-100">
-                  <p className="text-lg font-bold text-[#0F2D5E]">4hrs</p>
-                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Response Time</p>
+                  <p className="text-lg font-bold text-navy">4hrs</p>
+                  <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Response Time</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg font-bold text-[#0F2D5E]">AU-Based</p>
-                  <p className="text-[0.6rem] text-gray-400 uppercase tracking-wider">Team</p>
+                  <p className="text-lg font-bold text-navy">AU-Based</p>
+                  <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Team</p>
                 </div>
               </div>
 
@@ -373,48 +374,48 @@ export default function EnquiryForm() {
           </div>
 
           {/* FAQ + Contact — 3-column: FAQ stacked | Direct Contact | Trust badges */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
 
             {/* Column 1: FAQ stack */}
             <div className="border border-gray-200 rounded-lg divide-y divide-gray-100">
               <div className="px-6 py-5">
-                <p className="text-sm font-semibold text-[#0F2D5E] mb-1.5">Is there any upfront cost to enquire?</p>
-                <p className="text-sm text-gray-500 leading-relaxed">None. The initial consultation is completely free.</p>
+                <p className="text-sm font-semibold text-navy mb-1.5">Is there any upfront cost to enquire?</p>
+                <p className="text-sm text-gray-500 leading-relaxed">There&apos;s no cost to discuss your needs — we can have an initial call to see if we&apos;re a good fit. A deposit is required before any sourcing work begins.</p>
               </div>
               <div className="px-6 py-5">
-                <p className="text-sm font-semibold text-[#0F2D5E] mb-1.5">Do you push me towards specific suppliers?</p>
+                <p className="text-sm font-semibold text-navy mb-1.5">Do you push me towards specific suppliers?</p>
                 <p className="text-sm text-gray-500 leading-relaxed">No. The decision is entirely yours.</p>
               </div>
               <div className="px-6 py-5">
-                <p className="text-sm font-semibold text-[#0F2D5E] mb-1.5">What if I&apos;m not ready to travel yet?</p>
+                <p className="text-sm font-semibold text-navy mb-1.5">What if I&apos;m not ready to travel yet?</p>
                 <p className="text-sm text-gray-500 leading-relaxed">Book a call to discuss — we can plan well in advance.</p>
               </div>
             </div>
 
             {/* Column 2: Direct Contact */}
             <div className="border border-gray-200 rounded-lg p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">Direct Contact</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Direct Contact</p>
               <div className="flex items-start gap-2.5 text-sm text-gray-600 mb-3">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
                 <span>5/54 Melbourne St, North Adelaide SA 5006</span>
               </div>
               <div className="flex items-center gap-2.5 text-sm">
                 <Mail size={16} className="flex-shrink-0" />
-                <a href="mailto:mark@winningadventure.com.au" className="text-[#0F2D5E] font-medium hover:text-[#F59E0B]">
+                <a href="mailto:mark@winningadventure.com.au" className="text-navy font-medium hover:text-amber">
                   mark@winningadventure.com.au
                 </a>
               </div>
             </div>
 
             {/* Column 3: Trust badges */}
-            <div className="bg-[#f3f4f6] border border-gray-200 rounded-lg p-6 flex flex-col justify-center gap-4">
+            <div className="bg-gray-100 border border-gray-200 rounded-lg p-6 flex flex-col justify-center gap-4">
               {([
                 [CheckCircle, 'Verified Suppliers Only'],
                 [DollarSign, 'No Hidden Fees'],
                 [Building2, 'Australia-Based Team'],
               ] as [React.ElementType, string][]).map(([Icon, label]) => (
-                <div key={label} className="flex items-center gap-3 text-sm font-semibold text-[#0F2D5E]">
-                  <div className="w-8 h-8 bg-[#0F2D5E] rounded-full flex items-center justify-center flex-shrink-0">
+                <div key={label} className="flex items-center gap-3 text-sm font-semibold text-navy">
+                  <div className="w-8 h-8 bg-navy rounded-full flex items-center justify-center flex-shrink-0">
                     <Icon size={16} className="text-white" />
                   </div>
                   <span>{label}</span>

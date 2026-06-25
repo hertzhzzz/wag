@@ -49,23 +49,24 @@ export function KeyboardAwareTextarea({
         htmlFor={id}
         className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
       >
-        {label} {required && <span className="text-[#F59E0B]">*</span>}
+        {label} {required && <span className="text-amber">*</span>}
       </label>
       <textarea
         ref={textareaRef}
         id={id}
         onBlur={onBlur}
         data-testid={id === 'lookingFor' ? 'message' : undefined}
-        className={`w-full py-3 px-4 border rounded text-[0.9375rem] text-[#0F2D5E] outline-none focus:border-[#0F2D5E] min-h-[120px] resize-y ${
-          error ? 'border-red-400 focus:border-red-500' : 'border-gray-200'
+        className={`w-full py-3 px-4 border rounded text-[0.9375rem] text-navy outline-none focus:border-navy focus:ring-2 focus:ring-amber/40 min-h-[120px] resize-y ${
+          error ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-gray-200'
         } ${className || ''}`}
+        aria-describedby={error ? `${id}-error` : undefined}
         {...props}
       />
       {/* Hidden input for test compatibility */}
       {id === 'lookingFor' && (
         <input type="hidden" id="message" data-testid="message" />
       )}
-      {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
+      {error && <p id={`${id}-error`} className="mt-1 text-xs text-red-500">{error}</p>}
     </div>
   )
 }

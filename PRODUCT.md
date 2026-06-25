@@ -6,27 +6,30 @@ brand
 
 ## Users
 
-Australian small-to-medium business owners and procurement managers seeking factory tours and supplier verification in China. Decision-makers who value trust, competence, and clear communication. Primary job: find reliable Chinese manufacturers without being bamboozled by complexity or ripped off.
+Australian SME owners, procurement managers, and supply chain decision-makers who need reliable Chinese manufacturers. Some are first-time China sourcers feeling their way; others have existing supply chains and want to cut costs, improve quality, or visit factories in person. All share one thing: they need someone they can trust on the ground in China.
 
 ## Product Purpose
 
-Winning Adventure Global helps Australian businesses source from China with confidence. We organise factory visits, verify suppliers, and handle the logistics so clients don't have to. The website's job is to build trust and get qualified leads to book a call — not close them.
+Winning Adventure Global helps Australian businesses source from China with confidence — factory visits, supplier verification, logistics coordination. The website's job is to build trust and generate qualified leads. Future functionality will include a factory directory (/factory) surfacing our 1,200+ factory database directly on-site.
 
 ## Brand Personality
 
-Guided partnership. Warm, supportive, still credible. We hold the client's hand through something intimidating (陌生地 factory sourcing) without being condescending or salesy. Expert confidence without coldness.
+Direct, on the client's side, transparent. No fluff, no corporate polish, no high-pressure sales. We tell you what we do, show you the proof, and let the work speak. Confidence without arrogance — authority comes from specificity (real factory numbers, transparent process), not from jargon.
 
 ## Anti-references
 
-Bureaucratic complexity. Dense government-form layouts, walls of text, anything that feels like red tape. Generic corporate B2B aesthetics (stock photos of handshake stock, blue gradients). High-pressure sales funnels, countdown timers, "limited time offer" energy.
+Bureaucratic complexity — dense forms, walls of text, red-tape energy. Generic corporate B2B aesthetics (stock handshake photos, blue gradients, clip-art icons). High-pressure sales funnels, countdown timers, "limited time offer" tactics. Anything that makes the client feel like they're being sold to rather than helped.
 
 ## Design Principles
 
-1. **Clarity over cleverness** — Every element earns its place. If it doesn't help the user understand WAG or next step, cut it.
-2. **Confidence without coldness** — Authority comes from specificity and proof (numbers, processes, testimonials), not from corporate polish or jargon.
-3. **Journey-aware** — User is probably anxious about China sourcing. Design reduces friction and uncertainty, never adds to it.
-4. **Proof before claims** — Show, don't tell. Real numbers, real process, real testimonials. No aspirational marketing speak.
+1. **信息透明，不玩套路** — Factory data, pricing structure, process details: all laid out openly. Nothing hidden, no fine-print surprises.
+2. **Client's side, always** — Every piece of content answers "how does this help the client save money or avoid a bad supplier?" Never "how great are we."
+3. **Shortest path to done** — One sentence where three would do. One form field where three could be. Every element earns its place or gets cut.
 
 ## Accessibility & Inclusion
 
-WCAG 2.1 AA minimum. Standard B2B audience — focus on color contrast, keyboard navigation, clear focus states, semantic HTML, and alt text for any images.
+No formal compliance requirement beyond standard good practice. Default to semantic HTML and reasonable contrast.
+
+---
+
+*Based on conversation with Mark, 2026-06-25. Supersedes the prior PRODUCT.md.*
