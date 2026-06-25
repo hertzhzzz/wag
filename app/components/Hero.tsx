@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-amber/5 to-transparent skew-x-12" />
 
       {/* Content - left copy, right lead form */}
-      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16 py-12 md:py-16 grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-16 items-center">
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 grid lg:grid-cols-[1.25fr_0.75fr] gap-8 lg:gap-10 items-center">
         {/* Left: copy */}
         <div>
           {/* Brand tag */}
@@ -62,10 +62,10 @@ export default function Hero() {
           </div>
 
           <h1 className="max-w-[600px]">
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(30px,3.8vw,52px)] text-amber hero-headline-line-1 is-visible text-balance">
+            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(30px,3.8vw,52px)] text-amber hero-headline-line-1 is-visible">
               Face-to-face with factories.
             </span>
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-2 is-visible text-balance">
+            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-2 is-visible">
               No middleman. No markup.
             </span>
           </h1>
