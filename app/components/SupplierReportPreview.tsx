@@ -121,7 +121,7 @@ export default function SupplierReportPreview() {
               <div className="flex flex-col gap-0.5 pl-4">
                 {section.lines.slice(0, 2).map((line, j) => (
                   <div key={j} className="flex text-[10.5px]">
-                    <span className="text-navy/35 w-16 flex-shrink-0">{line.label}</span>
+                    <span className="text-navy/50 w-16 flex-shrink-0">{line.label}</span>
                     <span className={`${line.clean ? 'text-navy/80' : 'blur-[3px] select-none text-navy/50'}`}>
                       {line.value}
                     </span>
@@ -204,7 +204,7 @@ export default function SupplierReportPreview() {
                           <div key={i} className="border border-navy/10 rounded-lg overflow-hidden bg-navy/5">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img src={img.src} alt="" className="w-full aspect-[4/3] object-cover blur-[2px]" />
-                            <p className="text-[10px] text-navy/40 px-2 py-1">{img.label}</p>
+                            <p className="text-[10px] text-navy/60 px-2 py-1">{img.label}</p>
                           </div>
                         ))}
                       </div>

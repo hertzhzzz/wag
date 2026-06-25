@@ -43,21 +43,21 @@ export default function ClientOutcomes() {
               iconBg: 'bg-navy/10',
               iconColor: 'text-navy',
               title: 'The Challenge',
-              body: 'The existing supplier had stopped allowing factory visits. Quality defect rates had doubled over 12 months. The importer had no way to verify whether the factory was still manufacturing in-house or sub-contracting to smaller workshops — a critical unknown before placing the next order.',
+              body: 'The existing supplier had stopped allowing factory visits. Quality defects had doubled over 12 months, leaving the importer unable to verify whether the factory was still manufacturing in-house.',
             },
             {
               icon: Factory,
               iconBg: 'bg-amber/10',
               iconColor: 'text-amber',
               title: 'Our Approach',
-              body: 'Over four days our team visited the existing factory and two alternative suppliers in Guangdong. We verified business registrations, photographed production lines, interviewed floor managers, and cross-checked certifications against issuing bodies. Every finding was documented in a structured verification report.',
+              body: 'Our team visited the existing factory and two alternative suppliers in Guangdong over four days. We verified registrations, photographed production lines, interviewed floor managers, and cross-checked certifications.',
             },
             {
               icon: Star,
               iconBg: 'bg-navy',
               iconColor: 'text-white',
               title: 'The Outcome',
-              body: 'Our verification confirmed the existing factory had shifted production to an unregistered sub-contractor. We shortlisted an alternative supplier with 14 years of AV manufacturing history and better unit pricing — the client transitioned within six weeks with zero supply interruption and improved margin.',
+              body: 'We confirmed the existing factory had shifted production to an unregistered sub-contractor and shortlisted an alternative with 14 years of AV manufacturing history and better unit pricing — transitioned within six weeks with zero supply interruption.',
             },
           ].map((step, i) => (
             <div key={i} className="flex gap-5" style={fade(0.3 + i * 0.08)}>
@@ -99,7 +99,7 @@ export default function ClientOutcomes() {
       </div>
 
       {/* ===== DISCLAIMER ===== */}
-      <p className="text-[12px] text-navy/40 italic mt-6" style={fade(0.55)}>
+      <p className="text-[12px] text-navy/60 italic mt-6" style={fade(0.55)}>
         Client details de-identified. Results are specific to this engagement and do not guarantee identical outcomes.
       </p>
     </div>

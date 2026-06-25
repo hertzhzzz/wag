@@ -111,7 +111,7 @@ export default function TwoWaysAccess() {
               <p className="text-[13px] text-navy/60 leading-relaxed mb-4">{svc.tagline}</p>
 
               {/* Best for */}
-              <p className="text-[11px] font-semibold text-navy/40 uppercase tracking-wide mb-3">
+              <p className="text-[11px] font-semibold text-navy/60 uppercase tracking-wide mb-3">
                 Best for: <span className="text-navy/70 normal-case">{svc.bestFor}</span>
               </p>
 
