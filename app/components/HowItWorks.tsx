@@ -66,7 +66,7 @@ export default function HowItWorks() {
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
             Our Process
           </p>
-          <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight">
+          <h2 id="factory-visit" className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight scroll-mt-20">
             Your China Trip, End to End
           </h2>
           <p className="text-lg text-navy/60 mt-4 leading-relaxed">
