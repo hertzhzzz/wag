@@ -286,12 +286,11 @@ export default function EnquiryForm() {
             </div>
 
             {/* Right column: What happens next + trust stats + promo — fills column height */}
-            <div className="flex flex-col gap-6 lg:justify-between">
+            <div className="flex flex-col gap-6">
 
-              <div className="flex flex-col gap-6">
-                {/* What happens next — two paths */}
-                <div>
-                  <h3 className="font-serif font-bold text-lg mb-6 text-navy">Here&apos;s what happens after you reach out</h3>
+              {/* What happens next — two paths */}
+              <div>
+                <h3 className="font-serif font-bold text-lg mb-6 text-navy">Here&apos;s what happens after you reach out</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     {/* Path 1: Visit in China */}
@@ -370,21 +369,21 @@ export default function EnquiryForm() {
                     <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Team</p>
                   </div>
                 </div>
-              </div>
 
-              {/* Promo banner — standalone verified report vs full service tiers */}
-              <div className="border border-amber/40 rounded-lg px-5 py-3.5">
-                <p className="text-xs text-gray-500 leading-relaxed">
-                  Not ready for a full engagement? Get a{' '}
-                  <span className="font-semibold text-navy">Verified Factory Report</span>{' '}
-                  — supplier background check, license validation, and capability assessment —{' '}
-                  <span className="font-semibold text-amber">$500 AUD</span>.
-                </p>
-                <p className="text-xs text-gray-400 mt-1.5">
-                  Part of our{' '}
-                  <Link href="/services" className="text-navy underline hover:text-amber transition-colors">three service tiers</Link>
-                  , available standalone.
-                </p>
+                {/* Promo banner — directly below trust stats */}
+                <div className="border border-amber/40 rounded-lg px-5 py-3.5">
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    Not ready for a full engagement? Get a{' '}
+                    <span className="font-semibold text-navy">Verified Factory Report</span>{' '}
+                    — supplier background check, license validation, and capability assessment —{' '}
+                    <span className="font-semibold text-amber">$500 AUD</span>.
+                  </p>
+                  <p className="text-xs text-gray-400 mt-1.5">
+                    Part of our{' '}
+                    <Link href="/services" className="text-navy underline hover:text-amber transition-colors">three service tiers</Link>
+                    , available standalone.
+                  </p>
+                </div>
               </div>
 
             </div>
