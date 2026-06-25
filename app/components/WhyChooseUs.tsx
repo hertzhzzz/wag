@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
   }, [])
 
   return (
-    <section className="bg-white py-16 md:py-20 px-8 md:px-20">
+    <section className="bg-[#f8f9fb] py-16 md:py-20 px-8 md:px-20">
       <div className="max-w-[1120px] mx-auto">
         <div
           ref={sectionRef}
