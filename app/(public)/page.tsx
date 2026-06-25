@@ -7,7 +7,6 @@ import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import ClientOutcomes from '@/components/ClientOutcomes'
 import SupplierReportPreview from '@/components/SupplierReportPreview'
-import BreathingBand from '@/components/BreathingBand'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { Metadata } from 'next'
@@ -121,11 +120,6 @@ export default function Home() {
         </div>
       </section>
       <WhyChooseUs />
-      <BreathingBand
-        stat="80+"
-        statement="Australian businesses already source through us — from Adelaide SMEs to Perth mining services firms."
-        image="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=70&auto=format&fit=crop"
-      />
       <CTABand />
       <Footer />
     </>
