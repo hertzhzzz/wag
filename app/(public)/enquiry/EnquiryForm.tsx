@@ -104,10 +104,10 @@ export default function EnquiryForm() {
         const errorMsg = data.details
           ? Object.values(data.details).flat().join(', ')
           : data.error
-        setErrors({ submit: errorMsg || 'Submission failed. Please try again.' })
+        setErrors({ submit: errorMsg || 'Submission failed. Please try again, or email mark@winningadventure.com.au' })
       }
     } catch {
-      setErrors({ submit: 'Network error. Please try again.' })
+      setErrors({ submit: 'Network error. Please try again, or email mark@winningadventure.com.au' })
     } finally {
       setSubmitting(false)
     }

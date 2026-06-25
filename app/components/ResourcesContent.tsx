@@ -70,13 +70,24 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-[#0F2D5E] py-8 md:py-14 px-4 md:px-12 border-b-4 border-[#F59E0B]">
-        <div className="max-w-[1200px] mx-auto">
-          <p className="text-xs font-bold tracking-[2px] uppercase text-[#F59E0B] mb-3">Knowledge Hub</p>
-          <h1 className="font-serif text-white text-[32px] md:text-[42px] font-semibold leading-tight">China Sourcing Agent Resources</h1>
-          <p className="text-base text-gray-300 max-w-[560px] mt-3">
-            Expert guides on China sourcing, factory visits, and cross-border trade for Australian B2B businesses.
-          </p>
+      <div className="relative overflow-hidden bg-navy border-b-4 border-amber">
+        <Image
+          src="/article-hero.webp"
+          alt=""
+          fill
+          priority
+          className="object-cover z-0"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/80 to-navy/65 z-[1]" aria-hidden="true" />
+        <div className="relative z-10 py-8 md:py-14 px-4 md:px-12">
+          <div className="max-w-[1200px] mx-auto">
+            <p className="text-xs font-bold tracking-[2px] uppercase text-amber mb-3">Knowledge Hub</p>
+            <h1 className="font-serif text-white text-[32px] md:text-[42px] font-semibold leading-tight">China Sourcing Agent Resources</h1>
+            <p className="text-base text-white/75 max-w-[560px] mt-3">
+              Expert guides on China sourcing, factory visits, and cross-border trade for Australian B2B businesses.
+            </p>
+          </div>
         </div>
       </div>
 

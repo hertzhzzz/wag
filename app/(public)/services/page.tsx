@@ -194,7 +194,7 @@ export default function ServicesPage() {
           ============================================ */}
       <section id="hero" className="relative min-h-[20vh] md:min-h-[240px] flex items-center bg-navy overflow-hidden">
         <Image
-          src="/solutions/hero-bg.webp"
+          src="/services/hero.webp"
           alt=""
           fill
           priority

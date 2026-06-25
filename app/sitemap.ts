@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { BLOG_GONE_SLUGS } from '@/lib/gone-paths'
+import { liveNavLinks } from '@/data/nav-links'
 
 const BLOG_DIR = path.join(process.cwd(), 'content/blog')
 
@@ -37,9 +38,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(article.date),
   }))
 
+  const navUrls = liveNavLinks()
+    .filter((l) => l.href !== '/services')
+    .map((l) => ({
+      url: `${baseUrl}${l.href}`,
+      lastModified: new Date(),
+    }))
+
   return [
     { url: baseUrl, lastModified: new Date() },
     { url: `${baseUrl}/services`, lastModified: new Date() },
+    ...navUrls,
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/article`, lastModified: new Date() },
     { url: `${baseUrl}/enquiry`, lastModified: new Date() },

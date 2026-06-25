@@ -3,11 +3,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import PhoneCallLink from '@/components/PhoneCallLink'
+import ServicesMegaMenu from '@/components/ServicesMegaMenu'
+import { servicesMenu } from '@/data/nav-links'
 
 export default function Navbar({ rightContent }: { rightContent?: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -25,7 +29,10 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(15,45,94,0.08)] py-2 transition-all duration-300">
+    <nav
+      className="fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(15,45,94,0.08)] py-2 transition-all duration-300"
+      onMouseLeave={() => setServicesOpen(false)}
+    >
       <div className="max-w-[1400px] mx-auto w-full flex items-center">
         <Link href="/" className="flex-shrink-0 h-10 w-[200px] md:h-12 md:w-[240px] relative">
           <Image src="/logos/logo-nav-trans.png" alt="Winning Adventure Global" fill sizes="(max-width: 768px) 200px, 240px" className="object-contain" priority />
@@ -35,8 +42,19 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
           <li>
             <Link href="/" className="nav-link text-navy">Home</Link>
           </li>
-          <li>
-            <Link href="/services" className="nav-link text-navy">Services</Link>
+          <li onMouseEnter={() => setServicesOpen(true)} className="flex items-center gap-1">
+            <Link
+              href="/services"
+              className="nav-link text-navy"
+              aria-haspopup="true"
+              aria-expanded={servicesOpen}
+            >
+              Services
+            </Link>
+            <ChevronDown
+              size={14}
+              className={`text-navy/40 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`}
+            />
           </li>
           <li>
             <Link href="/article" className="nav-link text-navy">Articles</Link>
@@ -62,7 +80,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
                 href="/enquiry"
                 className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-navy flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
               >
-                Get a Free Quote →
+                Book Free Consult
               </Link>
             </>
           )}
@@ -78,6 +96,13 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
           <Menu size={22} />
         </button>
       </div>
+
+      {/* Desktop mega menu */}
+      {servicesOpen && (
+        <div className="hidden md:block">
+          <ServicesMegaMenu onNavigate={() => setServicesOpen(false)} />
+        </div>
+      )}
 
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
@@ -115,13 +140,45 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
             </Link>
           </li>
           <li>
-            <Link
-              href="/services"
-              className="block min-h-11 px-4 flex items-center text-navy"
-              onClick={handleLinkClick}
+            <button
+              type="button"
+              className="w-full min-h-11 px-4 flex items-center justify-between text-navy"
+              onClick={() => setMobileServicesOpen((v) => !v)}
+              aria-expanded={mobileServicesOpen}
             >
-              Services
-            </Link>
+              <span>Services</span>
+              <ChevronDown
+                size={18}
+                className={`transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+            {mobileServicesOpen && (
+              <ul className="flex flex-col list-none pl-4 border-l border-navy/10 ml-4">
+                <li>
+                  <Link
+                    href="/services"
+                    className="block min-h-11 px-4 flex items-center text-navy text-[14px]"
+                    onClick={handleLinkClick}
+                  >
+                    All Services Overview
+                  </Link>
+                </li>
+                {servicesMenu
+                  .flatMap((col) => col.links)
+                  .filter((l) => l.live && l.href !== '/services')
+                  .map((l) => (
+                    <li key={l.href}>
+                      <Link
+                        href={l.href}
+                        className="block min-h-11 px-4 flex items-center text-navy text-[14px]"
+                        onClick={handleLinkClick}
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            )}
           </li>
           <li>
             <Link

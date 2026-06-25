@@ -130,10 +130,10 @@ export function FloatingEnquiryWidget({ className = '' }: FloatingEnquiryWidgetP
         }, 100)
       } else {
         const data = await res.json()
-        setErrors({ submit: data.error || 'Submission failed. Please try again.' })
+        setErrors({ submit: data.error || 'Submission failed. Please try again, or email mark@winningadventure.com.au' })
       }
     } catch {
-      setErrors({ submit: 'Network error. Please try again.' })
+      setErrors({ submit: 'Network error. Please try again, or email mark@winningadventure.com.au' })
     } finally {
       setLoading(false)
     }

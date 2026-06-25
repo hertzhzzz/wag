@@ -396,7 +396,7 @@ export default async function FactoryDetailPage({ params }: { params: Promise<{ 
                 href={`/enquiry?factory=${encodeURIComponent(slug)}&name=${encodeURIComponent(name)}`}
                 className="block w-full text-center bg-amber-500 hover:bg-amber-400 text-navy font-semibold px-5 py-3 rounded transition text-sm"
               >
-                Get a Free Quote →
+                Book Free Consult
               </Link>
               <p className="text-[10px] text-gray-500 mt-3 text-center">
                 Free consultation · No obligation

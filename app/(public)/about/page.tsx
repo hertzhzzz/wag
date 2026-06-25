@@ -12,7 +12,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 import { CheckCircle, Sparkles, Tractor, Package, UtensilsCrossed, Sun, Building2, Users, Globe, ArrowRight, Briefcase } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Australia China Sourcing Agency',
+  title: 'Australia China Sourcing Agent',
   description: 'Australia-based China sourcing agency, Founded 2025. We arrange factory tours, verify suppliers and support Australian businesses with end-to-end procurement. Contact us today.',
   keywords: [
     'Australia-based China procurement consultant',
@@ -55,39 +55,19 @@ export default function AboutPage() {
         { name: 'About', url: 'https://www.winningadventure.com.au/about' }
       ]} />
 
-      {/* Hero - Mobile: illustration */}
-      <div className="md:hidden relative w-full overflow-hidden" style={{ height: '140px' }}>
+      {/* Hero */}
+      <div className="relative w-full overflow-hidden bg-navy min-h-[120px]">
         <Image
           src="/about-hero.webp"
-          alt="Winning Adventure Global bridging Australian businesses with verified Chinese manufacturers — Australia-China sourcing bridge illustration"
-          width={3168}
-          height={1344}
+          alt=""
+          fill
           priority
-          className="absolute top-0 left-0 w-full h-auto"
+          className="object-cover z-0"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/65 to-navy/30" />
-        <div className="relative z-10 flex flex-col justify-end h-full px-4 pb-6 max-w-[90%] mx-auto">
-          <p className="font-serif text-[1.75rem] font-normal leading-[1.15] text-white">
-            We exist because Australian businesses deserve <em className="italic text-amber">direct access</em> to Chinese manufacturing — without the guesswork.
-          </p>
-        </div>
-      </div>
-
-      {/* Hero - Desktop: illustration */}
-      <div className="hidden md:block relative w-full overflow-hidden" style={{ height: 'clamp(140px, 25vw, 240px)' }}>
-        <Image
-          src="/about-hero.webp"
-          alt="Winning Adventure Global bridging Australian businesses with verified Chinese manufacturers — Australia-China sourcing bridge illustration"
-          width={3168}
-          height={1344}
-          priority
-          className="absolute top-0 left-0 w-full h-auto"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/85 via-navy/65 to-navy/30" />
-        <div className="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-8 md:pb-12 max-w-[90%] mx-auto">
-          <h1 className="font-serif text-[clamp(1.75rem,5vw,3.5rem)] font-normal leading-[1.15] text-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/75 to-navy/60 z-[1]" aria-hidden="true" />
+        <div className="relative z-10 flex flex-col justify-end min-h-[120px] md:min-h-[200px] px-4 md:px-12 pb-6 md:pb-10 pt-10 max-w-[1200px] mx-auto">
+          <h1 className="font-serif text-[clamp(1.6rem,4vw,3rem)] font-normal leading-[1.15] text-white max-w-[800px]">
             We exist because Australian businesses deserve <em className="italic text-amber">direct access</em> to Chinese manufacturing — without the guesswork.
           </h1>
         </div>
