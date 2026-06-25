@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-25T14:30:00+09:30",
+  "title": "Design System: Winning Adventure Global — The Factory Floor Edition",
+  "extensions": {
+    "colorMeta": {
+      "navy": { "role": "primary", "displayName": "Factory Navy", "canonical": "#0F2D5E" },
+      "amber": { "role": "accent", "displayName": "Warning Amber", "canonical": "#C97A0A" },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "#FFFFFF" },
+      "surface-warm": { "role": "neutral", "displayName": "Surface Warm", "canonical": "#F8F9FB" }
+    },
+    "typographyMeta": {
+      "display-hero": { "displayName": "Display Hero", "purpose": "Homepage slogan only. clamp(36px-90px)." },
+      "display-xl": { "displayName": "Display XL", "purpose": "Major section titles." },
+      "headline": { "displayName": "Headline", "purpose": "Hero supporting lines, smaller H2s." },
+      "body": { "displayName": "Body", "purpose": "Default text. 65-75ch max-width." }
+    },
+    "shadows": [
+      { "name": "navbar", "value": "0 1px 3px rgba(15,45,94,0.08)", "purpose": "Subtle navbar separation." },
+      { "name": "card-hover", "value": "0 10px 15px rgba(15,45,94,0.1)", "purpose": "Factory card lift on hover." },
+      { "name": "lead-form", "value": "0 12px 40px rgba(15,45,94,0.18)", "purpose": "Persistent shadow on the inline lead form." },
+      { "name": "mega-menu", "value": "0 20px 56px -12px rgba(15,45,94,0.22)", "purpose": "Deepest shadow, dropdown panel." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default easing for state transitions (200-300ms)." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Navy background, white text, square corners. Used for main CTAs.",
+      "html": "<button class=\"ds-btn-primary\">Book Free Consult</button>",
+      "css": ".ds-btn-primary { background: #0F2D5E; color: #fff; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 16px 24px; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; } .ds-btn-primary:hover { background: #1A4A8A; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #C97A0A; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button (Amber)",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Amber background, navy text. Used sparingly for Book Free Consult.",
+      "html": "<button class=\"ds-btn-secondary\">Book Free Consult</button>",
+      "css": ".ds-btn-secondary { background: #C97A0A; color: #0F2D5E; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 16px 24px; border: none; cursor: pointer; transition: background 0.2s, transform 0.2s; } .ds-btn-secondary:hover { background: #D97706; transform: translateY(-1px); } .ds-btn-secondary:focus-visible { outline: 2px solid #0F2D5E; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Transparent with 1px navy border. For secondary navigation.",
+      "html": "<button class=\"ds-btn-ghost\">How factory visits work</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #0F2D5E; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 16px 24px; border: 1px solid #0F2D5E; cursor: pointer; transition: background 0.2s, color 0.2s; } .ds-btn-ghost:hover { background: rgba(15,45,94,0.05); } .ds-btn-ghost:focus-visible { outline: 2px solid #C97A0A; outline-offset: 2px; }"
+    },
+    {
+      "name": "Lead Form",
+      "kind": "custom",
+      "refersTo": "lead-form",
+      "description": "3-field lead capture: name, email, sourcing need.",
+      "html": "<form class=\"ds-lead-form\"><div class=\"ds-lf-header\">Book your free consult</div><input class=\"ds-input\" placeholder=\"Jane Smith\" /><input class=\"ds-input\" placeholder=\"jane@company.com.au\" /><textarea class=\"ds-input\" rows=\"3\" placeholder=\"Product, volume, and your supplier...\"></textarea><button class=\"ds-btn-secondary ds-btn-full\">Book Free Consult</button><div class=\"ds-lf-foot\">Your details go to our Australia-based team.</div></form>",
+      "css": ".ds-lead-form { background: #fff; padding: 24px 32px; box-shadow: 0 12px 40px rgba(15,45,94,0.18); } .ds-lf-header { font-family: 'IBM Plex Serif', serif; font-weight: 700; font-size: 20px; color: #0F2D5E; margin-bottom: 4px; } .ds-input { width: 100%; border: 1px solid #E5E7EB; padding: 12px 16px; font-size: 15px; color: #0F2D5E; margin-bottom: 12px; font-family: 'IBM Plex Sans', sans-serif; box-sizing: border-box; } .ds-input:focus { outline: none; border-color: #0F2D5E; box-shadow: 0 0 0 3px rgba(201,122,10,0.4); } .ds-btn-full { width: 100%; margin-top: 4px; } .ds-lf-foot { font-size: 11px; color: rgba(15,45,94,0.5); text-align: center; margin-top: 12px; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Default form input with amber-on-navy focus ring.",
+      "html": "<input class=\"ds-input-demo\" placeholder=\"jane@company.com.au\" />",
+      "css": ".ds-input-demo { width: 100%; border: 1px solid #E5E7EB; padding: 12px 16px; font-size: 15px; color: #0F2D5E; font-family: 'IBM Plex Sans', sans-serif; box-sizing: border-box; } .ds-input-demo::placeholder { color: rgba(15,45,94,0.4); } .ds-input-demo:focus { outline: none; border-color: #0F2D5E; box-shadow: 0 0 0 3px rgba(201,122,10,0.4); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Factory Floor",
+    "overview": "The visual system treats every interaction as part of an efficient, trustworthy industrial process — clean, direct, no wasted motion. Deep navy (#0F2D5E) carries authority and stability; amber (#C97A0A) provides a warm, energetic accent used sparingly. IBM Plex Sans (UI clarity) and IBM Plex Serif (editorial warmth) form the typographic backbone.",
+    "keyCharacteristics": [
+      "Flat by default, tactile on interaction (cards lift on hover, buttons nudge up)",
+      "Copy is the design — clarity over cleverness, every element earns its place",
+      "Hero images are real CC0 industrial/shipping photography, not generic stock",
+      "Color tells hierarchy: white text is normal, amber is italic-emphasized",
+      "Journey-aware for anxious first-time China sourcers"
+    ],
+    "rules": [
+      { "name": "The Amber-Italic Rule", "body": "Theme-colored words in the hero slogan are amber italic; all surrounding words are white normal weight.", "section": "colors" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Shadows appear only as interaction feedback.", "section": "elevation" },
+      { "name": "The One Weight Rule", "body": "System text uses 400 or 600 only. No 300, no 700 beyond headings.", "section": "typography" },
+      { "name": "The Tonal-Layer Rule", "body": "Section backgrounds alternate between white and #F8F9FB to create rhythm.", "section": "elevation" }
+    ],
+    "dos": [
+      "Use navy for primary headings, buttons, and hero backgrounds.",
+      "Use amber for CTAs and single-word emphasis in hero text.",
+      "Keep the hero color-split pattern: white = normal, amber = italic.",
+      "Use CC0 industrial/shipping photography with navy gradient overlay.",
+      "Maintain 44px minimum touch targets on all interactive elements.",
+      "Use 'Book Free Consult' as the site-wide primary CTA.",
+      "Use scroll-mt-20 on any section with an id anchor."
+    ],
+    "donts": [
+      "Use 'WAG' or 'WA' abbreviations — always 'Winning Adventure Global'.",
+      "Use emoji anywhere in the frontend codebase.",
+      "Use non-standard Tailwind opacity values (no /8, /94, /97).",
+      "Use academic reference lists on landing pages.",
+      "Link to non-existent anchor IDs.",
+      "Use the eyebrow (tiny uppercase tracked label) as every-section scaffolding."
+    ]
+  }
+}

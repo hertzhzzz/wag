@@ -1,81 +1,68 @@
 ---
 name: Winning Adventure Global
-description: China sourcing agency design system for Australian business audiences
-version: "1.1"
+description: China sourcing agent design system for Australian B2B audiences
+version: "1.2"
 
 colors:
   navy: "#0F2D5E"
   navy-light: "#1A4A8A"
   navy-dark: "#0A1F3D"
-  amber: "#F59E0B"
+  amber: "#C97A0A"
   amber-light: "#FBBF24"
   amber-dark: "#D97706"
+  white: "#FFFFFF"
   surface: "#FFFFFF"
-  surface-warm: "#FEF9F3"
-  surface-cool: "#F8FAFC"
+  surface-warm: "#F8F9FB"
   green: "#059669"
-  green-light: "#D1FAE5"
   red: "#DC2626"
-  on-navy: "#FFFFFF"
-  on-amber: "#0F2D5E"
   text-primary: "#0F2D5E"
   text-secondary: "#4B5563"
   text-muted: "#6B7280"
   border: "#E5E7EB"
-  border-navy: "rgba(15, 45, 94, 0.2)"
 
 typography:
-  display:
-    fontFamily: "IBM Plex Sans"
-    fontSize: 48px
+  display-hero:
+    fontFamily: "IBM Plex Serif"
+    fontSize: "clamp(36px,4.4vw,90px)"
     fontWeight: 700
-    lineHeight: 1.1
+    lineHeight: 1.05
     letterSpacing: -0.02em
-  headline-lg:
-    fontFamily: "IBM Plex Sans"
-    fontSize: 36px
+  display-xl:
+    fontFamily: "IBM Plex Serif"
+    fontSize: "clamp(32px,5vw,48px)"
     fontWeight: 600
     lineHeight: 1.2
     letterSpacing: -0.01em
-  headline-md:
-    fontFamily: "IBM Plex Sans"
-    fontSize: 28px
+  display-lg:
+    fontFamily: "IBM Plex Serif"
+    fontSize: "clamp(28px,4vw,42px)"
     fontWeight: 600
-    lineHeight: 1.3
-    letterSpacing: 0
-  headline-sm:
-    fontFamily: "IBM Plex Sans"
-    fontSize: 22px
-    fontWeight: 600
-    lineHeight: 1.4
-    letterSpacing: 0
-  body-lg:
-    fontFamily: "IBM Plex Sans"
-    fontSize: 18px
-    fontWeight: 400
-    lineHeight: 1.6
-    letterSpacing: 0
-  body-md:
+    lineHeight: 1.2
+    letterSpacing: -0.01em
+  headline:
+    fontFamily: "IBM Plex Serif"
+    fontSize: "clamp(22px,2.8vw,36px)"
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: -0.02em
+  body:
     fontFamily: "IBM Plex Sans"
     fontSize: 16px
     fontWeight: 400
     lineHeight: 1.6
-    letterSpacing: 0
   body-sm:
     fontFamily: "IBM Plex Sans"
     fontSize: 14px
     fontWeight: 400
     lineHeight: 1.5
-    letterSpacing: 0
-  label-lg:
-    fontFamily: "IBM Plex Sans"
-    fontSize: 16px
-    fontWeight: 600
-    lineHeight: 1.4
-    letterSpacing: 0.01em
-  label-md:
+  label:
     fontFamily: "IBM Plex Sans"
     fontSize: 14px
+    fontWeight: 600
+    lineHeight: 1.4
+  label-sm:
+    fontFamily: "IBM Plex Sans"
+    fontSize: 12px
     fontWeight: 600
     lineHeight: 1.4
     letterSpacing: 0.01em
@@ -84,25 +71,14 @@ typography:
     fontSize: 10px
     fontWeight: 600
     lineHeight: 1.2
-    letterSpacing: 0.02em
-  stat-value:
-    fontFamily: "IBM Plex Sans"
-    fontSize: 14px
-    fontWeight: 600
-    lineHeight: 1.3
-    letterSpacing: 0
-  stat-label:
-    fontFamily: "IBM Plex Sans"
-    fontSize: 10px
-    fontWeight: 500
-    lineHeight: 1.2
     letterSpacing: 0.04em
-  serif-display:
-    fontFamily: "IBM Plex Serif"
-    fontSize: 32px
-    fontWeight: 400
-    lineHeight: 1.3
-    letterSpacing: 0
+
+rounded:
+  none: 0px
+  sm: 4px
+  md: 8px
+  lg: 12px
+  xl: 16px
 
 spacing:
   xs: 4px
@@ -114,614 +90,193 @@ spacing:
   3xl: 64px
   4xl: 96px
 
-rounded:
-  none: 0px
-  sm: 4px
-  md: 8px
-  lg: 12px
-  xl: 16px
-  full: 9999px
-
-shadows:
-  sm: "0 1px 2px rgba(15, 45, 94, 0.05)"
-  md: "0 4px 6px rgba(15, 45, 94, 0.08)"
-  lg: "0 10px 15px rgba(15, 45, 94, 0.1)"
-  xl: "0 20px 25px rgba(15, 45, 94, 0.12)"
-
 components:
   button-primary:
     backgroundColor: "{colors.navy}"
-    textColor: "{colors.on-navy}"
-    typography: "{typography.label-lg}"
-    rounded: "{rounded.md}"
+    textColor: "{colors.white}"
+    typography: "{label}"
+    rounded: "{rounded.none}"
     padding: "{spacing.md} {spacing.lg}"
   button-primary-hover:
     backgroundColor: "{colors.navy-light}"
   button-secondary:
     backgroundColor: "{colors.amber}"
-    textColor: "{colors.on-amber}"
-    typography: "{typography.label-lg}"
-    rounded: "{rounded.md}"
+    textColor: "{colors.text-primary}"
+    typography: "{label}"
+    rounded: "{rounded.none}"
     padding: "{spacing.md} {spacing.lg}"
   button-secondary-hover:
-    backgroundColor: "{colors.amber-light}"
+    backgroundColor: "{colors.amber-dark}"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.navy}"
-    typography: "{typography.label-lg}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.md} {spacing.lg}"
+    textColor: "{colors.text-primary}"
     border: "1px solid {colors.navy}"
-  factory-card:
-    backgroundColor: "{colors.surface}"
-    border: "1px solid {colors.border}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.lg}"
-    shadow: "none"
-  factory-card-hover:
-    borderColor: "{colors.border-navy}"
-    shadow: "{shadows.lg}"
-  factory-hero:
-    backgroundColor: "{colors.navy}"
-    textColor: "{colors.on-navy}"
-    paddingTop: "{spacing.2xl}"
-    paddingBottom: "{spacing.2xl}"
-  factory-stat:
-    backgroundColor: "{colors.surface-cool}"
-    border: "1px solid {colors.border}"
-    rounded: "{rounded.md}"
-    padding: "14px {spacing.md}"
-  factory-stat-fca:
-    backgroundColor: "{colors.green-light}"
-    borderColor: "rgba(5, 150, 105, 0.2)"
-  factory-sidebar-cta:
-    backgroundColor: "{colors.navy}"
-    textColor: "{colors.on-navy}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.lg}"
-  factory-search:
-    border: "1px solid {colors.border}"
-    rounded: "{rounded.md}"
-    padding: "12px {spacing.md}"
-    focusBorderColor: "{colors.navy}"
-    focusRing: "0 0 0 3px rgba(15, 45, 94, 0.15)"
-  factory-filter:
-    border: "1px solid {colors.border}"
-    rounded: "{rounded.full}"
-    padding: "6px 12px"
-    backgroundColor: "{colors.surface}"
-  badge-platform:
-    backgroundColor: "rgba(245, 158, 11, 0.15)"
-    textColor: "{colors.amber-dark}"
-    rounded: "{rounded.full}"
-    padding: "4px 10px"
-  badge-platform-on-dark:
-    backgroundColor: "rgba(255, 255, 255, 0.15)"
-    textColor: "{colors.on-navy}"
-    rounded: "{rounded.full}"
-    padding: "4px 10px"
-  badge-certification:
-    backgroundColor: "{colors.surface-cool}"
-    textColor: "{colors.navy-light}"
-    borderColor: "rgba(15, 45, 94, 0.15)"
-    rounded: "{rounded.full}"
-    padding: "4px 10px"
-  badge-certification-on-dark:
-    backgroundColor: "rgba(59, 130, 246, 0.2)"
-    textColor: "#BFDBFE"
-    borderColor: "rgba(59, 130, 246, 0.3)"
-    rounded: "{rounded.full}"
-    padding: "4px 10px"
-  badge-fca:
-    backgroundColor: "{colors.green-light}"
-    textColor: "{colors.green}"
-    borderColor: "rgba(5, 150, 105, 0.3)"
-    rounded: "{rounded.full}"
-    padding: "4px 10px"
-  factory-breadcrumb:
-    textColor: "{colors.text-muted}"
-    typography: "{typography.body-sm}"
-  factory-info-table:
-    border: "1px solid {colors.border}"
-    rounded: "{rounded.md}"
-  factory-info-table-row:
-    borderBottom: "1px solid {colors.border}"
-    padding: "10px {spacing.md}"
-  card:
-    backgroundColor: "{colors.surface}"
-    borderColor: "{colors.border}"
-    rounded: "{rounded.lg}"
-    padding: "{spacing.lg}"
-    shadow: "{shadows.md}"
+    typography: "{label}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md} {spacing.lg}"
   input-field:
-    backgroundColor: "{colors.surface}"
-    borderColor: "{colors.border}"
+    backgroundColor: "{colors.white}"
+    border: "1px solid {colors.border}"
     textColor: "{colors.text-primary}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.md}"
-  nav-link:
-    textColor: "{colors.text-primary}"
-    typography: "{typography.label-md}"
-    hoverColor: "{colors.navy}"
-  section:
-    paddingTop: "{spacing.3xl}"
-    paddingBottom: "{spacing.3xl}"
+    typography: "{body}"
+    rounded: "{rounded.none}"
+    padding: "12px {spacing.md}"
+  lead-form:
+    backgroundColor: "{colors.white}"
+    padding: "{spacing.lg} {spacing.xl}"
+    shadow: "0 12px 40px rgba(15,45,94,0.18)"
 ---
+# Design System: Winning Adventure Global — The Factory Floor Edition
 
-# Design System — Winning Adventure Global
+## 1. Overview
 
-## Overview
+**Creative North Star: "The Factory Floor"**
 
-WAG's design reflects the professionalism and reliability required for cross-border business relationships. The visual language balances Australian business sensibilities with Chinese manufacturing expertise — authoritative without being cold, approachable without being casual.
+The visual system treats every interaction as part of an efficient, trustworthy industrial process — clean, direct, no wasted motion. Deep navy (`#0F2D5E`) carries authority and stability; amber (`#C97A0A`) provides a warm, energetic accent used sparingly. IBM Plex Sans (UI clarity) and IBM Plex Serif (editorial warmth) form the typographic backbone.
 
-**Target audience:** Australian business owners and procurement managers seeking factory tours and supplier verification in China. Decision-makers who value trust, competence, and clear communication.
+The system explicitly rejects: generic corporate B2B aesthetics (stock photos of handshakes, blue gradients), high-pressure sales funnels (countdown timers, "limited time offer"), and bureaucratic complexity. Confidence without coldness — authority comes from specificity and proof (real factory numbers, the 1,200+ database), not from corporate polish.
 
-**Brand personality:** Professional, trustworthy, action-oriented. We help Australian businesses source from China with confidence.
+**Key Characteristics:**
+- Flat by default, tactile on interaction (cards lift on hover, buttons nudge up)
+- Copy is the design — clarity over cleverness, every element earns its place
+- Hero images are real CC0 industrial/shipping photography, not generic stock
+- Color tells hierarchy: white text is normal, amber is italic-emphasized
+- Journey-aware for anxious first-time China sourcers
 
----
+## 2. Colors: The Factory Floor Palette
 
-## Colors
+Two primary roles, no excess. Navy carries the system; amber signals action.
 
-The palette centers on two primary brand colors — deep navy for authority and trustworthiness, amber for energy and action.
+### Primary
+- **Factory Navy** (`#0F2D5E`): The dominant color — professionalism, trust, stability. Used for headlines, body text, primary buttons, footer, navigation, hero backgrounds. Light variant (`#1A4A8A`) for hover states. Dark variant (`#0A1F3D`) for high-contrast text.
 
-### Primary: Navy `#0F2D5E`
+### Accent
+- **Warning Amber** (`#C97A0A`): Warm, energetic, used sparingly — CTAs, highlights, the active "Do" in the color-split hero slogan. Light variant (`#FBBF24`) for hover. Dark variant (`#D97706`) for pressed.
 
-The dominant color representing professionalism, trust, and stability — critical qualities for Australian businesses entrusting us with their supply chain.
+### Neutral
+- **Surface** (`#FFFFFF`): Card backgrounds, form inputs, lead form.
+- **Surface Warm** (`#F8F9FB`): Alternating section backgrounds, case study areas.
+- **Text Primary** (`#0F2D5E`): Body copy on light backgrounds.
+- **Text Secondary** (`#4B5563`): Supporting text, descriptions.
+- **Text Muted** (`#6B7280`): Captions, metadata.
+- **Border** (`#E5E7EB`): Card borders, dividers, input outlines.
 
-- **Use for:** Headlines, body text, primary buttons, footer, navigation
-- **Light variant (#1A4A8A):** Hover states, secondary emphasis
-- **Dark variant (#0A1F3D):** High-contrast text on light backgrounds
+### Named Rules
+**The Amber-Italic Rule.** In the hero slogan, theme-colored words (highlighted concepts: *factories*, *middleman*, *markup*) are rendered in amber italic. All surrounding words are white normal weight. This pattern expresses: "the emphasized word IS the value." Never apply amber to a block of text — only to single words or short phrases.
 
-### Accent: Amber `#F59E0B`
+**The Flat-By-Default Rule.** Surfaces are flat at rest. Shadows appear only as a response to state (card hover, form focus elevation). The system has no persistent shadows on cards.
 
-A warm, energetic color that draws attention and signals action — used sparingly for CTAs and emphasis.
+## 3. Typography
 
-- **Use for:** Call-to-action buttons, highlights, badges, active states
-- **Light variant (#FBBF24):** Hover states, subtle accents
-- **Dark variant (#D97706):** Pressed states, high-emphasis CTAs
+**Display Font:** IBM Plex Serif (geometric serif, editorial warmth)
+**Body Font:** IBM Plex Sans (geometric sans, UI clarity)
 
-### Neutrals
+**Character:** IBM Plex Serif in display sizes carries authority without stuffiness — like a well-lettered factory sign. IBM Plex Sans provides crisp, no-nonsense body copy. The contrast axis is serif (for headlines and trust) vs. sans (for action and information).
 
-| Token | Hex | Use |
-|-------|-----|-----|
-| Surface | `#FFFFFF` | Card backgrounds, input fields |
-| Surface Warm | `#FEF9F3` | Section backgrounds, subtle warmth |
-| Text Primary | `#0F2D5E` | Body copy, headings (on light backgrounds) |
-| Text Secondary | `#4B5563` | Supporting text, descriptions |
-| Text Muted | `#6B7280` | Captions, metadata, timestamps |
-| Border | `#E5E7EB` | Card borders, dividers, input outlines |
+### Hierarchy
 
-### Semantic Color Usage
+- **Display Hero** (700, `clamp(36px,4.4vw,90px)`, 1.05): Hero slogan — the single most important line on the page. Only used on the homepage.
+- **Display XL** (600, `clamp(32px,5vw,48px)`, 1.2): Major section titles (e.g. "Your China Trip, End to End").
+- **Display LG** (600, `clamp(28px,4vw,42px)`, 1.2): Section titles, service page H1.
+- **Headline** (700, `clamp(22px,2.8vw,36px)`, 1.1): Hero supporting lines ("No middleman. No markup."), smaller H2s.
+- **Body** (400, 16px, 1.6): Default text. Cap at 65–75ch width.
+- **Body SM** (400, 14px, 1.5): Captions, footnotes, meta.
+- **Label** (600, 14px, 1.4): Buttons, nav links, form labels.
+- **Label SM** (600, 12px, 1.4, 0.01em): Small UI labels, badges.
+- **Badge** (600, 10px, 1.2, 0.04em): Tiny uppercase metadata — trust markers, "AUSTRALIA", section badges.
 
-- **Navy backgrounds:** Hero sections, CTAs, primary buttons
-- **Amber accents:** Key actions, "Book a Call" buttons, highlights
-- **White surfaces:** Cards, content areas, form inputs
-- **Warm backgrounds:** Alternating sections, testimonials
+### Named Rules
+**The One Weight Rule.** System text (body, labels, inputs) uses font-weight 400 (normal) or 600 (semibold). No 300, no 700 beyond headings. IBM Plex Sans is already legible; extra weights add noise, not hierarchy.
 
----
+## 4. Elevation
 
-## Typography
+The system is fundamentally flat. Depth is communicated through tonal layering (navy-tinted backgrounds, white surface cards) rather than shadows. Shadows appear only as interaction feedback.
 
-IBM Plex provides the typographic foundation — a typeface designed for complex, professional communication with excellent screen readability.
+### Shadow Vocabulary
+- **Navbar** (`0 1px 3px rgba(15,45,94,0.08)`): Subtle separation, barely perceptible.
+- **Card hover** (`0 10px 15px rgba(15,45,94,0.1)`): The factory-card lift effect.
+- **Lead Form** (`0 12px 40px rgba(15,45,94,0.18)`): The only persistent shadow — the inline lead capture form floats above the hero. This is intentional: the form IS the conversion point.
+- **Mega Menu** (`0 20px 56px -12px rgba(15,45,94,0.22)`): Deepest shadow, reserved for the dropdown panel.
 
-### Font Families
+### Named Rules
+**The Tonal-Layer Rule.** Section backgrounds alternate between white and `#F8F9FB` (surface warm). This creates rhythm without shadows. Never use a shadow to separate sections that could be separated by a background change.
 
-**IBM Plex Sans** (primary) — Used for headings, body text, UI elements. Its geometric clarity projects competence and modernity.
-
-**IBM Plex Serif** (accent) — Used sparingly for pull quotes, testimonial attribution, and special emphasis. Adds warmth and human touch.
-
-### Type Scale
-
-| Token | Font | Size | Weight | Line Height | Use |
-|-------|------|------|--------|-------------|-----|
-| `display` | Plex Sans | 48px | 700 | 1.1 | Hero headlines, section titles |
-| `headline-lg` | Plex Sans | 36px | 600 | 1.2 | Page titles, major sections |
-| `headline-md` | Plex Sans | 28px | 600 | 1.3 | Card titles, subsection headers |
-| `headline-sm` | Plex Sans | 22px | 600 | 1.4 | Component titles, smaller headers |
-| `body-lg` | Plex Sans | 18px | 400 | 1.6 | Lead paragraphs, marketing copy |
-| `body-md` | Plex Sans | 16px | 400 | 1.6 | Default body text |
-| `body-sm` | Plex Sans | 14px | 400 | 1.5 | Captions, footnotes, metadata |
-| `label-lg` | Plex Sans | 16px | 600 | 1.4 | Buttons, navigation links |
-| `label-md` | Plex Sans | 14px | 600 | 1.4 | Tags, badges, small labels |
-| `serif-display` | Plex Serif | 32px | 400 | 1.3 | Pull quotes, testimonial text |
-
-### Letter Spacing Guidelines
-
-- **Display/Headlines:** `-0.02em` to `-0.01em` — tight tracking for large sizes improves readability
-- **Body text:** `0` — default spacing for comfortable reading
-- **Labels/Buttons:** `0.01em` — slight tracking for small text improves legibility
-
----
-
-## Layout & Spacing
-
-### Spacing Scale
-
-The 8px base unit ensures consistent vertical rhythm throughout the interface.
-
-| Token | Value | Use |
-|-------|-------|-----|
-| `xs` | 4px | Icon padding, tight gaps |
-| `sm` | 8px | Between related elements |
-| `md` | 16px | Default padding, component gaps |
-| `lg` | 24px | Section internal spacing |
-| `xl` | 32px | Between major elements |
-| `2xl` | 48px | Section padding, large gaps |
-| `3xl` | 64px | Section top/bottom padding |
-| `4xl` | 96px | Hero spacing, major sections |
-
-### Section Structure
-
-**Content Width:** Max 1200px container, centered with 24px horizontal padding on mobile.
-
-**Vertical Rhythm:** Sections alternate between `3xl` (96px) top/bottom padding for emphasis and `2xl` (64px) for standard content areas.
-
-### Responsive Breakpoints
-
-| Breakpoint | Width | Design Adjustments |
-|------------|-------|-------------------|
-| Mobile | < 640px | Single column, reduced padding, stacked elements |
-| Tablet | 640-1024px | 2-column grids, moderate spacing |
-| Desktop | > 1024px | Full layout, maximum spacing |
-
----
-
-## Elevation & Shadows
-
-Shadows provide depth hierarchy without overwhelming the clean, professional aesthetic.
-
-| Token | Value | Use |
-|-------|-------|-----|
-| `sm` | `0 1px 2px rgba(15, 45, 94, 0.05)` | Subtle lift, inactive elements |
-| `md` | `0 4px 6px rgba(15, 45, 94, 0.08)` | Cards, hover states |
-| `lg` | `0 10px 15px rgba(15, 45, 94, 0.1)` | Elevated cards, modals |
-| `xl` | `0 20px 25px rgba(15, 45, 94, 0.12)` | Major elevation, featured cards |
-
-**Shadow tint:** All shadows use the navy color (`#0F2D5E`) at low opacity, maintaining color coherence with the brand palette.
-
----
-
-## Shapes
-
-Border radius follows a consistent scale from sharp to fully rounded.
-
-| Token | Value | Use |
-|-------|-------|-----|
-| `none` | 0px | Sharp edges, decorative elements |
-| `sm` | 4px | Small inputs, tags |
-| `md` | 8px | Buttons, cards, form elements |
-| `lg` | 12px | Large cards, feature blocks |
-| `xl` | 16px | Modal backgrounds, large containers |
-| `full` | 9999px | Avatars, pills, circular buttons |
-
----
-
-## Components
+## 5. Components
 
 ### Buttons
+- **Shape:** Square (0px radius). No rounded corners on primary/secondary CTAs. Ghost buttons follow the same square convention.
+- **Primary (Navy):** Navy (`#0F2D5E`) background, white text, 14px/600. Transition: `hover:bg-[#1A4A8A]`. No shadow at rest; slight shadow on hover.
+- **Secondary (Amber):** Amber (`#C97A0A`) background, navy text, 14px/600. Used sparingly — only for the "Book Free Consult" CTA.
+- **Ghost:** Transparent, 1px navy border, navy text. Used for secondary actions ("How factory visits work").
+- **All buttons:** Minimum 44px touch target. `transition: 200ms ease-out`.
 
-**Primary Button** — Used for main CTAs like "Book a Call" and "Get a Quote". Navy background with white text creates maximum contrast and draws attention.
+### Lead Form (`LeadForm.tsx`)
+- **Container:** White background, `0 12px 40px` persistent shadow. 24px/32px padding.
+- **Heading:** ShieldCheck icon (amber) + "Book your free consult" in serif/navy.
+- **Fields:** 3 fields only (full name, work email, what are you sourcing). Each has an explicit visible `<label>` (not placeholder-only). Focus state: navy border + amber ring. Placeholder text: `placeholder:text-navy/40`.
+- **Button:** Full-width amber, "Book Free Consult". Hover: navy background + white text (inversion).
+- **Success state:** Check icon + "Thanks — we've got it." message.
+- **Error state:** Red text with mailto link to `mark@winningadventure.com.au`.
+- **Subcopy:** "Your details go straight to our Australia-based team." (11px, navy/50).
 
-```yaml
-button-primary:
-  backgroundColor: "{colors.navy}"
-  textColor: "{colors.on-navy}"
-  typography: "{typography.label-lg}"
-  rounded: "{rounded.md}"
-  padding: "{spacing.md} {spacing.lg}"
-```
-
-**Hover state:** Navy light (`#1A4A8A`) background
-**Active state:** Navy dark (`#0A1F3D`) background
-
-**Secondary Button** — Used for secondary actions. Amber background with navy text.
-
-```yaml
-button-secondary:
-  backgroundColor: "{colors.amber}"
-  textColor: "{colors.on-amber}"
-  typography: "{typography.label-lg}"
-  rounded: "{rounded.md}"
-  padding: "{spacing.md} {spacing.lg}"
-```
-
-**Ghost Button** — Outlined style for tertiary actions or when primary would be too dominant.
-
-```yaml
-button-ghost:
-  backgroundColor: "transparent"
-  textColor: "{colors.navy}"
-  border: "1px solid {colors.navy}"
-  typography: "{typography.label-lg}"
-  rounded: "{rounded.md}"
-  padding: "{spacing.md} {spacing.lg}"
-```
+### Navigation (Navbar)
+- **Background:** White, 95% opacity, `backdrop-blur-md`. Shadow: `0 1px 3px rgba(15,45,94,0.08)`.
+- **Fixed position,** z-index 100. Logo left, links center, CTA right.
+- **Desktop:** 5 links (Home, Services, Articles, About Us, Enquiry). Services has a `ChevronDown` indicator that rotates 180° when the mega menu is open.
+- **Mega Menu (Services):** Full-width panel below navbar. Columns with vertical dividers. Link hover shows a left amber accent bar (animated `w-0 → w-1.5`). CTA block: "Not sure which service?" + "Book Free Consult" button.
+- **Mobile:** Hamburger opens right slide-in. Services becomes an accordion. ChevronDown rotates on open.
 
 ### Cards
-
-Cards contain related content with consistent padding, border radius, and shadow.
-
-```yaml
-card:
-  backgroundColor: "{colors.surface}"
-  border: "1px solid {colors.border}"
-  rounded: "{rounded.lg}"
-  padding: "{spacing.lg}"
-  shadow: "{shadows.md}"
-```
-
-**Usage patterns:**
-- Service cards with icon, title, description
-- Testimonial cards with quote, attribution, photo
-- Blog preview cards with image, title, date
-- Team member cards with photo, name, role
+- **Factory Card:** White background, 1px `#E5E7EB` border, 12px radius, 24px padding. No shadow at rest. Hover: deeper border + `0 10px 15px` shadow. Transition: 200ms ease-out.
 
 ### Form Inputs
+- **Style:** 1px `#E5E7EB` border, white background, 12px vertical padding, 16px horizontal.
+- **Focus:** Border shifts to navy, ring appears (`0 0 0 3px rgba(201,122,10,0.4)`) in amber.
+- **Text:** 15px navy, placeholder at 40% navy opacity.
+- **Error:** Red (`#DC2626`) border + error message below. Never use toast-only error feedback.
 
-```yaml
-input-field:
-  backgroundColor: "{colors.surface}"
-  border: "1px solid {colors.border}"
-  textColor: "{colors.text-primary}"
-  typography: "{typography.body-md}"
-  rounded: "{rounded.md}"
-  padding: "{spacing.md}"
-```
+### Mega Menu (`ServicesMegaMenu.tsx`)
+- **Trigger:** Hover on "Services" nav link. ChevronDown rotates 180°.
+- **Panel:** Full-width absolute below navbar. Navy-10 top border. Deep shadow.
+- **Columns:** Each column separated by `border-l border-navy/10`. Column heading: 11px uppercase tracking, 40% navy.
+- **Link hover:** Left amber-accent bar (rounded-full, animated width). Text shifts from navy/75 to navy.
+- **CTA block:** "Not sure which service?" + supporting copy + "Book Free Consult" with ArrowRight icon.
 
-**Focus state:** Border changes to navy with subtle shadow
-**Error state:** Border changes to red (`#DC2626`) with error message below
+### Hero Image Pattern
+- All 4 service/content pages use CC0 free commercial photography from Openverse/rawpixel.
+- **Treatment:** `fill` + `object-cover` + navy gradient overlay (`from-navy/90 via-navy/80 to-navy/70`).
+- **Gradient opacity must use Tailwind default scale values** (/70, /80, /90, /95). Non-default opacities (e.g. /97) do not generate in the current Tailwind build.
+- **Current images:** Services (cargo ship), About (container terminal), Supplier Verification (Port Melbourne terminal), Articles (industrial factory interior).
 
-### Navigation
+### Anchor Sections
+- All scroll-target sections with `id` attributes must include `scroll-mt-20` to account for the 64px fixed navbar.
 
-**Nav Links:**
-```yaml
-nav-link:
-  textColor: "{colors.text-primary}"
-  typography: "{typography.label-md}"
-```
+## 6. Do's and Don'ts
 
-- **Hover:** Color changes to navy, underline appears
-- **Active:** Navy color with bottom border indicator
-- **Mobile:** Hamburger menu with full-screen overlay
+### Do:
+- **Do** use navy for primary headings, buttons, and hero backgrounds.
+- **Do** use amber for CTAs and single-word emphasis in hero text.
+- **Do** keep the hero color-split pattern: white = normal, amber = italic.
+- **Do** use CC0 industrial/shipping photography with navy gradient overlay.
+- **Do** maintain 44px minimum touch targets on all interactive elements.
+- **Do** use `scroll-mt-20` on any section with an `id` anchor.
+- **Do** use "Book Free Consult" as the site-wide primary CTA.
+- **Do** import LeadForm from `@/components/LeadForm` for any new lead capture.
+- **Do** link new landing pages in `nav-links.ts` with `live: true` to auto-register in menu + sitemap.
 
----
-
-## Factory Directory Components
-
-The factory directory uses specialized components optimized for dense, scannable B2B data display while maintaining WAG's professional brand feel.
-
-### Factory Card (Listing Grid)
-
-The primary navigation element in the listing grid. Cards start flat (no shadow) and lift on hover.
-
-```yaml
-factory-card:
-  backgroundColor: "{colors.surface}"
-  border: "1px solid {colors.border}"
-  rounded: "{rounded.lg}"
-  padding: "{spacing.lg}"
-  shadow: "none"
-```
-
-**Hover state:** Border changes to navy tint, shadow elevates to `lg`. Transitions: 200ms ease-out.
-
-**Card anatomy (top to bottom):**
-1. Company name — `headline-sm` weight, navy, truncate single line
-2. Location row — `body-sm`, text-muted, "Province · City" format
-3. Badge row — platform tags (amber) + certifications (blue), max 3 certs
-4. Stats row — factory area, employee count, FCA badge if applicable
-5. The entire card is a clickable link
-
-**Grid:** 3 columns on desktop (≥1024px), 2 on tablet, 1 on mobile. `gap: 16px`.
-
-### Factory Hero (Detail Page)
-
-Full-width navy banner introducing the factory.
-
-```yaml
-factory-hero:
-  backgroundColor: "{colors.navy}"
-  textColor: "{colors.on-navy}"
-  paddingTop: "{spacing.2xl}"
-  paddingBottom: "{spacing.2xl}"
-```
-
-**Hero anatomy:**
-1. Breadcrumb — `body-sm`, text-muted with amber hover, "Factory Directory / Province / Company"
-2. Company name — `headline-lg`, white
-3. Location — `body-sm`, text-gray-300
-4. CTA button — `button-secondary` (amber), "Source from this factory →"
-5. Badge row — platform tags (translucent white), certs (translucent blue), FCA (green)
-
-### Factory Stat Tile
-
-Small data tiles used in stats grid and FCA assessment sections.
-
-```yaml
-factory-stat:
-  backgroundColor: "{colors.surface-cool}"
-  border: "1px solid {colors.border}"
-  rounded: "{rounded.md}"
-  padding: "14px {spacing.md}"
-```
-
-**FCA variant:** Green-tinted background and border for deep-certified data.
-```yaml
-factory-stat-fca:
-  backgroundColor: "{colors.green-light}"
-  borderColor: "rgba(5, 150, 105, 0.2)"
-```
-
-**Grid:** 2-3 columns depending on data density. Each tile: label (stat-label, uppercase, muted) + value (stat-value, bold).
-
-### Badge System
-
-Three badge types convey different information at a glance. All use `rounded.full` (pill shape) and consistent 4px/10px padding.
-
-| Badge | Background | Text | Use |
-|-------|-----------|------|-----|
-| `badge-platform` | amber-15%-opacity | amber-dark | Platform tags: 超级工厂, 深度认证 |
-| `badge-certification` | surface-cool | navy-light with border | ISO, BSCI, SGS, CE certifications |
-| `badge-fca` | green-light | green with green border | Factory Capability Assessment verified |
-
-**On dark backgrounds (hero section):** Use translucent white/blue variants instead.
-
-### Factory Search & Filters
-
-**Search:** Full-width input with search icon, `body-md` text, 12px vertical padding. Focus state has navy border + subtle ring.
-
-```yaml
-factory-search:
-  border: "1px solid {colors.border}"
-  rounded: "{rounded.md}"
-  padding: "12px {spacing.md}"
-  focusBorder: "{colors.navy}"
-  focusRing: "0 0 0 3px rgba(15, 45, 94, 0.15)"
-```
-
-**Filters:** Pill-shaped selects for province and category. `body-sm`, 6px/12px padding, border changes to navy-tint on hover.
-
-```yaml
-factory-filter:
-  border: "1px solid {colors.border}"
-  rounded: "{rounded.full}"
-  padding: "6px 12px"
-  backgroundColor: "{colors.surface}"
-```
-
-**Filter row layout:** Filter by label (muted, uppercase) + selects + "Clear filters" link + result count (right-aligned).
-
-### Factory Info Table
-
-Structured key-value data for business registration and company information.
-
-```yaml
-factory-info-table:
-  border: "1px solid {colors.border}"
-  rounded: "{rounded.md}"
-```
-
-**Row style:** Label column (w-1/3, text-muted, stat-label) + Value column (w-2/3, text-primary, body-sm). Alternating rows optional but not required. No zebra striping by default.
-
-### Factory Sidebar CTA
-
-Sticky sidebar card that follows the user on desktop. Primary conversion element.
-
-```yaml
-factory-sidebar-cta:
-  backgroundColor: "{colors.navy}"
-  textColor: "{colors.on-navy}"
-  rounded: "{rounded.lg}"
-  padding: "{spacing.lg}"
-```
-
-**Anatomy:** Headline (bold, white) → Benefit bullets (body-sm, gray-300) → CTA button (amber, full-width, "Get a Free Quote →") → "Free consultation · No obligation" micro-copy (10px, muted).
-
-**Position:** `position: sticky; top: 96px` (below navbar). Only on desktop; stacks naturally on mobile below main content.
-
-### Factory Breadcrumb
-
-```yaml
-factory-breadcrumb:
-  textColor: "{colors.text-muted}"
-  typography: "{typography.body-sm}"
-```
-
-**Format:** "Factory Directory / Province / Company Name". Intermediate segments are links with amber hover. Final segment is white text, not linked.
+### Don't:
+- **Don't** use "WAG" or "WA" abbreviations — always "Winning Adventure Global".
+- **Don't** use emoji anywhere in the frontend codebase.
+- **Don't** use Chinese in page content, UI text, buttons, or labels. (Exception: code comments.)
+- **Don't** claim "no deposit required" or "free service" — only the consultation is free.
+- **Don't** use non-standard Tailwind opacity values (no `/8`, `/94`, `/97`) — they silently fail to generate.
+- **Don't** use academic reference lists on landing pages (they belong in reports).
+- **Don't** hard-code colors — use Tailwind's `navy`/`amber` tokens.
+- **Don't** use generic stock photography — use CC0 industrial/shipping/trade images.
+- **Don't** link to non-existent anchor IDs (the `/#industries` footer links were removed for this reason).
+- **Don't** put side-stripe borders on cards — use full background tints instead.
+- **Don't** use the eyebrow (tiny uppercase tracked label) as every-section scaffolding.
 
 ---
 
-## Do's and Don'ts
-
-### Do
-
-- Use navy for primary headings and key information
-- Use amber for CTAs and action-oriented elements
-- Maintain 44px minimum touch targets for interactive elements
-- Use `body-lg` for marketing copy and lead paragraphs
-- Keep paragraphs at `body-md` (16px) with 1.6 line height for readability
-- Use card shadows (`md`) for elevated content
-- Apply `rounded.lg` to cards for a modern, approachable feel
-
-### Don't
-
-- Use more than two primary colors in a single composition
-- Apply amber backgrounds to large areas (too high-energy)
-- Use `display` size on mobile (reduce to `headline-lg` or smaller)
-- Add shadows to bordered cards (use one or the other, not both)
-- Use decorative fonts for body text (Plex Serif is for emphasis only)
-- Place light text on navy backgrounds with opacity — use white directly
-
----
-
-## Animation Guidelines
-
-### Transitions
-
-**Button hover:** 200ms ease-out for background color transitions
-**Card hover:** 300ms ease-out for shadow elevation change
-**Page elements:** 400ms ease-out for fade-in on scroll
-
-### Motion Preferences
-
-Respect `prefers-reduced-motion` — disable animations for users who have indicated this preference in their system settings.
-
-```css
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-```
-
-### Loading States
-
-Use subtle pulse animation (`animate-pulse-ring`) for loading indicators — the ring animation scales gently without being distracting.
-
----
-
-## Accessibility
-
-- **Color contrast:** All text combinations meet WCAG 4.5:1 minimum
-- **Touch targets:** Minimum 44x44px for all interactive elements
-- **Focus indicators:** Visible focus rings for keyboard navigation
-- **Semantic HTML:** Proper heading hierarchy (h1 → h2 → h3)
-- **Alt text:** All images include descriptive alt attributes
-
----
-
-## CSS Custom Properties Reference
-
-```css
-:root {
-  /* Colors */
-  --color-navy: #0F2D5E;
-  --color-navy-light: #1A4A8A;
-  --color-navy-dark: #0A1F3D;
-  --color-amber: #F59E0B;
-  --color-amber-light: #FBBF24;
-  --color-amber-dark: #D97706;
-  --color-surface: #FFFFFF;
-  --color-text-primary: #0F2D5E;
-  --color-text-secondary: #4B5563;
-
-  /* Typography */
-  --font-sans: var(--font-ibm-plex-sans);
-  --font-serif: var(--font-ibm-plex-serif);
-
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-}
-```
-
----
-
-*Document version: 1.1 — Last updated: 2026-06-15*
+*Document version: 1.2 — Last updated: 2026-06-25. Refreshed via /impeccable document after session: hero restructure, lead form, mega menu, CC0 images, slogan coloring, floating widget removal.*
