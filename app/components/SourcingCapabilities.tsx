@@ -49,7 +49,7 @@ export default function SourcingCapabilities() {
 
         {/* Comparison Table */}
         <div className="max-w-[800px] mx-auto">
-          <h3 className="font-serif text-xl font-bold text-navy mb-4 text-center">WAG vs. Going It Alone vs. a Generic Agent</h3>
+          <h3 className="font-serif text-xl font-bold text-navy mb-4 text-center">Winning Adventure Global vs. Going It Alone vs. a Generic Agent</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
@@ -57,7 +57,7 @@ export default function SourcingCapabilities() {
                   <th className="text-left py-4 px-4 font-semibold text-navy">What You Get</th>
                   <th className="text-center py-4 px-4 font-semibold text-gray-400 bg-gray-50">DIY (Online)</th>
                   <th className="text-center py-4 px-4 font-semibold text-gray-400 bg-gray-50">Generic Agent</th>
-                  <th className="text-center py-4 px-4 font-semibold text-navy bg-amber/10">WAG</th>
+                  <th className="text-center py-4 px-4 font-semibold text-navy bg-amber/10">Winning Adventure Global</th>
                 </tr>
               </thead>
               <tbody>
@@ -81,7 +81,7 @@ export default function SourcingCapabilities() {
           </div>
           <div className="text-center mt-6">
             <Link href="/enquiry" className="inline-flex items-center gap-2 bg-amber text-navy py-3 px-8 font-semibold hover:bg-amber/90 transition-colors text-sm">
-              Book a Free Consultation <ArrowRight size={16} />
+              Book Free Consult <ArrowRight size={16} />
             </Link>
           </div>
         </div>

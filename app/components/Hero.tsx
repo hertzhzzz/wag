@@ -61,20 +61,17 @@ export default function Hero() {
             </p>
           </div>
 
-          <h1 className="max-w-[600px]">
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-1 is-visible">
+          <h1 className="max-w-[640px]">
+            <span className="block leading-[1.05] tracking-[-2px] font-serif font-bold text-[clamp(36px,4.4vw,90px)] text-white hero-headline-line-1 is-visible">
               Face to face with <span className="text-amber italic">factories</span>
             </span>
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-2 is-visible">
-              No <span className="text-amber italic">middleman.</span>
-            </span>
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-3 is-visible">
-              No <span className="text-amber italic">markup.</span>
+            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(22px,2.8vw,36px)] text-white mt-3 hero-headline-line-2 is-visible">
+              No <span className="text-amber italic">middleman.</span> No <span className="text-amber italic">markup.</span>
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[560px] mt-6 mb-8 hero-subtitle is-visible">
-            Australia-based sourcing agent — we verify factories so you can buy direct.
+          <p className="text-base md:text-lg font-light leading-[1.7] text-white/80 max-w-[560px] mt-5 mb-8 hero-subtitle is-visible">
+            Australia-based sourcing agent — we verify factories so you can buy direct. You own the relationship.
           </p>
 
           <Link

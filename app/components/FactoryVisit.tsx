@@ -25,7 +25,7 @@ const redFlags = [
 
 export default function FactoryVisit() {
   return (
-    <section id="factory-visit" className="py-16 md:py-24 px-8 md:px-20 bg-[#f8f9fb]">
+    <section id="factory-visit" className="py-16 md:py-24 px-8 md:px-20 bg-[#f8f9fb] scroll-mt-20">
       <div className="max-w-[1200px] mx-auto">
         {/* Stat badges */}
         <div className="flex flex-wrap gap-x-12 gap-y-5 mb-14 pb-10 border-b border-gray-200">

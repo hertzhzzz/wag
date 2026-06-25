@@ -64,32 +64,32 @@ export default function Footer() {
             </h4>
             <ul className="list-none space-y-3">
               <li>
-                <Link href="/#industries" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
                   Drones & Robotics
                 </Link>
               </li>
               <li>
-                <Link href="/#industries" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
                   Beauty & Aesthetics
                 </Link>
               </li>
               <li>
-                <Link href="/#industries" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
                   Chemical & Materials
                 </Link>
               </li>
               <li>
-                <Link href="/#industries" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
                   Fashion & Textiles
                 </Link>
               </li>
               <li>
-                <Link href="/#industries" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
                   AV & Electronics
                 </Link>
               </li>
               <li>
-                <Link href="/#industries" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
                   Others
                 </Link>
               </li>
