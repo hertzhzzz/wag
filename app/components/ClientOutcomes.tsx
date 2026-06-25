@@ -5,8 +5,7 @@ import { Search, Factory, Star, ArrowRight } from 'lucide-react'
 
 export default function ClientOutcomes() {
   return (
-    <section id="outcomes" className="py-16 md:py-24 px-8 md:px-20 bg-white scroll-mt-20">
-      <div className="max-w-[1200px] mx-auto">
+    <div>
         {/* AV Case Study */}
         <div className="max-w-[640px] mb-14">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Client Story</p>
@@ -38,6 +37,5 @@ export default function ClientOutcomes() {
 
         <p className="text-sm text-gray-400 italic max-w-[640px]">Client details de-identified. Results are specific to this engagement and do not guarantee identical outcomes.</p>
       </div>
-    </section>
   )
 }

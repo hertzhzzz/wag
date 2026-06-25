@@ -67,8 +67,12 @@ export default function Home() {
       ]} />
       <Hero />
       <TwoWaysAccess />
-      <ClientOutcomes />
-      <SupplierReportPreview />
+      <section className="bg-white py-16 md:py-24 px-8 md:px-20">
+        <div className="max-w-[1120px] mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
+          <ClientOutcomes />
+          <SupplierReportPreview />
+        </div>
+      </section>
       <HowItWorks />
       <WhyChooseUs />
       <BreathingBand

@@ -45,46 +45,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Australia Leadership — Mark He */}
-      <section className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto md:text-left text-center scroll-mt-20" id="leadership">
-        <h2 className="font-serif text-[clamp(1.5rem,3.5vw,2.25rem)] font-semibold leading-tight mb-7">
-          Your Australian Point of Contact for China Sourcing
-        </h2>
-        <p className="text-base leading-relaxed text-navy/70 mb-5">
-          As Managing Director of Winning Adventure Global&apos;s Australia office, I bridge the gap between Australian businesses and Chinese manufacturing. Based in Adelaide, I work directly with clients across Australia — from initial supplier search through to final delivery.
-        </p>
-        <p className="text-base leading-relaxed text-navy/70 mb-5">
-          My focus is simple: helping Australian businesses source with confidence. Whether you are establishing your first supply chain or optimising an existing one, I bring local accountability and direct access to our verified factory network in China.
-        </p>
-        <blockquote className="border border-amber/20 bg-amber/5 py-4 px-6 my-8 font-serif italic text-lg leading-relaxed text-navy">
-          &quot;You do not need to navigate this alone. I am here to translate the process, verify the suppliers, and make sure your interests are protected at every step.&quot;
-        </blockquote>
-        <p className="text-base leading-relaxed text-navy/70 mb-5">
-          If you are evaluating suppliers, worried about quality consistency, or simply want to understand your options before committing — let us have a conversation. Straight talk about your sourcing challenges.
-        </p>
-        <div className="flex items-center gap-4 mt-6 md:justify-start justify-center">
-          <a
-            href="https://www.linkedin.com/in/mark-zhe-he/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-navy text-white text-sm font-semibold py-3 px-6 tracking-wide transition-opacity hover:opacity-80 rounded-none min-h-11"
-          >
-            Connect on LinkedIn
-            <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
-          <Link
-            href="/enquiry"
-            className="inline-block bg-amber text-navy text-sm font-semibold py-3 px-8 tracking-wide transition-opacity hover:opacity-80 rounded-none min-h-11"
-          >
-            Book a Consultation
-          </Link>
-        </div>
-
-        {/* TODO: Add professional headshot for Mark He when available - insert here */}
-      </section>
-
       {/* Founder's Story + Values */}
       <section className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto scroll-mt-20" id="founder">
         <h2 className="font-serif text-[clamp(1.5rem,3.5vw,2.25rem)] font-semibold leading-tight mb-7">
@@ -103,23 +63,32 @@ export default function AboutPage() {
         {/* Values — integrated into founder narrative */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 pt-8 border-t border-navy/10">
           <div>
-            <div className="text-xs font-semibold text-amber-dark-dark tracking-[0.1em] mb-2">Verified First</div>
+            <div className="text-xs font-semibold text-amber-dark tracking-[0.1em] mb-2">Verified First</div>
             <p className="text-sm text-navy/70 leading-relaxed">
               Every supplier in our network passes a 12-point verification process before we recommend them to any Australian client.
             </p>
           </div>
           <div>
-            <div className="text-xs font-semibold text-amber-dark-dark tracking-[0.1em] mb-2">Relationships Over Transactions</div>
+            <div className="text-xs font-semibold text-amber-dark tracking-[0.1em] mb-2">Relationships Over Transactions</div>
             <p className="text-sm text-navy/70 leading-relaxed">
               We build long-term partnerships, not one-off deals. Your supply chain should be a competitive advantage, not a recurring headache.
             </p>
           </div>
           <div>
-            <div className="text-xs font-semibold text-amber-dark-dark tracking-[0.1em] mb-2">Clarity at Every Step</div>
+            <div className="text-xs font-semibold text-amber-dark tracking-[0.1em] mb-2">Clarity at Every Step</div>
             <p className="text-sm text-navy/70 leading-relaxed">
               No jargon, no surprises. You get plain-English reports with real data, real contacts, and real timelines.
             </p>
           </div>
+        </div>
+
+        <div className="mt-10 text-center md:text-left">
+          <Link
+            href="/enquiry"
+            className="inline-block bg-amber text-navy text-sm font-semibold py-3 px-8 tracking-wide transition-opacity hover:opacity-80 rounded-none min-h-11"
+          >
+            Book a Consultation
+          </Link>
         </div>
       </section>
 
@@ -127,7 +96,7 @@ export default function AboutPage() {
       <section className="scroll-mt-20" id="both-worlds">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
           <div className="bg-surface-warm py-12 md:py-20 px-4 md:px-[60px] border-r border-gray-200">
-            <div className="text-xs font-semibold text-amber-dark-dark tracking-[0.12em] uppercase mb-4">
+            <div className="text-xs font-semibold text-amber-dark tracking-[0.12em] uppercase mb-4">
               Australian Perspective
             </div>
             <h2 className="font-serif text-[clamp(1.4rem,2.8vw,2rem)] font-semibold mb-7 leading-tight">
@@ -168,7 +137,7 @@ export default function AboutPage() {
           </div>
 
           <div className="bg-white py-12 md:py-20 px-4 md:px-[60px]">
-            <div className="text-xs font-semibold text-amber-dark-dark tracking-[0.12em] uppercase mb-4">
+            <div className="text-xs font-semibold text-amber-dark tracking-[0.12em] uppercase mb-4">
               Chinese Resources
             </div>
             <h2 className="font-serif text-[clamp(1.4rem,2.8vw,2rem)] font-semibold mb-7 leading-tight">
