@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
 import FAQ from '@/components/FAQ'
-import PhoneCallLink from '@/components/PhoneCallLink'
 
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
@@ -321,57 +320,6 @@ export default function AboutPage() {
 
       {/* FAQ Section */}
       <FAQ faqs={aboutFaqs} />
-
-      {/* Contact Info */}
-      <section className="py-10 md:py-16 px-4 md:px-8 bg-surface-warm scroll-mt-20" id="contact">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-[clamp(1.4rem,2.5vw,1.75rem)] font-semibold text-navy mb-8">Contact Us</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <p className="text-xs font-semibold text-amber-dark uppercase tracking-wider mb-2">Address</p>
-              <p className="text-navy/70 text-sm">
-                5/54 Melbourne St<br/>
-                North Adelaide SA 5006<br/>
-                Australia
-              </p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-amber-dark uppercase tracking-wider mb-2">Phone</p>
-              <p className="text-navy/70 text-sm">
-                <PhoneCallLink className="hover:text-amber">0416 588 198</PhoneCallLink>
-              </p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-amber-dark uppercase tracking-wider mb-2">ABN</p>
-              <p className="text-navy/70 text-sm">
-                94 697 886 150
-                <a
-                  href="https://abr.business.gov.au/Search/ResultsActive?SearchText=94697886150"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-2 text-amber hover:underline text-xs"
-                >
-                  (Verify)
-                </a>
-              </p>
-            </div>
-            <div>
-              <p className="text-xs font-semibold text-amber-dark uppercase tracking-wider mb-2">Google</p>
-              <a
-                href="https://share.google/Yrax86WiFoxFwFXqD"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-navy/70 hover:text-amber transition-colors text-sm flex items-center gap-1"
-              >
-                Business Profile
-                <svg aria-hidden="true" className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </>

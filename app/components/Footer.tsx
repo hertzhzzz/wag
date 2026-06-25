@@ -141,6 +141,11 @@ export default function Footer() {
                 <p className="text-white/60">5/54 Melbourne St<br />North Adelaide SA 5006</p>
               </div>
               <div>
+                <a href="tel:+61416588198" className="text-white/60 hover:text-amber transition-colors">
+                  0416 588 198
+                </a>
+              </div>
+              <div>
                 <a href="mailto:mark@winningadventure.com.au" className="text-white/60 hover:text-amber transition-colors">
                   mark@winningadventure.com.au
                 </a>
@@ -167,6 +172,14 @@ export default function Footer() {
           <span className="text-white/40 text-xs">© 2026 Winning Adventure Global Pty Ltd. All rights reserved.</span>
           <div className="flex items-center gap-6 text-white/40 text-xs">
             <span>ABN: 94 697 886 150</span>
+            <a
+              href="https://abr.business.gov.au/Search/ResultsActive?SearchText=94697886150"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber/70 hover:text-amber transition-colors"
+            >
+              (Verify)
+            </a>
           </div>
         </div>
       </div>
