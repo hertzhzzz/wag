@@ -48,6 +48,15 @@ export default function EnquiryForm() {
     setTouched({ ...touched, [field]: true })
   }
 
+  // Pre-fill what-do-you-need and scroll to form
+  const handlePreFillReport = () => {
+    handleChange('lookingFor', "I'm interested in a Verified Factory Report — please provide supplier background check, license validation, and capability assessment for a potential supplier.")
+    setTimeout(() => {
+      document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setTimeout(() => document.getElementById('lookingFor')?.focus(), 400)
+    }, 50)
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const submitErrors: Record<string, string> = {}
@@ -377,12 +386,13 @@ export default function EnquiryForm() {
                     — supplier background check, license validation, and capability assessment —{' '}
                     <span className="font-semibold text-amber">start from $500 AUD</span>.
                   </p>
-                  <Link
-                    href="#enquiry-form"
+                  <button
+                    type="button"
+                    onClick={handlePreFillReport}
                     className="block w-full py-2.5 px-4 text-xs font-semibold text-center text-navy border border-navy bg-transparent hover:bg-navy hover:text-white transition-colors duration-200 ease-out"
                   >
                     Enquire Today →
-                  </Link>
+                  </button>
                 </div>
               </div>
 
