@@ -103,7 +103,7 @@ export default function Home() {
 
             {/* Description */}
             <p className="text-navy/70 leading-relaxed max-w-[600px]">
-              A Melbourne-based importer of professional audio-visual equipment had been sourcing from a single Chinese factory for three years. Margins were tightening, quality complaints rising, and the factory had become unresponsive on pricing.
+              A Melbourne AV importer had been sourcing from a single Chinese factory for three years — until quality slipped and pricing stalled.
             </p>
           </div>
 
