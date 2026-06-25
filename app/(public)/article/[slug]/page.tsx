@@ -187,7 +187,7 @@ function HeroSection({ fm }: { fm: Frontmatter }) {
         {hasCover && (
           <Image
             src={fm.coverImage as string}
-            alt=""
+            alt={fm.coverImageAlt || ""}
             fill
             priority
             className="object-cover z-0"

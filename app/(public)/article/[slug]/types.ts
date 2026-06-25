@@ -16,6 +16,7 @@ export interface Frontmatter {
   readTime: string
   subtitle?: string
   coverImage?: string
+  coverImageAlt?: string
   updatedDate?: string
   takeaways?: string[]
   tags?: string[]
