@@ -61,26 +61,17 @@ export default function Hero() {
             </p>
           </div>
 
-          <h1 className="max-w-[580px]">
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(26px,3.2vw,42px)] text-white hero-headline-line-1 is-visible text-balance">
-              No middleman margins.
+          <h1 className="max-w-[600px]">
+            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(30px,3.8vw,52px)] text-amber hero-headline-line-1 is-visible text-balance">
+              Face-to-face with factories.
             </span>
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(26px,3.2vw,42px)] text-amber hero-headline-line-2 is-visible text-balance">
-              Face-to-face with the factory.
-            </span>
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(26px,3.2vw,42px)] text-white hero-headline-line-3 is-visible text-balance">
-              We do the sourcing.
-            </span>
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(18px,2.4vw,28px)] text-white/70 hero-headline-line-4 is-visible text-balance">
-              You do the business.
+            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-2 is-visible text-balance">
+              No middleman. No markup.
             </span>
           </h1>
 
-          <h2 className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[520px] mt-6 mb-3 hero-subtitle is-visible">
-            China Sourcing Agent for Australian Businesses. Verified Factories, Direct Access.
-          </h2>
-          <p className="text-base md:text-lg font-light leading-[1.6] text-white/70 max-w-[520px] mb-8 hero-subtitle-line-2 is-visible">
-            Direct factory access. No agents. No traders.
+          <p className="text-lg md:text-xl font-light leading-[1.7] text-white/80 max-w-[560px] mt-6 mb-8 hero-subtitle is-visible">
+            Australia-based sourcing agent — we verify factories so you can buy direct.
           </p>
 
           <Link
