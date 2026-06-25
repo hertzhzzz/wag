@@ -64,6 +64,7 @@ export default function Home() {
       ]} />
       <Hero />
       <TwoWaysAccess />
+      <HowItWorks />
       <section className="bg-white py-16 md:py-24 px-8 md:px-20 relative">
         <div className="max-w-[1120px] mx-auto relative">
           {/* Intro content — left aligned, right side reserved for floating card */}
@@ -119,7 +120,6 @@ export default function Home() {
           <ClientOutcomes />
         </div>
       </section>
-      <HowItWorks />
       <WhyChooseUs />
       <BreathingBand
         stat="80+"
