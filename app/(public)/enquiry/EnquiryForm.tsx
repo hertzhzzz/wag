@@ -352,7 +352,6 @@ export default function EnquiryForm() {
                     </div>
 
                   </div>
-                </div>
 
                 {/* Trust stats */}
                 <div className="grid grid-cols-3 gap-3 py-5 border-y border-gray-100">
@@ -376,7 +375,7 @@ export default function EnquiryForm() {
                     Not ready for a full engagement? Get a{' '}
                     <span className="font-semibold text-navy">Verified Factory Report</span>{' '}
                     — supplier background check, license validation, and capability assessment —{' '}
-                    <span className="font-semibold text-amber">$500 AUD</span>.
+                    <span className="font-semibold text-amber">start from $500 AUD</span>.
                   </p>
                   <p className="text-xs text-gray-400 mt-1.5">
                     Part of our{' '}
