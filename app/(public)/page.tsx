@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import CTABand from '@/components/CTABand'
 import Hero from '@/components/Hero'
+import BlogPreview from '@/components/BlogPreview'
 import HowItWorks from '@/components/HowItWorks'
 import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
@@ -121,6 +122,7 @@ export default function Home() {
       </section>
       <WhyChooseUs />
       <CTABand />
+      <BlogPreview />
       <Footer />
     </>
   )
