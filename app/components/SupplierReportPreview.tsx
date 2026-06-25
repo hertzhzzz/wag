@@ -110,8 +110,8 @@ export default function SupplierReportPreview() {
           <p className="text-[12px] text-white/60">See the exact report delivered to this client</p>
         </div>
 
-        {/* Scrollable section list */}
-        <div className="px-5 py-4 max-h-[360px] overflow-y-auto flex flex-col gap-0">
+        {/* Section list — full height, no truncation */}
+        <div className="px-5 py-4 flex flex-col gap-0">
           {reportSections.map((section, i) => (
             <div key={i} className="py-2 border-b border-navy/5 last:border-0">
               <div className="flex items-center gap-2 mb-1">
