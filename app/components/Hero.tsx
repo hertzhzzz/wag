@@ -62,11 +62,14 @@ export default function Hero() {
           </div>
 
           <h1 className="max-w-[600px]">
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(30px,3.8vw,52px)] text-amber hero-headline-line-1 is-visible">
-              Face-to-face with factories.
+            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold italic text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-1 is-visible">
+              Face to face with <span className="text-amber">factories</span>
             </span>
             <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-2 is-visible">
-              No middleman. No markup.
+              <span className="text-amber">No</span> middleman.
+            </span>
+            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(30px,3.8vw,52px)] text-white hero-headline-line-3 is-visible">
+              <span className="text-amber">No</span> markup.
             </span>
           </h1>
 
