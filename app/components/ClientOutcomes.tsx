@@ -91,9 +91,9 @@ export default function ClientOutcomes() {
           </div>
           <Link
             href="/enquiry"
-            className="inline-flex items-center gap-2 bg-amber text-navy font-semibold px-7 py-3.5 text-[14px] hover:bg-amber/90 transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-6 py-3 text-[13px] hover:bg-navy/90 transition-colors flex-shrink-0 ring-1 ring-white/20"
           >
-            Book Free Consult <ArrowRight size={16} />
+            Book Free Consult <ArrowRight size={15} />
           </Link>
         </div>
       </div>
