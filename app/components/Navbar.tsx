@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
+import PhoneCallLink from '@/components/PhoneCallLink'
 
 export default function Navbar({ rightContent }: { rightContent?: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -51,13 +52,12 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
         <div className="hidden md:flex gap-3">
           {rightContent !== undefined ? rightContent : (
             <>
-              <a
-                href="tel:+61416588198"
+              <PhoneCallLink
                 className="flex flex-col items-start px-[14px] py-[8px] text-navy bg-white/80 border border-navy/20 hover:bg-navy hover:text-white flex-shrink-0 transition-all leading-tight"
               >
                 <span className="text-[10px] font-medium uppercase tracking-wide">Call Us Today</span>
                 <span className="text-[13px] font-semibold">+61 0416588198</span>
-              </a>
+              </PhoneCallLink>
               <Link
                 href="/enquiry"
                 className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-navy flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"

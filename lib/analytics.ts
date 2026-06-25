@@ -75,6 +75,19 @@ export function trackArticleReadProgress(pagePath: string, sectionsRead: number)
 }
 
 /**
+ * Track phone number clicks as a Google Ads call conversion
+ */
+export function trackPhoneCall(): void {
+  if (typeof window === 'undefined' || !window.gtag) return
+
+  window.gtag('event', 'conversion', {
+    send_to: 'AW-18216448449/JPD6CIzAgsUcEMHjo-5D',
+    value: 100.0,
+    currency: 'AUD',
+  })
+}
+
+/**
  * Track clicks on factory directory links from blog articles
  */
 export function trackFactoryLinkClick(articleSlug: string, factorySlug: string): void {

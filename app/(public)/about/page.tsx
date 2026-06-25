@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import FAQ from '@/components/FAQ'
+import PhoneCallLink from '@/components/PhoneCallLink'
 
 import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
@@ -508,7 +509,7 @@ export default function AboutPage() {
             <div>
               <p className="text-xs font-semibold text-amber uppercase tracking-wider mb-2">Phone</p>
               <p className="text-gray-700">
-                <a href="tel:+61416588198" className="hover:text-amber">0416 588 198</a>
+                <PhoneCallLink className="hover:text-amber">0416 588 198</PhoneCallLink>
               </p>
             </div>
             <div>
