@@ -142,7 +142,7 @@ export default function EnquiryForm() {
 
             {/* Left column: Form card — fills full column height */}
             <div className="flex">
-          <div className="bg-white border border-gray-200 rounded-lg p-8 w-full">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 w-full" id="enquiry-form">
             <p className="text-xs font-semibold tracking-widest text-navy/60 uppercase mb-2">Get in Touch</p>
             <h2 className="font-serif font-bold text-[1.375rem] text-navy mb-6">
               Submit Your Sourcing Enquiry
@@ -370,18 +370,19 @@ export default function EnquiryForm() {
                 </div>
 
                 {/* Promo banner — directly below trust stats */}
-                <div className="border border-amber/40 rounded-lg px-5 py-3.5">
-                  <p className="text-xs text-gray-500 leading-relaxed">
+                <div className="border border-amber/40 rounded-lg px-5 py-4">
+                  <p className="text-xs text-gray-500 leading-relaxed mb-3">
                     Not ready for a full engagement? Get a{' '}
                     <span className="font-semibold text-navy">Verified Factory Report</span>{' '}
                     — supplier background check, license validation, and capability assessment —{' '}
                     <span className="font-semibold text-amber">start from $500 AUD</span>.
                   </p>
-                  <p className="text-xs text-gray-400 mt-1.5">
-                    Part of our{' '}
-                    <Link href="/services" className="text-navy underline hover:text-amber transition-colors">three service tiers</Link>
-                    , available standalone.
-                  </p>
+                  <Link
+                    href="#enquiry-form"
+                    className="block w-full py-2.5 px-4 text-xs font-semibold text-center text-navy border border-navy bg-transparent hover:bg-navy hover:text-white transition-colors duration-200 ease-out"
+                  >
+                    Enquire Today →
+                  </Link>
                 </div>
               </div>
 
