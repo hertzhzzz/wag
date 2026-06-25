@@ -6,8 +6,8 @@ import BlogPreview from '@/components/BlogPreview'
 import HowItWorks from '@/components/HowItWorks'
 import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
-import FactoryVisit from '@/components/FactoryVisit'
 import ClientOutcomes from '@/components/ClientOutcomes'
+import SupplierReportPreview from '@/components/SupplierReportPreview'
 import BreathingBand from '@/components/BreathingBand'
 import FAQ from '@/components/FAQ'
 
@@ -67,6 +67,8 @@ export default function Home() {
       ]} />
       <Hero />
       <TwoWaysAccess />
+      <ClientOutcomes />
+      <SupplierReportPreview />
       <HowItWorks />
       <WhyChooseUs />
       <BreathingBand
@@ -74,8 +76,6 @@ export default function Home() {
         statement="Australian businesses already source through us — from Adelaide SMEs to Perth mining services firms."
         image="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=70&auto=format&fit=crop"
       />
-      <FactoryVisit />
-      <ClientOutcomes />
       <BlogPreview />
       <FAQ faqs={homepageFaqs} />
       <CTABand />
