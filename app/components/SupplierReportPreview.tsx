@@ -158,7 +158,7 @@ export default function SupplierReportPreview() {
           onClick={() => setModalOpen(false)}
         >
           <div
-            className="bg-white w-full max-w-[780px] max-h-[90vh] overflow-y-auto shadow-2xl"
+            className="bg-white w-full max-w-[780px] max-h-[85vh] overflow-y-auto shadow-2xl my-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal header */}
