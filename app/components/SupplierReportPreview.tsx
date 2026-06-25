@@ -86,12 +86,12 @@ const reportSections = [
   },
 ]
 
-// 真实工厂审计风格图片（CC0 Unsplash — 验厂现场感）
+// 真实 client portal 报告中的工厂图片（通过 API route 引用）
 const auditImages = [
-  { src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&q=60&auto=format&fit=crop', label: 'Product sample — circuit board assembly' },
-  { src: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=300&q=60&auto=format&fit=crop', label: 'Factory floor — SMT production line' },
-  { src: 'https://images.unsplash.com/photo-1563770554667-f8b6bdd719d5?w=300&q=60&auto=format&fit=crop', label: 'QC inspection — measurement station' },
-  { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=300&q=60&auto=format&fit=crop', label: 'Warehouse — finished goods storage' },
+  { src: '/api/client/reports/images/aaron-sansoni/itc-baolun-factory-industrial-park-2.jpeg', label: 'Factory — industrial park exterior' },
+  { src: '/api/client/reports/images/aaron-sansoni/itc-baolun-production-lines-2.jpeg', label: 'Production line — SMT assembly' },
+  { src: '/api/client/reports/images/aaron-sansoni/itc-baolun-quality-lab-2.jpeg', label: 'QC lab — testing equipment' },
+  { src: '/api/client/reports/images/aaron-sansoni/itc-baolun-product-speakers-2.jpeg', label: 'Product sample — professional speaker' },
 ]
 
 export default function SupplierReportPreview() {
