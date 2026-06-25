@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Search, Factory, Star, ArrowRight, MapPin, CheckCircle } from 'lucide-react'
+import { Search, Factory, Star, ArrowRight } from 'lucide-react'
 
 export default function ClientOutcomes() {
   const [visible, setVisible] = useState(false)
@@ -17,93 +17,91 @@ export default function ClientOutcomes() {
     return () => obs.disconnect()
   }, [])
 
+  const fade = (delay: number) => ({
+    opacity: visible ? 1 : 0,
+    transform: visible ? 'translateY(0)' : 'translateY(12px)',
+    transition: `opacity 0.5s ${delay}s, transform 0.5s ${delay}s`,
+  })
+
   return (
     <div ref={ref}>
-      {/* Tags row */}
-      <div className="flex flex-wrap gap-2 mb-4" style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.4s 0.1s' }}>
-        <span className="text-[11px] font-semibold uppercase tracking-wider text-amber bg-amber/5 border border-amber/20 px-3 py-1 rounded">
-          AV Equipment · Electronics
-        </span>
-        <span className="text-[11px] font-semibold uppercase tracking-wider text-navy/60 bg-navy/5 border border-navy/10 px-3 py-1 rounded flex items-center gap-1">
-          <MapPin size={12} /> Melbourne · Australia
-        </span>
+      {/* ===== TIMELINE ===== */}
+
+      <div className="mt-12" style={fade(0.25)}>
+        {/* Section break */}
+        <div className="flex items-center gap-3 mb-8">
+          <span className="h-px flex-1 bg-navy/10" aria-hidden="true" />
+          <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-navy/30">Case Story</span>
+          <span className="h-px flex-1 bg-navy/10" aria-hidden="true" />
+        </div>
+
+        {/* Timeline — vertical, full-width story flow */}
+        <div className="space-y-10">
+          {[
+            {
+              icon: Search,
+              iconBg: 'bg-navy/10',
+              iconColor: 'text-navy',
+              title: 'The Challenge',
+              body: 'The existing supplier had stopped allowing factory visits. Quality defect rates had doubled over 12 months. The importer had no way to verify whether the factory was still manufacturing in-house or sub-contracting to smaller workshops — a critical unknown before placing the next order.',
+            },
+            {
+              icon: Factory,
+              iconBg: 'bg-amber/10',
+              iconColor: 'text-amber',
+              title: 'Our Approach',
+              body: 'Over four days our team visited the existing factory and two alternative suppliers in Guangdong. We verified business registrations, photographed production lines, interviewed floor managers, and cross-checked certifications against issuing bodies. Every finding was documented in a structured verification report.',
+            },
+            {
+              icon: Star,
+              iconBg: 'bg-navy',
+              iconColor: 'text-white',
+              title: 'The Outcome',
+              body: 'Our verification confirmed the existing factory had shifted production to an unregistered sub-contractor. We shortlisted an alternative supplier with 14 years of AV manufacturing history and better unit pricing — the client transitioned within six weeks with zero supply interruption and improved margin.',
+            },
+          ].map((step, i) => (
+            <div key={i} className="flex gap-5" style={fade(0.3 + i * 0.08)}>
+              {/* Timeline connector */}
+              <div className="flex flex-col items-center">
+                <div className={`w-10 h-10 rounded-full ${step.iconBg} flex items-center justify-center flex-shrink-0`}>
+                  <step.icon size={18} className={step.iconColor} />
+                </div>
+                {i < 2 && <div className="w-px flex-1 bg-navy/10 mt-2" aria-hidden="true" />}
+              </div>
+              {/* Content */}
+              <div className="pb-2">
+                <h3 className="font-semibold text-navy text-[16px] mb-2">{step.title}</h3>
+                <p className="text-[14px] text-navy/70 leading-relaxed max-w-[600px]">{step.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Title */}
-      <h2 className="font-serif text-[clamp(1.4rem,3vw,2rem)] font-bold text-navy mb-3 leading-tight text-balance" style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.4s 0.2s' }}>
-        How a Melbourne AV Equipment Importer Verified Their Supply Chain
-      </h2>
+      {/* ===== CTA BAND ===== */}
+      <div className="mt-12 bg-navy text-white px-6 py-8 md:py-10" style={fade(0.5)}>
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div>
+            <h3 className="font-serif font-bold text-[clamp(1.2rem,2.2vw,1.6rem)] leading-tight mb-1">
+              Need supplier verification?
+            </h3>
+            <p className="text-white/70 text-[14px] max-w-[480px]">
+              Get the same verification process used in this engagement. We&apos;ll audit your supplier and deliver a structured report.
+            </p>
+          </div>
+          <Link
+            href="/enquiry"
+            className="inline-flex items-center gap-2 bg-amber text-navy font-semibold px-7 py-3.5 text-[14px] hover:bg-amber/90 transition-colors flex-shrink-0"
+          >
+            Book Free Consult <ArrowRight size={16} />
+          </Link>
+        </div>
+      </div>
 
-      {/* Intro */}
-      <p className="text-navy/70 leading-relaxed mb-5 max-w-[620px]" style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.4s 0.3s' }}>
-        A Melbourne-based importer of professional audio-visual equipment had been sourcing from a single Chinese factory for three years. Margins were tightening, quality complaints rising, and the factory had become unresponsive on pricing. They reached out to us to verify their existing supplier and explore alternatives.
+      {/* ===== DISCLAIMER ===== */}
+      <p className="text-[12px] text-navy/40 italic mt-6" style={fade(0.55)}>
+        Client details de-identified. Results are specific to this engagement and do not guarantee identical outcomes.
       </p>
-
-      {/* Outcome highlights */}
-      <div className="flex flex-wrap gap-x-6 gap-y-2 mb-6" style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.4s 0.35s' }}>
-        {[
-          { label: 'Alternative supplier verified', sub: 'with 14 years of AV manufacturing history' },
-          { label: 'Better unit pricing', sub: '— improved margins confirmed' },
-          { label: '6-week transition', sub: '— zero supply interruption' },
-        ].map((item, i) => (
-          <div key={i} className="flex items-center gap-2">
-            <CheckCircle size={16} className="text-amber flex-shrink-0" />
-            <div>
-              <span className="text-[14px] font-semibold text-navy">{item.label}</span>
-              <span className="text-[14px] text-navy/60">{item.sub}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Divider */}
-      <div className="w-16 h-px bg-amber/50 mb-6" aria-hidden="true" />
-
-      {/* 3 cards — wider, less height */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        {[
-          {
-            icon: Search,
-            iconBg: 'bg-navy/10',
-            iconColor: 'text-navy',
-            title: 'The Challenge',
-            body: 'The existing supplier had stopped allowing factory visits. Quality defect rates had doubled over 12 months. The importer had no way to verify whether the factory was still manufacturing in-house or sub-contracting.',
-          },
-          {
-            icon: Factory,
-            iconBg: 'bg-amber/10',
-            iconColor: 'text-amber',
-            title: 'Our Approach',
-            body: 'Over four days our team visited the existing factory and two alternative suppliers in Guangdong. We verified business registrations, photographed production lines, interviewed floor managers, and cross-checked certifications.',
-          },
-          {
-            icon: Star,
-            iconBg: 'bg-navy',
-            iconColor: 'text-white',
-            title: 'The Outcome',
-            body: 'Our verification confirmed the existing factory had shifted production to an unregistered sub-contractor. We shortlisted an alternative supplier with 14 years of AV manufacturing history and better unit pricing.',
-          },
-        ].map((card, i) => (
-          <div key={i} className="bg-[#f8f9fb] border border-gray-100 p-5" style={{ opacity: visible ? 1 : 0, transition: `opacity 0.4s ${0.4 + i * 0.1}s` }}>
-            <div className={`w-9 h-9 rounded-full ${card.iconBg} flex items-center justify-center mb-3`}>
-              <card.icon size={18} className={card.iconColor} />
-            </div>
-            <h3 className="font-semibold text-navy text-[15px] mb-1.5">{card.title}</h3>
-            <p className="text-[13px] text-navy/70 leading-relaxed">{card.body}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Disclaimer + CTA */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <p className="text-[12px] text-navy/40 italic max-w-[400px]">Client details de-identified. Results are specific to this engagement and do not guarantee identical outcomes.</p>
-        <Link
-          href="/enquiry"
-          className="inline-flex items-center gap-2 bg-navy text-white text-[13px] font-semibold px-6 py-3 hover:bg-navy/90 transition-colors flex-shrink-0"
-        >
-          Need supplier verification? <ArrowRight size={15} />
-        </Link>
-      </div>
     </div>
   )
 }
