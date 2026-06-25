@@ -137,12 +137,12 @@ export default function EnquiryForm() {
       <section className="py-14 sm:py-16 px-4 sm:px-8">
         <div className="max-w-[1200px] mx-auto">
 
-          {/* Desktop: left (form) / right (paths + trust) */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Desktop: left (form) / right (paths + trust) — equal height */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
 
-            {/* Left column: Form card */}
-            <div>
-          <div className="bg-white border border-gray-200 rounded-lg p-8">
+            {/* Left column: Form card — fills full column height */}
+            <div className="flex">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 w-full">
             <p className="text-xs font-semibold tracking-widest text-navy/60 uppercase mb-2">Get in Touch</p>
             <h2 className="font-serif font-bold text-[1.375rem] text-navy mb-6">
               Submit Your Sourcing Enquiry
@@ -275,7 +275,7 @@ export default function EnquiryForm() {
                     href="https://calendly.com/mark-winningadventure/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-center text-sm text-navy hover:text-amber mt-4 sm:mt-2"
+                    className="block w-full py-3 px-6 text-sm font-semibold text-navy border border-navy bg-transparent hover:bg-navy hover:text-white active:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/40 focus-visible:ring-offset-2 transition-colors duration-200 ease-out text-center mt-3"
                   >
                     Prefer to talk? Book a call →
                   </a>
@@ -285,89 +285,98 @@ export default function EnquiryForm() {
           </div>
             </div>
 
-            {/* Right column: What happens next + trust stats */}
-            <div className="flex flex-col gap-6">
+            {/* Right column: What happens next + trust stats + promo — fills column height */}
+            <div className="flex flex-col gap-6 lg:justify-between">
 
-              {/* What happens next — two paths */}
-              <div>
-                <h3 className="font-serif font-bold text-lg mb-6 text-navy">Here&apos;s what happens after you reach out</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-6">
+                {/* What happens next — two paths */}
+                <div>
+                  <h3 className="font-serif font-bold text-lg mb-6 text-navy">Here&apos;s what happens after you reach out</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-                  {/* Path 1: Visit in China */}
-                  <div className="border-2 border-navy rounded-lg p-5">
-                    <div className="flex items-center gap-2.5 mb-3">
-                      <div className="w-7 h-7 rounded-full bg-navy text-white flex items-center justify-center flex-shrink-0">
-                        <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
-                      </div>
-                      <p className="text-xs font-bold uppercase tracking-wider text-navy">Path 1 — Visit Factories in China</p>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      {[
-                        ['We get in touch', 'Within 4 business hours'],
-                        ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
-                        ['We plan your trip', 'Flights, hotel, and factory schedule arranged'],
-                        ['You visit in person', 'Guided tours, technical meetings, quality inspection'],
-                        ['Production & shipping', 'We monitor production and ship to your door'],
-                      ].map(([title, sub], i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <div className="w-4 h-4 rounded-full bg-navy text-amber text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
-                            {i + 1}
-                          </div>
-                          <div>
-                            <span className="text-xs font-semibold text-navy">{title} — </span>
-                            <span className="text-xs text-gray-500">{sub}</span>
-                          </div>
+                    {/* Path 1: Visit in China */}
+                    <div className="border-2 border-navy rounded-lg p-5">
+                      <div className="flex items-center gap-2.5 mb-3">
+                        <div className="w-7 h-7 rounded-full bg-navy text-white flex items-center justify-center flex-shrink-0">
+                          <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 12h18M12 3l9 9-9 9"/></svg>
                         </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Path 2: Remote / No travel */}
-                  <div className="border-2 border-navy rounded-lg p-5">
-                    <div className="flex items-center gap-2.5 mb-3">
-                      <div className="w-7 h-7 rounded-full bg-navy text-white flex items-center justify-center flex-shrink-0">
-                        <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        <p className="text-xs font-bold uppercase tracking-wider text-navy">Path 1 — Visit Factories in China</p>
                       </div>
-                      <p className="text-xs font-bold uppercase tracking-wider text-navy">Path 2 — Remote Verification</p>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      {[
-                        ['We get in touch', 'Within 4 business hours'],
-                        ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
-                        ['We send you reports', 'Video walkthroughs, photos, and sample quotes'],
-                        ['You review from here', 'No travel needed — full transparency from Australia'],
-                        ['We arrange shipping', 'Production monitoring and delivery managed end-to-end'],
-                      ].map(([title, sub], i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <div className="w-4 h-4 rounded-full bg-navy text-amber text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
-                            {i + 1}
+                      <div className="flex flex-col gap-2">
+                        {[
+                          ['We get in touch', 'Within 4 business hours'],
+                          ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
+                          ['We plan your trip', 'Flights, hotel, and factory schedule arranged'],
+                          ['You visit in person', 'Guided tours, technical meetings, quality inspection'],
+                          ['Production & shipping', 'We monitor production and ship to your door'],
+                        ].map(([title, sub], i) => (
+                          <div key={i} className="flex items-start gap-2">
+                            <div className="w-4 h-4 rounded-full bg-navy text-amber text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                              {i + 1}
+                            </div>
+                            <div>
+                              <span className="text-xs font-semibold text-navy">{title} — </span>
+                              <span className="text-xs text-gray-500">{sub}</span>
+                            </div>
                           </div>
-                          <div>
-                            <span className="text-xs font-semibold text-navy">{title} — </span>
-                            <span className="text-xs text-gray-500">{sub}</span>
-                          </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </div>
 
+                    {/* Path 2: Remote / No travel */}
+                    <div className="border-2 border-navy rounded-lg p-5">
+                      <div className="flex items-center gap-2.5 mb-3">
+                        <div className="w-7 h-7 rounded-full bg-navy text-white flex items-center justify-center flex-shrink-0">
+                          <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                        </div>
+                        <p className="text-xs font-bold uppercase tracking-wider text-navy">Path 2 — Remote Verification</p>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        {[
+                          ['We get in touch', 'Within 4 business hours'],
+                          ['We shortlist suppliers', '2-3 verified factories matched to your needs'],
+                          ['We send you reports', 'Video walkthroughs, photos, and sample quotes'],
+                          ['You review from here', 'No travel needed — full transparency from Australia'],
+                          ['We arrange shipping', 'Production monitoring and delivery managed end-to-end'],
+                        ].map(([title, sub], i) => (
+                          <div key={i} className="flex items-start gap-2">
+                            <div className="w-4 h-4 rounded-full bg-navy text-amber text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                              {i + 1}
+                            </div>
+                            <div>
+                              <span className="text-xs font-semibold text-navy">{title} — </span>
+                              <span className="text-xs text-gray-500">{sub}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Trust stats */}
+                <div className="grid grid-cols-3 gap-3 py-5 border-y border-gray-100">
+                  <div className="text-center">
+                    <p className="text-lg font-bold text-navy">200+</p>
+                    <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Factory Visits</p>
+                  </div>
+                  <div className="text-center border-x border-gray-100">
+                    <p className="text-lg font-bold text-navy">4hrs</p>
+                    <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Response Time</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-lg font-bold text-navy">AU-Based</p>
+                    <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Team</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Trust stats */}
-              <div className="grid grid-cols-3 gap-3 py-5 border-y border-gray-100">
-                <div className="text-center">
-                  <p className="text-lg font-bold text-navy">200+</p>
-                  <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Factory Visits</p>
-                </div>
-                <div className="text-center border-x border-gray-100">
-                  <p className="text-lg font-bold text-navy">4hrs</p>
-                  <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Response Time</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-lg font-bold text-navy">AU-Based</p>
-                  <p className="text-[0.65rem] text-gray-500 uppercase tracking-wider">Team</p>
-                </div>
+              {/* Promo banner — pinned to bottom on desktop via lg:justify-between */}
+              <div className="border border-amber/40 rounded-lg px-5 py-3.5 text-center">
+                <p className="text-xs font-semibold text-navy/70 uppercase tracking-wider mb-0.5">Verified factory report from</p>
+                <p className="text-lg font-bold text-amber">$500 AUD</p>
+                <p className="text-xs text-gray-500">Pay only when you&apos;re ready to move forward</p>
               </div>
 
             </div>
