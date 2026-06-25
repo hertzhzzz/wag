@@ -88,10 +88,10 @@ const reportSections = [
 
 // 真实 client portal 报告中的工厂图片（通过 API route 引用）
 const auditImages = [
-  { src: '/api/client/reports/images/aaron-sansoni/itc-baolun-factory-industrial-park-2.jpeg', label: 'Factory — industrial park exterior' },
-  { src: '/api/client/reports/images/aaron-sansoni/itc-baolun-production-lines-2.jpeg', label: 'Production line — SMT assembly' },
-  { src: '/api/client/reports/images/aaron-sansoni/itc-baolun-quality-lab-2.jpeg', label: 'QC lab — testing equipment' },
-  { src: '/api/client/reports/images/aaron-sansoni/itc-baolun-product-speakers-2.jpeg', label: 'Product sample — professional speaker' },
+  { src: '/report-samples/factory-park.jpg', label: 'Factory — industrial park exterior' },
+  { src: '/report-samples/production-line.jpg', label: 'Production line — SMT assembly' },
+  { src: '/report-samples/quality-lab.jpg', label: 'QC lab — testing equipment' },
+  { src: '/report-samples/product-speakers.jpg', label: 'Product sample — professional speaker' },
 ]
 
 export default function SupplierReportPreview() {
