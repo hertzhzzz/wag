@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { Factory, MapPin, BadgeCheck, ClipboardCheck } from 'lucide-react'
+import { Factory, MapPin, BadgeCheck, ClipboardCheck, DollarSign, Eye } from 'lucide-react'
 
 const reasons = [
   {
@@ -23,6 +23,16 @@ const reasons = [
     icon: ClipboardCheck,
     title: 'End-to-End Support',
     description: 'Factory matching, visit coordination, quality inspection, shipping logistics, and customs clearance — we can support as little or as much as you need.',
+  },
+  {
+    icon: DollarSign,
+    title: 'Cost Transparency',
+    description: 'Fixed-fee quotes with no hidden costs. We tell you exactly what each service costs before you commit — so there are no surprises on your invoice.',
+  },
+  {
+    icon: Eye,
+    title: 'On-Ground Quality Control',
+    description: 'We inspect your product before it ships. Pre-shipment quality checks catch issues while they are still fixable — before your money leaves Australia.',
   },
 ]
 
