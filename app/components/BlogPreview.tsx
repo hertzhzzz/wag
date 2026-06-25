@@ -68,7 +68,7 @@ function getTopArticles(count = 3): Article[] {
 }
 
 export default function BlogPreview() {
-  const articles = getTopArticles(3)
+  const articles = getTopArticles(2)
 
   if (articles.length === 0) return null
 
@@ -102,8 +102,8 @@ export default function BlogPreview() {
           </div>
         </div>
 
-        {/* Article cards — 3-column grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Article cards — 2-column grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {articles.map((article, i) => (
             <article
               key={article.slug}

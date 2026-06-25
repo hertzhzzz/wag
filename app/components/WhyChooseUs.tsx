@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { Factory, MapPin, BadgeCheck, ShieldAlert, Grid3X3, ClipboardCheck } from 'lucide-react'
+import { Factory, MapPin, BadgeCheck, ClipboardCheck } from 'lucide-react'
 
 const reasons = [
   {
@@ -18,16 +18,6 @@ const reasons = [
     icon: BadgeCheck,
     title: 'Verified Suppliers Only',
     description: 'Every factory in our directory has been physically vetted. We verify business licenses, production capacity, quality control systems, and sample quality.',
-  },
-  {
-    icon: ShieldAlert,
-    title: 'Risk Mitigation',
-    description: 'We help Australian businesses avoid common pitfalls: fraud, quality failures, and communication breakdowns that plague unsolicited factory contacts.',
-  },
-  {
-    icon: Grid3X3,
-    title: 'Industry Agnostic',
-    description: 'From consumer electronics to industrial equipment, from packaging to custom components — we source across all manufacturing categories in the Pearl River Delta.',
   },
   {
     icon: ClipboardCheck,

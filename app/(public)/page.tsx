@@ -6,7 +6,6 @@ import BlogPreview from '@/components/BlogPreview'
 import HowItWorks from '@/components/HowItWorks'
 import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
-import SourcingCapabilities from '@/components/SourcingCapabilities'
 import FactoryVisit from '@/components/FactoryVisit'
 import ClientOutcomes from '@/components/ClientOutcomes'
 import BreathingBand from '@/components/BreathingBand'
@@ -75,14 +74,7 @@ export default function Home() {
         statement="Australian businesses already source through us — from Adelaide SMEs to Perth mining services firms."
         image="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=70&auto=format&fit=crop"
       />
-      <SourcingCapabilities />
       <FactoryVisit />
-      <BreathingBand
-        stat="62%"
-        statement="of sourcing problems surface after the first shipment, not during the deal. That's why we go on the ground with you."
-        source="UTS Australian Business China Sourcing Research, 2025 · n=858"
-        image="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&q=70&auto=format&fit=crop"
-      />
       <ClientOutcomes />
       <BlogPreview />
       <FAQ faqs={homepageFaqs} />

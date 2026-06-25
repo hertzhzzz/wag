@@ -7,11 +7,11 @@ export const aboutFaqs = [
     answer: 'Winning Adventure Global was founded to bridge the gap between Australian businesses and Chinese manufacturers. Our founder, Andy Liu, recognised that Australian companies were missing out on opportunities not because Chinese suppliers lacked capability, but because no one was doing the translation work — not just language, but trust, process, and relationships.',
   },
   {
-    question: 'What makes WAG different from other sourcing companies?',
+    question: 'What makes Winning Adventure Global different from other sourcing companies?',
     answer: 'We combine Australian business understanding with deep Chinese market expertise. Every supplier in our network passes a 12-point verification process. We stay with you from the first factory visit through to ongoing relationship management.',
   },
   {
-    question: 'How long has WAG been operating?',
+    question: 'How long has Winning Adventure Global been operating?',
     answer: 'Our team has years of experience inside Chinese manufacturing hubs including Shenzhen, Foshan, and Guangzhou. We have built our network of 500+ verified suppliers over multiple years of direct engagement.',
   },
   {
@@ -27,11 +27,11 @@ export const aboutFaqs = [
     answer: 'We facilitate third-party quality inspections, coordinate sample collection and testing, and provide detailed quality assessment reports. Our on-ground team can conduct unannounced visits to ensure ongoing compliance.',
   },
   {
-    question: 'What happens after I find a supplier through WAG?',
+    question: 'What happens after I find a supplier through Winning Adventure Global?',
     answer: 'We provide post-trip supplier comparison reports and remain available for ongoing support. We help with order negotiation, sample coordination, quality control, and can facilitate continued communication with your chosen suppliers.',
   },
   {
-    question: 'What industries does WAG have experience working with?',
+    question: 'What industries does Winning Adventure Global have experience working with?',
     answer: 'Our team has experience across 50+ industries including manufacturing, technology, food and health, construction, property, agriculture, automotive, and packaging. We have verified partners across 6 Chinese provinces.',
   },
   {

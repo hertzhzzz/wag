@@ -1,28 +1,20 @@
-// Homepage FAQ section - 6 keyword-targeted FAQs (Google rich results limit)
+// Homepage FAQ section - 4 strongest FAQs
 export const homepageFaqs = [
   {
-    question: 'What is a China sourcing agent in Australia and why do I need one?',
-    answer: 'A China sourcing agent in Australia is a professional service that helps Australian businesses find, verify, and manage relationships with Chinese manufacturers. Working with a local Australia-based China sourcing agent eliminates the risk of fraud, language barriers, and quality issues when importing from China. Winning Adventure Global has completed over 200 factory visits across Shenzhen, Foshan, and Guangzhou, helping Australian companies cut through the complexity of dealing directly with Chinese suppliers. Our bilingual guides and 12-point supplier verification process ensure you only meet with legitimate, qualified manufacturers.',
+    question: 'Do I need to travel to China for supplier verification?',
+    answer: 'Not necessarily. Winning Adventure Global offers remote supplier verification services where we visit factories on your behalf, conduct audits using our 12-point verification process, and provide detailed reports with photos and video evidence. For clients who prefer hands-on evaluation, we also arrange guided factory visits across Shenzhen, Foshan, and Guangzhou. Many Australian businesses start with remote verification to shortlist suppliers before committing to a trip, saving time and travel costs while still getting thorough supplier assessments.',
   },
   {
-    question: 'How do I visit Chinese factories safely as an Australian business?',
-    answer: 'Visiting Chinese factories as an Australian business requires proper planning and local support. Winning Adventure Global arranges guided factory visits in China with pre-screened suppliers, bilingual interpretation, and transportation between factory locations. Our founder Andy Liu has spent 8+ years building relationships in Chinese manufacturing hubs including the Pearl River Delta and Yangtze River Delta. We handle all supplier introductions, agenda planning, and on-ground logistics so you can focus on evaluating factories. Australian businesses typically visit 4-8 factories per trip across Shenzhen, Foshan, and Guangzhou.',
+    question: 'How is this different from a factory tour?',
+    answer: 'Unlike typical factory tours, our sourcing programme is a structured business service focused on supplier evaluation and relationship building. While a factory tour might show you around, we provide pre-screened suppliers verified through our 12-point process, bilingual negotiation support, inter-factory transportation, and a post-trip supplier comparison report. Our goal is to help you find the right manufacturing partner for your business, not just show you factories. Every itinerary is customised to your product category, volume requirements, and quality standards.',
   },
   {
-    question: 'What does a China sourcing tour include?',
-    answer: 'A China sourcing tour with Winning Adventure Global is a guided factory visit programme for Australian businesses seeking verified manufacturers. Each tour includes supplier pre-screening using our 12-point verification process, bilingual guide services throughout your visit, inter-city transportation, factory meeting coordination, and a post-trip supplier comparison report. Tours typically run 3-7 days covering 2-3 factory visits daily. We have 500+ verified suppliers across 15+ industries. Pricing starts from AUD $2,000 depending on itinerary length and group size. All tours are customised to your product category and volume requirements.',
+    question: 'What if none of the factories meet my requirements?',
+    answer: 'If you do not find a suitable supplier during your first trip, we will introduce you to a second round of suppliers at no additional coordination fee. Our network spans 500+ verified suppliers across 15+ industries in major Chinese manufacturing hubs. We work closely with you to refine the search criteria and ensure the next round of introductions better matches your specifications. Your satisfaction with the supplier match is our priority.',
   },
   {
-    question: 'What are China business tours and how do they work for Australian importers?',
-    answer: 'China business tours are structured programmes that take Australian businesses to visit factories and manufacturers in China. Winning Adventure Global has been helping Australian businesses source from China since 2025, providing direct access to verified Chinese manufacturers. Our tours cover major manufacturing hubs including Shenzhen, Foshan, and Guangzhou. Each business tour includes pre-vetted supplier introductions, on-ground logistics, bilingual support, and quality inspection coordination. Australian businesses can visit up to 8 factories per week with our team handling all coordination. Tours start from AUD $2,000 per person with group packages available.',
-  },
-  {
-    question: 'How can Australian businesses find reliable Chinese wholesalers?',
-    answer: 'Australian businesses can find reliable Chinese wholesalers through verification services like Winning Adventure Global. We have verified 500+ Chinese wholesalers across manufacturing, electronics, homewares, and industrial equipment sectors. Our 12-point verification process checks business licenses, factory audits, quality management systems, and export history for every supplier in our network. We specifically work with wholesalers who have proven export experience to Australia and English-speaking contacts. Unlike generic platforms, we pre-screen all suppliers before introducing them to Australian businesses, reducing the risk of fraud and quality issues.',
-  },
-  {
-    question: 'What is included in a China business trip package?',
-    answer: 'Winning Adventure Global offers complete China business trip packages for Australian businesses. Our packages include supplier pre-screening and shortlisting, bilingual guide and interpreter services, factory visit scheduling across Shenzhen, Foshan, and Guangzhou, all inter-city transportation within China, quality inspection coordination, and post-trip supplier comparison reports. Packages start from AUD $2,000 per person for a 3-day itinerary, with premium packages including accommodation arrangement, flight booking assistance, and dedicated logistics coordination. We customise every package based on your industry, product category, and sourcing volume requirements.',
+    question: 'How many factories will I visit during my trip?',
+    answer: 'Most trips include 4-8 factory visits over 3-7 days, with 2-3 visits scheduled per day to allow sufficient time for questions and inspections at each location. We customise your itinerary based on your industry, product category, and sourcing requirements. Our team handles all scheduling, transportation between factories, and bilingual support so you can focus entirely on evaluating potential suppliers.',
   },
 ]
 

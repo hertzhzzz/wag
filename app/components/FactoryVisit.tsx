@@ -12,31 +12,10 @@ const timeline = [
   { time: '5pm', title: 'Return to Hotel', desc: 'Evening flights are fine — your guide coordinates luggage and airport transfer.' },
 ]
 
-const redFlags = [
-  { flag: 'Factory floor is quiet or understaffed', meaning: 'A facility claiming high output with few workers is either exaggerating capacity or sub-contracting production elsewhere.' },
-  { flag: 'Cannot show active production of your product', meaning: 'If they cannot show your specific product running on a line, they may be a trading intermediary — not a manufacturer.' },
-  { flag: 'Registered address does not match physical site', meaning: 'Cross-check the business license address against what you see. A mismatch warrants serious investigation.' },
-  { flag: 'No export history to Western markets', meaning: 'Ask for proof of prior exports. Factories without Australian or Western market experience may not understand labelling and compliance.' },
-  { flag: 'Reluctance to allow photographs on the floor', meaning: 'Legitimate factories are accustomed to visitor photography. Refusal often means the facility is shared or not what was described.' },
-  { flag: 'Prices drop significantly after you arrive on-site', meaning: 'Aggressive last-minute discounting may mean the initial quote was inflated — or they are willing to cut corners to match a price.' },
-  { flag: 'No visible quality control stations', meaning: 'Professional factories maintain dedicated QC areas with inspection equipment and defect logs. Absence means you are relying on their word.' },
-  { flag: 'Owner avoids direct conversation', meaning: 'If the person you meet cannot answer production questions, you may be speaking with a sales agent — not the decision-maker.' },
-]
-
 export default function FactoryVisit() {
   return (
     <section className="py-16 md:py-24 px-8 md:px-20 bg-[#f8f9fb]">
       <div className="max-w-[1200px] mx-auto">
-        {/* Stat badges */}
-        <div className="flex flex-wrap gap-x-12 gap-y-5 mb-14 pb-10 border-b border-gray-200">
-          {[['2/day', 'Factories per visit'], ['6', 'Manufacturing hubs covered'], ['100%', 'Bilingual support on-site']].map(([n, l]) => (
-            <div key={l}>
-              <div className="font-serif text-3xl md:text-4xl font-bold text-navy leading-none">{n}</div>
-              <div className="text-xs text-gray-500 uppercase tracking-wide mt-2">{l}</div>
-            </div>
-          ))}
-        </div>
-
         {/* Timeline */}
         <div className="max-w-[640px] mb-14">
           <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">What to Expect</p>
@@ -68,31 +47,6 @@ export default function FactoryVisit() {
           </p>
         </div>
 
-        {/* Red Flags */}
-        <div className="max-w-[640px] mb-10">
-          <p className="uppercase tracking-[0.12em] text-xs text-amber font-semibold mb-3">Supplier Due Diligence</p>
-          <h2 className="font-serif text-[clamp(1.6rem,3vw,2.25rem)] font-bold text-navy mb-4 text-balance">
-            8 Red Flags to Watch For During a Factory Visit
-          </h2>
-          <p className="text-navy/70 leading-relaxed">
-            Seeing a factory in person reveals problems that documents and photos cannot. These are the warning signs our team looks for on every visit.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
-          {redFlags.map((item, i) => (
-            <div key={i} className="bg-white p-6 border border-gray-100">
-              <div className="text-amber text-xs font-bold uppercase tracking-wide mb-2">Red Flag {i + 1}</div>
-              <h3 className="font-semibold text-navy text-sm mb-2">{item.flag}</h3>
-              <p className="text-xs text-gray-600 leading-relaxed">{item.meaning}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-sm text-gray-500 max-w-2xl">
-          Source: UTS 2025 Australian Business China Sourcing Research, n=858.{' '}
-          <Link href="/article/verify-chinese-supplier" className="text-navy underline hover:text-amber">Full verification methodology →</Link>
-        </div>
       </div>
     </section>
   )
