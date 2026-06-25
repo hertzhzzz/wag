@@ -67,11 +67,11 @@ export default function Home() {
       ]} />
       <Hero />
       <TwoWaysAccess />
-      <section className="bg-white py-16 md:py-24 px-8 md:px-20">
-        <div className="max-w-[1120px] mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
+      <section className="bg-white py-16 md:py-24 px-8 md:px-20 relative">
+        <div className="max-w-[1120px] mx-auto md:pr-[380px]">
           <ClientOutcomes />
-          <SupplierReportPreview />
         </div>
+        <SupplierReportPreview />
       </section>
       <HowItWorks />
       <WhyChooseUs />
