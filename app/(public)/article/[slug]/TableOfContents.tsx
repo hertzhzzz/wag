@@ -34,27 +34,41 @@ export function TableOfContents({ headings }: { headings: Heading[] }) {
   if (headings.length === 0) return null
 
   return (
-    <nav className="bg-white border border-gray-200 rounded-lg p-5 shadow-[0_4px_20px_rgba(15,45,94,0.08)]">
-      <p className="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-[#F59E0B] mb-4">
-        Table of Contents
+    <nav aria-label="Table of contents">
+      <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase text-gray-400 mb-3 px-1">
+        On this page
       </p>
-      <ul className="space-y-2">
-        {headings.map(({ id, text, level }) => (
-          <li key={id}>
-            <a
-              href={`#${id}`}
-              className={`
-                block text-sm transition-colors
-                ${level === 1 ? 'font-semibold' : 'font-normal pl-3'}
-                ${activeId === id
-                  ? 'text-[#0F2D5E] font-semibold'
-                  : 'text-gray-500 hover:text-[#0F2D5E]'}
-              `}
-            >
-              {text}
-            </a>
-          </li>
-        ))}
+      <ul>
+        {headings.map(({ id, text }) => {
+          const active = activeId === id
+          return (
+            <li key={id}>
+              <a
+                href={`#${id}`}
+                aria-current={active ? 'location' : undefined}
+                className="group flex items-start gap-2.5 py-[0.4rem] text-sm leading-snug"
+              >
+                <span
+                  aria-hidden="true"
+                  className={`mt-[0.45rem] h-1.5 w-1.5 rounded-full flex-shrink-0 transition-all duration-200 ${
+                    active
+                      ? 'bg-[#F59E0B] scale-100'
+                      : 'bg-gray-300 scale-75 group-hover:bg-gray-400'
+                  }`}
+                />
+                <span
+                  className={`transition-colors duration-200 ${
+                    active
+                      ? 'text-[#0F2D5E] font-semibold'
+                      : 'text-gray-500 group-hover:text-[#0F2D5E]'
+                  }`}
+                >
+                  {text}
+                </span>
+              </a>
+            </li>
+          )
+        })}
       </ul>
     </nav>
   )

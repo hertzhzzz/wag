@@ -178,6 +178,35 @@ export function splitContent(content: string): { intro: string; body: string } {
   }
 }
 
+/**
+ * Split the article body into two halves at an H2 boundary near the midpoint,
+ * so a mid-article CTA can be injected at the highest-converting position.
+ * Returns an empty secondHalf when the body is too short to warrant a mid CTA.
+ */
+export function splitBodyForMidCTA(body: string): { firstHalf: string; secondHalf: string } {
+  // Keep the '## ' marker on each section via lookahead split.
+  const sections = body.split(/\n(?=## )/).filter(s => s.trim().length > 0)
+  // Need at least 3 sections so the CTA never lands before the first or after the last.
+  if (sections.length < 3) return { firstHalf: body, secondHalf: '' }
+
+  const total = body.length
+  let acc = 0
+  let splitIndex = 1
+  for (let i = 0; i < sections.length; i++) {
+    acc += sections[i].length
+    if (acc >= total / 2) {
+      splitIndex = i + 1
+      break
+    }
+  }
+  splitIndex = Math.min(Math.max(splitIndex, 1), sections.length - 1)
+
+  return {
+    firstHalf: sections.slice(0, splitIndex).join('\n'),
+    secondHalf: sections.slice(splitIndex).join('\n'),
+  }
+}
+
 // ============================================
 // DATE FORMATTING
 // ============================================

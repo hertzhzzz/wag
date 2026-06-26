@@ -22,7 +22,7 @@ function getResourceSlug(pathname: string): string | null {
   return match ? decodeURIComponent(match[1]) : null
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname, hostname } = request.nextUrl
 
   const articleSlug = getArticleSlug(pathname)

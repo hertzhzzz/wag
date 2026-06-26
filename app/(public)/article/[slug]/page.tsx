@@ -12,7 +12,11 @@ import { ReadingProgressBar } from './ReadingProgressBar'
 import { BackToTopButton } from './BackToTopButton'
 import { ShareButtons } from './ShareButtons'
 import { ArticleNavigation } from './ArticleNavigation'
-import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, extractFaqsFromContent, formatDateForSchema } from './article-utils'
+import { AuthorBio } from './AuthorBio'
+import { SidebarRail } from './SidebarRail'
+import { MidArticleCTA } from './MidArticleCTA'
+import { ServicesStrip } from './ServicesStrip'
+import { getArticle, getAllSlugs, getPrevNextArticles, splitContent, splitBodyForMidCTA, extractHeadings, extractFaqsFromContent, formatDateForSchema } from './article-utils'
 import { HOW_TO_ARTICLES } from './how-to-data'
 import { createMdxComponents } from './mdx-components'
 import type { Frontmatter } from './types'
@@ -83,6 +87,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const takeaways: string[] = fm.takeaways || []
   const { prevArticle, nextArticle } = getPrevNextArticles(slug)
   const { intro, body } = splitContent(content)
+  // Split body so a mid-article CTA lands near the highest-converting midpoint
+  const { firstHalf, secondHalf } = splitBodyForMidCTA(body)
+  // Section headings (H2) feed the sticky table of contents in the sidebar
+  const tocHeadings = extractHeadings(content)
+    .filter(h => h.level === 2)
+    .map(h => ({ ...h, level: 1 }))
   // Extract FAQs from MDX content for JSON-LD schema
   const articleFaqs = extractFaqsFromContent(content)
 
@@ -126,47 +136,58 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* Hero Section */}
       <HeroSection fm={fm} />
 
-      {/* Article Body */}
+      {/* Article Body — content column + sticky sidebar rail on desktop */}
       <div className="py-10 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex flex-col">
-            {/* Main article content — centered, no sidebar */}
-            <main className="w-full max-w-[900px] mx-auto">
-              <article>
-                <div className="max-w-[900px] mx-auto">
+        <div className="max-w-[1080px] mx-auto lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-12">
+          {/* Main article content */}
+          <main className="min-w-0">
+            <article>
 
-                  {/* Key Takeaways - positioned early for scannability */}
-                  {takeaways.length > 0 && <KeyTakeaways items={takeaways} />}
+              {/* Key Takeaways - positioned early for scannability */}
+              {takeaways.length > 0 && <KeyTakeaways items={takeaways} />}
 
-                  {/* Article Meta with Share */}
-                  <div className="flex items-center justify-between py-3 border-b border-gray-200 mb-6">
-                    <div className="flex items-center gap-4 text-sm text-gray-400">
-                      <span>{fm.date}</span>
-                    </div>
-                    <ShareButtons
-                      title={fm.title}
-                      url={`https://www.winningadventure.com.au/article/${slug}`}
-                    />
-                  </div>
-
-                  {/* Intro Section - The Hook */}
-                  <div className="pb-8 border-b border-gray-200 mb-8">
-                    <MDXRemote source={intro} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
-                  </div>
-
-                  {/* Body Content */}
-                  <MDXRemote source={body} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
-
-                  {/* Bottom CTA */}
-                  <BottomCTA fm={fm} />
-
-                  {/* Previous / Next Navigation */}
-                  <ArticleNavigation prevArticle={prevArticle} nextArticle={nextArticle} />
-
+              {/* Article Meta with Share */}
+              <div className="flex items-center justify-between py-3 border-b border-gray-200 mb-6">
+                <div className="flex items-center gap-4 text-sm text-gray-400">
+                  <span>{fm.date}</span>
                 </div>
-              </article>
-            </main>
-          </div>
+                <ShareButtons
+                  title={fm.title}
+                  url={`https://www.winningadventure.com.au/article/${slug}`}
+                />
+              </div>
+
+              {/* Intro Section - The Hook */}
+              <div className="pb-8 border-b border-gray-200 mb-8">
+                <MDXRemote source={intro} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+              </div>
+
+              {/* Body Content — split so a mid-article CTA lands near the midpoint */}
+              <MDXRemote source={firstHalf} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+              {secondHalf && (
+                <>
+                  <MidArticleCTA />
+                  <MDXRemote source={secondHalf} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
+                </>
+              )}
+
+              {/* Author credibility — E-E-A-T trust signal */}
+              <AuthorBio author={fm.author} date={fm.date} readTime={fm.readTime} />
+
+              {/* Services — every reader sees what we actually offer */}
+              <ServicesStrip />
+
+              {/* Bottom CTA */}
+              <BottomCTA fm={fm} />
+
+              {/* Previous / Next Navigation */}
+              <ArticleNavigation prevArticle={prevArticle} nextArticle={nextArticle} />
+
+            </article>
+          </main>
+
+          {/* Sticky sidebar: table of contents + persistent CTA */}
+          <SidebarRail headings={tocHeadings} />
         </div>
       </div>
 
@@ -192,11 +213,11 @@ function HeroSection({ fm }: { fm: Frontmatter }) {
             priority
             className="object-cover z-0"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 900px, 1200px"
-            quality={85}
+            quality={80}
           />
         )}
         {hasCover && <div className="absolute inset-0 bg-[#0F2D5E]/75 z-[1]" />}
-        <div className="relative z-10 max-w-[900px] mx-auto">
+        <div className="relative z-10 max-w-[1080px] mx-auto">
           <nav className="flex items-center gap-2 text-xs uppercase tracking-wider mb-4">
             <Link href="/" className={`hover:text-[#F59E0B] transition-colors ${hasCover ? 'text-white/70' : 'text-gray-400'}`}>Home</Link>
             <span className={hasCover ? 'text-white/50' : 'text-gray-300'}>›</span>
@@ -214,7 +235,7 @@ function HeroSection({ fm }: { fm: Frontmatter }) {
         </div>
       </section>
       <div className="bg-white px-6 py-3 border-b border-gray-100">
-        <div className="max-w-[900px] mx-auto">
+        <div className="max-w-[1080px] mx-auto">
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <Link href="/about" className="font-medium text-[#0F2D5E] hover:text-[#F59E0B] transition-colors">{fm.author}</Link>
             <span className="text-gray-300">·</span>
@@ -255,17 +276,25 @@ function KeyTakeaways({ items }: { items: string[] }) {
 
 function BottomCTA({ fm }: { fm: Frontmatter }) {
   return (
-    <div className="border-2 border-[#0F2D5E] p-6 text-center mt-8 rounded-xl">
+    <div className="border-2 border-[#0F2D5E] p-6 text-center mt-12 rounded-xl">
       <p className="text-xs font-bold tracking-widest text-[#F59E0B] uppercase mb-2">{fm.category}</p>
       <h3 className="font-serif text-xl font-bold text-[#0F2D5E] mb-2">{fm.ctaTitle}</h3>
-      <p className="text-gray-600 mb-4 max-w-md mx-auto text-sm">{fm.ctaText}</p>
-      <Link
-        href="/enquiry"
-        className="inline-block bg-[#0F2D5E] text-white font-semibold px-6 py-3 hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors rounded-sm text-sm"
-      >
-        {fm.ctaButtonText}
-      </Link>
-      <p className="text-xs text-gray-400 mt-3">Free initial consultation · We respond within 4 business hours</p>
+      <p className="text-gray-600 mb-5 max-w-md mx-auto text-sm">{fm.ctaText}</p>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <Link
+          href="/enquiry"
+          className="inline-block bg-[#0F2D5E] text-white font-semibold px-6 py-3 hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors rounded-sm text-sm"
+        >
+          {fm.ctaButtonText}
+        </Link>
+        <Link
+          href="/services"
+          className="inline-block text-[#0F2D5E] font-semibold px-6 py-3 text-sm underline decoration-[#F59E0B]/40 hover:decoration-[#F59E0B] transition-colors"
+        >
+          Explore our services
+        </Link>
+      </div>
+      <p className="text-xs text-gray-400 mt-4">Free initial consultation · We respond within 4 business hours</p>
     </div>
   )
 }
