@@ -246,9 +246,20 @@ export const BLOG_GONE_SLUGS = [
   "who-won-state-of-origin-2026-nrl-merchandise-sourcing-guide",
   "womens-state-of-origin-2026-nrl-merchandise-sourcing-guide",
   "zverev-tennis-merchandise",
+
+  // ============================================
+  // Removed 2026-06-26 — brand-riding articles (full SEO audit).
+  // Off-topic vs core China-sourcing service; diluted topical authority.
+  // RAV4 also contained a factual error (Toyota Altona plant closed 2017).
+  "rav4-supply-chain-automotive-sourcing",
+  "byd-company-china-supply-chain-guide",
+  "bunnings-wholesale-guide",
+  "australian-supermarket-china-sourcing-secrets",
 ]
 
 export const BLOG_REDIRECT_TARGETS: Record<string, string> = {
+  // Duplicate of the real /services page — 301 to consolidate (2026-06-26 SEO audit).
+  "services-wag": "/services",
   "resource-how-to-verify-chinese-factories-1688": "/article/verify-chinese-supplier",
   "resource-shenzhen-factory-visit": "/article/china-factory-tour-guide",
   "resource-should-i-pay-deposit-chinese-supplier": "/article/how-to-negotiate-chinese-factory-guide",

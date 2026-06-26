@@ -44,8 +44,6 @@ const SLUGS_BY_IMPRESSIONS = [
   'how-to-plan',
   'bulk-procurement-china-guide',
   'albanese-family-trust-tax-2026',
-  'australian-supermarket-china-sourcing-secrets',
-  'bunnings-wholesale-guide',
   'china-business-tours',
 ]
 
