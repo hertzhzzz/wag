@@ -5,7 +5,6 @@ export default function MarkHeSchema() {
     "name": "Mark He",
     "jobTitle": "Managing Director",
     "description": "Managing Director at Winning Adventure Global, helping Australian businesses source quality products from China with factory verification and procurement services.",
-    "url": "https://www.winningadventure.com.au/about",
     "worksFor": {
       "@type": "Organization",
       "name": "Winning Adventure Global",

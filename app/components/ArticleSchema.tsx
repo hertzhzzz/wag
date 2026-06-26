@@ -35,7 +35,8 @@ export default function ArticleSchema({
       "@type": "Person",
       "name": author,
       "jobTitle": author === "Andy Liu" ? "Founder" : "Managing Director",
-      "url": "https://www.winningadventure.com.au/about",
+      // Only the founder's Person resolves to /about (the founder bio page).
+      "url": author === "Andy Liu" ? "https://www.winningadventure.com.au/about" : undefined,
       "worksFor": {
         "@type": "Organization",
         "name": "Winning Adventure Global",

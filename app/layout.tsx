@@ -174,7 +174,11 @@ export default function RootLayout({
               },
               "telephone": "+61-416588198",
               "email": "info@winningadventure.com.au",
-              "ABN": "94 697 886 150",
+              "legalName": "WINNING ADVENTURE GLOBAL PTY LTD",
+              "identifier": [
+                { "@type": "PropertyValue", "propertyID": "ACN", "value": "697 886 150" },
+                { "@type": "PropertyValue", "propertyID": "ABN", "value": "94 697 886 150" }
+              ],
               "areaServed": {
                 "@type": "Country",
                 "name": "Australia"
