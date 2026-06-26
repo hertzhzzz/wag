@@ -163,7 +163,7 @@ export default function FactoryAuditPage() {
             sizes="100vw"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/80 to-navy/70 z-[1]"
+            className="absolute inset-0 bg-gradient-to-br from-navy/95 via-navy/75 to-navy/40 z-[1]"
             aria-hidden="true"
           />
           <div
