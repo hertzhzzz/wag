@@ -19,8 +19,8 @@ export const servicesMenu: NavColumn[] = [
     links: [
       { label: 'All Services Overview', href: '/services', live: true },
       { label: 'Supplier Verification', href: '/supplier-verification', live: true },
-      { label: 'Factory Audit', href: '/factory-audit-china', live: false },
-      { label: 'Quality Inspection', href: '/quality-inspection-china', live: false },
+      { label: 'Factory Audit', href: '/factory-audit-china', live: true },
+      { label: 'Quality Inspection', href: '/quality-inspection-china', live: true },
     ],
   },
   {
