@@ -155,7 +155,7 @@ export default function FactoryAuditPage() {
         {/* ============================================ Hero + lead form ============================================ */}
         <section className="relative min-h-[60vh] md:min-h-[720px] flex items-center bg-navy overflow-hidden">
           <Image
-            src="/report-samples/production-line.jpg"
+            src="/factory-audit-hero.jpg"
             alt=""
             fill
             priority

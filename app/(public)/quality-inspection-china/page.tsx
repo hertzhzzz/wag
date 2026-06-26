@@ -155,7 +155,7 @@ export default function QualityInspectionPage() {
         {/* ============================================ Hero + lead form ============================================ */}
         <section className="relative min-h-[60vh] md:min-h-[720px] flex items-center bg-navy overflow-hidden">
           <Image
-            src="/report-samples/quality-lab.jpg"
+            src="/quality-inspection-hero.jpg"
             alt=""
             fill
             priority
