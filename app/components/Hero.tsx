@@ -1,18 +1,41 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import LeadForm from '@/components/LeadForm'
 
 export default function Hero() {
   const [videoPlaying, setVideoPlaying] = useState(false)
+  // Only mount the background video on desktop. autoPlay forces a download even when
+  // the element is display:none, so CSS hiding alone still costs mobile ~1MB LCP weight.
+  const [isDesktop, setIsDesktop] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)')
+    setIsDesktop(mq.matches)
+    const onChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [])
 
   return (
     <section className="relative min-h-[60vh] md:min-h-[720px] flex items-center overflow-hidden">
       {/* Poster Image - fades out when video starts playing on all devices */}
       {!videoPlaying && (
         <div className="absolute inset-0">
+          {/* Mobile: container ship (commercial-licensed, replaces the heavy hero video) */}
+          <Image
+            src="/hero-cargo-mobile.webp"
+            alt="Container ship carrying freight from China to Australia"
+            fill
+            priority={true}
+            loading="eager"
+            fetchPriority="high"
+            quality={75}
+            sizes="100vw"
+            className="object-cover md:hidden"
+          />
+          {/* Desktop: factory first-frame (poster for the background video) */}
           <Image
             src="/hero-video-first-frame.webp"
             alt="Chinese manufacturing facility with Australian business team"
@@ -22,29 +45,31 @@ export default function Hero() {
             fetchPriority="high"
             quality={80}
             sizes="1200px"
-            className="object-cover"
+            className="object-cover hidden md:block"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
         </div>
       )}
 
-      {/* Video Background - all devices */}
-      <div className="absolute inset-0" aria-hidden="true">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="w-full h-full object-cover"
-          onLoadedData={() => setVideoPlaying(true)}
-        >
-          <source src="/hero_vid_compressed.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
-      </div>
+      {/* Video Background - desktop only (mobile shows the poster image to keep LCP fast) */}
+      {isDesktop && (
+        <div className="absolute inset-0" aria-hidden="true">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            className="w-full h-full object-cover"
+            onLoadedData={() => setVideoPlaying(true)}
+          >
+            <source src="/hero_vid_compressed.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
+        </div>
+      )}
 
       {/* Decorative element - subtle diagonal line */}
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-amber/5 to-transparent skew-x-12" />

@@ -64,7 +64,8 @@ export default function ArticleSchema({
     "timeToRead": timeToRead,
     "image": image ? {
       "@type": "ImageObject",
-      "url": image,
+      // Google rich results require absolute image URLs; cover paths are stored relative.
+      "url": image.startsWith("http") ? image : `https://www.winningadventure.com.au${image}`,
       "width": 1200,
       "height": 630
     } : undefined
