@@ -3,43 +3,45 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { ClipboardList, ShieldCheck, CalendarCheck, Plane, Building2 } from 'lucide-react'
+import { useT } from '@/i18n/useT'
 
 const steps = [
   {
     num: '1',
     icon: ClipboardList,
-    title: 'Submit Your Inquiry',
-    desc: 'Fill out our enquiry form with your industry, product type, and sourcing requirements. We\'ll get back to you within 24 hours.',
+    titleKey: 'home.how.step1Title',
+    descKey: 'home.how.step1Desc',
   },
   {
     num: '2',
     icon: ShieldCheck,
-    title: 'We Review & Match',
-    desc: 'Within 24-48 hours, we review your requirements and shortlist 2-3 pre-screened factories from our verified network.',
+    titleKey: 'home.how.step2Title',
+    descKey: 'home.how.step2Desc',
   },
   {
     num: '3',
     icon: CalendarCheck,
-    title: 'Initial Consultation',
-    desc: 'We schedule an in-person or online meeting to discuss your trip details, timeline, and specific factory requirements.',
+    titleKey: 'home.how.step3Title',
+    descKey: 'home.how.step3Desc',
   },
   {
     num: '4',
     icon: Plane,
-    title: 'Confirm Your Trip',
-    desc: 'Once you\'re ready, we arrange flights, accommodation, transport, and your full itinerary in China.',
+    titleKey: 'home.how.step4Title',
+    descKey: 'home.how.step4Desc',
   },
   {
     num: '5',
     icon: Building2,
-    title: 'Factory Visit Experience',
-    desc: 'Arrive in China — your bilingual guide accompanies you throughout. Visit factories, ask questions, and make informed decisions.',
+    titleKey: 'home.how.step5Title',
+    descKey: 'home.how.step5Desc',
   },
-]
+] as const
 
 export default function HowItWorks() {
   const [visible, setVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
+  const t = useT()
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -64,13 +66,13 @@ export default function HowItWorks() {
         {/* Section header - more professional */}
         <div className="max-w-[1120px] mx-auto mb-12">
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
-            Our Process
+            {t('home.how.sectionLabel')}
           </p>
           <h2 id="factory-visit" className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight scroll-mt-20">
-            Your China Trip, End to End
+            {t('home.how.mainTitle')}
           </h2>
           <p className="text-lg text-navy/60 mt-4 leading-relaxed">
-            From pre-trip research to post-trip contracts — we handle every step of your sourcing journey with expertise and care.
+            {t('home.how.mainDesc')}
           </p>
         </div>
 
@@ -119,10 +121,10 @@ export default function HowItWorks() {
 
                   {/* Content */}
                   <h3 className="text-lg font-semibold text-navy mb-2 leading-tight">
-                    {step.title}
+                    {t(step.titleKey)}
                   </h3>
                   <p className="text-sm text-navy/60 leading-relaxed">
-                    {step.desc}
+                    {t(step.descKey)}
                   </p>
                 </div>
               </div>
@@ -136,7 +138,7 @@ export default function HowItWorks() {
             href="/services"
             className="inline-flex items-center gap-3 bg-navy text-white px-8 py-4 text-sm font-semibold hover:bg-navy/90 transition-all duration-300 no-underline min-h-11 hover:gap-4"
           >
-            View All Services
+            {t('home.how.ctaPrimary')}
             <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -145,7 +147,7 @@ export default function HowItWorks() {
             href="#industries"
             className="inline-flex items-center gap-2 text-navy/60 hover:text-navy transition-colors no-underline group min-h-11"
           >
-            <span className="text-sm font-medium">Industries We Cover</span>
+            <span className="text-sm font-medium">{t('home.how.ctaSecondary')}</span>
             <svg
               aria-hidden="true"
               className="w-5 h-5 transition-transform group-hover:translate-y-1"

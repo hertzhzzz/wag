@@ -1,6 +1,7 @@
 // app/data/nav-links.ts
 // 导航 mega menu 与 sitemap 的单一数据源。
 // live=false 表示页面尚未上线（Phase 2-4 才建），不渲染、不进 sitemap，避免 404。
+// heading/label 改为 i18n key — consuming 组件调用 t(l.label as TKey) 渲染
 
 export interface NavLink {
   label: string
@@ -15,32 +16,32 @@ export interface NavColumn {
 
 export const servicesMenu: NavColumn[] = [
   {
-    heading: 'By Service',
+    heading: 'nav.menu.byService',
     links: [
-      { label: 'All Services Overview', href: '/services', live: true },
-      { label: 'Supplier Verification', href: '/supplier-verification', live: true },
-      { label: 'Factory Audit', href: '/factory-audit-china', live: true },
-      { label: 'Quality Inspection', href: '/quality-inspection-china', live: true },
+      { label: 'nav.menu.allServicesOverview', href: '/services', live: true },
+      { label: 'nav.menu.supplierVerification', href: '/supplier-verification', live: true },
+      { label: 'nav.menu.factoryAudit', href: '/factory-audit-china', live: true },
+      { label: 'nav.menu.qualityInspection', href: '/quality-inspection-china', live: true },
     ],
   },
   {
-    heading: 'By Location',
+    heading: 'nav.menu.byLocation',
     links: [
-      { label: 'Sydney', href: '/locations/sydney', live: true },
-      { label: 'Melbourne', href: '/locations/melbourne', live: true },
-      { label: 'Brisbane', href: '/locations/brisbane', live: true },
-      { label: 'Adelaide', href: '/locations/adelaide', live: true },
-      { label: 'Perth', href: '/locations/perth', live: true },
+      { label: 'nav.menu.sydney', href: '/locations/sydney', live: true },
+      { label: 'nav.menu.melbourne', href: '/locations/melbourne', live: true },
+      { label: 'nav.menu.brisbane', href: '/locations/brisbane', live: true },
+      { label: 'nav.menu.adelaide', href: '/locations/adelaide', live: true },
+      { label: 'nav.menu.perth', href: '/locations/perth', live: true },
     ],
   },
   {
-    heading: 'By Industry',
+    heading: 'nav.menu.byIndustry',
     links: [
-      { label: 'Mining', href: '/industries/mining', live: true },
-      { label: 'Agricultural Machinery', href: '/industries/agricultural-machinery', live: true },
-      { label: 'Activewear', href: '/industries/activewear', live: true },
-      { label: 'Construction', href: '/industries/construction', live: true },
-      { label: 'Electronics', href: '/industries/electronics', live: true },
+      { label: 'nav.menu.mining', href: '/industries/mining', live: true },
+      { label: 'nav.menu.agriculturalMachinery', href: '/industries/agricultural-machinery', live: true },
+      { label: 'nav.menu.activewear', href: '/industries/activewear', live: true },
+      { label: 'nav.menu.construction', href: '/industries/construction', live: true },
+      { label: 'nav.menu.electronics', href: '/industries/electronics', live: true },
     ],
   },
 ]

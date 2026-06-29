@@ -3,8 +3,10 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { trackCTAClick } from '@/lib/analytics'
+import { useT } from '@/i18n/useT'
 
 export default function CTABand() {
+  const t = useT()
   const [visible, setVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
 
@@ -43,10 +45,10 @@ export default function CTABand() {
       >
         <div>
           <h2 className="font-serif text-[2rem] font-semibold text-navy mb-2.5">
-            Your Suppliers Are Ready. Are You?
+            {t('cta.headline')}
           </h2>
           <p className="text-base text-navy/60">
-            Book a 30-minute discovery call.
+            {t('cta.description')}
           </p>
         </div>
         <div className="flex gap-4 flex-wrap flex-shrink-0">
@@ -55,14 +57,14 @@ export default function CTABand() {
             onClick={handleStartClick}
             className="bg-navy text-white px-7 py-3.5 border-0 rounded font-sans text-[0.95rem] font-semibold cursor-pointer inline-block transition-all hover:bg-[#163d73] hover:-translate-y-px min-h-11"
           >
-            Start Your China Trip →
+            {t('cta.startButton')}
           </Link>
           <Link
             href="/#howitworks"
             onClick={handleSeeHowClick}
             className="bg-white text-navy px-7 py-3.5 border-2 border-navy rounded font-sans text-[0.95rem] font-medium cursor-pointer inline-block transition-all hover:bg-[#f0f4fa] hover:-translate-y-px min-h-11"
           >
-            See How It Works
+            {t('cta.seeHowButton')}
           </Link>
         </div>
       </div>

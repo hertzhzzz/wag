@@ -7,8 +7,12 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 import PhoneCallLink from '@/components/PhoneCallLink'
 import ServicesMegaMenu from '@/components/ServicesMegaMenu'
 import { servicesMenu } from '@/data/nav-links'
+import LanguageToggle from '@/components/LanguageToggle'
+import { useT } from '@/i18n/useT'
+import type { TKey } from '@/i18n/useT'
 
 export default function Navbar({ rightContent }: { rightContent?: React.ReactNode }) {
+  const t = useT()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
@@ -40,7 +44,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
 
         <ul className="hidden md:flex gap-9 list-none flex-1 justify-center">
           <li>
-            <Link href="/" className="nav-link text-navy">Home</Link>
+            <Link href="/" className="nav-link text-navy">{t('nav.home')}</Link>
           </li>
           <li onMouseEnter={() => setServicesOpen(true)} className="flex items-center gap-1">
             <Link
@@ -49,7 +53,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
               aria-haspopup="true"
               aria-expanded={servicesOpen}
             >
-              Services
+              {t('nav.services')}
             </Link>
             <ChevronDown
               size={14}
@@ -57,30 +61,31 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
             />
           </li>
           <li>
-            <Link href="/article" className="nav-link text-navy">Articles</Link>
+            <Link href="/article" className="nav-link text-navy">{t('nav.articles')}</Link>
           </li>
           <li>
-            <Link href="/about" className="nav-link text-navy">About Us</Link>
+            <Link href="/about" className="nav-link text-navy">{t('nav.about')}</Link>
           </li>
           <li>
-            <Link href="/enquiry" className="nav-link text-navy">Enquiry</Link>
+            <Link href="/enquiry" className="nav-link text-navy">{t('nav.enquiry')}</Link>
           </li>
         </ul>
 
-        <div className="hidden md:flex gap-3">
+        <div className="hidden md:flex gap-3 items-center">
+          <LanguageToggle />
           {rightContent !== undefined ? rightContent : (
             <>
               <PhoneCallLink
                 className="flex flex-col items-start px-[14px] py-[8px] text-navy bg-white/80 border border-navy/20 hover:bg-navy hover:text-white flex-shrink-0 transition-all leading-tight"
               >
-                <span className="text-[10px] font-medium uppercase tracking-wide">Call Us Today</span>
+                <span className="text-[10px] font-medium uppercase tracking-wide">{t('nav.callUsToday')}</span>
                 <span className="text-[13px] font-semibold">0416 588 198</span>
               </PhoneCallLink>
               <Link
                 href="/enquiry"
                 className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-navy flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
               >
-                Book Free Consult
+                {t('nav.bookConsult')}
               </Link>
             </>
           )}
@@ -120,7 +125,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
-          <span className="text-navy font-medium">Menu</span>
+          <span className="text-navy font-medium">{t('nav.menu')}</span>
           <button
             className="min-h-11 min-w-11 flex items-center justify-center text-navy"
             onClick={() => setMobileMenuOpen(false)}
@@ -136,7 +141,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
               className="block min-h-11 px-4 flex items-center text-navy"
               onClick={handleLinkClick}
             >
-              Home
+              {t('nav.home')}
             </Link>
           </li>
           <li>
@@ -146,7 +151,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
               onClick={() => setMobileServicesOpen((v) => !v)}
               aria-expanded={mobileServicesOpen}
             >
-              <span>Services</span>
+              <span>{t('nav.services')}</span>
               <ChevronDown
                 size={18}
                 className={`transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`}
@@ -160,7 +165,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
                     className="block min-h-11 px-4 flex items-center text-navy text-[14px]"
                     onClick={handleLinkClick}
                   >
-                    All Services Overview
+                    {t('nav.allServices')}
                   </Link>
                 </li>
                 {servicesMenu
@@ -173,7 +178,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
                         className="block min-h-11 px-4 flex items-center text-navy text-[14px]"
                         onClick={handleLinkClick}
                       >
-                        {l.label}
+                        {t(l.label as TKey)}
                       </Link>
                     </li>
                   ))}
@@ -186,7 +191,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
               className="block min-h-11 px-4 flex items-center text-navy"
               onClick={handleLinkClick}
             >
-              Articles
+              {t('nav.articles')}
             </Link>
           </li>
           <li>
@@ -195,7 +200,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
               className="block min-h-11 px-4 flex items-center text-navy"
               onClick={handleLinkClick}
             >
-              About
+              {t('nav.aboutShort')}
             </Link>
           </li>
           <li>
@@ -204,8 +209,11 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
               className="block min-h-11 px-4 flex items-center text-navy"
               onClick={handleLinkClick}
             >
-              Enquiry
+              {t('nav.enquiry')}
             </Link>
+          </li>
+          <li className="px-4 pt-3 mt-2 border-t border-gray-200">
+            <LanguageToggle />
           </li>
         </ul>
       </div>

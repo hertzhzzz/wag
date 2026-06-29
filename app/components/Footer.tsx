@@ -1,7 +1,10 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useT } from '@/i18n/useT'
 
 export default function Footer() {
+  const t = useT()
   return (
     <footer className="bg-navy text-white">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
@@ -9,49 +12,49 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <Image src="/logos/logo-footer.png" alt="Winning Adventure Global" width={200} height={40} className="h-10 w-auto" />
+              <Image src="/logos/logo-footer.png" alt={t('footer.logoAlt')} width={200} height={40} className="h-10 w-auto" />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-[260px] mb-6">
-              Connecting Australian businesses with China&apos;s finest manufacturers. Your trusted partner for factory sourcing and business travel.
+              {t('footer.tagline')}
             </p>
             <a
               href="https://www.linkedin.com/company/winning-adventure-global"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Winning Adventure Global on LinkedIn"
+              aria-label={t('footer.linkedinAriaLabel')}
               className="inline-flex items-center gap-2 text-white/70 text-sm font-medium border border-white/20 px-4 py-2 rounded-lg hover:border-amber hover:text-amber hover:bg-white/5 transition-all duration-300"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
-              Follow us on LinkedIn
+              {t('footer.linkedinButton')}
             </a>
           </div>
 
           {/* Solutions */}
           <div>
             <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
-              Solutions
+              {t('footer.sectionSolutions')}
             </h4>
             <ul className="list-none space-y-3">
               <li>
                 <Link href="/#capabilities" className="text-white/70 text-sm hover:text-white transition-colors">
-                  China Sourcing Agent
+                  {t('footer.linkSourcingAgent')}
                 </Link>
               </li>
               <li>
                 <Link href="/#factory-visit" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Factory Tours & Visits
+                  {t('footer.linkFactoryTours')}
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Sourcing Services
+                  {t('footer.linkSourcingServices')}
                 </Link>
               </li>
               <li>
                 <Link href="/#capabilities" className="text-white/70 text-sm hover:text-white transition-colors">
-                  China Sourcing Guide
+                  {t('footer.linkSourcingGuide')}
                 </Link>
               </li>
             </ul>
@@ -60,37 +63,37 @@ export default function Footer() {
           {/* Industries */}
           <div>
             <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
-              Industries
+              {t('footer.sectionIndustries')}
             </h4>
             <ul className="list-none space-y-3">
               <li>
                 <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Drones & Robotics
+                  {t('footer.industryDrones')}
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Beauty & Aesthetics
+                  {t('footer.industryBeauty')}
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Chemical & Materials
+                  {t('footer.industryChemicals')}
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Fashion & Textiles
+                  {t('footer.industryFashion')}
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
-                  AV & Electronics
+                  {t('footer.industryAV')}
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Others
+                  {t('footer.industryOthers')}
                 </Link>
               </li>
             </ul>
@@ -99,37 +102,37 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
-              Company
+              {t('footer.sectionCompany')}
             </h4>
             <ul className="list-none space-y-3 mb-8">
               <li>
                 <Link href="/about" className="text-white/70 text-sm hover:text-white transition-colors">
-                  About Us
+                  {t('footer.linkAbout')}
                 </Link>
               </li>
               <li>
                 <Link href="/#howitworks" className="text-white/70 text-sm hover:text-white transition-colors">
-                  How It Works
+                  {t('footer.linkHowItWorks')}
                 </Link>
               </li>
               <li>
                 <Link href="/article" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Articles
+                  {t('footer.linkArticles')}
                 </Link>
               </li>
               <li>
                 <Link href="/enquiry" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Contact Us
+                  {t('footer.linkContact')}
                 </Link>
               </li>
               <li>
                 <Link href="/privacy" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Privacy Policy
+                  {t('footer.linkPrivacy')}
                 </Link>
               </li>
               <li>
                 <Link href="/terms" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Terms of Service
+                  {t('footer.linkTerms')}
                 </Link>
               </li>
             </ul>
@@ -137,17 +140,17 @@ export default function Footer() {
             {/* Contact info */}
             <div className="text-sm text-white/50 space-y-3">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-white/30 mb-1">Adelaide Office</p>
-                <p className="text-white/60">5/54 Melbourne St<br />North Adelaide SA 5006</p>
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-white/30 mb-1">{t('footer.officeLabel')}</p>
+                <p className="text-white/60" dangerouslySetInnerHTML={{__html: t('footer.officeAddress')}}></p>
               </div>
               <div>
                 <a href="tel:+61416588198" className="text-white/60 hover:text-amber transition-colors">
-                  0416 588 198
+                  {t('footer.phone')}
                 </a>
               </div>
               <div>
                 <a href="mailto:mark@winningadventure.com.au" className="text-white/60 hover:text-amber transition-colors">
-                  mark@winningadventure.com.au
+                  {t('footer.email')}
                 </a>
               </div>
               <div>
@@ -160,7 +163,7 @@ export default function Footer() {
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
-                  Google Business Profile
+                  {t('footer.googleBusinessProfile')}
                 </a>
               </div>
             </div>
@@ -169,16 +172,16 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-white/40 text-xs">© 2026 Winning Adventure Global Pty Ltd. All rights reserved.</span>
+          <span className="text-white/40 text-xs">{t('footer.copyright')}</span>
           <div className="flex items-center gap-6 text-white/40 text-xs">
-            <span>ABN: 94 697 886 150 &nbsp;|&nbsp; ACN: 697 886 150</span>
+            <span>{t('footer.abn')} &nbsp;|&nbsp; {t('footer.acn')}</span>
             <a
               href="https://abr.business.gov.au/Search/ResultsActive?SearchText=94697886150"
               target="_blank"
               rel="noopener noreferrer"
               className="text-amber/70 hover:text-amber transition-colors"
             >
-              (Verify)
+              {t('footer.verifyLink')}
             </a>
           </div>
         </div>

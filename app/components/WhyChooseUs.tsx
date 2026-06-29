@@ -2,41 +2,43 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Factory, MapPin, BadgeCheck, ClipboardCheck, DollarSign, Eye } from 'lucide-react'
+import { useT } from '@/i18n/useT'
 
 const reasons = [
   {
     icon: Factory,
-    title: 'Direct Factory Access',
-    description: 'No traders, no middlemen. We introduce you directly to manufacturers and accompany you through every meeting, translation, and negotiation.',
+    titleKey: 'home.why.reason1.title',
+    descriptionKey: 'home.why.reason1.description',
   },
   {
     icon: MapPin,
-    title: 'Australia-Based Team',
-    description: 'Our Adelaide office manages your project with Australian standards of communication and professionalism, while our Shenzhen team provides on-ground support.',
+    titleKey: 'home.why.reason2.title',
+    descriptionKey: 'home.why.reason2.description',
   },
   {
     icon: BadgeCheck,
-    title: 'Verified Suppliers Only',
-    description: 'Every factory in our directory has been physically vetted. We verify business licenses, production capacity, quality control systems, and sample quality.',
+    titleKey: 'home.why.reason3.title',
+    descriptionKey: 'home.why.reason3.description',
   },
   {
     icon: ClipboardCheck,
-    title: 'End-to-End Support',
-    description: 'Factory matching, visit coordination, quality inspection, shipping logistics, and customs clearance — we can support as little or as much as you need.',
+    titleKey: 'home.why.reason4.title',
+    descriptionKey: 'home.why.reason4.description',
   },
   {
     icon: DollarSign,
-    title: 'Cost Transparency',
-    description: 'Fixed-fee quotes with no hidden costs. We tell you exactly what each service costs before you commit — so there are no surprises on your invoice.',
+    titleKey: 'home.why.reason5.title',
+    descriptionKey: 'home.why.reason5.description',
   },
   {
     icon: Eye,
-    title: 'On-Ground Quality Control',
-    description: 'We inspect your product before it ships. Pre-shipment quality checks catch issues while they are still fixable — before your money leaves Australia.',
+    titleKey: 'home.why.reason6.title',
+    descriptionKey: 'home.why.reason6.description',
   },
-]
+] as const
 
 export default function WhyChooseUs() {
+  const t = useT()
   const [visible, setVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
 
@@ -67,13 +69,13 @@ export default function WhyChooseUs() {
           }`}
         >
           <p className="font-serif text-sm tracking-[0.08em] text-amber mb-4 italic">
-            Our Commitment
+            {t('home.why.subtitle')}
           </p>
           <h2 className="font-serif text-[clamp(32px,5vw,48px)] font-semibold text-navy leading-tight tracking-tight mb-4 text-balance">
-            Why Winning Adventure Global
+            {t('home.why.title')}
           </h2>
           <p className="text-navy/70 text-lg leading-relaxed">
-            We founded Winning Adventure Global because Australian businesses deserve better than dealing with factories through brokers or cold outreach. Our model is simple: introduce you directly to verified manufacturers, accompany you through the process, and ensure every box gets inspected before it leaves China.
+            {t('home.why.description')}
           </p>
         </div>
 
@@ -81,8 +83,8 @@ export default function WhyChooseUs() {
           {reasons.map((reason, idx) => (
             <div key={idx} className="bg-white rounded-xl p-6 shadow-sm border border-navy/5">
               <reason.icon className="h-5 w-5 text-amber mb-4" />
-              <h3 className="text-lg font-semibold text-navy mb-3">{reason.title}</h3>
-              <p className="text-navy/60 text-sm leading-relaxed">{reason.description}</p>
+              <h3 className="text-lg font-semibold text-navy mb-3">{t(reason.titleKey)}</h3>
+              <p className="text-navy/60 text-sm leading-relaxed">{t(reason.descriptionKey)}</p>
             </div>
           ))}
         </div>

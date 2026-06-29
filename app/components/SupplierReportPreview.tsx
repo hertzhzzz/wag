@@ -2,100 +2,108 @@
 
 import { useState } from 'react'
 import { X, FileText, ShieldCheck, Factory, ClipboardCheck, Award, Globe, AlertTriangle, BookOpen } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import { useT, type TKey } from '@/i18n/useT'
+
+type ReportLine = { labelKey: TKey; value: string; clean?: boolean }
+type ReportSection = { icon: LucideIcon; titleKey: TKey; lines: ReportLine[]; images?: boolean }
 
 // 来自真实 client report 的 section 结构
-const reportSections = [
+// Note: section titles and labels use i18n keys; rendered dynamically via t()
+const reportSections: ReportSection[] = [
   {
     icon: FileText,
-    title: '1. Executive Summary',
+    titleKey: 'home.report.section1Title',
     lines: [
-      { label: 'Supplier', value: 'Guangdong [REDACTED] Electronics Co., Ltd' },
-      { label: 'Established', value: '[REDACTED]' },
-      { label: 'Employees', value: '[REDACTED] (incl. [REDACTED] R&D)' },
-      { label: 'Verdict', value: 'Verified Manufacturer — proceed with standard diligence', clean: true },
+      { labelKey: 'home.report.labelSupplier', value: 'Guangdong [REDACTED] Electronics Co., Ltd' },
+      { labelKey: 'home.report.labelEstablished', value: '[REDACTED]' },
+      { labelKey: 'home.report.labelEmployees', value: '[REDACTED] (incl. [REDACTED] R&D)' },
+      { labelKey: 'home.report.labelVerdict', value: 'Verified Manufacturer — proceed with standard diligence', clean: true },
     ],
   },
   {
     icon: ShieldCheck,
-    title: '2. Business Registration & Corporate Info',
+    titleKey: 'home.report.section2Title',
     lines: [
-      { label: 'Credit Code', value: '9144 [REDACTED] 116F' },
-      { label: 'Registered Capital', value: 'RMB [REDACTED] million' },
-      { label: 'Legal Rep.', value: '[REDACTED]' },
-      { label: 'Registered Address', value: '[REDACTED] District, Guangzhou' },
-      { label: 'Operating Status', value: '✓ Active — latest annual report filed', clean: true },
+      { labelKey: 'home.report.labelCreditCode', value: '9144 [REDACTED] 116F' },
+      { labelKey: 'home.report.labelRegisteredCapital', value: 'RMB [REDACTED] million' },
+      { labelKey: 'home.report.labelLegalRep', value: '[REDACTED]' },
+      { labelKey: 'home.report.labelRegisteredAddress', value: '[REDACTED] District, Guangzhou' },
+      { labelKey: 'home.report.labelOperatingStatus', value: '✓ Active — latest annual report filed', clean: true },
     ],
   },
   {
     icon: Factory,
-    title: '3. Production & Manufacturing Capability',
+    titleKey: 'home.report.section3Title',
     lines: [
-      { label: 'Factory Area', value: '[REDACTED] sqm' },
-      { label: 'Production Workers', value: '[REDACTED]' },
-      { label: 'Production Lines', value: '[REDACTED] SMT lines, [REDACTED] assembly' },
-      { label: 'Monthly Output', value: '[REDACTED] units' },
-      { label: 'Capacity Assessment', value: '✓ Adequate for stated order volume', clean: true },
+      { labelKey: 'home.report.labelFactoryArea', value: '[REDACTED] sqm' },
+      { labelKey: 'home.report.labelProductionWorkers', value: '[REDACTED]' },
+      { labelKey: 'home.report.labelProductionLines', value: '[REDACTED] SMT lines, [REDACTED] assembly' },
+      { labelKey: 'home.report.labelMonthlyOutput', value: '[REDACTED] units' },
+      { labelKey: 'home.report.labelCapacityAssessment', value: '✓ Adequate for stated order volume', clean: true },
     ],
   },
   {
     icon: ClipboardCheck,
-    title: '4. Product Portfolio & Samples',
+    titleKey: 'home.report.section4Title',
     lines: [
-      { label: 'Product Categories', value: '[REDACTED] series across [REDACTED] lines' },
-      { label: 'Sample Tested', value: '✓ Matches spec. See attached photos.', clean: true },
-      { label: 'Customisation', value: '✓ OEM/ODM capability confirmed', clean: true },
+      { labelKey: 'home.report.labelProductCategories', value: '[REDACTED] series across [REDACTED] lines' },
+      { labelKey: 'home.report.labelSampleTested', value: '✓ Matches spec. See attached photos.', clean: true },
+      { labelKey: 'home.report.labelCustomisation', value: '✓ OEM/ODM capability confirmed', clean: true },
     ],
     images: true,
   },
   {
     icon: Award,
-    title: '5. Certifications, Patents & Awards',
+    titleKey: 'home.report.section5Title',
     lines: [
-      { label: 'Quality System', value: 'ISO 9001: [REDACTED]' },
-      { label: 'Industry Cert.', value: '[REDACTED], [REDACTED], CE' },
-      { label: 'Patents', value: '[REDACTED] registered patents' },
-      { label: 'Awards', value: '[REDACTED] Top 500 Enterprise', clean: true },
+      { labelKey: 'home.report.labelQualitySystem', value: 'ISO 9001: [REDACTED]' },
+      { labelKey: 'home.report.labelIndustryCert', value: '[REDACTED], [REDACTED], CE' },
+      { labelKey: 'home.report.labelPatents', value: '[REDACTED] registered patents' },
+      { labelKey: 'home.report.labelAwards', value: '[REDACTED] Top 500 Enterprise', clean: true },
     ],
   },
   {
     icon: Globe,
-    title: '6. Export History',
+    titleKey: 'home.report.section6Title',
     lines: [
-      { label: 'Export Markets', value: 'Asia, Europe, North America, Australia' },
-      { label: 'Years Exporting', value: '[REDACTED]+ years' },
-      { label: 'Australia References', value: '✓ Confirmed export history to AU', clean: true },
+      { labelKey: 'home.report.labelExportMarkets', value: 'Asia, Europe, North America, Australia' },
+      { labelKey: 'home.report.labelYearsExporting', value: '[REDACTED]+ years' },
+      { labelKey: 'home.report.labelAustraliaReferences', value: '✓ Confirmed export history to AU', clean: true },
     ],
   },
   {
     icon: AlertTriangle,
-    title: '7. Risk Assessment Summary',
+    titleKey: 'home.report.section7Title',
     lines: [
-      { label: 'Overall Risk', value: 'Low — proceed with standard diligence', clean: true },
-      { label: 'Key Finding', value: 'Consistent QC records, verifiable export history, no material adverse findings.', clean: true },
+      { labelKey: 'home.report.labelOverallRisk', value: 'Low — proceed with standard diligence', clean: true },
+      { labelKey: 'home.report.labelKeyFinding', value: 'Consistent QC records, verifiable export history, no material adverse findings.', clean: true },
     ],
   },
   {
     icon: BookOpen,
-    title: '8. Supplier Engagement Guide',
+    titleKey: 'home.report.section8Title',
     lines: [
-      { label: 'Contact Window', value: '[REDACTED] — General Manager' },
-      { label: 'Lead Time', value: '[REDACTED] days for sample, [REDACTED] for bulk' },
-      { label: 'Payment Terms', value: '[REDACTED]% deposit, [REDACTED]% before shipment' },
-      { label: 'Next Steps', value: '✓ Pre-production sample → bulk order → pre-shipment inspection', clean: true },
+      { labelKey: 'home.report.labelContactWindow', value: '[REDACTED] — General Manager' },
+      { labelKey: 'home.report.labelLeadTime', value: '[REDACTED] days for sample, [REDACTED] for bulk' },
+      { labelKey: 'home.report.labelPaymentTerms', value: '[REDACTED]% deposit, [REDACTED]% before shipment' },
+      { labelKey: 'home.report.labelNextSteps', value: '✓ Pre-production sample → bulk order → pre-shipment inspection', clean: true },
     ],
   },
 ]
 
 // 真实 client portal 报告中的工厂图片（通过 API route 引用）
-const auditImages = [
-  { src: '/report-samples/factory-park.jpg', label: 'Factory — industrial park exterior' },
-  { src: '/report-samples/production-line.jpg', label: 'Production line — SMT assembly' },
-  { src: '/report-samples/quality-lab.jpg', label: 'QC lab — testing equipment' },
-  { src: '/report-samples/product-speakers.jpg', label: 'Product sample — professional speaker' },
+// Note: labels are dynamically rendered via useT() in components
+const auditImages: { src: string; label: TKey }[] = [
+  { src: '/report-samples/factory-park.jpg', label: 'home.report.imageFactoryPark' },
+  { src: '/report-samples/production-line.jpg', label: 'home.report.imageProductionLine' },
+  { src: '/report-samples/quality-lab.jpg', label: 'home.report.imageQualityLab' },
+  { src: '/report-samples/product-speakers.jpg', label: 'home.report.imageProductSample' },
 ]
 
 export default function SupplierReportPreview() {
   const [modalOpen, setModalOpen] = useState(false)
+  const t = useT()
 
   return (
     <>
@@ -106,8 +114,8 @@ export default function SupplierReportPreview() {
       >
         {/* Header */}
         <div className="bg-navy text-white px-5 py-3.5">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-amber/80 mb-0.5">Verification Report Sample</p>
-          <p className="text-[12px] text-white/60">See the exact report delivered to this client</p>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-amber/80 mb-0.5">{t('home.report.sampleLabel')}</p>
+          <p className="text-[12px] text-white/60">{t('home.report.sampleDescription')}</p>
         </div>
 
         {/* Section list — scrollable, stops before CTA */}
@@ -116,26 +124,26 @@ export default function SupplierReportPreview() {
             <div key={i} className="py-2 border-b border-navy/5 last:border-0">
               <div className="flex items-center gap-2 mb-1">
                 <section.icon size={12} className="text-amber flex-shrink-0" />
-                <h3 className="text-[11px] font-semibold text-navy/70">{section.title}</h3>
+                <h3 className="text-[11px] font-semibold text-navy/70">{t(section.titleKey)}</h3>
               </div>
               <div className="flex flex-col gap-0.5 pl-4">
                 {section.lines.slice(0, 2).map((line, j) => (
                   <div key={j} className="flex text-[10.5px]">
-                    <span className="text-navy/50 w-16 flex-shrink-0">{line.label}</span>
+                    <span className="text-navy/50 w-16 flex-shrink-0">{t(line.labelKey)}</span>
                     <span className={`${line.clean ? 'text-navy/80' : 'blur-[3px] select-none text-navy/50'}`}>
                       {line.value}
                     </span>
                   </div>
                 ))}
                 {section.lines.length > 2 && (
-                  <span className="text-[9px] text-navy/25">+{section.lines.length - 2} more fields</span>
+                  <span className="text-[9px] text-navy/25">{t('home.report.moreFields').replace('{count}', String(section.lines.length - 2))}</span>
                 )}
                 {section.images && (
                   <div className="flex gap-1.5 mt-2">
                     {auditImages.map((img, i) => (
                       <div key={i} className="flex-shrink-0 w-12 h-9 rounded overflow-hidden border border-navy/5 bg-navy/5">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={img.src} alt="" className="w-full h-full object-cover blur-[2px]" />
+                        <img src={img.src} alt={t(img.label)} className="w-full h-full object-cover blur-[2px]" />
                       </div>
                     ))}
                   </div>
@@ -147,7 +155,7 @@ export default function SupplierReportPreview() {
 
         {/* Cue */}
         <div className="px-5 py-2.5 border-t border-navy/5 text-center">
-          <span className="text-[10px] text-navy/30 group-hover:text-amber transition-colors">Click to view full report →</span>
+          <span className="text-[10px] text-navy/30 group-hover:text-amber transition-colors">{t('home.report.clickToViewFull')}</span>
         </div>
       </div>
 
@@ -166,14 +174,14 @@ export default function SupplierReportPreview() {
               <div className="flex items-center gap-3">
                 <FileText size={18} className="text-amber" />
                 <div>
-                  <p className="text-[13px] font-semibold">Supplier Due Diligence &amp; Capability Assessment</p>
-                  <p className="text-[11px] text-white/50">Prepared by Winning Adventure Global Pty Ltd</p>
+                  <p className="text-[13px] font-semibold">{t('home.report.modalTitle')}</p>
+                  <p className="text-[11px] text-white/50">{t('home.report.modalSubtitle')}</p>
                 </div>
               </div>
               <button
                 onClick={() => setModalOpen(false)}
                 className="w-9 h-9 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-colors"
-                aria-label="Close"
+                aria-label={t('home.report.closeButton')}
               >
                 <X size={20} />
               </button>
@@ -187,12 +195,12 @@ export default function SupplierReportPreview() {
                     <div className="w-8 h-8 rounded-lg bg-amber/10 flex items-center justify-center">
                       <section.icon size={16} className="text-amber" />
                     </div>
-                    <h3 className="font-semibold text-navy text-[15px]">{section.title}</h3>
+                    <h3 className="font-semibold text-navy text-[15px]">{t(section.titleKey)}</h3>
                   </div>
                   <div className="flex flex-col gap-2 ml-11">
                     {section.lines.map((line, j) => (
                       <div key={j} className="flex text-[13px]">
-                        <span className="text-navy/50 w-36 flex-shrink-0">{line.label}</span>
+                        <span className="text-navy/50 w-36 flex-shrink-0">{t(line.labelKey)}</span>
                         <span className={`${line.clean ? 'text-navy font-medium' : 'blur-sm select-none text-navy/70'}`}>
                           {line.value}
                         </span>
@@ -203,8 +211,8 @@ export default function SupplierReportPreview() {
                         {auditImages.map((img, i) => (
                           <div key={i} className="border border-navy/10 rounded-lg overflow-hidden bg-navy/5">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={img.src} alt="" className="w-full aspect-[4/3] object-cover blur-[2px]" />
-                            <p className="text-[10px] text-navy/60 px-2 py-1">{img.label}</p>
+                            <img src={img.src} alt={t(img.label)} className="w-full aspect-[4/3] object-cover blur-[2px]" />
+                            <p className="text-[10px] text-navy/60 px-2 py-1">{t(img.label)}</p>
                           </div>
                         ))}
                       </div>
@@ -216,8 +224,8 @@ export default function SupplierReportPreview() {
 
             {/* Footer */}
             <div className="border-t border-navy/10 px-6 py-3 flex items-center justify-between">
-              <span className="text-[11px] text-navy/30 tracking-wider">CONFIDENTIAL · SAMPLE PREVIEW</span>
-              <span className="text-[11px] text-navy/30">Page 1 of 1</span>
+              <span className="text-[11px] text-navy/30 tracking-wider">{t('home.report.footerConfidential')}</span>
+              <span className="text-[11px] text-navy/30">{t('home.report.footerPageNumber')}</span>
             </div>
           </div>
         </div>

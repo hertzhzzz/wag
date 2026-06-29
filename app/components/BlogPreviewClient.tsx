@@ -1,0 +1,107 @@
+'use client'
+import Link from 'next/link'
+import Image from 'next/image'
+import { useT } from '@/i18n/useT'
+import type { Article } from './BlogPreview'
+
+// 渲染层（client）：UI 文案走 t() 可随语言切换；文章数据由 server 壳作为 props 传入。
+export default function BlogPreviewClient({ articles }: { articles: Article[] }) {
+  const t = useT()
+
+  if (articles.length === 0) return null
+
+  return (
+    <section className="bg-gray-50 border-t border-gray-200">
+      <div className="max-w-[1120px] mx-auto px-4 md:px-12 py-16">
+        {/* Section header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+          <div>
+            <p className="text-[11px] font-bold tracking-[2px] uppercase text-[#F59E0B] mb-2">
+              {t('home.blog.section.label')}
+            </p>
+            <h2 className="font-serif text-[#0F2D5E] text-[28px] md:text-[34px] font-semibold leading-tight">
+              {t('home.blog.section.title')}
+            </h2>
+            <p className="text-gray-500 text-[15px] mt-2">
+              {t('home.blog.section.description')}
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Link
+              href="/article"
+              className="self-start md:self-auto text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors whitespace-nowrap flex items-center gap-1.5 min-h-11"
+            >
+              {t('home.blog.view.all.link')}
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-px">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+
+        {/* Article cards — 2-column grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {articles.map((article) => (
+            <article
+              key={article.slug}
+              className="bg-white border border-gray-200 overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(15,45,94,0.1)] transition-all duration-200"
+            >
+              {/* Cover image */}
+              <Link
+                href={`/article/${article.slug}`}
+                className="relative block h-[180px] bg-[#0F2D5E] flex items-center justify-center overflow-hidden group flex-shrink-0"
+              >
+                {article.coverImage ? (
+                  <Image
+                    src={article.coverImage}
+                    width={400}
+                    height={200}
+                    alt={article.title}
+                    className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-50 transition-opacity"
+                  />
+                ) : (
+                  <span className="absolute inset-0 bg-[#0F2D5E]" />
+                )}
+                <span className="absolute top-3 left-3 z-10 bg-[#F59E0B] text-[#0F2D5E] py-1 px-2.5 text-[10px] font-bold uppercase tracking-wide">
+                  {article.category}
+                </span>
+              </Link>
+
+              {/* Card body */}
+              <div className="p-6 flex flex-col flex-1">
+                <p className="text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                  {article.date}
+                  {article.readTime && (
+                    <span className="ml-2">
+                      &nbsp;&middot;&nbsp; {article.readTime}
+                    </span>
+                  )}
+                </p>
+
+                <Link href={`/article/${article.slug}`} className="block flex-1">
+                  <h3 className="font-serif text-[18px] font-semibold text-[#0F2D5E] leading-snug mb-3 hover:text-[#F59E0B] transition-colors">
+                    {article.title}
+                  </h3>
+                </Link>
+
+                <p className="text-[14px] text-gray-500 leading-relaxed mb-5 line-clamp-3 flex-1">
+                  {article.desc}
+                </p>
+
+                <Link
+                  href={`/article/${article.slug}`}
+                  className="self-start text-[13px] font-bold text-[#0F2D5E] hover:text-[#F59E0B] transition-colors flex items-center gap-1 min-h-8"
+                >
+                  {t('home.blog.read.guide.link')}
+                  <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" className="mt-px">
+                    <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
