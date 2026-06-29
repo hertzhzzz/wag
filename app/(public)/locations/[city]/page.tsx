@@ -125,6 +125,7 @@ export default async function LocationPage(
             alt=""
             fill
             priority
+            unoptimized
             className="object-cover z-0"
             sizes="100vw"
           />

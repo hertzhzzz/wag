@@ -123,6 +123,7 @@ export default async function IndustryPage(
             alt=""
             fill
             priority
+            unoptimized
             className="object-cover z-0"
             sizes="100vw"
           />
