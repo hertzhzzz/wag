@@ -119,7 +119,7 @@ export default async function IndustryPage(
         {/* ===================== Hero ===================== */}
         <section className="relative min-h-[60vh] md:min-h-[680px] flex items-center bg-navy overflow-hidden">
           <Image
-            src="/report-samples/factory-park.jpg"
+            src={`/industry-${ind.slug}.jpg`}
             alt=""
             fill
             priority
