@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { useT } from '@/i18n/useT'
 import { TableOfContents } from './TableOfContents'
 import type { Heading } from './types'
 
@@ -10,13 +13,15 @@ import type { Heading } from './types'
 // The whole rail follows the reader down (sticky within a stretched grid cell).
 // ============================================
 
-const STEPS = [
-  { title: 'Tell us what you need', desc: 'Your product, industry and volume.' },
-  { title: 'We verify the factories', desc: '2–3 pre-screened suppliers from our network.' },
-  { title: 'You buy direct', desc: 'You own the relationship; we handle inspection.' },
-]
-
 export function SidebarRail({ headings }: { headings: Heading[] }) {
+  const t = useT()
+
+  const STEPS = [
+    { title: t('article.sidebar.step1Title'), desc: t('article.sidebar.step1Desc') },
+    { title: t('article.sidebar.step2Title'), desc: t('article.sidebar.step2Desc') },
+    { title: t('article.sidebar.step3Title'), desc: t('article.sidebar.step3Desc') },
+  ]
+
   return (
     <aside className="hidden lg:block">
       {/* Bounded-height flex column: TOC shrinks/scrolls, the card never does,
@@ -30,8 +35,8 @@ export function SidebarRail({ headings }: { headings: Heading[] }) {
 
         {/* Process card — our real model, two paths out */}
         <div className="shrink-0 rounded-xl border border-gray-200 bg-white shadow-[0_4px_20px_rgba(15,45,94,0.08)] p-5">
-          <p className="text-sm font-semibold text-[#0F2D5E]">What we do</p>
-          <p className="mt-0.5 text-xs text-gray-500 leading-relaxed">Winning Adventure Global gets Australian businesses verified factories in China — on the ground.</p>
+          <p className="text-sm font-semibold text-[#0F2D5E]">{t('article.sidebar.processHeading')}</p>
+          <p className="mt-0.5 text-xs text-gray-500 leading-relaxed">{t('article.sidebar.processDescription')}</p>
 
           <ol className="mt-4">
             {STEPS.map((step, i) => {
@@ -62,14 +67,14 @@ export function SidebarRail({ headings }: { headings: Heading[] }) {
               href="/enquiry"
               className="flex items-center justify-center gap-2 w-full bg-[#0F2D5E] text-white text-sm font-semibold px-4 py-3 rounded-md hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors duration-200"
             >
-              Start an enquiry
+              {t('article.sidebar.buttonPrimary')}
               <ArrowRight size={15} aria-hidden="true" />
             </Link>
             <Link
               href="/services"
               className="group flex items-center justify-center gap-1.5 text-[0.8rem] font-medium text-gray-500 hover:text-[#0F2D5E] transition-colors duration-200"
             >
-              Explore our services
+              {t('article.sidebar.buttonSecondary')}
               <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" aria-hidden="true" />
             </Link>
           </div>

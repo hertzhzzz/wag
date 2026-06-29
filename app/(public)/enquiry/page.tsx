@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
-import EnquiryForm from './EnquiryForm'
-import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import EnquiryPageContent from './EnquiryPageContent'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Book a Discovery Call',
@@ -34,14 +33,5 @@ export const metadata: Metadata = {
 }
 
 export default function EnquiryPage() {
-  return (
-    <>
-      {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: 'https://www.winningadventure.com.au' },
-        { name: 'Enquiry', url: 'https://www.winningadventure.com.au/enquiry' }
-      ]} />
-      <EnquiryForm />
-    </>
-  )
+  return <EnquiryPageContent />
 }

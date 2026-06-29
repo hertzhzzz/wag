@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import { Package, Plane, Monitor, ArrowRight } from 'lucide-react'
+import { useT } from '@/i18n/useT'
 
 // ============================================
 // "HOW WE HELP" SERVICES STRIP
@@ -8,33 +11,35 @@ import { Package, Plane, Monitor, ArrowRight } from 'lucide-react'
 // mirror /services (single source of truth).
 // ============================================
 
-const SERVICES = [
-  {
-    icon: Package,
-    title: 'One-Time Procurement',
-    tagline: 'A single purchase executed well — travel to China with our guide or let us handle it remotely.',
-  },
-  {
-    icon: Plane,
-    title: 'Factory Tour + Supply Chain',
-    tagline: 'Visit China with a bilingual guide, audit production in person, and build a long-term supply chain.',
-    highlighted: true,
-  },
-  {
-    icon: Monitor,
-    title: 'Remote Verification + Supply Chain',
-    tagline: 'Deep supplier verification and ongoing procurement management — without leaving Australia.',
-  },
-]
-
 export function ServicesStrip() {
+  const t = useT()
+
+  const SERVICES = [
+    {
+      icon: Package,
+      title: t('article.services.tier1Title'),
+      tagline: t('article.services.tier1Tagline'),
+    },
+    {
+      icon: Plane,
+      title: t('article.services.tier2Title'),
+      tagline: t('article.services.tier2Tagline'),
+      highlighted: true,
+    },
+    {
+      icon: Monitor,
+      title: t('article.services.tier3Title'),
+      tagline: t('article.services.tier3Tagline'),
+    },
+  ]
+
   return (
     <section className="mt-14 pt-10 border-t border-gray-200" aria-labelledby="how-we-help">
       <h2 id="how-we-help" className="font-serif text-2xl font-bold text-[#0F2D5E] mb-1">
-        How Winning Adventure Global helps
+        {t('article.services.sectionHeading')}
       </h2>
       <p className="text-gray-600 text-sm mb-6 max-w-xl">
-        Whichever way you source from China, you get someone you can trust on the ground. Choose the approach that fits your business.
+        {t('article.services.sectionDescription')}
       </p>
 
       <div className="grid gap-4 sm:grid-cols-3">
@@ -66,7 +71,7 @@ export function ServicesStrip() {
                 highlighted ? 'text-[#F59E0B]' : 'text-[#0F2D5E] group-hover:text-[#F59E0B]'
               } transition-colors`}
             >
-              Compare services
+              {t('article.services.tileLabel')}
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
             </span>
           </Link>

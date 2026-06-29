@@ -1,4 +1,4 @@
-import ResourcesContent from '@/components/ResourcesContent'
+import ArticleListContent from '@/components/ArticleListContent'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import fs from 'fs'
 import path from 'path'
@@ -126,7 +126,7 @@ export default function ResourcesPage() {
         { name: 'Home', url: 'https://www.winningadventure.com.au' },
         { name: 'Articles', url: 'https://www.winningadventure.com.au/article' }
       ]} />
-      <ResourcesContent articles={articles} />
+      <ArticleListContent articles={articles} />
     </>
   )
 }

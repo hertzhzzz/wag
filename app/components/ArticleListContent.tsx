@@ -1,0 +1,276 @@
+'use client'
+
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
+import { useT } from '@/i18n/useT'
+
+const PAGE_SIZE = 9
+
+interface Article {
+  slug: string
+  title: string
+  category: string
+  date: string
+  updatedDate?: string
+  readTime: string
+  coverImage?: string
+  desc?: string
+  description?: string
+  featured?: boolean
+}
+
+interface ArticleListContentProps {
+  articles: Article[]
+}
+
+export default function ArticleListContent({ articles }: ArticleListContentProps) {
+  const t = useT()
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = Math.ceil(articles.length / PAGE_SIZE)
+  const visibleArticles = articles.slice(0, currentPage * PAGE_SIZE)
+
+  const [email, setEmail] = useState('')
+  const [subscribeStatus, setSubscribeStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setErrorMessage(t('article.list.newsletter.form.error.invalid'))
+      setSubscribeStatus('error')
+      return
+    }
+
+    setSubscribeStatus('loading')
+    setErrorMessage('')
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+
+      if (response.ok) {
+        setSubscribeStatus('success')
+        setEmail('')
+      } else {
+        throw new Error('Failed to subscribe')
+      }
+    } catch {
+      setSubscribeStatus('error')
+      setErrorMessage(t('article.list.newsletter.form.error.generic'))
+    }
+  }
+
+  return (
+    <>
+      <Navbar />
+
+      {/* Hero */}
+      <div className="relative overflow-hidden bg-navy border-b-4 border-amber">
+        <Image
+          src="/article-hero.webp"
+          alt=""
+          fill
+          priority
+          className="object-cover z-0"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/80 to-navy/65 z-[1]" aria-hidden="true" />
+        <div className="relative z-10 py-8 md:py-14 px-4 md:px-12">
+          <div className="max-w-[1200px] mx-auto">
+            <p className="text-xs font-bold tracking-[2px] uppercase text-amber mb-3">{t('article.list.hero.badge')}</p>
+            <h1 className="font-serif text-white text-[32px] md:text-[42px] font-semibold leading-tight">{t('article.list.hero.heading')}</h1>
+            <p className="text-base text-white/75 max-w-[560px] mt-3">
+              {t('article.list.hero.description')}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-[1200px] mx-auto px-4 md:px-12 py-12">
+
+        {/* Article cards - Vertical Masonry */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            {visibleArticles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/article/${article.slug}`}
+                className="block bg-white border border-gray-200 overflow-hidden hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(15,45,94,0.1)] transition-all duration-200 break-inside-avoid"
+              >
+                {/* Card image */}
+                <div className="relative bg-[#0F2D5E] flex items-center justify-center overflow-hidden">
+                  {article.coverImage ? (
+                    <Image
+                      src={article.coverImage}
+                      width={400}
+                      height={200}
+                      alt={article.title}
+                      className="w-full object-cover opacity-60 group-hover:opacity-50 transition-opacity"
+                    />
+                  ) : (
+                    <div className="w-full aspect-video bg-[#0F2D5E]/30" />
+                  )}
+                  <span className="absolute top-3 left-3 z-10 bg-[#F59E0B] text-[#0F2D5E] py-1 px-2.5 text-[10px] font-bold uppercase tracking-wide">
+                    {article.category}
+                  </span>
+                </div>
+                {/* Card body */}
+                <div className="p-5">
+                  <p className="text-[11px] text-gray-400 uppercase tracking-widest mb-2">
+                    {article.date} · {article.readTime}
+                  </p>
+                  <h3 className="font-serif text-[16px] font-semibold text-[#0F2D5E] leading-snug mb-3 hover:text-[#F59E0B] transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-[13px] text-gray-600 leading-relaxed">
+                    {article.desc || article.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {currentPage < totalPages && (
+            <div className="text-center mt-10">
+              <button
+                onClick={() => setCurrentPage(p => p + 1)}
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0F2D5E] text-white text-[13px] font-bold hover:bg-[#0F2D5E]/90 transition-colors"
+              >
+                {t('article.list.loadMore.button')}
+                <span className="text-[11px] opacity-70">({visibleArticles.length} of {articles.length})</span>
+              </button>
+            </div>
+          )}
+      </div>
+
+      {/* Explore More Section */}
+      <div className="max-w-[1200px] mx-auto px-4 md:px-12 py-12 mt-8">
+        <h2 className="font-serif text-2xl font-bold text-navy mb-8 text-center">
+          {t('article.list.explore.heading')}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <Link
+            href="/services"
+            className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
+              {t('article.list.explore.services.label')}
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              {t('article.list.explore.services.title')}
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {t('article.list.explore.services.description')}
+            </p>
+          </Link>
+          <Link
+            href="/article/china-sourcing-agent"
+            className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
+              {t('article.list.explore.sourcingAgent.label')}
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              {t('article.list.explore.sourcingAgent.title')}
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {t('article.list.explore.sourcingAgent.description')}
+            </p>
+          </Link>
+          <Link
+            href="/article/china-sourcing-agent"
+            className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
+              {t('article.list.explore.sourcingAgent.label')}
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              {t('article.list.explore.sourcingAgent.title')}
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {t('article.list.explore.sourcingAgent.description')}
+            </p>
+          </Link>
+          <Link
+            href="/enquiry"
+            className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+          >
+            <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
+              {t('article.list.explore.consultation.label')}
+            </span>
+            <h3 className="font-serif text-[1.15rem] font-bold text-navy leading-snug mb-3">
+              {t('article.list.explore.consultation.title')}
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {t('article.list.explore.consultation.description')}
+            </p>
+          </Link>
+        </div>
+      </div>
+
+      {/* Newsletter */}
+      <div className="bg-[#0F2D5E] py-16 px-4 md:px-12 mt-16">
+        <div className="max-w-[600px] mx-auto text-center">
+          {subscribeStatus === 'success' ? (
+            <>
+              <h2 className="font-serif text-white text-[28px] font-semibold mb-3">
+                {t('article.list.newsletter.success.heading')}
+              </h2>
+              <p className="text-gray-300 text-[15px] mb-4">
+                {t('article.list.newsletter.success.message')}
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 className="font-serif text-white text-[28px] font-semibold mb-3">
+                {t('article.list.newsletter.form.heading')}
+              </h2>
+              <p className="text-gray-300 text-[15px] mb-6">
+                {t('article.list.newsletter.form.description')}
+              </p>
+              <ul className="text-gray-300 text-[13px] space-y-1.5 mb-8 text-left max-w-[360px] mx-auto">
+                <li>{t('article.list.newsletter.form.benefit1')}</li>
+                <li>{t('article.list.newsletter.form.benefit2')}</li>
+                <li>{t('article.list.newsletter.form.benefit3')}</li>
+              </ul>
+              <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row gap-4 max-w-[440px] mx-auto">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value)
+                    if (subscribeStatus === 'error') setSubscribeStatus('idle')
+                  }}
+                  placeholder={t('article.list.newsletter.form.placeholder')}
+                  className="flex-1 px-5 py-4 text-[14px] font-sans outline-none border-0"
+                  aria-label="Email address"
+                />
+                <button
+                  type="submit"
+                  disabled={subscribeStatus === 'loading'}
+                  className="bg-[#F59E0B] text-[#0F2D5E] px-6 py-4 text-[13px] font-bold whitespace-nowrap hover:bg-amber-400 transition-colors disabled:opacity-50 min-h-11"
+                >
+                  {subscribeStatus === 'loading' ? t('article.list.newsletter.form.submitting') : t('article.list.newsletter.form.submit')}
+                </button>
+              </form>
+              {subscribeStatus === 'error' && (
+                <p className="text-red-400 text-sm mt-3" role="alert">
+                  {errorMessage}
+                </p>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  )
+}

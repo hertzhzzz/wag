@@ -1,3 +1,5 @@
+'use client'
+
 interface AuthorBioProps {
   author: string
   date: string
