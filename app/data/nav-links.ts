@@ -36,11 +36,11 @@ export const servicesMenu: NavColumn[] = [
   {
     heading: 'By Industry',
     links: [
-      { label: 'Mining', href: '/industries/mining', live: false },
-      { label: 'Agricultural Machinery', href: '/industries/agricultural-machinery', live: false },
-      { label: 'Activewear', href: '/industries/activewear', live: false },
-      { label: 'Construction', href: '/industries/construction', live: false },
-      { label: 'Electronics', href: '/industries/electronics', live: false },
+      { label: 'Mining', href: '/industries/mining', live: true },
+      { label: 'Agricultural Machinery', href: '/industries/agricultural-machinery', live: true },
+      { label: 'Activewear', href: '/industries/activewear', live: true },
+      { label: 'Construction', href: '/industries/construction', live: true },
+      { label: 'Electronics', href: '/industries/electronics', live: true },
     ],
   },
 ]
