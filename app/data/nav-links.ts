@@ -28,9 +28,9 @@ export const servicesMenu: NavColumn[] = [
     links: [
       { label: 'Sydney', href: '/locations/sydney', live: true },
       { label: 'Melbourne', href: '/locations/melbourne', live: true },
-      { label: 'Brisbane', href: '/locations/brisbane', live: false },
+      { label: 'Brisbane', href: '/locations/brisbane', live: true },
       { label: 'Adelaide', href: '/locations/adelaide', live: true },
-      { label: 'Perth', href: '/locations/perth', live: false },
+      { label: 'Perth', href: '/locations/perth', live: true },
     ],
   },
   {

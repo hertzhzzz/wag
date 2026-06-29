@@ -246,6 +246,122 @@ export const LOCATIONS: LocationData[] = [
       },
     ],
   },
+  {
+    slug: 'brisbane',
+    city: 'Brisbane',
+    state: 'Queensland',
+    stateAbbr: 'QLD',
+    live: true,
+    heroTagline: 'Australia-based · Serving Brisbane & QLD importers',
+    heroHeading: 'China Sourcing Agent for Brisbane Importers',
+    heroIntro:
+      'Brisbane is Australia\'s fastest-growing container gateway — and one of the smoothest for customs clearance. We verify factories on the ground in China and report back to you in Queensland, so you can source direct with confidence. Book a free consult and tell us your supplier.',
+    portName: 'Port of Brisbane',
+    stats: [
+      { value: '1.62M', label: 'TEU/yr — record FY2025 (+7.8%)' },
+      { value: '+209%', label: 'Forecast container growth to 2055' },
+      { value: '12–15', label: 'Days via new direct China service' },
+      { value: '1,200+', label: 'Pre-screened factories in our network' },
+    ],
+    whyHeading: 'Queensland\'s gateway — fast-growing and congestion-light',
+    whyBody:
+      'The Port of Brisbane is Queensland\'s primary container gateway and one of Australia\'s fastest-growing import ports, handling a record 1.62 million TEU in FY2025 across 34.9 million tonnes of cargo — a 7.8% jump in trade. Freight forwarders consistently rate it among the smoothest Australian ports for discharge and customs clearance, with fewer congestion delays than Sydney or Melbourne during peak season. And as of January 2026, MSC\'s new "Kangaroo" direct service links Qingdao, Shanghai, and Ningbo straight to Brisbane in around 12–15 days — far faster than the old 20–25 day transshipment routing. For Queensland importers, that combination of speed, reliability, and growth is exactly why getting the supplier right matters: capacity is filling fast.',
+    localPoints: [
+      'Port of Brisbane set a record 1.62M TEU in FY2025 — Queensland\'s primary container gateway and one of the nation\'s fastest-growing ports.',
+      'Frequently cited as one of Australia\'s smoothest ports for customs clearance, with fewer peak-season congestion delays than Sydney or Melbourne.',
+      'MSC\'s "Kangaroo" direct service (launched Jan 2026) connects Qingdao/Shanghai/Ningbo to Brisbane in ~12–15 days.',
+    ],
+    transitRows: [
+      { route: 'Direct service (Qingdao/Shanghai/Ningbo → Brisbane)', days: '12–15 days' },
+      { route: 'Shenzhen → Brisbane', days: '18–25 days' },
+      { route: 'Air freight (China → Brisbane)', days: '3–5 days' },
+    ],
+    transitNote:
+      'Brisbane\'s new direct China service and reputation for fast clearance make it one of the most reliable east-coast options. But faster clearance only helps if the goods are right — verification and pre-shipment inspection are what keep a smooth port from becoming a smooth path for the wrong product.',
+    transitSummary: '12–25 days',
+    industriesIntro:
+      'Queensland imports a broad mix of retail and eCommerce goods through Port of Brisbane. The categories we most often source and verify for Brisbane clients:',
+    industries: [
+      'eCommerce & retail inventory',
+      'Consumer goods & homewares',
+      'Building & construction materials',
+      'Machinery & equipment',
+      'Furniture & fixtures',
+      'Outdoor & lifestyle products',
+      'Packaging & POS displays',
+      'Industrial components',
+    ],
+    faqs: [
+      {
+        question: 'Is Brisbane a good port for importing from China?',
+        answer:
+          'Yes — increasingly so. Port of Brisbane is one of Australia\'s fastest-growing and smoothest-clearing container ports, and MSC\'s new "Kangaroo" direct service (Jan 2026) links major Chinese ports to Brisbane in around 12–15 days. For Queensland importers, routing directly to Brisbane avoids the inland trucking costs of using Sydney or Melbourne.',
+      },
+      {
+        question: 'How long does shipping from China to Brisbane take?',
+        answer:
+          'On the new direct China–Brisbane service, ocean transit is around 12–15 days. Traditional routing from Shenzhen runs 18–25 days, port to port. Air freight is 3–5 days. Door to door, allow around 30 days for ocean freight including customs and delivery across Greater Brisbane and Queensland.',
+      },
+    ],
+  },
+  {
+    slug: 'perth',
+    city: 'Perth',
+    state: 'Western Australia',
+    stateAbbr: 'WA',
+    live: true,
+    heroTagline: 'Australia-based · Serving Perth & WA importers',
+    heroHeading: 'China Sourcing Agent for Perth Importers',
+    heroIntro:
+      'Fremantle is the fastest Australian port from southern China — and the only sensible gateway for Western Australia. We verify factories on the ground in China and report back to you in WA, so you can source direct with confidence. Book a free consult and tell us your supplier.',
+    portName: 'Port of Fremantle',
+    stats: [
+      { value: '16–22', label: 'Days from South China (fastest in Australia)' },
+      { value: '~500K', label: 'TEU/yr through Fremantle' },
+      { value: 'WA', label: 'Western Australia\'s principal port' },
+      { value: '1,200+', label: 'Pre-screened factories in our network' },
+    ],
+    whyHeading: 'For WA importers, Fremantle is the only port that makes sense',
+    whyBody:
+      'Fremantle is Western Australia\'s principal container port and the fastest Australian destination from southern China — the direct route from Ningbo or Shenzhen takes just 16–22 days, up to a week faster than the equivalent sailing to Sydney or Melbourne, because Fremantle faces the Indian Ocean. For WA importers this matters twice over: faster transit, plus far lower inland cartage than routing through an eastern port and trucking across the continent. Shipping a container to Sydney and railing it to Perth is a costly, slow mistake. Fremantle is anchored by WA\'s enormous resources sector, and on the import side it receives growing volumes of consumer goods, vehicles, building materials, and industrial and mining equipment from China — exactly the categories where supplier verification and factory audits protect your money.',
+    localPoints: [
+      'Fremantle is the fastest Australian port from South China (16–22 days from Ningbo/Shenzhen) — it faces the Indian Ocean, ahead of the eastern ports.',
+      'WA\'s geographic isolation means routing through Sydney or Melbourne adds prohibitive inland trucking — Fremantle is the only cost-effective gateway for WA.',
+      'Two container terminals on North Quay (DP World CT1/CT2, Patrick CT3/CT4) serving Perth, regional WA, and the resources sector.',
+    ],
+    transitRows: [
+      { route: 'Ningbo → Fremantle', days: '16–22 days' },
+      { route: 'Shenzhen → Fremantle', days: '16–22 days' },
+      { route: 'Air freight (China → Perth)', days: '3–5 days' },
+    ],
+    transitNote:
+      'Fremantle\'s speed advantage is real — but for the mining and industrial equipment WA imports, a defective or non-compliant shipment is expensive to return from the far side of the country. Factory audits and pre-shipment inspection turn the fastest port into the most reliable one.',
+    transitSummary: '16–22 days',
+    industriesIntro:
+      'Western Australia imports a distinct mix weighted toward its resources and construction economy. The categories we most often source and verify for Perth clients:',
+    industries: [
+      'Mining & resources equipment',
+      'Industrial machinery & components',
+      'Vehicles & parts',
+      'Building & construction materials',
+      'Consumer goods & retail inventory',
+      'Safety & PPE equipment',
+      'Steel & fabricated products',
+      'Furniture & fixtures',
+    ],
+    faqs: [
+      {
+        question: 'Why should WA importers use Fremantle instead of an eastern port?',
+        answer:
+          'Two reasons: speed and cost. Fremantle faces the Indian Ocean, so southern-China sailings reach it in 16–22 days — up to a week faster than Sydney or Melbourne. And because Perth is geographically isolated, routing through an eastern port and trucking or railing across the country adds major inland freight cost. For any WA delivery, Fremantle is the only sensible destination port.',
+      },
+      {
+        question: 'Can you help source mining and industrial equipment?',
+        answer:
+          'Yes — it\'s one of our most common WA requests. Mining and industrial equipment is high-value and specification-critical, so factory capability verification matters enormously. We audit the factory\'s production capability and quality systems on site in China, and inspect the finished equipment before it ships, so the gear arriving at Fremantle meets specification.',
+      },
+    ],
+  },
 ]
 
 export function getLiveLocations(): LocationData[] {
