@@ -11,8 +11,9 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import LeadForm from '@/components/LeadForm'
 import { getLiveLocations, getLocation } from '@/data/locations'
 import {
-  Anchor, Ship, ShieldCheck, ClipboardCheck, Boxes,
+  Ship, ShieldCheck, ClipboardCheck, Boxes,
   MapPin, Building2, Check, ArrowRight,
+  ClipboardList, Search, PackageCheck, Anchor, Star,
 } from 'lucide-react'
 
 const BASE = 'https://www.winningadventure.com.au'
@@ -206,8 +207,78 @@ export default async function LocationPage(
           </ScrollReveal>
         </section>
 
-        {/* ===================== Services (cross-link, no duplicate detail) ===================== */}
+        {/* ===================== Process: enquiry → delivery in <city> ===================== */}
         <section className="bg-navy/[0.03] border-y border-navy/10">
+          <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
+            <ScrollReveal>
+              <div className="flex items-center gap-3 mb-3 justify-center">
+                <span className="h-px w-8 bg-amber" aria-hidden="true" />
+                <p className="text-amber text-xs font-semibold uppercase tracking-[0.18em]">
+                  Our process
+                </p>
+                <span className="h-px w-8 bg-amber" aria-hidden="true" />
+              </div>
+              <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] mb-3 text-center text-balance">
+                From enquiry to delivery in {loc.city}
+              </h2>
+              <p className="text-navy/60 text-center max-w-[640px] mx-auto mb-12">
+                Five checkpoints between your first message and goods landing at {loc.portName}.
+              </p>
+            </ScrollReveal>
+            <div className="grid md:grid-cols-5 gap-5">
+              {[
+                { icon: ClipboardList, title: 'Submit your enquiry', body: `Tell us your product, target supplier, and volume. We respond within 24 hours.` },
+                { icon: ShieldCheck, title: 'Supplier verification', body: 'We authenticate the business license and confirm the company is a real manufacturer — not a middleman.' },
+                { icon: Search, title: 'Factory audit', body: 'On the ground in China, we assess production capability, quality systems, and compliance.' },
+                { icon: PackageCheck, title: 'Pre-shipment inspection', body: 'Before the balance is paid, we inspect finished goods against your specification (AQL sampling).' },
+                { icon: Anchor, title: `Ship to ${loc.city}`, body: `Cleared to sail to ${loc.portName} — typically ${loc.transitSummary} by sea from China.` },
+              ].map((s, i) => (
+                <ScrollReveal key={s.title}>
+                  <div className="bg-white border border-navy/10 p-5 h-full">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="w-7 h-7 rounded-full bg-navy text-white text-xs font-semibold flex items-center justify-center flex-shrink-0">{i + 1}</span>
+                      <s.icon size={20} className="text-amber" />
+                    </div>
+                    <h3 className="font-semibold text-navy text-[15px] mb-1.5 leading-tight">{s.title}</h3>
+                    <p className="text-navy/65 text-[13px] leading-relaxed">{s.body}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===================== Company credibility band ===================== */}
+        <section className="bg-navy text-white">
+          <div className="max-w-[1100px] mx-auto px-6 py-12 md:py-14">
+            <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-center">
+              <div>
+                <h2 className="font-serif font-bold text-xl md:text-2xl leading-tight mb-2">
+                  Why {loc.city} importers trust us
+                </h2>
+                <p className="text-white/70 text-[15px] leading-relaxed max-w-[520px]">
+                  Every factory we recommend has been physically vetted against a 12-point verification process — business licence, production capacity, quality systems, and sample quality. You buy direct and own the relationship.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-x-10 gap-y-6 flex-shrink-0">
+                {[
+                  { value: '120+', label: 'Factories visited' },
+                  { value: '50+', label: 'Industries served' },
+                  { value: '12-point', label: 'Verification process' },
+                  { value: '24hr', label: 'Enquiry response' },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <p className="font-serif font-bold text-amber text-2xl md:text-3xl leading-none mb-1">{s.value}</p>
+                    <p className="text-white/60 text-[12px] leading-snug">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===================== Services (cross-link, no duplicate detail) ===================== */}
+        <section className="bg-white">
           <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
             <ScrollReveal>
               <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] mb-3 text-center text-balance">
@@ -290,8 +361,56 @@ export default async function LocationPage(
           </div>
         </section>
 
+        {/* ===================== Case study (only where a real one exists) ===================== */}
+        {loc.caseStudy && (
+          <section className="bg-navy/[0.03] border-t border-navy/10">
+            <div className="max-w-[1000px] mx-auto px-6 py-16 md:py-20">
+              <ScrollReveal>
+                <div className="flex items-center gap-2 mb-5">
+                  <span className="h-px flex-1 bg-navy/10" aria-hidden="true" />
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-navy/40">
+                    {loc.city} case story
+                  </span>
+                  <span className="h-px flex-1 bg-navy/10" aria-hidden="true" />
+                </div>
+                <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-amber bg-amber/5 border border-amber/20 px-3 py-1 rounded-full mb-4">
+                  {loc.caseStudy.tag}
+                </span>
+                <h2 className="font-serif font-bold text-navy text-2xl md:text-[2rem] leading-tight mb-6 text-balance">
+                  {loc.caseStudy.title}
+                </h2>
+                <div className="flex flex-wrap gap-x-5 gap-y-2 mb-8">
+                  {loc.caseStudy.kpis.map((k) => (
+                    <div key={k} className="flex items-center gap-2">
+                      <Star size={15} className="text-amber flex-shrink-0" />
+                      <span className="text-[14px] text-navy/75">{k}</span>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  { label: 'The Challenge', body: loc.caseStudy.challenge },
+                  { label: 'Our Approach', body: loc.caseStudy.approach },
+                  { label: 'The Outcome', body: loc.caseStudy.outcome },
+                ].map((b) => (
+                  <ScrollReveal key={b.label}>
+                    <div className="bg-white border border-navy/10 p-6 h-full">
+                      <h3 className="font-semibold text-navy text-[15px] mb-2">{b.label}</h3>
+                      <p className="text-navy/70 text-[14px] leading-relaxed">{b.body}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+              <p className="text-[11px] text-navy/50 italic mt-5">
+                Client details de-identified. Results are specific to this engagement and do not guarantee identical outcomes.
+              </p>
+            </div>
+          </section>
+        )}
+
         {/* ===================== FAQ ===================== */}
-        <section className="bg-navy/[0.03] border-t border-navy/10">
+        <section className="bg-white border-t border-navy/10">
           <div className="max-w-[900px] mx-auto px-6 py-16 md:py-20">
             <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] mb-10 text-center">
               {loc.city} China Sourcing FAQs

@@ -16,6 +16,15 @@ export interface LocationFaq {
   answer: string
 }
 
+export interface LocationCaseStudy {
+  tag: string
+  title: string
+  challenge: string
+  approach: string
+  outcome: string
+  kpis: string[]
+}
+
 export interface LocationData {
   slug: string // matches nav-links href: /locations/<slug>
   city: string
@@ -35,11 +44,14 @@ export interface LocationData {
   // Local logistics — China port → this city, real transit times
   transitRows: { route: string; days: string }[]
   transitNote: string
+  transitSummary: string // short ocean-transit label for the process step, e.g. "12–18 days"
   // Local industries the city actually imports
   industries: string[]
   industriesIntro: string
   // City-specific FAQ (1-2 unique questions each)
   faqs: LocationFaq[]
+  // Optional real case study (only where a genuine client engagement exists — no fabrication)
+  caseStudy?: LocationCaseStudy
   // Whether the page is built/published (mirrors nav-links live flag)
   live: boolean
 }
@@ -77,6 +89,7 @@ export const LOCATIONS: LocationData[] = [
     ],
     transitNote:
       'Adelaide sits further from the main China–Australia shipping lanes than Sydney or Melbourne, so ocean transit runs a little longer. That makes getting the order right before it ships — verified supplier, audited factory, inspected goods — even more valuable: a failed shipment is a longer, costlier round trip to fix.',
+    transitSummary: '25–30 days',
     industriesIntro:
       'Common South Australian import categories that move through Port Adelaide — and the product types we most often verify for SA clients:',
     industries: [
@@ -134,6 +147,7 @@ export const LOCATIONS: LocationData[] = [
     ],
     transitNote:
       'Sydney\'s fast lanes make it the natural choice for replenishment-driven importers. But a fast shipment of the wrong goods is still a wrong shipment — verification and pre-shipment inspection are what turn speed into reliability.',
+    transitSummary: '12–18 days',
     industriesIntro:
       'NSW imports a broad mix of containerised manufactured goods through Port Botany. The product categories we most often source and verify for Sydney clients:',
     industries: [
@@ -191,6 +205,22 @@ export const LOCATIONS: LocationData[] = [
     ],
     transitNote:
       'Melbourne\'s transit times sit just behind Sydney\'s. For Victorian manufacturers importing components, a late or defective shipment stalls a whole production line — which is why pre-shipment inspection and factory audits pay for themselves.',
+    transitSummary: '15–20 days',
+    caseStudy: {
+      tag: 'AV Equipment · Electronics',
+      title: 'How a Melbourne AV Equipment Importer Verified Their Supply Chain',
+      challenge:
+        'The existing supplier had stopped allowing factory visits. Quality defects had doubled over 12 months, leaving the importer unable to verify in-house production.',
+      approach:
+        'We visited the factory and two alternative suppliers in Guangdong over four days — verifying registrations, production lines, and certifications.',
+      outcome:
+        'We confirmed the factory had shifted to an unregistered sub-contractor, then shortlisted an alternative with 14 years of history and better pricing — transitioned in six weeks with zero interruption.',
+      kpis: [
+        'Alternative supplier found — 14 years AV manufacturing history',
+        'Better unit pricing — margins improved',
+        '6-week transition — zero supply interruption',
+      ],
+    },
     industriesIntro:
       'As Australia\'s manufacturing capital, Victoria imports a heavy mix of production inputs alongside finished goods. The categories we most often source and verify for Melbourne clients:',
     industries: [
