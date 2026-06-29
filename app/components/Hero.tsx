@@ -32,7 +32,7 @@ export default function Hero() {
             loading="eager"
             fetchPriority="high"
             quality={75}
-            sizes="100vw"
+            sizes="(max-width: 767px) 100vw, 0px"
             className="object-cover md:hidden"
           />
           {/* Desktop: factory first-frame (poster for the background video) */}

@@ -99,16 +99,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-AU" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
+    <html lang="en-AU" data-scroll-behavior="smooth" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
       <head>
-        {/* Preload hero poster for LCP — rendered by Hero.tsx */}
-        <link
-          rel="preload"
-          as="image"
-          href="/hero-video-first-frame.webp"
-          fetchPriority="high"
-          crossOrigin="anonymous"
-        />
+        {/* Hero preloading is per-page: each page's hero uses next/image `priority`,
+            which injects the correct preload for THAT page. A global hero preload here
+            would force every sub-page to high-priority-fetch the homepage poster it never
+            shows, stealing priority from its own hero. */}
         <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
