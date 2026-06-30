@@ -40,8 +40,6 @@ const SLUGS_BY_IMPRESSIONS = [
   'cba-share-price-impact-australian-procurement',
   'silver-price-impact-china-manufacturing-cost',
   'thucydides-trap-australia-china-supply-chain',
-  'australia-import-tips',
-  'how-to-plan',
   'bulk-procurement-china-guide',
   'albanese-family-trust-tax-2026',
   'china-business-tours',

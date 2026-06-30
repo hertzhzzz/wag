@@ -55,12 +55,12 @@ const nextConfig = {
       },
       {
         source: '/china-business-travel-guide-2026',
-        destination: '/article/china-business-travel-guide-2026',
+        destination: '/article/visiting-chinese-factories-australian-business-checklist',
         permanent: true,
       },
       {
         source: '/australia-import-tips',
-        destination: '/article/australia-import-tips',
+        destination: '/article/importing-from-china-australia-guide',
         permanent: true,
       },
       {
@@ -71,6 +71,37 @@ const nextConfig = {
       {
         source: '/how-to-import-from-china',
         destination: '/article/importing-from-china-australia-guide',
+        permanent: true,
+      },
+      // Content cleanup 2026-06-30 — 6 off-topic/outdated articles removed, 301 → best match
+      {
+        source: '/article/av-equipment-procurement-china',
+        destination: '/article/bulk-procurement-china-guide',
+        permanent: true,
+      },
+      {
+        source: '/article/ato-china-import-compliance-2026',
+        destination: '/article/importing-from-china-australia-guide',
+        permanent: true,
+      },
+      {
+        source: '/article/australia-import-tips',
+        destination: '/article/importing-from-china-australia-guide',
+        permanent: true,
+      },
+      {
+        source: '/article/china-business-travel-guide-2026',
+        destination: '/article/visiting-chinese-factories-australian-business-checklist',
+        permanent: true,
+      },
+      {
+        source: '/article/china-ev-market-decline-supply-chain-guide',
+        destination: '/article/china-sourcing-risks',
+        permanent: true,
+      },
+      {
+        source: '/article/how-to-plan',
+        destination: '/article/visiting-chinese-factories-australian-business-checklist',
         permanent: true,
       },
       // Duplicate article consolidation (301 -> canonical kept article)
