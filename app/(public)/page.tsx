@@ -10,6 +10,7 @@ import HomeCaseStudy from '@/components/HomeCaseStudy'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { Metadata } from 'next'
+import { buildWebSiteSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: { absolute: 'China Sourcing Agent Australia | Verified Factories' },
@@ -29,21 +30,7 @@ export const metadata: Metadata = {
 }
 
 function WebsiteSchema() {
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Winning Adventure Global",
-    "url": "https://www.winningadventure.com.au",
-    "description": "China factory tours and sourcing services for Australian businesses",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://www.winningadventure.com.au/article?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
-  }
+  const websiteSchema = buildWebSiteSchema()
   return (
     <script
       type="application/ld+json"

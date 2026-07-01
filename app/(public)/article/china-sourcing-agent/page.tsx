@@ -115,7 +115,13 @@ const faqs: Array<{ question: string; answer: string }> = [
 export default function ChinaSourcingAgentPage() {
   return (
     <>
-      <ServiceSchema />
+      <ServiceSchema
+        name="China Sourcing Agent for Australian Businesses"
+        description="China sourcing, factory verification, quality control and procurement support for Australian businesses."
+        url="https://www.winningadventure.com.au/article/china-sourcing-agent"
+        areaServed={{ '@type': 'Country', name: 'Australia' }}
+        serviceType="China Sourcing Agent"
+      />
       {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <Navbar />
       <BreadcrumbSchema items={[

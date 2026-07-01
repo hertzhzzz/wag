@@ -9,7 +9,8 @@
     "build": "next build",
     "build:admin": "next build admin",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "schema:check": "tsx scripts/check-schema.ts"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",

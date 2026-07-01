@@ -165,7 +165,13 @@ export default function ServicesContent() {
 
   return (
     <>
-      <ServiceSchema />
+      <ServiceSchema
+        name="China Sourcing Services"
+        description="China sourcing, factory tours, supplier verification, quality inspection and procurement support for Australian businesses."
+        url="https://www.winningadventure.com.au/services"
+        areaServed={{ '@type': 'Country', name: 'Australia' }}
+        serviceType={['China Sourcing Agent', 'Factory Tour', 'Supplier Verification', 'Quality Inspection', 'Procurement Support']}
+      />
       {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <Navbar />
       <BreadcrumbSchema items={[

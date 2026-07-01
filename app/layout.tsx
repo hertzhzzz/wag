@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import ScrollTracker from './components/ScrollTracker'
-import MarkHeSchema from './components/MarkHeSchema'
+import { buildOrganizationSchema } from '@/lib/schema'
 
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -137,94 +137,9 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": ["Organization", "LocalBusiness"],
-              "name": "Winning Adventure Global",
-              "@id": "https://www.winningadventure.com.au/#organization",
-              "url": "https://www.winningadventure.com.au",
-              "logo": "https://www.winningadventure.com.au/logos/logo.png",
-              "description": "Factory tours and sourcing services in China for Australian businesses. We connect you with verified manufacturers and accompany you on in-person factory visits.",
-              "foundingDate": "2025",
-              "founder": {
-                "@type": "Person",
-                "name": "Andy Liu",
-                "jobTitle": "Founder",
-                "url": "https://www.winningadventure.com.au/about",
-                "sameAs": [
-                  "https://www.linkedin.com/company/winning-adventure-global"
-                ],
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "5/54 Melbourne St",
-                "addressLocality": "North Adelaide",
-                "addressRegion": "SA",
-                "postalCode": "5006",
-                "addressCountry": "AU"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": -34.9258,
-                "longitude": 138.5898
-              },
-              "telephone": "+61-416588198",
-              "email": "info@winningadventure.com.au",
-              "legalName": "WINNING ADVENTURE GLOBAL PTY LTD",
-              "identifier": [
-                { "@type": "PropertyValue", "propertyID": "ACN", "value": "697 886 150" },
-                { "@type": "PropertyValue", "propertyID": "ABN", "value": "94 697 886 150" }
-              ],
-              "areaServed": {
-                "@type": "Country",
-                "name": "Australia"
-              },
-              "serviceType": ["Factory Tour", "Procurement Support", "Supplier Verification"],
-              "priceRange": "Contact for quote",
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "China Sourcing Services",
-                "description": "Factory tours, supplier verification, and end-to-end procurement support for Australian businesses",
-                "url": "https://www.winningadventure.com.au/solutions"
-              },
-              "knowsAbout": [
-                "Chinese manufacturing",
-                "China business tours",
-                "factory verification",
-                "supply chain sourcing",
-                "China factory tours",
-                "supplier vetting",
-                "import from China",
-                "Australian business procurement",
-                "Pearl River Delta manufacturing"
-              ],
-              "sameAs": [
-                "https://www.google.com/maps/place/Winning+Adventure+Global/@-34.9074705,138.6065758,15z/data=!4m6!3m5!1s0x6ad870f9565fbbb3:0x64f74ad4a0ab7b43!8m2!3d-34.9076802!4d138.6063284!16s%2Fg%2F11yyg4dg4j",
-                "https://www.linkedin.com/company/winning-adventure-global",
-                "https://www.facebook.com/winningadventureglobal",
-                "https://www.instagram.com/winningadventureglobal",
-                "https://share.google/Yrax86WiFoxFwFXqD",
-                "https://yelp.com.au/biz/winning-adventure-global-north-adelaide",
-                "https://www.hotfrog.com.au/company/a2d70b0335d2d3fa4ef260449eede6f2/winning-adventure-global-pty-ltd/north-adelaide/business-organizations"
-              ],
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+61-416588198",
-                "contactType": "customer service",
-                "availableLanguage": ["English", "Mandarin", "Cantonese"],
-                "areaServed": "AU",
-                "hoursAvailable": {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "17:00",
-                  "timeZone": "Australia/Adelaide"
-                }
-              }
-            })
+            __html: JSON.stringify(buildOrganizationSchema())
           }}
         />
-        <MarkHeSchema />
       </head>
       <body>
       <main id="main-content">

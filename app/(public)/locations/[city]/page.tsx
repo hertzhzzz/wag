@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { getLiveLocations, getLocation } from '@/data/locations'
 import LocationCityContent from './LocationCityContent'
+import ServiceSchema from '@/components/ServiceSchema'
 
 const BASE = 'https://www.winningadventure.com.au'
 
@@ -55,27 +56,14 @@ export default async function LocationPage(
 
   const url = `${BASE}/locations/${loc.slug}`
 
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: `China Sourcing Agent for ${loc.city} Importers`,
-    serviceType: 'China Sourcing Agent',
-    provider: {
-      '@type': ['Organization', 'LocalBusiness'],
-      name: 'Winning Adventure Global',
-      '@id': `${BASE}/#organization`,
-      url: BASE,
-    },
-    areaServed: { '@type': 'City', name: `${loc.city}, ${loc.state}` },
-    description: `Australia-based China sourcing, supplier verification, factory audit, and quality inspection for importers in ${loc.city}, ${loc.state}.`,
-    priceRange: 'Quoted per project — free consult to scope',
-  }
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      <ServiceSchema
+        name={`China Sourcing Agent for ${loc.city} Importers`}
+        serviceType="China Sourcing Agent"
+        url={url}
+        areaServed={{ '@type': 'City', name: `${loc.city}, ${loc.state}` }}
+        description={`Australia-based China sourcing, supplier verification, factory audit, and quality inspection for importers in ${loc.city}, ${loc.state}.`}
       />
       <Navbar />
       <BreadcrumbSchema
