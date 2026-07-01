@@ -133,8 +133,13 @@ export function createMdxComponents(ctaTitle: string, ctaText: string, ctaButton
     // src can be full URL (https://images.unsplash.com/...) or relative path (/social/blog/...)
     FloatImage: ({ src, alt, align = 'right', width = 280 }: { src: string; alt: string; align?: 'left' | 'right'; width?: number }) => {
       const floatClass = align === 'left' ? 'float-left' : 'float-right'
+      // The gap that matters is on the side wrapping text sits against —
+      // a left float wraps text on its RIGHT, so marginInlineEnd needs the
+      // spacing; a right float wraps text on its LEFT, so marginInlineStart
+      // does. (Previously these two were swapped, so the wrapped text sat
+      // flush against the image with no breathing room.)
       return (
-        <figure className={`my-8 ${floatClass}`} style={{ width: `${width}px`, marginInlineEnd: align === 'right' ? '2.5rem' : '0', marginInlineStart: align === 'left' ? '2.5rem' : '0', marginBlockStart: '1.5rem', marginBlockEnd: '1.5rem' }}>
+        <figure className={`my-8 ${floatClass}`} style={{ width: `${width}px`, marginInlineEnd: align === 'left' ? '2.5rem' : '0', marginInlineStart: align === 'right' ? '2.5rem' : '0', marginBlockStart: '1.5rem', marginBlockEnd: '1.5rem' }}>
           <Image src={src} alt={alt} width={width} height={Math.round(width * 0.75)} className="rounded-lg w-full" />
         </figure>
       )
