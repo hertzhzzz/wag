@@ -45,17 +45,6 @@
           "report_id": "fengsheng-stage"
         },
         {
-          "id": "wanma-display",
-          "type": "due_diligence_report",
-          "title": "Wanma Electronics — Supplier Due Diligence & Capability Assessment",
-          "supplier": "Shenzhen Wanma Electronic Technology Co., Ltd.",
-          "category": "Touch Displays, Digital Signage, Interactive Kiosks, Studio Monitors",
-          "date": "2026-06-12",
-          "status": "delivered",
-          "client_reviewed": false,
-          "report_id": "wanma-display"
-        },
-        {
           "id": "zhaotong-video",
           "type": "due_diligence_report",
           "title": "STVIDEO Zhaotong — Supplier Due Diligence & Capability Assessment",
