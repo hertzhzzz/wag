@@ -78,6 +78,28 @@
           "report_id": "lax-audio"
         },
         {
+          "id": "golden-sea",
+          "type": "due_diligence_report",
+          "title": "Golden Sea (Haoyang) — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangzhou Haoyang Electronic Co., Ltd.",
+          "category": "Professional Stage & Performance Lighting (Ayrton · SGM · TERBLY)",
+          "date": "2026-06-30",
+          "status": "draft",
+          "client_reviewed": false,
+          "report_id": "golden-sea"
+        },
+        {
+          "id": "bolang",
+          "type": "due_diligence_report",
+          "title": "Guangdong Bolang Lighting & Audio Technology — Supplier Due Diligence & Capability Assessment",
+          "supplier": "Guangdong Bolang Lighting & Audio Technology Co., Ltd. (Color)",
+          "category": "Professional Stage Lighting, Film & TV Lighting, Architectural & Entertainment Lighting",
+          "date": "2026-07-01",
+          "status": "delivered",
+          "client_reviewed": false,
+          "report_id": "bolang"
+        },
+        {
           "id": "it01",
           "type": "itinerary",
           "title": "Guangzhou Factory Visit Itinerary — July 2026",
