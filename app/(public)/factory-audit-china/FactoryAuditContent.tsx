@@ -7,27 +7,12 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import LeadForm from '@/components/LeadForm'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ServiceSchema from '@/components/ServiceSchema'
 import {
   Search, ShieldCheck, Building2, ClipboardCheck,
   Users, AlertTriangle, FileCheck2, Check,
 } from 'lucide-react'
 import { useT } from '@/i18n/useT'
-
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Factory Audit in China',
-  serviceType: 'Factory Audit',
-  provider: {
-    '@type': 'Organization',
-    name: 'Winning Adventure Global',
-    url: 'https://www.winningadventure.com.au',
-  },
-  areaServed: { '@type': 'Country', name: 'Australia' },
-  description:
-    'On-site factory audit for Australian importers sourcing from China: production-capability assessment, ISO 9001-aligned quality management system review, equipment & workforce verification, documentation audit, and social compliance screening (BSCI/SMETA-aligned). Australia-based oversight, in-person in China.',
-  priceRange: 'Quoted per project — free consult to scope',
-}
 
 const faqs = [
   {
@@ -125,9 +110,12 @@ export default function FactoryAuditContent() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      <ServiceSchema
+        name="Factory Audit in China"
+        serviceType="Factory Audit"
+        url="https://www.winningadventure.com.au/factory-audit-china"
+        areaServed={{ '@type': 'Country', name: 'Australia' }}
+        description="On-site factory audit for Australian importers sourcing from China: production capability, quality management, equipment, workforce, documentation, and social-compliance screening."
       />
       <Navbar />
       <BreadcrumbSchema

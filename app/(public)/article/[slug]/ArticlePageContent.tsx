@@ -36,6 +36,7 @@ interface ArticlePageContentProps {
   nextArticle?: ArticleNavItem
   formattedDatePublished: string
   formattedDateModified: string
+  wordCount: number
 }
 
 // ============================================
@@ -54,6 +55,7 @@ export function ArticlePageContent({
   nextArticle,
   formattedDatePublished,
   formattedDateModified,
+  wordCount,
 }: ArticlePageContentProps) {
   const t = useT()
 
@@ -76,8 +78,10 @@ export function ArticlePageContent({
         author={fm.author}
         datePublished={formattedDatePublished}
         dateModified={formattedDateModified}
-        image={fm.coverImage}
+        image={fm.coverImage || '/og-image.webp'}
         category={fm.category}
+        tags={fm.tags}
+        wordCount={wordCount}
       />
 
       {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}

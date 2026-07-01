@@ -4,6 +4,7 @@ import { Metadata } from 'next'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { getLiveIndustries, getIndustry } from '@/data/industries'
 import IndustryContent from './IndustryContent'
+import ServiceSchema from '@/components/ServiceSchema'
 
 const BASE = 'https://www.winningadventure.com.au'
 
@@ -53,27 +54,14 @@ export default async function IndustryPage(
 
   const url = `${BASE}/industries/${ind.slug}`
 
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: `${ind.industry} Sourcing from China`,
-    serviceType: 'China Sourcing Agent',
-    provider: {
-      '@type': ['Organization', 'LocalBusiness'],
-      name: 'Winning Adventure Global',
-      '@id': `${BASE}/#organization`,
-      url: BASE,
-    },
-    areaServed: { '@type': 'Country', name: 'Australia' },
-    description: `Australia-based China sourcing, supplier verification, factory audit, and quality inspection for ${ind.industry.toLowerCase()} importers.`,
-    priceRange: 'Quoted per project — free consult to scope',
-  }
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      <ServiceSchema
+        name={`${ind.industry} Sourcing from China`}
+        serviceType="China Sourcing Agent"
+        url={url}
+        areaServed={{ '@type': 'Country', name: 'Australia' }}
+        description={`Australia-based China sourcing, supplier verification, factory audit, and quality inspection for ${ind.industry.toLowerCase()} importers.`}
       />
       <BreadcrumbSchema
         items={[

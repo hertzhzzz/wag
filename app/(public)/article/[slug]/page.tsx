@@ -111,6 +111,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         nextArticle={nextArticle}
         formattedDatePublished={formatDateForSchema(fm.date)}
         formattedDateModified={fm.updatedDate ? formatDateForSchema(fm.updatedDate) : formatDateForSchema(fm.date)}
+        wordCount={content.split(/\s+/).filter(Boolean).length}
       />
       <Footer />
     </>

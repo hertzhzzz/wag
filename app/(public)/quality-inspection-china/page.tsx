@@ -1,6 +1,7 @@
 // app/(public)/quality-inspection-china/page.tsx
 import { Metadata } from 'next'
 import QualityInspectionContent from './QualityInspectionContent'
+import ServiceSchema from '@/components/ServiceSchema'
 
 export const metadata: Metadata = {
   title: { absolute: 'Pre-Shipment Quality Inspection in China | AQL Sampling & Testing' },
@@ -30,28 +31,15 @@ export const metadata: Metadata = {
   },
 }
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Pre-Shipment Quality Inspection in China',
-  serviceType: 'Quality Inspection',
-  provider: {
-    '@type': 'Organization',
-    name: 'Winning Adventure Global',
-    url: 'https://www.winningadventure.com.au',
-  },
-  areaServed: { '@type': 'Country', name: 'Australia' },
-  description:
-    'Pre-shipment quality inspection for Australian importers: AQL random sampling (ISO 2859-1 / ANSI-ASQ Z1.4 standards), functional testing, packaging and labeling verification, quantity confirmation, and container loading supervision. We inspect on the factory floor on your behalf.',
-  priceRange: 'Quoted per inspection day — free consult to scope',
-}
-
 export default function QualityInspectionPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      <ServiceSchema
+        name="Pre-Shipment Quality Inspection in China"
+        serviceType="Quality Inspection"
+        url="https://www.winningadventure.com.au/quality-inspection-china"
+        areaServed={{ '@type': 'Country', name: 'Australia' }}
+        description="Pre-shipment quality inspection for Australian importers: AQL random sampling, functional testing, packaging and labeling verification, quantity confirmation, and container loading supervision."
       />
       <QualityInspectionContent />
     </>

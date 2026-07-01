@@ -1,6 +1,7 @@
 // app/(public)/supplier-verification/page.tsx
 import { Metadata } from 'next'
 import SupplierVerificationContent from './SupplierVerificationContent'
+import ServiceSchema from '@/components/ServiceSchema'
 
 export const metadata: Metadata = {
   title: { absolute: 'Supplier Verification in China for Australian Importers' },
@@ -30,28 +31,15 @@ export const metadata: Metadata = {
   },
 }
 
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Supplier Verification in China',
-  serviceType: 'Supplier Verification',
-  provider: {
-    '@type': 'Organization',
-    name: 'Winning Adventure Global',
-    url: 'https://www.winningadventure.com.au',
-  },
-  areaServed: { '@type': 'Country', name: 'Australia' },
-  description:
-    'Remote supplier verification for Australian importers sourcing from China: unified social credit code (business license) authentication, capability and export-history audit, and pre-shipment quality inspection across a database of 1,200+ pre-screened factories.',
-  priceRange: 'Contact for quote',
-}
-
 export default function SupplierVerificationPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      <ServiceSchema
+        name="Supplier Verification in China"
+        serviceType="Supplier Verification"
+        url="https://www.winningadventure.com.au/supplier-verification"
+        areaServed={{ '@type': 'Country', name: 'Australia' }}
+        description="Remote supplier verification for Australian importers sourcing from China: business-license authentication, capability and export-history audit, and pre-shipment quality inspection."
       />
       <SupplierVerificationContent />
     </>
