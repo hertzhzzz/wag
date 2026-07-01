@@ -17,6 +17,7 @@ import { MidArticleCTA } from './MidArticleCTA'
 import { ServicesStrip } from './ServicesStrip'
 import type { Frontmatter, ArticleNavItem } from './types'
 import { trackCTAClick } from '@/lib/analytics'
+import MobileCTABar from '@/components/MobileCTABar'
 
 // ============================================
 // TYPES
@@ -64,6 +65,9 @@ export function ArticlePageContent({
       {/* Back to top floating button */}
       <BackToTopButton />
 
+      {/* Mobile persistent CTA — desktop gets this via SidebarRail instead */}
+      <MobileCTABar />
+
       {/* SEO Schemas */}
       <ArticleSchema
         title={fm.title}
@@ -88,7 +92,7 @@ export function ArticlePageContent({
       <HeroSection fm={fm} t={t} />
 
       {/* Article Body — content column + sticky sidebar rail on desktop */}
-      <div className="py-10 px-6">
+      <div className="py-10 px-6 pb-24 lg:pb-10">
         <div className="max-w-[1080px] mx-auto lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-12">
           {/* Main article content */}
           <main className="min-w-0">

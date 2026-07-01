@@ -528,6 +528,7 @@ export const en = {
   "article.cta.buttonPrimary": "Get your free sourcing shortlist",
   "article.cta.buttonSecondary": "Explore our services",
   "article.cta.disclaimer": "Free · No obligation · We reply within 4 business hours",
+  "article.mobile_cta.button": "Book a Free Consult",
   "article.services.sectionHeading": "How Winning Adventure Global helps",
   "article.services.sectionDescription": "Whichever way you source from China, you get someone you can trust on the ground. Choose the approach that fits your business.",
   "article.services.tier1Title": "One-Time Procurement",

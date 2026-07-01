@@ -530,6 +530,7 @@ export const zh: Partial<Record<keyof typeof en, string>> = {
   "article.cta.buttonPrimary": "获取免费采购清单",
   "article.cta.buttonSecondary": "了解我们的服务",
   "article.cta.disclaimer": "完全免费 · 无任何义务 · 4 小时内回复",
+  "article.mobile_cta.button": "预约免费咨询",
   "article.services.sectionHeading": "Winning Adventure Global 如何帮助你",
   "article.services.sectionDescription": "无论采用哪种方式从中国采购，你都会拥有一个值得信任的地面合作伙伴。选择最适合你业务的方案。",
   "article.services.tier1Title": "一次性采购",
