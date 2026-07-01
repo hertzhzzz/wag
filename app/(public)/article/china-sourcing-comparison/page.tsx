@@ -1,9 +1,9 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
 import { XCircle, Minus } from 'lucide-react'
 import { Metadata } from 'next'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import TrackedEnquiryLink from '@/components/TrackedEnquiryLink'
 
 export const metadata: Metadata = {
   title: 'China Sourcing Options Compared | Winning Adventure Global',
@@ -242,12 +242,13 @@ export default function ChinaSourcingComparisonPage() {
           <p className="text-[#0F2D5E]/70 mb-6 leading-relaxed">
             Book a consultation and we will walk you through the honest answer — including whether we are the right fit.
           </p>
-          <Link
-            href="/enquiry"
+          <TrackedEnquiryLink
+            buttonName="Book a Consultation"
+            location="china-sourcing-comparison-bottom-cta"
             className="inline-block bg-[#0F2D5E] text-white py-3.5 px-8 text-base font-semibold transition-colors hover:bg-[#1a4080] min-h-11"
           >
             Book a Consultation
-          </Link>
+          </TrackedEnquiryLink>
         </div>
       </div>
 

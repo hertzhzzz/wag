@@ -7,6 +7,7 @@ import { aboutFaqs } from '@/data/faqs-about'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import ScrollReveal from '@/components/ScrollReveal'
 import { Sparkles, Tractor } from 'lucide-react'
+import { trackCTAClick } from '@/lib/analytics'
 
 export default function AboutContent() {
   const t = useT()
@@ -86,6 +87,7 @@ export default function AboutContent() {
           <Link
             href="/enquiry"
             className="inline-block bg-amber text-navy text-sm font-semibold py-3 px-8 tracking-wide transition-opacity hover:opacity-80 rounded-none min-h-11"
+            onClick={() => trackCTAClick('Book Consultation', 'about-page')}
           >
             {t('page.about.cta_consultation')}
           </Link>

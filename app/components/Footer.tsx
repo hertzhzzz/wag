@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useT } from '@/i18n/useT'
+import { trackCTAClick } from '@/lib/analytics'
 
 export default function Footer() {
   const t = useT()
@@ -121,7 +122,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/enquiry" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/enquiry" className="text-white/70 text-sm hover:text-white transition-colors" onClick={() => trackCTAClick('Contact/Enquiry', 'footer')}>
                   {t('footer.linkContact')}
                 </Link>
               </li>

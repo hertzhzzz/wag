@@ -7,6 +7,7 @@ import CityList from './CityList'
 import DirectoryMap from './DirectoryMap'
 import { directoryCities } from './data/directory-cities'
 import { IndustryFilter, CityEntry } from './types'
+import { trackCTAClick } from '@/lib/analytics'
 
 export default function DirectorySection() {
   const [activeFilter, setActiveFilter] = useState<IndustryFilter>('All')
@@ -96,6 +97,7 @@ export default function DirectorySection() {
           <Link
             href="/enquiry"
             className="inline-flex items-center gap-3 px-6 py-3 text-sm font-semibold transition-all duration-300 no-underline min-h-11 hover:gap-4 bg-amber text-white hover:bg-amber/90"
+            onClick={() => trackCTAClick('View Full Directory', 'factory-directory-section-bottom')}
           >
             View Full Directory
             <svg

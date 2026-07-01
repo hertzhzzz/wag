@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { CheckCircle2, ShieldCheck } from 'lucide-react'
 import { useT } from '@/i18n/useT'
+import { trackFormSubmission } from '@/lib/analytics'
 
 // 共享获客表单：3 字段（姓名/邮箱/需求）→ POST 现有 /api/enquiry
 // 字段名严格匹配后端 Zod schema（fullName/email/lookingFor），industry 预填以标记来源
@@ -43,6 +44,7 @@ export default function LeadForm({
         body: JSON.stringify({ ...form, industry: 'Supplier Verification' }),
       })
       if (!res.ok) throw new Error()
+      trackFormSubmission('lead_form', typeof window !== 'undefined' ? window.location.pathname : '')
       setStatus('success')
     } catch {
       setStatus('error')

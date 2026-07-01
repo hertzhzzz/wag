@@ -4,6 +4,8 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { EvidenceImage } from "../components/evidence-image"
+import TrackedEnquiryLink from "@/components/TrackedEnquiryLink"
+import TrackedInternalLink from "@/components/TrackedInternalLink"
 
 interface RelatedArticle {
   slug: string
@@ -356,22 +358,23 @@ export default async function FactoryDetailPage({ params }: { params: Promise<{ 
                   <h2 className="text-lg font-bold text-navy mb-3">Related Sourcing Guides</h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {related.map((article) => (
-                      <Link
+                      <TrackedInternalLink
                         key={article.slug}
                         href={`/article/${article.slug}`}
+                        linkText={article.title}
                         className="block bg-gray-50 rounded-lg p-3.5 hover:bg-navy/5 transition border border-gray-100"
                       >
                         <div className="text-xs text-gray-400 mb-0.5">Sourcing Guide</div>
                         <div className="text-sm font-medium text-navy leading-snug line-clamp-2">
                           {article.title}
                         </div>
-                      </Link>
+                      </TrackedInternalLink>
                     ))}
                   </div>
                   <div className="mt-3 text-right">
-                    <Link href="/article" className="text-xs text-amber-600 hover:text-amber-700 font-medium transition">
+                    <TrackedInternalLink href="/article" linkText="View all sourcing guides" className="text-xs text-amber-600 hover:text-amber-700 font-medium transition">
                       View all sourcing guides →
-                    </Link>
+                    </TrackedInternalLink>
                   </div>
                 </section>
               )
@@ -437,12 +440,13 @@ export default async function FactoryDetailPage({ params }: { params: Promise<{ 
             >
               Browse All Factories
             </Link>
-            <Link
-              href="/enquiry"
+            <TrackedEnquiryLink
+              buttonName="Request Factory Matching"
+              location="factory-detail-bottom-cta"
               className="inline-block bg-navy text-white px-6 py-2.5 rounded font-medium text-sm hover:bg-navy/90 transition"
             >
               Request Factory Matching →
-            </Link>
+            </TrackedEnquiryLink>
           </div>
         </div>
       </div>

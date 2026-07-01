@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import { trackCTAClick, trackInternalLink } from '@/lib/analytics'
 
 const PAGE_SIZE = 9
 
@@ -157,6 +158,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
           <Link
             href="/services"
             className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/services', 'What We Offer')}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
               Services
@@ -171,6 +173,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
           <Link
             href="/article/china-sourcing-agent"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/article/china-sourcing-agent', 'China Sourcing Agent')}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
               Service Page
@@ -185,6 +188,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
           <Link
             href="/article/china-sourcing-agent"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/article/china-sourcing-agent', 'China Sourcing Agent')}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
               Service Page
@@ -199,6 +203,7 @@ export default function ResourcesContent({ articles }: ResourcesContentProps) {
           <Link
             href="/enquiry"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+            onClick={() => trackCTAClick('Book a Consultation', 'resources-explore-cards')}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
               Get Started

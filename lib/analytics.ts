@@ -61,3 +61,30 @@ export function trackFactoryLinkClick(articleSlug: string, factorySlug: string):
     timestamp: new Date().toISOString(),
   })
 }
+
+/**
+ * Track internal link clicks (article-to-article, article-to-service, etc.)
+ */
+export function trackInternalLink(fromPage: string, toPage: string, linkText: string): void {
+  if (typeof window === 'undefined' || !window.gtag) return
+
+  window.gtag('event', 'internal_link_click', {
+    from_page: fromPage,
+    to_page: toPage,
+    link_text: linkText,
+    timestamp: new Date().toISOString(),
+  })
+}
+
+/**
+ * Track enquiry form submission
+ */
+export function trackFormSubmission(formType: string, pagePath: string): void {
+  if (typeof window === 'undefined' || !window.gtag) return
+
+  window.gtag('event', 'form_submit', {
+    form_type: formType,
+    page_path: pagePath,
+    timestamp: new Date().toISOString(),
+  })
+}

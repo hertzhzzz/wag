@@ -8,6 +8,7 @@ import { CheckCircle, MapPin, Mail, DollarSign, Building2 } from 'lucide-react'
 import { KeyboardAwareInput } from './components/KeyboardAwareInput'
 import { KeyboardAwareTextarea } from './components/KeyboardAwareTextarea'
 import { useT } from '@/i18n/useT'
+import { trackFormSubmission } from '@/lib/analytics'
 
 export default function EnquiryForm() {
   const t = useT()
@@ -91,6 +92,7 @@ export default function EnquiryForm() {
       })
       if (res.ok) {
         setSubmitted(true)
+        trackFormSubmission('enquiry', '/enquiry')
         // GA4 + Meta Pixel fire after API confirms success
         setTimeout(() => {
           const win = window as Window & { fbq?: Function; gtag?: Function }

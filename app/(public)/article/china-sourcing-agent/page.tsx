@@ -5,6 +5,7 @@ import { CheckCircle, Globe, Shield, Users, ArrowRight } from 'lucide-react'
 import { Metadata } from 'next'
 import ServiceSchema from '@/components/ServiceSchema'
 import FAQ from '@/components/FAQ'
+import TrackedEnquiryLink from '@/components/TrackedEnquiryLink'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
@@ -289,9 +290,9 @@ export default function ChinaSourcingAgentPage() {
           <FAQ faqs={faqs} />
           <p className="text-center text-sm text-gray-500 mt-8">
             Have a more specific question?{' '}
-            <Link href="/enquiry" className="text-[#0F2D5E] font-semibold underline hover:text-[#F59E0B]">
+            <TrackedEnquiryLink buttonName="Send us an enquiry" location="china-sourcing-agent-faq" className="text-[#0F2D5E] font-semibold underline hover:text-[#F59E0B]">
               Send us an enquiry
-            </Link>
+            </TrackedEnquiryLink>
           </p>
         </div>
       </div>
@@ -305,12 +306,13 @@ export default function ChinaSourcingAgentPage() {
           <p className="text-[#0F2D5E]/70 mb-6 leading-relaxed">
             Tell us what you are looking to source. We will shortlist factories, coordinate your visit, and provide full bilingual on-site support.
           </p>
-          <Link
-            href="/enquiry"
+          <TrackedEnquiryLink
+            buttonName="Book a Consultation"
+            location="china-sourcing-agent-bottom-cta"
             className="inline-block bg-[#0F2D5E] text-white py-3.5 px-8 text-base font-semibold transition-colors hover:bg-[#1a4080] min-h-11"
           >
             Book a Consultation <ArrowRight className="inline ml-2" size={16} />
-          </Link>
+          </TrackedEnquiryLink>
         </div>
       </div>
 

@@ -10,6 +10,7 @@ import { servicesMenu } from '@/data/nav-links'
 import LanguageToggle from '@/components/LanguageToggle'
 import { useT } from '@/i18n/useT'
 import type { TKey } from '@/i18n/useT'
+import { trackCTAClick } from '@/lib/analytics'
 
 export default function Navbar({ rightContent }: { rightContent?: React.ReactNode }) {
   const t = useT()
@@ -67,7 +68,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
             <Link href="/about" className="nav-link text-navy">{t('nav.about')}</Link>
           </li>
           <li>
-            <Link href="/enquiry" className="nav-link text-navy">{t('nav.enquiry')}</Link>
+            <Link href="/enquiry" className="nav-link text-navy" onClick={() => trackCTAClick('Enquiry Nav Link', 'navbar-desktop')}>{t('nav.enquiry')}</Link>
           </li>
         </ul>
 
@@ -84,6 +85,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
               <Link
                 href="/enquiry"
                 className="text-[13px] font-medium px-[22px] py-[9px] text-white bg-navy flex-shrink-0 shadow-md hover:shadow-lg hover:translate-y-[-1px] transition-all"
+                onClick={() => trackCTAClick('Book Consult', 'navbar-desktop-cta')}
               >
                 {t('nav.bookConsult')}
               </Link>
@@ -207,7 +209,7 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
             <Link
               href="/enquiry"
               className="block min-h-11 px-4 flex items-center text-navy"
-              onClick={handleLinkClick}
+              onClick={() => { handleLinkClick(); trackCTAClick('Enquiry Nav Link', 'navbar-mobile') }}
             >
               {t('nav.enquiry')}
             </Link>

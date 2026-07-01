@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Package, Plane, Monitor, ArrowRight } from 'lucide-react'
 import { useT } from '@/i18n/useT'
+import { trackInternalLink } from '@/lib/analytics'
 
 // ============================================
 // "HOW WE HELP" SERVICES STRIP
@@ -52,6 +53,7 @@ export function ServicesStrip() {
                 ? 'bg-[#0F2D5E] border-[#0F2D5E] text-white hover:shadow-[0_12px_30px_rgba(15,45,94,0.25)]'
                 : 'bg-white border-gray-200 text-[#0F2D5E] hover:border-[#0F2D5E]/40 hover:shadow-[0_8px_24px_rgba(15,45,94,0.1)]'
             }`}
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/services', title)}
           >
             <span
               className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${

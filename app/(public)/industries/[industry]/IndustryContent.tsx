@@ -8,6 +8,7 @@ import LeadForm from '@/components/LeadForm'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { useT } from '@/i18n/useT'
+import { trackInternalLink } from '@/lib/analytics'
 import {
   ShieldCheck, ClipboardCheck, Boxes, AlertTriangle,
   Building2, Check, ArrowRight, ClipboardList, Search, PackageCheck, FileCheck2,
@@ -311,6 +312,7 @@ export default function IndustryContent({ ind }: { ind: IndustryData }) {
                         key={s.href}
                         href={s.href}
                         className="group flex items-start gap-3 no-underline"
+                        onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', s.href, s.title)}
                       >
                         <s.icon size={20} className="text-amber flex-shrink-0 mt-0.5" />
                         <div>

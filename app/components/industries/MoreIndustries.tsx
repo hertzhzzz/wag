@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { MoreIndustryCategory } from './types'
+import { trackCTAClick } from '@/lib/analytics'
 
 interface MoreIndustriesProps {
   categories: MoreIndustryCategory[]
@@ -33,6 +34,7 @@ export default function MoreIndustries({ categories }: MoreIndustriesProps) {
         <Link
           href="/enquiry"
           className="inline-flex items-center gap-2 text-[0.8rem] font-semibold text-navy border border-navy px-6 py-3 rounded-sm no-underline hover:bg-navy hover:text-white transition-all"
+          onClick={() => trackCTAClick('Industry Enquiry CTA', 'industries-more-industries')}
         >
           Don&apos;t see your industry? We cover 50+ sectors — let&apos;s talk →
         </Link>

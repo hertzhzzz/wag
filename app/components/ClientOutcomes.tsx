@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Search, Factory, Star, ArrowRight } from 'lucide-react'
 import { useT } from '@/i18n/useT'
+import { trackCTAClick } from '@/lib/analytics'
 
 export default function ClientOutcomes() {
   const t = useT()
@@ -94,6 +95,7 @@ export default function ClientOutcomes() {
           <Link
             href="/enquiry"
             className="inline-flex items-center gap-2 bg-navy text-white font-semibold px-5 py-2.5 text-[13px] hover:bg-navy/90 transition-colors flex-shrink-0 ring-1 ring-white/20"
+            onClick={() => trackCTAClick('Client Outcomes CTA', 'homepage-client-outcomes')}
           >
             {t('home.outcomes.ctaButton')} <ArrowRight size={14} />
           </Link>

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { useT } from '@/i18n/useT'
+import { trackCTAClick } from '@/lib/analytics'
 
 // ============================================
 // MID-ARTICLE CTA
@@ -28,6 +29,7 @@ export function MidArticleCTA() {
           <Link
             href="/enquiry"
             className="inline-flex items-center justify-center gap-2 bg-[#F59E0B] text-[#0F2D5E] font-semibold text-sm px-6 py-3 rounded-md hover:bg-white transition-colors duration-200"
+            onClick={() => trackCTAClick('Article Mid CTA', 'article-mid-content')}
           >
             {t('article.cta.buttonPrimary')}
             <ArrowRight size={16} aria-hidden="true" />

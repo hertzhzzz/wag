@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useT } from '@/i18n/useT'
+import { trackCTAClick, trackInternalLink } from '@/lib/analytics'
 
 const PAGE_SIZE = 9
 
@@ -159,6 +160,7 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
           <Link
             href="/services"
             className="block bg-navy/5 border border-navy/10 p-7 hover:bg-navy/10 transition-colors"
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/services', t('article.list.explore.services.title'))}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-amber bg-amber/10 px-2.5 py-1 w-fit block mb-4">
               {t('article.list.explore.services.label')}
@@ -173,6 +175,7 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
           <Link
             href="/article/china-sourcing-agent"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/article/china-sourcing-agent', t('article.list.explore.sourcingAgent.title'))}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
               {t('article.list.explore.sourcingAgent.label')}
@@ -187,6 +190,7 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
           <Link
             href="/article/china-sourcing-agent"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/article/china-sourcing-agent', t('article.list.explore.sourcingAgent.title'))}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
               {t('article.list.explore.sourcingAgent.label')}
@@ -201,6 +205,7 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
           <Link
             href="/enquiry"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
+            onClick={() => trackCTAClick('Book a Consultation', 'article-list-explore-cards')}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
               {t('article.list.explore.consultation.label')}

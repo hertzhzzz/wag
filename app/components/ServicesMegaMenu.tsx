@@ -6,6 +6,7 @@ import { servicesMenu } from '@/data/nav-links'
 import { ArrowRight } from 'lucide-react'
 import { useT } from '@/i18n/useT'
 import type { TKey } from '@/i18n/useT'
+import { trackCTAClick } from '@/lib/analytics'
 
 export default function ServicesMegaMenu({ onNavigate }: { onNavigate?: () => void }) {
   const t = useT()
@@ -57,7 +58,7 @@ export default function ServicesMegaMenu({ onNavigate }: { onNavigate?: () => vo
           </p>
           <Link
             href="/enquiry"
-            onClick={onNavigate}
+            onClick={() => { onNavigate?.(); trackCTAClick('Book Consult', 'services-mega-menu') }}
             className="inline-flex items-center gap-1.5 text-[13px] font-semibold px-[18px] py-[10px] bg-navy text-white hover:bg-navy/90 transition-colors self-start"
           >
             {t('nav.bookConsult')} <ArrowRight size={15} aria-hidden="true" />

@@ -5,6 +5,7 @@ import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { useT } from '@/i18n/useT'
 import { TableOfContents } from './TableOfContents'
 import type { Heading } from './types'
+import { trackCTAClick } from '@/lib/analytics'
 
 // ============================================
 // STICKY SIDEBAR RAIL (desktop only)
@@ -66,6 +67,7 @@ export function SidebarRail({ headings }: { headings: Heading[] }) {
             <Link
               href="/enquiry"
               className="flex items-center justify-center gap-2 w-full bg-[#0F2D5E] text-white text-sm font-semibold px-4 py-3 rounded-md hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors duration-200"
+              onClick={() => trackCTAClick('Article Sidebar CTA', 'article-sidebar')}
             >
               {t('article.sidebar.buttonPrimary')}
               <ArrowRight size={15} aria-hidden="true" />

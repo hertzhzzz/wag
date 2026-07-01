@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { slugify } from './string-utils'
 import { FAQ } from './FAQ'
+import TrackedEnquiryLink from '@/components/TrackedEnquiryLink'
 import type { TipProps, InlineCTAProps } from './types'
 
 // ============================================
@@ -22,12 +22,13 @@ export function InlineCTA({ ctaTitle, ctaText, ctaButtonText }: InlineCTAProps) 
     <div className="my-10 bg-[#f8f9fb] border-l-4 border-[#F59E0B] p-6">
       <p className="text-sm font-semibold text-[#0F2D5E] mb-1">{ctaTitle}</p>
       <p className="text-sm text-gray-600 mb-4">{ctaText}</p>
-      <Link
-        href="/enquiry"
+      <TrackedEnquiryLink
+        buttonName={ctaButtonText}
+        location="article-inline-cta"
         className="inline-block bg-[#0F2D5E] text-white text-sm font-semibold px-6 py-3 hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors"
       >
         {ctaButtonText}
-      </Link>
+      </TrackedEnquiryLink>
     </div>
   )
 }

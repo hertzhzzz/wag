@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Industry } from './types'
+import { trackCTAClick } from '@/lib/analytics'
 
 interface FeaturedPanelProps {
   industries: Industry[]
@@ -48,6 +49,7 @@ export default function FeaturedPanel({ industries, activeIndex, isMobile }: Fea
               <Link
                 href="/enquiry"
                 className="inline-flex items-center gap-2 bg-amber text-navy text-[0.75rem] font-semibold tracking-[0.08em] uppercase py-2.5 px-4 no-underline transition-all hover:bg-white hover:text-navy w-fit"
+                onClick={() => trackCTAClick(`Enquire (${industry.name})`, 'industries-featured-panel-mobile')}
               >
                 Enquire →
               </Link>
@@ -123,6 +125,7 @@ export default function FeaturedPanel({ industries, activeIndex, isMobile }: Fea
         <Link
           href="/enquiry"
           className="inline-flex items-center gap-2.5 bg-amber text-navy text-[0.8rem] font-semibold tracking-[0.08em] uppercase py-3 px-6 no-underline transition-all hover:bg-white hover:text-navy w-fit"
+          onClick={() => trackCTAClick(`Enquire About ${active.name}`, 'industries-featured-panel-desktop')}
         >
           Enquire About {active.name} →
         </Link>

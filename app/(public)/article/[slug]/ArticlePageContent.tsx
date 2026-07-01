@@ -16,6 +16,7 @@ import { SidebarRail } from './SidebarRail'
 import { MidArticleCTA } from './MidArticleCTA'
 import { ServicesStrip } from './ServicesStrip'
 import type { Frontmatter, ArticleNavItem } from './types'
+import { trackCTAClick } from '@/lib/analytics'
 
 // ============================================
 // TYPES
@@ -238,6 +239,7 @@ function BottomCTA({ fm, t }: { fm: Frontmatter; t: TFn }) {
         <Link
           href="/enquiry"
           className="inline-block bg-[#0F2D5E] text-white font-semibold px-6 py-3 hover:bg-[#F59E0B] hover:text-[#0F2D5E] transition-colors rounded-sm text-sm"
+          onClick={() => trackCTAClick(fm.ctaButtonText, 'article-bottom-cta')}
         >
           {fm.ctaButtonText}
         </Link>

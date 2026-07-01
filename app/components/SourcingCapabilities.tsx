@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Shield, Factory, ClipboardCheck, Search, Users, Briefcase, ArrowRight } from 'lucide-react'
+import { trackCTAClick } from '@/lib/analytics'
 
 const services = [
   { icon: <Factory size={24} className="text-amber" />, title: 'Factory Verification', desc: 'On-site factory audits verifying registration, production capacity, certifications and operational maturity — not just a database lookup.' },
@@ -80,7 +81,7 @@ export default function SourcingCapabilities() {
             </table>
           </div>
           <div className="text-center mt-6">
-            <Link href="/enquiry" className="inline-flex items-center gap-2 bg-amber text-navy py-3 px-8 font-semibold hover:bg-amber/90 transition-colors text-sm">
+            <Link href="/enquiry" className="inline-flex items-center gap-2 bg-amber text-navy py-3 px-8 font-semibold hover:bg-amber/90 transition-colors text-sm" onClick={() => trackCTAClick('Book Free Consult', 'homepage-sourcing-capabilities')}>
               Book Free Consult <ArrowRight size={16} />
             </Link>
           </div>

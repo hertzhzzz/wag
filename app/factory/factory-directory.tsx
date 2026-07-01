@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from "react"
 import Link from "next/link"
 import type { FactoryItem } from "./page"
+import { trackCTAClick } from "@/lib/analytics"
 
 const PER_PAGE = 24
 
@@ -238,7 +239,7 @@ export function FactoryDirectory({
             <h2 className="font-serif text-[28px] font-semibold text-white leading-tight mb-2">Need help finding the right factory?</h2>
             <p className="text-white/60 text-[15px]">Tell us what you want to source. We will match you with verified manufacturers. Free consultation.</p>
           </div>
-          <Link href="/enquiry" className="inline-flex items-center gap-2 px-7 py-3.5 bg-amber text-navy font-bold text-[15px] rounded-lg hover:bg-amber-dark transition-colors whitespace-nowrap flex-shrink-0">
+          <Link href="/enquiry" className="inline-flex items-center gap-2 px-7 py-3.5 bg-amber text-navy font-bold text-[15px] rounded-lg hover:bg-amber-dark transition-colors whitespace-nowrap flex-shrink-0" onClick={() => trackCTAClick('Book Free Consult', 'factory-directory-page')}>
             Book Free Consult
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>

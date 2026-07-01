@@ -9,6 +9,7 @@ import FAQ from '@/components/FAQ'
 import { serviceFaqs } from '@/data/faqs-services'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import ScrollReveal from '@/components/ScrollReveal'
+import { trackCTAClick } from '@/lib/analytics'
 import {
   Package, Plane, Monitor, Check, Minus,
   Search, Truck, ArrowRight,
@@ -216,6 +217,7 @@ export default function ServicesContent() {
                 href="/enquiry"
                 className="inline-flex items-center justify-center bg-white/10 text-white py-3.5 px-8 text-sm font-semibold transition-all hover:bg-white/20 border border-white/30 min-h-11"
                 aria-label={t('page.svc.heroCtaEnquire')}
+                onClick={() => trackCTAClick('Services Hero Enquire', 'services-hero')}
               >
                 {t('page.svc.heroCtaEnquire')}
               </Link>
@@ -289,6 +291,7 @@ export default function ServicesContent() {
                           : 'bg-navy text-white hover:bg-[#1a4080]'
                       }`}
                       aria-label={tier.cta}
+                      onClick={() => trackCTAClick(tier.cta, 'services-tier-card-desktop')}
                     >
                       {tier.cta}
                       <ArrowRight size={16} />
@@ -325,6 +328,7 @@ export default function ServicesContent() {
                 href="/enquiry"
                 className="inline-block bg-navy text-white py-3 px-8 text-sm font-semibold hover:bg-navy/90 transition-colors min-h-11"
                 aria-label="Get a Free Supplier Shortlist"
+                onClick={() => trackCTAClick('Get a Free Supplier Shortlist', 'services-sourcing-agent-section')}
               >
                 Get a Free Supplier Shortlist &rarr;
               </Link>
@@ -362,6 +366,7 @@ export default function ServicesContent() {
               href="/enquiry"
               className="inline-block bg-amber text-navy py-3 px-8 text-sm font-semibold hover:bg-amber/90 transition-colors min-h-11"
               aria-label="Request a Factory Audit"
+              onClick={() => trackCTAClick('Request a Factory Audit', 'services-factory-audit-section')}
             >
               Request a Factory Audit &rarr;
             </Link>
@@ -411,6 +416,7 @@ export default function ServicesContent() {
                           tier.highlighted ? 'bg-amber text-navy hover:bg-amber/90' : 'bg-navy text-white hover:bg-[#1a4080]'
                         }`}
                         aria-label={tier.cta}
+                        onClick={() => trackCTAClick(tier.cta, 'services-tier-card-mobile')}
                       >
                         {tier.cta}
                       </Link>
@@ -470,7 +476,7 @@ export default function ServicesContent() {
             <div className="text-center mt-8">
               <p className="text-sm text-gray-500">
                 {t('page.svc.compareFooterText')}{' '}
-                <Link href="/enquiry" className="text-navy font-semibold underline hover:text-amber transition-colors">
+                <Link href="/enquiry" className="text-navy font-semibold underline hover:text-amber transition-colors" onClick={() => trackCTAClick('Services Compare Footer Link', 'services-compare-table')}>
                   {t('page.svc.compareFooterLink')}
                 </Link>
                 {' '}{t('page.svc.compareFooterSuffix')}
@@ -554,7 +560,7 @@ export default function ServicesContent() {
 
             <p className="text-center text-sm text-gray-500">
               {t('page.svc.industriesFooterText')}{' '}
-              <Link href="/enquiry" className="text-navy font-semibold underline hover:text-amber transition-colors">
+              <Link href="/enquiry" className="text-navy font-semibold underline hover:text-amber transition-colors" onClick={() => trackCTAClick('Services Industries Footer Link', 'services-industries-section')}>
                 {t('page.svc.industriesFooterLink')}
               </Link>
             </p>
@@ -592,6 +598,7 @@ export default function ServicesContent() {
             href="/enquiry"
             className="inline-flex items-center justify-center bg-amber text-navy py-3.5 px-10 text-base font-semibold transition-all hover:bg-amber/90 min-h-11 cta-pulse"
             aria-label={t('page.svc.ctaButton')}
+            onClick={() => trackCTAClick('Services Bottom CTA', 'services-page-footer')}
           >
             {t('page.svc.ctaButton')}
           </Link>
