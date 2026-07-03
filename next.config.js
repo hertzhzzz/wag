@@ -121,6 +121,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/article/china-business-sourcing-tour',
+        destination: '/article/china-factory-tour-guide',
+        permanent: true,
+      },
+      {
         source: '/article/byd-company-supply-chain-guide',
         destination: '/article/byd-company-china-supply-chain-guide',
         permanent: true,
