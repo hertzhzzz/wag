@@ -264,6 +264,28 @@ export const BLOG_REDIRECT_TARGETS: Record<string, string> = {
   "resource-shenzhen-factory-visit": "/article/china-factory-tour-guide",
   "resource-should-i-pay-deposit-chinese-supplier": "/article/how-to-negotiate-chinese-factory-guide",
   "resource-chinese-supplier-quality-not-as-promised": "/article/china-sourcing-risks",
+
+  // Migrated from redirects.js (2026-07-05) — that file only covered /article/{slug},
+  // so /resources/{slug} fell through to the /article/{slug} fallback below, then hit
+  // redirects.js for a second hop. Registering here gives both paths a single 301.
+  "tottenham-hotspur": "/article",
+  "bunnings-wesfarmers-merger-supply-chain": "/article",
+  "bbq-galore-retail": "/article",
+  "australian-retail-trends-grilld-coles": "/article",
+  "kmart-home-retail": "/article",
+  "bhp": "/article",
+  "droneshield": "/article",
+  "reneweconomy": "/article",
+  "fitbit-air-sourcing": "/article",
+  "oura-ring-5-wearable-tech-china-sourcing-guide": "/article",
+  "007-first-light-sourcing": "/article",
+  "adam-walton-policy-australian-businesses": "/article",
+  "australian-business-bankruptcy-2026": "/article",
+  "road-safety-australia-freight-operations": "/article",
+  "australia-mining-capital-gains-tax-importers": "/article",
+  "extreme-weather-supply-chain-risk": "/article",
+  "kenya-sourcing-destination": "/article",
+  "dubai-international-airport-australia-china-freight": "/article",
 }
 
 const BLOG_GONE_SET = new Set(BLOG_GONE_SLUGS)
