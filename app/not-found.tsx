@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import AutoRedirectCountdown from '@/components/AutoRedirectCountdown'
 
 export const metadata: Metadata = {
   title: '404 - Page Not Found | Winning Adventure Global',
@@ -43,6 +44,7 @@ export default function NotFound() {
               View Services
             </Link>
           </div>
+          <AutoRedirectCountdown />
         </div>
       </section>
 

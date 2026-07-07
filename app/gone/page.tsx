@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import AutoRedirectCountdown from '@/components/AutoRedirectCountdown'
 
 export const metadata: Metadata = {
   title: '410 - Content Removed',
@@ -46,6 +47,7 @@ export default function Gone() {
               Back to Home
             </Link>
           </div>
+          <AutoRedirectCountdown />
         </div>
       </section>
 
