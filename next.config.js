@@ -44,11 +44,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/china-vs-alibaba',
-        destination: '/article/china-vs-alibaba',
-        permanent: true,
-      },
-      {
         source: '/bulk-procurement-china-guide',
         destination: '/article/bulk-procurement-china-guide',
         permanent: true,
@@ -61,11 +56,6 @@ const nextConfig = {
       {
         source: '/australia-import-tips',
         destination: '/article/importing-from-china-australia-guide',
-        permanent: true,
-      },
-      {
-        source: '/china-supplier-verification',
-        destination: '/article/china-supplier-verification',
         permanent: true,
       },
       {
@@ -123,16 +113,6 @@ const nextConfig = {
       {
         source: '/article/china-business-sourcing-tour',
         destination: '/article/china-factory-tour-guide',
-        permanent: true,
-      },
-      {
-        source: '/article/byd-company-supply-chain-guide',
-        destination: '/article/byd-company-china-supply-chain-guide',
-        permanent: true,
-      },
-      {
-        source: '/article/electric-battery-supply-chain-china-sourcing-guide',
-        destination: '/article/electric-battery-china',
         permanent: true,
       },
     ]

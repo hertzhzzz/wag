@@ -86,6 +86,7 @@ export const config = {
     "/factory/:path*",
     "/client/:path*", "/api/client/:path*",
     "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne",
+    "/china-vs-alibaba", "/china-supplier-verification",
     "/article/:slug*",
     "/resources/:slug*",
   ],
