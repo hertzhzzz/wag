@@ -9,6 +9,12 @@ export const GONE_SLUGS = [
   "/perth",
   "/brisbane",
   "/melbourne",
+  // Added 2026-07-07 — legacy bare-slug URLs. next.config.js used to 301
+  // these to an /article/{slug} page that is itself a BLOG_GONE_SLUGS entry
+  // (a dead redirect chain: 301 -> 410). Serving 410 directly removes the
+  // pointless hop. The next.config.js rules were removed in the same change.
+  "/china-vs-alibaba",
+  "/china-supplier-verification",
 ]
 
 export const BLOG_GONE_SLUGS = [
@@ -255,6 +261,37 @@ export const BLOG_GONE_SLUGS = [
   "byd-company-china-supply-chain-guide",
   "bunnings-wholesale-guide",
   "australian-supermarket-china-sourcing-secrets",
+
+  // ============================================
+  // Added 2026-07-07 — previously 301-redirected to the generic /article
+  // listing page (soft-404 pattern: technically a redirect, but to a page
+  // with no real successor content). Converted to 410 for an accurate
+  // "this content is gone" signal instead of implying it moved somewhere.
+  "tottenham-hotspur",
+  "bunnings-wesfarmers-merger-supply-chain",
+  "bbq-galore-retail",
+  "australian-retail-trends-grilld-coles",
+  "kmart-home-retail",
+  "bhp",
+  "droneshield",
+  "reneweconomy",
+  "fitbit-air-sourcing",
+  "oura-ring-5-wearable-tech-china-sourcing-guide",
+  "007-first-light-sourcing",
+  "adam-walton-policy-australian-businesses",
+  "australian-business-bankruptcy-2026",
+  "road-safety-australia-freight-operations",
+  "australia-mining-capital-gains-tax-importers",
+  "extreme-weather-supply-chain-risk",
+  "kenya-sourcing-destination",
+  "dubai-international-airport-australia-china-freight",
+
+  // Added 2026-07-07 — next.config.js redirected these to a destination
+  // that is itself a BLOG_GONE_SLUGS entry (dead redirect chain: 301 ->
+  // 410). Adding the source slug here + removing the next.config.js rule
+  // collapses it to a single direct 410.
+  "byd-company-supply-chain-guide",
+  "electric-battery-supply-chain-china-sourcing-guide",
 ]
 
 export const BLOG_REDIRECT_TARGETS: Record<string, string> = {
@@ -264,28 +301,6 @@ export const BLOG_REDIRECT_TARGETS: Record<string, string> = {
   "resource-shenzhen-factory-visit": "/article/china-factory-tour-guide",
   "resource-should-i-pay-deposit-chinese-supplier": "/article/how-to-negotiate-chinese-factory-guide",
   "resource-chinese-supplier-quality-not-as-promised": "/article/china-sourcing-risks",
-
-  // Migrated from redirects.js (2026-07-05) — that file only covered /article/{slug},
-  // so /resources/{slug} fell through to the /article/{slug} fallback below, then hit
-  // redirects.js for a second hop. Registering here gives both paths a single 301.
-  "tottenham-hotspur": "/article",
-  "bunnings-wesfarmers-merger-supply-chain": "/article",
-  "bbq-galore-retail": "/article",
-  "australian-retail-trends-grilld-coles": "/article",
-  "kmart-home-retail": "/article",
-  "bhp": "/article",
-  "droneshield": "/article",
-  "reneweconomy": "/article",
-  "fitbit-air-sourcing": "/article",
-  "oura-ring-5-wearable-tech-china-sourcing-guide": "/article",
-  "007-first-light-sourcing": "/article",
-  "adam-walton-policy-australian-businesses": "/article",
-  "australian-business-bankruptcy-2026": "/article",
-  "road-safety-australia-freight-operations": "/article",
-  "australia-mining-capital-gains-tax-importers": "/article",
-  "extreme-weather-supply-chain-risk": "/article",
-  "kenya-sourcing-destination": "/article",
-  "dubai-international-airport-australia-china-freight": "/article",
 }
 
 const BLOG_GONE_SET = new Set(BLOG_GONE_SLUGS)
