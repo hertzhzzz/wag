@@ -757,7 +757,7 @@ export const zh: Partial<Record<keyof typeof en, string>> = {
   "page.fv.closingBody": "告诉我们您的产品和当前采购进度，我们将在免费、无义务的咨询中为您制定参访方案。",
 
   "page.fv.authorEyebrow": "由谁带您前往",
-  "page.fv.authorName": "Mark He",
+  "page.fv.authorName": "Andy Liu",
   "page.fv.authorRole": "Winning Adventure Global 创始人",
   "page.fv.authorBio": "八年间，我代表逾200家澳大利亚企业，亲自走过200多家中国工厂的车间。我创立这家公司，是因为一次次看到澳洲买家太晚才认清一个供应商的真相——在定金付出之后、在货柜起运之后。一次做到位的实地参访，是您能买到的最便宜的保险。",
   "page.fv.credStat1Label": "亲自参访的工厂",
@@ -807,5 +807,5 @@ export const zh: Partial<Record<keyof typeof en, string>> = {
   "page.fv.storyEyebrow": "来自现场",
   "page.fv.storyHeading": "一家纸面上堪称完美的工厂",
   "page.fv.storyBody": "我曾在东莞参访一家供应商：专业的网站、ISO 9001 认证、大型现代化厂房的照片一应俱全。可走进车间，我数出只有十二名员工，却号称月产5万件。设备是真的，规模却只是说辞的零头。这道落差在视频通话里根本看不见——而这正是实地参访的意义所在。",
-  "page.fv.storyAttribution": "——Mark He，记于2019年的一次工厂参访",
+  "page.fv.storyAttribution": "——Andy Liu，记于2019年的一次工厂参访",
 }

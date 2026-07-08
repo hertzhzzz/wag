@@ -755,7 +755,7 @@ export const en = {
   "page.fv.closingBody": "Tell us your product and where you are in sourcing. We'll scope a guided visit on a free, no-obligation consult.",
 
   "page.fv.authorEyebrow": "Who takes you there",
-  "page.fv.authorName": "Mark He",
+  "page.fv.authorName": "Andy Liu",
   "page.fv.authorRole": "Founder, Winning Adventure Global",
   "page.fv.authorBio": "I've walked the floor of more than 200 Chinese factories over eight years, on behalf of 200-plus Australian businesses. I started this company because I kept watching Australian buyers learn the truth about a supplier too late — after the deposit, after the container shipped. A visit done properly is the cheapest insurance you can buy.",
   "page.fv.credStat1Label": "Factories visited in person",
@@ -805,5 +805,5 @@ export const en = {
   "page.fv.storyEyebrow": "From the field",
   "page.fv.storyHeading": "A factory that looked perfect on paper",
   "page.fv.storyBody": "In Dongguan I once visited a supplier with a professional website, ISO 9001 certification, and photographs of a large modern facility. On the floor I counted twelve employees for an operation that claimed 50,000 units a month. The equipment was real; the scale was a fraction of the pitch. That gap is invisible on a video call — and it is exactly what a visit is for.",
-  "page.fv.storyAttribution": "— Mark He, on a 2019 factory visit",
+  "page.fv.storyAttribution": "— Andy Liu, on a 2019 factory visit",
 } as const
