@@ -9,12 +9,11 @@ export const GONE_SLUGS = [
   "/perth",
   "/brisbane",
   "/melbourne",
-  // Added 2026-07-07 — legacy bare-slug URLs. next.config.js currently 301s
+  // Added 2026-07-07 — legacy bare-slug URLs. next.config.js used to 301
   // these to an /article/{slug} page that is itself a BLOG_GONE_SLUGS entry
-  // (a dead redirect chain: 301 -> 410). This entry makes proxy.ts serve a
-  // direct 410 once proxy.ts's matcher also covers these paths and the
-  // corresponding next.config.js rules are removed (separate follow-up
-  // change — until then next.config.js still shadows this in production).
+  // (a dead redirect chain: 301 -> 410). proxy.ts's matcher now covers these
+  // paths and the next.config.js rules were removed in the same overall
+  // change, so proxy.ts serves a direct 410.
   "/china-vs-alibaba",
   "/china-supplier-verification",
 ]
@@ -288,11 +287,10 @@ export const BLOG_GONE_SLUGS = [
   "kenya-sourcing-destination",
   "dubai-international-airport-australia-china-freight",
 
-  // Added 2026-07-07 — next.config.js redirects these to a destination
+  // Added 2026-07-07 — next.config.js redirected these to a destination
   // that is itself a BLOG_GONE_SLUGS entry (dead redirect chain: 301 ->
-  // 410). Adding the source slug here is step one; the next.config.js
-  // rule is removed in a separate follow-up change to collapse this to a
-  // single direct 410.
+  // 410). The next.config.js rule was removed in the same overall change,
+  // collapsing this to a single direct 410.
   "byd-company-supply-chain-guide",
   "electric-battery-supply-chain-china-sourcing-guide",
 ]
