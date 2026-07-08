@@ -9,6 +9,10 @@ export const GONE_SLUGS = [
   "/perth",
   "/brisbane",
   "/melbourne",
+  // Added 2026-07-08 — retired with its 4 sibling city pages above, but was
+  // missed from both this list and proxy.ts's matcher, so it kept 404-ing
+  // (surfaced in GSC "Not found 404"). Now a direct 410 like the others.
+  "/sydney",
   // Added 2026-07-07 — legacy bare-slug URLs. next.config.js used to 301
   // these to an /article/{slug} page that is itself a BLOG_GONE_SLUGS entry
   // (a dead redirect chain: 301 -> 410). proxy.ts's matcher now covers these

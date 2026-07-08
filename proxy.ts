@@ -93,7 +93,7 @@ export const config = {
   matcher: [
     "/factory/:path*",
     "/client/:path*", "/api/client/:path*",
-    "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne",
+    "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne", "/sydney",
     "/china-vs-alibaba", "/china-supplier-verification",
     "/article/:slug*",
     "/resources/:slug*",
