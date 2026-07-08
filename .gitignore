@@ -44,3 +44,4 @@ config/*.json
 !config/ga4_config.json
 data/logs/
 data/pipeline.db
+content/blog/.fuse_hidden*
