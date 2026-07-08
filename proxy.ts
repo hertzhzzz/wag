@@ -25,6 +25,14 @@ function getResourceSlug(pathname: string): string | null {
 export function proxy(request: NextRequest) {
   const { pathname, hostname } = request.nextUrl
 
+  // Legacy CMS "_deleted/" paths (e.g. /article/_deleted/{slug}) were exposed
+  // in old sitemaps and are still indexed. They have two path segments, so
+  // getArticleSlug() below misses them and they fall through to a plain 404.
+  // Serve a direct 410 instead — stronger "permanently gone" signal.
+  if (pathname.includes("/_deleted/")) {
+    return goneResponse(request)
+  }
+
   const articleSlug = getArticleSlug(pathname)
   if (articleSlug) {
     if (isBlogGoneSlug(articleSlug)) {
