@@ -1,7 +1,7 @@
 'use client'
 import { useT } from '@/i18n/useT'
 import Image from 'next/image'
-import { Search, ShieldCheck, Building2, ClipboardCheck, MapPin, AlertTriangle, FileCheck2, Boxes, Check } from 'lucide-react'
+import { Search, ShieldCheck, Building2, ClipboardCheck, MapPin, AlertTriangle, Check, Camera, Users, Factory, Award, Quote } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FAQ from '@/components/FAQ'
@@ -9,39 +9,43 @@ import ScrollReveal from '@/components/ScrollReveal'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import LeadForm from '@/components/LeadForm'
 
-const statValues = ['1,200+', '25+', '1,000+', '50+']
-
-// SEO content — FAQ entries kept in English, not translated
+// SEO content — FAQ entries kept in English, not translated. Answers drawn from
+// Winning Adventure Global's own factory-visit checklist and field experience.
 const visitFaqs = [
   {
-    question: 'Do you arrange the whole factory visit, including travel?',
+    question: 'Do I need a visa to visit factories in China as an Australian?',
     answer:
-      'We plan the itinerary, shortlist and confirm the factories worth visiting, book the meetings, and accompany you on the ground with a bilingual guide. You handle your flights and accommodation; we handle everything once you land.',
+      'For most Australian passport holders a business (M) or tourist (L) visa is required, arranged before you fly; check the current rules with the Chinese embassy as short-stay and transit exemptions change. We help you time the trip around visa processing so your factory meetings are confirmed before you book flights.',
   },
   {
-    question: 'I don\'t speak Chinese — will that be a problem?',
+    question: 'Which city should I visit for my product?',
     answer:
-      'No. A bilingual guide is with you for every meeting, translating not just the language but the context — what a vague answer really means, and which questions to press on the factory floor.',
+      'It depends on your category. Shenzhen and Dongguan lead electronics, consumer tech and moulding; Guangzhou for furniture, garments and textiles; Hangzhou and Ningbo for e-commerce goods, homewares and solar; Shanghai and Suzhou for automotive, precision engineering and cosmetics; Yiwu for general consumer goods and wholesale. We match your product to the right cluster before we plan a single meeting.',
   },
   {
-    question: 'Can you shortlist factories before I commit to travelling?',
+    question: 'Can you shortlist and verify factories before I commit to flying?',
     answer:
-      'Yes. We pre-screen and verify candidate suppliers from our database of 1,200-plus factories first, so you only spend travel days on plants genuinely worth seeing. Many clients verify remotely first, then travel to close.',
+      'Yes. We pre-screen candidates against our database of 1,200-plus factories — confirming the business licence via SAMR, checking business scope, capability and export history — so your travel days are spent only on plants genuinely worth seeing. Many clients verify remotely first, then travel to close.',
   },
   {
-    question: 'What happens during the on-site visit?',
+    question: 'What actually happens during the on-site visit?',
     answer:
-      'We walk the production line with you, check equipment and workforce against the supplier\'s claims, review quality control in person, and help you read the things a video call hides — actual capacity, working conditions, and whether you are dealing with a maker or a middleman.',
+      'We walk the entire facility with you — not just the path the factory wants to show. We check whether the line is actually running, whether capacity matches the quote, whether there is a real QC process, and whether the owner can explain their own production step by step. We ask the ten questions that matter on the floor, photograph running lines and equipment nameplates, and document everything with timestamps.',
   },
   {
-    question: 'What does the free consult cover?',
+    question: 'What red flags do you look for on the factory floor?',
     answer:
-      'A no-obligation call to understand your product, your sourcing goals, and which regions and factories are worth visiting. After the consult we scope the trip and send you a quote. The consult is free; the guided visit is a paid service.',
+      'A line switched off during a scheduled visit; equipment that does not match the claimed capacity; samples that differ from the photos; no visible quality control; pressure to sign before you leave; an owner who cannot explain the process step by step; and a quoted price well below market. Any one of these is a reason to slow down before a deposit.',
   },
   {
-    question: 'Which parts of China do you cover?',
+    question: 'How do you handle the language barrier and negotiation?',
     answer:
-      'We cover the major manufacturing clusters across 25-plus provinces, with the deepest coverage in Guangdong and Zhejiang where most of Australia\'s imports are made.',
+      'A bilingual guide is with you for every meeting, translating not just the words but the context — what a vague answer really means and which point to press. After the visit we help you review notes, request a formal quotation, and negotiate payment terms and QC arrangements before any balance leaves Australia.',
+  },
+  {
+    question: 'What payment terms are normal, and how do you protect the deposit?',
+    answer:
+      'A 30% deposit with the balance against inspection or shipping documents is common, but terms vary by factory and order value. We help you structure milestones tied to verified production and pre-shipment inspection, so money is released against evidence rather than promises.',
   },
 ]
 
@@ -54,17 +58,33 @@ export default function VisitingChineseFactoriesContent() {
     t('page.fv.heroBullet3'),
   ]
 
-  const stats = [
-    { value: statValues[0], label: t('page.fv.statLabel1') },
-    { value: statValues[1], label: t('page.fv.statLabel2') },
-    { value: statValues[2], label: t('page.fv.statLabel3') },
-    { value: statValues[3], label: t('page.fv.statLabel4') },
+  const credStats = [
+    { value: '200+', label: t('page.fv.credStat1Label') },
+    { value: '8 yrs', label: t('page.fv.credStat2Label') },
+    { value: '200+', label: t('page.fv.credStat3Label') },
   ]
 
   const steps = [
     { icon: Building2, title: t('page.fv.step1Title'), body: t('page.fv.step1Body') },
     { icon: MapPin, title: t('page.fv.step2Title'), body: t('page.fv.step2Body') },
     { icon: ClipboardCheck, title: t('page.fv.step3Title'), body: t('page.fv.step3Body') },
+  ]
+
+  const regions = [
+    { name: t('page.fv.region1Name'), meta: t('page.fv.region1Meta'), best: t('page.fv.region1Best'), why: t('page.fv.region1Why') },
+    { name: t('page.fv.region2Name'), meta: t('page.fv.region2Meta'), best: t('page.fv.region2Best'), why: t('page.fv.region2Why') },
+    { name: t('page.fv.region3Name'), meta: t('page.fv.region3Meta'), best: t('page.fv.region3Best'), why: t('page.fv.region3Why') },
+    { name: t('page.fv.region4Name'), meta: t('page.fv.region4Meta'), best: t('page.fv.region4Best'), why: t('page.fv.region4Why') },
+    { name: t('page.fv.region5Name'), meta: t('page.fv.region5Meta'), best: t('page.fv.region5Best'), why: t('page.fv.region5Why') },
+  ]
+
+  const floorChecks = [
+    { icon: Factory, title: t('page.fv.floor1Title'), body: t('page.fv.floor1Body') },
+    { icon: ClipboardCheck, title: t('page.fv.floor2Title'), body: t('page.fv.floor2Body') },
+    { icon: ShieldCheck, title: t('page.fv.floor3Title'), body: t('page.fv.floor3Body') },
+    { icon: Search, title: t('page.fv.floor4Title'), body: t('page.fv.floor4Body') },
+    { icon: Building2, title: t('page.fv.floor5Title'), body: t('page.fv.floor5Body') },
+    { icon: Camera, title: t('page.fv.floor6Title'), body: t('page.fv.floor6Body') },
   ]
 
   const dataPoints = [
@@ -157,19 +177,35 @@ export default function VisitingChineseFactoriesContent() {
           </div>
         </section>
 
-        {/* ============================================ Trust stat strip ============================================ */}
+        {/* ============================================ Author / experience credibility ============================================ */}
         <section className="bg-white border-b border-navy/10">
-          <div className="max-w-[1100px] mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <p className="font-serif font-bold text-navy text-3xl md:text-4xl mb-1">{s.value}</p>
-                <p className="text-navy/60 text-[13px] leading-snug">{s.label}</p>
+          <div className="max-w-[1100px] mx-auto px-6 py-12 md:py-14 grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="h-px w-8 bg-amber" aria-hidden="true" />
+                <p className="text-amber text-xs font-semibold uppercase tracking-[0.18em]">
+                  {t('page.fv.authorEyebrow')}
+                </p>
               </div>
-            ))}
+              <p className="font-serif font-bold text-navy text-xl md:text-2xl leading-snug mb-3">
+                {t('page.fv.authorName')} — <span className="text-navy/60 font-normal">{t('page.fv.authorRole')}</span>
+              </p>
+              <p className="text-navy/70 text-[15px] md:text-base leading-relaxed max-w-2xl">
+                {t('page.fv.authorBio')}
+              </p>
+            </div>
+            <div className="flex md:flex-col gap-6 md:gap-4 md:border-l md:border-navy/10 md:pl-10">
+              {credStats.map((s) => (
+                <div key={s.label} className="md:text-right">
+                  <p className="font-serif font-bold text-navy text-2xl md:text-3xl leading-none mb-1">{s.value}</p>
+                  <p className="text-navy/55 text-[12px] leading-snug max-w-[130px] md:ml-auto">{s.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ============================================ Why it matters ============================================ */}
+        {/* ============================================ Why visit in person ============================================ */}
         <section className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
           <ScrollReveal>
             <div className="flex items-center gap-3 mb-4">
@@ -187,7 +223,7 @@ export default function VisitingChineseFactoriesContent() {
             <ScrollReveal>
               <div className="border border-navy/10 p-6 h-full">
                 <AlertTriangle size={26} className="text-amber mb-4" />
-                <p className="font-serif font-bold text-navy text-2xl mb-2">{t('page.fv.riskStat1Heading')}</p>
+                <p className="font-serif font-bold text-navy text-xl mb-2">{t('page.fv.riskStat1Heading')}</p>
                 <p className="text-navy/70 text-[15px] leading-relaxed">
                   {t('page.fv.riskStat1Body')}
                 </p>
@@ -195,8 +231,8 @@ export default function VisitingChineseFactoriesContent() {
             </ScrollReveal>
             <ScrollReveal>
               <div className="border border-navy/10 p-6 h-full">
-                <FileCheck2 size={26} className="text-amber mb-4" />
-                <p className="font-serif font-bold text-navy text-2xl mb-2">{t('page.fv.riskStat2Heading')}</p>
+                <Users size={26} className="text-amber mb-4" />
+                <p className="font-serif font-bold text-navy text-xl mb-2">{t('page.fv.riskStat2Heading')}</p>
                 <p className="text-navy/70 text-[15px] leading-relaxed">
                   {t('page.fv.riskStat2Body')}
                 </p>
@@ -204,8 +240,8 @@ export default function VisitingChineseFactoriesContent() {
             </ScrollReveal>
             <ScrollReveal>
               <div className="border border-navy/10 p-6 h-full">
-                <Boxes size={26} className="text-amber mb-4" />
-                <p className="font-serif font-bold text-navy text-2xl mb-2">{t('page.fv.riskStat3Heading')}</p>
+                <Award size={26} className="text-amber mb-4" />
+                <p className="font-serif font-bold text-navy text-xl mb-2">{t('page.fv.riskStat3Heading')}</p>
                 <p className="text-navy/70 text-[15px] leading-relaxed">
                   {t('page.fv.riskStat3Body')}
                 </p>
@@ -220,7 +256,7 @@ export default function VisitingChineseFactoriesContent() {
           </ScrollReveal>
         </section>
 
-        {/* ============================================ How it works ============================================ */}
+        {/* ============================================ How a guided visit works ============================================ */}
         <section className="bg-navy/[0.03] border-y border-navy/10">
           <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
             <ScrollReveal>
@@ -250,66 +286,153 @@ export default function VisitingChineseFactoriesContent() {
           </div>
         </section>
 
-        {/* ============================================ Why us (data advantage) ============================================ */}
+        {/* ============================================ Where we take you (regional clusters) ============================================ */}
         <section className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <ScrollReveal>
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="h-px w-8 bg-amber" aria-hidden="true" />
-                  <p className="text-amber text-xs font-semibold uppercase tracking-[0.18em]">
-                    {t('page.fv.whyUsBadge')}
-                  </p>
+          <ScrollReveal>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="h-px w-8 bg-amber" aria-hidden="true" />
+              <p className="text-amber text-xs font-semibold uppercase tracking-[0.18em]">
+                {t('page.fv.regionsBadge')}
+              </p>
+            </div>
+            <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] leading-tight mb-3 max-w-[760px] text-balance">
+              {t('page.fv.regionsHeading')}
+            </h2>
+            <p className="text-navy/70 text-lg leading-relaxed mb-10 max-w-[720px]">
+              {t('page.fv.regionsIntro')}
+            </p>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {regions.map((r) => (
+              <ScrollReveal key={r.name}>
+                <div className="border border-navy/10 p-6 h-full flex gap-4">
+                  <MapPin size={22} className="text-amber flex-shrink-0 mt-1" />
+                  <div>
+                    <div className="flex items-baseline gap-2 flex-wrap mb-1">
+                      <h3 className="font-semibold text-navy text-lg leading-snug">{r.name}</h3>
+                      <span className="text-navy/40 text-[12px] uppercase tracking-wide">{r.meta}</span>
+                    </div>
+                    <p className="text-navy text-[14px] font-medium mb-1.5">{r.best}</p>
+                    <p className="text-navy/65 text-[14px] leading-relaxed">{r.why}</p>
+                  </div>
                 </div>
-                <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] leading-tight mb-5 text-balance">
-                  {t('page.fv.whyUsHeading')}
-                </h2>
-                <p className="text-navy/70 text-lg leading-relaxed mb-6">
-                  {t('page.fv.whyUsBody')}
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+
+        {/* ============================================ What we check on the floor ============================================ */}
+        <section className="bg-navy/[0.03] border-y border-navy/10">
+          <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
+            <ScrollReveal>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="h-px w-8 bg-amber" aria-hidden="true" />
+                <p className="text-amber text-xs font-semibold uppercase tracking-[0.18em]">
+                  {t('page.fv.floorBadge')}
                 </p>
-                <ul className="flex flex-col gap-3">
-                  {dataPoints.map((point) => (
-                    <li key={point} className="flex gap-3 text-navy/75 text-[15px] leading-relaxed">
-                      <MapPin size={18} className="text-amber flex-shrink-0 mt-0.5" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
+              <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] leading-tight mb-3 max-w-[760px] text-balance">
+                {t('page.fv.floorHeading')}
+              </h2>
+              <p className="text-navy/70 text-lg leading-relaxed mb-10 max-w-[720px]">
+                {t('page.fv.floorIntro')}
+              </p>
             </ScrollReveal>
 
-            <ScrollReveal>
-              <div className="bg-navy text-white p-8 md:p-10">
-                <Search size={34} className="text-amber mb-5" />
-                <p className="font-serif font-bold text-2xl md:text-3xl mb-3 leading-snug">
-                  {t('page.fv.dataCardHeading')}
-                </p>
-                <p className="text-white/75 leading-relaxed mb-6">
-                  {t('page.fv.dataCardBody')}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {categories.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[13px] text-white/85 border border-white/20 px-3 py-1.5"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {floorChecks.map((c) => (
+                <ScrollReveal key={c.title}>
+                  <div className="bg-white border border-navy/10 p-6 h-full">
+                    <c.icon size={24} className="text-amber mb-3" />
+                    <h3 className="font-semibold text-navy text-[15px] mb-2 leading-snug">{c.title}</h3>
+                    <p className="text-navy/65 text-[14px] leading-relaxed">{c.body}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ Field story (experience) ============================================ */}
+        <section className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
+          <ScrollReveal>
+            <div className="bg-navy text-white p-8 md:p-12">
+              <Quote size={36} className="text-amber mb-5" />
+              <p className="text-amber text-xs font-semibold uppercase tracking-[0.18em] mb-4">
+                {t('page.fv.storyEyebrow')}
+              </p>
+              <p className="font-serif font-bold text-2xl md:text-[1.9rem] leading-snug mb-5 max-w-[820px]">
+                {t('page.fv.storyHeading')}
+              </p>
+              <p className="text-white/80 text-lg leading-relaxed max-w-[820px] mb-5">
+                {t('page.fv.storyBody')}
+              </p>
+              <p className="text-white/55 text-[14px]">{t('page.fv.storyAttribution')}</p>
+            </div>
+          </ScrollReveal>
+        </section>
+
+        {/* ============================================ Why us (verified shortlist) ============================================ */}
+        <section className="bg-navy/[0.03] border-y border-navy/10">
+          <div className="max-w-[1100px] mx-auto px-6 py-16 md:py-20">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              <ScrollReveal>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="h-px w-8 bg-amber" aria-hidden="true" />
+                    <p className="text-amber text-xs font-semibold uppercase tracking-[0.18em]">
+                      {t('page.fv.whyUsBadge')}
+                    </p>
+                  </div>
+                  <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] leading-tight mb-5 text-balance">
+                    {t('page.fv.whyUsHeading')}
+                  </h2>
+                  <p className="text-navy/70 text-lg leading-relaxed mb-6">
+                    {t('page.fv.whyUsBody')}
+                  </p>
+                  <ul className="flex flex-col gap-3">
+                    {dataPoints.map((point) => (
+                      <li key={point} className="flex gap-3 text-navy/75 text-[15px] leading-relaxed">
+                        <MapPin size={18} className="text-amber flex-shrink-0 mt-0.5" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+
+              <ScrollReveal>
+                <div className="bg-navy text-white p-8 md:p-10">
+                  <Search size={34} className="text-amber mb-5" />
+                  <p className="font-serif font-bold text-2xl md:text-3xl mb-3 leading-snug">
+                    {t('page.fv.dataCardHeading')}
+                  </p>
+                  <p className="text-white/75 leading-relaxed mb-6">
+                    {t('page.fv.dataCardBody')}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {categories.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[13px] text-white/85 border border-white/20 px-3 py-1.5"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 
         {/* ============================================ FAQ ============================================ */}
-        <section className="bg-navy/[0.03] border-t border-navy/10">
-          <div className="max-w-[900px] mx-auto px-6 py-16 md:py-20">
-            <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] mb-10 text-center">
-              {t('page.fv.faqHeading')}
-            </h2>
-            <FAQ faqs={visitFaqs} hideHeading />
-          </div>
+        <section className="max-w-[900px] mx-auto px-6 py-16 md:py-20">
+          <h2 className="font-serif font-bold text-navy text-2xl md:text-[2.1rem] mb-10 text-center">
+            {t('page.fv.faqHeading')}
+          </h2>
+          <FAQ faqs={visitFaqs} hideHeading />
         </section>
 
         {/* ============================================ Closing conversion ============================================ */}
