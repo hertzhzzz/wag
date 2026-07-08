@@ -20,6 +20,7 @@ export const servicesMenu: NavColumn[] = [
     links: [
       { label: 'nav.menu.allServicesOverview', href: '/services', live: true },
       { label: 'nav.menu.supplierVerification', href: '/supplier-verification', live: true },
+      { label: 'nav.menu.factoryVisits', href: '/visiting-chinese-factories', live: true },
       { label: 'nav.menu.factoryAudit', href: '/factory-audit-china', live: true },
       { label: 'nav.menu.qualityInspection', href: '/quality-inspection-china', live: true },
     ],

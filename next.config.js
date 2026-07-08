@@ -18,11 +18,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/visiting-chinese-factories',
-        destination: '/#factory-visit',
-        permanent: true,
-      },
-      {
         source: '/china-sourcing-guide-australia',
         destination: '/#capabilities',
         permanent: true,
