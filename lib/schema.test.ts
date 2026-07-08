@@ -76,7 +76,7 @@ describe('schema builders', () => {
       title: 'How to Verify a Chinese Supplier',
       description: 'A practical verification guide.',
       url: 'https://www.winningadventure.com.au/article/verify-chinese-supplier',
-      author: 'Mark He',
+      author: 'Andy Liu',
       datePublished: '2026-03-08',
       dateModified: '2026-06-30',
       image: '/social/blog/verify-chinese-supplier/cover.png',
@@ -87,7 +87,7 @@ describe('schema builders', () => {
       'https://www.winningadventure.com.au/social/blog/verify-chinese-supplier/cover.png',
     )
     expect(schema.publisher).toEqual({ '@id': ORGANIZATION_ID })
-    expect(schema.author).toMatchObject({ '@type': 'Person', name: 'Mark He' })
+    expect(schema.author).toMatchObject({ '@type': 'Person', name: 'Andy Liu' })
     expect(schema.author).not.toHaveProperty('sameAs')
     expect(schema.wordCount).toBe(1800)
     expect(schema.timeRequired).toBe('PT9M')

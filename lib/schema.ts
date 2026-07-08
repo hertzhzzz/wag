@@ -2,7 +2,6 @@ export const SITE_URL = 'https://www.winningadventure.com.au'
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`
 export const WEBSITE_ID = `${SITE_URL}/#website`
 export const ANDY_ID = `${SITE_URL}/about#andy-liu`
-export const MARK_ID = `${SITE_URL}/#mark-he`
 
 export type AreaServed = {
   '@type': 'Country' | 'City'
@@ -114,7 +113,7 @@ export function buildServiceSchema(input: ServiceSchemaInput) {
 }
 
 export function buildArticleSchema(input: ArticleSchemaInput) {
-  const authorId = input.author === 'Andy Liu' ? ANDY_ID : MARK_ID
+  const authorId = ANDY_ID
   const imageUrl = input.image.startsWith('http')
     ? input.image
     : `${SITE_URL}${input.image}`

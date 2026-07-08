@@ -38,7 +38,7 @@ frontend/
 
 ## Content (MDX)
 
-**Frontmatter:** `title` · `date` · `description` · `author: "Mark He"` · `updatedDate` · `tags`
+**Frontmatter:** `title` · `date` · `description` · `author: "Andy Liu"` · `updatedDate` · `tags`
 **FAQ pattern:** `### Question` headings (NOT `## FAQ`) — aim for 10 FAQs per article
 **Images:** Use direct Unsplash URLs. Alternate `align="right"` / `align="left"`. No downloaded images.
 
@@ -117,13 +117,38 @@ Current schemas in `app/components/`:
 
 FAQPage schema NOT needed: Google deprecated FAQ rich results May 2026; eligibility restricted to government/health sites only.
 
+## SEO Redirects & Gone Paths
+
+`proxy.ts` (Next.js 16 renamed `middleware.ts` → `proxy.ts`) + `lib/gone-paths.ts` are the SINGLE registry for retired/moved blog content — covers both `/article/{slug}` and the legacy `/resources/{slug}` path:
+
+- `BLOG_GONE_SLUGS` — permanently removed content → 410 (checked first)
+- `BLOG_REDIRECT_TARGETS` — moved/consolidated content → 301 to the new location
+
+**Don't add blog-slug rules to `redirects.js`** (next.config.js `redirects()`). It only ever matches `/article/{slug}`, never `/resources/{slug}`, and next.config-level redirects execute *before* `proxy.ts` — so a rule there can silently shadow a `BLOG_GONE_SLUGS` 410, and `/resources/{slug}` ends up double-redirecting (301 → `/article/{slug}` → 301 again) instead of resolving in one hop. All blog-slug routing goes in `gone-paths.ts` (root-caused and fixed 2026-07-05; the double-hop + shadowed-410 had been sitting live for 2+ weeks, showing up in GSC as stale "duplicate canonical" reports on 29 URLs).
+
 ## SEO Debugging
 
 ```bash
-python ~/.claude/skills/seo/scripts/gsc_query.py --property sc-domain:winningadventure.com.au --json  # GSC data
-python ~/.claude/skills/seo/scripts/gsc_inspect.py <url> --json  # URL Inspection
-curl -sI <URL>  # HTTP status check
+# curl is NOT installed in this environment — use node fetch for HTTP status/redirect checks:
+node -e "fetch('URL_HERE', {redirect:'manual'}).then(r => console.log(r.status, r.headers.get('location')))"
+
+# URL Inspection (Google's real-time view of a URL) — the old gsc_query.py/gsc_inspect.py scripts
+# under ~/.claude/skills/seo/ no longer exist; call the Search Console API directly instead:
+python3 -c "
+import google.oauth2.service_account, json, os, urllib.request
+from google.auth.transport.requests import Request
+creds = google.oauth2.service_account.Credentials.from_service_account_file(
+    os.path.expanduser('~/.claude/gsc-service-account.json'),
+    scopes=['https://www.googleapis.com/auth/webmasters.readonly'])
+creds.refresh(Request())
+data = json.dumps({'inspectionUrl': 'URL_HERE', 'siteUrl': 'sc-domain:winningadventure.com.au'}).encode()
+req = urllib.request.Request('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect',
+    data=data, headers={'Authorization': f'Bearer {creds.token}', 'Content-Type': 'application/json'})
+print(json.loads(urllib.request.urlopen(req).read())['inspectionResult']['indexStatusResult'])
+"
 ```
+
+**GSC report lag:** Page Indexing statuses (incl. "Duplicate, Google chose different canonical than user") reflect Google's *last crawl*, not current site behavior — can run weeks stale. Check the `lastCrawlTime` from the URL Inspection call above before assuming a live bug; see root `CLAUDE.md` § Diagnostics for the general pattern (also covers "Crawled - currently not indexed").
 
 **Thin content fix:** If GSC shows "discovered but not indexed" → expand to 1500+ words, add ArticleSchema, add author/date stamps.
 
@@ -181,7 +206,7 @@ Gmail rotation: SMTP fail → new App Password → verify locally → update Ver
 
 ### Report Content Blacklist
 
-NEVER include in any report: 1688/Alibaba references, FCA report IDs (CANWT/TP/SZXWT/CNIR/SZA), supplier operational metrics (pass rate/fulfillment), company structure/subsidiaries/branches, contact info (phone/email/website), financial data (revenue/brand value/IPO), Chinese text in body or product titles.
+NEVER include in any report: 1688/Alibaba references, FCA report IDs (CANWT/TP/SZXWT/CNIR/SZA), supplier operational metrics (pass rate/fulfillment), company structure/subsidiaries/branches, contact info (phone/email/website), financial data (revenue/brand value/IPO) — **and never reference financials at all, including disclaimers about excluding them** (no "financials are publicly available", "this report excludes financial figures", "financial review on request"); omit silently, Chinese text in body or product titles.
 
 ### Report Content Conventions
 
@@ -211,6 +236,12 @@ codex exec -i /tmp/report.png --skip-git-repo-check -s read-only <<< "prompt"
 - `body { padding-top: 72px }` compensated by client layout `-mt-[72px] pt-4`
 - `.toc-scroll` — webkit scrollbar styles with `scrollbarGutter: "stable"` for forced visibility
 
+## Pending Refactor
+
+> Proposals captured here are **NOT YET IMPLEMENTED**. Do not execute without explicit go-ahead.
+
+- **PR-1 · Reports single source of truth** — `clients.json` deliverables + MDX frontmatter are hand-synced in 2-3 places; forgetting the json entry causes silent "file exists, portal doesn't show it" failures (Golden Sea, 2026-06-30). Full proposal: `docs/plans/2026-06-30-reports-single-source-of-truth.md`.
+
 ---
 
-*Updated: 2026-06-11*
+*Updated: 2026-07-05*

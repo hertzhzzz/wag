@@ -23,7 +23,7 @@ describe('schema validation', () => {
         title: 'Guide',
         description: 'Guide description',
         url: 'https://www.winningadventure.com.au/article/guide',
-        author: 'Mark He',
+        author: 'Andy Liu',
         datePublished: '2026-01-01',
         image: '/guide.webp',
         wordCount: 1000,
