@@ -35,6 +35,7 @@ export interface IndFaq {
 
 export interface IndustryData {
   slug: string
+  heroImage?: string // optional remote hero URL; falls back to /industry-<slug>.webp
   industry: string
   navLabel: string
   heroTagline: string
