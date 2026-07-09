@@ -4,5 +4,9 @@
       "Bash(rm -rf \"/Users/mark/.claude/plugins/marketplaces/thedotmack\")",
       "Bash(rm -rf \"/Users/mark/.claude/plugins/cache/thedotmack\")"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "ahrefs"
+  ],
+  "enableAllProjectMcpServers": true
 }

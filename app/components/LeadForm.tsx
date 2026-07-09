@@ -19,10 +19,12 @@ export default function LeadForm({
   id,
   heading,
   subcopy,
+  cta,
 }: {
   id?: string
   heading?: string
   subcopy?: string
+  cta?: string
 }) {
   const t = useT()
   const actualHeading = heading ?? t('form.lead.defaultHeading')
@@ -134,7 +136,7 @@ export default function LeadForm({
           disabled={status === 'submitting'}
           className="w-full bg-amber text-navy font-semibold py-3.5 hover:bg-navy hover:text-white transition-colors disabled:opacity-60"
         >
-          {status === 'submitting' ? t('form.lead.submitting') : t('form.lead.submit')}
+          {status === 'submitting' ? t('form.lead.submitting') : (cta ?? t('form.lead.submit'))}
         </button>
         <p className="text-navy/50 text-[11px] text-center">
           {t('form.lead.privacy')}

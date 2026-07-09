@@ -131,6 +131,7 @@ export default function Hero() {
           <LeadForm
             heading={t('home.hero.formHeading')}
             subcopy={t('home.hero.formSubcopy')}
+            cta={t('form.lead.cta.shortlist')}
           />
         </div>
       </div>

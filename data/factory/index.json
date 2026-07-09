@@ -1,5 +1,5 @@
 {
-  "total": 1309,
+  "total": 1285,
   "updated": "2026-06-05",
   "factories": [
     {
@@ -273,8 +273,8 @@
       "member_id": "b2b-1679021290",
       "slug": "b2b-1679021290",
       "company_name": "广西横州市世纪浩晟茶业有限公司",
-      "province": "",
-      "city": "",
+      "province": "广西壮族自治区",
+      "city": "横州市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -329,23 +329,6 @@
       "employees": "17人",
       "fca_report_id": "TP2508010803",
       "biz_scope": ""
-    },
-    {
-      "member_id": "b2b-1691308521",
-      "slug": "b2b-1691308521",
-      "company_name": "温州市兴之昌汽车部件有限公司",
-      "province": "浙江省",
-      "city": "温州市",
-      "platform_tags": [
-        "super-factory"
-      ],
-      "certifications": [
-        "TUV"
-      ],
-      "factory_area": "6147m²",
-      "employees": "10人",
-      "fca_report_id": "",
-      "biz_scope": "一般项目：汽车零部件及配件制造；汽车零配件批发；汽车零配件零售；摩托车零配件制造；摩托车及零配件批发；摩托车及零配件零售；汽车装饰用品制造；汽车装饰用品销售；金属制品销售；新能源汽车电附件销售；货物进出口；技术进出口（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）。"
     },
     {
       "member_id": "b2b-1691821870",
@@ -1040,22 +1023,6 @@
       "biz_scope": "电子产品、安防产品、通讯产品的销售及技术研发；国内贸易；货物及技术进出口。照相机及器材制造；通用设备制造（不含特种设备制造）。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
     },
     {
-      "member_id": "b2b-1934374852",
-      "slug": "b2b-1934374852",
-      "company_name": "临沂雁高电气有限公司",
-      "province": "山东省",
-      "city": "临沂市",
-      "platform_tags": [],
-      "certifications": [
-        "INTERTEK",
-        "CE"
-      ],
-      "factory_area": "17000m²",
-      "employees": "94人",
-      "fca_report_id": "",
-      "biz_scope": "许可项目：道路货物运输（不含危险货物）。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）一般项目：电气设备销售；电力设施器材制造；电力设施器材销售；金属结构制造；金属结构销售；电线、电缆经营；配电开关控制设备制造；配电开关控制设备销售；塑料制品制造；塑料制品销售；货物进出口。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
-    },
-    {
       "member_id": "b2b-1936176591",
       "slug": "b2b-1936176591",
       "company_name": "苏州亿倍智能清洁股份有限公司",
@@ -1267,7 +1234,7 @@
       "member_id": "b2b-1986659829",
       "slug": "b2b-1986659829",
       "company_name": "新浦区岗埠农场甜甜爱服装厂",
-      "province": "",
+      "province": "江苏省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -1297,8 +1264,8 @@
       "member_id": "b2b-1990388301",
       "slug": "b2b-1990388301",
       "company_name": "东莞市百优电子有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "东莞市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -1394,7 +1361,7 @@
       "member_id": "b2b-2002345726",
       "slug": "b2b-2002345726",
       "company_name": "杭州联测自动化技术有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -2243,21 +2210,6 @@
       "biz_scope": "生产：食品；货物或技术进出口（国家禁止或涉及行政审批的货物和技术进出口除外）；批发、零售：预包装食品；房屋租赁服务；商品信息咨询服务。(依法须经批准的项目，经相关部门批准后方可开展经营活动)〓"
     },
     {
-      "member_id": "b2b-22006109870491e1c0",
-      "slug": "b2b-22006109870491e1c0",
-      "company_name": "义乌市驰聘户外用品有限公司",
-      "province": "浙江省",
-      "city": "金华市",
-      "platform_tags": [],
-      "certifications": [
-        "SGS"
-      ],
-      "factory_area": "1200m²",
-      "employees": "17人",
-      "fca_report_id": "",
-      "biz_scope": "一般项目：产业用纺织制成品制造；户外用品销售；互联网销售（除销售需要许可的商品）；产业用纺织制成品销售；金属丝绳及其制品制造；金属丝绳及其制品销售；针织或钩针编织物及其制品制造；金属材料制造；金属材料销售；服装服饰批发；鞋帽批发；箱包销售；劳动保护用品销售；灯具销售；照明器具销售；日用品销售；日用品批发；日用百货销售；第一类医疗器械销售；第二类医疗器械销售（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）。"
-    },
-    {
       "member_id": "b2b-22006211520347ac48",
       "slug": "b2b-22006211520347ac48",
       "company_name": "山东旭能环保科技有限公司",
@@ -2592,7 +2544,7 @@
       "member_id": "b2b-22007539591720e7eb",
       "slug": "b2b-22007539591720e7eb",
       "company_name": "河南金匮本草药业有限公司",
-      "province": "",
+      "province": "河南省",
       "city": "",
       "platform_tags": [
         "super-factory"
@@ -2918,24 +2870,6 @@
       "biz_scope": "五金产品批发;电线、电缆批发;仪器仪表批发;电子产品批发;电子元器件批发;电子元器件零售;电子产品零售;开关、插座、接线板、电线电缆、绝缘材料零售;五金零售;商品批发贸易（许可审批类商品除外）;商品零售贸易（许可审批类商品除外）;五金配件制造、加工;机械零部件加工"
     },
     {
-      "member_id": "b2b-2201408180990c59d2",
-      "slug": "b2b-2201408180990c59d2",
-      "company_name": "宁波纳蒂艺工艺品有限公司",
-      "province": "浙江省",
-      "city": "宁波市",
-      "platform_tags": [
-        "super-factory"
-      ],
-      "certifications": [
-        "INTERTEK",
-        "CE"
-      ],
-      "factory_area": "4700m²",
-      "employees": "107人",
-      "fca_report_id": "",
-      "biz_scope": "一般项目：工艺美术品及礼仪用品制造（象牙及其制品除外）；体育用品及器材制造；日用木制品制造；玩具制造；塑料制品制造；日用玻璃制品制造；金属制日用品制造；家具制造；日用杂品制造；五金产品研发；金属制品研发；新材料技术研发；家具零配件生产；工艺美术品及收藏品批发（象牙及其制品除外）；体育用品及器材批发；玩具销售；日用木制品销售；塑料制品销售；日用玻璃制品销售；户外用品销售；玩具、动漫及游艺用品销售；日用品销售；日用百货销售；宠物食品及用品批发；家具销售；五金产品零售；五金产品批发；游艺用品及室内游艺器材销售；游艺及娱乐用品销售；互联网销售（除销售需要许可的商品）(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。许可项目：进出口代理；货物进出口；技术进出口(依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以审批结果为准)。"
-    },
-    {
       "member_id": "b2b-22014157148194d11b",
       "slug": "b2b-22014157148194d11b",
       "company_name": "东莞市夏宠宠物用品有限公司",
@@ -3098,7 +3032,7 @@
       "member_id": "b2b-2201499084312c3521",
       "slug": "b2b-2201499084312c3521",
       "company_name": "勐海中宏茶厂",
-      "province": "",
+      "province": "云南省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -3143,8 +3077,8 @@
       "member_id": "b2b-220154778002184f1d",
       "slug": "b2b-220154778002184f1d",
       "company_name": "哈尔滨市沃之妙贸易有限公司",
-      "province": "",
-      "city": "",
+      "province": "黑龙江省",
+      "city": "哈尔滨市",
       "platform_tags": [],
       "certifications": [
         "TUV"
@@ -3168,21 +3102,6 @@
       "employees": "35人",
       "fca_report_id": "CANWT00480337",
       "biz_scope": "食品进出口；农副产品销售；食品互联网销售(仅销售预包装食品)；食品销售(仅销售预包装食品)；厨具卫具及日用杂品批发；日用百货销售；家用电器销售；第一类医疗器械销售；第二类医疗器械销售；橡胶制品销售；功能玻璃和新型光学材料销售；五金产品批发；保健食品(预包装)销售；婴幼儿配方乳粉及其他婴幼儿配方食品销售；特殊医学用途配方食品销售；化妆品批发；医护人员防护用品批发；医用口罩批发；日用口罩(非医用)销售；消毒剂销售(不含危险化学品)；卫生用品和一次性使用医疗用品销售；家居用品销售；日用品批发；个人卫生用品销售；日用品销售；互联网销售(除销售需要许可的商品)；日用玻璃制品销售；玩具销售；纸制品销售；日用杂品销售；电子产品销售；化妆品零售；厨具卫具及日用杂品零售；润滑油销售；包装材料及制品销售；母婴用品销售；成人情趣用品销售(不含药品、医疗器械)；食品用洗涤剂销售；食用农产品初加工；第一类医疗器械生产；日用杂品制造；家居用品制造；食品销售；食品经营；第三类医疗器械经营；货物进出口；进出口代理；食品经营(销售散装食品)；食品互联网销售；保健食品生产；婴幼儿配方食品生产；特殊医学用途配方食品生产；饮料生产；茶叶制品生产；酒制品生产；食品生产；化妆品生产；食品用洗涤剂生产；卫生用品和一次性使用医疗用品生产；第二类医疗器械生产；第三类医疗器械生产；"
-    },
-    {
-      "member_id": "b2b-2201862706",
-      "slug": "b2b-2201862706",
-      "company_name": "广东隆信激光智能装备有限公司",
-      "province": "广东省",
-      "city": "佛山市",
-      "platform_tags": [],
-      "certifications": [
-        "SGS"
-      ],
-      "factory_area": "25061m²",
-      "employees": "553人",
-      "fca_report_id": "",
-      "biz_scope": "一般项目：金属切割及焊接设备制造；金属切削机床制造；金属加工机械制造；金属成形机床制造；铸造机械制造；机床功能部件及附件制造；工业机器人制造；机械电气设备制造；专用设备制造（不含许可类专业设备制造）；五金产品制造；通用设备制造（不含特种设备制造）；机械零件、零部件加工；普通机械设备安装服务；工业机器人安装、维修；工业设计服务；电子、机械设备维护（不含特种设备）；激光打标加工；通用设备修理；机械设备研发；工程和技术研究和试验发展；机械零件、零部件销售；机械设备销售；金属制品销售；金属切割及焊接设备销售；金属成形机床销售；机械设备租赁；货物进出口；技术进出口。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
     },
     {
       "member_id": "b2b-22021618523791a422",
@@ -3430,8 +3349,8 @@
       "member_id": "b2b-22065413390679ac38",
       "slug": "b2b-22065413390679ac38",
       "company_name": "深圳市森睿创科技有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "深圳市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK",
@@ -3661,7 +3580,7 @@
       "member_id": "b2b-2206847068457ccdb6",
       "slug": "b2b-2206847068457ccdb6",
       "company_name": "温州信捷工艺品有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [
         "super-factory"
@@ -3783,7 +3702,7 @@
       "slug": "b2b-22069322549448f23c",
       "company_name": "金华市果优家纺有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "金华市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
@@ -4368,15 +4287,15 @@
       "member_id": "b2b-22078292001630a715",
       "slug": "b2b-22078292001630a715",
       "company_name": "安吉直客家具有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
       ],
-      "factory_area": "8500m²",
-      "employees": "147人",
-      "fca_report_id": "CNIR2507SH19436",
+      "factory_area": "19542m²",
+      "employees": "234人",
+      "fca_report_id": "CNIR2606SH14631",
       "biz_scope": "家具及配件、按摩椅加工、销售；货物进出口业务。（依法须经批准的项目，经相关部门批准后方可开展经营活动）"
     },
     {
@@ -4400,7 +4319,7 @@
       "member_id": "b2b-220785817622293f91",
       "slug": "b2b-220785817622293f91",
       "company_name": "山东花海食品有限公司",
-      "province": "",
+      "province": "山东省",
       "city": "",
       "platform_tags": [
         "deep-audit",
@@ -4605,7 +4524,7 @@
       "member_id": "b2b-2207971485442301f7",
       "slug": "b2b-2207971485442301f7",
       "company_name": "山西平遥兆辉食品有限公司",
-      "province": "",
+      "province": "山西省",
       "city": "",
       "platform_tags": [
         "deep-audit",
@@ -4715,7 +4634,7 @@
       "member_id": "b2b-2208068572375e9f9f",
       "slug": "b2b-2208068572375e9f9f",
       "company_name": "潍坊卫尔盾鞋业有限公司",
-      "province": "",
+      "province": "山东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -4777,7 +4696,7 @@
       "member_id": "b2b-2208120457192c2767",
       "slug": "b2b-2208120457192c2767",
       "company_name": "大连宣美服饰设计有限公司",
-      "province": "",
+      "province": "辽宁省",
       "city": "",
       "platform_tags": [
         "super-factory"
@@ -4888,8 +4807,8 @@
       "member_id": "b2b-2208194636752a6563",
       "slug": "b2b-2208194636752a6563",
       "company_name": "汕头市涵宜婷服饰实业有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "汕头市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
@@ -5137,7 +5056,7 @@
       "slug": "b2b-2208568905956b1eef",
       "company_name": "义乌市捷米包装有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "义乌市",
       "platform_tags": [
         "super-factory"
       ],
@@ -5195,21 +5114,6 @@
       "employees": "111人",
       "fca_report_id": "HGHWT00364103",
       "biz_scope": "一般项目：纸制品制造；纸制品销售；纸和纸板容器制造；包装服务；办公设备耗材制造；办公用品销售；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；新材料技术研发；货物进出口；技术进出口（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）。许可项目：包装装潢印刷品印刷（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以审批结果为准）。"
-    },
-    {
-      "member_id": "b2b-2208614069565d2485",
-      "slug": "b2b-2208614069565d2485",
-      "company_name": "武夷山三醉茶人供应链管理有限公司",
-      "province": "福建省",
-      "city": "南平市",
-      "platform_tags": [],
-      "certifications": [
-        "SGS"
-      ],
-      "factory_area": "2060m²",
-      "employees": "12人",
-      "fca_report_id": "",
-      "biz_scope": ""
     },
     {
       "member_id": "b2b-2208670550245d086d",
@@ -5355,7 +5259,7 @@
       "member_id": "b2b-2209036851968b2162",
       "slug": "b2b-2209036851968b2162",
       "company_name": "可孚医疗科技股份有限公司",
-      "province": "",
+      "province": "湖南省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -5450,7 +5354,7 @@
       "member_id": "b2b-2209159335054cf582",
       "slug": "b2b-2209159335054cf582",
       "company_name": "内蒙古首菜食品有限公司",
-      "province": "",
+      "province": "内蒙古自治区",
       "city": "",
       "platform_tags": [
         "deep-audit",
@@ -5498,7 +5402,7 @@
       "member_id": "b2b-22092274868020aa7f",
       "slug": "b2b-22092274868020aa7f",
       "company_name": "广州辉盛舞台设备有限公司",
-      "province": "",
+      "province": "广东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -5514,8 +5418,8 @@
       "member_id": "b2b-2209235327621f9732",
       "slug": "b2b-2209235327621f9732",
       "company_name": "东莞市首业包装材料有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "东莞市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -5542,8 +5446,8 @@
       "member_id": "b2b-2209254512832a849c",
       "slug": "b2b-2209254512832a849c",
       "company_name": "桐乡市合盈服饰有限公司",
-      "province": "",
-      "city": "",
+      "province": "浙江省",
+      "city": "桐乡市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
@@ -5623,7 +5527,7 @@
       "member_id": "b2b-2209463180893175e1",
       "slug": "b2b-2209463180893175e1",
       "company_name": "廊坊铭通机械设备有限公司",
-      "province": "",
+      "province": "河北省",
       "city": "",
       "platform_tags": [
         "super-factory"
@@ -5811,7 +5715,7 @@
       "slug": "b2b-22097542841754e91d",
       "company_name": "泉州市欧卫派严选厨卫有限公司",
       "province": "福建省",
-      "city": "",
+      "city": "泉州市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
@@ -5825,8 +5729,8 @@
       "member_id": "b2b-2209782169318ad4f7",
       "slug": "b2b-2209782169318ad4f7",
       "company_name": "泉州市卡多希供应链管理有限公司",
-      "province": "",
-      "city": "",
+      "province": "福建省",
+      "city": "泉州市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -5871,7 +5775,7 @@
       "member_id": "b2b-2209835317871a4974",
       "slug": "b2b-2209835317871a4974",
       "company_name": "浙江安吉万艺家具有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -5986,7 +5890,7 @@
       "member_id": "b2b-2210054756179eb279",
       "slug": "b2b-2210054756179eb279",
       "company_name": "金华橙诺亿佰文化创意有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -6001,7 +5905,7 @@
       "member_id": "b2b-22100801298027594d",
       "slug": "b2b-22100801298027594d",
       "company_name": "广州奥琪生物科技有限公司",
-      "province": "",
+      "province": "广东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -6195,8 +6099,8 @@
       "member_id": "b2b-22108721824176d4a7",
       "slug": "b2b-22108721824176d4a7",
       "company_name": "桐乡市博纺针织有限公司",
-      "province": "",
-      "city": "",
+      "province": "浙江省",
+      "city": "桐乡市",
       "platform_tags": [],
       "certifications": [
         "SGS",
@@ -6245,7 +6149,7 @@
       "slug": "b2b-221090809478032a0a",
       "company_name": "义乌市路尚塑料制品有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "义乌市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
@@ -6351,25 +6255,6 @@
       "biz_scope": "许可项目：互联网直播服务(不含新闻信息服务、网络表演、网络视听节目)；道路货物运输(不含危险货物)(依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以审批结果为准)一般项目：日用品销售；互联网销售(除销售需要许可的商品)；办公用品销售；文具用品批发；体育用品及器材批发；文具用品零售；体育用品及器材零售；纸制品销售；金属工具销售；塑料制品销售；玻璃纤维增强塑料制品销售；五金产品批发；化工产品销售(不含许可类化工产品)；工艺美术品及礼仪用品制造(象牙及其制品除外)；日用杂品销售；化妆品零售；化妆品批发；包装材料及制品销售；橡胶制品销售；劳动保护用品销售；针纺织品销售；箱包销售；个人互联网直播服务(需备案)；厨具卫具及日用杂品批发；厨具卫具及日用杂品零售；日用木制品销售；五金产品零售；五金产品研发；建筑材料销售；鞋帽批发；鞋帽零售；家具销售；建筑陶瓷制品销售；卫生陶瓷制品销售(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)"
     },
     {
-      "member_id": "b2b-22110473442838a459",
-      "slug": "b2b-22110473442838a459",
-      "company_name": "漳州华昇体育科技有限公司",
-      "province": "福建省",
-      "city": "漳州市",
-      "platform_tags": [
-        "super-factory"
-      ],
-      "certifications": [
-        "CCC",
-        "ISO 9000",
-        "TUV"
-      ],
-      "factory_area": "7920m²",
-      "employees": "132人",
-      "fca_report_id": "",
-      "biz_scope": "一般项目：软件开发；体育用品及器材制造；体育用品及器材零售；体育用品及器材批发；服装制造；塑料制品制造；日用品生产专用设备制造；文具用品批发；日用品批发；日用陶瓷制品销售；皮革制品销售；塑料制品销售；针纺织品销售；针纺织品及原料销售；服装服饰批发；玩具销售；玩具、动漫及游艺用品销售；食品销售（仅销售预包装食品）；电子元器件与机电组件设备销售；数字技术服务；国内贸易代理；互联网销售（除销售需要许可的商品）；货物进出口。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
-    },
-    {
       "member_id": "b2b-2211052101344e14bc",
       "slug": "b2b-2211052101344e14bc",
       "company_name": "广东日富智能装备股份有限公司",
@@ -6457,7 +6342,7 @@
       "slug": "b2b-2211199928657e07a6",
       "company_name": "诸暨市佳逸丝针织有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "诸暨市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -6471,8 +6356,8 @@
       "member_id": "b2b-221122946413013a75",
       "slug": "b2b-221122946413013a75",
       "company_name": "东莞市柯米电子科技有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "东莞市",
       "platform_tags": [
         "super-factory"
       ],
@@ -6548,7 +6433,7 @@
       "member_id": "b2b-2211393997550701c3",
       "slug": "b2b-2211393997550701c3",
       "company_name": "合肥怀德地毯有限公司",
-      "province": "",
+      "province": "安徽省",
       "city": "",
       "platform_tags": [
         "deep-audit",
@@ -6568,7 +6453,7 @@
       "member_id": "b2b-2211422950053b0e7b",
       "slug": "b2b-2211422950053b0e7b",
       "company_name": "汕头星澜盛科技有限公司",
-      "province": "",
+      "province": "广东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -6616,7 +6501,7 @@
       "slug": "b2b-2211490938691ed4c8",
       "company_name": "义乌市苒阳纸业有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "义乌市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -6645,7 +6530,7 @@
       "member_id": "b2b-2211586450545b52b8",
       "slug": "b2b-2211586450545b52b8",
       "company_name": "河南因尔美纺织品有限公司",
-      "province": "",
+      "province": "河南省",
       "city": "",
       "platform_tags": [
         "super-factory"
@@ -6867,8 +6752,8 @@
       "member_id": "b2b-2211993829981f5501",
       "slug": "b2b-2211993829981f5501",
       "company_name": "惠州市港穗园食品有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "惠州市",
       "platform_tags": [],
       "certifications": [
         "SGS",
@@ -7080,7 +6965,7 @@
       "member_id": "b2b-22124216050327382d",
       "slug": "b2b-22124216050327382d",
       "company_name": "浙江盛世源林科技有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -7096,8 +6981,8 @@
       "member_id": "b2b-2212436519372b9eb0",
       "slug": "b2b-2212436519372b9eb0",
       "company_name": "玉林市中润食品有限公司",
-      "province": "",
-      "city": "",
+      "province": "广西壮族自治区",
+      "city": "玉林市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -7190,7 +7075,7 @@
       "slug": "b2b-22124853918232ad12",
       "company_name": "霸州市互丰家居用品有限公司",
       "province": "河北省",
-      "city": "",
+      "city": "霸州市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK",
@@ -7220,7 +7105,7 @@
       "member_id": "b2b-221250038101325d55",
       "slug": "b2b-221250038101325d55",
       "company_name": "诸暨顺欣光学仪器有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -7669,7 +7554,7 @@
       "slug": "b2b-22128871466034141b",
       "company_name": "缙云县麦盟家居用品有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "缙云县",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -8026,7 +7911,7 @@
       "slug": "b2b-2213138662",
       "company_name": "金华市伟天胶粘制品有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "金华市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
@@ -8402,8 +8287,8 @@
       "member_id": "b2b-2213966512806fd10e",
       "slug": "b2b-2213966512806fd10e",
       "company_name": "莆田市超火鞋材有限公司",
-      "province": "",
-      "city": "",
+      "province": "福建省",
+      "city": "莆田市",
       "platform_tags": [],
       "certifications": [
         "TUV"
@@ -8556,7 +8441,7 @@
       "member_id": "b2b-22140703563292dce1",
       "slug": "b2b-22140703563292dce1",
       "company_name": "河南伊日服装有限公司",
-      "province": "",
+      "province": "河南省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -8651,7 +8536,7 @@
       "slug": "b2b-2214115570988fc2e8",
       "company_name": "泉州市犇潮供应链管理有限公司",
       "province": "福建省",
-      "city": "",
+      "city": "泉州市",
       "platform_tags": [],
       "certifications": [
         "TUV"
@@ -8688,21 +8573,6 @@
       "employees": "21人",
       "fca_report_id": "CANWT00477903",
       "biz_scope": "服装服饰批发;服装辅料销售;服装、服饰检验、整理服务;服装服饰零售;包装服务;互联网销售（除销售需要许可的商品）;针纺织品及原料销售;服装制造;服装辅料制造"
-    },
-    {
-      "member_id": "b2b-221415610759655a17",
-      "slug": "b2b-221415610759655a17",
-      "company_name": "温州楚杭包装有限公司",
-      "province": "浙江省",
-      "city": "温州市",
-      "platform_tags": [],
-      "certifications": [
-        "SGS"
-      ],
-      "factory_area": "2161m²",
-      "employees": "35人",
-      "fca_report_id": "",
-      "biz_scope": ""
     },
     {
       "member_id": "b2b-221415764565418d91",
@@ -8913,8 +8783,8 @@
       "member_id": "b2b-22144046025585eecb",
       "slug": "b2b-22144046025585eecb",
       "company_name": "泰州市同兴弹簧有限公司",
-      "province": "",
-      "city": "",
+      "province": "江苏省",
+      "city": "泰州市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
@@ -8938,21 +8808,6 @@
       "employees": "22人",
       "fca_report_id": "TP2507230602",
       "biz_scope": ""
-    },
-    {
-      "member_id": "b2b-2214435640665b27b1",
-      "slug": "b2b-2214435640665b27b1",
-      "company_name": "深圳市有彩包装有限公司",
-      "province": "广东省",
-      "city": "深圳市",
-      "platform_tags": [],
-      "certifications": [
-        "SGS"
-      ],
-      "factory_area": "3000m²",
-      "employees": "52人",
-      "fca_report_id": "",
-      "biz_scope": "一般经营项目是：包装材料及制品销售；食品用塑料包装容器工具制品销售；医用包装材料制造；纸制品制造；纸制品销售；劳动保护用品销售；特种劳动防护用品销售；医护人员防护用品零售；医护人员防护用品批发；日用口罩（非医用）销售；消毒剂销售（不含危险化学品）；图文设计制作；广告设计、代理；广告制作；信息咨询服务（不含许可类信息咨询服务）；信息技术咨询服务。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动），许可经营项目是：货物进出口；技术进出口；进出口代理。（依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准）"
     },
     {
       "member_id": "b2b-2214445453302be4c1",
@@ -9163,8 +9018,8 @@
       "member_id": "b2b-221470217240571a26",
       "slug": "b2b-221470217240571a26",
       "company_name": "深圳市闽粤珠宝有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "深圳市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -9178,8 +9033,8 @@
       "member_id": "b2b-221471840634296b6f",
       "slug": "b2b-221471840634296b6f",
       "company_name": "深圳市明远信息科技有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "深圳市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -9575,7 +9430,7 @@
       "slug": "b2b-2215087068421247d9",
       "company_name": "温州市艺站包装有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "温州市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -9589,8 +9444,8 @@
       "member_id": "b2b-221509575067166f1a",
       "slug": "b2b-221509575067166f1a",
       "company_name": "汕头市温煦供应链有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "汕头市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK"
@@ -9649,8 +9504,8 @@
       "member_id": "b2b-2215189647740c5b0b",
       "slug": "b2b-2215189647740c5b0b",
       "company_name": "漳州市欧润食品有限公司",
-      "province": "",
-      "city": "",
+      "province": "福建省",
+      "city": "漳州市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -9846,7 +9701,7 @@
       "member_id": "b2b-2215442341863ea26a",
       "slug": "b2b-2215442341863ea26a",
       "company_name": "广州山派汽车用品有限公司",
-      "province": "",
+      "province": "广东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -10270,24 +10125,6 @@
       "biz_scope": "纸和纸板容器制造；塑料薄膜制造；塑料包装箱及容器制造；日用塑料制品制造；塑料零件及其他塑料制品制造；包装装潢及其他印刷；装订及印刷相关服务；文具用品批发。（依法须经批准的项目，经相关部门批准后方可开展经营活动。）（依法须经批准的项目，经相关部门批准后方可开展经营活动）〓"
     },
     {
-      "member_id": "b2b-2215858506202ffe40",
-      "slug": "b2b-2215858506202ffe40",
-      "company_name": "深圳市欧卡趣科技有限公司",
-      "province": "广东省",
-      "city": "深圳市",
-      "platform_tags": [
-        "deep-audit",
-        "super-factory"
-      ],
-      "certifications": [
-        "ISO 9000"
-      ],
-      "factory_area": "",
-      "employees": "11~50人",
-      "fca_report_id": "",
-      "biz_scope": "一般经营项目：计算机软硬件及外围设备制造；计算机软硬件及辅助设备批发；计算机软硬件及辅助设备零售；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；电子元器件制造；显示器件制造；通讯设备销售；电子产品销售；移动终端设备销售；教学用模型及教具制造；教学用模型及教具销售；文具用品零售；橡胶制品制造；橡胶制品销售；国内贸易代理。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）许可经营项目：无。"
-    },
-    {
       "member_id": "b2b-2215885046140ad841",
       "slug": "b2b-2215885046140ad841",
       "company_name": "中山市月帆灯饰有限公司",
@@ -10571,7 +10408,7 @@
       "slug": "b2b-2216292996460e8632",
       "company_name": "义乌市车格汽车用品有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "义乌市",
       "platform_tags": [
         "super-factory"
       ],
@@ -10603,7 +10440,7 @@
       "member_id": "b2b-22163299565865971d",
       "slug": "b2b-22163299565865971d",
       "company_name": "海盐豪杰塑业股份有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -11344,7 +11181,7 @@
       "member_id": "b2b-221751949366259d78",
       "slug": "b2b-221751949366259d78",
       "company_name": "西美创新（山西）食品有限公司",
-      "province": "",
+      "province": "山西省",
       "city": "",
       "platform_tags": [
         "super-factory"
@@ -12329,25 +12166,6 @@
       "biz_scope": "一般项目：包装服务；纸制品制造；纸制品销售；塑料制品制造；塑料制品销售；互联网销售（除销售需要许可的商品）；橡胶制品制造；橡胶制品销售；塑料包装箱及容器制造；皮革制品制造；皮革制品销售；食品用塑料包装容器工具制品销售；纸和纸板容器制造。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
     },
     {
-      "member_id": "b2b-2218509275562d6989",
-      "slug": "b2b-2218509275562d6989",
-      "company_name": "郑州市天赐重工机械有限公司",
-      "province": "河南省",
-      "city": "郑州市",
-      "platform_tags": [
-        "deep-audit",
-        "super-factory"
-      ],
-      "certifications": [
-        "ISO 9000",
-        "CE"
-      ],
-      "factory_area": "",
-      "employees": "51~100人",
-      "fca_report_id": "",
-      "biz_scope": "制造、销售有机肥发酵设备、复合肥设备、有机肥设备、配方肥设备、挤压设备、农业设备、环保设备；从事货物和技术的进出口业务。（国家法律法规规定应经审批或禁止进出口的商品或技术除外）"
-    },
-    {
       "member_id": "b2b-2218510335957d4cc2",
       "slug": "b2b-2218510335957d4cc2",
       "company_name": "高密鲁工劳保用品有限公司",
@@ -12492,26 +12310,6 @@
       "employees": "15人",
       "fca_report_id": "TP2512171629",
       "biz_scope": "一般项目：物料搬运装备制造；物料搬运装备销售；智能物料搬运装备销售；智能基础制造装备制造；金属结构制造；金属结构销售。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
-    },
-    {
-      "member_id": "b2b-2218769653390a38e2",
-      "slug": "b2b-2218769653390a38e2",
-      "company_name": "金华市跃哒体育用品有限公司",
-      "province": "浙江省",
-      "city": "金华市",
-      "platform_tags": [
-        "deep-audit",
-        "super-factory"
-      ],
-      "certifications": [
-        "SGS",
-        "CCC",
-        "ISO 9000"
-      ],
-      "factory_area": "6388m²",
-      "employees": "51人",
-      "fca_report_id": "",
-      "biz_scope": ""
     },
     {
       "member_id": "b2b-22188431730172b3ca",
@@ -13175,26 +12973,6 @@
       "biz_scope": "一般项目：照相机及器材制造；摄影扩印服务；电工器材制造；照相机及器材销售；电影机械制造；工程和技术研究和试验发展；电子元器件制造；电力电子元器件制造；汽车零部件及配件制造；五金产品制造；工业自动控制系统装置制造；智能车载设备制造；光通信设备制造；文具制造；玩具制造；电机制造；微特电机及组件制造；塑料制品制造；照明器具制造；家用电器制造；照明器具生产专用设备制造；照明器具生产专用设备销售；电子元器件批发；电子元器件零售；电力电子元器件销售；汽车零配件零售；五金产品批发；消防器材销售；工业自动控制系统装置销售；五金产品零售；玩具销售；光通信设备销售；智能车载设备销售；文具用品零售；照明器具销售；家用电器销售；塑料制品销售；微特电机及组件销售；进出口代理；货物进出口；技术进出口(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。"
     },
     {
-      "member_id": "b2b-22197457084807eb67",
-      "slug": "b2b-22197457084807eb67",
-      "company_name": "东莞市永耀智能装备有限公司",
-      "province": "广东省",
-      "city": "东莞市",
-      "platform_tags": [
-        "deep-audit",
-        "super-factory"
-      ],
-      "certifications": [
-        "CCC",
-        "ISO 9000",
-        "CE"
-      ],
-      "factory_area": "",
-      "employees": "51~100人",
-      "fca_report_id": "",
-      "biz_scope": "一般项目：机械设备销售；包装专用设备制造；包装专用设备销售；包装材料及制品销售；电子元器件制造；电子元器件零售；包装服务；信息咨询服务（不含许可类信息咨询服务）；技术进出口；货物进出口。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
-    },
-    {
       "member_id": "b2b-221975015803346d29",
       "slug": "b2b-221975015803346d29",
       "company_name": "汕头市乐享包装有限公司",
@@ -13228,7 +13006,7 @@
       "member_id": "b2b-22197796689979b8ba",
       "slug": "b2b-22197796689979b8ba",
       "company_name": "黑龙江冰泉实业有限公司",
-      "province": "",
+      "province": "黑龙江省",
       "city": "",
       "platform_tags": [
         "super-factory"
@@ -14184,8 +13962,8 @@
       "member_id": "b2b-2409792255",
       "slug": "b2b-2409792255",
       "company_name": "东莞市晶缆科技实业有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "东莞市",
       "platform_tags": [],
       "certifications": [
         "TUV",
@@ -14336,22 +14114,6 @@
       "biz_scope": "电线、电缆加工、制造；电线、电缆材料、灯具、五金电料、建筑材料批发兼零售及网上销售；普通货运。（依法须经批准的项目，经相关部门批准后方可开展经营活动）"
     },
     {
-      "member_id": "b2b-2490706926",
-      "slug": "b2b-2490706926",
-      "company_name": "温州舒悦服饰有限公司",
-      "province": "浙江省",
-      "city": "温州市",
-      "platform_tags": [],
-      "certifications": [
-        "ISO 9001",
-        "TUV"
-      ],
-      "factory_area": "2512m²",
-      "employees": "45人",
-      "fca_report_id": "",
-      "biz_scope": ""
-    },
-    {
       "member_id": "b2b-2493728780",
       "slug": "b2b-2493728780",
       "company_name": "东莞市光盈电子有限公司",
@@ -14416,7 +14178,7 @@
       "member_id": "b2b-2508507844",
       "slug": "b2b-2508507844",
       "company_name": "广州鼎界五金有限公司",
-      "province": "",
+      "province": "广东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -14447,7 +14209,7 @@
       "slug": "b2b-2512065153",
       "company_name": "义乌市厚霖户外用品有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "义乌市",
       "platform_tags": [],
       "certifications": [
         "TUV"
@@ -14750,21 +14512,6 @@
       "biz_scope": "配电开关控制设备、高低压电器及配件、接线端子、导轨、成套设备、电子元器件及配件、电线电缆、电表箱、仪器仪表（不含计量器具）、照明灯具、气动元件、五金件、机械设备、塑料件研发、制造、加工、销售；绝缘材料销售；货物进出口、技术进出口。（依法须经批准的项目，经相关部门批准后方可开展经营活动）"
     },
     {
-      "member_id": "b2b-2581927592vubii",
-      "slug": "b2b-2581927592vubii",
-      "company_name": "义乌市米尼户外用品有限公司",
-      "province": "浙江省",
-      "city": "金华市",
-      "platform_tags": [],
-      "certifications": [
-        "TUV"
-      ],
-      "factory_area": "2972m²",
-      "employees": "15人",
-      "fca_report_id": "",
-      "biz_scope": "一般项目：户外用品销售；日用杂品制造；日用杂品销售；汽车装饰用品制造；汽车装饰用品销售；互联网销售（除销售需要许可的商品）；汽车零配件批发；汽车零配件零售；家居用品销售；日用品销售；日用百货销售；塑料制品制造；塑料制品销售；体育用品及器材制造；体育用品及器材批发；体育用品及器材零售；五金产品零售；五金产品批发；五金产品制造(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。"
-    },
-    {
       "member_id": "b2b-25856607154ae79",
       "slug": "b2b-25856607154ae79",
       "company_name": "义乌市港升供应链有限公司",
@@ -14793,21 +14540,6 @@
       "employees": "18人",
       "fca_report_id": "NGBWT00608464",
       "biz_scope": "一般项目：塑料制品制造；塑料制品销售；纸制品制造；纸制品销售；金属包装容器及材料制造；金属包装容器及材料销售；日用木制品制造；日用木制品销售；工艺美术品及礼仪用品制造（象牙及其制品除外）；工艺美术品及礼仪用品销售（象牙及其制品除外）(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)。"
-    },
-    {
-      "member_id": "b2b-25923627999ce2d",
-      "slug": "b2b-25923627999ce2d",
-      "company_name": "肃宁县欣绣制衣有限公司",
-      "province": "河北省",
-      "city": "沧州市",
-      "platform_tags": [],
-      "certifications": [
-        "SGS"
-      ],
-      "factory_area": "4950m²",
-      "employees": "117人",
-      "fca_report_id": "",
-      "biz_scope": ""
     },
     {
       "member_id": "b2b-260140629175dab",
@@ -14844,8 +14576,8 @@
       "member_id": "b2b-261257065661944",
       "slug": "b2b-261257065661944",
       "company_name": "中山市佳锐照明科技有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "中山市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -15040,7 +14772,7 @@
       "member_id": "b2b-26845111809c1b9",
       "slug": "b2b-26845111809c1b9",
       "company_name": "广东采词化妆品有限公司",
-      "province": "",
+      "province": "广东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -15050,22 +14782,6 @@
       "employees": "54人",
       "fca_report_id": "CANWT00472702",
       "biz_scope": "许可项目：化妆品生产；第三类医疗器械经营。(依法须经批准的项目，经相关部门批准后方可开展经营活动，具体经营项目以相关部门批准文件或许可证件为准)一般项目：化妆品零售；化妆品批发；第一类医疗器械销售；第二类医疗器械销售；办公服务；卫生用品和一次性使用医疗用品销售；货物进出口；技术进出口；信息咨询服务(不含许可类信息咨询服务)；技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；日用杂品制造；日用杂品销售。(除依法须经批准的项目外，凭营业执照依法自主开展经营活动)"
-    },
-    {
-      "member_id": "b2b-26876918046fedb",
-      "slug": "b2b-26876918046fedb",
-      "company_name": "深圳芯图世纪科技有限公司",
-      "province": "广东省",
-      "city": "深圳市",
-      "platform_tags": [],
-      "certifications": [
-        "TUV",
-        "CE"
-      ],
-      "factory_area": "1765m²",
-      "employees": "45人",
-      "fca_report_id": "",
-      "biz_scope": ""
     },
     {
       "member_id": "b2b-2689584747f12c3",
@@ -15290,7 +15006,7 @@
       "slug": "b2b-27642716988585d",
       "company_name": "东莞市丰进电线有限公司",
       "province": "广东省",
-      "city": "",
+      "city": "东莞市",
       "platform_tags": [],
       "certifications": [
         "SGS",
@@ -15414,7 +15130,7 @@
       "member_id": "b2b-28202889067294e",
       "slug": "b2b-28202889067294e",
       "company_name": "西安瑞盈生物科技有限公司",
-      "province": "",
+      "province": "陕西省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -15429,7 +15145,7 @@
       "member_id": "b2b-2820679803c358e",
       "slug": "b2b-2820679803c358e",
       "company_name": "广东三和化工科技有限公司",
-      "province": "",
+      "province": "广东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -15490,8 +15206,8 @@
       "member_id": "b2b-2830280876928fc",
       "slug": "b2b-2830280876928fc",
       "company_name": "石狮市马冀骥服装厂",
-      "province": "",
-      "city": "",
+      "province": "福建省",
+      "city": "石狮市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -15644,7 +15360,7 @@
       "member_id": "b2b-28602731529a390",
       "slug": "b2b-28602731529a390",
       "company_name": "南通伟腾纺织品有限公司",
-      "province": "",
+      "province": "江苏省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -15674,7 +15390,7 @@
       "member_id": "b2b-28662997541839c",
       "slug": "b2b-28662997541839c",
       "company_name": "杭州金色生命塑业有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -15733,21 +15449,6 @@
       "employees": "19人",
       "fca_report_id": "TP2506232601",
       "biz_scope": "生产、销售：电线、电缆、电脑周边耗材、五金交电、开关、安防器材；网络安装工程、安防工程；网络技术研发。"
-    },
-    {
-      "member_id": "b2b-287869355431e19",
-      "slug": "b2b-287869355431e19",
-      "company_name": "延中线缆有限公司",
-      "province": "河北省",
-      "city": "",
-      "platform_tags": [],
-      "certifications": [
-        "SGS"
-      ],
-      "factory_area": "12500m²",
-      "employees": "25人",
-      "fca_report_id": "TSNWT00118672",
-      "biz_scope": ""
     },
     {
       "member_id": "b2b-2884292237f16c6",
@@ -15859,7 +15560,7 @@
       "member_id": "b2b-29129000816aab7",
       "slug": "b2b-29129000816aab7",
       "company_name": "江苏环海金属制品有限公司",
-      "province": "",
+      "province": "江苏省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -15899,22 +15600,6 @@
       "employees": "23人",
       "fca_report_id": "NGBWT00610521",
       "biz_scope": "塑料件、尼龙扎带、不锈钢扎带、钢钉线卡、压线帽、缠绕管、电缆接头、定位片、绝缘件、高低压电器及配件制造、加工、销售；货物进出口、技术进出口。（依法须经批准的项目，经相关部门批准后方可开展经营活动）"
-    },
-    {
-      "member_id": "b2b-2920125280297c7",
-      "slug": "b2b-2920125280297c7",
-      "company_name": "东莞市智衡科技有限公司",
-      "province": "广东省",
-      "city": "东莞市",
-      "platform_tags": [],
-      "certifications": [
-        "ISO 9001",
-        "TUV"
-      ],
-      "factory_area": "3380m²",
-      "employees": "60人",
-      "fca_report_id": "",
-      "biz_scope": "一般项目：技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广；衡器制造；衡器销售；仪器仪表制造；智能仪器仪表销售；仪器仪表销售；绘图、计算及测量仪器销售；模具制造；模具销售；家用电器销售；电子产品销售；机械设备研发；五金产品研发；五金产品零售；五金产品制造；五金产品批发；金属制品销售；塑料制品制造；塑料制品销售；橡胶制品制造；橡胶制品销售；物业管理；信息咨询服务（不含许可类信息咨询服务）；教育咨询服务（不含涉许可审批的教育培训活动）；货物进出口；技术进出口。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
     },
     {
       "member_id": "b2b-29202249523c5e4",
@@ -15965,8 +15650,8 @@
       "member_id": "b2b-2922197992e96fd",
       "slug": "b2b-2922197992e96fd",
       "company_name": "汕头市泰艺包装有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "汕头市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -16123,8 +15808,8 @@
       "member_id": "b2b-29735512183e789",
       "slug": "b2b-29735512183e789",
       "company_name": "台州市黄岩金冠塑业有限公司",
-      "province": "",
-      "city": "",
+      "province": "浙江省",
+      "city": "台州市",
       "platform_tags": [],
       "certifications": [
         "TUV"
@@ -16138,7 +15823,7 @@
       "member_id": "b2b-297512477762efa",
       "slug": "b2b-297512477762efa",
       "company_name": "北京成楷恒业科技有限公司",
-      "province": "",
+      "province": "北京市",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -16365,7 +16050,7 @@
       "member_id": "b2b-317132632164b74",
       "slug": "b2b-317132632164b74",
       "company_name": "温州中信电子科技有限公司",
-      "province": "",
+      "province": "浙江省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -16473,7 +16158,7 @@
       "slug": "b2b-32306210538f506",
       "company_name": "金华市奥熙供应链有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "金华市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -16701,21 +16386,6 @@
       "employees": "23人",
       "fca_report_id": "CANWT00472666",
       "biz_scope": "一般项目：家用电器制造；家用电器销售；家用电器零配件销售；互联网销售（除销售需要许可的商品）；灯具销售；照明器具制造；照明器具销售；照明器具生产专用设备制造；照明器具生产专用设备销售；半导体照明器件制造；半导体照明器件销售；电子元器件制造；电子元器件批发；电子元器件零售；电子产品销售；电气设备销售；塑料制品制造；塑料制品销售；五金产品制造；五金产品批发；五金产品零售；市场营销策划；企业管理咨询；货物进出口；技术进出口。[上述经营范围涉及：货物或技术进出口（国家禁止或涉及行政审批的货物和技术进出口除外）。]（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）"
-    },
-    {
-      "member_id": "b2b-3343067330f9f90",
-      "slug": "b2b-3343067330f9f90",
-      "company_name": "湖南龙鑫轻钢龙骨有限公司",
-      "province": "湖南省",
-      "city": "",
-      "platform_tags": [],
-      "certifications": [
-        "INTERTEK"
-      ],
-      "factory_area": "2584m²",
-      "employees": "20人",
-      "fca_report_id": "CNIR2603SZ10073",
-      "biz_scope": ""
     },
     {
       "member_id": "b2b-3343212575668e4",
@@ -17465,21 +17135,6 @@
       "biz_scope": "制造、销售：针织品、纺织品；加工：针织品；销售：纺织原料（不含危险化学品）；货物进出口及技术进出口。（依法须经批准的项目，经相关部门批准后方可开展经营活动。）〓(依法须经批准的项目，经相关部门批准后方可开展经营活动)"
     },
     {
-      "member_id": "b2b-3932742357a5b39",
-      "slug": "b2b-3932742357a5b39",
-      "company_name": "福建省阳强塑胶制品有限公司",
-      "province": "福建省",
-      "city": "",
-      "platform_tags": [],
-      "certifications": [
-        "SGS"
-      ],
-      "factory_area": "28600m²",
-      "employees": "152人",
-      "fca_report_id": "QZHWT000204381",
-      "biz_scope": ""
-    },
-    {
       "member_id": "b2b-3932844416d07f2",
       "slug": "b2b-3932844416d07f2",
       "company_name": "揭阳市铖轩五金有限公司",
@@ -17590,7 +17245,7 @@
       "member_id": "b2b-3962509055bf955",
       "slug": "b2b-3962509055bf955",
       "company_name": "江苏开拓者救援装备有限公司",
-      "province": "",
+      "province": "江苏省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -17731,7 +17386,7 @@
       "slug": "b2b-402392056385f00",
       "company_name": "佛山市奥迪斯传动科技有限公司",
       "province": "广东省",
-      "city": "",
+      "city": "佛山市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -17788,8 +17443,8 @@
       "member_id": "b2b-41127133222b532",
       "slug": "b2b-41127133222b532",
       "company_name": "佛山市瑞郗医疗器械有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "佛山市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -17861,21 +17516,6 @@
       "factory_area": "5504m²",
       "employees": "62人",
       "fca_report_id": "TP2604131301",
-      "biz_scope": ""
-    },
-    {
-      "member_id": "b2b-4140150070ad173",
-      "slug": "b2b-4140150070ad173",
-      "company_name": "江苏华聚纺织科技有限公司",
-      "province": "",
-      "city": "",
-      "platform_tags": [],
-      "certifications": [
-        "INTERTEK"
-      ],
-      "factory_area": "5500m²",
-      "employees": "39人",
-      "fca_report_id": "CNIR2507SH13588",
       "biz_scope": ""
     },
     {
@@ -17976,8 +17616,8 @@
       "member_id": "b2b-424475820971b45",
       "slug": "b2b-424475820971b45",
       "company_name": "诸暨市苡南纺织有限公司",
-      "province": "",
-      "city": "",
+      "province": "浙江省",
+      "city": "诸暨市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -18225,7 +17865,7 @@
       "member_id": "cnrfxl",
       "slug": "cnrfxl",
       "company_name": "横县瑞丰香料有限公司",
-      "province": "",
+      "province": "广西壮族自治区",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -18282,21 +17922,6 @@
       "employees": "32人",
       "fca_report_id": "SUZWT00273630",
       "biz_scope": "经纬编布、家用纺织品织造、销售（不含印染与整理业务）；从事货物及技术的进出口业务，但国家限定公司经营或禁止进出口的商品和技术除外。（依法须经批准的项目，经相关部门批准后方可开展经营活动）"
-    },
-    {
-      "member_id": "cslihuan",
-      "slug": "cslihuan",
-      "company_name": "广州市掬水帘科技有限公司",
-      "province": "",
-      "city": "",
-      "platform_tags": [],
-      "certifications": [
-        "TUV"
-      ],
-      "factory_area": "3600m²",
-      "employees": "84人",
-      "fca_report_id": "",
-      "biz_scope": "工程和技术研究和试验发展;材料科学研究、技术开发;窗帘、布艺类产品制造;货物进出口（专营专控商品除外）;室内装饰、装修;建材、装饰材料批发;室内装饰设计服务;饰物装饰设计服务;智能机器销售;家居饰品批发;汽车零配件批发;汽车零配件设计服务;汽车零部件及配件制造（含汽车发动机制造）"
     },
     {
       "member_id": "dgdlganggu",
@@ -18696,7 +18321,7 @@
       "member_id": "hershey3633115",
       "slug": "hershey3633115",
       "company_name": "广东华尔赛弹簧实业有限公司",
-      "province": "",
+      "province": "广东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -18912,8 +18537,8 @@
       "member_id": "jhdxc2010",
       "slug": "jhdxc2010",
       "company_name": "常州市晶腾电子有限公司",
-      "province": "",
-      "city": "",
+      "province": "江苏省",
+      "city": "常州市",
       "platform_tags": [],
       "certifications": [
         "TUV"
@@ -19035,8 +18660,8 @@
       "member_id": "kongquexiawen",
       "slug": "kongquexiawen",
       "company_name": "佛山市南海祥意家具制造有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "佛山市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -19359,7 +18984,7 @@
       "member_id": "qddehuifood",
       "slug": "qddehuifood",
       "company_name": "青岛德慧海洋生物科技有限公司",
-      "province": "",
+      "province": "山东省",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -19420,7 +19045,7 @@
       "member_id": "realin07",
       "slug": "realin07",
       "company_name": "西安瑞林生物科技有限公司",
-      "province": "",
+      "province": "陕西省",
       "city": "",
       "platform_tags": [
         "super-factory"
@@ -19657,21 +19282,6 @@
       "biz_scope": "一般经营项目是：照明产品、电子产品、电子、机电产品、五金制品、塑胶制品、玻璃钢制品、建筑材料、灯具灯饰、开关电线、门窗、水电材料、通信终端设备及数据产品、日用百货、办公用品、日常生活用品、化妆用品、服装类用品、鞋帽用品、标识标牌、广告字牌材料、环保设备的销售；网上销售照明产品及LED、网上销售服装及电子产品、化妆品、办公用品；计算机系统服务；计算机软件、计算机网络开发、技术转让、技术咨询、技术服务；通信终端设备的技术开发；从事广告业务；图文设计；企业形象策划、企业管理咨询(不含人才中介服务)、商务咨询；企业形象策划；文化信息咨询、会议及展览服务；组织文化艺术文化交流；机械设备租赁；LED显示屏、导视系统设计及上门安装；建筑工程设计安装与施工、公路道路工程、路灯工程及安装、广告装饰工程、市政工程、土木工程、水利工程，弱电工程、土石方工程、拆房工程、河道疏浚工程、景观工程、装饰装修工程、楼宇智能亮化工程、消防工程、室内照明工程、户外亮化工程、钢结构工程、水电安装工程、安防工程、环保工程、道路工程、室内外装饰装修工程；国内贸易，货物及技术进出口。(法律、行政法规或者国务院决定禁止和规定在登记前须经批准的项目除外)，许可经营项目是：医用口罩、防毒面具、医用杀菌灯、医用防护用品、医用红外测温仪的销售；照明产品、电子产品、医用口罩、防毒面具、医用杀菌灯、医用防护用品、医用红外测温仪的生产，园林景观绿化工程。"
     },
     {
-      "member_id": "syelectron1",
-      "slug": "syelectron1",
-      "company_name": "广东省巨宏光电有限公司",
-      "province": "广东省",
-      "city": "",
-      "platform_tags": [],
-      "certifications": [
-        "TUV"
-      ],
-      "factory_area": "1750m²",
-      "employees": "104人",
-      "fca_report_id": "TP2508141301",
-      "biz_scope": ""
-    },
-    {
       "member_id": "syjw091130",
       "slug": "syjw091130",
       "company_name": "绍兴市上虞区佳旺旅游用品有限公司",
@@ -19690,8 +19300,8 @@
       "member_id": "szcongmingxuezi",
       "slug": "szcongmingxuezi",
       "company_name": "深圳市学之友科技有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "深圳市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -19813,7 +19423,7 @@
       "member_id": "tingmeizhanshi",
       "slug": "tingmeizhanshi",
       "company_name": "上海凯柏展览展示器材有限公司",
-      "province": "",
+      "province": "上海市",
       "city": "",
       "platform_tags": [],
       "certifications": [],
@@ -19841,8 +19451,8 @@
       "member_id": "tjhdth",
       "slug": "tjhdth",
       "company_name": "天津市静海县浩大弹簧制造有限公司",
-      "province": "",
-      "city": "",
+      "province": "天津市",
+      "city": "市静海县",
       "platform_tags": [],
       "certifications": [
         "SGS",
@@ -19903,8 +19513,8 @@
       "member_id": "txhongcheng",
       "slug": "txhongcheng",
       "company_name": "泰兴市济川液压机械制造有限公司",
-      "province": "",
-      "city": "",
+      "province": "江苏省",
+      "city": "泰兴市",
       "platform_tags": [],
       "certifications": [
         "ISO 9001",
@@ -19952,8 +19562,8 @@
       "member_id": "vs998",
       "slug": "vs998",
       "company_name": "深圳市韦艾氏电子有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "深圳市",
       "platform_tags": [],
       "certifications": [
         "TUV",
@@ -20161,7 +19771,7 @@
       "slug": "yang18985888",
       "company_name": "义乌市锐锋日用品有限公司",
       "province": "浙江省",
-      "city": "",
+      "city": "义乌市",
       "platform_tags": [],
       "certifications": [
         "SGS"
@@ -20224,7 +19834,7 @@
       "member_id": "yiyingqizhong",
       "slug": "yiyingqizhong",
       "company_name": "上海轶鹰起重机械有限公司",
-      "province": "",
+      "province": "上海市",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -20317,8 +19927,8 @@
       "member_id": "zcrtjx",
       "slug": "zcrtjx",
       "company_name": "诸城市日通机械有限公司",
-      "province": "",
-      "city": "",
+      "province": "山东省",
+      "city": "诸城市",
       "platform_tags": [],
       "certifications": [
         "INTERTEK",
@@ -20348,7 +19958,7 @@
       "member_id": "zhangshihuo1221",
       "slug": "zhangshihuo1221",
       "company_name": "上海依巴凌电源设备有限公司",
-      "province": "",
+      "province": "上海市",
       "city": "",
       "platform_tags": [],
       "certifications": [
@@ -20395,8 +20005,8 @@
       "member_id": "zsbeaming",
       "slug": "zsbeaming",
       "company_name": "中山市晶鑫光电有限公司",
-      "province": "",
-      "city": "",
+      "province": "广东省",
+      "city": "中山市",
       "platform_tags": [],
       "certifications": [
         "TUV",

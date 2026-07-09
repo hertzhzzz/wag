@@ -152,7 +152,7 @@ export default function SupplierVerificationContent() {
             </div>
 
             <div className="lg:pl-4">
-              <LeadForm id="book" />
+              <LeadForm id="book" cta={t('form.lead.cta.verification')} />
             </div>
           </div>
         </section>
@@ -332,7 +332,7 @@ export default function SupplierVerificationContent() {
               </ul>
             </div>
             <div>
-              <LeadForm />
+              <LeadForm cta={t('form.lead.cta.verification')} />
             </div>
           </div>
         </section>

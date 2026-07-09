@@ -172,7 +172,7 @@ export default function VisitingChineseFactoriesContent() {
             </div>
 
             <div className="lg:pl-4">
-              <LeadForm id="book" />
+              <LeadForm id="book" cta={t('form.lead.cta.factoryVisit')} />
             </div>
           </div>
         </section>
@@ -455,7 +455,7 @@ export default function VisitingChineseFactoriesContent() {
               </ul>
             </div>
             <div>
-              <LeadForm />
+              <LeadForm cta={t('form.lead.cta.factoryVisit')} />
             </div>
           </div>
         </section>

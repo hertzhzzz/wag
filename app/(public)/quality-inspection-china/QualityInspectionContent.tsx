@@ -168,7 +168,7 @@ export default function QualityInspectionContent() {
             </div>
 
             <div className="lg:pl-4">
-              <LeadForm id="book" />
+              <LeadForm id="book" cta={t('form.lead.cta.inspection')} />
             </div>
           </div>
         </section>
@@ -348,7 +348,7 @@ export default function QualityInspectionContent() {
               </ul>
             </div>
             <div>
-              <LeadForm />
+              <LeadForm cta={t('form.lead.cta.inspection')} />
             </div>
           </div>
         </section>
