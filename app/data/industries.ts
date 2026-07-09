@@ -41,6 +41,7 @@ export interface IndustryData {
   products: string[]
   faqs: IndustryFaq[]
   live: boolean
+  heroImage?: string // optional remote hero URL (unsplash/pexels/pixabay allow-listed); falls back to /industry-<slug>.webp
 }
 
 export const INDUSTRIES: IndustryData[] = [
@@ -341,6 +342,68 @@ export const INDUSTRIES: IndustryData[] = [
         question: 'What happens if electronics fail Australian compliance?',
         answer:
           'Non-compliant electrical products can be detained or destroyed at the Australian border, and market-surveillance authorities can run compliance checks even after goods clear customs. Medium- and high-risk equipment (EESS Level 2/3) must be registered in the EESS database. We screen suppliers for RCM/EESS understanding before you order, so compliance is confirmed at the factory rather than discovered at the wharf.',
+      },
+    ],
+  },
+  {
+    slug: 'av-lighting',
+    industry: 'AV & Lighting',
+    navLabel: 'AV & Lighting',
+    live: true,
+    heroImage:
+      'https://images.unsplash.com/photo-1727096857692-e9dadf2bc92e?auto=format&fit=crop&w=1600&q=80',
+    heroTagline: 'Australia-based · AV & lighting sourcing',
+    heroHeading: 'China Sourcing for AV & Lighting Equipment',
+    heroIntro:
+      'Lighting and AV gear must clear Australia on two fronts general goods don\'t — electrical safety and energy efficiency. We verify factories that understand RCM, EESS, GEMS, and EMC, and confirm test evidence before goods ship. Book a free consult.',
+    stats: [
+      { value: 'RCM', label: 'Mandatory electrical + EMC mark' },
+      { value: 'EESS', label: 'Mains lighting is often Level 2 — registered' },
+      { value: 'GEMS', label: 'Energy-efficiency registration & labelling' },
+      { value: '1,200+', label: 'Pre-screened factories in our network' },
+    ],
+    whyHeading: 'LED and AV gear fail Australia on two fronts — safety and energy',
+    whyBody:
+      'China dominates global lighting and AV manufacturing, but this category carries two compliance layers general merchandise does not. First, safety and EMC: electrical products must carry the Regulatory Compliance Mark (RCM), mains-powered luminaires are commonly medium-risk under the Electrical Equipment Safety System (EESS Level 2) and must be registered, and cheap LED drivers are a notorious source of electromagnetic interference that fails AS/NZS CISPR limits enforced by the ACMA. Second, energy: many lamps, displays, and external power supplies must be registered under the Greenhouse and Energy Minimum Standards (GEMS) and carry an energy-rating label before they can legally be sold. On top of that, recessed downlights must carry the correct IC/abutment rating (AS/NZS 60598.2.2) or they are a ceiling-fire risk and cannot be installed to the NCC. We confirm the factory can supply accredited-lab safety, EMC, and energy evidence — before production, not at the wharf.',
+    riskPoints: [
+      'LED drivers and lighting are common EMC failures — low-cost drivers radiate interference and fail AS/NZS CISPR limits; we confirm EMC test evidence before shipment.',
+      'GEMS registration and energy labelling are mandatory for certain lamps, TVs, and external power supplies — factories do not provide this by default and it must be arranged before sale.',
+      'Recessed downlights must carry the correct IC/IC-4 abutment rating; the wrong rating is a ceiling-fire hazard and cannot be installed under the NCC.',
+    ],
+    standardsIntro:
+      'The key Australian standards and controls we verify against when sourcing AV & lighting from China:',
+    standards: [
+      { code: 'RCM', name: 'Regulatory Compliance Mark — mandatory electrical + EMC mark' },
+      { code: 'EESS', name: 'Electrical Equipment Safety System — mains lighting often Level 2' },
+      { code: 'AS/NZS 60598', name: 'Luminaires — safety (incl. IC rating for downlights)' },
+      { code: 'AS/NZS 61347', name: 'Lamp controlgear — LED drivers & ballasts' },
+      { code: 'GEMS', name: 'Energy-efficiency registration & rating label' },
+      { code: 'AS/NZS CISPR / EMC', name: 'Electromagnetic compatibility (ACMA)' },
+    ],
+    standardsNote:
+      'For lighting and AV the two checks that catch most importers are EMC (cheap LED drivers failing CISPR limits) and GEMS energy registration — both must be confirmed with accredited-lab evidence at the factory, not discovered after delivery.',
+    productsIntro:
+      'AV and lighting categories we most often source and verify:',
+    products: [
+      'LED downlights & panels',
+      'Commercial & architectural lighting',
+      'LED drivers & controlgear',
+      'Stage, studio & event lighting',
+      'Outdoor & landscape lighting (IP-rated)',
+      'Displays, projectors & digital signage',
+      'Audio, PA & conferencing systems',
+      'Smart lighting & DALI controls',
+    ],
+    faqs: [
+      {
+        question: 'Why do LED lights from China often fail Australian compliance?',
+        answer:
+          'Three reasons. Electromagnetic compatibility (EMC) — low-cost LED drivers radiate interference and fail the AS/NZS CISPR limits the ACMA enforces. Electrical safety — mains luminaires are commonly EESS Level 2 and must be registered, with the RCM mark applied by the importer against valid AS/NZS test reports. And energy — certain lamps must be GEMS-registered and carry an energy label. We verify the factory can supply accredited-lab EMC, safety, and energy evidence before you order.',
+      },
+      {
+        question: 'Do commercial lights and AV products need energy-efficiency registration?',
+        answer:
+          'Some do. The Greenhouse and Energy Minimum Standards (GEMS) cover a defined list of products — including certain lamps, televisions, and external power supplies — which must be registered and labelled before they can legally be sold in Australia. Factories rarely provide GEMS registration by default. We confirm whether your specific product is in-scope and that the required evidence and labelling can be arranged before shipment.',
       },
     ],
   },

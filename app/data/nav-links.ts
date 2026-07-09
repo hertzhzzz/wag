@@ -43,6 +43,7 @@ export const servicesMenu: NavColumn[] = [
       { label: 'nav.menu.activewear', href: '/industries/activewear', live: true },
       { label: 'nav.menu.construction', href: '/industries/construction', live: true },
       { label: 'nav.menu.electronics', href: '/industries/electronics', live: true },
+      { label: 'nav.menu.avLighting', href: '/industries/av-lighting', live: true },
     ],
   },
 ]

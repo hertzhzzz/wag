@@ -221,6 +221,7 @@ export const en = {
   "nav.menu.activewear": "Activewear",
   "nav.menu.construction": "Construction",
   "nav.menu.electronics": "Electronics",
+  "nav.menu.avLighting": "AV & Lighting",
   "nav.menu.ctaHeading": "Not sure which service?",
   "nav.menu.ctaBody": "Tell us your sourcing goal and we'll recommend the right fit.",
   "form.lead.defaultHeading": "Book your free consult",

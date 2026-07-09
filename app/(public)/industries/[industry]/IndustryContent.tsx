@@ -105,7 +105,7 @@ export default function IndustryContent({ ind }: { ind: IndustryData }) {
         {/* ===================== Hero ===================== */}
         <section className="relative min-h-[60vh] md:min-h-[680px] flex items-center bg-navy overflow-hidden">
           <Image
-            src={`/industry-${ind.slug}.webp`}
+            src={ind.heroImage ?? `/industry-${ind.slug}.webp`}
             alt=""
             fill
             priority

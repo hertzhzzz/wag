@@ -218,6 +218,7 @@ export const zh: Partial<Record<keyof typeof en, string>> = {
   "nav.menu.activewear": "运动服装",
   "nav.menu.construction": "建筑与基建",
   "nav.menu.electronics": "电子产品",
+  "nav.menu.avLighting": "影音与照明",
   "home.hero.headlineMain": "直面",
   "home.hero.headlineEmphasisWord": "工厂",
   "home.hero.headlineNoPrefix": "没有",
