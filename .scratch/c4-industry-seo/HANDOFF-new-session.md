@@ -25,7 +25,7 @@ Previous Codex sessions hit `context_length_exceeded` on grok (~128k effective) 
 | 03 | `issues/03-construction-industry-rewrite.md` | **done** — `ea596c4` |
 | 04 | `issues/04-agricultural-machinery-rewrite.md` | **done** — `1feb9f4` |
 | 05 | `issues/05-homepage-services-light-retune.md` | **done** — `23ad652` |
-| 06 | `issues/06-verification-pages-demotion.md` | **done** — see latest commit |
+| 06 | `issues/06-verification-pages-demotion.md` | **done** — `68fd0b2` + tracker `badce6d` |
 
 Spec: `frontend/.scratch/c4-industry-seo/spec.md`
 
@@ -40,6 +40,15 @@ Demoted supplier-verification / factory-audit / quality-inspection pages to seco
 ## C4 core status
 
 Tickets 01–06 complete. Do not start extra work unless explicitly requested.
+
+## Close-out (2026-07-15)
+
+- Fixed point for full C4 review: `e34e22d^` → `HEAD` (`badce6d`)
+- Feature commits: `e34e22d`, `7592b7a`, `ea596c4`, `1feb9f4`, `23ad652`, `68fd0b2`
+- Tracker commits: `d4e5993`, `7260fef`, `badce6d`
+- Verification: C4 jest suite 6 files / 52 tests passed (source + unit only; no visual)
+- Residual untracked (ignore): `.scratch/c4-industry-seo/visual._offline/`
+- Next: human visual QA optional; new work starts via `/grill-with-docs`, not more C4 tickets
 
 ## Screenshots (offline)
 
