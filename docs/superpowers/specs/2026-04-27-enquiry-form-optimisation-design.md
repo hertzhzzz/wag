@@ -1,8 +1,13 @@
 # Enquiry Form Optimisation — Design Spec
 
 **Date:** 2026-04-27
-**Status:** Approved
+**Status:** Superseded
 **Owner:** WAG Frontend
+
+
+> **Status: Superseded (2026-07-15)**  
+> Conversion and qualification direction is superseded by `docs/adr/0001-successful-enquiry-conversion.md` and `CONTEXT.md`.  
+> In particular: do not treat “shrink to 3 fields / remove industry” as the current product decision. Qualified intake keeps industry attribution; lead measurement is Successful Enquiry only.
 
 ---
 

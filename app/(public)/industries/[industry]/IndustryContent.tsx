@@ -152,7 +152,7 @@ export default function IndustryContent({ ind }: { ind: IndustryData }) {
             </div>
 
             <div className="lg:pl-4">
-              <LeadForm id="book" />
+              <LeadForm id="book" industry={ind.slug} />
             </div>
           </div>
         </section>
@@ -372,7 +372,7 @@ export default function IndustryContent({ ind }: { ind: IndustryData }) {
               </ul>
             </div>
             <div>
-              <LeadForm />
+              <LeadForm industry={ind.slug} />
             </div>
           </div>
         </section>

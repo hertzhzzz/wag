@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
-import { z } from 'zod'
 import { checkRateLimit } from '@/lib/rate-limit'
+import { enquirySchema } from '@/lib/enquiry-schema'
+import { pathIntentLabel, timelineLabel, isSubmittedPathIntent, isTimeline } from '@/lib/enquiry-qualification'
+import { randomUUID } from 'crypto'
 
 // CORS configuration
 const ALLOWED_ORIGINS = [
@@ -22,16 +24,6 @@ async function getTransporter() {
     },
   })
 }
-
-// Validation schema
-const enquirySchema = z.object({
-  fullName: z.string().min(1, 'Name is required').max(100),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().optional(),
-  company: z.string().optional(),
-  industry: z.string().optional(),
-  lookingFor: z.string().min(1, 'Please describe what you need').max(5000),
-})
 
 // HTML escape function to prevent XSS
 function escapeHtml(str: string): string {
@@ -99,7 +91,25 @@ export async function POST(request: Request) {
     return addCorsHeaders(response, origin)
   }
 
-  const { fullName, email, phone, company, industry, lookingFor } = parseResult.data
+  const {
+    fullName,
+    email,
+    phone,
+    company,
+    industry,
+    lookingFor,
+    sourcePath,
+    pathIntent,
+    timeline,
+  } = parseResult.data
+  const enquiryId = `enq_${randomUUID()}`
+
+  const pathIntentDisplay = isSubmittedPathIntent(pathIntent)
+    ? pathIntentLabel(pathIntent)
+    : ''
+  const timelineDisplay = isTimeline(timeline)
+    ? timelineLabel(timeline)
+    : ''
 
   // Escape all user inputs for HTML display
   const safeFullName = escapeHtml(fullName)
@@ -108,6 +118,10 @@ export async function POST(request: Request) {
   const safeCompany = escapeHtml(company || '')
   const safeIndustry = escapeHtml(industry || '')
   const safeLookingFor = escapeHtml(lookingFor)
+  const safeSourcePath = escapeHtml(sourcePath || '')
+  const safeEnquiryId = escapeHtml(enquiryId)
+  const safePathIntent = escapeHtml(pathIntentDisplay)
+  const safeTimeline = escapeHtml(timelineDisplay)
 
   try {
     const transporter = await getTransporter()
@@ -125,7 +139,11 @@ export async function POST(request: Request) {
           <div style="padding:32px;border:1px solid #e5e7eb;border-top:none;">
             <table style="width:100%;border-collapse:collapse;">
               <tr>
-                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;width:140px;">Full Name</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;width:140px;">Enquiry ID</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;font-family:monospace;">${safeEnquiryId}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Full Name</td>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;font-weight:600;">${safeFullName}</td>
               </tr>
               <tr>
@@ -144,6 +162,18 @@ export async function POST(request: Request) {
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Industry</td>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safeIndustry || '—'}</td>
               </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Path Intent</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safePathIntent || '—'}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Timeline</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safeTimeline || '—'}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Source Path</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;font-family:monospace;">${safeSourcePath || '—'}</td>
+              </tr>
             </table>
             <div style="margin-top:24px;">
               <p style="color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin:0 0 8px;">What They're Looking For</p>
@@ -158,7 +188,7 @@ export async function POST(request: Request) {
       `,
     })
 
-    const response = NextResponse.json({ ok: true })
+    const response = NextResponse.json({ ok: true, enquiryId })
     return addCorsHeaders(response, origin)
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'

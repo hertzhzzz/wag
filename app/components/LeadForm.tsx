@@ -3,10 +3,12 @@
 import { useState } from 'react'
 import { CheckCircle2, ShieldCheck } from 'lucide-react'
 import { useT } from '@/i18n/useT'
-import { trackFormSubmission } from '@/lib/analytics'
+import { trackFormSubmission, trackSuccessfulEnquiry } from '@/lib/analytics'
+import { readSuccessfulEnquiryId } from '@/lib/enquiry-response'
+import { buildLeadFormPayload, normalizeIndustry } from '@/lib/lead-form-payload'
 
-// 共享获客表单：3 字段（姓名/邮箱/需求）→ POST 现有 /api/enquiry
-// 字段名严格匹配后端 Zod schema（fullName/email/lookingFor），industry 预填以标记来源
+// Shared lead capture form: 3 fields (name/email/need) → POST /api/enquiry
+// industry prop is attribution slug only (never a service name)
 const CONTACT_EMAIL = 'mark@winningadventure.com.au'
 
 const inputClass =
@@ -20,11 +22,14 @@ export default function LeadForm({
   heading,
   subcopy,
   cta,
+  industry,
 }: {
   id?: string
   heading?: string
   subcopy?: string
   cta?: string
+  /** Industry attribution slug (e.g. av-lighting). Omit on non-industry pages. */
+  industry?: string
 }) {
   const t = useT()
   const actualHeading = heading ?? t('form.lead.defaultHeading')
@@ -39,14 +44,29 @@ export default function LeadForm({
       return
     }
     setStatus('submitting')
+    const pagePath = typeof window !== 'undefined' ? window.location.pathname : 'not_provided'
     try {
       const res = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...form, industry: 'Supplier Verification' }),
+        body: JSON.stringify(buildLeadFormPayload(form, {
+          sourcePath: pagePath,
+          industry,
+        })),
       })
       if (!res.ok) throw new Error()
-      trackFormSubmission('lead_form', typeof window !== 'undefined' ? window.location.pathname : '')
+
+      const enquiryId = await readSuccessfulEnquiryId(res)
+      if (enquiryId) {
+        trackSuccessfulEnquiry({
+          enquiryId,
+          formType: 'embedded',
+          pagePath,
+          industry: normalizeIndustry(industry),
+          pathIntent: 'not_provided',
+        })
+      }
+      trackFormSubmission('embedded', pagePath)
       setStatus('success')
     } catch {
       setStatus('error')
