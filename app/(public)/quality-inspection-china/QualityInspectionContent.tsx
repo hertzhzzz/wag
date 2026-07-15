@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ'
 import ScrollReveal from '@/components/ScrollReveal'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import LeadForm from '@/components/LeadForm'
+import SecondaryPathSupportNav from '@/components/SecondaryPathSupportNav'
 import { useT } from '@/i18n/useT'
 import {
   Search, ShieldCheck, FileCheck2, Boxes,
@@ -172,6 +173,8 @@ export default function QualityInspectionContent() {
             </div>
           </div>
         </section>
+
+        <SecondaryPathSupportNav currentPath="/quality-inspection-china" />
 
         {/* ============================================ Trust stat strip ============================================ */}
         <section className="bg-white border-b border-navy/10">

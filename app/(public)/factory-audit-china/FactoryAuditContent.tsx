@@ -5,6 +5,7 @@ import FAQ from '@/components/FAQ'
 import ScrollReveal from '@/components/ScrollReveal'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import LeadForm from '@/components/LeadForm'
+import SecondaryPathSupportNav from '@/components/SecondaryPathSupportNav'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ServiceSchema from '@/components/ServiceSchema'
@@ -115,7 +116,7 @@ export default function FactoryAuditContent() {
         serviceType="Factory Audit"
         url="https://www.winningadventure.com.au/factory-audit-china"
         areaServed={{ '@type': 'Country', name: 'Australia' }}
-        description="On-site factory audit for Australian importers sourcing from China: production capability, quality management, equipment, workforce, documentation, and social-compliance screening."
+        description="Secondary-path on-site factory audit for Australian businesses: production capability, quality management, equipment, workforce, documentation, and social-compliance screening for an existing China factory."
       />
       <Navbar />
       <BreadcrumbSchema
@@ -179,6 +180,8 @@ export default function FactoryAuditContent() {
             </div>
           </div>
         </section>
+
+        <SecondaryPathSupportNav currentPath="/factory-audit-china" />
 
         {/* ============================================ Trust stat strip ============================================ */}
         <section className="bg-white border-b border-navy/10">

@@ -3,20 +3,20 @@ import { Metadata } from 'next'
 import FactoryAuditContent from './FactoryAuditContent'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Factory Audit in China for Australian Importers | On-Site Capability Audit' },
+  title: { absolute: 'Factory Audit in China | Secondary Path Support for Australian Buyers' },
   description:
-    'On-site factory audit in China: production-capability assessment, quality-management systems, documentation review, and social compliance screening. Australia-based — we inspect on your behalf. Book a free consult.',
+    'Secondary path in China sourcing: on-site factory audit for an existing supplier. Capability, quality systems, documentation, and compliance screening for Australian businesses — not the primary find-and-vet offer.',
   keywords: [
     'factory audit china',
-    'china factory audit service',
     'supplier audit china',
     'manufacturing capability audit china',
-    'chinese factory inspection australia',
+    'existing factory audit australia',
+    'china factory due diligence',
   ],
   openGraph: {
-    title: 'Factory Audit in China | Winning Adventure Global',
+    title: 'Factory Audit Support | Winning Adventure Global',
     description:
-      'On-site factory audit evaluating production capability, quality management (ISO 9001 alignment), documentation, workforce, and social compliance — conducted in person on your behalf.',
+      'Secondary-path support: walk an existing China factory floor and report capability. Primary commercial path remains finding and vetting new suppliers.',
     url: 'https://www.winningadventure.com.au/factory-audit-china',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',

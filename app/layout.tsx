@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.winningadventure.com.au'),
   title: {
     template: '%s | Winning Adventure Global',
-    default: 'China Factory Tours & Supplier Verification for Australian Businesses | Winning Adventure Global',
+    default: 'China Sourcing for Australian Businesses | Winning Adventure Global',
   },
-  description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. In-person factory tours, supplier vetting, and end-to-end procurement support across all industries. Free initial consultation.',
-  keywords: ['china sourcing agent', 'verified chinese suppliers', 'australian business china sourcing', 'china procurement support', 'supplier verification china', 'import from china guide', 'china manufacturing agent'],
+  description: 'Australia-based China sourcing for Australian businesses: find and vet new suppliers, or visit and verify an existing factory. Factory tours and verification remain secondary-path support.',
+  keywords: ['china sourcing australia', 'china sourcing agent australia', 'find china suppliers', 'australian business china sourcing', 'supplier verification china', 'factory visit china', 'china procurement support'],
   authors: [{ name: 'Andy Liu' }],
   creator: 'Winning Adventure Global',
   publisher: 'Winning Adventure Global',
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     url: 'https://www.winningadventure.com.au',
     siteName: 'Winning Adventure Global',
-    title: 'China Factory Tours & Supplier Verification for Australian Businesses | Winning Adventure Global',
-    description: 'Winning Adventure Global connects Australian businesses with verified Chinese manufacturers. In-person factory tours, supplier vetting, and end-to-end procurement support.',
+    title: 'China Sourcing for Australian Businesses | Winning Adventure Global',
+    description: 'Find and vet China suppliers for Australian businesses — or visit and verify an existing factory. Verification remains a secondary path.',
     images: [
       {
         url: '/og-image.jpg',
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'China Factory Tours & Supplier Verification for Australian Businesses | Winning Adventure Global',
-    description: 'Verified Chinese manufacturers across all industries. Factory tours, supplier verification, and end-to-end procurement support.',
+    title: 'China Sourcing for Australian Businesses | Winning Adventure Global',
+    description: 'Find and vet China suppliers, or visit and verify an existing factory. Australia-based China sourcing support.',
     images: ['/og-image.webp'],
   },
   alternates: {

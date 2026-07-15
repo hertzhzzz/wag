@@ -4,20 +4,20 @@ import SupplierVerificationContent from './SupplierVerificationContent'
 import ServiceSchema from '@/components/ServiceSchema'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Supplier Verification in China for Australian Importers' },
+  title: { absolute: 'Supplier Verification in China | Secondary Path for Australian Buyers' },
   description:
-    'Remote supplier verification for Australian businesses sourcing from China. We authenticate business licenses, audit capability, and inspect quality against a database of 1,200+ pre-screened factories. Book a free consult.',
+    'Secondary path in China sourcing: verify an existing Chinese supplier before you commit. License authentication, capability checks, and quality support for Australian businesses — not the primary find-and-vet offer.',
   keywords: [
     'supplier verification china',
-    'supplier verification china australia',
-    'china supplier verification service',
     'verify chinese manufacturer',
     'remote factory verification',
+    'supplier due diligence china',
+    'existing supplier verification australia',
   ],
   openGraph: {
-    title: 'Supplier Verification in China | Winning Adventure Global',
+    title: 'Supplier Verification Support | Winning Adventure Global',
     description:
-      'Remote, Australia-based supplier verification: business-license authentication, capability audit, and quality inspection across 1,200+ pre-screened Chinese factories.',
+      'Secondary-path support: authenticate and assess an existing China supplier. Primary commercial path remains finding and vetting new suppliers on services and industry pages.',
     url: 'https://www.winningadventure.com.au/supplier-verification',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',
@@ -39,7 +39,7 @@ export default function SupplierVerificationPage() {
         serviceType="Supplier Verification"
         url="https://www.winningadventure.com.au/supplier-verification"
         areaServed={{ '@type': 'Country', name: 'Australia' }}
-        description="Remote supplier verification for Australian importers sourcing from China: business-license authentication, capability and export-history audit, and pre-shipment quality inspection."
+        description="Secondary-path supplier verification for Australian businesses: business-license authentication, capability and export-history assessment, and quality support for an existing China factory contact."
       />
       <SupplierVerificationContent />
     </>

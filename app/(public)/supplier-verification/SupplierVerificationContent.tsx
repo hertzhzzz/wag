@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ'
 import ScrollReveal from '@/components/ScrollReveal'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import LeadForm from '@/components/LeadForm'
+import SecondaryPathSupportNav from '@/components/SecondaryPathSupportNav'
 
 const statValues = ['1,200+', '25+', '1,000+', '180+']
 
@@ -156,6 +157,8 @@ export default function SupplierVerificationContent() {
             </div>
           </div>
         </section>
+
+        <SecondaryPathSupportNav currentPath="/supplier-verification" />
 
         {/* ============================================ Trust stat strip ============================================ */}
         <section className="bg-white border-b border-navy/10">
