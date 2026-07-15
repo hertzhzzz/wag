@@ -4,12 +4,12 @@
 
 **Blocked by:** 02 — Industry content model + AV rewrite
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Agricultural machinery title follows the shared title skeleton
-- [ ] H1 is differentiated from AV and construction
-- [ ] Eight sections are rewritten for agricultural machinery commercial reality
-- [ ] Dual-path primary/secondary positioning matches site law
-- [ ] FAQ answers are present in initial HTML
-- [ ] Industry qualified form is embedded with agricultural-machinery slug attribution
-- [ ] Content/data assertions cover ag dual-path positioning and CTA
+- [x] Agricultural machinery title follows the shared title skeleton
+- [x] H1 is differentiated from AV and construction
+- [x] Eight sections are rewritten for agricultural machinery commercial reality
+- [x] Dual-path primary/secondary positioning matches site law
+- [x] FAQ answers are present in initial HTML
+- [x] Industry qualified form is embedded with agricultural-machinery slug attribution
+- [x] Content/data assertions cover ag dual-path positioning and CTA

@@ -63,7 +63,7 @@ _Avoid_: service name as industry
 
 ## Industry content
 
-**Industry Intent Page** — Dual-path commercial landing for a priority industry (`av-lighting`, `construction`, later `agricultural-machinery`). Shared title skeleton: `[Industry] China Sourcing for Australian Businesses`. Differentiated H1. Eight-section body (who for, two paths, deliver/non-claims, proof, engagement, before contact, FAQ, final CTA + Industry Qualified Form). Find-and-vet primary; visit/verify secondary.
+**Industry Intent Page** — Dual-path commercial landing for a priority industry (`av-lighting`, `construction`, `agricultural-machinery`). Shared title skeleton: `[Industry] China Sourcing for Australian Businesses`. Differentiated H1. Eight-section body (who for, two paths, deliver/non-claims, proof, engagement, before contact, FAQ, final CTA + Industry Qualified Form). Find-and-vet primary; visit/verify secondary.
 _Avoid_: verification-first body copy on primary sourcing pages; cloned H1s across industries
 
 ## Modules (architecture vocabulary)

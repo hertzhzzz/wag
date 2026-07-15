@@ -1,7 +1,7 @@
 /**
  * Industry Intent Page content model (C4).
  * Shared dual-path skeleton + per-industry rewrites.
- * Ticket 02 shipped AV; ticket 03 adds construction; ag follows in 04.
+ * Tickets 02–04 ship AV, construction, and agricultural machinery dual-path rewrites.
  */
 
 import { buildIndustryQualifiedIntake } from './industry-qualified-intake'
@@ -399,9 +399,172 @@ const CONSTRUCTION: IndustryIntentPage = {
   },
 }
 
+
+const AGRICULTURAL_MACHINERY: IndustryIntentPage = {
+  slug: 'agricultural-machinery',
+  industry: 'Agricultural Machinery',
+  navLabel: 'Agricultural Machinery',
+  title: buildIndustryPageTitle('Agricultural Machinery'),
+  h1: 'Find and Vet Farm Machinery Suppliers That Clear Australian Biosecurity',
+  metaDescription:
+    'Australia-based China sourcing for agricultural machinery: find and shortlist factories, due diligence, visit planning, and on-ground coordination. Biosecurity, BICON, WHS and cleaning evidence checked before you commit.',
+  heroTagline: 'Australia-based · Agricultural machinery China sourcing',
+  heroIntro:
+    'For Australian farmers, dealers, co-ops, and equipment buyers who need China-built implements and components that can actually clear DAFF biosecurity — not a generic factory list. Primary path: find and vet new suppliers. Secondary path: visit or verify a factory you already know.',
+  heroImage:
+    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1600&q=80',
+  stats: [
+    { value: 'BICON', label: 'DAFF import-condition pathway' },
+    { value: '80°C', label: 'Hot-water cleaning benchmark' },
+    { value: 'WHS', label: 'Guarding and design risk' },
+    { value: '2 paths', label: 'Find new or verify existing' },
+  ],
+  primaryPathLabel: INDUSTRY_PRIMARY_PATH_LABEL,
+  secondaryPathLabel: INDUSTRY_SECONDARY_PATH_LABEL,
+  sections: {
+    whoFor: {
+      heading: 'Who this is for',
+      body:
+        'Australian farmers, dealers, co-ops, contractors, and equipment buyers specifying tractor implements, tillage, irrigation, harvesting parts, spraying gear, or livestock handling equipment from China. Ideal if price only matters once the machine can clear biosecurity and be used safely on farm.',
+      bullets: [
+        'You are building or refreshing a shortlist for farm machinery or components',
+        'You need biosecurity, BICON, WHS, and asbestos-ban evidence — not export claims alone',
+        'You want a decision-grade briefing before deposits, tooling, or factory travel',
+      ],
+    },
+    twoPaths: {
+      heading: 'Two paths for agricultural machinery buyers',
+      primary: {
+        title: INDUSTRY_PRIMARY_PATH_LABEL,
+        body:
+          'We shortlist factories that can actually build your equipment class, then vet capability, export history, and Australian-facing risk (biosecurity cleaning pathway, BICON permit practicality, WHS guarding, and asbestos-sensitive components). You get a shortlist you can act on — not a directory dump.',
+      },
+      secondary: {
+        title: INDUSTRY_SECONDARY_PATH_LABEL,
+        body:
+          'Already have a manufacturer or a preferred OEM? We help you visit or verify that supplier: entity and licence checks, capability review, cleaning and documentation readiness, and trip coordination so you do not fly blind or wire deposits on trust alone.',
+      },
+    },
+    deliver: {
+      heading: 'What we deliver — and what we do not claim',
+      claims: [
+        'Find and shortlist agricultural-machinery factories matched to your equipment class',
+        'Due diligence on entity legitimacy, production capability, and Australian-facing risk evidence',
+        'Visit planning for factory meetings in China',
+        'On-ground coordination with Australia-based and China-based teams',
+      ],
+      nonClaims: [
+        'We do not place orders or pay suppliers on your behalf',
+        'We do not run commercial negotiation as the primary offer',
+        'Quality inspection is not the primary product on this page',
+        'We do not handle international freight, customs clearance, or turnkey installation',
+      ],
+    },
+    proof: {
+      heading: 'Agricultural machinery risks Australian buyers actually face',
+      body:
+        'No category is scrutinised harder at the Australian border than agricultural machinery. Under the Biosecurity Act 2015, DAFF expects equipment free of soil, seeds, plant and animal material. Used machinery needs documented hot-water or steam cleaning; BICON pathways and pest-risk updates can change what evidence is accepted. A single seed in a radiator can mean re-cleaning costs in the thousands — or re-export. Factory capability and WHS guarding still matter, but biosecurity is where landed cost most often collapses.',
+      risks: [
+        'DAFF enforces zero-tolerance biosecurity: soil, seeds, or organic matter can trigger re-cleaning, storage, or re-export at your cost.',
+        'Used machinery needs documented hot-water (80°C+) or steam cleaning with photographic evidence; pest-risk updates can raise the bar further.',
+        'Most equipment needs the correct BICON import-permit pathway before arrival, with detailed specs, origin documents, and cleaning declarations.',
+        'WHS guarding, emergency stops, design registration, and asbestos-sensitive components can make a cheap machine unusable or unsaleable in Australia.',
+      ],
+      standards: [
+        { code: 'Biosecurity Act 2015', name: 'DAFF framework — inspect, treat, or destroy non-compliant imports' },
+        { code: 'BICON', name: 'Biosecurity Import Conditions — mandatory import pathways and permits' },
+        { code: 'Cleaning standard', name: 'Hot-water 80°C+ / steam wash with photographic evidence' },
+        { code: 'WHS Act', name: 'Guarding, emergency stops, design registration where required' },
+        { code: 'Asbestos ban', name: 'Zero-tolerance — components screened before commitment' },
+        { code: 'ChAFTA', name: '0% duty on most machinery with valid Certificate of Origin' },
+      ],
+      standardsNote:
+        'Biosecurity is where agricultural-machinery imports most often fail — and it fails at the Australian wharf, where fixing it is most expensive. We confirm cleaning readiness and documentation practicality at origin, not after the container lands.',
+      productsIntro:
+        'Agricultural machinery and components we most often help Australian buyers source and vet:',
+      products: [
+        'Tractor implements and attachments',
+        'Tillage and cultivation equipment',
+        'Irrigation systems and components',
+        'Harvesting machinery parts',
+        'Spraying and spreading equipment',
+        'Greenhouse and growing systems',
+        'Livestock and handling equipment',
+        'Spare parts and consumables',
+      ],
+    },
+    engagement: {
+      heading: 'How engagement works',
+      body:
+        'One commercial conversation, two procurement paths. We scope find-new vs verify-existing first, then only deepen the work that matches your equipment class, timeline, and border risk.',
+      steps: [
+        {
+          title: 'Scope the path',
+          body: 'You tell us equipment class, new vs used, volumes, and whether you need new suppliers or help with an existing factory.',
+        },
+        {
+          title: 'Shortlist or target review',
+          body: 'Find-new: shortlist factories with relevant production. Verify-existing: review the manufacturer you already have.',
+        },
+        {
+          title: 'Due diligence',
+          body: 'Entity, capability, export history, and Australian-facing biosecurity / WHS risk evidence for the machine class.',
+        },
+        {
+          title: 'Visit planning',
+          body: 'If travel makes sense, we plan factory meetings and logistics with on-ground coordination.',
+        },
+        {
+          title: 'You own the commercial relationship',
+          body: 'You buy direct. We do not insert ourselves as the importer of record or the negotiating principal.',
+        },
+      ],
+    },
+    beforeContact: {
+      heading: 'What you need before contacting us',
+      checklist: [
+        'Equipment class and rough specification (e.g. tillage implement, irrigation pump, tractor attachment)',
+        'New build vs used/refurbished, and approximate volume or project scale',
+        'Whether you are finding new suppliers or verifying an existing one',
+        'Target timeline (within 3 months, 3–6 months, later, or still exploring)',
+        'Any must-have constraints (BICON pathway, cleaning evidence, WHS guarding, asbestos-sensitive parts)',
+      ],
+    },
+    faqs: [
+      {
+        question: 'Do you only verify factories, or can you help me find new farm machinery suppliers?',
+        answer:
+          'Finding and vetting new suppliers is the primary path on this page. Verification of an existing factory is the secondary path. Both use the same Australia-based / China-based operating model; the difference is whether we shortlist new factories or assess a supplier you already know.',
+      },
+      {
+        question: 'Why is biosecurity such a big deal for agricultural machinery?',
+        answer:
+          'Australia has some of the world\'s strictest biosecurity laws to protect agriculture from foreign pests and diseases. Under the Biosecurity Act 2015, DAFF expects machinery free of soil, seeds, and organic matter — typically verified by hot-water (80°C+) or steam cleaning with photographic evidence. Non-compliance means re-cleaning, storage costs, or re-export. We help confirm cleaning readiness and documentation practicality at origin so you are not discovering the failure at the wharf.',
+      },
+      {
+        question: 'Do I need an import permit for farm machinery from China?',
+        answer:
+          'Most agricultural machinery needs the correct BICON pathway before goods arrive, with detailed equipment specifications, origin documentation, and cleaning declarations. Pest-risk updates can add extra evidence requirements. We help confirm the practical permit pathway as part of sourcing and supplier diligence — not as a substitute for your customs broker.',
+      },
+      {
+        question: 'What do you not do for agricultural machinery projects?',
+        answer:
+          'We do not place orders, pay suppliers, act as commercial negotiator of record, run quality inspection as the primary product, handle international freight or customs, or deliver turnkey installation. Our scope is find, shortlist, due diligence, visit planning, and on-ground coordination.',
+      },
+    ],
+    finalCta: {
+      heading: 'Discuss your agricultural machinery sourcing project',
+      body:
+        'Tell us whether you need new suppliers or help with an existing factory, your timeline, and a short project brief. We respond within 4 business hours.',
+      ctaLabel: INDUSTRY_PRIMARY_CTA,
+    },
+  },
+}
+
 const INTENT_PAGES: Record<string, IndustryIntentPage> = {
   'av-lighting': AV_LIGHTING,
   construction: CONSTRUCTION,
+  'agricultural-machinery': AGRICULTURAL_MACHINERY,
 }
 
 export function getIndustryIntentPage(slug: string): IndustryIntentPage | undefined {
