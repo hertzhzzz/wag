@@ -76,9 +76,68 @@ describe('AV industry intent page model', () => {
   })
 })
 
-describe('construction and agricultural machinery dual-path models', () => {
-  it('are not yet dual-path rewrites in ticket 02', () => {
-    expect(getIndustryIntentPage('construction')).toBeUndefined()
+describe('construction industry intent page model', () => {
+  const construction = getIndustryIntentPage('construction')
+
+  it('exists as the second dual-path industry rewrite', () => {
+    expect(construction).toBeDefined()
+    expect(construction?.slug).toBe('construction')
+  })
+
+  it('uses the shared title skeleton and a differentiated H1', () => {
+    expect(construction?.title).toBe(
+      'Construction Materials China Sourcing for Australian Businesses',
+    )
+    expect(construction?.h1).toBeTruthy()
+    expect(construction?.h1).not.toBe(construction?.title)
+    expect(construction?.h1).not.toBe(getIndustryIntentPage('av-lighting')?.h1)
+    expect(construction?.h1.toLowerCase()).not.toContain('for australian businesses')
+  })
+
+  it('positions find-and-vet as primary and visit/verify as secondary', () => {
+    expect(construction?.primaryPathLabel).toBe(INDUSTRY_PRIMARY_PATH_LABEL)
+    expect(construction?.secondaryPathLabel).toBe(INDUSTRY_SECONDARY_PATH_LABEL)
+    expect(construction?.sections.twoPaths.primary.title).toMatch(/find|vet|shortlist/i)
+    expect(construction?.sections.twoPaths.secondary.title).toMatch(/visit|verify|existing/i)
+  })
+
+  it('exposes the eight-section skeleton with construction-specific copy', () => {
+    const s = construction!.sections
+    expect(s.whoFor.heading).toBeTruthy()
+    expect(s.twoPaths.primary.body).toBeTruthy()
+    expect(s.deliver.heading).toBeTruthy()
+    expect(s.proof.heading).toBeTruthy()
+    expect(s.engagement.steps.length).toBeGreaterThanOrEqual(4)
+    expect(s.beforeContact.checklist.length).toBeGreaterThanOrEqual(3)
+    expect(s.faqs.length).toBeGreaterThanOrEqual(3)
+    expect(s.finalCta.heading).toBeTruthy()
+
+    const blob = JSON.stringify(construction)
+    expect(blob).toMatch(/WaterMark|NCC|AS\/NZS|steel|tile/i)
+    expect(blob).not.toMatch(/RCM|GEMS|biosecurity/i)
+  })
+
+  it('limits delivery claims and states non-claims', () => {
+    const claims = construction!.sections.deliver.claims.join(' ').toLowerCase()
+    const nonClaims = construction!.sections.deliver.nonClaims.join(' ').toLowerCase()
+    expect(claims).toMatch(/find|shortlist|due diligence|visit|coordinat/)
+    expect(nonClaims).toMatch(/negotiat|freight|customs|turnkey|place orders|pay suppliers|quality inspection as the primary/)
+  })
+
+  it('uses the industry primary CTA label on the final form slot', () => {
+    expect(construction?.sections.finalCta.ctaLabel).toBe(INDUSTRY_PRIMARY_CTA)
+  })
+
+  it('keeps FAQ answers as data available for initial HTML rendering', () => {
+    for (const faq of construction!.sections.faqs) {
+      expect(faq.question.length).toBeGreaterThan(10)
+      expect(faq.answer.length).toBeGreaterThan(40)
+    }
+  })
+})
+
+describe('agricultural machinery dual-path model', () => {
+  it('is not yet a dual-path rewrite in ticket 03', () => {
     expect(getIndustryIntentPage('agricultural-machinery')).toBeUndefined()
   })
 })

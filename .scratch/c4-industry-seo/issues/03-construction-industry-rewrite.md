@@ -4,12 +4,12 @@
 
 **Blocked by:** 02 — Industry content model + AV rewrite
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Construction title follows the shared title skeleton
-- [ ] Construction H1 is differentiated and not a clone of AV
-- [ ] Eight sections are rewritten for construction commercial reality
-- [ ] Dual-path primary/secondary positioning matches site law
-- [ ] FAQ answers are present in initial HTML
-- [ ] Industry qualified form is embedded with construction slug attribution
-- [ ] Content/data assertions cover construction dual-path positioning and CTA
+- [x] Construction title follows the shared title skeleton
+- [x] Construction H1 is differentiated and not a clone of AV
+- [x] Eight sections are rewritten for construction commercial reality
+- [x] Dual-path primary/secondary positioning matches site law
+- [x] FAQ answers are present in initial HTML
+- [x] Industry qualified form is embedded with construction slug attribution
+- [x] Content/data assertions cover construction dual-path positioning and CTA
