@@ -3,7 +3,12 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { getLiveIndustries, getIndustry } from '@/data/industries'
+import {
+  buildIndustryPageTitle,
+  getIndustryIntentPage,
+} from '@/lib/industry-intent-content'
 import IndustryContent from './IndustryContent'
+import DualPathIndustryContent from './DualPathIndustryContent'
 import ServiceSchema from '@/components/ServiceSchema'
 
 const BASE = 'https://www.winningadventure.com.au'
@@ -16,23 +21,31 @@ export async function generateMetadata(
   { params }: { params: Promise<{ industry: string }> },
 ): Promise<Metadata> {
   const { industry } = await params
-  const ind = getIndustry(industry)
-  if (!ind) return {}
-  const url = `${BASE}/industries/${ind.slug}`
-  const title = `${ind.industry} Sourcing from China for Australian Importers`
-  const description = `Australia-based China sourcing for ${ind.industry.toLowerCase()}: factory verification, capability audits, compliance checks, and pre-shipment inspection. We confirm Australian-standards evidence before goods ship. Book a free consult.`
+  const dual = getIndustryIntentPage(industry)
+  const legacy = getIndustry(industry)
+  if (!dual && !legacy) return {}
+
+  const slug = dual?.slug ?? legacy!.slug
+  const displayName = dual?.industry ?? legacy!.industry
+  const navLabel = dual?.navLabel ?? legacy!.navLabel
+  const url = `${BASE}/industries/${slug}`
+  const title = dual?.title ?? buildIndustryPageTitle(displayName)
+  const description =
+    dual?.metaDescription ??
+    `Australia-based China sourcing for ${displayName.toLowerCase()}: find and vet suppliers, due diligence, visit planning, and on-ground coordination for Australian businesses.`
+
   return {
     title: { absolute: title },
     description,
     keywords: [
-      `${ind.industry.toLowerCase()} sourcing china`,
-      `import ${ind.industry.toLowerCase()} from china`,
-      `china ${ind.navLabel.toLowerCase()} supplier`,
-      `${ind.navLabel.toLowerCase()} sourcing agent australia`,
-      `china ${ind.navLabel.toLowerCase()} factory verification`,
+      `${displayName.toLowerCase()} china sourcing`,
+      `${displayName.toLowerCase()} suppliers china`,
+      `import ${displayName.toLowerCase()} from china`,
+      `china ${navLabel.toLowerCase()} supplier australia`,
+      `${navLabel.toLowerCase()} sourcing agent australia`,
     ],
     openGraph: {
-      title: `${ind.industry} Sourcing from China | Winning Adventure Global`,
+      title: `${title} | Winning Adventure Global`,
       description,
       url,
       siteName: 'Winning Adventure Global',
@@ -49,28 +62,34 @@ export default async function IndustryPage(
   { params }: { params: Promise<{ industry: string }> },
 ) {
   const { industry } = await params
-  const ind = getIndustry(industry)
-  if (!ind) notFound()
+  const dual = getIndustryIntentPage(industry)
+  const legacy = getIndustry(industry)
+  if (!dual && !legacy) notFound()
 
-  const url = `${BASE}/industries/${ind.slug}`
+  const slug = dual?.slug ?? legacy!.slug
+  const displayName = dual?.industry ?? legacy!.industry
+  const url = `${BASE}/industries/${slug}`
 
   return (
     <>
       <ServiceSchema
-        name={`${ind.industry} Sourcing from China`}
+        name={`${displayName} China Sourcing for Australian Businesses`}
         serviceType="China Sourcing Agent"
         url={url}
         areaServed={{ '@type': 'Country', name: 'Australia' }}
-        description={`Australia-based China sourcing, supplier verification, factory audit, and quality inspection for ${ind.industry.toLowerCase()} importers.`}
+        description={
+          dual?.metaDescription ??
+          `Australia-based China sourcing for ${displayName.toLowerCase()}: find and vet suppliers, due diligence, visit planning, and on-ground coordination.`
+        }
       />
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: BASE },
           { name: 'Services', url: `${BASE}/services` },
-          { name: ind.industry, url },
+          { name: displayName, url },
         ]}
       />
-      <IndustryContent ind={ind} />
+      {dual ? <DualPathIndustryContent page={dual} /> : <IndustryContent ind={legacy!} />}
     </>
   )
 }

@@ -61,7 +61,15 @@ _Avoid_: service name as industry
 - `embedded` — in-page Lead Form
 - `enquiry_page` — the `/enquiry` page form
 
+## Industry content
+
+**Industry Intent Page** — Dual-path commercial landing for a priority industry (`av-lighting`, later `construction`, `agricultural-machinery`). Shared title skeleton: `[Industry] China Sourcing for Australian Businesses`. Differentiated H1. Eight-section body (who for, two paths, deliver/non-claims, proof, engagement, before contact, FAQ, final CTA + Industry Qualified Form). Find-and-vet primary; visit/verify secondary.
+_Avoid_: verification-first body copy on primary sourcing pages; cloned H1s across industries
+
 ## Modules (architecture vocabulary)
+
+**Industry Intent Content module** — Data/model for dual-path industry pages (title skeleton, path labels, eight sections, CTA label). Rendered by the dual-path industry page surface; tests assert commercial positioning without snapshotting full React trees.
+
 
 **Successful Conversion Analytics module** — Deepens lead measurement: one interface (`trackSuccessfulEnquiry`) delivers GA4 `generate_lead`, Google Ads form conversion, and Meta Lead after API success, with session dedupe on `enquiryId`.
 
