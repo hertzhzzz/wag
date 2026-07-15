@@ -20,6 +20,7 @@ import {
 } from 'lucide-react'
 import '@/components/services-animations.css'
 import { useT } from '@/i18n/useT'
+import PriorityIndustryLinks from '@/components/PriorityIndustryLinks'
 
 interface ServiceTier {
   id: string
@@ -56,10 +57,10 @@ const comparisonRows: ComparisonRow[] = [
 ]
 
 const industries = [
-  { name: 'AV Equipment', icon: Monitor },
+  { name: 'AV & Lighting', icon: Monitor, href: '/industries/av-lighting' as const },
+  { name: 'Construction Materials', icon: Wrench, href: '/industries/construction' as const },
+  { name: 'Agricultural Machinery', icon: Tractor, href: '/industries/agricultural-machinery' as const },
   { name: 'Automotive Parts', icon: Car },
-  { name: 'Engineering Machinery', icon: Wrench },
-  { name: 'Agricultural Machinery', icon: Tractor },
   { name: 'Precision Manufacturing', icon: Cog },
   { name: 'Aesthetics & Cosmetics', icon: Sparkles },
   { name: 'Fashion & Apparel', icon: Shirt },
@@ -167,7 +168,7 @@ export default function ServicesContent() {
     <>
       <ServiceSchema
         name="China Sourcing Services"
-        description="China sourcing, factory tours, supplier verification, quality inspection and procurement support for Australian businesses."
+        description="China sourcing for Australian businesses: find and vet new suppliers, or visit and verify an existing factory. Priority industries include AV & lighting, construction materials, and agricultural machinery."
         url="https://www.winningadventure.com.au/services"
         areaServed={{ '@type': 'Country', name: 'Australia' }}
         serviceType={['China Sourcing Agent', 'Factory Tour', 'Supplier Verification', 'Quality Inspection', 'Procurement Support']}
@@ -317,26 +318,25 @@ export default function ServicesContent() {
         <section id="sourcing-agent" className="py-12 md:py-16 px-4 md:px-8 bg-white">
           <div className="max-w-[1100px] mx-auto">
             <h2 className="font-serif text-3xl text-navy mb-4">
-              China Sourcing Agent for Australian Businesses
+              China Sourcing for Australian Businesses
             </h2>
             <p className="text-gray-600 mb-4 max-w-[720px] leading-relaxed">
-              We act as your on-the-ground procurement team in China — finding factories, negotiating prices,
-              managing quality control, and handling logistics. Unlike online platforms where you never know
-              who you are dealing with, we visit factories in person, verify their credentials, and stand
-              behind our recommendations.
+              Primary path: find and vet new suppliers in China — shortlist factories, due diligence, visit
+              planning, and on-ground coordination. Secondary path: visit or verify a factory you already know.
+              You own the commercial relationship.
             </p>
             <p className="text-gray-600 mb-6 max-w-[720px] leading-relaxed">
-              Whether you need a one-time bulk order or ongoing supply, we match you with pre-screened
-              manufacturers that fit your product, budget, and volume requirements.
+              Service tiers change how deeply we are involved and whether you travel. They do not change the
+              offer: China sourcing for Australian businesses, not verification-as-the-product.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/enquiry"
                 className="inline-block bg-navy text-white py-3 px-8 text-sm font-semibold hover:bg-navy/90 transition-colors min-h-11"
-                aria-label="Get a Free Supplier Shortlist"
-                onClick={() => trackCTAClick('Get a Free Supplier Shortlist', 'services-sourcing-agent-section')}
+                aria-label="Discuss Your Sourcing Project"
+                onClick={() => trackCTAClick('Discuss Your Sourcing Project', 'services-sourcing-agent-section')}
               >
-                Get a Free Supplier Shortlist &rarr;
+                Discuss Your Sourcing Project &rarr;
               </Link>
               <Link
                 href="/article/importing-from-china-australia-guide"
@@ -357,16 +357,16 @@ export default function ServicesContent() {
         <section id="factory-audit" className="py-12 md:py-16 px-4 md:px-8 bg-[#f0f4f8]">
           <div className="max-w-[1100px] mx-auto">
             <h2 className="font-serif text-3xl text-navy mb-4">
-              Factory Audit & Supplier Verification in China
+              Secondary path: visit or verify an existing factory
             </h2>
             <p className="text-gray-600 mb-4 max-w-[720px] leading-relaxed">
-              Before you pay any deposit, we verify the factory exists, holds the certifications they claim,
-              and can produce to your specifications. Our audit covers business licence checks, production
-              floor assessment, equipment verification, and certificate authentication.
+              Already have a factory contact? Visit planning and supplier verification remain available as a
+              secondary path — not the primary offer on this site. We help you assess entity legitimacy,
+              capability, and credentials before you commit.
             </p>
             <p className="text-gray-600 mb-6 max-w-[720px] leading-relaxed">
-              You receive a written report with photos, licence documentation, and our assessment of whether
-              the supplier is a genuine manufacturer — not a trading company posing as one.
+              For most Australian buyers, the main job is finding and vetting new suppliers first. Use this
+              path when you already know who you want to assess or visit.
             </p>
             <Link
               href="/enquiry"
@@ -531,6 +531,12 @@ export default function ServicesContent() {
         </section>
       </ScrollReveal>
 
+      <PriorityIndustryLinks
+        source="services"
+        heading="Priority industry pages"
+        intro="Stable entry points into dual-path China sourcing for AV & lighting, construction materials, and agricultural machinery."
+      />
+
       {/* ============================================
           #industries
           ============================================ */}
@@ -550,15 +556,25 @@ export default function ServicesContent() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-8">
               {industries.map((item, i) => {
                 const Icon = item.icon
-                return (
-                  <div
-                    key={i}
-                    className="industry-card bg-white border border-gray-200 rounded-lg px-4 py-3.5 flex items-center gap-3 hover:border-amber/30 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
-                  >
+                const className = "industry-card bg-white border border-gray-200 rounded-lg px-4 py-3.5 flex items-center gap-3 hover:border-amber/30 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200 no-underline"
+                const inner = (
+                  <>
                     <div className="w-8 h-8 rounded-md bg-navy/5 flex items-center justify-center flex-shrink-0">
                       <Icon size={16} className="text-navy" strokeWidth={1.5} />
                     </div>
                     <span className="text-sm text-navy font-medium">{item.name}</span>
+                  </>
+                )
+                if ('href' in item && item.href) {
+                  return (
+                    <Link key={i} href={item.href} className={className}>
+                      {inner}
+                    </Link>
+                  )
+                }
+                return (
+                  <div key={i} className={className}>
+                    {inner}
                   </div>
                 )
               })}

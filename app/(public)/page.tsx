@@ -7,20 +7,21 @@ import HowItWorks from '@/components/HowItWorks'
 import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import HomeCaseStudy from '@/components/HomeCaseStudy'
+import PriorityIndustryLinks from '@/components/PriorityIndustryLinks'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { Metadata } from 'next'
 import { buildWebSiteSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: { absolute: 'China Sourcing Agent Australia | Verified Factories' },
-  description: 'Adelaide-based China sourcing agent for Australian businesses. Factory tours, supplier verification, on-ground support across Guangdong, Zhejiang & Jiangsu. Free consultation.',
-  keywords: ['china sourcing agent australia', 'china sourcing agent', 'australia china sourcing', 'china factory visit', 'china factory tour', 'visiting chinese factories', 'factory verification china', 'supplier verification china', 'china procurement agent australia', 'guided factory tour china'],
+  title: { absolute: 'China Sourcing for Australian Businesses | Winning Adventure Global' },
+  description: 'Australia-based China sourcing for Australian businesses: find and vet new suppliers, or visit and verify an existing factory. Priority industries: AV & lighting, construction materials, agricultural machinery.',
+  keywords: ['china sourcing australia', 'china sourcing agent australia', 'find china suppliers australia', 'av lighting sourcing china', 'construction materials china sourcing', 'agricultural machinery china sourcing', 'supplier verification china', 'factory visit china'],
   openGraph: {
     locale: 'en_AU',
     alternateLocale: 'en_US',
-    title: 'China Sourcing Agent Australia | Factory Tours & Supplier Verification',
-    description: 'Adelaide-based. We accompany Australian businesses to verified Chinese factories — translation, negotiation & quality inspection included. Free consultation.',
+    title: 'China Sourcing for Australian Businesses | Winning Adventure Global',
+    description: 'Find and vet China suppliers for Australian businesses — or visit and verify a factory you already know. AV & lighting, construction, agricultural machinery.',
     url: 'https://www.winningadventure.com.au/',
     siteName: 'Winning Adventure Global',
   },
@@ -50,6 +51,7 @@ export default function Home() {
       ]} />
       <Hero />
       <TwoWaysAccess />
+      <PriorityIndustryLinks source="homepage" />
       <HowItWorks />
       <HomeCaseStudy />
       <WhyChooseUs />

@@ -4,11 +4,16 @@
 
 **Blocked by:** 02 — Industry content model + AV rewrite
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Homepage primary promise frames China sourcing for Australian businesses
-- [ ] Homepage exposes clear entries/links to all three priority industries
-- [ ] Services presents find-and-vet as primary and visit/verify as secondary
-- [ ] Services includes stable internal links to the three industry URLs
-- [ ] Changes remain light retune only — no full redesign or IA rebuild
-- [ ] Public copy stays English; brand name remains “Winning Adventure Global”
+- [x] Homepage primary promise frames China sourcing for Australian businesses
+- [x] Homepage exposes clear entries/links to all three priority industries
+- [x] Services presents find-and-vet as primary and visit/verify as secondary
+- [x] Services includes stable internal links to the three industry URLs
+- [x] Changes remain light retune only — no full redesign or IA rebuild
+- [x] Public copy stays English; brand name remains “Winning Adventure Global”
+
+## Verification
+
+- Source + unit tests only (no `view_image` / visual PNG load).
+- `npx jest lib/c4-site-retune.test.ts lib/priority-industry-links.test.ts --runInBand` — pass.

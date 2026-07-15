@@ -94,8 +94,8 @@ export default function Hero() {
             <span className="block leading-[1.05] tracking-[-2px] font-serif font-bold text-[clamp(36px,4.4vw,90px)] text-white hero-headline-line-1 is-visible">
               {t('home.hero.headlineMain')} <span className="text-amber italic">{t('home.hero.headlineEmphasisWord')}</span>
             </span>
-            <span className="block leading-[1.1] tracking-[-2px] font-serif font-bold text-[clamp(22px,2.8vw,36px)] text-white mt-3 hero-headline-line-2 is-visible">
-              {t('home.hero.headlineNoPrefix')} <span className="text-amber italic">{t('home.hero.headlineSubemphasis1')}.</span> {t('home.hero.headlineNoPrefix')} <span className="text-amber italic">{t('home.hero.headlineSubemphasis2')}.</span>
+            <span className="block leading-[1.15] tracking-[-1px] font-serif font-bold text-[clamp(20px,2.5vw,32px)] text-white mt-3 hero-headline-line-2 is-visible">
+              {t('home.hero.headlineSecondary')}
             </span>
           </h1>
 
@@ -104,7 +104,7 @@ export default function Hero() {
           </p>
 
           <Link
-            href="/#factory-visit"
+            href="/#priority-industries"
             className="inline-flex items-center gap-2 border border-white/30 text-white px-7 py-3.5 font-medium hover:bg-white/10 hover:border-white/50 transition-all duration-300 no-underline text-sm min-h-11 backdrop-blur-sm hero-cta-secondary is-visible"
           >
             {t('home.hero.ctaSecondary')}

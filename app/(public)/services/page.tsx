@@ -2,12 +2,12 @@ import { Metadata } from 'next'
 import ServicesContent from './ServicesContent'
 
 export const metadata: Metadata = {
-  title: { absolute: 'China Sourcing Services | Tours, Procurement & Verification' },
-  description: 'Three flexible service tiers for Australian businesses sourcing from China. Choose one-time procurement, guided factory tours with supply chain setup, or remote verification with ongoing procurement management.',
-  keywords: ['china sourcing services', 'china factory tours', 'remote factory verification', 'china procurement australia', 'supplier verification china', 'bulk procurement china'],
+  title: { absolute: 'China Sourcing Services for Australian Businesses | Find & Vet Suppliers' },
+  description: 'Find and vet new China suppliers for Australian businesses, or visit and verify an existing factory. Dual-path sourcing across AV & lighting, construction materials, and agricultural machinery.',
+  keywords: ['china sourcing services australia', 'find china suppliers', 'supplier verification china', 'factory visit china', 'av lighting sourcing', 'construction materials china', 'agricultural machinery china'],
   openGraph: {
     title: 'China Sourcing Services | Winning Adventure Global',
-    description: 'Three service tiers for Australian businesses: one-time procurement, guided factory tours, and remote verification with supply chain management.',
+    description: 'Primary path: find and vet new suppliers. Secondary path: visit or verify an existing factory. Service tiers for Australian businesses.',
     url: 'https://www.winningadventure.com.au/services',
     siteName: 'Winning Adventure Global',
     locale: 'en_AU',
