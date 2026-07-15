@@ -24,7 +24,7 @@ Previous Codex sessions hit `context_length_exceeded` on grok (~128k effective) 
 | 02 | `issues/02-industry-content-model-av-rewrite.md` | **done** — `7592b7a` + tracker `d4e5993` |
 | 03 | `issues/03-construction-industry-rewrite.md` | **done** — `ea596c4` |
 | 04 | `issues/04-agricultural-machinery-rewrite.md` | **done** — `1feb9f4` |
-| 05 | `issues/05-homepage-services-light-retune.md` | **done** — `0589f67` |
+| 05 | `issues/05-homepage-services-light-retune.md` | **done** — `23ad652` |
 | 06 | `issues/06-verification-pages-demotion.md` | **not started** (next) |
 
 Spec: `frontend/.scratch/c4-industry-seo/spec.md`
