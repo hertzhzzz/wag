@@ -25,7 +25,7 @@ Previous Codex sessions hit `context_length_exceeded` on grok (~128k effective) 
 | 03 | `issues/03-construction-industry-rewrite.md` | **done** — `ea596c4` |
 | 04 | `issues/04-agricultural-machinery-rewrite.md` | **done** — `1feb9f4` |
 | 05 | `issues/05-homepage-services-light-retune.md` | **done** — `23ad652` |
-| 06 | `issues/06-verification-pages-demotion.md` | **not started** (next) |
+| 06 | `issues/06-verification-pages-demotion.md` | **done** — see latest commit |
 
 Spec: `frontend/.scratch/c4-industry-seo/spec.md`
 
@@ -33,9 +33,13 @@ Spec: `frontend/.scratch/c4-industry-seo/spec.md`
 
 Light retune of homepage + services for dual-path China sourcing (find-and-vet primary, visit/verify secondary) with SSR-friendly links into the three priority industries. No redesign / nav IA rebuild.
 
-## Ticket 06 (next)
+## Ticket 06 — completed
 
-Demote supplier-verification pages to secondary path; keep live (no 301/merge/delete). Primary commercial intent stays on home, services, three industry pages.
+Demoted supplier-verification / factory-audit / quality-inspection pages to secondary-path support. Pages stay live (no 301/merge/delete). Shared `SecondaryPathSupportNav` routes commercial intent back to home, services, and three priority industries. Site-wide default metadata reframed as China sourcing.
+
+## C4 core status
+
+Tickets 01–06 complete. Do not start extra work unless explicitly requested.
 
 ## Screenshots (offline)
 
@@ -56,8 +60,8 @@ Hard rules:
 1. Never use view_image; never load PNGs into context.
 2. Ignore frontend/.scratch/c4-industry-seo/visual._offline/
 3. Verify with source + jest only.
-4. Finish ticket 05 (uncommitted WIP) then stop and summarize.
-5. Do not start ticket 06 unless I say so.
+4. C4 core tickets 01–06 are done.
+5. Do not start extra work unless I say so.
 
-Start by reading the handoff + ticket 05 + git diff under frontend/, then complete 05.
+Start by reading the handoff + git status under frontend/, then only do what I ask next.
 ```

@@ -4,10 +4,10 @@
 
 **Blocked by:** 05 — Homepage + services light retune
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Verification pages remain live (no delete/merge/301)
-- [ ] Positioning frames verification as a step / secondary path, not the main product
-- [ ] Internal links from verification support primary industry/home/services paths without cannibalising primary sourcing queries
-- [ ] Primary commercial China-sourcing language is not owned by verification pages
-- [ ] No new primary conversion surface is introduced on verification pages beyond existing behaviour
+- [x] Verification pages remain live (no delete/merge/301)
+- [x] Positioning frames verification as a step / secondary path, not the main product
+- [x] Internal links from verification support primary industry/home/services paths without cannibalising primary sourcing queries
+- [x] Primary commercial China-sourcing language is not owned by verification pages
+- [x] No new primary conversion surface is introduced on verification pages beyond existing behaviour
