@@ -4,13 +4,13 @@
 
 **Blocked by:** 01 — Industry qualified form surface
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Title follows “[Industry] China Sourcing for Australian Businesses”
-- [ ] H1 is differentiated from the title and from the other industries
-- [ ] Eight-section skeleton is present and rewritten for AV, not a renamed template
-- [ ] Dual-path positioning is explicit: find-and-vet primary, visit/verify secondary
-- [ ] Delivery claims stay within find / shortlist / due diligence / visit planning / on-ground coordination
-- [ ] FAQ answers are present in initial HTML
-- [ ] Final CTA uses “Discuss Your Sourcing Project” and the industry qualified form
-- [ ] Content/data seam tests or assertions cover title skeleton, dual-path positioning, and CTA label for AV
+- [x] Title follows “[Industry] China Sourcing for Australian Businesses”
+- [x] H1 is differentiated from the title and from the other industries
+- [x] Eight-section skeleton is present and rewritten for AV, not a renamed template
+- [x] Dual-path positioning is explicit: find-and-vet primary, visit/verify secondary
+- [x] Delivery claims stay within find / shortlist / due diligence / visit planning / on-ground coordination
+- [x] FAQ answers are present in initial HTML
+- [x] Final CTA uses “Discuss Your Sourcing Project” and the industry qualified form
+- [x] Content/data seam tests or assertions cover title skeleton, dual-path positioning, and CTA label for AV
