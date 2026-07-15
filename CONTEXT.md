@@ -20,8 +20,11 @@ _Avoid_: form submit (process event), generate_lead without server success
 
 **Enquiry Page Form** — The full intake form on `/enquiry`. C3 target: six required qualification fields plus optional phone and industry. Primary place to collect `path_intent` and `timeline`.
 
-**Lead Form** — The three-field embedded soft CTA (name, email, need). Used on industry landings, service pages, and hero. Remains shallow capture; does not collect `path_intent` in C3.
+**Lead Form** — The three-field embedded soft CTA (name, email, need). Used on non-industry soft CTAs (service pages, hero, verification support pages). Remains shallow capture; may send `path_intent=not_provided`.
 _Avoid_: treating Lead Form as the qualified intake form
+
+**Industry Qualified Form** — The six-field embedded qualified intake on the three priority industry intent pages. Collects the same qualification fields as Enquiry Page Form (`path_intent`, `timeline`, required `company`) while keeping `form_type=embedded` and page-context industry attribution. After Successful Enquiry, routes to Thank-you Page.
+_Avoid_: inventing a third form_type; hardcoding industry as a service label
 
 **Thank-you Page** — Post-success page at `/enquiry/thank-you` after Enquiry Page Form submit. May display `enquiryId` for operational reference. Does not fire lead or conversion events.
 _Avoid_: counting thank-you pageviews as leads
@@ -62,10 +65,12 @@ _Avoid_: service name as industry
 
 **Successful Conversion Analytics module** — Deepens lead measurement: one interface (`trackSuccessfulEnquiry`) delivers GA4 `generate_lead`, Google Ads form conversion, and Meta Lead after API success, with session dedupe on `enquiryId`.
 
-**Lead Capture Payload module** — Builds the enquiry request body from form values + page context so UI components do not hardcode attribution. Includes shallow Lead Form payloads and Enquiry Page Form payloads (`pathIntent`, `timeline`, required `company` on that surface). Qualification enums are single-sourced for UI and API validation.
+**Lead Capture Payload module** — Builds the enquiry request body from form values + page context so UI components do not hardcode attribution. Includes shallow Lead Form payloads, Enquiry Page Form payloads, and Industry Qualified Form payloads (`pathIntent`, `timeline`, required `company` on qualified surfaces). Qualification enums are single-sourced for UI and API validation.
 
 ## Related decisions
 
 - ADR: `docs/adr/0001-successful-enquiry-conversion.md` — Successful Enquiry conversion measurement
 - ADR: `docs/adr/0002-enquiry-page-qualified-intake.md` — Enquiry Page qualified intake (C3)
+- ADR: `docs/adr/0003-industry-qualified-form-surface.md` — Industry Qualified Form surface (C4)
+- Spec: `.scratch/c4-industry-seo/spec.md` — Industry intent SEO + dual-path collection (C4)
 - Supersedes: `docs/superpowers/specs/2026-04-27-enquiry-form-optimisation-design.md` (shrink-to-3-fields / drop industry) for conversion and qualification direction

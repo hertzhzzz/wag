@@ -245,6 +245,8 @@ export const zh: Partial<Record<keyof typeof en, string>> = {
   "form.lead.successBody": "我们的澳洲本地团队将审核您的需求，并尽快联系您安排免费咨询。无任何义务。",
   "form.lead.errorText": "出错了——请检查您的信息后重试，或通过以下邮箱联系我们：",
   "form.lead.privacy": "您的信息将直接发送至我们的澳洲本地团队。",
+  "form.industry.defaultHeading": "讨论您的采购项目",
+  "form.industry.defaultSubcopy": "告诉我们您是需要寻找新供应商，还是核验现有供应商。我们将在 4 个工作小时内回复。",
   "page.sv.heroBadge": "\u8fdc\u7a0b \u00b7 \u6fb3\u5927\u5229\u4e9a\u672c\u5730\u670d\u52a1",
   "page.sv.heroHeading": "\u5728\u652f\u4ed8\u5b9a\u91d1\u4e4b\u524d\uff0c\u4e86\u89e3\u60a8\u7684\u4e2d\u56fd\u4f9b\u5e94\u5546",
   "page.sv.heroSubcopy": "\u6211\u4eec\u5728\u4e2d\u56fd\u5b9e\u5730\u6838\u9a8c\u8425\u4e1a\u6267\u7167\u3001\u5ba1\u67e5\u4ea7\u80fd\u8d44\u8d28\u3001\u68c0\u9a8c\u4ea7\u54c1\u8d28\u91cf\uff0c\u5e76\u5c06\u62a5\u544a\u53cd\u9988\u7ed9\u60a8\u3002\u7acb\u5373\u9884\u7ea6\u514d\u8d39\u54a8\u8be2\uff0c\u544a\u8bc9\u6211\u4eec\u60a8\u7684\u4f9b\u5e94\u5546\u4fe1\u606f\u3002",

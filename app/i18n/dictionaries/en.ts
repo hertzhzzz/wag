@@ -243,6 +243,8 @@ export const en = {
   "form.lead.successBody": "Our Australia-based team will review your supplier and be in touch to set up your free consult. No obligation.",
   "form.lead.errorText": "Something went wrong \u2014 please check your details and try again, or email us at",
   "form.lead.privacy": "Your details go straight to our Australia-based team.",
+  "form.industry.defaultHeading": "Discuss your sourcing project",
+  "form.industry.defaultSubcopy": "Tell us whether you need new suppliers or help with an existing one. We will respond within 4 business hours.",
   "page.sv.heroBadge": "Remote \u00b7 Australia-based",
   "page.sv.heroHeading": "Know Your Chinese Supplier Before You Pay a Deposit",
   "page.sv.heroSubcopy": "We authenticate business licenses, audit capability, and inspect quality on the ground in China \u2014 and report back to you in Australia. Book a free consult and tell us your supplier.",

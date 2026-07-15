@@ -136,3 +136,63 @@ describe('buildEnquiryPagePayload', () => {
     expect(payload.phone).toBe('0400000000')
   })
 })
+
+
+describe('buildEnquiryPagePayload for industry qualified embedded intake', () => {
+  const form = {
+    fullName: 'Alex Example',
+    email: 'alex@example.com',
+    company: 'Example Pty Ltd',
+    lookingFor: 'Need AV suppliers in China for a 200-unit install',
+    pathIntent: 'find_new' as const,
+    timeline: '0-3_months' as const,
+  }
+
+  it('attributes industry slug and industry sourcePath for embedded industry pages', () => {
+    expect(buildEnquiryPagePayload(form, {
+      sourcePath: '/industries/av-lighting',
+      industry: 'av-lighting',
+    })).toEqual({
+      fullName: 'Alex Example',
+      email: 'alex@example.com',
+      company: 'Example Pty Ltd',
+      lookingFor: 'Need AV suppliers in China for a 200-unit install',
+      pathIntent: 'find_new',
+      timeline: '0-3_months',
+      industry: 'av-lighting',
+      sourcePath: '/industries/av-lighting',
+    })
+  })
+
+  it('never accepts Supplier Verification as industry on industry intake', () => {
+    const payload = buildEnquiryPagePayload(form, {
+      sourcePath: '/industries/construction',
+      industry: 'Supplier Verification',
+    })
+    expect(payload.industry).toBe('not_provided')
+    expect(payload.pathIntent).toBe('find_new')
+    expect(payload.timeline).toBe('0-3_months')
+  })
+
+  it('includes optional phone for industry verify_existing path', () => {
+    expect(buildEnquiryPagePayload({
+      ...form,
+      pathIntent: 'verify_existing',
+      timeline: '3-6_months',
+      phone: '0400111222',
+    }, {
+      sourcePath: '/industries/agricultural-machinery',
+      industry: 'agricultural-machinery',
+    })).toEqual({
+      fullName: 'Alex Example',
+      email: 'alex@example.com',
+      company: 'Example Pty Ltd',
+      lookingFor: 'Need AV suppliers in China for a 200-unit install',
+      pathIntent: 'verify_existing',
+      timeline: '3-6_months',
+      phone: '0400111222',
+      industry: 'agricultural-machinery',
+      sourcePath: '/industries/agricultural-machinery',
+    })
+  })
+})
