@@ -1,0 +1,31 @@
+auditDate: 2026-07-17
+capturedAt: 2026-07-17T05:59:33Z
+taskCount: 4
+source: Claude Scheduled Tasks registry inspected locally; volatile registry path omitted from tracked evidence
+inspection:
+  - 2026-07-17 crontab, LaunchAgents, and launchctl inspection found no separate Winning Adventure Global SEO frontend publishing service.
+scheduledTasks:
+  - id: seo-purge-remaining-410
+    enabled: false
+    filePath: ~/Claude/Scheduled/seo-purge-remaining-410/SKILL.md
+    definitionSha256: 815e850cc4890fd4314d44e5ea6d0a67a3f7a768e7e63b32362ad45b0b0b2c61
+    fireAt: 1783553400000
+    lastRunAt: 2026-07-08T23:30:24.549Z
+  - id: seo-reindex-updated-pages
+    enabled: false
+    filePath: ~/Claude/Scheduled/seo-reindex-updated-pages/SKILL.md
+    definitionSha256: 8e517f582eeccb594b7534a45aa64b6c31642a8591fc87752d915d779fbfed39
+    fireAt: 1783554300000
+    lastRunAt: 2026-07-08T23:45:24.497Z
+  - id: wag-daily-analytics
+    enabled: true
+    filePath: ~/Claude/Scheduled/wag-daily-analytics/SKILL.md
+    definitionSha256: 0a67cec227b6884bf0f10feaec0cff21e20fcb3ca6fa0fd4cb513cbd3f7ffe2c
+    cronExpression: 0 8 * * *
+    lastRunAt: 2026-07-14T02:14:35.801Z
+  - id: wag-google-ads-daily-insight
+    enabled: true
+    filePath: ~/Claude/Scheduled/wag-google-ads-daily-insight/SKILL.md
+    definitionSha256: bd82db6e1c0aab3ea7629eed9326016cf83aa65abaec6713488dda43f497eeb1
+    cronExpression: 0 9 * * *
+    lastRunAt: 2026-07-14T02:14:37.945Z

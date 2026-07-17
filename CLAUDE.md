@@ -8,8 +8,9 @@
 npm run dev        # dev server (localhost:3000)
 npm run build      # production build [required before commit]
 npm run lint       # ESLint check
-vercel --prod      # local build verification [required before commit]
-git push origin master  # deploy to Vercel
+vercel build --prod  # local Vercel build validation; does not deploy
+git push origin master  # update GitHub only; Vercel Git deployments are disabled
+vercel --prod       # manual production deployment; requires separate explicit approval
 ```
 
 ## Quick Reference
@@ -44,9 +45,12 @@ frontend/
 
 ## Deployment
 
-1. `vercel --prod` (local build check)
-2. `git add . && git commit && git push origin master`
-3. Verify: `curl -sI https://www.winningadventure.com.au`
+1. Run `npm run build` and, when Vercel-specific validation is needed, `vercel build --prod`.
+2. Stage only the intended paths and commit them. Never use `git add .` in this worktree.
+3. Obtain separate, explicit production release approval.
+4. Only after approval, push the reviewed commit, run `vercel --prod`, and verify with `curl -sI https://www.winningadventure.com.au`.
+
+`git push origin master` does not deploy while `vercel.json` sets `git.deploymentEnabled=false`. `vercel --prod` is a production deployment command; never use it as a local validation step.
 
 **No drains configured** — production errors won't be forwarded. Set up Vercel drains or Sentry.
 

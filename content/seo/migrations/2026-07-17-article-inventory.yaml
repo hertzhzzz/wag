@@ -1,0 +1,1640 @@
+auditDate: 2026-07-17
+baseUrl: https://www.winningadventure.com.au
+articleCount: 23
+legacyClusterSourceCount: 4
+articles:
+  - file: content/blog/bulk-procurement-china-guide.mdx
+    slug: bulk-procurement-china-guide
+    route: /article/bulk-procurement-china-guide
+    frontmatterSlug: /article/bulk-procurement-china-guide
+    title: How Bulk Procurement in China Actually Works — A Practical Guide for Australian Businesses Ready to Place Their First Big Order
+    category: Factory Visits
+    publishedDate: 2026-02-01
+    canonical: https://www.winningadventure.com.au/article/bulk-procurement-china-guide
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /about
+      - /article/china-factory-tour-guide
+      - /article/china-sourcing-risks
+      - /article/verify-chinese-supplier
+      - /perth
+      - /services
+  - file: content/blog/check-chinese-company-samr.mdx
+    slug: check-chinese-company-samr
+    route: /article/check-chinese-company-samr
+    frontmatterSlug: /article/check-chinese-company-samr
+    title: How to Check a Chinese Company on SAMR (2026)
+    category: China Sourcing Strategy
+    publishedDate: 2026-07-16
+    canonical: https://www.winningadventure.com.au/article/check-chinese-company-samr
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/china-supplier-scams
+      - /article/factory-vs-trading-company-china-guide
+      - /article/pay-chinese-suppliers-safely
+      - /article/verify-alibaba-supplier
+      - /factory-audit-china
+      - /supplier-verification
+  - file: content/blog/china-factory-tour-guide.mdx
+    slug: china-factory-tour-guide
+    route: /article/china-factory-tour-guide
+    frontmatterSlug: /article/china-factory-tour-guide
+    title: 7 Things I Learned Visiting Chinese Factories for 8 Years — What Australian Buyers Must Know Before They Board the Plane
+    category: Factory Visits
+    publishedDate: 2026-02-26
+    canonical: https://www.winningadventure.com.au/article/china-factory-tour-guide
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /about
+      - /adelaide
+      - /article/verify-chinese-supplier
+      - /article/visiting-chinese-factories-australian-business-checklist
+      - /enquiry
+      - /services
+  - file: content/blog/china-factory-visit-agent-australia.mdx
+    slug: china-factory-visit-agent-australia
+    route: /article/china-factory-visit-agent-australia
+    frontmatterSlug: /article/china-factory-visit-agent-australia
+    title: "China Factory Visit Agent: Expert-Guided Factory Tours for Australian Businesses"
+    category: Factory Visits
+    publishedDate: 2026-06-22
+    canonical: https://www.winningadventure.com.au/article/china-factory-visit-agent-australia
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/china-business-tours
+      - /article/china-factory-tour-guide
+      - /article/verify-chinese-supplier
+      - /article/visiting-chinese-factories-australian-business-checklist
+      - /enquiry
+      - /visiting-chinese-factories
+  - file: content/blog/china-sourcing-agent-vs-direct.mdx
+    slug: china-sourcing-agent-vs-direct
+    route: /article/china-sourcing-agent-vs-direct
+    frontmatterSlug: /article/china-sourcing-agent-vs-direct
+    title: "China Sourcing Agent vs Going Direct: What Australian Importers Actually Get"
+    category: China Sourcing Strategy
+    publishedDate: 2026-06-24
+    canonical: https://www.winningadventure.com.au/article/china-sourcing-agent-vs-direct
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /
+      - /article/china-factory-visit-agent-australia
+      - /article/factory-vs-trading-company-china-guide
+      - /article/verify-chinese-supplier
+      - /enquiry
+      - /supplier-verification
+  - file: content/blog/china-sourcing-risks.mdx
+    slug: china-sourcing-risks
+    route: /article/china-sourcing-risks
+    frontmatterSlug: /article/china-sourcing-risks
+    title: "China Sourcing Risks & How to Mitigate Them: An Australian Business Guide"
+    category: China Sourcing Strategy
+    publishedDate: 2026-03-18
+    canonical: https://www.winningadventure.com.au/article/china-sourcing-risks
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /
+      - /about
+      - /adelaide
+      - /article/australia-import-tips
+      - /article/china-factory-visit-agent-australia
+      - /article/china-sourcing-risks
+      - /article/china-supplier-scams
+      - /article/factory-vs-trading-company-china-guide
+      - /article/minimum-wage-china-sourcing
+      - /article/verify-chinese-supplier
+      - /services
+  - file: content/blog/china-supplier-scams.mdx
+    slug: china-supplier-scams
+    route: /article/china-supplier-scams
+    frontmatterSlug: /article/china-supplier-scams
+    title: "How to Avoid China Supplier Scams: An Australian Buyer's Field Guide (2026)"
+    category: China Sourcing Strategy
+    publishedDate: 2026-07-08
+    canonical: https://www.winningadventure.com.au/article/china-supplier-scams
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/check-chinese-company-samr
+      - /article/factory-vs-trading-company-china-guide
+      - /article/verify-alibaba-supplier
+      - /article/verify-chinese-factory-certifications
+      - /article/verify-chinese-supplier
+      - /quality-inspection-china
+      - /supplier-verification
+      - /visiting-chinese-factories
+  - file: content/blog/construction-materials-sourcing-from-china.mdx
+    slug: construction-materials-sourcing-from-china
+    route: /article/construction-materials-sourcing-from-china
+    frontmatterSlug: null
+    title: "Construction Materials Sourcing from China: AU Compliance Guide"
+    category: China Sourcing Strategy
+    publishedDate: 2026-07-01
+    canonical: https://www.winningadventure.com.au/article/construction-materials-sourcing-from-china
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /enquiry
+      - /factory-audit-china
+      - /industries/construction
+      - /locations/sydney
+      - /quality-inspection-china
+      - /services
+      - /supplier-verification
+  - file: content/blog/factory-vs-trading-company-china-guide.mdx
+    slug: factory-vs-trading-company-china-guide
+    route: /article/factory-vs-trading-company-china-guide
+    frontmatterSlug: /article/factory-vs-trading-company-china-guide
+    title: "Factory vs Trading Company: How to Tell Who You're Actually Dealing With"
+    category: Factory Visits
+    publishedDate: 2026-04-14
+    canonical: https://www.winningadventure.com.au/article/factory-vs-trading-company-china-guide
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/china-sourcing-agent
+      - /article/china-sourcing-risks
+      - /article/verify-chinese-supplier
+      - /article/visiting-chinese-factories-australian-business-checklist
+      - /supplier-verification
+  - file: content/blog/how-to-negotiate-chinese-factory-guide.mdx
+    slug: how-to-negotiate-chinese-factory-guide
+    route: /article/how-to-negotiate-chinese-factory-guide
+    frontmatterSlug: /article/how-to-negotiate-chinese-factory-guide
+    title: "How to Negotiate with Chinese Factories: An Australian Buyer's Strategy Guide"
+    category: China Sourcing Strategy
+    publishedDate: 2026-05-18
+    canonical: https://www.winningadventure.com.au/article/how-to-negotiate-chinese-factory-guide
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /visiting-chinese-factories
+  - file: content/blog/importing-electronics-from-china-to-australia.mdx
+    slug: importing-electronics-from-china-to-australia
+    route: /article/importing-electronics-from-china-to-australia
+    frontmatterSlug: null
+    title: "Importing Electronics from China to Australia: RCM & EESS Guide"
+    category: China Sourcing Strategy
+    publishedDate: 2026-07-01
+    canonical: https://www.winningadventure.com.au/article/importing-electronics-from-china-to-australia
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/china-sourcing-agent-vs-direct
+      - /article/importing-from-china-australia-guide
+      - /article/verify-chinese-factory-certifications
+      - /enquiry
+      - /factory-audit-china
+      - /industries/electronics
+      - /supplier-verification
+  - file: content/blog/importing-from-china-australia-guide.mdx
+    slug: importing-from-china-australia-guide
+    route: /article/importing-from-china-australia-guide
+    frontmatterSlug: /article/importing-from-china-australia-guide
+    title: "Importing from China to Australia: The Complete Guide for 2026"
+    category: China Sourcing Strategy
+    publishedDate: 2026-06-22
+    canonical: https://www.winningadventure.com.au/article/importing-from-china-australia-guide
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /enquiry
+      - /supplier-verification
+  - file: content/blog/minimum-wage-china-sourcing.mdx
+    slug: minimum-wage-china-sourcing
+    route: /article/minimum-wage-china-sourcing
+    frontmatterSlug: /article/minimum-wage-china-sourcing
+    title: How China Sourcing Offsets the 2026 Minimum Wage Rise — Real Examples
+    category: China Sourcing Strategy
+    publishedDate: 2026-06-02
+    canonical: https://www.winningadventure.com.au/article/minimum-wage-china-sourcing
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /enquiry
+      - /factory-audit-china
+      - /quality-inspection-china
+      - /supplier-verification
+  - file: content/blog/new-zealand-vs-china-sourcing.mdx
+    slug: new-zealand-vs-china-sourcing
+    route: /article/new-zealand-vs-china-sourcing
+    frontmatterSlug: /article/new-zealand-vs-china-sourcing
+    title: "New Zealand vs China Sourcing: A Practical Framework for Australian Businesses"
+    category: China Sourcing Strategy
+    publishedDate: 2026-05-27
+    canonical: https://www.winningadventure.com.au/article/new-zealand-vs-china-sourcing
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /enquiry
+      - /quality-inspection-china
+      - /supplier-verification
+  - file: content/blog/pay-chinese-suppliers-safely.mdx
+    slug: pay-chinese-suppliers-safely
+    route: /article/pay-chinese-suppliers-safely
+    frontmatterSlug: /article/pay-chinese-suppliers-safely
+    title: "How to Pay Chinese Suppliers Safely: An Australian Buyer's Guide (2026)"
+    category: China Sourcing Strategy
+    publishedDate: 2026-07-09
+    canonical: https://www.winningadventure.com.au/article/pay-chinese-suppliers-safely
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/check-chinese-company-samr
+      - /article/china-supplier-scams
+      - /article/verify-alibaba-supplier
+      - /article/verify-chinese-supplier
+      - /factory-audit-china
+      - /quality-inspection-china
+      - /supplier-verification
+  - file: content/blog/rare-earth-supply-chain-risks.mdx
+    slug: rare-earth-supply-chain-risks
+    route: /article/rare-earth-supply-chain-risks
+    frontmatterSlug: /article/rare-earth-supply-chain-risks
+    title: "Rare Earth Supply Chains: What Australian Importers Need to Know"
+    category: China Sourcing Strategy
+    publishedDate: 2026-05-21
+    canonical: https://www.winningadventure.com.au/article/rare-earth-supply-chain-risks
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /enquiry
+      - /factory-audit-china
+      - /supplier-verification
+  - file: content/blog/sourcing-agent-australia.mdx
+    slug: sourcing-agent-australia
+    route: /article/sourcing-agent-australia
+    frontmatterSlug: null
+    title: "Sourcing Agent Australia: How to Choose the Right One"
+    category: China Sourcing Strategy
+    publishedDate: 2026-07-05
+    canonical: https://www.winningadventure.com.au/article/sourcing-agent-australia
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/china-factory-visit-agent-australia
+      - /article/china-sourcing-agent-vs-direct
+      - /article/china-sourcing-risks
+      - /article/verify-chinese-factory-certifications
+      - /article/verify-chinese-supplier
+      - /enquiry
+      - /supplier-verification
+  - file: content/blog/sourcing-mining-equipment-from-china.mdx
+    slug: sourcing-mining-equipment-from-china
+    route: /article/sourcing-mining-equipment-from-china
+    frontmatterSlug: null
+    title: "Sourcing Mining Equipment from China: A Buyer's Compliance Guide"
+    category: China Sourcing Strategy
+    publishedDate: 2026-07-01
+    canonical: https://www.winningadventure.com.au/article/sourcing-mining-equipment-from-china
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/china-sourcing-risks
+      - /enquiry
+      - /factory-audit-china
+      - /industries/mining
+      - /locations/perth
+      - /quality-inspection-china
+      - /supplier-verification
+  - file: content/blog/supplier-audit-check-sheet-china.mdx
+    slug: supplier-audit-check-sheet-china
+    route: /article/supplier-audit-check-sheet-china
+    frontmatterSlug: null
+    title: "Supplier Audit Check Sheet for China Factories: What It Misses"
+    category: Factory Visits
+    publishedDate: 2026-07-07
+    canonical: https://www.winningadventure.com.au/article/supplier-audit-check-sheet-china
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/verify-chinese-factory-certifications
+      - /enquiry
+      - /factory-audit-china
+      - /quality-inspection-china
+      - /services
+      - /supplier-verification
+  - file: content/blog/verify-alibaba-supplier.mdx
+    slug: verify-alibaba-supplier
+    route: /article/verify-alibaba-supplier
+    frontmatterSlug: /article/verify-alibaba-supplier
+    title: "How to Verify an Alibaba Supplier: A Buyer's Checklist for Australian Importers (2026)"
+    category: China Sourcing Strategy
+    publishedDate: 2026-07-08
+    canonical: https://www.winningadventure.com.au/article/verify-alibaba-supplier
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/check-chinese-company-samr
+      - /article/china-supplier-scams
+      - /article/factory-vs-trading-company-china-guide
+      - /article/verify-chinese-factory-certifications
+      - /article/verify-chinese-supplier
+      - /supplier-verification
+  - file: content/blog/verify-chinese-factory-certifications.mdx
+    slug: verify-chinese-factory-certifications
+    route: /article/verify-chinese-factory-certifications
+    frontmatterSlug: /article/verify-chinese-factory-certifications
+    title: "How to Verify Chinese Factory Certifications: A Practical Guide for Australian Importers (2026)"
+    category: China Sourcing Strategy
+    publishedDate: 2026-06-19
+    canonical: https://www.winningadventure.com.au/article/verify-chinese-factory-certifications
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /enquiry
+      - /factory/aimagic
+      - /factory/albbthj
+      - /factory/aosua
+      - /supplier-verification
+  - file: content/blog/verify-chinese-supplier.mdx
+    slug: verify-chinese-supplier
+    route: /article/verify-chinese-supplier
+    frontmatterSlug: /article/verify-chinese-supplier
+    title: "How to Verify a Chinese Supplier: Complete Guide for Australian Buyers"
+    category: Factory Visits
+    publishedDate: 2026-03-08
+    canonical: https://www.winningadventure.com.au/article/verify-chinese-supplier
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/check-chinese-company-samr
+      - /article/china-sourcing-risks
+      - /article/factory-vs-trading-company-china-guide
+      - /article/how-to-negotiate-chinese-factory-guide
+      - /enquiry
+      - /services
+      - /supplier-verification
+  - file: content/blog/visiting-chinese-factories-australian-business-checklist.mdx
+    slug: visiting-chinese-factories-australian-business-checklist
+    route: /article/visiting-chinese-factories-australian-business-checklist
+    frontmatterSlug: /article/visiting-chinese-factories-australian-business-checklist
+    title: "Visiting Chinese Factories: An Australian Business Owner's Complete Checklist (2026)"
+    category: Factory Visits
+    publishedDate: 2026-04-14
+    canonical: https://www.winningadventure.com.au/article/visiting-chinese-factories-australian-business-checklist
+    canonicalSource: derived-route
+    indexable: true
+    internalLinks:
+      - /article/factory-vs-trading-company-china-guide
+      - /article/how-to-negotiate-chinese-factory-guide
+      - /article/verify-chinese-supplier
+      - /visiting-chinese-factories
+legacyClusters:
+  - path: content/clusters/china-sourcing-strategy-cluster.yaml
+    description: Hub page covering factory verification, supplier vetting, sourcing cost optimization, and strategic procurement from China for Australian businesses
+    references:
+      - role: pillar
+        type: pillar
+        slug: china-sourcing-strategy-australia
+        title: "China Sourcing Strategy: The Complete Guide for Australian Importers 2026"
+        declaredStatus: declared-pillar
+        inventoryStatus: missing
+      - role: cluster
+        type: factory_verification
+        slug: verify-chinese-supplier
+        title: "How to Verify a Chinese Supplier: 12-Step Checklist"
+        declaredStatus: published
+        inventoryStatus: live
+      - role: cluster
+        type: factory_verification
+        slug: what-happens-when-verification-is-skipped
+        title: What Happens When You Skip Supplier Verification
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: factory_verification
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: cost_optimization
+        slug: minimum-wage-china-sourcing
+        title: "China Minimum Wage Rise: Sourcing Cost Strategies"
+        declaredStatus: published
+        inventoryStatus: live
+      - role: cluster
+        type: cost_optimization
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: company_case
+        slug: byd-melbourne-supply-chain
+        title: BYD Zhengzhou-Melbourne Supply Chain Analysis
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: company_case
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: industry_vertical
+        slug: asia-pacific-airline-procurement
+        title: Asia-Pacific Airline Procurement from China
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: industry_vertical
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+  - path: content/clusters/factory-tour-cluster.yaml
+    description: Hub page covering factory visit guides by Chinese city and product category — what Australian importers need to know before visiting factories
+    references:
+      - role: pillar
+        type: pillar
+        slug: china-factory-tours-australia
+        title: "China Factory Tours: Complete Guide for Australian Businesses 2026"
+        declaredStatus: declared-pillar
+        inventoryStatus: gone-410
+      - role: cluster
+        type: city_guide
+        slug: guangzhou-factory-tour-guide
+        title: "Guangzhou Factory Tour Guide: Furniture & Consumer Goods"
+        declaredStatus: published
+        inventoryStatus: missing
+      - role: cluster
+        type: city_guide
+        slug: shenzhen-factory-visit-guide
+        title: "Shenzhen Factory Visit Guide: Electronics & Tech Hardware"
+        declaredStatus: published
+        inventoryStatus: missing
+      - role: cluster
+        type: city_guide
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: product_category
+        slug: apparel-factory-tour
+        title: Apparel & Garment Factory Tour Guide 2026
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: product_category
+        slug: cosmetics-factory-tour
+        title: Cosmetics Factory Tour Guide 2026
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: product_category
+        slug: electronics-factory-tour-guide
+        title: Electronics Factory Tour Guide 2026
+        declaredStatus: published
+        inventoryStatus: missing
+      - role: cluster
+        type: product_category
+        slug: machinery-factory-tour-guide
+        title: Machinery Factory Tour Guide 2026
+        declaredStatus: published
+        inventoryStatus: missing
+      - role: cluster
+        type: product_category
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: travel_guide
+        slug: china-business-travel-guide-2026
+        title: China Business Travel Guide for Australians 2026
+        declaredStatus: published
+        inventoryStatus: missing
+      - role: cluster
+        type: travel_guide
+        slug: china-factory-tour-guide
+        title: 7 Lessons from 8 Years Visiting Chinese Factories
+        declaredStatus: published
+        inventoryStatus: live
+  - path: content/clusters/retail-import-cluster.yaml
+    description: Hub page covering how major Australian retailers source from China — supply chain case studies, procurement strategies, and lessons for SME importers
+    references:
+      - role: pillar
+        type: pillar
+        slug: australian-retail-import-china-sourcing
+        title: "Australian Retail Import Guide: China Sourcing for Major Retailers 2026"
+        declaredStatus: declared-pillar
+        inventoryStatus: missing
+      - role: cluster
+        type: retail_case
+        slug: bbq-galore-retail
+        title: "BBQ Galore Supply Chain 2026: China Sourcing Insights"
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: retail_case
+        slug: target-australia-retail
+        title: "Target Australia Supply Chain: China Sourcing Lessons"
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: retail_case
+        slug: bunnings-wesfarmers-merger-supply-chain
+        title: "Bunnings Wesfarmers Merger: Supply Chain Lessons"
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: retail_case
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: procurement_strategy
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: procurement_strategy
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+  - path: content/clusters/supply-chain-trade-cluster.yaml
+    description: Hub page covering supply chain dynamics, trade policy, logistics, and freight for Australian importers sourcing from China
+    references:
+      - role: pillar
+        type: pillar
+        slug: australia-china-supply-chain-trade
+        title: Complete Guide to Australia-China Supply Chain & Trade Policy 2026
+        declaredStatus: declared-pillar
+        inventoryStatus: missing
+      - role: cluster
+        type: supply_chain
+        slug: electric-vehicle-australia-supply-chain
+        title: "Australia EV Supply Chain 2026: SME Opportunities"
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: supply_chain
+        slug: australia-data-centre-supply-chain
+        title: "Australia Data Centre Procurement: China Supply Chain"
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: supply_chain
+        slug: electric-battery-china
+        title: "China Battery Tech 2026: Australia Storage Supply Chain"
+        declaredStatus: published
+        inventoryStatus: gone-410
+      - role: cluster
+        type: supply_chain
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: logistics
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: logistics
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+      - role: cluster
+        type: tariff_regulation
+        slug: minimum-wage-china-sourcing
+        title: "China Minimum Wage 2026: Sourcing Cost Impact"
+        declaredStatus: published
+        inventoryStatus: live
+      - role: cluster
+        type: tariff_regulation
+        slug: null
+        title: ""
+        declaredStatus: planned
+        inventoryStatus: planned-placeholder
+discoverySurfaces:
+  - id: article-listing
+    source: app/(public)/article/page.tsx and app/components/ArticleListContent.tsx
+    behavior: Reads top-level content/blog MDX files, orders known high-impression slugs first, and links each card to /article/{slug}.
+    limitations: The listing scan is not recursive and its hard-coded impression order can become stale.
+  - id: article-detail
+    source: app/(public)/article/[slug]/page.tsx and article-utils.ts
+    behavior: Recursively scans content/blog, loads the requested MDX file, renders metadata and body content, and supplies previous/next navigation through ArticleNavigation.
+    limitations: Seven blocked slugs are excluded by article-utils; frontmatter slug is not the routing source.
+  - id: sitemap
+    source: app/sitemap.ts
+    behavior: Recursively scans content/blog and emits /article/{slug} entries after excluding BLOG_GONE_SLUGS.
+    limitations: lastModified falls back to 2026-01-01 when an article date is absent.
+  - id: navigation
+    source: app/components/Navbar.tsx, app/components/Footer.tsx, and app/data/nav-links.ts
+    behavior: Navbar and footer expose the article index; the shared live service menu also feeds sitemap service URLs.
+    limitations: No topic-cluster or pillar navigation is currently exposed in the global navigation.
+  - id: recommendations
+    source: app/(public)/article/[slug]/ArticleNavigation.tsx; app/(public)/article/[slug]/RecommendedSidebar.tsx; app/components/BlogPreview.tsx; app/factory/[slug]/page.tsx; data/link-graph.json
+    behavior: Article detail pages expose previous/next links in the recursive filesystem order returned by article-utils. Homepage recommendations use a hard-coded TOP_SLUGS list. Factory pages use explicit link-graph relationships. The same-category RecommendedSidebar helper exists but is not mounted in the article page.
+    limitations: Recommendation behavior is split across three mechanisms; previous/next order is filesystem-dependent, the dormant sidebar is not an active discovery surface, and no shared service-led topic graph exists yet.
+  - id: dashboard
+    source: ../productivity/growth-dashboard/ and ../productivity/daily-analytics/reports/
+    behavior: Local growth-dashboard data and dated analytics exports expose article performance for internal review.
+    limitations: The dashboard is outside the frontend Git repository and daily_report.py mutates data and may deploy Cloudflare Pages, so this audit reads dated exports only.
+discoveryInventory:
+  articleListingRoutes:
+    - /article/verify-chinese-supplier
+    - /article/china-factory-tour-guide
+    - /article/bulk-procurement-china-guide
+    - /article/china-sourcing-risks
+    - /article/factory-vs-trading-company-china-guide
+    - /article/visiting-chinese-factories-australian-business-checklist
+    - /article/how-to-negotiate-chinese-factory-guide
+    - /article/rare-earth-supply-chain-risks
+    - /article/new-zealand-vs-china-sourcing
+    - /article/minimum-wage-china-sourcing
+    - /article/verify-chinese-factory-certifications
+    - /article/china-factory-visit-agent-australia
+    - /article/importing-from-china-australia-guide
+    - /article/china-sourcing-agent-vs-direct
+    - /article/construction-materials-sourcing-from-china
+    - /article/importing-electronics-from-china-to-australia
+    - /article/sourcing-mining-equipment-from-china
+    - /article/sourcing-agent-australia
+    - /article/supplier-audit-check-sheet-china
+    - /article/china-supplier-scams
+    - /article/verify-alibaba-supplier
+    - /article/pay-chinese-suppliers-safely
+    - /article/check-chinese-company-samr
+  articleDetailRoutes:
+    - /article/bulk-procurement-china-guide
+    - /article/check-chinese-company-samr
+    - /article/china-factory-tour-guide
+    - /article/china-factory-visit-agent-australia
+    - /article/china-sourcing-agent-vs-direct
+    - /article/china-sourcing-risks
+    - /article/china-supplier-scams
+    - /article/construction-materials-sourcing-from-china
+    - /article/factory-vs-trading-company-china-guide
+    - /article/how-to-negotiate-chinese-factory-guide
+    - /article/importing-electronics-from-china-to-australia
+    - /article/importing-from-china-australia-guide
+    - /article/minimum-wage-china-sourcing
+    - /article/new-zealand-vs-china-sourcing
+    - /article/pay-chinese-suppliers-safely
+    - /article/rare-earth-supply-chain-risks
+    - /article/sourcing-agent-australia
+    - /article/sourcing-mining-equipment-from-china
+    - /article/supplier-audit-check-sheet-china
+    - /article/verify-alibaba-supplier
+    - /article/verify-chinese-factory-certifications
+    - /article/verify-chinese-supplier
+    - /article/visiting-chinese-factories-australian-business-checklist
+  sitemapArticleRoutes:
+    - /article/bulk-procurement-china-guide
+    - /article/check-chinese-company-samr
+    - /article/china-factory-tour-guide
+    - /article/china-factory-visit-agent-australia
+    - /article/china-sourcing-agent-vs-direct
+    - /article/china-sourcing-risks
+    - /article/china-supplier-scams
+    - /article/construction-materials-sourcing-from-china
+    - /article/factory-vs-trading-company-china-guide
+    - /article/how-to-negotiate-chinese-factory-guide
+    - /article/importing-electronics-from-china-to-australia
+    - /article/importing-from-china-australia-guide
+    - /article/minimum-wage-china-sourcing
+    - /article/new-zealand-vs-china-sourcing
+    - /article/pay-chinese-suppliers-safely
+    - /article/rare-earth-supply-chain-risks
+    - /article/sourcing-agent-australia
+    - /article/sourcing-mining-equipment-from-china
+    - /article/supplier-audit-check-sheet-china
+    - /article/verify-alibaba-supplier
+    - /article/verify-chinese-factory-certifications
+    - /article/verify-chinese-supplier
+    - /article/visiting-chinese-factories-australian-business-checklist
+  sitemapRoutes:
+    - /
+    - /services
+    - /factory-audit-china
+    - /industries/activewear
+    - /industries/agricultural-machinery
+    - /industries/av-lighting
+    - /industries/construction
+    - /industries/electronics
+    - /industries/mining
+    - /locations/adelaide
+    - /locations/brisbane
+    - /locations/melbourne
+    - /locations/perth
+    - /locations/sydney
+    - /quality-inspection-china
+    - /supplier-verification
+    - /visiting-chinese-factories
+    - /about
+    - /article
+    - /enquiry
+    - /solutions
+    - /article/faq
+    - /privacy
+    - /terms
+    - /article/bulk-procurement-china-guide
+    - /article/check-chinese-company-samr
+    - /article/china-factory-tour-guide
+    - /article/china-factory-visit-agent-australia
+    - /article/china-sourcing-agent-vs-direct
+    - /article/china-sourcing-risks
+    - /article/china-supplier-scams
+    - /article/construction-materials-sourcing-from-china
+    - /article/factory-vs-trading-company-china-guide
+    - /article/how-to-negotiate-chinese-factory-guide
+    - /article/importing-electronics-from-china-to-australia
+    - /article/importing-from-china-australia-guide
+    - /article/minimum-wage-china-sourcing
+    - /article/new-zealand-vs-china-sourcing
+    - /article/pay-chinese-suppliers-safely
+    - /article/rare-earth-supply-chain-risks
+    - /article/sourcing-agent-australia
+    - /article/sourcing-mining-equipment-from-china
+    - /article/supplier-audit-check-sheet-china
+    - /article/verify-alibaba-supplier
+    - /article/verify-chinese-factory-certifications
+    - /article/verify-chinese-supplier
+    - /article/visiting-chinese-factories-australian-business-checklist
+  serviceRoots:
+    - /factory-audit-china
+    - /quality-inspection-china
+    - /services
+    - /supplier-verification
+    - /visiting-chinese-factories
+  globalArticleEntryPoints:
+    - /article
+  recommendationEdges:
+    - mechanism: article-prev-next
+      sourceRoute: /article/bulk-procurement-china-guide
+      targetRoute: /article/check-chinese-company-samr
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/check-chinese-company-samr
+      targetRoute: /article/bulk-procurement-china-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/check-chinese-company-samr
+      targetRoute: /article/china-factory-tour-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-factory-tour-guide
+      targetRoute: /article/check-chinese-company-samr
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-factory-tour-guide
+      targetRoute: /article/china-factory-visit-agent-australia
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-factory-visit-agent-australia
+      targetRoute: /article/china-factory-tour-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-factory-visit-agent-australia
+      targetRoute: /article/china-sourcing-agent-vs-direct
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-sourcing-agent-vs-direct
+      targetRoute: /article/china-factory-visit-agent-australia
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-sourcing-agent-vs-direct
+      targetRoute: /article/china-sourcing-risks
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-sourcing-risks
+      targetRoute: /article/china-sourcing-agent-vs-direct
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-sourcing-risks
+      targetRoute: /article/china-supplier-scams
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-supplier-scams
+      targetRoute: /article/china-sourcing-risks
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/china-supplier-scams
+      targetRoute: /article/construction-materials-sourcing-from-china
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/construction-materials-sourcing-from-china
+      targetRoute: /article/china-supplier-scams
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/construction-materials-sourcing-from-china
+      targetRoute: /article/factory-vs-trading-company-china-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/factory-vs-trading-company-china-guide
+      targetRoute: /article/construction-materials-sourcing-from-china
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/factory-vs-trading-company-china-guide
+      targetRoute: /article/how-to-negotiate-chinese-factory-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/how-to-negotiate-chinese-factory-guide
+      targetRoute: /article/factory-vs-trading-company-china-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/how-to-negotiate-chinese-factory-guide
+      targetRoute: /article/importing-electronics-from-china-to-australia
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/importing-electronics-from-china-to-australia
+      targetRoute: /article/how-to-negotiate-chinese-factory-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/importing-electronics-from-china-to-australia
+      targetRoute: /article/importing-from-china-australia-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/importing-from-china-australia-guide
+      targetRoute: /article/importing-electronics-from-china-to-australia
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/importing-from-china-australia-guide
+      targetRoute: /article/minimum-wage-china-sourcing
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/minimum-wage-china-sourcing
+      targetRoute: /article/importing-from-china-australia-guide
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/minimum-wage-china-sourcing
+      targetRoute: /article/new-zealand-vs-china-sourcing
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/new-zealand-vs-china-sourcing
+      targetRoute: /article/minimum-wage-china-sourcing
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/new-zealand-vs-china-sourcing
+      targetRoute: /article/pay-chinese-suppliers-safely
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/pay-chinese-suppliers-safely
+      targetRoute: /article/new-zealand-vs-china-sourcing
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/pay-chinese-suppliers-safely
+      targetRoute: /article/rare-earth-supply-chain-risks
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/rare-earth-supply-chain-risks
+      targetRoute: /article/pay-chinese-suppliers-safely
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/rare-earth-supply-chain-risks
+      targetRoute: /article/sourcing-agent-australia
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/sourcing-agent-australia
+      targetRoute: /article/rare-earth-supply-chain-risks
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/sourcing-agent-australia
+      targetRoute: /article/sourcing-mining-equipment-from-china
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/sourcing-mining-equipment-from-china
+      targetRoute: /article/sourcing-agent-australia
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/sourcing-mining-equipment-from-china
+      targetRoute: /article/supplier-audit-check-sheet-china
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/supplier-audit-check-sheet-china
+      targetRoute: /article/sourcing-mining-equipment-from-china
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/supplier-audit-check-sheet-china
+      targetRoute: /article/verify-alibaba-supplier
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/verify-alibaba-supplier
+      targetRoute: /article/supplier-audit-check-sheet-china
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/verify-alibaba-supplier
+      targetRoute: /article/verify-chinese-factory-certifications
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/verify-chinese-factory-certifications
+      targetRoute: /article/verify-alibaba-supplier
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/verify-chinese-factory-certifications
+      targetRoute: /article/verify-chinese-supplier
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/verify-chinese-supplier
+      targetRoute: /article/verify-chinese-factory-certifications
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/verify-chinese-supplier
+      targetRoute: /article/visiting-chinese-factories-australian-business-checklist
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: article-prev-next
+      sourceRoute: /article/visiting-chinese-factories-australian-business-checklist
+      targetRoute: /article/verify-chinese-supplier
+      relationshipCount: 1
+      source: app/(public)/article/[slug]/article-utils.ts::getPrevNextArticles
+    - mechanism: factory-link-graph
+      sourceRoute: /factory/*
+      targetRoute: /article/bulk-procurement-china-guide
+      relationshipCount: 163
+      source: data/link-graph.json::factory_to_articles
+    - mechanism: factory-link-graph
+      sourceRoute: /factory/*
+      targetRoute: /article/minimum-wage-china-sourcing
+      relationshipCount: 2
+      source: data/link-graph.json::factory_to_articles
+    - mechanism: factory-link-graph
+      sourceRoute: /factory/*
+      targetRoute: /article/new-zealand-vs-china-sourcing
+      relationshipCount: 3
+      source: data/link-graph.json::factory_to_articles
+    - mechanism: factory-link-graph
+      sourceRoute: /factory/*
+      targetRoute: /article/rare-earth-supply-chain-risks
+      relationshipCount: 17
+      source: data/link-graph.json::factory_to_articles
+    - mechanism: factory-link-graph
+      sourceRoute: /factory/*
+      targetRoute: /article/verify-chinese-supplier
+      relationshipCount: 21
+      source: data/link-graph.json::factory_to_articles
+    - mechanism: homepage-top-articles
+      sourceRoute: /
+      targetRoute: /article/verify-chinese-supplier
+      relationshipCount: 1
+      source: app/components/BlogPreview.tsx::TOP_SLUGS and getTopArticles(2)
+  dashboardSources:
+    - ../productivity/daily-analytics/reports/2026-07-14.md
+    - ../productivity/growth-dashboard/seo-data.js
+    - ../productivity/growth-dashboard/todo-data.js
+measurements:
+  - id: gsc
+    asOf: 2026-07-14
+    availability: available
+    baseline: "Last 28 days: 182 clicks, 14,711 impressions, 1.2% CTR. /article/verify-chinese-supplier: 4 clicks, 212 impressions, average position 8.5."
+    source: ../productivity/daily-analytics/reports/2026-07-14.md
+    limitations: Static export, not a live query; the report still includes legacy 410 URLs among top pages.
+  - id: ga4
+    asOf: 2026-07-14
+    availability: available
+    baseline: "GA4 property 526384627, last 28 days Organic Search: 250 sessions, 180 users, and 4 form submissions."
+    source: ../productivity/daily-analytics/reports/2026-07-14.md
+    limitations: Static export; it does not provide durable article-to-lead attribution or qualified-lead outcome data.
+  - id: enquiry
+    asOf: 2026-07-14
+    availability: partial
+    baseline: Four Organic Search form submissions are visible in the latest GA4 export.
+    source: ../productivity/daily-analytics/reports/2026-07-14.md and current GA4 form_submit tracking
+    limitations: No approved 90-day attribution store, qualification status, or privacy-safe article-to-enquiry contract is available yet.
+  - id: indexation
+    asOf: 2026-07-16
+    availability: partial
+    baseline: /article/check-chinese-company-samr is live and awaiting first-crawl/indexation monitoring through sitemap, internal links, and GSC URL Inspection.
+    source: ../productivity/TASKS.md and ../Handoff.md
+    limitations: Historical Indexing API and IndexNow submissions are notifications, not proof of crawl or indexation; no live URL Inspection export is stored for this audit.
+  - id: geo
+    asOf: 2026-07-17
+    availability: unavailable
+    baseline: No reproducible answer-engine visibility baseline has been captured.
+    source: docs/superpowers/specs/2026-07-17-seo-growth-system-design.md
+    limitations: The approved 50-question baseline and citation checks are implemented by later tickets 31-36.
+publishingPaths:
+  - id: package-script-surface
+    kind: tracking
+    source: package.json::scripts
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The registered npm scripts contain validation and local generation commands, but no production publish or deploy command.
+    evidenceFiles:
+      - package.json
+      - package.json::scripts.seo:baseline:release-safety
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: publishing-safety-scanner
+    kind: tracking
+    source: lib/seo-baseline-audit.ts
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The file contains detection signatures for read-only repository inspection and has no publication side effect.
+    evidenceFiles:
+      - lib/seo-baseline-audit.ts
+      - lib/seo-baseline-audit.ts::capability.cloudflare-pages-deploy
+      - lib/seo-baseline-audit.ts::capability.frontend-production-deploy
+      - lib/seo-baseline-audit.ts::capability.git-push
+      - lib/seo-baseline-audit.ts::capability.indexing-notification
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: blog-generator-save
+    kind: generation
+    source: scripts/blog_generator.py::BlogGenerator.save_blog
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: policy-only
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: Direct invocation can mutate canonical MDX content, but it cannot commit, push, or deploy.
+    evidenceFiles:
+      - scripts/blog_generator.py
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: seo-workflow-generate
+    kind: generation
+    source: scripts/seo_workflow.py --mode generate
+    classification: manual
+    observedState: disabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The generate branch is a TODO and performs no content generation or publication.
+    evidenceFiles:
+      - scripts/seo_workflow.py
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: seo-workflow-schedule
+    kind: scheduling
+    source: scripts/seo_workflow.py --mode schedule
+    classification: unattended
+    observedState: disabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The schedule branch is a TODO and has no runnable scheduler implementation.
+    evidenceFiles:
+      - scripts/seo_workflow.py
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: legacy-seo-workflow-scheduling-docs
+    kind: scheduling
+    source: scripts/README.md::launchd and cron examples
+    classification: unattended
+    observedState: disabled
+    productionTarget: none
+    approvalEnforcement: technical
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The examples target an obsolete repository path, the schedule implementation remains a TODO, and the dated scheduler snapshot found no installed cron or LaunchAgent entry.
+    evidenceFiles:
+      - scripts/README.md
+      - scripts/seo_workflow.py
+      - content/seo/evidence/2026-07-17-scheduler-state.yaml
+    technicalControl:
+      state: enforced
+      mechanism: non-executable-obsolete-scheduling-example
+      evidence: The documented launchd and cron commands cannot reach a runnable publishing implementation.
+  - id: legacy-auto-publish-docs
+    kind: scheduling
+    source: docs/superpowers specs and plans dated 2026-05-01
+    classification: unattended
+    observedState: disabled
+    productionTarget: frontend
+    approvalEnforcement: technical
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: Both files are non-executable documentation, and the dated scheduler snapshot plus repository scan found no installed scheduler or unattended publisher for this path.
+    evidenceFiles:
+      - docs/superpowers/plans/2026-05-01-WAG-SEO-文章自动流水线实施计划.md
+      - docs/superpowers/specs/2026-05-01-WAG-SEO-文章自动流水线设计.md
+    technicalControl:
+      state: enforced
+      mechanism: non-executable-uninstalled-documentation
+      evidence: The files are documentation only; no executable launcher for this path was found, and Vercel Git deployments are disabled in vercel.json.
+  - id: legacy-wag-seo-skill
+    kind: deployment
+    source: ../.agents/skills/WAG_seo/SKILL.md::human_approved_publish
+    classification: gated
+    observedState: disabled
+    productionTarget: frontend
+    approvalEnforcement: technical
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The referenced publisher.publish implementation is absent, so the documented path cannot execute.
+    evidenceFiles:
+      - ../.agents/skills/WAG_seo/SKILL.md
+    technicalControl:
+      state: enforced
+      mechanism: missing-publisher-implementation
+      evidence: ../.agents/skills/WAG_seo/SKILL.md references publisher.publish, which is not present in the repository.
+  - id: monorepo-agent-skill-publishing-guidance
+    kind: deployment
+    source: ../.agents/skills/**/SKILL.md publishing commands
+    classification: manual
+    observedState: enabled
+    productionTarget: frontend
+    approvalEnforcement: technical
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: Agent skill files are non-executable guidance; their Git push commands require an explicit operator or agent invocation, and Vercel Git deployments are disabled.
+    evidenceFiles:
+      - ../.agents/skills/WAG_client/SKILL.md
+      - ../.agents/skills/WAG_client/SKILL.md::capability.git-push
+      - ../.agents/skills/WAG_factory/SKILL.md
+      - ../.agents/skills/WAG_factory/SKILL.md::capability.git-push
+      - ../.agents/skills/WAG_seo/SKILL.md
+      - ../.agents/skills/WAG_seo/SKILL.md::capability.git-push
+      - ../.agents/skills/release-skills/SKILL.md
+      - ../.agents/skills/release-skills/SKILL.md::capability.git-push
+      - ../.agents/skills/supplier-report/SKILL.md
+      - ../.agents/skills/supplier-report/SKILL.md::capability.git-push
+    technicalControl:
+      state: enforced
+      mechanism: non-executable-guidance-and-vercel-git-disabled
+      evidence: Publishing-capable skill guidance is fully inventoried, and vercel.json disables Git-triggered deployments.
+  - id: git-push-production-trigger
+    kind: deployment
+    source: git push origin master
+    classification: manual
+    observedState: enabled
+    productionTarget: frontend
+    approvalEnforcement: technical
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: A push can update GitHub, but Vercel Git deployments are disabled in vercel.json.
+    evidenceFiles:
+      - CLAUDE.md
+      - vercel.json
+    technicalControl:
+      state: enforced
+      mechanism: vercel-git-deployments-disabled
+      evidence: vercel.json::git.deploymentEnabled=false
+  - id: vercel-git-production-deploy
+    kind: deployment
+    source: Vercel Git integration
+    classification: unattended
+    observedState: disabled
+    productionTarget: frontend
+    approvalEnforcement: technical
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: Vercel Git deployments are disabled for every branch.
+    evidenceFiles:
+      - vercel.json
+    technicalControl:
+      state: enforced
+      mechanism: vercel-git-deployments-disabled
+      evidence: vercel.json::git.deploymentEnabled=false
+  - id: vercel-cli-production-deploy
+    kind: deployment
+    source: vercel deploy --prod / vercel deploy --target production
+    classification: manual
+    observedState: enabled
+    productionTarget: frontend
+    approvalEnforcement: policy-only
+    initiatesPublication: true
+    canPublishProduction: true
+    hardBlocker: No unattended repository launcher was observed. Production publication still requires an explicit authenticated manual Vercel command; a technical dual-approval gate remains a Ticket 38 blocker.
+    evidenceFiles:
+      - CLAUDE.md
+      - vercel.json
+    technicalControl:
+      state: not-enforced
+      mechanism: explicit-manual-vercel-invocation
+      evidence: Vercel CLI and REST credentials can bypass repository build hooks; the current boundary is manual invocation plus the absence of an unattended launcher.
+  - id: github-security-workflow
+    kind: tracking
+    source: .github/workflows/security.yml
+    classification: unattended
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The workflow runs audit and build checks only.
+    evidenceFiles:
+      - .github/workflows/security.yml
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: daily-analytics-dashboard-deploy
+    kind: deployment
+    source: ../productivity/daily-analytics/daily_report.py
+    classification: manual
+    observedState: enabled
+    productionTarget: dashboard
+    approvalEnforcement: policy-only
+    initiatesPublication: true
+    canPublishProduction: true
+    hardBlocker: Direct invocation may deploy the separate Cloudflare dashboard; it cannot publish frontend content.
+    evidenceFiles:
+      - ../productivity/daily-analytics/daily_report.py
+      - ../productivity/daily-analytics/daily_report.py::capability.cloudflare-pages-deploy
+    technicalControl:
+      state: not-enforced
+      mechanism: dashboard-only-boundary
+      evidence: The script targets productivity/growth-dashboard, not frontend or Vercel.
+  - id: claude-scheduled-daily-analytics
+    kind: scheduling
+    source: ~/Claude/Scheduled/wag-daily-analytics/SKILL.md
+    classification: unattended
+    observedState: enabled
+    productionTarget: dashboard
+    approvalEnforcement: none
+    initiatesPublication: true
+    canPublishProduction: true
+    hardBlocker: The enabled task refreshes and deploys the separate growth dashboard, not the frontend.
+    evidenceFiles:
+      - ~/Claude/Scheduled/wag-daily-analytics/SKILL.md
+      - ~/Claude/Scheduled/wag-daily-analytics/SKILL.md::capability.cloudflare-pages-deploy
+      - content/seo/evidence/2026-07-17-scheduler-state.yaml
+      - scheduler::wag-daily-analytics
+    technicalControl:
+      state: not-enforced
+      mechanism: dashboard-only-boundary
+      evidence: The scheduled definition calls productivity/growth-dashboard/deploy-cloudflare.sh.
+  - id: claude-scheduled-google-ads
+    kind: scheduling
+    source: ~/Claude/Scheduled/wag-google-ads-daily-insight/SKILL.md
+    classification: unattended
+    observedState: enabled
+    productionTarget: dashboard
+    approvalEnforcement: none
+    initiatesPublication: true
+    canPublishProduction: true
+    hardBlocker: The enabled task deploys Ads data to the separate growth dashboard, not the frontend.
+    evidenceFiles:
+      - ~/Claude/Scheduled/wag-google-ads-daily-insight/SKILL.md
+      - ~/Claude/Scheduled/wag-google-ads-daily-insight/SKILL.md::capability.cloudflare-pages-deploy
+      - content/seo/evidence/2026-07-17-scheduler-state.yaml
+      - scheduler::wag-google-ads-daily-insight
+    technicalControl:
+      state: not-enforced
+      mechanism: dashboard-only-boundary
+      evidence: The scheduled definition calls productivity/growth-dashboard/deploy-cloudflare.sh.
+  - id: claude-scheduled-seo-purge
+    kind: notification
+    source: ~/Claude/Scheduled/seo-purge-remaining-410/SKILL.md
+    classification: unattended
+    observedState: disabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The one-time notification task is disabled and cannot publish a page.
+    evidenceFiles:
+      - ~/Claude/Scheduled/seo-purge-remaining-410/SKILL.md
+      - ~/Claude/Scheduled/seo-purge-remaining-410/SKILL.md::capability.indexing-notification
+      - content/seo/evidence/2026-07-17-scheduler-state.yaml
+      - scheduler::seo-purge-remaining-410
+    technicalControl:
+      state: enforced
+      mechanism: scheduler-disabled
+      evidence: Claude Scheduled Tasks registry enabled=false.
+  - id: claude-scheduled-seo-reindex
+    kind: notification
+    source: ~/Claude/Scheduled/seo-reindex-updated-pages/SKILL.md
+    classification: unattended
+    observedState: disabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The one-time notification task is disabled and cannot publish a page.
+    evidenceFiles:
+      - ~/Claude/Scheduled/seo-reindex-updated-pages/SKILL.md
+      - ~/Claude/Scheduled/seo-reindex-updated-pages/SKILL.md::capability.indexing-notification
+      - content/seo/evidence/2026-07-17-scheduler-state.yaml
+      - scheduler::seo-reindex-updated-pages
+    technicalControl:
+      state: enforced
+      mechanism: scheduler-disabled
+      evidence: Claude Scheduled Tasks registry enabled=false.
+  - id: cloudflare-dashboard-deploy
+    kind: deployment
+    source: ../productivity/growth-dashboard/deploy-cloudflare.sh
+    classification: manual
+    observedState: enabled
+    productionTarget: dashboard
+    approvalEnforcement: policy-only
+    initiatesPublication: true
+    canPublishProduction: true
+    hardBlocker: Direct shell invocation deploys only the separate growth dashboard.
+    evidenceFiles:
+      - ../productivity/growth-dashboard/deploy-cloudflare.sh
+      - ../productivity/growth-dashboard/deploy-cloudflare.sh::capability.cloudflare-pages-deploy
+    technicalControl:
+      state: not-enforced
+      mechanism: dashboard-only-boundary
+      evidence: Cloudflare Pages project is separate from the Vercel frontend.
+  - id: cloudflare-dashboard-package
+    kind: generation
+    source: ../productivity/growth-dashboard/make-deploy.sh
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The script prepares a local deploy directory and performs no network upload.
+    evidenceFiles:
+      - ../productivity/growth-dashboard/make-deploy.sh
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: cloudflare-dashboard-rest-fallback
+    kind: deployment
+    source: ../productivity/growth-dashboard/COORDINATION.md::Cloudflare Pages Direct Upload REST API
+    classification: manual
+    observedState: unverified
+    productionTarget: dashboard
+    approvalEnforcement: none
+    initiatesPublication: true
+    canPublishProduction: true
+    hardBlocker: The credentialed REST fallback can publish only the separate dashboard.
+    evidenceFiles:
+      - ../productivity/growth-dashboard/COORDINATION.md
+    technicalControl:
+      state: not-enforced
+      mechanism: dashboard-only-boundary
+      evidence: The documented endpoint targets the Cloudflare growth-dashboard project.
+  - id: pipeline-db-deploy-marker
+    kind: tracking
+    source: scripts/pipeline-db.py deploy
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The command updates local SQLite metadata only.
+    evidenceFiles:
+      - scripts/pipeline-db.py
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: indexnow-api
+    kind: notification
+    source: app/api/indexnow/route.ts POST
+    classification: unattended
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: none
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The route can submit Bing notifications but cannot publish content; notification is not indexation proof.
+    evidenceFiles:
+      - app/api/indexnow/route.ts
+      - app/api/indexnow/route.ts::capability.indexing-notification
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: google-indexing-single
+    kind: notification
+    source: scripts/indexing_submit.py
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: none
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The script sends a notification and cannot publish a page.
+    evidenceFiles:
+      - scripts/indexing_submit.py
+      - scripts/indexing_submit.py::capability.indexing-notification
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: google-indexing-batch
+    kind: notification
+    source: scripts/indexing_submit_58.py
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: none
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The batch script sends notifications and cannot publish a page.
+    evidenceFiles:
+      - scripts/indexing_submit_58.py
+      - scripts/indexing_submit_58.py::capability.indexing-notification
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: google-410-purge
+    kind: notification
+    source: ../productivity/seo-purge/purge_410.py
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: none
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The script submits URL_DELETED notifications and cannot publish content.
+    evidenceFiles:
+      - ../productivity/seo-purge/purge_410.py
+      - ../productivity/seo-purge/purge_410.py::capability.indexing-notification
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: gsc-batch-check
+    kind: tracking
+    source: scripts/gsc-batch-check.sh
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The helper performs read-only URL Inspection and writes local results.
+    evidenceFiles:
+      - scripts/gsc-batch-check.sh
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
+  - id: legacy-content-automation-sop
+    kind: scheduling
+    source: ../productivity/WAG-Content-Automation-SOP.md
+    classification: unattended
+    observedState: disabled
+    productionTarget: frontend
+    approvalEnforcement: technical
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: The SOP is historical documentation and no referenced unattended publisher is installed.
+    evidenceFiles:
+      - ../productivity/WAG-Content-Automation-SOP.md
+    technicalControl:
+      state: enforced
+      mechanism: non-executable-historical-documentation
+      evidence: The file is documentation only and the current frontend Git deployment path is disabled.
+findings:
+  missingPublishedLegacySlugs:
+    - china-business-travel-guide-2026
+    - electronics-factory-tour-guide
+    - guangzhou-factory-tour-guide
+    - machinery-factory-tour-guide
+    - shenzhen-factory-visit-guide
+  retiredLegacySlugs:
+    - apparel-factory-tour
+    - asia-pacific-airline-procurement
+    - australia-data-centre-supply-chain
+    - bbq-galore-retail
+    - bunnings-wesfarmers-merger-supply-chain
+    - byd-melbourne-supply-chain
+    - china-factory-tours-australia
+    - cosmetics-factory-tour
+    - electric-battery-china
+    - electric-vehicle-australia-supply-chain
+    - target-australia-retail
+    - what-happens-when-verification-is-skipped
+  missingLegacySlugs:
+    - australia-china-supply-chain-trade
+    - australian-retail-import-china-sourcing
+    - china-business-travel-guide-2026
+    - china-sourcing-strategy-australia
+    - electronics-factory-tour-guide
+    - guangzhou-factory-tour-guide
+    - machinery-factory-tour-guide
+    - shenzhen-factory-visit-guide
+  duplicateLegacySlugs:
+    - minimum-wage-china-sourcing
+  articlesAbsentFromLegacyClusters:
+    - bulk-procurement-china-guide
+    - check-chinese-company-samr
+    - china-factory-visit-agent-australia
+    - china-sourcing-agent-vs-direct
+    - china-sourcing-risks
+    - china-supplier-scams
+    - construction-materials-sourcing-from-china
+    - factory-vs-trading-company-china-guide
+    - how-to-negotiate-chinese-factory-guide
+    - importing-electronics-from-china-to-australia
+    - importing-from-china-australia-guide
+    - new-zealand-vs-china-sourcing
+    - pay-chinese-suppliers-safely
+    - rare-earth-supply-chain-risks
+    - sourcing-agent-australia
+    - sourcing-mining-equipment-from-china
+    - supplier-audit-check-sheet-china
+    - verify-alibaba-supplier
+    - verify-chinese-factory-certifications
+    - visiting-chinese-factories-australian-business-checklist
+  articlesMissingFrontmatterSlug:
+    - construction-materials-sourcing-from-china
+    - importing-electronics-from-china-to-australia
+    - sourcing-agent-australia
+    - sourcing-mining-equipment-from-china
+    - supplier-audit-check-sheet-china
+  plannedLegacyPlaceholders: 13
+  articleRoutesMissingFromListing: []
+  articleRoutesMissingFromDetail: []
+  articleRoutesMissingFromSitemap: []
+  duplicateCanonicals: []
+  staleArticleLinks:
+    - /article/australia-import-tips
+    - /article/china-business-tours
+    - /article/china-sourcing-agent
+  articlesWithoutBodyInboundLinks:
+    - /article/bulk-procurement-china-guide
+    - /article/construction-materials-sourcing-from-china
+    - /article/importing-electronics-from-china-to-australia
+    - /article/new-zealand-vs-china-sourcing
+    - /article/rare-earth-supply-chain-risks
+    - /article/sourcing-agent-australia
+    - /article/sourcing-mining-equipment-from-china
+    - /article/supplier-audit-check-sheet-china
+  configuredRecommendationTargetsMissing:
+    - /article/2026-australian-federal-budget-import-duty-changes
+    - /article/china-home-sales-drop
+    - /article/iran-war-australia-china-supply-chain
+    - /article/stateside-sports
+  unclassifiedPublishingCandidates: []
+schedulerEvidence:
+  - "2026-07-17 repository scheduler snapshot: content/seo/evidence/2026-07-17-scheduler-state.yaml; source: Claude Scheduled Tasks registry inspected locally; volatile registry path omitted from tracked evidence."
+  - "seo-purge-remaining-410: disabled; one-time fireAt 1783553400000; lastRunAt 2026-07-08T23:30:24.549Z."
+  - "seo-reindex-updated-pages: disabled; one-time fireAt 1783554300000; lastRunAt 2026-07-08T23:45:24.497Z."
+  - "wag-daily-analytics: enabled; cron 0 8 * * *; lastRunAt 2026-07-14T02:14:35.801Z."
+  - "wag-google-ads-daily-insight: enabled; cron 0 9 * * *; lastRunAt 2026-07-14T02:14:37.945Z."
+  - 2026-07-17 crontab, LaunchAgents, and launchctl inspection found no separate Winning Adventure Global SEO frontend publishing service.
+  - "Repository GitHub Actions: security.yml is the only workflow and contains verification only."
+  - "package.json: validation and release-safety commands are registered, but no production publish, deploy, IndexNow, or Indexing API npm command is registered."
