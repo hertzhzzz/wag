@@ -5,20 +5,29 @@ import {
   approveProductionRelease,
   assessRelease,
   canonicalReleaseJson,
+  createApprovalAttestation,
   digestReleaseReview,
+  digestRollbackEvidence,
+  digestRollbackPlan,
   observeIndexation,
   prepareRelease,
   recordDeployment,
   recordLiveVerification,
+  recordRollback,
   recordSearchNotification,
+  type ApprovalActor,
   type CurrentReleaseIdentity,
   type ReleaseReviewInput,
+  type ReleaseWorkflow,
+  type RollbackPlan,
 } from "./releaseContract";
 
 const ARTIFACT_DIGEST =
   "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" as const;
 const OTHER_ARTIFACT_DIGEST =
   "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" as const;
+const ROLLBACK_ARTIFACT_DIGEST =
+  "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" as const;
 
 function passingPreflight(): ReleaseReviewInput["preflightChecks"] {
   return Object.fromEntries(
@@ -57,11 +66,34 @@ function reviewInput(
   };
 }
 
+function rollbackPlan(): RollbackPlan {
+  const plan = {
+    planId: "rollback.seo-2026-07-18",
+    state: "ready" as const,
+    readiness: "ready" as const,
+    targetArtifactDigest: ROLLBACK_ARTIFACT_DIGEST,
+    targetDestination: "https://www.winningadventure.com.au",
+    verificationRequired: true as const,
+  };
+  return { ...plan, planDigest: digestRollbackPlan(plan) };
+}
+
 function prepare(overrides: Partial<ReleaseReviewInput> = {}) {
+  const preparedAt = "2026-07-18T04:00:00.000Z";
   return prepareRelease({
     releaseId: "release.seo-2026-07-18",
     artifactDigest: ARTIFACT_DIGEST,
-    preparedAt: "2026-07-18T04:00:00.000Z",
+    workflowInstanceId: "workflow.seo-2026-07-18",
+    preparedAt,
+    approvalNonce: "nonce.seo-2026-07-18",
+    dataMode: "actual",
+    provenance: {
+      issuer: "trusted-release-control",
+      contractVersion: "release-provenance-v1",
+      source: "release-contract-test",
+      recordedAt: preparedAt,
+    },
+    rollbackPlan: rollbackPlan(),
     review: reviewInput(overrides),
   });
 }
@@ -74,7 +106,27 @@ function identity(
     releaseId: workflow.releaseId,
     artifactDigest: workflow.artifactDigest,
     reportDigest: workflow.reportDigest,
+    workflowInstanceId: workflow.workflowInstanceId,
+    preparedAt: workflow.preparedAt,
+    approvalNonce: workflow.approvalNonce,
+    rollbackPlanDigest: workflow.rollbackPlanDigest,
     ...overrides,
+  };
+}
+
+function approvalInput(
+  workflow: ReleaseWorkflow,
+  actorId: string,
+  approvedAt: string,
+  kind: "content" | "production",
+) {
+  const actor: ApprovalActor = { id: actorId, type: "human" };
+  return {
+    ...identity(workflow),
+    actor,
+    approvedAt,
+    attestation: createApprovalAttestation(workflow, kind, actor, approvedAt),
+    kind,
   };
 }
 
@@ -82,11 +134,12 @@ function contentApproved() {
   const workflow = prepare();
   return approveContentRelease(
     workflow,
-    {
-      actor: { id: "editor.alice", type: "human" },
-      approvedAt: "2026-07-18T05:00:00.000Z",
-      ...identity(workflow),
-    },
+    approvalInput(
+      workflow,
+      "editor.alice",
+      "2026-07-18T05:00:00.000Z",
+      "content",
+    ),
     identity(workflow),
   );
 }
@@ -95,10 +148,24 @@ function productionApproved() {
   const workflow = contentApproved();
   return approveProductionRelease(
     workflow,
+    approvalInput(
+      workflow,
+      "release.bob",
+      "2026-07-18T06:00:00.000Z",
+      "production",
+    ),
+    identity(workflow),
+  );
+}
+
+function deployed() {
+  const workflow = productionApproved();
+  return recordDeployment(
+    workflow,
     {
-      actor: { id: "release.bob", type: "human" },
-      approvedAt: "2026-07-18T06:00:00.000Z",
-      ...identity(workflow),
+      deploymentId: "deployment.seo-2026-07-18",
+      destination: "https://www.winningadventure.com.au",
+      deployedAt: "2026-07-18T06:30:00.000Z",
     },
     identity(workflow),
   );
@@ -141,6 +208,7 @@ describe("release review preparation", () => {
     const workflow = prepare();
 
     expect(workflow.state).toBe("preview_ready");
+    expect(workflow.dataMode).toBe("actual");
     expect(workflow.report).toMatchObject({
       affectedUrls: expect.any(Array),
       contentChanges: expect.any(Array),
@@ -151,6 +219,7 @@ describe("release review preparation", () => {
       preflightChecks: expect.any(Object),
     });
     expect(workflow.reportDigest).toMatch(/^sha256:[a-f0-9]{64}$/);
+    expect(workflow.rollbackPlanDigest).toBe(workflow.rollbackPlan.planDigest);
     expect(Object.isFrozen(workflow)).toBe(true);
     expect(Object.isFrozen(workflow.report)).toBe(true);
     expect(Object.isFrozen(workflow.report.affectedUrls)).toBe(true);
@@ -190,17 +259,17 @@ describe("release review preparation", () => {
       detail:
         "Awaiting approved attribution contract, privacy sign-off, consent seam, and immutable baseline",
     };
-
     const workflow = prepare({ preflightChecks: checks });
 
     expect(() =>
       approveContentRelease(
         workflow,
-        {
-          actor: { id: "editor.alice", type: "human" },
-          approvedAt: "2026-07-18T05:00:00.000Z",
-          ...identity(workflow),
-        },
+        approvalInput(
+          workflow,
+          "editor.alice",
+          "2026-07-18T05:00:00.000Z",
+          "content",
+        ),
         identity(workflow),
       ),
     ).toThrow(/preflight_blocked:privacy/);
@@ -228,11 +297,12 @@ describe("dual human approval gate", () => {
     expect(() =>
       approveProductionRelease(
         content,
-        {
-          actor: { id: "editor.alice", type: "human" },
-          approvedAt: "2026-07-18T06:00:00.000Z",
-          ...identity(content),
-        },
+        approvalInput(
+          content,
+          "editor.alice",
+          "2026-07-18T06:00:00.000Z",
+          "production",
+        ),
         identity(content),
       ),
     ).toThrow(/independent human/i);
@@ -240,11 +310,12 @@ describe("dual human approval gate", () => {
     expect(() =>
       approveProductionRelease(
         content,
-        {
-          actor: { id: "release.bob", type: "human" },
-          approvedAt: "2026-07-18T04:30:00.000Z",
-          ...identity(content),
-        },
+        approvalInput(
+          content,
+          "release.bob",
+          "2026-07-18T04:30:00.000Z",
+          "production",
+        ),
         identity(content),
       ),
     ).toThrow(/later than content approval/i);
@@ -260,10 +331,17 @@ describe("dual human approval gate", () => {
         approveContentRelease(
           workflow,
           {
-            actor: { id: `actor.${type}`, type },
-            approvedAt: "2026-07-18T05:00:00.000Z",
             ...identity(workflow),
-          },
+            actor: { id: `actor.${type.replace("_", "-")}`, type },
+            approvedAt: "2026-07-18T05:00:00.000Z",
+            attestation: {
+              issuer: "trusted-release-control",
+              contractVersion: "release-attestation-v1",
+              principal: `actor.${type.replace("_", "-")}`,
+              bindingDigest: OTHER_ARTIFACT_DIGEST,
+            },
+            kind: "content",
+          } as never,
           identity(workflow),
         ),
       ).toThrow(/human actor/i);
@@ -286,11 +364,12 @@ describe("dual human approval gate", () => {
     expect(() =>
       approveProductionRelease(
         workflow,
-        {
-          actor: { id: "release.bob", type: "human" },
-          approvedAt: "2026-07-18T06:00:00.000Z",
-          ...identity(workflow),
-        },
+        approvalInput(
+          workflow,
+          "release.bob",
+          "2026-07-18T06:00:00.000Z",
+          "production",
+        ),
         drifted,
       ),
     ).toThrow(/identity_mismatch:artifactDigest/);
@@ -305,7 +384,7 @@ describe("dual human approval gate", () => {
   });
 });
 
-describe("deployment, live verification, and search reporting", () => {
+describe("deployment, live verification, rollback, and search reporting", () => {
   it("cannot deploy until both valid approvals exist", () => {
     const content = contentApproved();
     expect(() =>
@@ -322,22 +401,17 @@ describe("deployment, live verification, and search reporting", () => {
   });
 
   it("records deployment only after production approval with matching identity", () => {
-    const approved = productionApproved();
-    const deployed = recordDeployment(
-      approved,
-      {
-        deploymentId: "deployment.seo-2026-07-18",
-        destination: "https://www.winningadventure.com.au",
-        deployedAt: "2026-07-18T06:30:00.000Z",
-      },
-      identity(approved),
-    );
+    const workflow = deployed();
 
-    expect(deployed.state).toBe("deployed");
-    expect(deployed.deployment).toEqual(
+    expect(workflow.state).toBe("deployed");
+    expect(workflow.deployment).toEqual(
       expect.objectContaining({
         deploymentId: "deployment.seo-2026-07-18",
         destination: "https://www.winningadventure.com.au",
+        releaseId: workflow.releaseId,
+        artifactDigest: workflow.artifactDigest,
+        rollbackPlanDigest: workflow.rollbackPlanDigest,
+        evidenceDigest: expect.stringMatching(/^sha256:/),
       }),
     );
   });
@@ -351,16 +425,7 @@ describe("deployment, live verification, and search reporting", () => {
       "key_links",
       "expected_content",
     ]);
-    const approved = productionApproved();
-    const deployed = recordDeployment(
-      approved,
-      {
-        deploymentId: "deployment.seo-2026-07-18",
-        destination: "https://www.winningadventure.com.au",
-        deployedAt: "2026-07-18T06:30:00.000Z",
-      },
-      identity(approved),
-    );
+    const workflow = deployed();
     const failedChecks = passingLiveChecks();
     failedChecks.canonical = {
       status: "failed",
@@ -368,12 +433,12 @@ describe("deployment, live verification, and search reporting", () => {
     };
 
     const failed = recordLiveVerification(
-      deployed,
+      workflow,
       {
         verifiedAt: "2026-07-18T06:40:00.000Z",
         checks: failedChecks,
       },
-      identity(deployed),
+      identity(workflow),
     );
     expect(failed.state).toBe("deployed");
     expect(assessRelease(failed, identity(failed)).blockers).toContain(
@@ -389,30 +454,30 @@ describe("deployment, live verification, and search reporting", () => {
       identity(failed),
     );
     expect(verified.state).toBe("live_verified");
+    expect(assessRelease(verified, identity(verified)).liveVerified).toBe(true);
   });
 
-  it("reports search notification separately and never infers indexing", () => {
-    const approved = productionApproved();
-    const deployed = recordDeployment(
-      approved,
+  it("reports search notification only after live verification and never infers indexing", () => {
+    const workflow = deployed();
+    const verified = recordLiveVerification(
+      workflow,
       {
-        deploymentId: "deployment.seo-2026-07-18",
-        destination: "https://www.winningadventure.com.au",
-        deployedAt: "2026-07-18T06:30:00.000Z",
+        verifiedAt: "2026-07-18T06:40:00.000Z",
+        checks: passingLiveChecks(),
       },
-      identity(approved),
+      identity(workflow),
     );
     const notified = recordSearchNotification(
-      deployed,
+      verified,
       {
         engine: "google",
         kind: "sitemap",
         target: "https://www.winningadventure.com.au/sitemap.xml",
         status: "submitted",
-        recordedAt: "2026-07-18T06:35:00.000Z",
+        recordedAt: "2026-07-18T06:45:00.000Z",
         detail: "Sitemap submission accepted by transport",
       },
-      identity(deployed),
+      identity(verified),
     );
 
     expect(notified.searchReports).toHaveLength(1);
@@ -428,7 +493,7 @@ describe("deployment, live verification, and search reporting", () => {
       {
         reportId: notified.searchReports[0].id,
         status: "observed_indexed",
-        observedAt: "2026-07-19T02:00:00.000Z",
+        observedAt: "2026-07-18T07:00:00.000Z",
         evidence:
           "Google Search Console URL Inspection returned indexed for the canonical URL",
       },
@@ -439,6 +504,73 @@ describe("deployment, live verification, and search reporting", () => {
         status: "observed_indexed",
         evidence: expect.any(String),
       }),
+    );
+  });
+
+  it("clears stale live evidence after rollback and requires a later target verification", () => {
+    const workflow = deployed();
+    const verified = recordLiveVerification(
+      workflow,
+      {
+        verifiedAt: "2026-07-18T06:40:00.000Z",
+        checks: passingLiveChecks(),
+      },
+      identity(workflow),
+    );
+    const rollbackEvidence = {
+      planId: verified.rollbackPlan.planId,
+      targetArtifactDigest: verified.rollbackPlan.targetArtifactDigest,
+      completedAt: "2026-07-18T06:50:00.000Z",
+    };
+    const rolledBack = recordRollback(
+      verified,
+      {
+        ...rollbackEvidence,
+        evidenceDigest: digestRollbackEvidence(rollbackEvidence),
+      },
+      identity(verified),
+    );
+
+    expect(rolledBack.state).toBe("deployed");
+    expect(rolledBack.liveVerification).toBeUndefined();
+    expect(assessRelease(rolledBack, identity(rolledBack)).liveVerified).toBe(
+      false,
+    );
+    expect(() =>
+      recordLiveVerification(
+        rolledBack,
+        {
+          verifiedAt: "2026-07-18T06:45:00.000Z",
+          checks: passingLiveChecks(),
+          targetArtifactDigest: ROLLBACK_ARTIFACT_DIGEST,
+        },
+        identity(rolledBack),
+      ),
+    ).toThrow(/rollback|later/i);
+    expect(() =>
+      recordLiveVerification(
+        rolledBack,
+        {
+          verifiedAt: "2026-07-18T07:00:00.000Z",
+          checks: passingLiveChecks(),
+        },
+        identity(rolledBack),
+      ),
+    ).toThrow(/rollback target/i);
+
+    const reverified = recordLiveVerification(
+      rolledBack,
+      {
+        verifiedAt: "2026-07-18T07:00:00.000Z",
+        checks: passingLiveChecks(),
+        targetArtifactDigest: ROLLBACK_ARTIFACT_DIGEST,
+      },
+      identity(rolledBack),
+    );
+    expect(reverified.state).toBe("live_verified");
+    expect(reverified.liveVerification?.verificationGeneration).toBe(1);
+    expect(assessRelease(reverified, identity(reverified)).liveVerified).toBe(
+      true,
     );
   });
 });
