@@ -26,6 +26,25 @@ export interface Frontmatter {
   faqs?: FAQItem[]
   featured?: boolean
   desc?: string
+  sourceType?: string
+  // Governed SEO Growth fields (optional during compatibility migration)
+  contentId?: string
+  cluster?: string
+  contentRole?: string
+  searchIntent?: string
+  funnelStage?: string
+  primaryKeyword?: string
+  secondaryKeywords?: string[]
+  targetMarket?: string
+  editorialStatus?: string
+  evidenceIds?: string[]
+  commercialRoot?: string
+  editorialPillar?: string
+  requiredLinks?: string[]
+  reviewedBy?: string
+  reviewedDate?: string
+  reviewDueDate?: string
+  migrationAction?: string
 }
 
 export interface Article {

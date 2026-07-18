@@ -13,7 +13,8 @@
     "schema:check": "tsx scripts/check-schema.ts",
     "seo:baseline:check": "tsx scripts/seo-baseline-audit.ts --check",
     "seo:baseline:write": "tsx scripts/seo-baseline-audit.ts --write",
-    "seo:baseline:release-safety": "tsx scripts/seo-baseline-audit.ts --release-safety"
+    "seo:baseline:release-safety": "tsx scripts/seo-baseline-audit.ts --release-safety",
+    "seo:articles:check": "tsx scripts/seo-articles-check.ts"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",

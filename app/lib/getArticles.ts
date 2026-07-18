@@ -1,8 +1,4 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-
-const BLOG_DIR = path.join(process.cwd(), 'content/blog')
+import { listArticleSummaries } from '@/lib/seo/articleReader'
 
 export interface Article {
   slug: string
@@ -16,33 +12,31 @@ export interface Article {
 }
 
 export function getRecentArticles(count = 3): Article[] {
-  return fs
-    .readdirSync(BLOG_DIR)
-    .filter((f) => f.endsWith('.mdx'))
-    .map((filename) => {
-      const slug = filename.replace('.mdx', '')
-      const raw = fs.readFileSync(path.join(BLOG_DIR, filename), 'utf-8')
-      const { data } = matter(raw)
-      return {
-        slug,
-        title: data.title || '',
-        category: data.category || 'Guide',
-        date: data.date
-          ? new Date(data.date).toLocaleDateString('en-AU', {
-              day: 'numeric',
-              month: 'short',
-              year: 'numeric',
-            })
-          : '',
-        readTime: data.readTime || '',
-        coverImage: data.coverImage,
-        desc: data.desc || data.description || '',
-      } as Article
-    })
-    .filter((a) => a.title && a.date)
+  const { articles } = listArticleSummaries({ mode: 'compatibility' })
+
+  return [...articles]
+    .filter((article) => article.title && article.date)
     .sort((a, b) => {
-      if (!a.date || !b.date) return 0
-      return a.date < b.date ? 1 : -1
+      const dateA = new Date(a.date).getTime()
+      const dateB = new Date(b.date).getTime()
+      if (isNaN(dateA) || isNaN(dateB)) return 0
+      return dateB - dateA
     })
     .slice(0, count)
+    .map((article) => ({
+      slug: article.slug,
+      title: article.title,
+      category: article.category,
+      date: article.date
+        ? new Date(article.date).toLocaleDateString('en-AU', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
+          })
+        : '',
+      readTime: article.readTime,
+      coverImage: article.coverImage,
+      desc: article.desc || article.description || '',
+      description: article.description,
+    }))
 }

@@ -1,56 +1,75 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import {
+  listArticleSlugs,
+  readArticle,
+  type ValidatedArticle,
+} from '@/lib/seo/articleReader'
 import { slugify } from './string-utils'
-import type { Article, ArticleNavItem, PrevNextArticles, Frontmatter, Heading, FAQItem } from './types'
-
-const BLOG_DIR = path.join(process.cwd(), 'content/blog')
-
-const BLOCKED_SLUGS = [
-  'china-factory-tours-australia',
-  'case-study-aesthetics-cosmetics',
-  'case-study-fashion-apparel',
-  'case-study-food-beverage',
-  'case-study-healthcare-medical',
-  'case-study-lighting-products',
-  'case-study-textiles-home-textiles',
-]
+import type {
+  Article,
+  ArticleNavItem,
+  PrevNextArticles,
+  Frontmatter,
+  Heading,
+  FAQItem,
+} from './types'
 
 // ============================================
-// FILE SYSTEM HELPERS
+// FILE SYSTEM HELPERS (unified SEO reader)
 // ============================================
+
+function toFrontmatter(article: ValidatedArticle): Frontmatter {
+  const fm = article.frontmatter
+  return {
+    title: fm.title,
+    date: String(fm.date),
+    description: fm.description,
+    author: fm.author,
+    category: fm.category,
+    readTime: fm.readTime,
+    subtitle: fm.subtitle,
+    coverImage: fm.coverImage,
+    coverImageAlt: fm.coverImageAlt,
+    updatedDate: fm.updatedDate ? String(fm.updatedDate) : undefined,
+    takeaways: fm.takeaways,
+    tags: fm.tags,
+    ctaTitle: fm.ctaTitle,
+    ctaText: fm.ctaText,
+    ctaButtonText: fm.ctaButtonText,
+    featured: fm.featured,
+    desc: fm.desc,
+    sourceType: fm.sourceType,
+    contentId: fm.contentId,
+    cluster: fm.cluster,
+    contentRole: fm.contentRole,
+    searchIntent: fm.searchIntent,
+    funnelStage: fm.funnelStage,
+    primaryKeyword: fm.primaryKeyword,
+    secondaryKeywords: fm.secondaryKeywords,
+    targetMarket: fm.targetMarket,
+    editorialStatus: fm.editorialStatus,
+    evidenceIds: fm.evidenceIds,
+    commercialRoot: fm.commercialRoot,
+    editorialPillar: fm.editorialPillar,
+    requiredLinks: fm.requiredLinks,
+    reviewedBy: fm.reviewedBy,
+    reviewedDate: fm.reviewedDate ? String(fm.reviewedDate) : undefined,
+    reviewDueDate: fm.reviewDueDate ? String(fm.reviewDueDate) : undefined,
+    migrationAction: fm.migrationAction,
+  }
+}
 
 export function getAllSlugs(): string[] {
-  function scanDir(dir: string): string[] {
-    const results: string[] = []
-    if (!fs.existsSync(dir)) return results
-    const entries = fs.readdirSync(dir, { withFileTypes: true })
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name)
-      if (entry.isDirectory()) {
-        results.push(...scanDir(fullPath))
-      } else if (entry.isFile() && entry.name.endsWith('.mdx')) {
-        const slug = fullPath.replace(BLOG_DIR + '/', '').replace('.mdx', '')
-        if (BLOCKED_SLUGS.includes(slug)) continue
-        results.push(slug)
-      }
-    }
-    return results
-  }
-  return scanDir(BLOG_DIR)
+  return listArticleSlugs()
 }
 
 export function getArticle(slug: string): Article | null {
-  if (BLOCKED_SLUGS.includes(slug)) return null
-  // Handle both top-level MDX (e.g. "china-factory-tour-guide")
-  // and subdirectory MDX (e.g. "china-business-tours/canton-fair-tour")
-  const filePath = path.join(BLOG_DIR, `${slug}.mdx`)
-  if (fs.existsSync(filePath)) {
-    const raw = fs.readFileSync(filePath, 'utf-8')
-    const { data, content } = matter(raw)
-    return { frontmatter: data as Frontmatter, content, slug }
+  const article = readArticle(slug)
+  if (!article) return null
+  return {
+    slug: article.slug,
+    content: article.content,
+    frontmatter: toFrontmatter(article),
   }
-  return null
 }
 
 // ============================================
@@ -72,20 +91,30 @@ export function getPrevNextArticles(currentSlug: string): PrevNextArticles {
 
   if (prevSlug) {
     const article = getArticle(prevSlug)
-    articlesCache.set(prevSlug, article ? {
-      slug: prevSlug,
-      title: article.frontmatter.title,
-      category: article.frontmatter.category,
-    } : null)
+    articlesCache.set(
+      prevSlug,
+      article
+        ? {
+            slug: prevSlug,
+            title: article.frontmatter.title,
+            category: article.frontmatter.category,
+          }
+        : null,
+    )
   }
 
   if (nextSlug) {
     const article = getArticle(nextSlug)
-    articlesCache.set(nextSlug, article ? {
-      slug: nextSlug,
-      title: article.frontmatter.title,
-      category: article.frontmatter.category,
-    } : null)
+    articlesCache.set(
+      nextSlug,
+      article
+        ? {
+            slug: nextSlug,
+            title: article.frontmatter.title,
+            category: article.frontmatter.category,
+          }
+        : null,
+    )
   }
 
   return {
@@ -112,7 +141,10 @@ export interface RecommendedArticle {
  * Get recommended articles based on same category.
  * Excludes current article, returns up to 4 most recent in same category.
  */
-export function getRecommendedArticles(currentSlug: string, category: string): RecommendedArticle[] {
+export function getRecommendedArticles(
+  currentSlug: string,
+  category: string,
+): RecommendedArticle[] {
   const allSlugs = getAllSlugs()
   const recommended: RecommendedArticle[] = []
 
@@ -128,7 +160,7 @@ export function getRecommendedArticles(currentSlug: string, category: string): R
       readTime: article.frontmatter.readTime,
       date: article.frontmatter.date,
       coverImage: article.frontmatter.coverImage,
-      desc: (article.frontmatter as any).desc || article.frontmatter.description,
+      desc: article.frontmatter.desc || article.frontmatter.description,
     })
   }
 
@@ -183,9 +215,12 @@ export function splitContent(content: string): { intro: string; body: string } {
  * so a mid-article CTA can be injected at the highest-converting position.
  * Returns an empty secondHalf when the body is too short to warrant a mid CTA.
  */
-export function splitBodyForMidCTA(body: string): { firstHalf: string; secondHalf: string } {
+export function splitBodyForMidCTA(body: string): {
+  firstHalf: string
+  secondHalf: string
+} {
   // Keep the '## ' marker on each section via lookahead split.
-  const sections = body.split(/\n(?=## )/).filter(s => s.trim().length > 0)
+  const sections = body.split(/\n(?=## )/).filter((s) => s.trim().length > 0)
   // Need at least 3 sections so the CTA never lands before the first or after the last.
   if (sections.length < 3) return { firstHalf: body, secondHalf: '' }
 
@@ -220,8 +255,18 @@ export function formatDateForSchema(dateStr: string): string {
   if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return dateStr
   // Parse "14 Apr 2026" format
   const months: Record<string, string> = {
-    Jan: '01', Feb: '02', Mar: '03', Apr: '04', May: '05', Jun: '06',
-    Jul: '07', Aug: '08', Sep: '09', Oct: '10', Nov: '11', Dec: '12',
+    Jan: '01',
+    Feb: '02',
+    Mar: '03',
+    Apr: '04',
+    May: '05',
+    Jun: '06',
+    Jul: '07',
+    Aug: '08',
+    Sep: '09',
+    Oct: '10',
+    Nov: '11',
+    Dec: '12',
   }
   const parts = dateStr.split(' ')
   if (parts.length === 3) {
@@ -240,12 +285,16 @@ export function formatDateForSchema(dateStr: string): string {
 export function extractFaqsFromContent(content: string): FAQItem[] {
   const faqs: FAQItem[] = []
   // Match the FAQ section heading (case-insensitive)
-  const faqSectionMatch = content.match(/##\s+[Ff]requently\s+[Aa]sked\s+[Qq]uestions\n([\s\S]*?)(?=\n##\s|\n---\n|$)/)
+  const faqSectionMatch = content.match(
+    /##\s+[Ff]requently\s+[Aa]sked\s+[Qq]uestions\n([\s\S]*?)(?=\n##\s|\n---\n|$)/,
+  )
   if (!faqSectionMatch) return faqs
 
   const faqSection = faqSectionMatch[1]
   // Match ### Question patterns followed by answer paragraphs
-  const questionMatches = faqSection.matchAll(/###\s+(.+?)\n([\s\S]*?)(?=\n###\s|\n---\n|$)/g)
+  const questionMatches = faqSection.matchAll(
+    /###\s+(.+?)\n([\s\S]*?)(?=\n###\s|\n---\n|$)/g,
+  )
 
   for (const match of questionMatches) {
     const question = match[1].trim()
