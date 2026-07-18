@@ -1,0 +1,7 @@
+version: 1
+articleId: article.check-chinese-company-samr
+decision: approved
+reviewer: Andy Liu
+reviewedDate: "2026-07-16"
+articleDigest: sha256:336f6c31741b4fc84b50f4d39ba12cf9e7f1b91a47a03ca521f504af54dde403
+claimManifestDigest: sha256:08e8c69d07bfd9946ea4f0855f583aa952333903a44d52a0c00c92243b454178

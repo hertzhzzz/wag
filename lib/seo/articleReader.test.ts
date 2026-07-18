@@ -33,10 +33,10 @@ describe('articleReader', () => {
       mode: 'compatibility',
     })
 
-    expect(corpus.articles).toHaveLength(23)
-    expect(listArticleSlugs({ blogDir: LIVE_BLOG })).toHaveLength(23)
-
     const slugs = corpus.articles.map((article) => article.slug)
+    expect(slugs.length).toBeGreaterThan(0)
+    expect(slugs).toEqual(listArticleSlugs({ blogDir: LIVE_BLOG }))
+
     expect(slugs).toEqual([...slugs].sort((a, b) => a.localeCompare(b)))
     expect(slugs).toContain('check-chinese-company-samr')
     expect(slugs).toContain('verify-chinese-supplier')
@@ -69,8 +69,9 @@ describe('articleReader', () => {
   it('surfaces compatibility warnings for the live legacy corpus', () => {
     const report = collectArticleCompatibilityReport({ blogDir: LIVE_BLOG })
 
-    expect(report.articleCount).toBe(23)
-    expect(report.articlesMissingGovernedFields.length).toBe(23)
+    expect(report.articlesMissingGovernedFields).not.toContain(
+      'article.check-chinese-company-samr',
+    )
     expect(report.warnings.some((w) => w.code === 'missing_governed_field')).toBe(
       true,
     )
@@ -141,7 +142,10 @@ describe('articleReader', () => {
       mode: 'compatibility',
     })
 
-    expect(articles).toHaveLength(23)
+    expect(articles.length).toBeGreaterThan(1)
+    expect(articles.map((article) => article.slug)).toEqual(
+      listArticleSlugs({ blogDir: LIVE_BLOG }),
+    )
     expect(articles[0].slug <= articles[1].slug).toBe(true)
     expect(articles.every((a) => a.description.length > 0)).toBe(true)
     expect(warnings.length).toBeGreaterThan(0)

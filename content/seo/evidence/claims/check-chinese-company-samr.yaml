@@ -1,0 +1,39 @@
+version: 1
+articleId: article.check-chinese-company-samr
+articlePath: content/blog/check-chinese-company-samr.mdx
+claims:
+  - id: claim.gsxt-record-scope-and-limits
+    kind: limitation
+    excerpt: |-
+      A GSXT record can confirm that a legal entity is recorded under a particular name, identifier, address, status, and business scope. It cannot tell you whether the supplier owns the factory in its photos, can meet your specifications, or is safe to pay. Treat the registry check as an identity check at the start of supplier verification, not as approval to place an order.
+    boundary: >-
+      A GSXT record may be used to compare registered entity fields, but it does not prove factory ownership, capability, trustworthiness, or payment safety.
+    evidenceIds:
+      - ev.7f9c2a01
+  - id: claim.samr-regulator-and-gsxt-portal
+    kind: fact
+    excerpt: |-
+      This check is often described as a "SAMR search." More precisely, the State Administration for Market Regulation (SAMR) oversees the company registration system, while the public search portal is the **National Enterprise Credit Information Publicity System**, known by its Chinese abbreviation, **GSXT**.
+    boundary: >-
+      SAMR oversees China's market-regulation and company-registration framework; GSXT is the official public enterprise information portal.
+    evidenceIds:
+      - ev.4c1d8b02
+      - ev.7f9c2a01
+  - id: claim.usci-format-and-standard
+    kind: fact
+    excerpt: |-
+      The Unified Social Credit Identifier (统一社会信用代码) is the 18-character identifier used for registered organisations in China. It contains numbers and permitted letters, so "18-digit code" is inaccurate.
+
+      At a high level, the characters encode the registering authority category, entity type, administrative division, organisation identifier, and a final check character. The governing coding rules are set out in Chinese national standard GB 32100-2015.
+
+      For a buyer, the identifier has three useful jobs:
+
+      1. It reduces confusion between companies with similar names.
+      2. It lets you match a business licence to the official record.
+      3. It gives you one stable identifier to compare across due-diligence files.
+
+      A code that fails the expected format deserves investigation, but a code that looks valid proves very little on its own. Someone can copy a valid identifier from another company. The useful test is whether the identifier opens the matching official record and whether that legal entity is the one named throughout your transaction.
+    boundary: >-
+      GB 32100-2015 defines the 18-character Unified Social Credit Identifier format using digits and permitted letters; the identifier format alone does not prove entity trust.
+    evidenceIds:
+      - ev.8e3a7c03

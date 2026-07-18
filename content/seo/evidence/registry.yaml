@@ -1,0 +1,104 @@
+version: 1
+evidence:
+  - id: ev.2b6f9d04
+    title: DFAT China country brief
+    sourceType: official
+    source:
+      kind: public-url
+      url: https://www.dfat.gov.au/geo/china/china-country-brief
+    capturedDate: "2026-07-16"
+    jurisdictions:
+      - AU
+      - CN
+    targetMarkets:
+      - AU
+    supportStatus: supported
+    supportedClaims:
+      - id: claim.china-country-context
+        boundary: "DFAT provides general Australia-facing country context for China; it does not validate a supplier, company record, or transaction."
+    limitations:
+      - This source provides country-level context only and does not validate a supplier, company record, or transaction.
+    reviewDueDate: "2027-01-12"
+    permission:
+      status: permitted
+      attributionRequired: true
+      attribution: Australian Government Department of Foreign Affairs and Trade
+    privacy: public
+    quantitative: false
+
+  - id: ev.4c1d8b02
+    title: SAMR official site
+    sourceType: official
+    source:
+      kind: public-url
+      url: https://www.samr.gov.cn/
+    capturedDate: "2026-07-16"
+    jurisdictions:
+      - CN
+    targetMarkets:
+      - AU
+    supportStatus: supported
+    supportedClaims:
+      - id: claim.samr-regulator-and-gsxt-portal
+        boundary: "SAMR oversees China's market-regulation and company-registration framework; GSXT is the official public enterprise information portal."
+    limitations:
+      - This source does not validate a specific supplier, factory, company record, capability, trustworthiness, or transaction.
+    reviewDueDate: "2027-01-12"
+    permission:
+      status: permitted
+      attributionRequired: true
+      attribution: State Administration for Market Regulation
+    privacy: public
+    quantitative: false
+
+  - id: ev.7f9c2a01
+    title: GSXT official portal
+    sourceType: official
+    source:
+      kind: public-url
+      url: https://www.gsxt.gov.cn/
+    capturedDate: "2026-07-16"
+    jurisdictions:
+      - CN
+    targetMarkets:
+      - AU
+    supportStatus: supported
+    supportedClaims:
+      - id: claim.gsxt-record-scope-and-limits
+        boundary: "A GSXT record may be used to compare registered entity fields, but it does not prove factory ownership, capability, trustworthiness, or payment safety."
+      - id: claim.samr-regulator-and-gsxt-portal
+        boundary: "SAMR oversees China's market-regulation and company-registration framework; GSXT is the official public enterprise information portal."
+    limitations:
+      - A GSXT record does not prove factory ownership, capability, trustworthiness, or payment safety.
+    reviewDueDate: "2027-01-12"
+    permission:
+      status: permitted
+      attributionRequired: true
+      attribution: National Enterprise Credit Information Publicity System
+    privacy: public
+    quantitative: false
+
+  - id: ev.8e3a7c03
+    title: GB 32100-2015 standard page
+    sourceType: official
+    source:
+      kind: public-url
+      url: https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=24691C25985C1073D3A7C85629378AC0
+    capturedDate: "2026-07-16"
+    jurisdictions:
+      - CN
+    targetMarkets:
+      - AU
+    supportStatus: supported
+    supportedClaims:
+      - id: claim.usci-format-and-standard
+        boundary: "GB 32100-2015 defines the 18-character Unified Social Credit Identifier format using digits and permitted letters; the identifier format alone does not prove entity trust."
+    limitations:
+      - The identifier format alone does not prove entity trust.
+    reviewDueDate: "2027-01-12"
+    permission:
+      status: permitted
+      attributionRequired: true
+      attribution: State Administration for Market Regulation
+    privacy: public
+    quantitative: false

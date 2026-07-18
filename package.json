@@ -15,6 +15,7 @@
     "seo:baseline:write": "tsx scripts/seo-baseline-audit.ts --write",
     "seo:baseline:release-safety": "tsx scripts/seo-baseline-audit.ts --release-safety",
     "seo:articles:check": "tsx scripts/seo-articles-check.ts",
+    "seo:evidence:check": "tsx scripts/seo-evidence-check.ts",
     "seo:clusters:diagnostic": "tsx scripts/seo-clusters-diagnostic.ts"
   },
   "dependencies": {
