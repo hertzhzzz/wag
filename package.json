@@ -14,7 +14,8 @@
     "seo:baseline:check": "tsx scripts/seo-baseline-audit.ts --check",
     "seo:baseline:write": "tsx scripts/seo-baseline-audit.ts --write",
     "seo:baseline:release-safety": "tsx scripts/seo-baseline-audit.ts --release-safety",
-    "seo:articles:check": "tsx scripts/seo-articles-check.ts"
+    "seo:articles:check": "tsx scripts/seo-articles-check.ts",
+    "seo:clusters:diagnostic": "tsx scripts/seo-clusters-diagnostic.ts"
   },
   "dependencies": {
     "@builder.io/partytown": "^0.10.3",

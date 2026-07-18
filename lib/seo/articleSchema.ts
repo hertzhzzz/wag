@@ -1,5 +1,14 @@
 import { z } from 'zod'
 
+import {
+  CANONICAL_CLUSTER_IDS,
+  CONTENT_ROLES,
+  FUNNEL_STAGES,
+  TARGET_MARKETS,
+} from './clusterSchema'
+
+export { CONTENT_ROLES, FUNNEL_STAGES, TARGET_MARKETS } from './clusterSchema'
+
 /**
  * Typed article frontmatter for the SEO Growth System.
  *
@@ -10,28 +19,7 @@ import { z } from 'zod'
 
 export const SITE_ORIGIN = 'https://www.winningadventure.com.au'
 
-export const ARTICLE_CLUSTERS = [
-  'supplier-verification',
-  'factory-audit',
-  'quality-inspection',
-  'factory-visits',
-  'china-sourcing',
-] as const
-
-export const CONTENT_ROLES = [
-  'pillar',
-  'supporting',
-  'evidence',
-  'comparison',
-] as const
-
-export const FUNNEL_STAGES = [
-  'problem-aware',
-  'solution-aware',
-  'evaluation',
-  'decision',
-  'post-purchase',
-] as const
+export const ARTICLE_CLUSTERS = CANONICAL_CLUSTER_IDS
 
 export const EDITORIAL_STATUSES = [
   'draft',
@@ -46,8 +34,6 @@ export const MIGRATION_ACTIONS = [
   'redirect',
   'retire',
 ] as const
-
-export const TARGET_MARKETS = ['AU', 'NZ', 'AU-NZ', 'global'] as const
 
 export type ArticleCluster = (typeof ARTICLE_CLUSTERS)[number]
 export type ContentRole = (typeof CONTENT_ROLES)[number]
