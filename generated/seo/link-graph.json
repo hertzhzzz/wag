@@ -1,0 +1,551 @@
+{
+  "edges": [
+    {
+      "from": "/article/bulk-procurement-china-guide",
+      "to": "/article/china-factory-tour-guide"
+    },
+    {
+      "from": "/article/bulk-procurement-china-guide",
+      "to": "/article/china-sourcing-risks"
+    },
+    {
+      "from": "/article/bulk-procurement-china-guide",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/bulk-procurement-china-guide",
+      "to": "/services"
+    },
+    {
+      "from": "/article/check-chinese-company-samr",
+      "to": "/article/china-supplier-scams"
+    },
+    {
+      "from": "/article/check-chinese-company-samr",
+      "to": "/article/factory-vs-trading-company-china-guide"
+    },
+    {
+      "from": "/article/check-chinese-company-samr",
+      "to": "/article/pay-chinese-suppliers-safely"
+    },
+    {
+      "from": "/article/check-chinese-company-samr",
+      "to": "/article/verify-alibaba-supplier"
+    },
+    {
+      "from": "/article/check-chinese-company-samr",
+      "to": "/factory-audit-china"
+    },
+    {
+      "from": "/article/check-chinese-company-samr",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/china-factory-tour-guide",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/china-factory-tour-guide",
+      "to": "/article/visiting-chinese-factories-australian-business-checklist"
+    },
+    {
+      "from": "/article/china-factory-tour-guide",
+      "to": "/services"
+    },
+    {
+      "from": "/article/china-factory-visit-agent-australia",
+      "to": "/article/china-factory-tour-guide"
+    },
+    {
+      "from": "/article/china-factory-visit-agent-australia",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/china-factory-visit-agent-australia",
+      "to": "/article/visiting-chinese-factories-australian-business-checklist"
+    },
+    {
+      "from": "/article/china-factory-visit-agent-australia",
+      "to": "/visiting-chinese-factories"
+    },
+    {
+      "from": "/article/china-sourcing-agent-vs-direct",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/china-sourcing-risks",
+      "to": "/article/china-factory-visit-agent-australia"
+    },
+    {
+      "from": "/article/china-sourcing-risks",
+      "to": "/article/china-sourcing-risks"
+    },
+    {
+      "from": "/article/china-sourcing-risks",
+      "to": "/article/china-supplier-scams"
+    },
+    {
+      "from": "/article/china-sourcing-risks",
+      "to": "/article/factory-vs-trading-company-china-guide"
+    },
+    {
+      "from": "/article/china-sourcing-risks",
+      "to": "/article/minimum-wage-china-sourcing"
+    },
+    {
+      "from": "/article/china-sourcing-risks",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/china-sourcing-risks",
+      "to": "/services"
+    },
+    {
+      "from": "/article/china-supplier-scams",
+      "to": "/article/check-chinese-company-samr"
+    },
+    {
+      "from": "/article/china-supplier-scams",
+      "to": "/article/factory-vs-trading-company-china-guide"
+    },
+    {
+      "from": "/article/china-supplier-scams",
+      "to": "/article/verify-alibaba-supplier"
+    },
+    {
+      "from": "/article/china-supplier-scams",
+      "to": "/article/verify-chinese-factory-certifications"
+    },
+    {
+      "from": "/article/china-supplier-scams",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/china-supplier-scams",
+      "to": "/quality-inspection-china"
+    },
+    {
+      "from": "/article/china-supplier-scams",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/china-supplier-scams",
+      "to": "/visiting-chinese-factories"
+    },
+    {
+      "from": "/article/construction-materials-sourcing-from-china",
+      "to": "/factory-audit-china"
+    },
+    {
+      "from": "/article/construction-materials-sourcing-from-china",
+      "to": "/quality-inspection-china"
+    },
+    {
+      "from": "/article/construction-materials-sourcing-from-china",
+      "to": "/services"
+    },
+    {
+      "from": "/article/construction-materials-sourcing-from-china",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/factory-vs-trading-company-china-guide",
+      "to": "/article/china-sourcing-risks"
+    },
+    {
+      "from": "/article/factory-vs-trading-company-china-guide",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/factory-vs-trading-company-china-guide",
+      "to": "/article/visiting-chinese-factories-australian-business-checklist"
+    },
+    {
+      "from": "/article/factory-vs-trading-company-china-guide",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/how-to-negotiate-chinese-factory-guide",
+      "to": "/visiting-chinese-factories"
+    },
+    {
+      "from": "/article/importing-electronics-from-china-to-australia",
+      "to": "/article/china-sourcing-agent-vs-direct"
+    },
+    {
+      "from": "/article/importing-electronics-from-china-to-australia",
+      "to": "/article/importing-from-china-australia-guide"
+    },
+    {
+      "from": "/article/importing-electronics-from-china-to-australia",
+      "to": "/article/verify-chinese-factory-certifications"
+    },
+    {
+      "from": "/article/importing-electronics-from-china-to-australia",
+      "to": "/factory-audit-china"
+    },
+    {
+      "from": "/article/importing-electronics-from-china-to-australia",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/importing-from-china-australia-guide",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/minimum-wage-china-sourcing",
+      "to": "/factory-audit-china"
+    },
+    {
+      "from": "/article/minimum-wage-china-sourcing",
+      "to": "/quality-inspection-china"
+    },
+    {
+      "from": "/article/minimum-wage-china-sourcing",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/new-zealand-vs-china-sourcing",
+      "to": "/quality-inspection-china"
+    },
+    {
+      "from": "/article/new-zealand-vs-china-sourcing",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/pay-chinese-suppliers-safely",
+      "to": "/article/check-chinese-company-samr"
+    },
+    {
+      "from": "/article/pay-chinese-suppliers-safely",
+      "to": "/article/china-supplier-scams"
+    },
+    {
+      "from": "/article/pay-chinese-suppliers-safely",
+      "to": "/article/verify-alibaba-supplier"
+    },
+    {
+      "from": "/article/pay-chinese-suppliers-safely",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/pay-chinese-suppliers-safely",
+      "to": "/factory-audit-china"
+    },
+    {
+      "from": "/article/pay-chinese-suppliers-safely",
+      "to": "/quality-inspection-china"
+    },
+    {
+      "from": "/article/pay-chinese-suppliers-safely",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/rare-earth-supply-chain-risks",
+      "to": "/factory-audit-china"
+    },
+    {
+      "from": "/article/rare-earth-supply-chain-risks",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/sourcing-agent-australia",
+      "to": "/article/china-factory-visit-agent-australia"
+    },
+    {
+      "from": "/article/sourcing-agent-australia",
+      "to": "/article/china-sourcing-agent-vs-direct"
+    },
+    {
+      "from": "/article/sourcing-agent-australia",
+      "to": "/article/china-sourcing-risks"
+    },
+    {
+      "from": "/article/sourcing-agent-australia",
+      "to": "/article/verify-chinese-factory-certifications"
+    },
+    {
+      "from": "/article/sourcing-agent-australia",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/sourcing-agent-australia",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/sourcing-mining-equipment-from-china",
+      "to": "/article/china-sourcing-risks"
+    },
+    {
+      "from": "/article/sourcing-mining-equipment-from-china",
+      "to": "/factory-audit-china"
+    },
+    {
+      "from": "/article/sourcing-mining-equipment-from-china",
+      "to": "/quality-inspection-china"
+    },
+    {
+      "from": "/article/sourcing-mining-equipment-from-china",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/supplier-audit-check-sheet-china",
+      "to": "/article/verify-chinese-factory-certifications"
+    },
+    {
+      "from": "/article/supplier-audit-check-sheet-china",
+      "to": "/factory-audit-china"
+    },
+    {
+      "from": "/article/supplier-audit-check-sheet-china",
+      "to": "/quality-inspection-china"
+    },
+    {
+      "from": "/article/supplier-audit-check-sheet-china",
+      "to": "/services"
+    },
+    {
+      "from": "/article/supplier-audit-check-sheet-china",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/verify-alibaba-supplier",
+      "to": "/article/check-chinese-company-samr"
+    },
+    {
+      "from": "/article/verify-alibaba-supplier",
+      "to": "/article/china-supplier-scams"
+    },
+    {
+      "from": "/article/verify-alibaba-supplier",
+      "to": "/article/factory-vs-trading-company-china-guide"
+    },
+    {
+      "from": "/article/verify-alibaba-supplier",
+      "to": "/article/verify-chinese-factory-certifications"
+    },
+    {
+      "from": "/article/verify-alibaba-supplier",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/verify-alibaba-supplier",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/verify-chinese-factory-certifications",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/verify-chinese-supplier",
+      "to": "/article/check-chinese-company-samr"
+    },
+    {
+      "from": "/article/verify-chinese-supplier",
+      "to": "/article/china-sourcing-risks"
+    },
+    {
+      "from": "/article/verify-chinese-supplier",
+      "to": "/article/factory-vs-trading-company-china-guide"
+    },
+    {
+      "from": "/article/verify-chinese-supplier",
+      "to": "/article/how-to-negotiate-chinese-factory-guide"
+    },
+    {
+      "from": "/article/verify-chinese-supplier",
+      "to": "/services"
+    },
+    {
+      "from": "/article/verify-chinese-supplier",
+      "to": "/supplier-verification"
+    },
+    {
+      "from": "/article/visiting-chinese-factories-australian-business-checklist",
+      "to": "/article/factory-vs-trading-company-china-guide"
+    },
+    {
+      "from": "/article/visiting-chinese-factories-australian-business-checklist",
+      "to": "/article/how-to-negotiate-chinese-factory-guide"
+    },
+    {
+      "from": "/article/visiting-chinese-factories-australian-business-checklist",
+      "to": "/article/verify-chinese-supplier"
+    },
+    {
+      "from": "/article/visiting-chinese-factories-australian-business-checklist",
+      "to": "/visiting-chinese-factories"
+    }
+  ],
+  "nodes": [
+    {
+      "cluster": null,
+      "id": "article.bulk-procurement-china-guide",
+      "kind": "article",
+      "route": "/article/bulk-procurement-china-guide"
+    },
+    {
+      "cluster": "supplier-verification",
+      "id": "article.check-chinese-company-samr",
+      "kind": "article",
+      "route": "/article/check-chinese-company-samr"
+    },
+    {
+      "cluster": null,
+      "id": "article.china-factory-tour-guide",
+      "kind": "article",
+      "route": "/article/china-factory-tour-guide"
+    },
+    {
+      "cluster": null,
+      "id": "article.china-factory-visit-agent-australia",
+      "kind": "article",
+      "route": "/article/china-factory-visit-agent-australia"
+    },
+    {
+      "cluster": null,
+      "id": "article.china-sourcing-agent-vs-direct",
+      "kind": "article",
+      "route": "/article/china-sourcing-agent-vs-direct"
+    },
+    {
+      "cluster": null,
+      "id": "article.china-sourcing-risks",
+      "kind": "article",
+      "route": "/article/china-sourcing-risks"
+    },
+    {
+      "cluster": null,
+      "id": "article.china-supplier-scams",
+      "kind": "article",
+      "route": "/article/china-supplier-scams"
+    },
+    {
+      "cluster": null,
+      "id": "article.construction-materials-sourcing-from-china",
+      "kind": "article",
+      "route": "/article/construction-materials-sourcing-from-china"
+    },
+    {
+      "cluster": null,
+      "id": "article.factory-vs-trading-company-china-guide",
+      "kind": "article",
+      "route": "/article/factory-vs-trading-company-china-guide"
+    },
+    {
+      "cluster": null,
+      "id": "article.how-to-negotiate-chinese-factory-guide",
+      "kind": "article",
+      "route": "/article/how-to-negotiate-chinese-factory-guide"
+    },
+    {
+      "cluster": null,
+      "id": "article.importing-electronics-from-china-to-australia",
+      "kind": "article",
+      "route": "/article/importing-electronics-from-china-to-australia"
+    },
+    {
+      "cluster": null,
+      "id": "article.importing-from-china-australia-guide",
+      "kind": "article",
+      "route": "/article/importing-from-china-australia-guide"
+    },
+    {
+      "cluster": null,
+      "id": "article.minimum-wage-china-sourcing",
+      "kind": "article",
+      "route": "/article/minimum-wage-china-sourcing"
+    },
+    {
+      "cluster": null,
+      "id": "article.new-zealand-vs-china-sourcing",
+      "kind": "article",
+      "route": "/article/new-zealand-vs-china-sourcing"
+    },
+    {
+      "cluster": null,
+      "id": "article.pay-chinese-suppliers-safely",
+      "kind": "article",
+      "route": "/article/pay-chinese-suppliers-safely"
+    },
+    {
+      "cluster": null,
+      "id": "article.rare-earth-supply-chain-risks",
+      "kind": "article",
+      "route": "/article/rare-earth-supply-chain-risks"
+    },
+    {
+      "cluster": null,
+      "id": "article.sourcing-agent-australia",
+      "kind": "article",
+      "route": "/article/sourcing-agent-australia"
+    },
+    {
+      "cluster": null,
+      "id": "article.sourcing-mining-equipment-from-china",
+      "kind": "article",
+      "route": "/article/sourcing-mining-equipment-from-china"
+    },
+    {
+      "cluster": null,
+      "id": "article.supplier-audit-check-sheet-china",
+      "kind": "article",
+      "route": "/article/supplier-audit-check-sheet-china"
+    },
+    {
+      "cluster": null,
+      "id": "article.verify-alibaba-supplier",
+      "kind": "article",
+      "route": "/article/verify-alibaba-supplier"
+    },
+    {
+      "cluster": null,
+      "id": "article.verify-chinese-factory-certifications",
+      "kind": "article",
+      "route": "/article/verify-chinese-factory-certifications"
+    },
+    {
+      "cluster": null,
+      "id": "article.verify-chinese-supplier",
+      "kind": "article",
+      "route": "/article/verify-chinese-supplier"
+    },
+    {
+      "cluster": null,
+      "id": "article.visiting-chinese-factories-australian-business-checklist",
+      "kind": "article",
+      "route": "/article/visiting-chinese-factories-australian-business-checklist"
+    },
+    {
+      "cluster": "factory-audit",
+      "id": "commercial.factory-audit",
+      "kind": "commercial",
+      "route": "/factory-audit-china"
+    },
+    {
+      "cluster": "quality-inspection",
+      "id": "commercial.quality-inspection",
+      "kind": "commercial",
+      "route": "/quality-inspection-china"
+    },
+    {
+      "cluster": "china-sourcing",
+      "id": "commercial.china-sourcing",
+      "kind": "commercial",
+      "route": "/services"
+    },
+    {
+      "cluster": "supplier-verification",
+      "id": "commercial.supplier-verification",
+      "kind": "commercial",
+      "route": "/supplier-verification"
+    },
+    {
+      "cluster": "factory-visits",
+      "id": "commercial.factory-visits",
+      "kind": "commercial",
+      "route": "/visiting-chinese-factories"
+    }
+  ],
+  "version": 1
+}

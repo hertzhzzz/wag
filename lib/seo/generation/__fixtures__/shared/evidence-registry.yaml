@@ -1,0 +1,26 @@
+version: 1
+evidence:
+  - id: ev.11111111
+    title: Public official fixture
+    sourceType: official
+    source:
+      kind: public-url
+      url: https://example.gov.au/fixture
+    capturedDate: "2026-07-01"
+    jurisdictions:
+      - AU
+    targetMarkets:
+      - AU
+    supportStatus: supported
+    supportedClaims:
+      - id: claim.fixture-boundary
+        boundary: "Supports only the bounded fixture statement."
+    limitations:
+      - Does not support claims outside the fixture boundary.
+    reviewDueDate: "2027-01-01"
+    permission:
+      status: permitted
+      attributionRequired: true
+      attribution: Fixture Government Source
+    privacy: public
+    quantitative: false

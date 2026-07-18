@@ -16,6 +16,8 @@
     "seo:baseline:release-safety": "tsx scripts/seo-baseline-audit.ts --release-safety",
     "seo:articles:check": "tsx scripts/seo-articles-check.ts",
     "seo:evidence:check": "tsx scripts/seo-evidence-check.ts",
+    "seo:governance:check": "tsx --tsconfig tsconfig.json scripts/seo/generate-indexes.ts --baseline-contract",
+    "seo:governance:write": "tsx --tsconfig tsconfig.json scripts/seo/generate-indexes.ts --baseline-contract --write",
     "seo:clusters:diagnostic": "tsx scripts/seo-clusters-diagnostic.ts"
   },
   "dependencies": {

@@ -1,0 +1,180 @@
+{
+  "clusters": [
+    {
+      "allowedRoles": ["comparison", "evidence", "pillar", "supporting"],
+      "articleIds": ["article.check-chinese-company-samr"],
+      "commercialRoot": "/supplier-verification",
+      "commercialService": {
+        "id": "supplier-verification",
+        "label": "Supplier Verification"
+      },
+      "editorialPillar": {
+        "migrationId": "phase-2-editorial-pillar-selection",
+        "reason": "Editorial pillar selection is pending the governed Phase 2 migration.",
+        "root": null,
+        "status": "migration-pending"
+      },
+      "funnelStages": [
+        "decision",
+        "evaluation",
+        "post-purchase",
+        "problem-aware",
+        "solution-aware"
+      ],
+      "id": "supplier-verification",
+      "intentFamilies": [
+        "company-due-diligence",
+        "supplier-risk",
+        "supplier-verification"
+      ],
+      "label": "Supplier Verification & Due Diligence",
+      "navigation": {
+        "visible": true
+      },
+      "priority": 1,
+      "reviewOwner": "seo-growth-system",
+      "targetMarkets": ["AU", "NZ"]
+    },
+    {
+      "allowedRoles": ["comparison", "evidence", "pillar", "supporting"],
+      "articleIds": [],
+      "commercialRoot": "/factory-audit-china",
+      "commercialService": {
+        "id": "factory-audit",
+        "label": "Factory Audit"
+      },
+      "editorialPillar": {
+        "migrationId": "phase-2-editorial-pillar-selection",
+        "reason": "Editorial pillar selection is pending the governed Phase 2 migration.",
+        "root": null,
+        "status": "migration-pending"
+      },
+      "funnelStages": [
+        "decision",
+        "evaluation",
+        "post-purchase",
+        "problem-aware",
+        "solution-aware"
+      ],
+      "id": "factory-audit",
+      "intentFamilies": [
+        "factory-audit",
+        "social-compliance",
+        "supplier-capability"
+      ],
+      "label": "Factory Audit",
+      "navigation": {
+        "visible": true
+      },
+      "priority": 2,
+      "reviewOwner": "seo-growth-system",
+      "targetMarkets": ["AU", "NZ"]
+    },
+    {
+      "allowedRoles": ["comparison", "evidence", "pillar", "supporting"],
+      "articleIds": [],
+      "commercialRoot": "/quality-inspection-china",
+      "commercialService": {
+        "id": "quality-inspection",
+        "label": "Quality Inspection"
+      },
+      "editorialPillar": {
+        "migrationId": "phase-2-editorial-pillar-selection",
+        "reason": "Editorial pillar selection is pending the governed Phase 2 migration.",
+        "root": null,
+        "status": "migration-pending"
+      },
+      "funnelStages": [
+        "decision",
+        "evaluation",
+        "post-purchase",
+        "problem-aware",
+        "solution-aware"
+      ],
+      "id": "quality-inspection",
+      "intentFamilies": [
+        "defect-prevention",
+        "quality-control",
+        "quality-inspection"
+      ],
+      "label": "Quality Inspection & Quality Control",
+      "navigation": {
+        "visible": true
+      },
+      "priority": 3,
+      "reviewOwner": "seo-growth-system",
+      "targetMarkets": ["AU", "NZ"]
+    },
+    {
+      "allowedRoles": ["comparison", "evidence", "pillar", "supporting"],
+      "articleIds": [],
+      "commercialRoot": "/visiting-chinese-factories",
+      "commercialService": {
+        "id": "factory-visits",
+        "label": "Factory Visits"
+      },
+      "editorialPillar": {
+        "migrationId": "phase-2-editorial-pillar-selection",
+        "reason": "Editorial pillar selection is pending the governed Phase 2 migration.",
+        "root": null,
+        "status": "migration-pending"
+      },
+      "funnelStages": [
+        "decision",
+        "evaluation",
+        "post-purchase",
+        "problem-aware",
+        "solution-aware"
+      ],
+      "id": "factory-visits",
+      "intentFamilies": [
+        "china-trip-planning",
+        "factory-visits",
+        "supplier-meetings"
+      ],
+      "label": "Factory Visits in China",
+      "navigation": {
+        "visible": true
+      },
+      "priority": 4,
+      "reviewOwner": "seo-growth-system",
+      "targetMarkets": ["AU", "NZ"]
+    },
+    {
+      "allowedRoles": ["comparison", "evidence", "pillar", "supporting"],
+      "articleIds": [],
+      "commercialRoot": "/services",
+      "commercialService": {
+        "id": "china-sourcing",
+        "label": "China Sourcing"
+      },
+      "editorialPillar": {
+        "migrationId": "phase-2-editorial-pillar-selection",
+        "reason": "Editorial pillar selection is pending the governed Phase 2 migration.",
+        "root": null,
+        "status": "migration-pending"
+      },
+      "funnelStages": [
+        "decision",
+        "evaluation",
+        "post-purchase",
+        "problem-aware",
+        "solution-aware"
+      ],
+      "id": "china-sourcing",
+      "intentFamilies": [
+        "china-sourcing",
+        "procurement-strategy",
+        "supplier-discovery"
+      ],
+      "label": "China Sourcing & Procurement",
+      "navigation": {
+        "visible": true
+      },
+      "priority": 5,
+      "reviewOwner": "seo-growth-system",
+      "targetMarkets": ["AU", "NZ"]
+    }
+  ],
+  "version": 1
+}

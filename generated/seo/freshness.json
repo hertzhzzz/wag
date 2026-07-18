@@ -1,0 +1,38 @@
+{
+  "articles": [
+    {
+      "contentId": "article.check-chinese-company-samr",
+      "reviewDueDate": "2027-01-12",
+      "reviewedDate": "2026-07-16",
+      "status": "current"
+    }
+  ],
+  "asOfDate": "2026-07-18",
+  "evidence": [
+    {
+      "capturedDate": "2026-07-16",
+      "evidenceId": "ev.2b6f9d04",
+      "reviewDueDate": "2027-01-12",
+      "status": "public"
+    },
+    {
+      "capturedDate": "2026-07-16",
+      "evidenceId": "ev.4c1d8b02",
+      "reviewDueDate": "2027-01-12",
+      "status": "public"
+    },
+    {
+      "capturedDate": "2026-07-16",
+      "evidenceId": "ev.7f9c2a01",
+      "reviewDueDate": "2027-01-12",
+      "status": "public"
+    },
+    {
+      "capturedDate": "2026-07-16",
+      "evidenceId": "ev.8e3a7c03",
+      "reviewDueDate": "2027-01-12",
+      "status": "public"
+    }
+  ],
+  "version": 1
+}
