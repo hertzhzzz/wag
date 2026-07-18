@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "asOfDate": "2026-07-18",
+  "cluster": "china-sourcing",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "china-sourcing-01-buying-brief",
+      "prompt": "What information should an Australian importer put in a China sourcing brief before contacting suppliers?",
+      "buyerStage": "problem-aware",
+      "intent": "informational",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "china-sourcing-02-landed-cost",
+      "prompt": "How should an AU-NZ buyer calculate landed cost when comparing products sourced from China?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "china-sourcing-03-shortlist",
+      "prompt": "What evidence should a buyer use to narrow a long supplier list to a qualified shortlist?",
+      "buyerStage": "evaluation",
+      "intent": "decision",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "china-sourcing-04-direct-or-agent",
+      "prompt": "When should an Australian business source directly from a Chinese factory instead of using a sourcing agent?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "china-sourcing-05-moq-negotiation",
+      "prompt": "How can an Australian importer negotiate MOQ and pricing without creating quality or delivery risk?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "china-sourcing-06-payment-risk",
+      "prompt": "What payment terms and bank account checks reduce risk when buying from a new Chinese supplier?",
+      "buyerStage": "decision",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "china-sourcing-07-samples-pilot",
+      "prompt": "When should a buyer use samples or a pilot order before committing to full production in China?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "china-sourcing-08-ip-confidentiality",
+      "prompt": "What intellectual property and confidentiality steps should an Australian buyer plan before sharing product files in China?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "china-sourcing-09-compliance-roles",
+      "prompt": "Who should own product compliance, freight, customs, and documentation tasks in an AU-NZ China sourcing project?",
+      "buyerStage": "decision",
+      "intent": "informational",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "china-sourcing-10-compare-services",
+      "prompt": "How should an Australian business compare China sourcing services and fee models?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    }
+  ]
+}

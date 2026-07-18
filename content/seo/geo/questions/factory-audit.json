@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "asOfDate": "2026-07-18",
+  "cluster": "factory-audit",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "factory-audit-01-scope",
+      "prompt": "What should a factory audit in China cover before an Australian importer places a large order?",
+      "buyerStage": "problem-aware",
+      "intent": "informational",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-audit-02-audit-or-verification",
+      "prompt": "How is a factory audit different from supplier verification and product inspection?",
+      "buyerStage": "solution-aware",
+      "intent": "informational",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "factory-audit-03-records",
+      "prompt": "What documents and production records should an auditor review at a Chinese factory?",
+      "buyerStage": "evaluation",
+      "intent": "informational",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-audit-04-capacity",
+      "prompt": "How can an audit test whether a factory has enough capacity for an Australian buyer's delivery schedule?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-audit-05-subcontracting",
+      "prompt": "What subcontracting warning signs should an Australian buyer look for during a factory audit?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-audit-06-quality-system",
+      "prompt": "How should an Australian importer assess a Chinese factory's quality management system?",
+      "buyerStage": "evaluation",
+      "intent": "decision",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-audit-07-technical-audit",
+      "prompt": "When should a buyer use a technical audit instead of a general factory audit?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "factory-audit-08-report",
+      "prompt": "What should a factory audit report include so an Australian buyer can make a sourcing decision?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-audit-09-compare-services",
+      "prompt": "How should an Australian business compare factory audit services in China?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-audit-10-stop-findings",
+      "prompt": "Which factory audit findings should be resolved before approving a Chinese factory for production?",
+      "buyerStage": "decision",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    }
+  ]
+}

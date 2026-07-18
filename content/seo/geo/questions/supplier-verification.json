@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "asOfDate": "2026-07-18",
+  "cluster": "supplier-verification",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "supplier-verification-01-registration-records",
+      "prompt": "What official records should an Australian importer check before engaging a supplier in China?",
+      "buyerStage": "problem-aware",
+      "intent": "informational",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "supplier-verification-02-manufacturer-or-trader",
+      "prompt": "How can an Australian buyer distinguish a Chinese manufacturer from a trading company?",
+      "buyerStage": "solution-aware",
+      "intent": "risk",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "supplier-verification-03-export-evidence",
+      "prompt": "What evidence should I request to verify that a Chinese supplier can legally export my product?",
+      "buyerStage": "evaluation",
+      "intent": "decision",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "supplier-verification-04-service-scope",
+      "prompt": "What should be included in a paid supplier verification service for an Australian importer?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "supplier-verification-05-legal-identity",
+      "prompt": "How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?",
+      "buyerStage": "solution-aware",
+      "intent": "informational",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "supplier-verification-06-false-documents",
+      "prompt": "What warning signs suggest that a Chinese supplier's business licence or certificates may be false?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "supplier-verification-07-remote-or-onsite",
+      "prompt": "When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "supplier-verification-08-bank-details",
+      "prompt": "How should I verify bank account details before paying a new Chinese supplier?",
+      "buyerStage": "decision",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "supplier-verification-09-compare-services",
+      "prompt": "How should an Australian business compare supplier verification services for work in China?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "supplier-verification-10-stop-findings",
+      "prompt": "What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU"
+    }
+  ]
+}

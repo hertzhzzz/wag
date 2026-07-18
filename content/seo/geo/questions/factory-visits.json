@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "asOfDate": "2026-07-18",
+  "cluster": "factory-visits",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "factory-visits-01-itinerary",
+      "prompt": "How should an Australian buyer plan a China factory visit itinerary before booking travel?",
+      "buyerStage": "solution-aware",
+      "intent": "informational",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-visits-02-meeting-agenda",
+      "prompt": "What should an importer include in a meeting agenda for a first visit to a Chinese factory?",
+      "buyerStage": "evaluation",
+      "intent": "informational",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "factory-visits-03-independent-support",
+      "prompt": "What should an Australian buyer look for in independent factory visit support in China?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-visits-04-production-evidence",
+      "prompt": "What evidence during a factory visit shows that production is active and relevant to my order?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "factory-visits-05-staged-visit-risks",
+      "prompt": "What warning signs suggest that a supplier has staged or restricted a factory visit?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "factory-visits-06-multiple-factories",
+      "prompt": "How can an Australian buyer compare several Chinese factories during one sourcing trip?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-visits-07-confidentiality",
+      "prompt": "What confidentiality, photography, and document access rules should a buyer agree before a factory visit?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "factory-visits-08-questions-to-ask",
+      "prompt": "What operational questions should an Australian importer ask factory managers during an on-site meeting?",
+      "buyerStage": "evaluation",
+      "intent": "informational",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-visits-09-compare-services",
+      "prompt": "How should an Australian business compare factory visit planning and support services in China?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "factory-visits-10-post-visit-decision",
+      "prompt": "How should a buyer turn factory visit notes into a documented supplier decision?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU-NZ"
+    }
+  ]
+}

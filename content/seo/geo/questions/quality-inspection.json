@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "asOfDate": "2026-07-18",
+  "cluster": "quality-inspection",
+  "status": "draft",
+  "questions": [
+    {
+      "id": "quality-inspection-01-stage",
+      "prompt": "Which product inspection stage should an Australian importer use before goods leave a factory in China?",
+      "buyerStage": "solution-aware",
+      "intent": "informational",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "quality-inspection-02-aql",
+      "prompt": "How should a buyer set an AQL standard and defect limits for a China production order?",
+      "buyerStage": "evaluation",
+      "intent": "decision",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "quality-inspection-03-report",
+      "prompt": "What should a pre-shipment inspection report include before an Australian buyer releases final payment?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "quality-inspection-04-checklist",
+      "prompt": "How can an importer create a product-specific inspection checklist instead of relying on a generic checklist?",
+      "buyerStage": "solution-aware",
+      "intent": "informational",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "quality-inspection-05-defect-classes",
+      "prompt": "What is the difference between critical, major, and minor defects in a quality inspection?",
+      "buyerStage": "problem-aware",
+      "intent": "informational",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "quality-inspection-06-during-production",
+      "prompt": "When should an Australian buyer arrange a during-production inspection rather than wait for pre-shipment inspection?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "quality-inspection-07-failed-inspection",
+      "prompt": "What should a buyer do when a China quality inspection fails?",
+      "buyerStage": "decision",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "quality-inspection-08-reinspection",
+      "prompt": "When is reinspection necessary after a factory claims that defects have been corrected?",
+      "buyerStage": "decision",
+      "intent": "decision",
+      "targetMarket": "AU-NZ"
+    },
+    {
+      "id": "quality-inspection-09-compare-services",
+      "prompt": "How should an Australian business compare quality inspection services in China?",
+      "buyerStage": "evaluation",
+      "intent": "commercial",
+      "targetMarket": "AU"
+    },
+    {
+      "id": "quality-inspection-10-packaging-compliance",
+      "prompt": "What packaging, labelling, and compliance checks should an AU-NZ importer add to a China inspection?",
+      "buyerStage": "evaluation",
+      "intent": "risk",
+      "targetMarket": "AU-NZ"
+    }
+  ]
+}
