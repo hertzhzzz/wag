@@ -52,11 +52,22 @@ export interface ArticleCorpus {
 
 function resolveBlogDir(options: ArticleReaderOptions = {}): string {
   if (options.blogDir) {
-    return path.isAbsolute(options.blogDir)
-      ? options.blogDir
-      : path.join(options.projectRoot ?? process.cwd(), options.blogDir)
+    if (path.isAbsolute(options.blogDir)) return options.blogDir
+
+    return path.join(
+      /* turbopackIgnore: true */ options.projectRoot ?? process.cwd(),
+      options.blogDir,
+    )
   }
-  return path.join(options.projectRoot ?? process.cwd(), 'content/blog')
+
+  if (options.projectRoot) {
+    return path.join(
+      /* turbopackIgnore: true */ options.projectRoot,
+      'content/blog',
+    )
+  }
+
+  return path.join(process.cwd(), 'content', 'blog')
 }
 
 function compareSlug(a: string, b: string): number {
