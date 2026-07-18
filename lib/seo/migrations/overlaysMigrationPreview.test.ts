@@ -9,6 +9,8 @@ import {
 } from "../migrationLedger";
 import {
   buildClusterMigrationPreview,
+  MIGRATION_PREVIEW_CONTRACT_ID,
+  SEO_AS_OF_BOUNDARY,
   type MigrationArticleSnapshot,
   type MigrationPreviewGovernanceBinding,
 } from "./clusterMigrationPreview";
@@ -170,10 +172,14 @@ function baseInput(
   const articles = options.articles ?? snapshotsFor(ledger);
   const binding = options.binding === undefined ? null : options.binding;
   const ticket11Preview = buildClusterMigrationPreview({
+    contractId: MIGRATION_PREVIEW_CONTRACT_ID,
+    asOf: SEO_AS_OF_BOUNDARY,
+    dataMode: binding?.origin === "production" ? "actual" : "synthetic_fixture",
     ledger,
     ledgerReport: report,
     clusterId: CHINA_CLUSTER,
     articles,
+    scope: null,
     governanceBinding: binding,
   });
 
@@ -440,15 +446,30 @@ describe("China Sourcing overlays migration preflight", () => {
     const input = structuredClone(
       baseInput({ ledger, report, mode: "actual", binding }),
     );
-    const command = input.ticket11Preview.mutationCommands[0];
-    if (!command) throw new Error("Missing synthetic Ticket 11 command.");
-    (
-      command as unknown as {
-        mutation: { routeChange: string | null };
-      }
-    ).mutation.routeChange = "/article/replacement-route";
+    const plan = input.ticket11Preview.articlePlans[0];
+    if (!plan) throw new Error("Missing synthetic Ticket 11 article plan.");
+    (input.ticket11Preview.mutationCommands as unknown as unknown[]).push({
+      kind: "apply-governed-article-metadata",
+      contentId: plan.contentId,
+      route: plan.route,
+      preconditions: {
+        ledgerDigest: input.ticket11Preview.ledgerDigest,
+        expectedContentId: plan.contentId,
+        expectedSlug: plan.slug,
+        expectedRoute: plan.route,
+        expectedCanonicalRoute: plan.canonicalRoute,
+      },
+      mutation: {
+        frontmatter: plan.expectedFrontmatter,
+        ensureLinks: plan.expectedLinks,
+        routeChange: "/article/replacement-route",
+        canonicalChange: null,
+      },
+    });
 
-    expect(issueCodes(input)).toContain("destructive-ticket11-mutation");
+    const codes = issueCodes(input);
+    expect(codes).toContain("ticket11-execution-authority-invalid");
+    expect(codes).toContain("destructive-ticket11-mutation");
   });
 
   it("derives specialist routes only from governed reviews and blocks unbound links", () => {
@@ -563,7 +584,9 @@ describe("China Sourcing overlays migration preflight", () => {
       mode: "actual",
       binding,
     });
-    expect(input.ticket11Preview.executable).toBe(true);
+    expect(input.ticket11Preview.executionAuthorization).toBe("not-authorized");
+    expect(input.ticket11Preview.executable).toBe(false);
+    expect(input.ticket11Preview.mutationCommands).toEqual([]);
 
     const preview = buildChinaSourcingOverlaysMigrationPreview(input);
     expect(preview.executable).toBe(false);

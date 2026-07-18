@@ -4,7 +4,9 @@
 
 **Blocked by:** 13.
 
-**Status:** ready-for-agent
+**Status:** awaiting-live-evidence-and-human-approval
+
+The implementation scaffold has passed code-level review. This phase now accepts only approved live capture evidence and named human approval; synthetic fixtures cannot satisfy or complete it.
 
 - [ ] Exactly ten stable Supplier Verification questions are approved and versioned.
 - [ ] Each observation records platform, model or surface when available, date, locale, and question wording.

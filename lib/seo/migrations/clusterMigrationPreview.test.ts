@@ -11,6 +11,8 @@ import {
 } from "../migrationLedger";
 import {
   buildClusterMigrationPreview,
+  clusterMigrationPreviewInputSchema,
+  clusterMigrationPreviewSchema,
   GOVERNED_MIGRATION_CLUSTER_CONTRACTS,
   type GovernedMigrationClusterId,
   type MigrationArticleSnapshot,
@@ -27,6 +29,21 @@ type DeepMutable<T> = T extends (...args: never[]) => unknown
 const SYNTHETIC_REVIEWER = "synthetic-test-only-reviewer";
 const SYNTHETIC_REVIEW_DATE = "2026-07-17";
 const SYNTHETIC_REVIEW_DUE_DATE = "2026-07-18";
+
+const SYNTHETIC_PREVIEW_CONTEXT = {
+  asOf: "2026-07-18",
+  dataMode: "synthetic_fixture",
+} as const;
+
+function buildTestPreview(input: Record<string, unknown>) {
+  return buildClusterMigrationPreview({
+    contractId: "cluster-migration-preview.v2",
+    ...SYNTHETIC_PREVIEW_CONTEXT,
+    scope: undefined,
+    governanceBinding: undefined,
+    ...input,
+  });
+}
 
 function mutableLedger(
   ledger: MigrationLedger = articleMigrationLedger,
@@ -159,7 +176,7 @@ function previewWith(
   }>,
 ) {
   const approved = approveSyntheticLedger();
-  return buildClusterMigrationPreview({
+  return buildTestPreview({
     ledger: input?.ledger ?? approved.ledger,
     ledgerReport: input?.report ?? approved.report,
     clusterId,
@@ -170,7 +187,9 @@ function previewWith(
 describe("cluster migration preview governance", () => {
   it("keeps the real pending ledger fail-closed with zero mutation commands", () => {
     const report = currentPendingReport();
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
+      asOf: "2026-07-18",
+      dataMode: "actual",
       ledger: articleMigrationLedger,
       ledgerReport: report,
       clusterId: "supplier-verification",
@@ -199,22 +218,24 @@ describe("cluster migration preview governance", () => {
     ["supplier-verification", 6, "/article/verify-chinese-supplier"],
     ["factory-audit", 1, "/article/supplier-audit-check-sheet-china"],
   ] as const)(
-    "creates a deterministic execution-ready synthetic preview for %s",
+    "creates a deterministic synthetic preview without execution authorization for %s",
     (clusterId, expectedCount, pillarRoute) => {
       const approved = approveSyntheticLedger();
-      const preview = buildClusterMigrationPreview({
+      const preview = buildTestPreview({
         ledger: approved.ledger,
         ledgerReport: approved.report,
         clusterId,
         articles: snapshotsFor(approved.ledger, clusterId).reverse(),
       });
 
-      expect(preview.executable).toBe(true);
+      expect(preview.previewReady).toBe(true);
+      expect(preview.executionAuthorization).toBe("not-authorized");
+      expect(preview.executable).toBe(false);
       expect(
         preview.diagnostics.filter(({ severity }) => severity === "error"),
       ).toEqual([]);
       expect(preview.articlePlans).toHaveLength(expectedCount);
-      expect(preview.mutationCommands).toHaveLength(expectedCount);
+      expect(preview.mutationCommands).toEqual([]);
       expect(preview.articlePlans.map(({ route }) => route)).toEqual(
         GOVERNED_MIGRATION_CLUSTER_CONTRACTS[clusterId].baselineRoutes,
       );
@@ -248,7 +269,7 @@ describe("cluster migration preview governance", () => {
 
   it("rejects digest and report identity tampering even when locked is claimed", () => {
     const approved = approveSyntheticLedger();
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: {
         ...approved.report,
@@ -288,7 +309,7 @@ describe("cluster migration preview governance", () => {
       digest: computeMigrationLedgerDigest(ledger),
       issues: [],
     };
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger,
       ledgerReport: report,
       clusterId: "supplier-verification",
@@ -297,12 +318,7 @@ describe("cluster migration preview governance", () => {
 
     expect(preview.executable).toBe(false);
     expect(preview.mutationCommands).toEqual([]);
-    expect(issueCodes(preview)).toEqual(
-      expect.arrayContaining([
-        "ledger-approval-metadata-invalid",
-        "ledger-entry-decisions-incomplete",
-      ]),
-    );
+    expect(issueCodes(preview)).toEqual(["input-schema-invalid"]);
   });
 
   it("rejects missing, extra, mismatched, or drifted article identities", () => {
@@ -352,8 +368,8 @@ describe("cluster migration preview governance", () => {
 
     expect(issueCodes(missing)).toContain("article-snapshot-missing");
     expect(issueCodes(extra)).toContain("article-snapshot-unexpected");
-    expect(issueCodes(drifted)).toContain("canonical-route-drift");
-    expect(issueCodes(mismatched)).toContain("article-identity-mismatch");
+    expect(issueCodes(drifted)).toEqual(["input-schema-invalid"]);
+    expect(issueCodes(mismatched)).toEqual(["input-schema-invalid"]);
     for (const preview of [missing, extra, drifted, mismatched]) {
       expect(preview.executable).toBe(false);
       expect(preview.mutationCommands).toEqual([]);
@@ -390,7 +406,7 @@ describe("cluster migration preview governance", () => {
       digest: computeMigrationLedgerDigest(ledger),
       issues: [],
     };
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger,
       ledgerReport: report,
       clusterId: "supplier-verification",
@@ -399,16 +415,7 @@ describe("cluster migration preview governance", () => {
 
     expect(preview.executable).toBe(false);
     expect(preview.mutationCommands).toEqual([]);
-    expect(issueCodes(preview)).toEqual(
-      expect.arrayContaining([
-        "required-links-contract-mismatch",
-        "pillar-count-mismatch",
-        "cluster-plan-contract-mismatch",
-        "cluster-member-routes-mismatch",
-        "destructive-action-forbidden",
-        "cross-cluster-primary-assignment",
-      ]),
-    );
+    expect(issueCodes(preview)).toEqual(["input-schema-invalid"]);
   });
 
   it("enforces the exact one-route Factory Audit frozen baseline", () => {
@@ -429,7 +436,7 @@ describe("cluster migration preview governance", () => {
       digest: computeMigrationLedgerDigest(ledger),
       issues: [],
     };
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger,
       ledgerReport: report,
       clusterId: "factory-audit",
@@ -461,7 +468,7 @@ describe("cluster migration preview governance", () => {
         claimBoundary: null,
       },
     };
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "supplier-verification",
@@ -495,32 +502,32 @@ describe("cluster migration preview governance", () => {
         claimBoundary: "Known evidence limitations must remain visible.",
       },
     };
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "factory-audit",
       articles,
     });
 
-    expect(preview.executable).toBe(true);
+    expect(preview.executable).toBe(false);
     expect(issueCodes(preview)).toContain("evidence-gap-visible");
     expect(
       preview.diagnostics.find(({ code }) => code === "evidence-gap-visible")
         ?.severity,
     ).toBe("advisory");
-    expect(preview.mutationCommands).toHaveLength(1);
+    expect(preview.mutationCommands).toEqual([]);
   });
 
   it("is byte-stable for reversed inputs, uses code-point order, and deep-freezes output", () => {
     const approved = approveSyntheticLedger();
     const articles = snapshotsFor(approved.ledger, "supplier-verification");
-    const forward = buildClusterMigrationPreview({
+    const forward = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "supplier-verification",
       articles,
     });
-    const reversed = buildClusterMigrationPreview({
+    const reversed = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: {
         ...approved.report,
@@ -572,7 +579,7 @@ describe("cluster migration preview governance", () => {
       digest: computeMigrationLedgerDigest(ledger),
       issues: [],
     };
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger,
       ledgerReport: report,
       clusterId: "supplier-verification",
@@ -589,11 +596,11 @@ describe("cluster migration preview governance", () => {
     ).toBe(true);
   });
 
-  it("rejects unsupported cluster ids at runtime without mutating inputs", () => {
+  it("rejects unsupported cluster ids at the strict schema boundary without mutating inputs", () => {
     const approved = approveSyntheticLedger();
     const articles = snapshotsFor(approved.ledger, "supplier-verification");
     const before = JSON.stringify({ ledger: approved.ledger, articles });
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "not-a-cluster" as ClusterId as GovernedMigrationClusterId,
@@ -602,7 +609,215 @@ describe("cluster migration preview governance", () => {
 
     expect(preview.executable).toBe(false);
     expect(preview.mutationCommands).toEqual([]);
-    expect(issueCodes(preview)).toContain("unsupported-migration-cluster");
+    expect(issueCodes(preview)).toContain("input-schema-invalid");
     expect(JSON.stringify({ ledger: approved.ledger, articles })).toBe(before);
+  });
+  it("enforces strict runtime input and output schemas across keys, nulls, prototypes, and nested copies", () => {
+    const approved = approveSyntheticLedger();
+    const input: Record<string, unknown> = {
+      contractId: "cluster-migration-preview.v2",
+      asOf: "2026-07-18",
+      dataMode: "synthetic_fixture",
+      ledger: approved.ledger,
+      ledgerReport: approved.report,
+      clusterId: "supplier-verification",
+      articles: snapshotsFor(approved.ledger, "supplier-verification"),
+      scope: undefined,
+      governanceBinding: undefined,
+    };
+
+    expect(clusterMigrationPreviewInputSchema.safeParse(input).success).toBe(
+      true,
+    );
+    expect(
+      clusterMigrationPreviewInputSchema.safeParse({ ...input, extra: true })
+        .success,
+    ).toBe(false);
+    const missing = { ...input };
+    delete missing.asOf;
+    expect(clusterMigrationPreviewInputSchema.safeParse(missing).success).toBe(
+      false,
+    );
+    expect(
+      clusterMigrationPreviewInputSchema.safeParse({ ...input, articles: null })
+        .success,
+    ).toBe(false);
+    expect(
+      clusterMigrationPreviewInputSchema.safeParse({
+        ...input,
+        scope: { clusterIds: ["not-a-cluster"] },
+      }).success,
+    ).toBe(false);
+    const customPrototype = Object.assign(
+      Object.create({ copiedContract: true }) as Record<string, unknown>,
+      input,
+    );
+    expect(
+      clusterMigrationPreviewInputSchema.safeParse(customPrototype).success,
+    ).toBe(false);
+
+    const enumDrift = structuredClone(input);
+    (
+      enumDrift.ledger as { entries: Array<{ decision: { action: string } }> }
+    ).entries[0].decision.action = "execute";
+    expect(
+      clusterMigrationPreviewInputSchema.safeParse(enumDrift).success,
+    ).toBe(false);
+
+    const sparseArticles = new Array(
+      (input.articles as readonly unknown[]).length,
+    );
+    expect(
+      clusterMigrationPreviewInputSchema.safeParse({
+        ...input,
+        articles: sparseArticles,
+      }).success,
+    ).toBe(false);
+
+    const preview = buildClusterMigrationPreview(input);
+    expect(clusterMigrationPreviewSchema.safeParse(preview).success).toBe(true);
+    const copiedOutput = JSON.parse(JSON.stringify(preview)) as Record<
+      string,
+      unknown
+    >;
+    (copiedOutput.articlePlans as Array<Record<string, unknown>>)[0].extra =
+      "forbidden";
+    expect(clusterMigrationPreviewSchema.safeParse(copiedOutput).success).toBe(
+      false,
+    );
+    const enumDriftOutput = structuredClone(preview) as unknown as {
+      articlePlans: Array<{ contentRole: string }>;
+    };
+    enumDriftOutput.articlePlans[0].contentRole = "landing-page";
+    expect(
+      clusterMigrationPreviewSchema.safeParse(enumDriftOutput).success,
+    ).toBe(false);
+    expect(
+      clusterMigrationPreviewSchema.safeParse({
+        ...preview,
+        mutationCommands: [{ kind: "not-authorized" }],
+      }).success,
+    ).toBe(false);
+  });
+
+  it("bounds actual evidence at 2026-07-18 while allowing explicitly synthetic future fixtures", () => {
+    const approved = approveSyntheticLedger();
+    const boundary = buildTestPreview({
+      asOf: "2026-07-18",
+      dataMode: "actual",
+      ledger: approved.ledger,
+      ledgerReport: approved.report,
+      clusterId: "supplier-verification",
+      articles: snapshotsFor(approved.ledger, "supplier-verification"),
+    });
+    expect(issueCodes(boundary)).not.toEqual(
+      expect.arrayContaining([
+        "as-of-beyond-real-boundary",
+        "future-actual-date",
+      ]),
+    );
+
+    const scheduledFutureReview = snapshotsFor(
+      approved.ledger,
+      "supplier-verification",
+    ).map((article) => ({
+      ...article,
+      frontmatter: {
+        ...article.frontmatter,
+        reviewDueDate: "2026-07-19",
+      },
+    }));
+    const scheduledFuture = buildTestPreview({
+      asOf: "2026-07-18",
+      dataMode: "actual",
+      ledger: approved.ledger,
+      ledgerReport: approved.report,
+      clusterId: "supplier-verification",
+      articles: scheduledFutureReview,
+    });
+    expect(issueCodes(scheduledFuture)).not.toContain("future-actual-date");
+
+    const futureLedgerDraft = mutableLedger(approved.ledger);
+    futureLedgerDraft.approval.approvalDate = "2026-07-19";
+    futureLedgerDraft.entries[0].decision.reviewedOn = "2026-07-19";
+    futureLedgerDraft.cannibalisationReviews[0].reviewedOn = "2026-07-19";
+    futureLedgerDraft.protection.expectedDigest =
+      computeMigrationLedgerDigest(futureLedgerDraft);
+    const futureLedger = defineMigrationLedger(futureLedgerDraft);
+    const futureLedgerReport = validateMigrationLedger(futureLedger, {
+      baseline: futureLedger.entries.map(({ contentId, slug, route }) => ({
+        contentId,
+        slug,
+        route,
+      })),
+      clusterRegistry,
+    });
+    const futureLedgerPreview = buildTestPreview({
+      asOf: "2026-07-18",
+      dataMode: "actual",
+      ledger: futureLedger,
+      ledgerReport: futureLedgerReport,
+      clusterId: "supplier-verification",
+      articles: snapshotsFor(futureLedger, "supplier-verification"),
+    });
+    const futureEvidencePaths = futureLedgerPreview.diagnostics
+      .filter(({ code }) => code === "future-actual-date")
+      .map(({ path }) => path);
+    expect(futureEvidencePaths).toEqual(
+      expect.arrayContaining([
+        "ledger.approval.approvalDate",
+        "ledger.entries[0].decision.reviewedOn",
+        "ledger.cannibalisationReviews[0].reviewedOn",
+      ]),
+    );
+
+    const futureArticles = snapshotsFor(
+      approved.ledger,
+      "supplier-verification",
+    ).map((article) => ({
+      ...article,
+      frontmatter: {
+        ...article.frontmatter,
+        reviewedDate: "2026-07-19",
+        reviewDueDate: "2026-07-20",
+      },
+    }));
+    const futureActual = buildTestPreview({
+      asOf: "2026-07-18",
+      dataMode: "actual",
+      ledger: approved.ledger,
+      ledgerReport: approved.report,
+      clusterId: "supplier-verification",
+      articles: futureArticles,
+    });
+    expect(issueCodes(futureActual)).toContain("future-actual-date");
+    expect(futureActual.previewReady).toBe(false);
+    expect(futureActual.executable).toBe(false);
+    expect(futureActual.mutationCommands).toEqual([]);
+
+    const futureAsOf = buildTestPreview({
+      asOf: "2026-07-19",
+      dataMode: "actual",
+      ledger: approved.ledger,
+      ledgerReport: approved.report,
+      clusterId: "supplier-verification",
+      articles: snapshotsFor(approved.ledger, "supplier-verification"),
+    });
+    expect(issueCodes(futureAsOf)).toContain("as-of-beyond-real-boundary");
+
+    const syntheticFuture = buildTestPreview({
+      asOf: "2026-07-19",
+      dataMode: "synthetic_fixture",
+      ledger: approved.ledger,
+      ledgerReport: approved.report,
+      clusterId: "supplier-verification",
+      articles: futureArticles,
+    });
+    expect(issueCodes(syntheticFuture)).not.toContain("future-actual-date");
+    expect(issueCodes(syntheticFuture)).not.toContain(
+      "as-of-beyond-real-boundary",
+    );
+    expect(syntheticFuture.executable).toBe(false);
+    expect(syntheticFuture.mutationCommands).toEqual([]);
   });
 });

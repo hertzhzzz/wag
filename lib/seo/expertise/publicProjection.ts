@@ -19,6 +19,12 @@ export interface PublicContributionProjection {
   readonly version: 1;
   readonly contributionId: string;
   readonly boundedClaim: string;
+  readonly permittedClaimBoundary: string;
+  readonly disclosureLevel: "public";
+  readonly reviewedOn: {
+    readonly factual: string;
+    readonly disclosure: string;
+  };
   readonly claimKind: string;
   readonly attribution: {
     readonly mode: string;
@@ -56,6 +62,12 @@ export function projectPublicContribution(
     version: 1 as const,
     contributionId: contribution.contributionId,
     boundedClaim: contribution.boundedClaim,
+    permittedClaimBoundary: contribution.permittedClaimBoundary,
+    disclosureLevel: "public" as const,
+    reviewedOn: {
+      factual: contribution.reviews.factual.reviewedOn,
+      disclosure: contribution.reviews.disclosure.reviewedOn,
+    },
     claimKind: contribution.claimKind,
     attribution: {
       mode: contribution.allowedAttribution.mode,

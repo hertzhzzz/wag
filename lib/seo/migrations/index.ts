@@ -1,8 +1,16 @@
 export {
   buildClusterMigrationPreview,
+  clusterMigrationPreviewInputSchema,
+  clusterMigrationPreviewSchema,
   deriveGovernedMigrationClusterContracts,
   GOVERNED_MIGRATION_CLUSTER_CONTRACTS,
   GOVERNED_MIGRATION_CLUSTER_IDS,
+  MIGRATION_PREVIEW_CONTRACT_ID,
+  migrationArticleSnapshotSchema,
+  migrationDataModeSchema,
+  migrationLedgerReportSchema,
+  migrationLedgerSchema,
+  SEO_AS_OF_BOUNDARY,
   type ArticleMigrationPlan,
   type ArticleMutationCommand,
   type ClusterMigrationPreview,
@@ -13,11 +21,15 @@ export {
   type GovernedMigrationEntryContract,
   type GovernedMigrationTicket,
   type MigrationArticleSnapshot,
+  type MigrationDataMode,
+  type OccurredEvidenceDate,
   type MigrationPreviewDiagnostic,
   type MigrationPreviewDiagnosticSeverity,
   type MigrationPreviewGovernanceBinding,
   type MigrationPreviewScope,
   type PlannedGovernedFrontmatter,
+  type ScheduledReviewDate,
+  type StrictClusterMigrationPreviewInput,
 } from "./clusterMigrationPreview";
 
 export {

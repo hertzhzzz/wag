@@ -1,113 +1,131 @@
 # Expertise Interview and Consent Record
 
-> Blank governance template only. It does not document an actual interview, contributor, quotation, approval, or verified finding. Complete it during a **45-minute human interview**. Keep raw notes, recordings, transcripts, personal data, and confidential operational details in an approved private store, never in the public repository.
+> Blank governance template only. It is not an interview, consent record, approval, person record, quotation, or verified evidence. Complete it with real humans in no more than 45 minutes. Store raw notes and sensitive data only in an approved private store. The repository may contain only opaque references and classified, bounded summaries.
 
 ## 1. Session identity
 
-- Session ID (`intv.<opaque-id>`):
-- Interview date and time with offset:
+- Record class: `actual` | `synthetic`
+- Public use: `governed` | `prohibited`
+- Session ID (`intv.<12-lowercase-hex>`):
+- Explicit `asOf` date (`YYYY-MM-DD`):
+- Interview date and time with numeric offset:
 - Duration in minutes (maximum `45`):
-- Selected cluster or opportunity:
-- Internal raw-note reference (`note.<opaque-private-store-id>`):
-  - Do not enter a URL, email address, phone number, absolute path, relative path, file URI, transcript, or raw note.
+- Ticket 28 opportunity or brief ID, if supplied:
+- Private raw-note reference (`note.<16-lowercase-hex>`):
 
-### Contributor
+Do not enter a URL, file path, email address, phone number, transcript, recording, or raw answer in the raw-note-reference field.
 
-- Internal contributor reference (`contributor.<opaque-id>`):
-- Contributor name (private record only):
+### Named contributor — private governance record
+
+- Internal reference (`contributor.<12-lowercase-hex>`):
+- Name:
 - Role:
-- Authority scope for this interview:
+- Authority scope:
 
-### Interviewer
+### Named interviewer — private governance record
 
-- Internal interviewer reference (`interviewer.<opaque-id>`):
-- Interviewer name (private record only):
+- Internal reference (`interviewer.<12-lowercase-hex>`):
+- Name:
 - Role:
 
-## 2. Consent boundaries
+If either real named human is absent, stop at scaffold stage. Do not label the session `actual` and do not create public evidence.
 
-Record each decision independently as `granted`, `denied`, or `not-requested`. A denial of recording or transcript consent does not grant any other permission.
+## 2. Classification before storage
+
+Classify each proposed note fragment before it is stored or summarised.
+
+| Fragment ID | Storage decision     | Privacy level         | Categories                                                                               | Redaction action                      | Private rationale |
+| ----------- | -------------------- | --------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------- | ----------------- |
+|             | store / do-not-store | internal / restricted | supplier / person / address / identifier / pricing / banking / other-confidential / none | removed / masked / generalised / none |                   |
+
+Rules:
+
+- `restricted` information is never copied into a contribution candidate.
+- A public contribution must have privacy level `public` and no confidential category.
+- Supplier names, personal details, addresses, identifiers, prices, bank details, and confidential operational details remain private unless a separately governed policy explicitly permits a bounded public use.
+- Classification must record an opaque reviewer reference and a governance date no later than the explicit `asOf` date for an actual record.
+
+## 3. Consent boundaries
+
+Record each decision independently as `granted`, `denied`, or `not-requested`.
 
 | Consent item                      | Decision | Boundary or condition |
 | --------------------------------- | -------- | --------------------- |
 | Recording                         |          |                       |
 | Transcript creation or retention  |          |                       |
-| Internal use of a bounded summary |          |                       |
+| Internal use of bounded summaries |          |                       |
 | Public quotation                  |          |                       |
 | Named attribution                 |          |                       |
 
-- Consent captured on (`YYYY-MM-DD`):
-- Consent expiry date (`YYYY-MM-DD` or `none`):
+- Captured on (`YYYY-MM-DD`):
+- Expires on (`YYYY-MM-DD` or `none`):
 - Revoked on (`YYYY-MM-DD` or `none`):
 - Revocation reason or private reference (`none` if not revoked):
 
-Stop the workflow if internal-use consent is not granted. Public quotation requires explicit public-quotation consent and permission. Any non-anonymous attribution requires explicit named-attribution consent and permission. Expired or revoked consent cannot be overridden by an editorial decision.
+Internal-use consent is mandatory for processing. Public quotation and non-anonymous attribution each require their own explicit consent and permission. Revoked or expired consent is fail-closed.
 
-## 3. Forty-five-minute interview plan
+## 4. Forty-five-minute interview plan
 
-| Time          | Human interview activity                                                                                                                  | Required output                                             |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 0-5 minutes   | Confirm identity, authority scope, consent boundaries, privacy categories, and the selected cluster.                                      | Recorded consent decisions and scope only.                  |
-| 5-13 minutes  | Ask for recurring buyer questions and the decisions buyers are trying to make.                                                            | Bounded question summaries.                                 |
-| 13-21 minutes | Ask about field observations, escalation triggers, and document or supplier mismatches.                                                   | Observations separated from verified facts.                 |
-| 21-29 minutes | Ask what each check can establish and what it cannot establish.                                                                           | Decision boundaries and limitations.                        |
-| 29-36 minutes | Ask for safe, anonymised patterns that do not identify a person, supplier, address, price, bank detail, licence, or confidential process. | Candidate safe examples, still non-public.                  |
-| 36-41 minutes | Identify claims that require current official or external support and any quantitative-method requirements.                               | External-support list and provenance gaps.                  |
-| 41-45 minutes | Read back the bounded summaries, confirm consent, record limitations, and explain the two-review workflow and revocation route.           | Confirmed private record ready for review, not publication. |
+| Time          | Activity                                                                                                      | Required structured output                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| 0-5 minutes   | Confirm identity, authority, consent, classification rules, `asOf`, and the selected opportunity.             | Named private governance record and consent decisions. |
+| 5-13 minutes  | Capture recurring buyer questions and the decisions buyers need to make.                                      | `buyerQuestions[]` records.                            |
+| 13-21 minutes | Capture field observations and separate facts, signals, inferences, and unknowns.                             | `questions[]` records with privacy categories.         |
+| 21-29 minutes | Ask what each check can and cannot establish.                                                                 | `practicalBoundaries[]`.                               |
+| 29-36 minutes | Capture anonymised examples that remain useful after restricted details are removed.                          | `safeExamples[]` with permitted claim boundaries.      |
+| 36-41 minutes | Identify claims that need current official, operational, quantitative, or third-party evidence.               | `externalSupportClaims[]`.                             |
+| 41-45 minutes | Read back bounded summaries, confirm consent and limitations, and explain independent reviews and revocation. | Private record ready for review, never publication.    |
 
-## 4. Question capture
+## 5. Structured capture fields
 
-Create one stable question record for each item. Do not paste a transcript or raw answer into this template.
+### Buyer question
 
-### Question record
+- ID (`buyer-question.<kebab-case>`):
+- Question:
+- Buyer need or decision:
+- Privacy categories:
 
-- Question ID (`question.<kebab-case>`):
+### Interview question and response summary
+
+- ID (`question.<kebab-case>`):
 - Prompt:
-- Internal response summary:
-- Category: `recurring-buyer-question` | `field-observation` | `decision-boundary` | `safe-example` | `external-support-required` | `service-boundary`
-- Fact, signal, inference, or limitation:
-- Privacy categories present: `supplier` | `person` | `address` | `identifier` | `pricing` | `banking` | `other-confidential` | `none`
-- Candidate bounded claim, if any:
-- Claim kind: `decision-boundary` | `fact` | `inference` | `observation` | `quantitative` | `quotation` | `safe-example`
-- External evidence required:
-- Limitation:
+- Bounded response summary, not transcript:
+- Privacy categories:
 
-Duplicate the question record as needed within the 45-minute limit.
+### Practical boundary
 
-## 5. Privacy classification and redaction
+- What the check can establish:
+- What it cannot establish:
+- Escalation trigger:
 
-### Session classification
+### Safe example
 
-- Classification: `internal` or `restricted`
-- Classified by internal reviewer reference (`reviewer.<opaque-id>`):
-- Classified on (`YYYY-MM-DD`):
-- Categories present: `supplier` | `person` | `address` | `identifier` | `pricing` | `banking` | `other-confidential` | `none`
+- ID (`example.<kebab-case>`):
+- Generalised summary:
+- Permitted claim boundary:
+- Privacy categories after redaction:
 
-### Redaction log
+### External-support claim
 
-| Redaction ID | Category | Action (`removed`, `masked`, or `generalised`) | Rationale |
-| ------------ | -------- | ---------------------------------------------- | --------- |
-|              |          |                                                |           |
+- ID (`support.<kebab-case>`):
+- Claim needing support:
+- Required evidence type:
+- Why interview evidence alone is insufficient:
 
-Redaction changes what may be reviewed; it does not create publication permission. Keep the original private material outside the repository under the approved retention policy.
+## 6. Candidate contribution handoff
 
-## 6. Session limitations
+Complete only after classification and consent are valid.
 
-Record at least one limitation. Examples must not be copied as answers; write only limitations that apply to the completed human interview.
+- Contribution ID (`contrib.<12-lowercase-hex>`):
+- Interview session reference:
+- Bounded claim:
+- Permitted claim boundary:
+- Claim kind:
+- Disclosure level:
+- Allowed attribution:
+- Permission scopes:
+- Supported article IDs:
+- Method and limitations:
+- Review due date:
 
--
-
-## 7. Contribution handoff
-
-An interview session is never public evidence by itself. For each candidate contribution:
-
-1. Create a separate opaque contribution record linked only by the session ID.
-2. Rewrite the material as one bounded claim; do not copy raw notes or a transcript.
-3. Record permission status and exact scopes, privacy classification, allowed attribution, supported article IDs, method, limitations, review due date, and revocation state.
-4. For a quantitative claim, also record a positive denominator, unit, date range, inclusion criteria, exclusion criteria, deduplication method, missing-data treatment, and limitations.
-5. Obtain an independent factual review.
-6. Obtain a separate disclosure/privacy review from a different reviewer.
-7. Evaluate eligibility using an explicit caller-supplied as-of date.
-8. Exclude synthetic, rejected, restricted, revoked, expired, unreviewed, or unsafe material from every public projection.
-
-Nothing in this template approves an article, release, deployment, or indexing action for Winning Adventure Global.
+This handoff is a candidate only. It is not approved evidence until separate factual and disclosure reviews pass with different real reviewers. A future governance date is invalid for an actual record; future dates are permitted only in explicitly synthetic, public-use-prohibited fixtures.

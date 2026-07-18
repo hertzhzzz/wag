@@ -45,6 +45,13 @@ export type OpportunityBriefSchemaVersion =
 export type DestructiveActionSchemaVersion =
   typeof DESTRUCTIVE_ACTION_SCHEMA_VERSION;
 
+export interface OpportunityRuntimeSchema<T> {
+  parse(input: unknown): T;
+  safeParse(
+    input: unknown,
+  ): { success: true; data: T } | { success: false; error: TypeError };
+}
+
 export type OpportunityRawValue =
   | boolean
   | number

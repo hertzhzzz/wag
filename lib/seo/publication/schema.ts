@@ -442,8 +442,11 @@ function assertReleaseBindingExactKeys(
 
 function normalizeReleaseBinding(value: unknown): TrustedReleaseBinding {
   assertReleaseBindingExactKeys(value);
-  if (!isTrustedPublicationReleaseBinding(value))
-    return value as unknown as TrustedReleaseBinding;
+  if (!isTrustedPublicationReleaseBinding(value)) {
+    throw new Error(
+      "releaseBinding requires a trusted release binding from Ticket 38.",
+    );
+  }
   assertTrustedBindingShape(value);
   return value;
 }

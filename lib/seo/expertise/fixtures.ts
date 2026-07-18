@@ -49,6 +49,31 @@ const SYNTHETIC_INTERVIEW_SESSION_INPUT: InterviewSessionInput = {
       privacyCategories: [],
     },
   ],
+  buyerQuestions: [
+    {
+      id: "buyer-question.synthetic-proof",
+      question: "What can the synthetic check prove?",
+      buyerNeed: "A contract-only boundary example.",
+      privacyCategories: [],
+    },
+  ],
+  practicalBoundaries: ["Synthetic records are never evidence."],
+  safeExamples: [
+    {
+      id: "example.synthetic-boundary",
+      summary: "Keep the synthetic example internal to tests.",
+      permittedClaimBoundary: "It cannot support a public claim.",
+      privacyCategories: [],
+    },
+  ],
+  externalSupportClaims: [
+    {
+      id: "support.synthetic-evidence",
+      claim: "Synthetic fixtures require external support before use.",
+      requiredEvidenceType: "independent factual evidence",
+      reason: "Fixtures are not evidence.",
+    },
+  ],
   rawNoteRef: "note.abcdef0123456789",
   privacyClassification: {
     level: "internal",
@@ -69,6 +94,8 @@ const SYNTHETIC_APPROVED_CONTRIBUTION_INPUT: ApprovedContributionInput = {
   contributionId: "contrib.abcdef012345",
   interviewSessionRef: SYNTHETIC_INTERVIEW_SESSION_INPUT.sessionId,
   boundedClaim: "Synthetic bounded claim for contract tests only.",
+  permittedClaimBoundary:
+    "Only the reviewed bounded wording and its stated limitations are permitted.",
   claimKind: "decision-boundary",
   permission: {
     status: "permitted",

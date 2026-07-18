@@ -91,7 +91,7 @@ function releaseIssues(
     }
     if (
       binding.liveVerification &&
-      Date.parse(record.occurredAt) <
+      Date.parse(record.occurredAt) <=
         Date.parse(binding.liveVerification.verifiedAt)
     ) {
       issues.push("event_precedes_live_verification");

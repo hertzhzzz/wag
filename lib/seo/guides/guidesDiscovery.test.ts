@@ -2,6 +2,7 @@ import { CANONICAL_CLUSTER_IDS } from "../clusterSchema";
 import {
   GUIDES_INTEGRATION_INVARIANTS,
   buildGuidesDiscoveryViewModel,
+  guidesDiscoveryInputSchema,
   selectGuidesArticles,
   validateGuidesIntegrationDescriptors,
 } from "./index";
@@ -491,5 +492,64 @@ describe("Guides discovery domain model", () => {
       reason: "Synthetic pillar destination is not approved.",
     };
     expectDeepFrozen(buildGuidesDiscoveryViewModel(unresolvedInput));
+  });
+  it("rejects missing, null, custom-prototype, and identity-drift inputs at the strict contract boundary", () => {
+    const valid = createSyntheticNonPublicGuidesInput();
+    expect(guidesDiscoveryInputSchema.safeParse(valid).success).toBe(true);
+
+    const missing = createSyntheticNonPublicGuidesInput();
+    delete missing.asOf;
+    expect(guidesDiscoveryInputSchema.safeParse(missing).success).toBe(false);
+
+    const nullMode = createSyntheticNonPublicGuidesInput();
+    nullMode.dataMode = null;
+    expect(guidesDiscoveryInputSchema.safeParse(nullMode).success).toBe(false);
+
+    const customPrototype = Object.assign(
+      Object.create({ copiedContract: true }) as Record<string, unknown>,
+      createSyntheticNonPublicGuidesInput(),
+    );
+    expect(guidesDiscoveryInputSchema.safeParse(customPrototype).success).toBe(
+      false,
+    );
+
+    const identityDrift = createSyntheticNonPublicGuidesInput();
+    recordsOf(identityDrift)[0].contentId = "article.different-slug";
+    expect(guidesDiscoveryInputSchema.safeParse(identityDrift).success).toBe(
+      false,
+    );
+  });
+
+  it("uses 2026-07-18 as the inclusive actual boundary and permits future dates only for synthetic fixtures", () => {
+    const boundary = createSyntheticNonPublicGuidesInput();
+    boundary.dataMode = "actual";
+    expect(buildGuidesDiscoveryViewModel(boundary).status).toBe("ready");
+
+    const futureActual = createSyntheticNonPublicGuidesInput();
+    futureActual.dataMode = "actual";
+    const actualArticle = recordsOf(futureActual)[0];
+    actualArticle.publishedDate = "2026-07-19";
+    actualArticle.updatedDate = "2026-07-19";
+    (actualArticle.governance as Record<string, unknown>).date = "2026-07-19";
+    const blockedActual = requireBlocked(
+      buildGuidesDiscoveryViewModel(futureActual),
+    );
+    expect(JSON.stringify(blockedActual.reasons)).toContain("2026-07-18");
+
+    const futureActualAsOf = createSyntheticNonPublicGuidesInput();
+    futureActualAsOf.dataMode = "actual";
+    futureActualAsOf.asOf = "2026-07-19";
+    expect(buildGuidesDiscoveryViewModel(futureActualAsOf).status).toBe(
+      "blocked",
+    );
+
+    const syntheticFuture = createSyntheticNonPublicGuidesInput();
+    syntheticFuture.asOf = "2026-07-19";
+    const syntheticArticle = recordsOf(syntheticFuture)[0];
+    syntheticArticle.publishedDate = "2026-07-19";
+    syntheticArticle.updatedDate = "2026-07-19";
+    (syntheticArticle.governance as Record<string, unknown>).date =
+      "2026-07-19";
+    expect(buildGuidesDiscoveryViewModel(syntheticFuture).status).toBe("ready");
   });
 });

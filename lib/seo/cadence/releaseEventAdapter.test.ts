@@ -254,7 +254,7 @@ describe("release workflow publication event adapter", () => {
     expect(Object.isFrozen(releaseEvent)).toBe(true);
 
     const report = buildWeeklyCadenceReport(actualCadenceInput(releaseEvent), {
-      observedNow: "2026-07-18T07:00:00.000Z",
+      asOf: "2026-07-18T07:00:00.000Z",
     });
     expect(report.summary).toEqual(
       expect.objectContaining({
@@ -304,7 +304,7 @@ describe("release workflow publication event adapter", () => {
     expect(isTrustedPublicationReleaseEvent(inheritedEvent)).toBe(false);
     expect(() =>
       buildWeeklyCadenceReport(actualCadenceInput(inheritedEvent), {
-        observedNow: "2026-07-18T07:00:00.000Z",
+        asOf: "2026-07-18T07:00:00.000Z",
       }),
     ).toThrow(/exactly|trusted release workflow adapter/i);
 

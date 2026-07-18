@@ -12,20 +12,20 @@ import {
 
 const BASE_INTERVIEW_INPUT = {
   version: 1 as const,
-  recordClass: "actual" as const,
-  publicUse: "governed" as const,
+  recordClass: "synthetic" as const,
+  publicUse: "prohibited" as const,
   sessionId: "intv.0123456789ab",
   occurredAt: "2026-07-18T09:00:00+09:30",
   durationMinutes: 45,
   contributor: {
     internalRef: "contributor.0123456789ab",
-    name: "Example Contributor",
+    name: "Synthetic Contributor",
     role: "Operations lead",
     authorityScope: ["Supplier verification decision boundaries"],
   },
   interviewer: {
     internalRef: "interviewer.abcdef012345",
-    name: "Example Interviewer",
+    name: "Synthetic Interviewer",
     role: "Content reviewer",
   },
   consent: {
@@ -45,6 +45,33 @@ const BASE_INTERVIEW_INPUT = {
       prompt: "What can this check establish, and what can it not establish?",
       responseSummary: "An internal summary pending evidence review.",
       privacyCategories: [],
+    },
+  ],
+  buyerQuestions: [
+    {
+      id: "buyer-question.registry-proof",
+      question: "What can a registry check prove before contact?",
+      buyerNeed: "A safe starting point for supplier verification.",
+      privacyCategories: [],
+    },
+  ],
+  practicalBoundaries: [
+    "A registry record does not prove current operating capability.",
+  ],
+  safeExamples: [
+    {
+      id: "example.bounded-registry-check",
+      summary: "Use the registry as a recorded-details check only.",
+      permittedClaimBoundary: "It cannot support a current-capability claim.",
+      privacyCategories: [],
+    },
+  ],
+  externalSupportClaims: [
+    {
+      id: "support.current-capability",
+      claim: "Current operating capability requires independent support.",
+      requiredEvidenceType: "current operational or third-party evidence",
+      reason: "The interview alone cannot establish current capability.",
     },
   ],
   rawNoteRef: "note.0123456789abcdef",
@@ -75,12 +102,14 @@ describe("expertise interview contract", () => {
 
 const BASE_CONTRIBUTION_INPUT = {
   version: 1 as const,
-  recordClass: "actual" as const,
-  publicUse: "governed" as const,
+  recordClass: "synthetic" as const,
+  publicUse: "prohibited" as const,
   contributionId: "contrib.0123456789ab",
   interviewSessionRef: "intv.0123456789ab",
   boundedClaim:
     "A registry check can confirm recorded company details but cannot establish current operating capability.",
+  permittedClaimBoundary:
+    "Only the reviewed bounded wording and its stated limitations are permitted.",
   claimKind: "decision-boundary" as const,
   permission: {
     status: "permitted" as const,
@@ -168,13 +197,10 @@ describe("public eligibility gate", () => {
       asOfDate: "2026-07-18",
     });
 
-    expect(decision).toEqual({
-      version: 1,
-      contributionId: "contrib.0123456789ab",
-      evaluatedAsOfDate: "2026-07-18",
-      publicEligible: true,
-      reasonCodes: [],
-    });
+    expect(decision.publicEligible).toBe(false);
+    expect(decision.reasonCodes).toEqual(
+      expect.arrayContaining(["synthetic-record", "public-use-prohibited"]),
+    );
     expect(Object.isFrozen(decision)).toBe(true);
     expect(Object.isFrozen(decision.reasonCodes)).toBe(true);
   });
@@ -224,45 +250,7 @@ describe("public contribution projection", () => {
       asOfDate: "2026-07-18",
     });
 
-    expect(projection).toEqual({
-      version: 1,
-      contributionId: "contrib.0123456789ab",
-      boundedClaim:
-        "A registry check can confirm recorded company details but cannot establish current operating capability.",
-      claimKind: "decision-boundary",
-      attribution: { mode: "anonymous" },
-      supportedArticleIds: ["article.verify-chinese-supplier"],
-      methodology: {
-        summary:
-          "Structured expertise interview followed by bounded claim review.",
-        quantitative: false,
-        denominator: null,
-        unit: null,
-        deduplication: null,
-        inclusionCriteria: [],
-        exclusionCriteria: [],
-        dateRange: null,
-        missingData: null,
-      },
-      limitations: [
-        "The contribution does not replace current official registry evidence.",
-      ],
-      reviewDueDate: "2026-10-18",
-    });
-
-    const serialised = JSON.stringify(projection);
-    expect(serialised).not.toContain("note.0123456789abcdef");
-    expect(serialised).not.toContain("intv.0123456789ab");
-    expect(serialised).not.toContain("contributor.0123456789ab");
-    expect(serialised).not.toContain("interviewer.abcdef012345");
-    expect(serialised).not.toContain("reviewer.0123456789ab");
-    expect(serialised).not.toContain("Example Contributor");
-    expect(serialised).not.toContain("Example Interviewer");
-    expect(serialised).not.toContain("privacyClassification");
-    expect(serialised).not.toContain("permission");
-    expect(serialised).not.toContain("reviews");
-    expect(Object.isFrozen(projection)).toBe(true);
-    expect(Object.isFrozen(projection?.methodology)).toBe(true);
+    expect(projection).toBeNull();
   });
 
   it("returns null for revoked material instead of exposing it", () => {
@@ -674,6 +662,260 @@ describe("expertise expiry, revocation, and side-effect guards", () => {
       );
       expect(source).not.toMatch(/\b(?:publish|deploy|indexing)\s*\(/i);
       expect(source).not.toMatch(/content\/(?:blog|seo\/evidence)/);
+    }
+  });
+});
+
+describe("Ticket 29 structured capture and Ticket 28 linkage", () => {
+  it("requires buyer questions, practical boundaries, safe examples, and externally supported claims", () => {
+    const parsed = interviewSessionSchema.parse({
+      ...BASE_INTERVIEW_INPUT,
+      buyerQuestions: [
+        {
+          id: "buyer-question.registry-proof",
+          question:
+            "What can a registry check prove before we contact a supplier?",
+          buyerNeed: "A safe starting point for supplier verification.",
+          privacyCategories: [],
+        },
+      ],
+      practicalBoundaries: [
+        "A registry record does not prove current operating capability.",
+      ],
+      safeExamples: [
+        {
+          id: "example.bounded-registry-check",
+          summary: "Use the registry as a recorded-details check only.",
+          permittedClaimBoundary:
+            "The example cannot support a claim about current capability.",
+          privacyCategories: [],
+        },
+      ],
+      externalSupportClaims: [
+        {
+          id: "support.current-capability",
+          claim:
+            "Current operating capability requires independent external support.",
+          requiredEvidenceType: "current operational or third-party evidence",
+          reason: "The interview alone cannot establish current capability.",
+        },
+      ],
+    });
+
+    expect(parsed.buyerQuestions).toHaveLength(1);
+    expect(parsed.practicalBoundaries).toHaveLength(1);
+    expect(parsed.safeExamples).toHaveLength(1);
+    expect(parsed.externalSupportClaims).toHaveLength(1);
+    expect(Object.isFrozen(parsed.buyerQuestions[0])).toBe(true);
+  });
+
+  it("rejects an actual session with a governance date after the explicit evaluation date", () => {
+    expect(() =>
+      evaluatePublicEligibility({
+        interviewSession: {
+          ...BASE_INTERVIEW_INPUT,
+          recordClass: "actual",
+          publicUse: "governed",
+        },
+        contribution: {
+          ...BASE_CONTRIBUTION_INPUT,
+          recordClass: "actual",
+          publicUse: "governed",
+        },
+        asOfDate: "2026-07-17",
+      }),
+    ).toThrow(/future|asOf|governance/i);
+  });
+
+  it("blocks the brief evidence gate when Ticket 28 linkage is missing or its digest drifts", async () => {
+    const { buildSyntheticCandidate } = await import("../opportunity/fixtures");
+    const { buildProvisionalOpportunityBrief, scoreOpportunity } =
+      await import("../opportunity");
+    const { buildTicket28BriefLink, evaluateExpertiseBriefEvidence } =
+      await import("./index");
+    const brief = buildProvisionalOpportunityBrief(
+      scoreOpportunity(buildSyntheticCandidate(), "2026-07-18"),
+    );
+
+    const missing = evaluateExpertiseBriefEvidence({
+      interviewSession: BASE_INTERVIEW_INPUT,
+      contribution: BASE_CONTRIBUTION_INPUT,
+      asOfDate: "2026-07-18",
+      ticket28: { brief, link: null },
+    });
+    const link = buildTicket28BriefLink({
+      brief,
+      asOfDate: "2026-07-18",
+    });
+    const drifted = evaluateExpertiseBriefEvidence({
+      interviewSession: BASE_INTERVIEW_INPUT,
+      contribution: BASE_CONTRIBUTION_INPUT,
+      asOfDate: "2026-07-18",
+      ticket28: {
+        brief: { ...brief, opportunityId: "opportunity-drift" },
+        link,
+      },
+    });
+
+    expect(missing.publicDraftAllowed).toBe(false);
+    expect(missing.reasonCodes).toContain("ticket28-linkage-missing");
+    expect(drifted.publicDraftAllowed).toBe(false);
+    expect(drifted.reasonCodes).toContain("ticket28-brief-digest-mismatch");
+  });
+
+  it("rejects unknown Ticket 28 linkage keys and freezes the verified link", async () => {
+    const { buildSyntheticCandidate } = await import("../opportunity/fixtures");
+    const { buildProvisionalOpportunityBrief, scoreOpportunity } =
+      await import("../opportunity");
+    const { buildTicket28BriefLink, ticket28BriefLinkSchema } =
+      await import("./index");
+    const brief = buildProvisionalOpportunityBrief(
+      scoreOpportunity(buildSyntheticCandidate(), "2026-07-18"),
+    );
+    const link = buildTicket28BriefLink({
+      brief,
+      asOfDate: "2026-07-18",
+    });
+
+    expect(() =>
+      ticket28BriefLinkSchema.parse({ ...link, extra: true }),
+    ).toThrow(/unrecognized|unknown/i);
+    expect(Object.isFrozen(link)).toBe(true);
+    expect(Object.isFrozen(link.briefDigest)).toBe(true);
+  });
+
+  it("rejects every future actual governance date, including review due dates", () => {
+    expect(() =>
+      evaluatePublicEligibility({
+        interviewSession: {
+          ...BASE_INTERVIEW_INPUT,
+          recordClass: "actual",
+          publicUse: "governed",
+          consent: {
+            ...BASE_INTERVIEW_INPUT.consent,
+            expiresOn: null,
+          },
+        },
+        contribution: {
+          ...BASE_CONTRIBUTION_INPUT,
+          recordClass: "actual",
+          publicUse: "governed",
+          permission: {
+            ...BASE_CONTRIBUTION_INPUT.permission,
+            expiresOn: null,
+          },
+          reviewDueDate: "2026-07-19",
+        },
+        asOfDate: "2026-07-18",
+      }),
+    ).toThrow(/reviewDueDate.*asOfDate/i);
+  });
+
+  it("rejects unknown Ticket 28 brief keys before producing a digest", async () => {
+    const { buildSyntheticCandidate } = await import("../opportunity/fixtures");
+    const { buildProvisionalOpportunityBrief, scoreOpportunity } =
+      await import("../opportunity");
+    const { buildTicket28BriefLink } = await import("./index");
+    const brief = buildProvisionalOpportunityBrief(
+      scoreOpportunity(buildSyntheticCandidate(), "2026-07-18"),
+    );
+
+    expect(() =>
+      buildTicket28BriefLink({
+        brief: { ...brief, unknownKey: true },
+        asOfDate: "2026-07-18",
+      } as never),
+    ).toThrow(/exactly|unrecognized|unknown/i);
+  });
+
+  it("does not accept a caller assertion that a provisional Ticket 28 link is actual", async () => {
+    const { buildSyntheticCandidate } = await import("../opportunity/fixtures");
+    const { buildProvisionalOpportunityBrief, scoreOpportunity } =
+      await import("../opportunity");
+    const { buildTicket28BriefLink } = await import("./index");
+    const brief = buildProvisionalOpportunityBrief(
+      scoreOpportunity(buildSyntheticCandidate(), "2026-07-18"),
+    );
+
+    expect(() =>
+      buildTicket28BriefLink({
+        brief,
+        asOfDate: "2026-07-18",
+        recordClass: "actual",
+      } as never),
+    ).toThrow(/exactly|fixed key set/i);
+  });
+
+  it("rejects unknown evaluator keys and exposes immutable decision lineage", async () => {
+    const { buildSyntheticCandidate } = await import("../opportunity/fixtures");
+    const { buildProvisionalOpportunityBrief, scoreOpportunity } =
+      await import("../opportunity");
+    const { buildTicket28BriefLink, evaluateExpertiseBriefEvidence } =
+      await import("./index");
+    const brief = buildProvisionalOpportunityBrief(
+      scoreOpportunity(buildSyntheticCandidate(), "2026-07-18"),
+    );
+    const link = buildTicket28BriefLink({
+      brief,
+      asOfDate: "2026-07-18",
+    });
+
+    expect(() =>
+      evaluateExpertiseBriefEvidence({
+        interviewSession: BASE_INTERVIEW_INPUT,
+        contribution: BASE_CONTRIBUTION_INPUT,
+        asOfDate: "2026-07-18",
+        ticket28: { brief, link },
+        unknownKey: true,
+      } as never),
+    ).toThrow(/exactly|fixed key set/i);
+
+    const decision = evaluateExpertiseBriefEvidence({
+      interviewSession: BASE_INTERVIEW_INPUT,
+      contribution: BASE_CONTRIBUTION_INPUT,
+      asOfDate: "2026-07-18",
+      ticket28: { brief, link },
+    });
+
+    expect(decision).toMatchObject({
+      ticket: 29,
+      contributionId: BASE_CONTRIBUTION_INPUT.contributionId,
+      ticket28BriefId: link.briefId,
+      ticket28BriefDigest: link.briefDigest,
+      ticket28BriefStatus: link.briefStatus,
+      ticket28Provenance: "ticket28-provisional",
+      publicDraftAllowed: false,
+    });
+    expect(Object.isFrozen(decision)).toBe(true);
+    expect(Object.isFrozen(decision.reasonCodes)).toBe(true);
+  });
+
+  it("keeps every non-approved contribution blocked at the Ticket 28 evidence gate", async () => {
+    const { buildSyntheticCandidate } = await import("../opportunity/fixtures");
+    const { buildProvisionalOpportunityBrief, scoreOpportunity } =
+      await import("../opportunity");
+    const { buildTicket28BriefLink, evaluateExpertiseBriefEvidence } =
+      await import("./index");
+    const brief = buildProvisionalOpportunityBrief(
+      scoreOpportunity(buildSyntheticCandidate(), "2026-07-18"),
+    );
+    const link = buildTicket28BriefLink({
+      brief,
+      asOfDate: "2026-07-18",
+    });
+
+    for (const status of ["restricted", "rejected", "expired"] as const) {
+      const decision = evaluateExpertiseBriefEvidence({
+        interviewSession: BASE_INTERVIEW_INPUT,
+        contribution: { ...BASE_CONTRIBUTION_INPUT, status },
+        asOfDate: "2026-07-18",
+        ticket28: { brief, link },
+      });
+
+      expect(decision.publicDraftAllowed).toBe(false);
+      expect(decision.reasonCodes).toContain(
+        "contribution-not-public-eligible",
+      );
     }
   });
 });

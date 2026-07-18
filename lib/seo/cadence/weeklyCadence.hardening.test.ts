@@ -176,6 +176,37 @@ function baseInput(
 }
 
 describe("weekly cadence hardening", () => {
+  it("uses an explicit provenance/asOf boundary and never reads ambient clock", () => {
+    const nowSpy = jest.spyOn(Date, "now").mockImplementation(() => {
+      throw new Error("ambient clock must not be read");
+    });
+
+    try {
+      const report = buildWeeklyCadenceReport(baseInput());
+
+      expect(report.audit.asOf).toBe("2026-07-18T07:00:00.000Z");
+    } finally {
+      nowSpy.mockRestore();
+    }
+  });
+
+  it("rejects an actual report whose explicit asOf is after July 18, 2026", () => {
+    expect(() =>
+      buildWeeklyCadenceReport(
+        baseInput({
+          dataMode: "actual",
+          provenance: {
+            source: "production-adapter",
+            capturedAt: "2026-07-18T07:00:00.000Z",
+          },
+          events: [event({ releaseEvent: releaseEnvelope("actual") })],
+        }),
+        {
+          asOf: "2099-01-01T00:00:00.000Z",
+        },
+      ),
+    ).toThrow(/future|asOf/i);
+  });
   it("rejects a caller-fabricated actual release envelope instead of trusting live_verified/status", () => {
     const input = baseInput({
       dataMode: "actual",

@@ -1,18 +1,28 @@
+import { z } from "zod";
 import { clusterRegistry } from "../../../content/seo/clusters";
 import { articleMigrationLedger } from "../../../content/seo/migration-ledger";
-import type {
-  ContentRole,
-  EditorialStatus,
-  FunnelStage,
-  MigrationAction,
-  TargetMarket,
+import {
+  EDITORIAL_STATUSES,
+  MIGRATION_ACTIONS,
+  type ContentRole,
+  type EditorialStatus,
+  type FunnelStage,
+  type MigrationAction,
+  type TargetMarket,
 } from "../articleSchema";
 import {
   CANONICAL_CLUSTER_IDS,
+  CONTENT_ROLES,
+  FUNNEL_STAGES,
+  TARGET_MARKETS,
   type ClusterId,
   type ClusterRegistry,
 } from "../clusterSchema";
 import {
+  LIVE_OPPORTUNITY_INPUT_IDS,
+  MIGRATION_SEARCH_INTENTS,
+  OPPORTUNITY_DIMENSION_IDS,
+  RISK_DIMENSION_IDS,
   compareCodePoints,
   computeMigrationLedgerDigest,
   sortCodePoints,
@@ -138,6 +148,10 @@ export const GOVERNED_MIGRATION_CLUSTER_CONTRACTS =
   );
 
 export type EvidenceReadinessStatus = "gaps-visible" | "reviewed";
+/** An evidence date records an event that has already occurred and is bounded by asOf. */
+export type OccurredEvidenceDate = string;
+/** A scheduled review date is a future-capable plan and is not approval evidence. */
+export type ScheduledReviewDate = string;
 
 export interface MigrationArticleSnapshot {
   readonly contentId: string;
@@ -153,8 +167,8 @@ export interface MigrationArticleSnapshot {
     readonly evidenceIds: readonly string[];
     readonly firstPartyContributionId: string | null;
     readonly reviewedBy: string;
-    readonly reviewedDate: string;
-    readonly reviewDueDate: string;
+    readonly reviewedDate: OccurredEvidenceDate;
+    readonly reviewDueDate: ScheduledReviewDate;
   };
   readonly evidenceReadiness: {
     readonly status: EvidenceReadinessStatus;
@@ -189,8 +203,8 @@ export interface PlannedGovernedFrontmatter {
   readonly editorialPillar: string;
   readonly requiredLinks: readonly string[];
   readonly reviewedBy: string;
-  readonly reviewedDate: string;
-  readonly reviewDueDate: string;
+  readonly reviewedDate: OccurredEvidenceDate;
+  readonly reviewDueDate: ScheduledReviewDate;
   readonly migrationAction: MigrationAction;
 }
 
@@ -244,26 +258,672 @@ export interface MigrationPreviewGovernanceBinding {
   readonly rollbackSteps: readonly string[];
 }
 
+export const SEO_AS_OF_BOUNDARY = "2026-07-18" as const;
+export const MIGRATION_PREVIEW_CONTRACT_ID =
+  "cluster-migration-preview.v2" as const;
+export const migrationDataModeSchema = z.enum(["actual", "synthetic_fixture"]);
+export type MigrationDataMode = z.infer<typeof migrationDataModeSchema>;
+
 export interface ClusterMigrationPreviewInput {
+  readonly contractId: typeof MIGRATION_PREVIEW_CONTRACT_ID;
+  readonly asOf: string;
+  readonly dataMode: MigrationDataMode;
   readonly ledger: MigrationLedger;
   readonly ledgerReport: MigrationLedgerReport;
   readonly clusterId: ClusterId;
   readonly articles: readonly MigrationArticleSnapshot[];
-  readonly scope?: MigrationPreviewScope;
-  readonly governanceBinding?: MigrationPreviewGovernanceBinding | null;
+  readonly scope: MigrationPreviewScope | null | undefined;
+  readonly governanceBinding:
+    | MigrationPreviewGovernanceBinding
+    | null
+    | undefined;
 }
 
 export interface ClusterMigrationPreview {
+  readonly contractId: typeof MIGRATION_PREVIEW_CONTRACT_ID;
   readonly version: 1;
-  readonly clusterId: ClusterId;
+  readonly asOf: string | null;
+  readonly dataMode: MigrationDataMode | null;
+  readonly clusterId: ClusterId | null;
   readonly ticket: GovernedMigrationTicket | null;
-  readonly ledgerDigest: string;
-  readonly executable: boolean;
+  readonly ledgerDigest: string | null;
+  readonly previewReady: boolean;
+  readonly executionAuthorization: "not-authorized";
+  readonly executable: false;
   readonly diagnostics: readonly MigrationPreviewDiagnostic[];
   readonly articlePlans: readonly ArticleMigrationPlan[];
   readonly mutationCommands: readonly ArticleMutationCommand[];
   readonly governanceBinding: MigrationPreviewGovernanceBinding | null;
 }
+
+type UnknownRecord = Record<string, unknown>;
+
+function isPlainObject(value: unknown): value is UnknownRecord {
+  if (value === null || typeof value !== "object" || Array.isArray(value)) {
+    return false;
+  }
+  const prototype = Object.getPrototypeOf(value) as object | null;
+  return prototype !== null && isIntrinsicObjectPrototype(prototype);
+}
+
+function isEnumerableDataProperty(value: object, key: PropertyKey): boolean {
+  const descriptor = Object.getOwnPropertyDescriptor(value, key);
+  return (
+    descriptor !== undefined &&
+    "value" in descriptor &&
+    descriptor.enumerable === true
+  );
+}
+
+function hasExactKeys(
+  value: unknown,
+  keys: readonly string[],
+): value is UnknownRecord {
+  if (!isPlainObject(value)) return false;
+  const expected = new Set(keys);
+  const actual = Reflect.ownKeys(value);
+  return (
+    actual.length === keys.length &&
+    actual.every(
+      (key) =>
+        typeof key === "string" &&
+        expected.has(key) &&
+        isEnumerableDataProperty(value, key),
+    ) &&
+    keys.every((key) => Object.prototype.hasOwnProperty.call(value, key))
+  );
+}
+
+function hasAllowedKeys(
+  value: unknown,
+  allowedKeys: readonly string[],
+): value is UnknownRecord {
+  if (!isPlainObject(value)) return false;
+  const allowed = new Set(allowedKeys);
+  return Reflect.ownKeys(value).every(
+    (key) =>
+      typeof key === "string" &&
+      allowed.has(key) &&
+      isEnumerableDataProperty(value, key),
+  );
+}
+
+function hasSameOwnKeys(left: object, right: object): boolean {
+  const leftKeys = Reflect.ownKeys(left);
+  const rightKeys = new Set(Reflect.ownKeys(right));
+  return (
+    leftKeys.length === rightKeys.size &&
+    leftKeys.every((key) => rightKeys.has(key))
+  );
+}
+
+function isIntrinsicObjectPrototype(value: object): boolean {
+  if (value === Object.prototype) return true;
+  const constructorDescriptor = Object.getOwnPropertyDescriptor(
+    value,
+    "constructor",
+  );
+  return (
+    hasSameOwnKeys(value, Object.prototype) &&
+    typeof constructorDescriptor?.value === "function" &&
+    constructorDescriptor.value.name === "Object" &&
+    /^function Object\(\) \{ \[native code\] \}$/.test(
+      Function.prototype.toString.call(constructorDescriptor.value),
+    )
+  );
+}
+
+function isIntrinsicArrayPrototype(value: object): boolean {
+  if (value === Array.prototype) return true;
+  const constructorDescriptor = Object.getOwnPropertyDescriptor(
+    value,
+    "constructor",
+  );
+  return (
+    hasSameOwnKeys(value, Array.prototype) &&
+    typeof constructorDescriptor?.value === "function" &&
+    constructorDescriptor.value.name === "Array" &&
+    /^function Array\(\) \{ \[native code\] \}$/.test(
+      Function.prototype.toString.call(constructorDescriptor.value),
+    )
+  );
+}
+
+function isSafeArray(value: unknown): value is readonly unknown[] {
+  if (!Array.isArray(value)) return false;
+  const prototype = Object.getPrototypeOf(value) as object | null;
+  if (prototype === null || !isIntrinsicArrayPrototype(prototype)) return false;
+  const expectedKeys = [
+    "length",
+    ...Array.from({ length: value.length }, (_, index) => String(index)),
+  ];
+  const actualKeys = Reflect.ownKeys(value);
+  if (
+    actualKeys.length !== expectedKeys.length ||
+    !expectedKeys.every((key) => actualKeys.includes(key))
+  ) {
+    return false;
+  }
+  const lengthDescriptor = Object.getOwnPropertyDescriptor(value, "length");
+  return (
+    lengthDescriptor !== undefined &&
+    "value" in lengthDescriptor &&
+    !lengthDescriptor.enumerable &&
+    expectedKeys.slice(1).every((key) => isEnumerableDataProperty(value, key))
+  );
+}
+
+function isOneOf<const Values extends readonly string[]>(
+  value: unknown,
+  values: Values,
+): value is Values[number] {
+  return typeof value === "string" && values.includes(value);
+}
+
+function isString(value: unknown): value is string {
+  return typeof value === "string";
+}
+
+function isNullableString(value: unknown): value is string | null {
+  return value === null || isString(value);
+}
+
+function isStringArray(value: unknown): value is readonly string[] {
+  return isSafeArray(value) && value.every(isString);
+}
+
+function isDate(value: unknown): value is string {
+  return isValidIsoCalendarDate(value);
+}
+
+function isNullableDate(value: unknown): value is string | null {
+  return value === null || isDate(value);
+}
+
+function isNumberOrNull(value: unknown): value is number | null {
+  return (
+    value === null || (typeof value === "number" && Number.isFinite(value))
+  );
+}
+
+function isNonNegativeInteger(value: unknown): value is number {
+  return typeof value === "number" && Number.isInteger(value) && value >= 0;
+}
+
+function isTraceableNumericInput(value: unknown): boolean {
+  return (
+    hasExactKeys(value, ["value", "dataStatus", "source", "asOf"]) &&
+    isNumberOrNull(value.value) &&
+    isOneOf(value.dataStatus, [
+      "available",
+      "static-snapshot",
+      "unavailable",
+    ]) &&
+    isNullableString(value.source) &&
+    isNullableDate(value.asOf)
+  );
+}
+
+function isOpportunityRecord(value: unknown): boolean {
+  if (
+    !hasExactKeys(value, ["totalScore", "dataStatus", "factors", "liveInputs"])
+  )
+    return false;
+  if (
+    !isNumberOrNull(value.totalScore) ||
+    !isOneOf(value.dataStatus, ["available", "static-snapshot", "unavailable"])
+  )
+    return false;
+  const factorKeys = OPPORTUNITY_DIMENSION_IDS;
+  const liveKeys = LIVE_OPPORTUNITY_INPUT_IDS;
+  const factors = value.factors;
+  const liveInputs = value.liveInputs;
+  return (
+    hasExactKeys(factors, factorKeys) &&
+    factorKeys.every((key) => isTraceableNumericInput(factors[key])) &&
+    hasExactKeys(liveInputs, liveKeys) &&
+    liveKeys.every((key) => isTraceableNumericInput(liveInputs[key]))
+  );
+}
+
+function isRiskRecord(value: unknown): boolean {
+  if (!hasExactKeys(value, ["totalScore", "dataStatus", "factors"]))
+    return false;
+  if (
+    !isNumberOrNull(value.totalScore) ||
+    !isOneOf(value.dataStatus, ["available", "static-snapshot", "unavailable"])
+  )
+    return false;
+  const keys = RISK_DIMENSION_IDS;
+  const factors = value.factors;
+  return (
+    hasExactKeys(factors, keys) &&
+    keys.every((key) => isTraceableNumericInput(factors[key]))
+  );
+}
+
+function isMigrationEntry(value: unknown): boolean {
+  if (
+    !hasExactKeys(value, [
+      "contentId",
+      "slug",
+      "route",
+      "classification",
+      "requiredLinks",
+      "decision",
+      "opportunity",
+      "risk",
+    ])
+  )
+    return false;
+  if (
+    !isString(value.contentId) ||
+    !isString(value.slug) ||
+    !isString(value.route) ||
+    !isStringArray(value.requiredLinks)
+  )
+    return false;
+  if (
+    !hasExactKeys(value.classification, [
+      "cluster",
+      "role",
+      "searchIntent",
+      "funnelStage",
+      "targetMarket",
+    ])
+  )
+    return false;
+  if (
+    !hasExactKeys(value.decision, [
+      "action",
+      "rationale",
+      "reviewStatus",
+      "reviewer",
+      "reviewedOn",
+      "lowTrafficAloneSufficient",
+    ])
+  )
+    return false;
+  return (
+    value.contentId === `article.${value.slug}` &&
+    value.route === `/article/${value.slug}` &&
+    isOneOf(value.classification.cluster, CANONICAL_CLUSTER_IDS) &&
+    isOneOf(value.classification.role, CONTENT_ROLES) &&
+    isOneOf(value.classification.searchIntent, MIGRATION_SEARCH_INTENTS) &&
+    isOneOf(value.classification.funnelStage, FUNNEL_STAGES) &&
+    isOneOf(value.classification.targetMarket, TARGET_MARKETS) &&
+    isOneOf(value.decision.action, MIGRATION_ACTIONS) &&
+    isString(value.decision.rationale) &&
+    ["approved", "pending"].includes(String(value.decision.reviewStatus)) &&
+    isNullableString(value.decision.reviewer) &&
+    isNullableDate(value.decision.reviewedOn) &&
+    value.decision.lowTrafficAloneSufficient === false &&
+    isOpportunityRecord(value.opportunity) &&
+    isRiskRecord(value.risk)
+  );
+}
+
+function isMigrationLedger(value: unknown): value is MigrationLedger {
+  if (
+    !hasExactKeys(value, [
+      "ledgerVersion",
+      "baseline",
+      "opportunityModel",
+      "riskModel",
+      "approval",
+      "protection",
+      "clusterPlans",
+      "entries",
+      "cannibalisationReviews",
+      "integrationBlockers",
+    ])
+  )
+    return false;
+  if (
+    value.ledgerVersion !== 1 ||
+    !hasExactKeys(value.baseline, ["id", "asOf", "expectedCount"]) ||
+    !isString(value.baseline.id) ||
+    !isDate(value.baseline.asOf) ||
+    value.baseline.expectedCount !== 23
+  )
+    return false;
+  if (
+    !hasExactKeys(value.opportunityModel, ["scoreScale", "dimensions"]) ||
+    value.opportunityModel.scoreScale !== 100 ||
+    !isSafeArray(value.opportunityModel.dimensions)
+  )
+    return false;
+  if (
+    !value.opportunityModel.dimensions.every(
+      (dimension) =>
+        hasExactKeys(dimension, ["id", "weight", "description"]) &&
+        isOneOf(dimension.id, OPPORTUNITY_DIMENSION_IDS) &&
+        typeof dimension.weight === "number" &&
+        Number.isFinite(dimension.weight) &&
+        isString(dimension.description),
+    )
+  )
+    return false;
+  if (
+    !hasExactKeys(value.riskModel, ["dimensions"]) ||
+    !isSafeArray(value.riskModel.dimensions) ||
+    !value.riskModel.dimensions.every(
+      (dimension) =>
+        hasExactKeys(dimension, ["id", "description"]) &&
+        isOneOf(dimension.id, RISK_DIMENSION_IDS) &&
+        isString(dimension.description),
+    )
+  )
+    return false;
+  if (
+    !hasExactKeys(value.approval, [
+      "approvalStatus",
+      "reviewer",
+      "approvalDate",
+    ]) ||
+    !["approved", "pending"].includes(String(value.approval.approvalStatus)) ||
+    !isNullableString(value.approval.reviewer) ||
+    !isNullableDate(value.approval.approvalDate)
+  )
+    return false;
+  if (
+    !hasExactKeys(value.protection, ["algorithm", "expectedDigest"]) ||
+    value.protection.algorithm !== "sha256" ||
+    !(
+      value.protection.expectedDigest === null ||
+      (isString(value.protection.expectedDigest) &&
+        DIGEST_PATTERN.test(value.protection.expectedDigest))
+    )
+  )
+    return false;
+  if (
+    !isSafeArray(value.clusterPlans) ||
+    !value.clusterPlans.every(
+      (plan) =>
+        hasExactKeys(plan, [
+          "cluster",
+          "commercialRoot",
+          "editorialPillar",
+          "baselineCount",
+          "baselineRoutes",
+          "memberRoutes",
+        ]) &&
+        isOneOf(plan.cluster, CANONICAL_CLUSTER_IDS) &&
+        isString(plan.commercialRoot) &&
+        hasExactKeys(plan.editorialPillar, [
+          "status",
+          "route",
+          "contentId",
+          "approvalStatus",
+          "integrationTicket",
+        ]) &&
+        ["existing-baseline", "planned-new"].includes(
+          String(plan.editorialPillar.status),
+        ) &&
+        isString(plan.editorialPillar.route) &&
+        isNullableString(plan.editorialPillar.contentId) &&
+        ["approved", "pending"].includes(
+          String(plan.editorialPillar.approvalStatus),
+        ) &&
+        isNullableString(plan.editorialPillar.integrationTicket) &&
+        Number.isInteger(plan.baselineCount) &&
+        isStringArray(plan.baselineRoutes) &&
+        isStringArray(plan.memberRoutes),
+    )
+  )
+    return false;
+  if (!isSafeArray(value.entries) || !value.entries.every(isMigrationEntry))
+    return false;
+  if (
+    !isSafeArray(value.cannibalisationReviews) ||
+    !value.cannibalisationReviews.every(
+      (review) =>
+        hasExactKeys(review, [
+          "id",
+          "routes",
+          "overlap",
+          "recommendation",
+          "analysisStatus",
+          "approvalStatus",
+          "reviewer",
+          "reviewedOn",
+        ]) &&
+        isString(review.id) &&
+        isStringArray(review.routes) &&
+        isString(review.overlap) &&
+        isString(review.recommendation) &&
+        review.analysisStatus === "analysed" &&
+        ["approved", "pending"].includes(String(review.approvalStatus)) &&
+        isNullableString(review.reviewer) &&
+        isNullableDate(review.reviewedOn),
+    )
+  )
+    return false;
+  return (
+    isSafeArray(value.integrationBlockers) &&
+    value.integrationBlockers.every(
+      (blocker) =>
+        hasExactKeys(blocker, ["id", "ticket", "status", "reason"]) &&
+        isString(blocker.id) &&
+        isString(blocker.ticket) &&
+        blocker.status === "open" &&
+        isString(blocker.reason),
+    )
+  );
+}
+
+function isMigrationLedgerReport(
+  value: unknown,
+): value is MigrationLedgerReport {
+  return (
+    hasExactKeys(value, ["status", "locked", "digest", "issues"]) &&
+    ["approval-required", "invalid", "valid"].includes(String(value.status)) &&
+    typeof value.locked === "boolean" &&
+    typeof value.digest === "string" &&
+    DIGEST_PATTERN.test(value.digest) &&
+    isSafeArray(value.issues) &&
+    value.issues.every(
+      (issue) =>
+        hasExactKeys(issue, ["severity", "code", "path", "message"]) &&
+        ["advisory", "error"].includes(String(issue.severity)) &&
+        isString(issue.code) &&
+        isString(issue.path) &&
+        isString(issue.message),
+    )
+  );
+}
+
+function isMigrationArticleSnapshot(
+  value: unknown,
+): value is MigrationArticleSnapshot {
+  if (
+    !hasExactKeys(value, [
+      "contentId",
+      "slug",
+      "route",
+      "canonicalRoute",
+      "currentLinks",
+      "frontmatter",
+      "evidenceReadiness",
+    ])
+  )
+    return false;
+  if (
+    !isString(value.contentId) ||
+    !isString(value.slug) ||
+    !isString(value.route) ||
+    !isString(value.canonicalRoute) ||
+    !isStringArray(value.currentLinks)
+  )
+    return false;
+  if (
+    !hasExactKeys(value.frontmatter, [
+      "author",
+      "primaryKeyword",
+      "secondaryKeywords",
+      "editorialStatus",
+      "evidenceIds",
+      "firstPartyContributionId",
+      "reviewedBy",
+      "reviewedDate",
+      "reviewDueDate",
+    ])
+  )
+    return false;
+  if (
+    !isString(value.frontmatter.author) ||
+    !isString(value.frontmatter.primaryKeyword) ||
+    !isStringArray(value.frontmatter.secondaryKeywords) ||
+    !isOneOf(value.frontmatter.editorialStatus, EDITORIAL_STATUSES) ||
+    !isStringArray(value.frontmatter.evidenceIds) ||
+    !isNullableString(value.frontmatter.firstPartyContributionId) ||
+    !isString(value.frontmatter.reviewedBy) ||
+    !isDate(value.frontmatter.reviewedDate) ||
+    !isDate(value.frontmatter.reviewDueDate)
+  )
+    return false;
+  return (
+    value.contentId === `article.${value.slug}` &&
+    value.route === `/article/${value.slug}` &&
+    value.canonicalRoute === value.route &&
+    value.frontmatter.reviewDueDate >= value.frontmatter.reviewedDate &&
+    hasExactKeys(value.evidenceReadiness, [
+      "status",
+      "methodologyRef",
+      "claimBoundary",
+    ]) &&
+    ["gaps-visible", "reviewed"].includes(
+      String(value.evidenceReadiness.status),
+    ) &&
+    isNullableString(value.evidenceReadiness.methodologyRef) &&
+    isNullableString(value.evidenceReadiness.claimBoundary)
+  );
+}
+
+function isMigrationPreviewInput(
+  value: unknown,
+): value is ClusterMigrationPreviewInput {
+  if (
+    !hasExactKeys(value, [
+      "contractId",
+      "asOf",
+      "dataMode",
+      "ledger",
+      "ledgerReport",
+      "clusterId",
+      "articles",
+      "scope",
+      "governanceBinding",
+    ])
+  )
+    return false;
+  if (
+    value.contractId !== MIGRATION_PREVIEW_CONTRACT_ID ||
+    !isDate(value.asOf) ||
+    !migrationDataModeSchema.safeParse(value.dataMode).success ||
+    !isMigrationLedger(value.ledger) ||
+    !isMigrationLedgerReport(value.ledgerReport) ||
+    !isOneOf(value.clusterId, CANONICAL_CLUSTER_IDS) ||
+    !isSafeArray(value.articles) ||
+    !value.articles.every(isMigrationArticleSnapshot)
+  )
+    return false;
+  if (
+    value.scope !== undefined &&
+    value.scope !== null &&
+    (!hasAllowedKeys(value.scope, [
+      "bundleIds",
+      "clusterIds",
+      "articleCount",
+      "maxArticleCount",
+    ]) ||
+      (value.scope.bundleIds !== undefined &&
+        value.scope.bundleIds !== null &&
+        !isStringArray(value.scope.bundleIds)) ||
+      (value.scope.clusterIds !== undefined &&
+        value.scope.clusterIds !== null &&
+        (!isStringArray(value.scope.clusterIds) ||
+          !value.scope.clusterIds.every((clusterId) =>
+            isOneOf(clusterId, CANONICAL_CLUSTER_IDS),
+          ))) ||
+      (value.scope.articleCount !== undefined &&
+        value.scope.articleCount !== null &&
+        !isNonNegativeInteger(value.scope.articleCount)) ||
+      (value.scope.maxArticleCount !== undefined &&
+        value.scope.maxArticleCount !== null &&
+        !isNonNegativeInteger(value.scope.maxArticleCount)))
+  )
+    return false;
+  if (
+    value.governanceBinding !== undefined &&
+    value.governanceBinding !== null &&
+    (!hasExactKeys(value.governanceBinding, [
+      "origin",
+      "public",
+      "releaseId",
+      "artifactDigest",
+      "rollbackArtifactDigest",
+      "rollbackOwner",
+      "rollbackTriggers",
+      "rollbackSteps",
+    ]) ||
+      !["production", "fixture"].includes(
+        String(value.governanceBinding.origin),
+      ) ||
+      typeof value.governanceBinding.public !== "boolean" ||
+      !isString(value.governanceBinding.releaseId) ||
+      !(
+        isString(value.governanceBinding.artifactDigest) &&
+        DIGEST_PATTERN.test(value.governanceBinding.artifactDigest)
+      ) ||
+      !(
+        isString(value.governanceBinding.rollbackArtifactDigest) &&
+        DIGEST_PATTERN.test(value.governanceBinding.rollbackArtifactDigest)
+      ) ||
+      !isString(value.governanceBinding.rollbackOwner) ||
+      !isStringArray(value.governanceBinding.rollbackTriggers) ||
+      !isStringArray(value.governanceBinding.rollbackSteps))
+  )
+    return false;
+  if (
+    value.governanceBinding !== undefined &&
+    value.governanceBinding !== null &&
+    ((value.dataMode === "actual" &&
+      value.governanceBinding.origin !== "production") ||
+      (value.dataMode === "synthetic_fixture" &&
+        value.governanceBinding.origin !== "fixture"))
+  )
+    return false;
+  return true;
+}
+
+export const migrationLedgerSchema = z.custom<MigrationLedger>(
+  isMigrationLedger,
+  {
+    message:
+      "Migration ledger must be a strict plain-data object with the canonical exact-key shape.",
+  },
+);
+export const migrationLedgerReportSchema = z.custom<MigrationLedgerReport>(
+  isMigrationLedgerReport,
+  {
+    message:
+      "Migration ledger report must be a strict plain-data object with the canonical exact-key shape.",
+  },
+);
+export const migrationArticleSnapshotSchema =
+  z.custom<MigrationArticleSnapshot>(isMigrationArticleSnapshot, {
+    message:
+      "Migration article snapshot must be a strict plain-data object with the canonical exact-key shape.",
+  });
+export const clusterMigrationPreviewInputSchema =
+  z.custom<ClusterMigrationPreviewInput>(isMigrationPreviewInput, {
+    message:
+      "Cluster migration preview input failed strict exact-key/runtime identity validation.",
+  });
+export type StrictClusterMigrationPreviewInput = z.infer<
+  typeof clusterMigrationPreviewInputSchema
+>;
 
 const DESTRUCTIVE_ACTIONS = new Set<MigrationAction>([
   "merge",
@@ -628,15 +1288,74 @@ function addGovernanceBindingDiagnostics(
     );
   }
   if (binding.origin === "fixture") {
-    addScopeDiagnostic(
-      diagnostics,
-      "fixture-execution-forbidden",
-      "governanceBinding.origin",
-      "Synthetic fixture approvals may verify a contract but can never authorize execution.",
-    );
+    addDiagnostic(diagnostics, {
+      severity: "advisory",
+      code: "fixture-execution-forbidden",
+      path: "governanceBinding.origin",
+      route: null,
+      message:
+        "Synthetic fixture approvals may verify a contract but can never authorize execution.",
+    });
   }
 
   return binding;
+}
+
+function addAsOfDateDiagnostics(
+  input: ClusterMigrationPreviewInput,
+  diagnostics: MigrationPreviewDiagnostic[],
+): void {
+  const { asOf, dataMode, ledger } = input;
+  if (dataMode === "actual" && asOf > SEO_AS_OF_BOUNDARY) {
+    addScopeDiagnostic(
+      diagnostics,
+      "as-of-beyond-real-boundary",
+      "asOf",
+      `Actual/production previews cannot use an asOf later than ${SEO_AS_OF_BOUNDARY}.`,
+    );
+  }
+  if (dataMode === "actual") {
+    const check = (path: string, date: string | null): void => {
+      if (date !== null && date > asOf) {
+        addScopeDiagnostic(
+          diagnostics,
+          "future-actual-date",
+          path,
+          `Actual/production evidence date must be on or before asOf (${asOf}).`,
+        );
+      }
+    };
+    check("ledger.baseline.asOf", ledger.baseline.asOf);
+    check("ledger.approval.approvalDate", ledger.approval.approvalDate);
+    ledger.entries.forEach((entry, index) => {
+      check(
+        `ledger.entries[${index}].decision.reviewedOn`,
+        entry.decision.reviewedOn,
+      );
+      const records = [
+        entry.opportunity.factors,
+        entry.opportunity.liveInputs,
+        entry.risk.factors,
+      ];
+      records.forEach((record) =>
+        Object.entries(record).forEach(([key, value]) =>
+          check(`ledger.entries[${index}].traceable.${key}.asOf`, value.asOf),
+        ),
+      );
+    });
+    ledger.cannibalisationReviews.forEach((review, index) => {
+      check(
+        `ledger.cannibalisationReviews[${index}].reviewedOn`,
+        review.reviewedOn,
+      );
+    });
+    input.articles.forEach((article) => {
+      check(
+        `articles.${article.contentId}.frontmatter.reviewedDate`,
+        article.frontmatter.reviewedDate,
+      );
+    });
+  }
 }
 
 function sameEntryContract(
@@ -1343,7 +2062,7 @@ function buildArticlePlans(
   );
 }
 
-export function buildClusterMigrationPreview(
+function buildClusterMigrationPreviewInternal(
   input: ClusterMigrationPreviewInput,
 ): ClusterMigrationPreview {
   const diagnostics: MigrationPreviewDiagnostic[] = [];
@@ -1355,6 +2074,7 @@ export function buildClusterMigrationPreview(
   );
 
   addLedgerGateDiagnostics(input, computedDigest, diagnostics);
+  addAsOfDateDiagnostics(input, diagnostics);
   validatePreviewScope(input, diagnostics);
 
   if (!isGovernedMigrationClusterId(input.clusterId)) {
@@ -1368,10 +2088,15 @@ export function buildClusterMigrationPreview(
     });
     diagnostics.sort(diagnosticComparator);
     return deepFreeze({
+      contractId: MIGRATION_PREVIEW_CONTRACT_ID,
       version: 1,
+      asOf: input.asOf,
+      dataMode: input.dataMode,
       clusterId: input.clusterId,
       ticket: null,
       ledgerDigest: computedDigest,
+      previewReady: false,
+      executionAuthorization: "not-authorized",
       executable: false,
       diagnostics,
       articlePlans: [],
@@ -1411,37 +2136,245 @@ export function buildClusterMigrationPreview(
   );
 
   diagnostics.sort(diagnosticComparator);
-  const executable = !diagnostics.some(({ severity }) => severity === "error");
-  const mutationCommands: ArticleMutationCommand[] = executable
-    ? articlePlans.map((plan) => ({
-        kind: "apply-governed-article-metadata",
-        contentId: plan.contentId,
-        route: plan.route,
-        preconditions: {
-          ledgerDigest: computedDigest,
-          expectedContentId: plan.contentId,
-          expectedSlug: plan.slug,
-          expectedRoute: plan.route,
-          expectedCanonicalRoute: plan.canonicalRoute,
-        },
-        mutation: {
-          frontmatter: plan.expectedFrontmatter,
-          ensureLinks: plan.expectedLinks,
-          routeChange: null,
-          canonicalChange: null,
-        },
-      }))
-    : [];
+  const previewReady = !diagnostics.some(
+    ({ severity }) => severity === "error",
+  );
+  // This module is a preview contract only. It never authorizes or emits execution commands.
+  const executable = false as const;
+  const mutationCommands: ArticleMutationCommand[] = [];
 
   return deepFreeze({
+    contractId: MIGRATION_PREVIEW_CONTRACT_ID,
     version: 1,
+    asOf: input.asOf,
+    dataMode: input.dataMode,
     clusterId: input.clusterId,
     ticket: contract.ticket,
     ledgerDigest: computedDigest,
+    previewReady,
+    executionAuthorization: "not-authorized",
     executable,
     diagnostics,
     articlePlans,
     mutationCommands,
     governanceBinding,
   });
+}
+
+function isMigrationPreviewGovernanceBinding(
+  value: unknown,
+): value is MigrationPreviewGovernanceBinding {
+  return (
+    hasExactKeys(value, [
+      "origin",
+      "public",
+      "releaseId",
+      "artifactDigest",
+      "rollbackArtifactDigest",
+      "rollbackOwner",
+      "rollbackTriggers",
+      "rollbackSteps",
+    ]) &&
+    ["production", "fixture"].includes(String(value.origin)) &&
+    typeof value.public === "boolean" &&
+    isString(value.releaseId) &&
+    isString(value.artifactDigest) &&
+    DIGEST_PATTERN.test(value.artifactDigest) &&
+    isString(value.rollbackArtifactDigest) &&
+    DIGEST_PATTERN.test(value.rollbackArtifactDigest) &&
+    isString(value.rollbackOwner) &&
+    isStringArray(value.rollbackTriggers) &&
+    isStringArray(value.rollbackSteps)
+  );
+}
+
+function isPlannedGovernedFrontmatter(
+  value: unknown,
+): value is PlannedGovernedFrontmatter {
+  return (
+    hasExactKeys(value, [
+      "contentId",
+      "cluster",
+      "contentRole",
+      "searchIntent",
+      "funnelStage",
+      "primaryKeyword",
+      "secondaryKeywords",
+      "targetMarket",
+      "editorialStatus",
+      "evidenceIds",
+      "firstPartyContributionId",
+      "commercialRoot",
+      "editorialPillar",
+      "requiredLinks",
+      "reviewedBy",
+      "reviewedDate",
+      "reviewDueDate",
+      "migrationAction",
+    ]) &&
+    isString(value.contentId) &&
+    isOneOf(value.cluster, GOVERNED_MIGRATION_CLUSTER_IDS) &&
+    isOneOf(value.contentRole, CONTENT_ROLES) &&
+    isOneOf(value.searchIntent, MIGRATION_SEARCH_INTENTS) &&
+    isOneOf(value.funnelStage, FUNNEL_STAGES) &&
+    isString(value.primaryKeyword) &&
+    isStringArray(value.secondaryKeywords) &&
+    isOneOf(value.targetMarket, TARGET_MARKETS) &&
+    isOneOf(value.editorialStatus, EDITORIAL_STATUSES) &&
+    isStringArray(value.evidenceIds) &&
+    isNullableString(value.firstPartyContributionId) &&
+    isString(value.commercialRoot) &&
+    isString(value.editorialPillar) &&
+    isStringArray(value.requiredLinks) &&
+    isString(value.reviewedBy) &&
+    isDate(value.reviewedDate) &&
+    isDate(value.reviewDueDate) &&
+    value.reviewDueDate >= value.reviewedDate &&
+    isOneOf(value.migrationAction, MIGRATION_ACTIONS)
+  );
+}
+
+function isArticleMigrationPlan(value: unknown): value is ArticleMigrationPlan {
+  return (
+    hasExactKeys(value, [
+      "contentId",
+      "slug",
+      "route",
+      "canonicalRoute",
+      "contentRole",
+      "preservedAuthor",
+      "expectedLinks",
+      "linksToAdd",
+      "expectedFrontmatter",
+      "evidenceReadiness",
+    ]) &&
+    isString(value.contentId) &&
+    isString(value.slug) &&
+    value.contentId === `article.${value.slug}` &&
+    isString(value.route) &&
+    value.route === `/article/${value.slug}` &&
+    value.canonicalRoute === value.route &&
+    isOneOf(value.contentRole, CONTENT_ROLES) &&
+    isString(value.preservedAuthor) &&
+    isStringArray(value.expectedLinks) &&
+    isStringArray(value.linksToAdd) &&
+    isPlannedGovernedFrontmatter(value.expectedFrontmatter) &&
+    value.expectedFrontmatter.contentId === value.contentId &&
+    hasExactKeys(value.evidenceReadiness, [
+      "status",
+      "methodologyRef",
+      "claimBoundary",
+    ]) &&
+    ["gaps-visible", "reviewed"].includes(
+      String(value.evidenceReadiness.status),
+    ) &&
+    isNullableString(value.evidenceReadiness.methodologyRef) &&
+    isNullableString(value.evidenceReadiness.claimBoundary)
+  );
+}
+
+function isMigrationPreviewOutput(
+  value: unknown,
+): value is ClusterMigrationPreview {
+  if (
+    !hasExactKeys(value, [
+      "contractId",
+      "version",
+      "asOf",
+      "dataMode",
+      "clusterId",
+      "ticket",
+      "ledgerDigest",
+      "previewReady",
+      "executionAuthorization",
+      "executable",
+      "diagnostics",
+      "articlePlans",
+      "mutationCommands",
+      "governanceBinding",
+    ])
+  )
+    return false;
+  if (
+    value.contractId !== MIGRATION_PREVIEW_CONTRACT_ID ||
+    value.version !== 1 ||
+    !isNullableDate(value.asOf) ||
+    (value.dataMode !== null &&
+      !migrationDataModeSchema.safeParse(value.dataMode).success) ||
+    (value.clusterId !== null &&
+      !isOneOf(value.clusterId, GOVERNED_MIGRATION_CLUSTER_IDS)) ||
+    (value.ticket !== null &&
+      !["07", "08", "09", "10", "11"].includes(String(value.ticket))) ||
+    (value.ledgerDigest !== null &&
+      !(
+        isString(value.ledgerDigest) && DIGEST_PATTERN.test(value.ledgerDigest)
+      )) ||
+    typeof value.previewReady !== "boolean" ||
+    value.executionAuthorization !== "not-authorized" ||
+    value.executable !== false ||
+    !isSafeArray(value.diagnostics) ||
+    !isSafeArray(value.articlePlans) ||
+    !value.articlePlans.every(isArticleMigrationPlan) ||
+    !isSafeArray(value.mutationCommands) ||
+    value.mutationCommands.length !== 0
+  )
+    return false;
+  if (
+    value.governanceBinding !== null &&
+    !isMigrationPreviewGovernanceBinding(value.governanceBinding)
+  )
+    return false;
+  return value.diagnostics.every(
+    (item) =>
+      hasExactKeys(item, ["severity", "code", "path", "route", "message"]) &&
+      ["advisory", "error"].includes(String(item.severity)) &&
+      isString(item.code) &&
+      isString(item.path) &&
+      (item.route === null || isString(item.route)) &&
+      isString(item.message),
+  );
+}
+
+export const clusterMigrationPreviewSchema = z.custom<ClusterMigrationPreview>(
+  isMigrationPreviewOutput,
+  {
+    message:
+      "Cluster migration preview output failed strict exact-key/runtime identity validation.",
+  },
+);
+
+function invalidMigrationPreview(): ClusterMigrationPreview {
+  return deepFreeze({
+    contractId: MIGRATION_PREVIEW_CONTRACT_ID,
+    version: 1,
+    asOf: null,
+    dataMode: null,
+    clusterId: null,
+    ticket: null,
+    ledgerDigest: null,
+    previewReady: false,
+    executionAuthorization: "not-authorized",
+    executable: false,
+    diagnostics: [
+      {
+        severity: "error",
+        code: "input-schema-invalid",
+        path: "input",
+        route: null,
+        message:
+          "Input failed strict runtime exact-key, prototype, type, or identity validation.",
+      },
+    ],
+    articlePlans: [],
+    mutationCommands: [],
+    governanceBinding: null,
+  });
+}
+
+export function buildClusterMigrationPreview(
+  input: unknown,
+): ClusterMigrationPreview {
+  const parsed = clusterMigrationPreviewInputSchema.safeParse(input);
+  if (!parsed.success) return invalidMigrationPreview();
+  return buildClusterMigrationPreviewInternal(parsed.data);
 }

@@ -1,5 +1,11 @@
-export { guidesDiscoveryInputSchema } from "./contract";
+export {
+  GUIDES_AS_OF_BOUNDARY,
+  GUIDES_DISCOVERY_CONTRACT_ID,
+  guidesDataModeSchema,
+  guidesDiscoveryInputSchema,
+} from "./contract";
 export type {
+  GuidesDataMode,
   GuidesDiscoveryArticleRecord,
   GuidesDiscoveryClusterRecord,
   GuidesDiscoveryInput,

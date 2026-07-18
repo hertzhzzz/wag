@@ -4,7 +4,7 @@
 
 **Blocked by:** 28, 29, 38.
 
-**Status:** contract-layer-implemented-real-event-blocked
+**Status:** contract-hardened-real-event-blocked
 
 ## Contract-layer implementation
 
@@ -28,3 +28,9 @@ The pure, fail-closed contract for `first_high_intent_publication` is implemente
 - [ ] The event report records failures, corrections, timings, and lessons without claiming indexing or ranking outcomes prematurely.
 
 No real event is claimed complete by this ticket implementation.
+
+## 2026-07-18 integration review
+
+- Untrusted caller-shaped and copied Ticket38 release bindings are rejected during parsing; they are no longer returned under the trusted binding type.
+- An actual event timestamp must be strictly later than the trusted live-verification timestamp; equality fails closed.
+- A real event remains blocked by governed opportunity/evidence inputs, the upstream Ticket13/24/25/27B/30/36/37 trust chain, two human approvals, deployment, and independent live verification. No production publication, indexing, or ranking result is claimed.

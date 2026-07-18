@@ -283,6 +283,7 @@ export interface ScaleAssessment {
 }
 
 export interface CadenceAuditRecord {
+  asOf: string;
   inputDigest: string;
   eventDigests: readonly string[];
   gateEvidenceDigests: readonly string[];
@@ -312,13 +313,14 @@ export interface WeeklyCadenceReport {
 }
 
 export interface BuildWeeklyCadenceOptions {
-  observedNow?: string;
+  asOf?: string;
 }
 
 const DIGEST_PATTERN = /^sha256:[a-f0-9]{64}$/;
 const MACHINE_ID_PATTERN = /^[a-z0-9]+(?:[.-][a-z0-9]+)*$/;
 const UTC_TIMESTAMP_PATTERN =
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/;
+const LATEST_ACTUAL_AS_OF_TIMESTAMP = Date.parse("2026-07-18T23:59:59.999Z");
 const EVENT_KINDS = new Set<PublicationEventKind>([
   "high_intent",
   "refresh",
@@ -1527,6 +1529,7 @@ export function buildWeeklyCadenceReport(
   input: WeeklyCadenceInput,
   options: BuildWeeklyCadenceOptions = {},
 ): WeeklyCadenceReport {
+  const explicitAsOf = options.asOf;
   assertExactKeys(
     input,
     [
@@ -1547,7 +1550,7 @@ export function buildWeeklyCadenceReport(
   );
   assertExactKeys(
     options,
-    options.observedNow === undefined ? [] : ["observedNow"],
+    options.asOf === undefined ? [] : ["asOf"],
     "weekly cadence options",
   );
   if (input.version !== 1)
@@ -1559,18 +1562,19 @@ export function buildWeeklyCadenceReport(
   const dataMode = input.dataMode as CadenceDataMode;
   const provenance = normalizeProvenance(input.provenance, dataMode);
   const generatedAt = parseUtcTimestamp(input.generatedAt, "generatedAt");
-  const observedNow =
-    options.observedNow === undefined
-      ? Date.now()
-      : parseUtcTimestamp(options.observedNow, "options.observedNow");
   const capturedAt = parseUtcTimestamp(
     provenance.capturedAt,
     "provenance.capturedAt",
   );
+  const asOf = explicitAsOf ?? provenance.capturedAt;
+  const asOfTimestamp = parseUtcTimestamp(asOf, "options.asOf");
   if (generatedAt > capturedAt) {
     throw new Error(
       "generatedAt must not be later than provenance.capturedAt.",
     );
+  }
+  if (dataMode === "actual" && asOfTimestamp > LATEST_ACTUAL_AS_OF_TIMESTAMP) {
+    throw new Error("actual cadence asOf cannot be future-dated.");
   }
   const week = normalizeDateRange(input.week, "week");
   assertInteger(input.targetEvents, "targetEvents");
@@ -1583,7 +1587,7 @@ export function buildWeeklyCadenceReport(
     throw new Error("queueCandidates must be an array.");
 
   const events = input.events.map((event, index) =>
-    normalizeEvent(event, index, dataMode, observedNow),
+    normalizeEvent(event, index, dataMode, asOfTimestamp),
   );
   const measures = input.measures.map(normalizeMeasure);
   const capacity = normalizeCapacity(input.capacity);
@@ -1628,9 +1632,9 @@ export function buildWeeklyCadenceReport(
 
   if (dataMode === "actual") {
     if (
-      generatedAt > observedNow ||
-      capturedAt > observedNow ||
-      week.end > new Date(observedNow).toISOString().slice(0, 10)
+      generatedAt > asOfTimestamp ||
+      capturedAt > asOfTimestamp ||
+      week.end > new Date(asOfTimestamp).toISOString().slice(0, 10)
     ) {
       throw new Error("actual cadence observations cannot be future-dated.");
     }
@@ -1697,6 +1701,7 @@ export function buildWeeklyCadenceReport(
     },
   };
   const audit: CadenceAuditRecord = {
+    asOf,
     inputDigest: digestCanonical(input),
     eventDigests: events.map(
       (event) => event.releaseEvent?.eventDigest ?? digestCanonical(event),

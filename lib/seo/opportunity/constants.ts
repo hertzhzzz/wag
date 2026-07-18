@@ -1,3 +1,4 @@
+export const OPPORTUNITY_AS_OF_BOUNDARY = "2026-07-18" as const;
 export const OPPORTUNITY_SCORING_VERSION = "seo-opportunity-score-v1" as const;
 export const OPPORTUNITY_QUEUE_SCHEMA_VERSION =
   "seo-opportunity-queue-v1" as const;

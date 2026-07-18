@@ -27,14 +27,16 @@ import {
   type MigrationLedgerReport,
   type MigrationSearchIntent,
 } from "../migrationLedger";
-import type {
-  ArticleMigrationPlan,
-  ClusterMigrationPreview,
-  MigrationArticleSnapshot,
-  MigrationPreviewDiagnostic,
-  MigrationPreviewGovernanceBinding,
-  MigrationPreviewScope,
-  PlannedGovernedFrontmatter,
+import {
+  MIGRATION_PREVIEW_CONTRACT_ID,
+  SEO_AS_OF_BOUNDARY,
+  type ArticleMigrationPlan,
+  type ClusterMigrationPreview,
+  type MigrationArticleSnapshot,
+  type MigrationPreviewDiagnostic,
+  type MigrationPreviewGovernanceBinding,
+  type MigrationPreviewScope,
+  type PlannedGovernedFrontmatter,
 } from "./clusterMigrationPreview";
 
 export const CHINA_SOURCING_OVERLAYS_MIGRATION_TICKET = "12" as const;
@@ -1084,10 +1086,15 @@ function validateGovernanceBinding(
 }
 
 const TICKET11_PREVIEW_KEYS = [
+  "contractId",
   "version",
+  "asOf",
+  "dataMode",
   "clusterId",
   "ticket",
   "ledgerDigest",
+  "previewReady",
+  "executionAuthorization",
   "executable",
   "diagnostics",
   "articlePlans",
@@ -1180,9 +1187,16 @@ function validateTicket11Preview(
   }
 
   if (
+    rawPreview.contractId !== MIGRATION_PREVIEW_CONTRACT_ID ||
     rawPreview.version !== 1 ||
+    rawPreview.asOf !== SEO_AS_OF_BOUNDARY ||
+    (rawPreview.dataMode !== "actual" &&
+      rawPreview.dataMode !== "synthetic_fixture") ||
     rawPreview.clusterId !== CHINA_SOURCING_OVERLAYS_CLUSTER_ID ||
-    rawPreview.ticket !== "11"
+    rawPreview.ticket !== "11" ||
+    typeof rawPreview.previewReady !== "boolean" ||
+    rawPreview.executionAuthorization !== "not-authorized" ||
+    rawPreview.executable !== false
   ) {
     addDiagnostic(diagnostics, {
       severity: "error",
@@ -1190,7 +1204,7 @@ function validateTicket11Preview(
       path: "ticket11Preview",
       route: null,
       message:
-        "Ticket 12 accepts only the version 1 China Sourcing preview produced by Ticket 11.",
+        "Ticket 12 accepts only the non-executable cluster-migration-preview.v2 China Sourcing artifact produced by Ticket 11 at the frozen SEO boundary.",
     });
   }
   if (rawPreview.ledgerDigest !== computedDigest) {
@@ -1340,6 +1354,17 @@ function validateTicket11Preview(
       message: "Ticket 11 mutation commands must be present as an array.",
     });
     return null;
+  }
+
+  if (rawPreview.mutationCommands.length > 0) {
+    addDiagnostic(diagnostics, {
+      severity: "error",
+      code: "ticket11-execution-authority-invalid",
+      path: "ticket11Preview.mutationCommands",
+      route: null,
+      message:
+        "Ticket 11 is a preview-only contract and must not expose mutation commands or execution authority.",
+    });
   }
 
   rawPreview.mutationCommands.forEach((command, index) => {

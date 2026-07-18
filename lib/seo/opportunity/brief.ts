@@ -1,5 +1,7 @@
 import { OPPORTUNITY_BRIEF_SCHEMA_VERSION } from "./constants";
 import { deepFreeze } from "./deterministic";
+import { parseRankedOpportunity, parseScoredOpportunity } from "./schema";
+import { rankOpportunityQueue } from "./queue";
 import type {
   OpportunityBriefInput,
   ProvisionalOpportunityBrief,
@@ -66,36 +68,54 @@ function missingRealInputs(scored: ScoredOpportunity): string[] {
 }
 
 export function buildProvisionalOpportunityBrief(
-  scored: ScoredOpportunity,
+  scored: unknown,
 ): ProvisionalOpportunityBrief {
+  const parsedScored =
+    typeof scored === "object" && scored !== null && "rank" in scored
+      ? parseRankedOpportunity(scored)
+      : parseScoredOpportunity(scored);
   return deepFreeze({
     schemaVersion: OPPORTUNITY_BRIEF_SCHEMA_VERSION,
     status:
-      scored.eligibilityStatus === "blocked" ? "blocked" : "needs-research",
+      parsedScored.eligibilityStatus === "blocked"
+        ? "blocked"
+        : "needs-research",
     provenance: "candidate-inputs-only",
-    opportunityId: scored.id,
-    taskType: scored.taskType,
-    cluster: scored.cluster,
-    intendedDestination: scored.intendedDestination,
-    reviewer: scored.reviewer,
+    opportunityId: parsedScored.id,
+    taskType: parsedScored.taskType,
+    cluster: parsedScored.cluster,
+    intendedDestination: parsedScored.intendedDestination,
+    reviewer: parsedScored.reviewer,
     reviewerRequirement: {
-      assignedReviewer: scored.reviewer,
+      assignedReviewer: parsedScored.reviewer,
       realHumanRequired: true,
       verified: false,
     },
-    asOfDate: scored.asOfDate,
-    scoringVersion: scored.scoringVersion,
-    freshnessPolicyVersion: scored.freshnessPolicyVersion,
-    finalScore: scored.finalScore,
-    eligibilityStatus: scored.eligibilityStatus,
-    blockers: [...scored.blockers],
-    researchReasons: [...scored.researchReasons],
-    missingRealInputs: missingRealInputs(scored),
-    inputs: cloneInputs(scored),
-    destructiveActionEvaluation: scored.destructiveActionEvaluation,
+    asOfDate: parsedScored.asOfDate,
+    scoringVersion: parsedScored.scoringVersion,
+    freshnessPolicyVersion: parsedScored.freshnessPolicyVersion,
+    finalScore: parsedScored.finalScore,
+    eligibilityStatus: parsedScored.eligibilityStatus,
+    blockers: [...parsedScored.blockers],
+    researchReasons: [...parsedScored.researchReasons],
+    missingRealInputs: missingRealInputs(parsedScored),
+    inputs: cloneInputs(parsedScored),
+    destructiveActionEvaluation: parsedScored.destructiveActionEvaluation,
     draftingAllowed: false,
     publishingAllowed: false,
     draft: null,
     publication: null,
   });
+}
+
+export function buildFirstOpportunityBrief(
+  input: unknown,
+): ProvisionalOpportunityBrief | null {
+  const queue = rankOpportunityQueue(input);
+  const selected = queue.items.find(
+    ({ id }) => id === queue.selectedOpportunityId,
+  );
+  return selected === undefined
+    ? null
+    : buildProvisionalOpportunityBrief(selected);
 }

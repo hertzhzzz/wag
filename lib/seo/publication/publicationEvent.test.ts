@@ -7,6 +7,22 @@ import {
   type HighIntentPublicationEventInput,
   type RefreshPublicationEventInput,
 } from "./index";
+import {
+  LIVE_VERIFICATION_CHECKS,
+  RELEASE_PREFLIGHT_CHECKS,
+  approveContentRelease,
+  approveProductionRelease,
+  createApprovalAttestation,
+  digestRollbackPlan,
+  prepareRelease,
+  recordDeployment,
+  recordLiveVerification,
+  type CurrentReleaseIdentity,
+  type LiveVerificationResults,
+  type ReleasePreflightResults,
+  type ReleaseWorkflow,
+  type Sha256Digest,
+} from "../release/releaseContract";
 
 const DIGEST_A =
   "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" as const;
@@ -18,6 +34,122 @@ const ACTUAL_DAY = "2026-07-18T10:00:00+09:30";
 
 function verifiedGate(reportDigest = DIGEST_B) {
   return { status: "verified" as const, reportDigest };
+}
+
+function releaseIdentity(workflow: ReleaseWorkflow): CurrentReleaseIdentity {
+  return {
+    releaseId: workflow.releaseId,
+    artifactDigest: workflow.artifactDigest,
+    reportDigest: workflow.reportDigest,
+    workflowInstanceId: workflow.workflowInstanceId,
+    preparedAt: workflow.preparedAt,
+    approvalNonce: workflow.approvalNonce,
+    rollbackPlanDigest: workflow.rollbackPlanDigest,
+  };
+}
+
+function actualReleaseBinding() {
+  const rollbackSubject = {
+    planId: "rollback.publication-01",
+    state: "ready" as const,
+    readiness: "ready" as const,
+    targetArtifactDigest: DIGEST_C as Sha256Digest,
+    targetDestination: "https://www.example.com/article/supplier-verification",
+    verificationRequired: true as const,
+  };
+  const prepared = prepareRelease({
+    releaseId: "release.publication-01",
+    artifactDigest: DIGEST_A,
+    workflowInstanceId: "workflow.publication-01",
+    preparedAt: "2026-07-18T03:00:00.000Z",
+    approvalNonce: "nonce.publication-01",
+    dataMode: "actual",
+    provenance: {
+      issuer: "trusted-release-control",
+      contractVersion: "release-provenance-v1",
+      source: "publication-contract-test",
+      recordedAt: "2026-07-18T03:00:00.000Z",
+    },
+    rollbackPlan: {
+      ...rollbackSubject,
+      planDigest: digestRollbackPlan(rollbackSubject),
+    },
+    review: {
+      affectedUrls: ["https://www.example.com/article/supplier-verification"],
+      contentChanges: ["Publish governed high-intent article"],
+      graphChanges: ["Preserve approved graph destinations"],
+      attributionChanges: ["No attribution change"],
+      risks: ["Search snippets may change"],
+      previewDestination: "https://preview.example.com/releases/publication-01",
+      preflightChecks: Object.fromEntries(
+        RELEASE_PREFLIGHT_CHECKS.map((check) => [
+          check,
+          { status: "passed", detail: `${check} passed` },
+        ]),
+      ) as ReleasePreflightResults,
+    },
+  });
+  const contentApprovedAt = "2026-07-18T04:00:00.000Z";
+  const contentActor = { id: "editor.alice", type: "human" as const };
+  const content = approveContentRelease(
+    prepared,
+    {
+      ...releaseIdentity(prepared),
+      kind: "content",
+      actor: contentActor,
+      approvedAt: contentApprovedAt,
+      attestation: createApprovalAttestation(
+        prepared,
+        "content",
+        contentActor,
+        contentApprovedAt,
+      ),
+    },
+    releaseIdentity(prepared),
+  );
+  const productionApprovedAt = "2026-07-18T05:00:00.000Z";
+  const productionActor = { id: "producer.bob", type: "human" as const };
+  const production = approveProductionRelease(
+    content,
+    {
+      ...releaseIdentity(content),
+      kind: "production",
+      actor: productionActor,
+      approvedAt: productionApprovedAt,
+      attestation: createApprovalAttestation(
+        content,
+        "production",
+        productionActor,
+        productionApprovedAt,
+      ),
+    },
+    releaseIdentity(content),
+  );
+  const deployed = recordDeployment(
+    production,
+    {
+      deploymentId: "deployment.publication-01",
+      destination: "https://www.example.com/article/supplier-verification",
+      deployedAt: "2026-07-18T06:00:00.000Z",
+    },
+    releaseIdentity(production),
+  );
+  const verifiedAt = "2026-07-18T06:10:00.000Z";
+  const live = recordLiveVerification(
+    deployed,
+    {
+      verifiedAt,
+      checks: Object.fromEntries(
+        LIVE_VERIFICATION_CHECKS.map((check) => [
+          check,
+          { status: "passed", detail: `${check} passed` },
+        ]),
+      ) as LiveVerificationResults,
+    },
+    releaseIdentity(deployed),
+  );
+
+  return { binding: bindTrustedReleaseWorkflow(live), verifiedAt };
 }
 
 function highIntentFixture(
@@ -207,11 +339,9 @@ describe("publication event contract", () => {
       } as never,
     });
 
-    const decision = evaluateHighIntentPublicationEvent(input);
-
-    expect(decision.state).toBe("blocked");
-    expect(decision.blockers).toContain("trusted_release_binding_required");
-    expect(decision.completed).toBe(false);
+    expect(() => evaluateHighIntentPublicationEvent(input)).toThrow(
+      /trusted release binding/i,
+    );
   });
 
   it("does not trust a copied publication brand from a fixture binding", () => {
@@ -229,12 +359,13 @@ describe("publication event contract", () => {
     };
 
     expect(isTrustedPublicationReleaseBinding(forged)).toBe(false);
-    const decision = evaluateHighIntentPublicationEvent({
-      ...fixture,
-      dataMode: "actual",
-      releaseBinding: forged as never,
-    });
-    expect(decision.blockers).toContain("trusted_release_binding_required");
+    expect(() =>
+      evaluateHighIntentPublicationEvent({
+        ...fixture,
+        dataMode: "actual",
+        releaseBinding: forged as never,
+      }),
+    ).toThrow(/trusted release binding/i);
   });
 
   it("keeps a synthetic high-intent fixture isolated from actual publication", () => {
@@ -246,6 +377,31 @@ describe("publication event contract", () => {
     expect(decision.report.sideEffects).toEqual([]);
     expect(decision.report.claims.indexed).toBe(false);
     expect(decision.report.claims.ranked).toBe(false);
+  });
+
+  it("requires an actual publication event to occur strictly after live verification", () => {
+    const { binding, verifiedAt } = actualReleaseBinding();
+    const input = highIntentFixture({
+      dataMode: "actual",
+      occurredAt: verifiedAt,
+      artifact: {
+        artifactDigest: binding.artifactDigest,
+        reportDigest: binding.reportDigest,
+      },
+      releaseIdentity: {
+        workflowInstanceId: binding.workflowInstanceId,
+        releaseId: binding.releaseId,
+        artifactDigest: binding.artifactDigest,
+        reportDigest: binding.reportDigest,
+        nonce: binding.nonce,
+      },
+      releaseBinding: binding,
+    });
+
+    const decision = evaluateHighIntentPublicationEvent(input);
+
+    expect(decision.state).toBe("blocked");
+    expect(decision.blockers).toContain("event_precedes_live_verification");
   });
 
   it("rejects recommendation as the selected opportunity", () => {

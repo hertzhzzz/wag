@@ -1,6 +1,6 @@
 # Ticket38 Request-Changes Hardening Addendum: Dual-Approval Release Gate
 
-**Status:** request-changes-addressed
+**Status:** contract-hardened; production command blocked by upstream trust-chain integration
 
 This addendum records the fail-closed changes applied to the Ticket38 release workflow after the dual-axis review. The module remains an in-process, observation-only contract and does not deploy, notify search providers, or call production APIs.
 
@@ -30,3 +30,9 @@ The current trust issuer is intentionally in-process and non-copyable for determ
 ## Verification scope
 
 Focused Jest hardening tests, scoped ESLint, Prettier, and isolated strict TypeScript checks cover the Ticket38 write set. No deployment, notification, commit, push, or external production API is executed.
+
+## 2026-07-18 integration review
+
+- The release workflow still rejects caller-shaped workflows/attestations, keeps actual, synthetic-fixture, and dry-run provenance separate, and requires two distinct human approvals before deployment plus live verification.
+- Ticket39/40 now reject caller-reported or copied release bindings at the parser boundary rather than type-laundering them into a trusted type.
+- The contract suite is green, but the production release command remains blocked: no trusted adapters for the required Ticket13/24/25/27B/30/36/37 chain are available in this ticket's permitted write set. This review therefore does not claim an executable production release.

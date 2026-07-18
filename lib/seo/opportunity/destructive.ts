@@ -1,6 +1,7 @@
 import {
   DESTRUCTIVE_ACTION_GATE_IDS,
   DESTRUCTIVE_ACTION_SCHEMA_VERSION,
+  OPPORTUNITY_AS_OF_BOUNDARY,
   OPPORTUNITY_FRESHNESS_POLICY_VERSION,
   OPPORTUNITY_SCORING_VERSION,
 } from "./constants";
@@ -119,6 +120,11 @@ export function evaluateDestructiveAction(
   }
   if (approval.reviewedAt !== null) {
     assertIsoDate(approval.reviewedAt);
+    if (approval.reviewedAt > OPPORTUNITY_AS_OF_BOUNDARY) {
+      throw new TypeError(
+        `Human approval reviewedAt ${approval.reviewedAt} is future evidence after ${OPPORTUNITY_AS_OF_BOUNDARY}.`,
+      );
+    }
     if (differenceInCalendarDays(approval.reviewedAt, asOfDate) < 0) {
       blockers.push("human-approval-date-after-as-of-date");
     }

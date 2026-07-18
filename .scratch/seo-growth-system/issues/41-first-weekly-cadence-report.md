@@ -4,7 +4,7 @@
 
 **Blocked by:** 37, 39, 40.
 
-**Status:** request-changes-addressed; first actual report awaits trusted Ticket39/40 release envelopes
+**Status:** contract-hardened; first actual report awaits trusted Ticket39/40 release envelopes
 
 - [x] The contract counts only `actual` publication events supplied through the opaque Ticket38 release-event adapter after dual approval, deployment, current live verification, and rollback checks.
 - [x] Synthetic-fixture and dry-run completions are reported separately and never contribute to the actual completed count or target.
@@ -31,3 +31,10 @@ No trustworthy Ticket39/40 production event envelopes were available in this wor
 - RFC3339 UTC `Z` validation rejects local timestamps and invalid calendar dates.
 - Unsafe event URLs containing credentials, query strings, or fragments are rejected.
 - Renderer and CLI hardening have dedicated regression tests.
+
+## 2026-07-18 integration review
+
+- Weekly report construction no longer reads `Date.now()`. It uses a deterministic `asOf` boundary, records it in audit evidence, and rejects an actual `asOf` after 2026-07-18.
+- All actual event observations remain bounded by that `asOf`; synthetic-fixture/dry-run completions remain separate and unavailable measures remain `null` rather than zero.
+- The renderer continues to describe search submission and indexation as independent observations and never infers indexing or ranking.
+- The first actual report remains blocked until Tickets39/40 provide trusted Ticket38 adapter envelopes backed by the unmet Ticket13/24/25/27B/30/36/37 chain. No actual completion is fabricated.

@@ -8,6 +8,85 @@ import {
 } from "../clusterSchema";
 import { isPublicEnglishCopy } from "./publicCopy";
 
+export const GUIDES_DISCOVERY_CONTRACT_ID = "guides-discovery.v2" as const;
+export const GUIDES_AS_OF_BOUNDARY = "2026-07-18" as const;
+export const guidesDataModeSchema = z.enum(["actual", "synthetic_fixture"]);
+export type GuidesDataMode = z.infer<typeof guidesDataModeSchema>;
+
+function hasSameOwnKeys(left: object, right: object): boolean {
+  const leftKeys = Reflect.ownKeys(left);
+  const rightKeys = new Set(Reflect.ownKeys(right));
+  return (
+    leftKeys.length === rightKeys.size &&
+    leftKeys.every((key) => rightKeys.has(key))
+  );
+}
+
+function isIntrinsicPrototype(
+  value: object,
+  canonical: object,
+  constructorName: "Array" | "Object",
+): boolean {
+  if (value === canonical) return true;
+  const descriptor = Object.getOwnPropertyDescriptor(value, "constructor");
+  return (
+    hasSameOwnKeys(value, canonical) &&
+    typeof descriptor?.value === "function" &&
+    descriptor.value.name === constructorName &&
+    Function.prototype.toString.call(descriptor.value).includes("[native code]")
+  );
+}
+
+function isStrictPlainDataGraph(value: unknown): boolean {
+  if (
+    value === null ||
+    typeof value === "string" ||
+    typeof value === "boolean" ||
+    (typeof value === "number" && Number.isFinite(value))
+  ) {
+    return true;
+  }
+  if (Array.isArray(value)) {
+    const prototype = Object.getPrototypeOf(value) as object | null;
+    if (
+      prototype === null ||
+      !isIntrinsicPrototype(prototype, Array.prototype, "Array")
+    ) {
+      return false;
+    }
+    const allowedKeys = new Set([
+      "length",
+      ...value.map((_, index) => String(index)),
+    ]);
+    if (
+      !Reflect.ownKeys(value).every(
+        (key) => typeof key === "string" && allowedKeys.has(key),
+      )
+    ) {
+      return false;
+    }
+    return value.every(isStrictPlainDataGraph);
+  }
+  if (typeof value !== "object") return false;
+  const prototype = Object.getPrototypeOf(value) as object | null;
+  if (
+    prototype === null ||
+    !isIntrinsicPrototype(prototype, Object.prototype, "Object")
+  ) {
+    return false;
+  }
+  return Reflect.ownKeys(value).every((key) => {
+    if (typeof key !== "string") return false;
+    const descriptor = Object.getOwnPropertyDescriptor(value, key);
+    return (
+      descriptor !== undefined &&
+      "value" in descriptor &&
+      descriptor.enumerable &&
+      isStrictPlainDataGraph(descriptor.value)
+    );
+  });
+}
+
 const machineReadableIdSchema = z
   .string()
   .trim()
@@ -149,9 +228,12 @@ function canonicalDefinitionFor(id: ClusterId) {
   );
 }
 
-export const guidesDiscoveryInputSchema = z
+const guidesDiscoveryInputBaseSchema = z
   .object({
+    contractId: z.literal(GUIDES_DISCOVERY_CONTRACT_ID),
     contractVersion: z.literal(1),
+    asOf: isoDateSchema,
+    dataMode: guidesDataModeSchema,
     clusterRegistry: z
       .object({
         version: z.number().int().positive(),
@@ -264,8 +346,79 @@ export const guidesDiscoveryInputSchema = z
       } else {
         seenRoutes.set(article.route, index);
       }
+
+      const slug = article.route.slice("/article/".length);
+      if (article.contentId !== `article.${slug}`) {
+        addIssue(
+          context,
+          ["articleIndex", "records", index, "contentId"],
+          "Article contentId must derive exactly from its canonical route slug.",
+        );
+      }
+      if (
+        article.updatedDate !== null &&
+        article.updatedDate < article.publishedDate
+      ) {
+        addIssue(
+          context,
+          ["articleIndex", "records", index, "updatedDate"],
+          "updatedDate must not precede publishedDate.",
+        );
+      }
+      if (article.governance.date < article.publishedDate) {
+        addIssue(
+          context,
+          ["articleIndex", "records", index, "governance", "date"],
+          "Governance evidence date must not precede publishedDate.",
+        );
+      }
+      if (input.dataMode === "actual") {
+        const actualDates: ReadonlyArray<
+          readonly [string, string | null, Array<string | number>]
+        > = [
+          [
+            "publishedDate",
+            article.publishedDate,
+            ["articleIndex", "records", index, "publishedDate"],
+          ],
+          [
+            "updatedDate",
+            article.updatedDate,
+            ["articleIndex", "records", index, "updatedDate"],
+          ],
+          [
+            "governance date",
+            article.governance.date,
+            ["articleIndex", "records", index, "governance", "date"],
+          ],
+        ];
+        actualDates.forEach(([label, date, path]) => {
+          if (date !== null && date > input.asOf) {
+            addIssue(
+              context,
+              path,
+              `Actual ${label} must be on or before asOf (${input.asOf}).`,
+            );
+          }
+        });
+      }
     });
+
+    if (input.dataMode === "actual" && input.asOf > GUIDES_AS_OF_BOUNDARY) {
+      addIssue(
+        context,
+        ["asOf"],
+        `Actual Guides discovery cannot use an asOf later than ${GUIDES_AS_OF_BOUNDARY}.`,
+      );
+    }
   });
+
+export const guidesDiscoveryInputSchema = z
+  .custom<unknown>(isStrictPlainDataGraph, {
+    message:
+      "Expected a strict plain-data graph without custom prototypes, accessors, symbols, or non-finite values.",
+  })
+  .pipe(guidesDiscoveryInputBaseSchema);
 
 export type GuidesDiscoveryInput = z.infer<typeof guidesDiscoveryInputSchema>;
 export type GuidesDiscoveryClusterRecord =

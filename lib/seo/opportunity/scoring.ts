@@ -1,5 +1,6 @@
 import { CANONICAL_CLUSTER_IDS, type ClusterId } from "../clusterSchema";
 import {
+  OPPORTUNITY_AS_OF_BOUNDARY,
   OPPORTUNITY_FACTORS,
   OPPORTUNITY_FRESHNESS_POLICY,
   OPPORTUNITY_FRESHNESS_POLICY_VERSION,
@@ -10,7 +11,7 @@ import {
   cloneDestructiveActionInput,
   evaluateDestructiveAction,
 } from "./destructive";
-import { freezeOpportunityCandidateInput } from "./schema";
+import { parseOpportunityCandidateInput } from "./schema";
 import {
   assertIsoDate,
   cloneRawValue,
@@ -142,6 +143,55 @@ function freshnessFor(
   };
 }
 
+function assertOpportunityDateBoundary(
+  candidate: OpportunityCandidateInput,
+  asOfDate: string,
+): void {
+  const factorValues = Object.values(candidate.factors);
+  const hasActualEvidence = factorValues.some(
+    ({ dataStatus }) =>
+      dataStatus === "observed" || dataStatus === "static-snapshot",
+  );
+  if (asOfDate > OPPORTUNITY_AS_OF_BOUNDARY) {
+    if (hasActualEvidence) {
+      throw new TypeError(
+        `Actual opportunity evidence cannot use future asOfDate ${asOfDate} after ${OPPORTUNITY_AS_OF_BOUNDARY}.`,
+      );
+    }
+    if (
+      !factorValues.some(({ dataStatus }) => dataStatus === "synthetic-fixture")
+    ) {
+      throw new TypeError(
+        `Future opportunity asOfDate ${asOfDate} requires an explicit synthetic-fixture marker.`,
+      );
+    }
+  }
+
+  for (const [factorId, factor] of Object.entries(candidate.factors)) {
+    if (
+      (factor.dataStatus === "observed" ||
+        factor.dataStatus === "static-snapshot") &&
+      factor.observedAt !== null &&
+      factor.observedAt > OPPORTUNITY_AS_OF_BOUNDARY
+    ) {
+      throw new TypeError(
+        `Actual factor ${factorId} observedAt ${factor.observedAt} is future evidence after ${OPPORTUNITY_AS_OF_BOUNDARY}.`,
+      );
+    }
+  }
+
+  const reviewedAt = candidate.destructiveAction?.humanApproval.reviewedAt;
+  if (
+    reviewedAt !== null &&
+    reviewedAt !== undefined &&
+    reviewedAt > OPPORTUNITY_AS_OF_BOUNDARY
+  ) {
+    throw new TypeError(
+      `Human approval reviewedAt ${reviewedAt} is future evidence after ${OPPORTUNITY_AS_OF_BOUNDARY}.`,
+    );
+  }
+}
+
 function scoreFactor(
   id: OpportunityFactorId,
   asOfDate: string,
@@ -240,11 +290,12 @@ function cloneBrief(
 }
 
 export function scoreOpportunity(
-  candidate: OpportunityCandidateInput,
+  candidate: unknown,
   asOfDate: string,
 ): ScoredOpportunity {
   assertIsoDate(asOfDate);
-  const candidateSnapshot = freezeOpportunityCandidateInput(candidate);
+  const candidateSnapshot = parseOpportunityCandidateInput(candidate);
+  assertOpportunityDateBoundary(candidateSnapshot, asOfDate);
   assertNonEmpty(candidateSnapshot.id, "Opportunity id");
   if (!OPPORTUNITY_TASK_TYPES.includes(candidateSnapshot.taskType)) {
     throw new TypeError(

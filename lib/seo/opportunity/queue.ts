@@ -8,10 +8,10 @@ import {
   compareUnicodeCodePoints,
   deepFreeze,
 } from "./deterministic";
+import { parseOpportunityQueueInput } from "./schema";
 import { scoreOpportunity } from "./scoring";
 import type {
   OpportunityEligibilityStatus,
-  OpportunityQueueInput,
   OpportunityQueueReport,
   RankedOpportunity,
   ScoredOpportunity,
@@ -27,17 +27,16 @@ function compareOpportunities(
   return compareUnicodeCodePoints(left.id, right.id);
 }
 
-export function rankOpportunityQueue(
-  input: OpportunityQueueInput,
-): OpportunityQueueReport {
-  assertIsoDate(input.asOfDate);
+export function rankOpportunityQueue(input: unknown): OpportunityQueueReport {
+  const parsedInput = parseOpportunityQueueInput(input);
+  assertIsoDate(parsedInput.asOfDate);
   const seenIds = new Set<string>();
-  const scored = input.candidates.map((candidate) => {
+  const scored = parsedInput.candidates.map((candidate) => {
     if (seenIds.has(candidate.id)) {
       throw new TypeError(`Duplicate opportunity id "${candidate.id}".`);
     }
     seenIds.add(candidate.id);
-    return scoreOpportunity(candidate, input.asOfDate);
+    return scoreOpportunity(candidate, parsedInput.asOfDate);
   });
   const sorted = [...scored].sort(compareOpportunities);
   const items: RankedOpportunity[] = sorted.map((item, index) => ({
@@ -58,7 +57,7 @@ export function rankOpportunityQueue(
 
   return deepFreeze({
     schemaVersion: OPPORTUNITY_QUEUE_SCHEMA_VERSION,
-    asOfDate: input.asOfDate,
+    asOfDate: parsedInput.asOfDate,
     scoringVersion: OPPORTUNITY_SCORING_VERSION,
     freshnessPolicyVersion: OPPORTUNITY_FRESHNESS_POLICY_VERSION,
     items,

@@ -59,12 +59,61 @@ function compareStrings(left: string, right: string): number {
   return 0;
 }
 
+function assertActualGovernanceDatesNotFuture(
+  interviewSession: InterviewSession,
+  contribution: ApprovedContribution,
+  asOfDate: string,
+): void {
+  if (
+    interviewSession.recordClass !== "actual" &&
+    contribution.recordClass !== "actual"
+  ) {
+    return;
+  }
+
+  const dates: ReadonlyArray<readonly [string, string | null]> = [
+    ["interview.occurredAt", interviewSession.occurredAt.slice(0, 10)],
+    ["interview.consent.capturedOn", interviewSession.consent.capturedOn],
+    ["interview.consent.expiresOn", interviewSession.consent.expiresOn],
+    ["interview.consent.revokedOn", interviewSession.consent.revokedOn],
+    [
+      "interview.privacyClassification.classifiedOn",
+      interviewSession.privacyClassification.classifiedOn,
+    ],
+    ["contribution.permission.grantedOn", contribution.permission.grantedOn],
+    ["contribution.permission.expiresOn", contribution.permission.expiresOn],
+    ["contribution.permission.revokedOn", contribution.permission.revokedOn],
+    ["contribution.reviewDueDate", contribution.reviewDueDate],
+    [
+      "contribution.reviews.factual.reviewedOn",
+      contribution.reviews.factual.reviewedOn,
+    ],
+    [
+      "contribution.reviews.disclosure.reviewedOn",
+      contribution.reviews.disclosure.reviewedOn,
+    ],
+    ["contribution.revocation.revokedOn", contribution.revocation.revokedOn],
+  ];
+
+  const future = dates.find(([, date]) => date !== null && date > asOfDate);
+  if (future !== undefined) {
+    throw new TypeError(
+      `Actual governance date ${future[0]}=${future[1]} is after explicit asOfDate=${asOfDate}; synthetic fixtures may use future dates.`,
+    );
+  }
+}
+
 export function evaluatePublicEligibility(
   input: PublicEligibilityInput,
 ): PublicEligibilityDecision {
   const asOfDate = calendarDateSchema.parse(input.asOfDate);
   const interviewSession = interviewSessionSchema.parse(input.interviewSession);
   const contribution = approvedContributionSchema.parse(input.contribution);
+  assertActualGovernanceDatesNotFuture(
+    interviewSession,
+    contribution,
+    asOfDate,
+  );
   const reasons = new Set<PublicEligibilityReasonCode>();
 
   if (

@@ -1,8 +1,14 @@
 import {
+  OPPORTUNITY_AS_OF_BOUNDARY,
   OPPORTUNITY_FACTORS,
   OPPORTUNITY_FRESHNESS_POLICY,
   OPPORTUNITY_SCORING_VERSION,
   OPPORTUNITY_TASK_TYPES,
+  opportunityCandidateInputSchema,
+  opportunityQueueInputSchema,
+  opportunityQueueReportSchema,
+  provisionalOpportunityBriefSchema,
+  buildFirstOpportunityBrief,
   buildProvisionalOpportunityBrief,
   evaluateDestructiveAction,
   rankOpportunityQueue,
@@ -11,6 +17,264 @@ import {
 import { buildSyntheticCandidate } from "./fixtures";
 
 describe("Ticket 28 opportunity scoring contract", () => {
+  it("rejects malformed candidate and queue graphs at the strict runtime boundary", () => {
+    const candidate = buildSyntheticCandidate();
+    expect(opportunityCandidateInputSchema.safeParse(candidate).success).toBe(
+      true,
+    );
+    expect(
+      opportunityCandidateInputSchema.safeParse({ ...candidate, extra: true })
+        .success,
+    ).toBe(false);
+    const missing = { ...candidate } as Record<string, unknown>;
+    delete missing.brief;
+    expect(opportunityCandidateInputSchema.safeParse(missing).success).toBe(
+      false,
+    );
+    expect(
+      opportunityCandidateInputSchema.safeParse({ ...candidate, factors: null })
+        .success,
+    ).toBe(false);
+    const customPrototype = Object.assign(
+      Object.create({ copied: true }) as Record<string, unknown>,
+      candidate,
+    );
+    expect(
+      opportunityCandidateInputSchema.safeParse(customPrototype).success,
+    ).toBe(false);
+    const getterCandidate = { ...candidate } as Record<string, unknown>;
+    Object.defineProperty(getterCandidate, "id", {
+      enumerable: true,
+      configurable: true,
+      get: () => candidate.id,
+    });
+    expect(
+      opportunityCandidateInputSchema.safeParse(getterCandidate).success,
+    ).toBe(false);
+
+    const queueInput = {
+      asOfDate: "2026-07-18",
+      candidates: [candidate],
+    };
+    expect(opportunityQueueInputSchema.safeParse(queueInput).success).toBe(
+      true,
+    );
+    expect(
+      opportunityQueueInputSchema.safeParse({ ...queueInput, extra: true })
+        .success,
+    ).toBe(false);
+    const queue = rankOpportunityQueue(queueInput);
+    expect(opportunityQueueReportSchema.safeParse(queue).success).toBe(true);
+    expect(
+      opportunityQueueReportSchema.safeParse({
+        ...queue,
+        scoringVersion: "self-reported-version-drift",
+      }).success,
+    ).toBe(false);
+    expect(
+      opportunityQueueReportSchema.safeParse({
+        ...queue,
+        items: [
+          {
+            ...queue.items[0],
+            finalScore: queue.items[0].finalScore + 1,
+          },
+        ],
+      }).success,
+    ).toBe(false);
+    expect(
+      opportunityQueueReportSchema.safeParse({
+        ...queue,
+        items: [
+          {
+            ...queue.items[0],
+            intendedDestination: "https://example.com/copied-route",
+          },
+        ],
+      }).success,
+    ).toBe(false);
+    expect(
+      opportunityQueueReportSchema.safeParse({
+        ...queue,
+        items: [{ ...queue.items[0], asOfDate: "2026-07-17" }],
+      }).success,
+    ).toBe(false);
+    const queueWithPrototype = Object.assign(
+      Object.create({ copied: true }) as Record<string, unknown>,
+      queue,
+    );
+    expect(
+      opportunityQueueReportSchema.safeParse(queueWithPrototype).success,
+    ).toBe(false);
+
+    const brief = buildFirstOpportunityBrief(queueInput);
+    expect(brief).not.toBeNull();
+    expect(provisionalOpportunityBriefSchema.safeParse(brief).success).toBe(
+      true,
+    );
+    expect(
+      provisionalOpportunityBriefSchema.safeParse({
+        ...brief,
+        extra: true,
+      }).success,
+    ).toBe(false);
+  });
+
+  it("rejects future actual observations but permits an explicit synthetic future snapshot", () => {
+    expect(OPPORTUNITY_AS_OF_BOUNDARY).toBe("2026-07-18");
+    const base = buildSyntheticCandidate();
+    const futureActual = buildSyntheticCandidate({
+      factors: {
+        ...base.factors,
+        "gsc-performance": {
+          ...base.factors["gsc-performance"],
+          dataStatus: "observed",
+          sourceRef: "gsc://actual/2026-07-19",
+          observedAt: "2026-07-19",
+        },
+      },
+    });
+    expect(() => scoreOpportunity(futureActual, "2026-07-18")).toThrow(
+      /future|after as-of/i,
+    );
+    expect(() => scoreOpportunity(base, "2026-07-19")).not.toThrow();
+
+    const noSyntheticMarker = buildSyntheticCandidate({
+      factors: Object.fromEntries(
+        OPPORTUNITY_FACTORS.map(({ id }) => [
+          id,
+          {
+            raw: null,
+            normalized: null,
+            sourceRef: null,
+            observedAt: null,
+            dataStatus: "missing",
+            confidence: 0,
+            missingReason: "governed-input-not-provided",
+          },
+        ]),
+      ) as ReturnType<typeof buildSyntheticCandidate>["factors"],
+    });
+    expect(() => scoreOpportunity(noSyntheticMarker, "2026-07-19")).toThrow(
+      /explicit synthetic-fixture/i,
+    );
+  });
+
+  it("supports every governed task type and turns the first ranked item into a non-executable brief", () => {
+    const candidates = OPPORTUNITY_TASK_TYPES.map((taskType, index) =>
+      buildSyntheticCandidate({
+        id: `opportunity-task-${index}`,
+        taskType,
+        destructiveAction:
+          taskType === "merge"
+            ? {
+                action: "merge",
+                lowTrafficOnly: false,
+                gates: {
+                  "human-approval": {
+                    status: "pending",
+                    reason: "human approval is not present",
+                    sourceRef: null,
+                  },
+                  "successor-decision": {
+                    status: "pending",
+                    reason: "successor decision is not present",
+                    sourceRef: null,
+                  },
+                  "gone-decision": {
+                    status: "pending",
+                    reason: "gone decision is not present",
+                    sourceRef: null,
+                  },
+                  "backlink-review": {
+                    status: "pending",
+                    reason: "backlink review is not present",
+                    sourceRef: null,
+                  },
+                  "evidence-review": {
+                    status: "pending",
+                    reason: "evidence review is not present",
+                    sourceRef: null,
+                  },
+                  "orphan-review": {
+                    status: "pending",
+                    reason: "orphan review is not present",
+                    sourceRef: null,
+                  },
+                  "redirect-chain-review": {
+                    status: "pending",
+                    reason: "redirect chain review is not present",
+                    sourceRef: null,
+                  },
+                  "rollback-plan": {
+                    status: "pending",
+                    reason: "rollback plan is not present",
+                    sourceRef: null,
+                  },
+                },
+                humanApproval: {
+                  actorType: null,
+                  reviewer: null,
+                  reviewedAt: null,
+                },
+              }
+            : null,
+      }),
+    );
+    const queue = rankOpportunityQueue({
+      asOfDate: "2026-07-18",
+      candidates,
+    });
+    expect(queue.items.map(({ taskType }) => taskType)).toEqual(
+      expect.arrayContaining([...OPPORTUNITY_TASK_TYPES]),
+    );
+    expect(queue.items[0]).toEqual(
+      expect.objectContaining({
+        reviewer: expect.any(String),
+        intendedDestination: "/article/verify-chinese-supplier",
+        cluster: "supplier-verification",
+        gates: expect.objectContaining({
+          "service-relevance": expect.objectContaining({ status: "pass" }),
+          "evidence-readiness": expect.objectContaining({ status: "pass" }),
+          "cannibalisation-reviewed": expect.objectContaining({
+            status: "pass",
+          }),
+        }),
+      }),
+    );
+    const brief = buildFirstOpportunityBrief({
+      asOfDate: "2026-07-18",
+      candidates,
+    });
+    expect(brief).not.toBeNull();
+    expect(provisionalOpportunityBriefSchema.safeParse(brief).success).toBe(
+      true,
+    );
+    expect(brief).toEqual(
+      expect.objectContaining({
+        intendedDestination: "/article/verify-chinese-supplier",
+        cluster: "supplier-verification",
+        reviewerRequirement: expect.objectContaining({
+          assignedReviewer: expect.any(String),
+          realHumanRequired: true,
+          verified: false,
+        }),
+        inputs: expect.objectContaining({
+          targetIntent: expect.any(String),
+          readerOutcome: expect.any(String),
+          evidenceNeeds: expect.any(Array),
+          graphChanges: expect.any(Array),
+          conversionPath: expect.any(String),
+          successMeasures: expect.any(Array),
+        }),
+        draftingAllowed: false,
+        publishingAllowed: false,
+        draft: null,
+        publication: null,
+      }),
+    );
+  });
+
   it("publishes the six fixed factors with a 100-point total", () => {
     expect(OPPORTUNITY_SCORING_VERSION).toBe("seo-opportunity-score-v1");
     expect(OPPORTUNITY_FACTORS).toEqual([
@@ -287,6 +551,85 @@ describe("Ticket 28 opportunity scoring contract", () => {
     expect(Object.isFrozen(queue.items)).toBe(true);
   });
 
+  it("makes score and ordering changes traceable to the changed raw input", () => {
+    const base = buildSyntheticCandidate();
+    const stable = buildSyntheticCandidate({ id: "opportunity-stable" });
+    const lowerServiceRelevance = buildSyntheticCandidate({
+      id: "opportunity-changing",
+      factors: {
+        ...base.factors,
+        "service-lead-relevance": {
+          ...base.factors["service-lead-relevance"],
+          raw: "Moderate fit with an active commercial service",
+          normalized: 70,
+          sourceRef: "fixture://opportunity/ranking/service-moderate",
+        },
+      },
+    });
+    const higherServiceRelevance = buildSyntheticCandidate({
+      id: "opportunity-changing",
+      factors: {
+        ...base.factors,
+        "service-lead-relevance": {
+          ...base.factors["service-lead-relevance"],
+          raw: "Direct fit with an active commercial service",
+          normalized: 100,
+          sourceRef: "fixture://opportunity/ranking/service-direct",
+        },
+      },
+    });
+
+    const before = rankOpportunityQueue({
+      asOfDate: "2026-07-18",
+      candidates: [stable, lowerServiceRelevance],
+    });
+    const after = rankOpportunityQueue({
+      asOfDate: "2026-07-18",
+      candidates: [stable, higherServiceRelevance],
+    });
+    const beforeChanged = before.items.find(
+      ({ id }) => id === "opportunity-changing",
+    );
+    const afterChanged = after.items.find(
+      ({ id }) => id === "opportunity-changing",
+    );
+
+    expect(before.items.map(({ id }) => id)).toEqual([
+      "opportunity-stable",
+      "opportunity-changing",
+    ]);
+    expect(after.items.map(({ id }) => id)).toEqual([
+      "opportunity-changing",
+      "opportunity-stable",
+    ]);
+    expect(beforeChanged).toEqual(
+      expect.objectContaining({ finalScore: 77, rank: 2 }),
+    );
+    expect(afterChanged).toEqual(
+      expect.objectContaining({ finalScore: 86, rank: 1 }),
+    );
+    expect(
+      beforeChanged?.factors.find(({ id }) => id === "service-lead-relevance"),
+    ).toEqual(
+      expect.objectContaining({
+        raw: "Moderate fit with an active commercial service",
+        normalized: 70,
+        contribution: 21,
+        sourceRef: "fixture://opportunity/ranking/service-moderate",
+      }),
+    );
+    expect(
+      afterChanged?.factors.find(({ id }) => id === "service-lead-relevance"),
+    ).toEqual(
+      expect.objectContaining({
+        raw: "Direct fit with an active commercial service",
+        normalized: 100,
+        contribution: 30,
+        sourceRef: "fixture://opportunity/ranking/service-direct",
+      }),
+    );
+  });
+
   it("supports the five non-retire queue task types", () => {
     expect(OPPORTUNITY_TASK_TYPES).toEqual([
       "refresh",
@@ -420,6 +763,39 @@ describe("Ticket 28 opportunity scoring contract", () => {
     expect(scored.finalScore).toBe(83);
     expect(scored.eligibilityStatus).toBe("blocked");
     expect(scored.blockers).toContain("destructive-action-plan-required");
+  });
+
+  it("rejects destructive approval evidence after the shared actual-date boundary", () => {
+    const passGate = (id: string) => ({
+      status: "pass" as const,
+      reason: `${id} reviewed by a human operator`,
+      sourceRef: `review://destructive/${id}`,
+    });
+
+    expect(() =>
+      evaluateDestructiveAction(
+        {
+          action: "merge",
+          lowTrafficOnly: false,
+          gates: {
+            "human-approval": passGate("human-approval"),
+            "successor-decision": passGate("successor-decision"),
+            "gone-decision": passGate("gone-decision"),
+            "backlink-review": passGate("backlink-review"),
+            "evidence-review": passGate("evidence-review"),
+            "orphan-review": passGate("orphan-review"),
+            "redirect-chain-review": passGate("redirect-chain-review"),
+            "rollback-plan": passGate("rollback-plan"),
+          },
+          humanApproval: {
+            actorType: "human",
+            reviewer: "human-reviewer-01",
+            reviewedAt: "2026-07-19",
+          },
+        },
+        "2026-07-19",
+      ),
+    ).toThrow(/future evidence.*2026-07-18/i);
   });
 
   it("recognises human-approved destructive evidence but never authorises automation", () => {

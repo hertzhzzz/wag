@@ -1099,6 +1099,27 @@ publishingPaths:
       state: not-applicable
       mechanism: none
       evidence: No production publication capability is present for this path.
+  - id: seo-release-governance-contracts
+    kind: tracking
+    source: lib/seo/release/** and release event adapters
+    classification: manual
+    observedState: enabled
+    productionTarget: none
+    approvalEnforcement: not-applicable
+    initiatesPublication: false
+    canPublishProduction: false
+    hardBlocker: These deterministic contracts and adapters validate release evidence but expose no filesystem, network, deployment, or publication side effect.
+    evidenceFiles:
+      - lib/seo/cadence/releaseEventAdapter.test.ts
+      - lib/seo/cadence/releaseEventAdapter.ts
+      - lib/seo/publication/releaseBinding.ts
+      - lib/seo/release/releaseContract.hardening.test.ts
+      - lib/seo/release/releaseContract.test.ts
+      - lib/seo/release/releaseContract.ts
+    technicalControl:
+      state: not-applicable
+      mechanism: none
+      evidence: No production publication capability is present for this path.
   - id: blog-generator-save
     kind: generation
     source: scripts/blog_generator.py::BlogGenerator.save_blog

@@ -221,6 +221,48 @@ const interviewQuestionSchema = z
   })
   .strict();
 
+const buyerQuestionSchema = z
+  .object({
+    id: z
+      .string()
+      .regex(
+        /^buyer-question\.[a-z0-9]+(?:-[a-z0-9]+)*$/,
+        "must be a stable buyer-question.<kebab-case> identifier",
+      ),
+    question: exactNonEmptyStringSchema,
+    buyerNeed: exactNonEmptyStringSchema,
+    privacyCategories: privacyCategoriesSchema,
+  })
+  .strict();
+
+const safeExampleSchema = z
+  .object({
+    id: z
+      .string()
+      .regex(
+        /^example\.[a-z0-9]+(?:-[a-z0-9]+)*$/,
+        "must be a stable example.<kebab-case> identifier",
+      ),
+    summary: exactNonEmptyStringSchema,
+    permittedClaimBoundary: exactNonEmptyStringSchema,
+    privacyCategories: privacyCategoriesSchema,
+  })
+  .strict();
+
+const externalSupportClaimSchema = z
+  .object({
+    id: z
+      .string()
+      .regex(
+        /^support\.[a-z0-9]+(?:-[a-z0-9]+)*$/,
+        "must be a stable support.<kebab-case> identifier",
+      ),
+    claim: exactNonEmptyStringSchema,
+    requiredEvidenceType: exactNonEmptyStringSchema,
+    reason: exactNonEmptyStringSchema,
+  })
+  .strict();
+
 const privacyClassificationSchema = z
   .object({
     level: z.enum(["internal", "restricted"] as const),
@@ -251,6 +293,12 @@ const rawInterviewSessionSchema = z
     interviewer: interviewerSchema,
     consent: consentSchema,
     questions: z.array(interviewQuestionSchema).min(1),
+    buyerQuestions: z.array(buyerQuestionSchema).min(1),
+    practicalBoundaries: canonicalStringSetSchema.pipe(
+      z.array(z.string()).min(1),
+    ),
+    safeExamples: z.array(safeExampleSchema).min(1),
+    externalSupportClaims: z.array(externalSupportClaimSchema).min(1),
     rawNoteRef: rawNoteRefSchema,
     privacyClassification: privacyClassificationSchema,
     redactionLog: z.array(redactionLogEntrySchema),
@@ -295,6 +343,22 @@ export const interviewSessionSchema = rawInterviewSessionSchema.transform(
           ...question,
           privacyCategories: [...question.privacyCategories],
         })),
+      buyerQuestions: [...session.buyerQuestions]
+        .sort((left, right) => compareStrings(left.id, right.id))
+        .map((question) => ({
+          ...question,
+          privacyCategories: [...question.privacyCategories],
+        })),
+      practicalBoundaries: [...session.practicalBoundaries],
+      safeExamples: [...session.safeExamples]
+        .sort((left, right) => compareStrings(left.id, right.id))
+        .map((example) => ({
+          ...example,
+          privacyCategories: [...example.privacyCategories],
+        })),
+      externalSupportClaims: [...session.externalSupportClaims]
+        .sort((left, right) => compareStrings(left.id, right.id))
+        .map((claim) => ({ ...claim })),
       privacyClassification: {
         ...session.privacyClassification,
         categories: [...session.privacyClassification.categories],
@@ -496,6 +560,7 @@ const rawApprovedContributionSchema = z
     contributionId: contributionIdSchema,
     interviewSessionRef: sessionIdSchema,
     boundedClaim: exactNonEmptyStringSchema,
+    permittedClaimBoundary: exactNonEmptyStringSchema,
     claimKind: z.enum(EXPERTISE_CLAIM_KINDS),
     permission: contributionPermissionSchema,
     privacyClassification: contributionPrivacySchema,

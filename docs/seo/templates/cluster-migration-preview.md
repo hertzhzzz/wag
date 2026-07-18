@@ -1,6 +1,6 @@
 # Governed Cluster Migration Preview
 
-This template describes the preflight contract for Tickets 07–11. It is not a migration artifact and must not be treated as evidence of approval.
+This template describes the preflight contract for Tickets 07–12. It is not a migration artifact and must not be treated as evidence of approval.
 
 ## Scope
 
@@ -27,6 +27,21 @@ This template describes the preflight contract for Tickets 07–11. It is not a 
 11. The scope names one cluster and one bundle, declares a known non-null count, and does not exceed its maximum; unrelated or oversized scopes require a split.
 
 If any error diagnostic exists, `executable=false` and `mutationCommands` is an empty array. The current production ledger is approval-required and unlocked, so its preview remains blocked and cannot authorize production migration.
+
+## Ticket 12 China Sourcing overlays
+
+Ticket 12 is a separate, read-only preflight layered on the governed Ticket 11 China Sourcing preview. It applies these additional rules:
+
+- Overlay identities come only from the canonical registry, the current migration ledger, and the exact Ticket 11 article plans. Routes, content IDs, classifications, and specialist relationships are never guessed.
+- The Ticket 11 China Sourcing member set is split without overlap: `category-sourcing` members are industry overlays and the remaining members are supporting overlays. The editorial pillar itself is not an overlay.
+- Every overlay inherits the exact China Sourcing commercial root and editorial pillar. Its existing route and canonical route must remain identical.
+- A specialist-cluster link may be derived only from an entry's governed required links or a recorded cross-cluster cannibalisation review. A review-derived route that is not bound in the entry remains a blocking diagnostic rather than an authorised change.
+- Evidence readiness, intent, funnel stage, target market, primary membership, and non-cannibalisation review state must remain exact and reviewable. Draft, gaps-visible, null, duplicate, ambiguous, or destructive inputs fail closed.
+- The ledger report, Ticket 11 preview, release artifact, and rollback artifact must bind the same computed ledger digest. Release ownership, rollback ownership, triggers, and ordered recovery steps must exactly retain the Ticket 11 binding.
+- If the ledger has no industry overlay entries, the result is `planned` with an explicit diagnostic and an empty command list. No content is fabricated.
+- `actual` and `fixture` modes are validation-only. Ticket 12 permanently returns `executable=false` and `mutationCommands=[]`, including for fully approved synthetic fixtures.
+
+The current production ledger is approval-required and `locked=false`. Its missing or unbound specialist-link decisions also remain visible, so Ticket 12 is blocked pending human ledger approval and evidence/release review.
 
 ## Consumer contract for Ticket 13
 

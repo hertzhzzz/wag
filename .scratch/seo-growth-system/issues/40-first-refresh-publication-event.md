@@ -4,7 +4,7 @@
 
 **Blocked by:** 28, 29, 38.
 
-**Status:** contract-layer-implemented-real-event-blocked
+**Status:** contract-hardened-real-event-blocked
 
 ## Contract-layer implementation
 
@@ -29,3 +29,9 @@ The pure, fail-closed contract for `first_refresh_publication` is implemented in
 - [ ] The event report records failures, corrections, timings, and lessons without claiming indexing or ranking outcomes prematurely.
 
 No real event is claimed complete by this ticket implementation.
+
+## 2026-07-18 integration review
+
+- The shared publication parser now rejects untrusted caller-shaped and copied Ticket38 bindings before refresh evaluation.
+- Actual publication chronology uses the same strict boundary as Ticket39: the event must occur after, not at, trusted live verification.
+- A real refresh remains blocked by governed selection/evidence, approved URL disposition when applicable, the upstream Ticket13/24/25/27B/30/36/37 trust chain, two human approvals, deployment, and independent live verification. No production refresh, indexing, or ranking result is claimed.

@@ -35,6 +35,21 @@ const SYNTHETIC_REVIEWER = "synthetic-ticket-09-11-reviewer";
 const SYNTHETIC_REVIEW_DATE = "2026-07-17";
 const SYNTHETIC_REVIEW_DUE_DATE = "2026-07-18";
 
+const SYNTHETIC_PREVIEW_CONTEXT = {
+  asOf: "2026-07-18",
+  dataMode: "synthetic_fixture",
+} as const;
+
+function buildTestPreview(input: Record<string, unknown>) {
+  return buildClusterMigrationPreview({
+    contractId: "cluster-migration-preview.v2",
+    ...SYNTHETIC_PREVIEW_CONTEXT,
+    scope: undefined,
+    governanceBinding: undefined,
+    ...input,
+  });
+}
+
 function mutableLedger(
   ledger: MigrationLedger = articleMigrationLedger,
 ): DeepMutable<MigrationLedger> {
@@ -216,7 +231,7 @@ describe("remaining governed cluster migration contracts", () => {
   it.each(REMAINING_CLUSTER_IDS)(
     "%s remains blocked by the current production ledger and emits no commands",
     (clusterId) => {
-      const preview = buildClusterMigrationPreview({
+      const preview = buildTestPreview({
         ledger: articleMigrationLedger,
         ledgerReport: currentPendingReport(),
         clusterId,
@@ -244,7 +259,7 @@ describe("remaining governed cluster migration contracts", () => {
     (clusterId, expectedCount, ticket) => {
       const approved = approveSyntheticLedger();
       const digest = computeMigrationLedgerDigest(approved.ledger);
-      const preview = buildClusterMigrationPreview({
+      const preview = buildTestPreview({
         ledger: approved.ledger,
         ledgerReport: approved.report,
         clusterId,
@@ -269,14 +284,15 @@ describe("remaining governed cluster migration contracts", () => {
         preview.diagnostics
           .filter(({ severity }) => severity === "error")
           .map(({ code }) => code),
-      ).toEqual(["fixture-execution-forbidden"]);
+      ).toEqual([]);
+      expect(issueCodes(preview)).toContain("fixture-execution-forbidden");
     },
   );
 
   it("keeps the planned-new Quality Inspection exception fail-closed until Ticket 09 represents a create action", () => {
     const approved = approveSyntheticLedger();
     const digest = computeMigrationLedgerDigest(approved.ledger);
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "quality-inspection",
@@ -294,7 +310,7 @@ describe("remaining governed cluster migration contracts", () => {
     const digest = computeMigrationLedgerDigest(approved.ledger);
     const articles = snapshotsFor(approved.ledger, "factory-visits");
 
-    const unrelated = buildClusterMigrationPreview({
+    const unrelated = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "factory-visits",
@@ -308,7 +324,7 @@ describe("remaining governed cluster migration contracts", () => {
     expect(unrelated.mutationCommands).toEqual([]);
     expect(issueCodes(unrelated)).toContain("scope-split-required");
 
-    const oversized = buildClusterMigrationPreview({
+    const oversized = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "factory-visits",
@@ -320,7 +336,7 @@ describe("remaining governed cluster migration contracts", () => {
     expect(oversized.mutationCommands).toEqual([]);
     expect(issueCodes(oversized)).toContain("scope-split-required");
 
-    const unknown = buildClusterMigrationPreview({
+    const unknown = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "factory-visits",
@@ -377,7 +393,7 @@ describe("remaining governed cluster migration contracts", () => {
       articles[0] = { ...snapshot, canonicalRoute: `${snapshot.route}-drift` };
     }
 
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: frozenLedger,
       ledgerReport: report,
       clusterId: "factory-visits",
@@ -387,13 +403,20 @@ describe("remaining governed cluster migration contracts", () => {
 
     expect(preview.executable).toBe(false);
     expect(preview.mutationCommands).toEqual([]);
-    expect(issueCodes(preview)).toContain(tamper);
+    const schemaRejectedTamper = [
+      "article-identity-mismatch",
+      "canonical-route-drift",
+      "cross-cluster-primary-assignment",
+    ].includes(tamper);
+    expect(issueCodes(preview)).toContain(
+      schemaRejectedTamper ? "input-schema-invalid" : tamper,
+    );
   });
 
   it("rejects fixture bindings that claim public or executable release state", () => {
     const approved = approveSyntheticLedger();
     const digest = computeMigrationLedgerDigest(approved.ledger);
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "factory-visits",
@@ -420,14 +443,14 @@ describe("remaining governed cluster migration contracts", () => {
     const digest = computeMigrationLedgerDigest(approved.ledger);
     const articles = snapshotsFor(approved.ledger, "china-sourcing");
     const before = JSON.stringify({ ledger: approved.ledger, articles });
-    const forward = buildClusterMigrationPreview({
+    const forward = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "china-sourcing",
       articles,
       governanceBinding: fixtureBinding(digest),
     });
-    const reversed = buildClusterMigrationPreview({
+    const reversed = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: {
         ...approved.report,
@@ -452,7 +475,7 @@ describe("remaining governed cluster migration contracts", () => {
     "%s requires an explicit production release and rollback binding",
     (clusterId) => {
       const approved = approveSyntheticLedger();
-      const preview = buildClusterMigrationPreview({
+      const preview = buildTestPreview({
         ledger: approved.ledger,
         ledgerReport: approved.report,
         clusterId,
@@ -485,7 +508,7 @@ describe("remaining governed cluster migration contracts", () => {
       },
     };
 
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "factory-visits",
@@ -512,7 +535,7 @@ describe("remaining governed cluster migration contracts", () => {
       },
     };
 
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "factory-visits",
@@ -526,17 +549,12 @@ describe("remaining governed cluster migration contracts", () => {
 
     expect(preview.executable).toBe(false);
     expect(preview.mutationCommands).toEqual([]);
-    expect(issueCodes(preview)).toEqual(
-      expect.arrayContaining([
-        "article-review-contract-invalid",
-        "rollback-binding-invalid",
-      ]),
-    );
+    expect(issueCodes(preview)).toEqual(["input-schema-invalid"]);
   });
 
-  it("keeps invalid runtime cluster ids fail-closed without treating a canonical cluster as unsupported", () => {
+  it("rejects invalid runtime cluster ids at the strict input boundary", () => {
     const approved = approveSyntheticLedger();
-    const preview = buildClusterMigrationPreview({
+    const preview = buildTestPreview({
       ledger: approved.ledger,
       ledgerReport: approved.report,
       clusterId: "not-a-cluster" as ClusterId,
@@ -545,6 +563,6 @@ describe("remaining governed cluster migration contracts", () => {
 
     expect(preview.executable).toBe(false);
     expect(preview.mutationCommands).toEqual([]);
-    expect(issueCodes(preview)).toContain("unsupported-migration-cluster");
+    expect(issueCodes(preview)).toEqual(["input-schema-invalid"]);
   });
 });

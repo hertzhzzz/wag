@@ -73,7 +73,10 @@ function makePillarArticle(
 
 export function createSyntheticNonPublicGuidesInput(): Record<string, unknown> {
   return {
+    contractId: "guides-discovery.v2",
     contractVersion: 1,
+    asOf: "2026-07-18",
+    dataMode: "synthetic_fixture",
     clusterRegistry: {
       version: 1,
       records: PILLARS.map((pillar) => ({

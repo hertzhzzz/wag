@@ -42,3 +42,14 @@ export {
 } from "./fixtures";
 
 export { hasUnsafePublicText } from "./safety";
+
+export {
+  EXPERTISE_BRIEF_EVIDENCE_REASON_CODES,
+  buildTicket28BriefLink,
+  evaluateExpertiseBriefEvidence,
+  ticket28BriefLinkSchema,
+  type ExpertiseBriefEvidenceDecision,
+  type ExpertiseBriefEvidenceInput,
+  type ExpertiseBriefEvidenceReasonCode,
+  type Ticket28BriefLink,
+} from "./briefLinkage";

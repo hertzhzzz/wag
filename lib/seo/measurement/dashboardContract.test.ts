@@ -6,6 +6,7 @@ import {
   DASHBOARD_OPERATIONAL_SIGNALS,
   DATA_AVAILABILITY_STATUSES,
   buildSeoGrowthDashboard,
+  type ClusterDashboardInput,
   type CountMetricInput,
   type GeoClusterInput,
   type RateMetricInput,
@@ -79,6 +80,12 @@ function input(): SeoGrowthDashboardInput {
   return {
     version: 1,
     generatedAt: "2026-07-18T07:00:00.000Z",
+    dataMode: "synthetic_fixture",
+    provenance: {
+      source: "dashboard-contract-test",
+      capturedAt: "2026-07-18T07:00:00.000Z",
+      fixtureId: "dashboard-fixture-2026-07-18",
+    },
     searchRates: [
       rate("search.non-brand-ctr", { numerator: 12, denominator: 240 }),
       rate("search.top-ten-visibility", { numerator: 30, denominator: 50 }),
@@ -131,6 +138,9 @@ describe("SEO growth dashboard contract", () => {
       numerator: 12,
       denominator: 240,
       rate: 0.05,
+      registryKey: "search.rate",
+      cardinality: "portfolio",
+      signalType: "lagging_outcome",
       definition: "search.non-brand-ctr definition",
       dateRange: CURRENT_RANGE,
       comparisonPeriod: COMPARISON_RANGE,
@@ -203,14 +213,17 @@ describe("SEO growth dashboard contract", () => {
     "labels %s rate data and never converts it to zero",
     (status) => {
       const fixture = input();
-      fixture.clusters[0].successfulEnquiryRate = rate(
-        "supplier-verification.successful-enquiry-rate",
-        {
-          status,
-          numerator: null,
-          denominator: null,
-        },
-      );
+      (fixture.clusters as ClusterDashboardInput[])[0] = {
+        ...fixture.clusters[0],
+        successfulEnquiryRate: rate(
+          "supplier-verification.successful-enquiry-rate",
+          {
+            status,
+            numerator: null,
+            denominator: null,
+          },
+        ),
+      };
 
       const dashboard = buildSeoGrowthDashboard(fixture);
       expect(dashboard.clusters[0].successfulEnquiryRate).toEqual(
@@ -226,14 +239,17 @@ describe("SEO growth dashboard contract", () => {
 
   it("allows partial counts only while preserving the partial label", () => {
     const fixture = input();
-    fixture.clusters[0].successfulEnquiryRate = rate(
-      "supplier-verification.successful-enquiry-rate",
-      {
-        status: "partial",
-        numerator: 2,
-        denominator: 5,
-      },
-    );
+    (fixture.clusters as ClusterDashboardInput[])[0] = {
+      ...fixture.clusters[0],
+      successfulEnquiryRate: rate(
+        "supplier-verification.successful-enquiry-rate",
+        {
+          status: "partial",
+          numerator: 2,
+          denominator: 5,
+        },
+      ),
+    };
 
     const metric =
       buildSeoGrowthDashboard(fixture).clusters[0].successfulEnquiryRate;
@@ -244,13 +260,16 @@ describe("SEO growth dashboard contract", () => {
 
   it("rejects zero substitution for blocked attribution data", () => {
     const fixture = input();
-    fixture.clusters[0].qualifiedOrganicTouches = count(
-      "supplier-verification.qualified-organic-touches",
-      {
-        status: "blocked_privacy_approval",
-        value: 0,
-      },
-    );
+    (fixture.clusters as ClusterDashboardInput[])[0] = {
+      ...fixture.clusters[0],
+      qualifiedOrganicTouches: count(
+        "supplier-verification.qualified-organic-touches",
+        {
+          status: "blocked_privacy_approval",
+          value: 0,
+        },
+      ),
+    };
 
     expect(() => buildSeoGrowthDashboard(fixture)).toThrow(
       /blocked_privacy_approval.*null/i,
@@ -259,16 +278,19 @@ describe("SEO growth dashboard contract", () => {
 
   it("rejects inconsistent rates, missing comparison periods, and absent lineage", () => {
     const inconsistent = input();
-    inconsistent.searchRates[0] = rate("search.invalid", {
-      numerator: 11,
-      denominator: 10,
-    });
+    (inconsistent.searchRates as RateMetricInput[])[0] = rate(
+      "search.invalid",
+      {
+        numerator: 11,
+        denominator: 10,
+      },
+    );
     expect(() => buildSeoGrowthDashboard(inconsistent)).toThrow(
       /numerator.*denominator/i,
     );
 
     const noComparison = input();
-    noComparison.searchRates[0] = {
+    (noComparison.searchRates as RateMetricInput[])[0] = {
       ...rate("search.no-comparison"),
       comparisonPeriod: null,
     } as unknown as RateMetricInput;
@@ -277,27 +299,33 @@ describe("SEO growth dashboard contract", () => {
     );
 
     const noLineage = input();
-    noLineage.searchRates[0] = rate("search.no-lineage", {
-      sourceLineage: [],
-    });
+    (noLineage.searchRates as RateMetricInput[])[0] = rate(
+      "search.no-lineage",
+      {
+        sourceLineage: [],
+      },
+    );
     expect(() => buildSeoGrowthDashboard(noLineage)).toThrow(/sourceLineage/i);
   });
 
   it("rejects missing, duplicate, or unknown governed cluster rows", () => {
     const missing = input();
-    missing.clusters.pop();
+    (missing.clusters as ClusterDashboardInput[]).pop();
     expect(() => buildSeoGrowthDashboard(missing)).toThrow(
       /exactly the five canonical clusters/i,
     );
 
     const duplicate = input();
-    duplicate.clusters[4] = duplicate.clusters[0];
+    (duplicate.clusters as ClusterDashboardInput[])[4] = duplicate.clusters[0];
     expect(() => buildSeoGrowthDashboard(duplicate)).toThrow(
       /exactly the five canonical clusters/i,
     );
 
     const unknown = input();
-    unknown.geo[0] = { ...unknown.geo[0], cluster: "other" as ClusterId };
+    (unknown.geo as GeoClusterInput[])[0] = {
+      ...unknown.geo[0],
+      cluster: "other" as ClusterId,
+    };
     expect(() => buildSeoGrowthDashboard(unknown)).toThrow(
       /exactly the five canonical clusters/i,
     );
