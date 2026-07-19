@@ -1,0 +1,126 @@
+Reinspection is necessary after a factory claims defects have been corrected when the buyer needs independent confirmation that the corrective action was completed and the goods now meet the agreed requirements. A factory’s internal confirmation, photos, or written assurances are usually not sufficient for high-risk or high-value orders.
+
+Reinspection is recommended when:
+1. The original inspection failed
+
+If a pre-shipment inspection (PSI), during-production inspection, or final random inspection found defects above the agreed AQL limits, a reinspection should normally be performed before shipment approval.
+
+Example:
+
+Original inspection: 8 major defects found, exceeding the allowed limit.
+
+Factory claims all defects were repaired.
+
+Buyer arranges reinspection before releasing final payment.
+
+2. Defects affect product safety or compliance
+
+Reinspection is strongly recommended for issues involving:
+
+Electrical safety
+
+Batteries
+
+Machinery operation
+
+Child safety
+
+Food-contact materials
+
+Chemical compliance
+
+Australian regulatory requirements
+
+A simple factory statement that the issue was fixed is insufficient because a hidden production problem may remain.
+
+3. The factory performed extensive rework
+
+If the factory:
+
+Replaced large quantities of components
+
+Reassembled products
+
+Reworked packaging
+
+Changed suppliers
+
+Modified production processes
+
+the buyer should verify that the rework did not introduce new defects.
+
+4. The order value is significant
+
+For expensive shipments, the cost of inspection is usually small compared with the risk of receiving unusable goods.
+
+Common triggers:
+
+Large purchase orders
+
+First production run
+
+New supplier relationship
+
+Custom products
+
+Private-label goods
+
+5. The factory only provides evidence instead of physical verification
+
+Photos and videos can help, but they may not prove:
+
+All units were corrected
+
+Defects were not hidden
+
+Correct replacement parts were used
+
+Packaging meets requirements
+
+An independent inspector should check actual production samples.
+
+Situations where reinspection may not be necessary
+
+Reinspection may be unnecessary if:
+
+The issue was purely documentary (for example, missing paperwork)
+
+The defect was minor and easily verified remotely
+
+The buyer has a trusted long-term supplier with a proven corrective-action system
+
+The factory provides strong evidence and the shipment risk is low
+
+Recommended reinspection process
+
+Factory submits corrective action report
+
+Root cause
+
+Quantity affected
+
+Repair/replacement method
+
+Preventive measures
+
+Buyer defines acceptance criteria
+
+Same checklist as the original inspection
+
+Same AQL levels
+
+Same critical/major/minor defect limits
+
+Inspector verifies
+
+Corrected units
+
+Random samples from the entire batch
+
+Packaging and labelling
+
+Functional testing where applicable
+
+Buyer approves shipment only after passing results
+
+For Australian importers, a practical rule is: if the original failure could affect customer complaints, returns, safety, compliance, or brand reputation, arrange reinspection before shipment.

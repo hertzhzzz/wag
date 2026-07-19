@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-qi-20260719-chatgpt-r1__quality-inspection-04-checklist",
+  "platform": "chatgpt",
+  "questionId": "quality-inspection-04-checklist",
+  "prompt": "How can an importer create a product-specific inspection checklist instead of relying on a generic checklist?",
+  "promptHash": "sha256:8d2d0295c646fcf007b1c56d90310771a92d8421db68c699d8f11c8a19f42c94",
+  "observedAt": "2026-07-19T04:09:10.850Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/geo-qi-20260719-chatgpt-r1__quality-inspection-04-checklist.txt",
+    "hash": "sha256:1c1ead0597cbe9edfc9807be7886612d149d050ff66b3b5f0e97230589d40749",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "ChatGPT web signed-in Mark He Free. New chat per question. Exact prompt. Observation-only."
+}

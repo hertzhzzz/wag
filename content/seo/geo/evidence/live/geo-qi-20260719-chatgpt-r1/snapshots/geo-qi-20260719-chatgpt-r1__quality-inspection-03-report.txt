@@ -1,0 +1,330 @@
+A pre-shipment inspection (PSI) report should give an Australian buyer enough evidence to decide whether goods meet the purchase order, quality requirements, and shipping conditions before releasing final payment. A strong PSI report typically includes the following sections:
+
+1. Inspection Summary
+
+Buyer name and supplier/factory name
+
+Purchase order (PO) number
+
+Product name and model/SKU
+
+Inspection date and location
+
+Inspector/company details
+
+Production status:
+
+Finished goods percentage
+
+Packed goods percentage
+
+Ready-to-ship quantity
+
+Inspection result:
+
+Pass
+
+Pass with conditions
+
+Fail
+
+2. Order and Product Information
+
+The report should compare the inspection against the agreed requirements:
+
+PO quantity vs inspected quantity
+
+Product specifications
+
+Approved samples or reference standards
+
+Drawings, technical sheets, or product manuals
+
+Packaging requirements
+
+Labelling requirements
+
+Country-of-origin markings (if applicable)
+
+Australian compliance requirements (where relevant)
+
+Example:
+
+Item	Requirement	Inspection Result
+Quantity	5,000 units	5,000 units verified
+Colour	Pantone reference	Match confirmed
+Packaging	Export carton + foam insert	Meets requirement
+3. Sampling Method and AQL Results
+
+The report should clearly state:
+
+Sampling standard used (commonly ANSI/ASQ Z1.4 / ISO 2859-1)
+
+Inspection level (e.g., General Level II)
+
+Sample size
+
+AQL limits:
+
+Critical defects
+
+Major defects
+
+Minor defects
+
+Example:
+
+Defect Type	AQL Limit	Found	Result
+Critical	0	0	Pass
+Major	2.5	3	Fail
+Minor	4.0	5	Pass
+4. Quantity Verification
+
+The inspector should verify:
+
+Total production quantity
+
+Carton count
+
+Random carton opening
+
+Unit count inside cartons
+
+Finished goods availability
+
+Missing items or shortages
+
+Evidence should include:
+
+Photos of cartons
+
+Warehouse stock
+
+Packing area
+
+Product quantities
+
+5. Visual Quality Inspection
+
+The report should document:
+
+Appearance defects
+
+Scratches
+
+Dents
+
+Stains
+
+Incorrect colours
+
+Poor finishing
+
+Cosmetic damage
+
+Workmanship defects
+
+Loose stitching
+
+Poor assembly
+
+Glue marks
+
+Uneven joints
+
+Missing components
+
+Each defect should include:
+
+Defect description
+
+Severity classification
+
+Quantity found
+
+Photos
+
+6. Functional Testing
+
+For products requiring operation testing, include:
+
+Test procedures
+
+Sample quantity tested
+
+Test results
+
+Equipment used
+
+Examples:
+
+Electronics
+
+Power-on test
+
+Charging test
+
+Connectivity test
+
+Safety function test
+
+Mechanical products
+
+Movement testing
+
+Load testing
+
+Assembly testing
+
+Lighting/AV equipment
+
+Voltage test
+
+Brightness/output test
+
+Control function test
+
+7. Measurement Verification
+
+The report should record measurements against specifications:
+
+Dimensions
+
+Weight
+
+Material thickness
+
+Tolerances
+
+Example:
+
+Measurement	Specification	Actual
+Product length	120 ±2 mm	120.5 mm
+Weight	500 g ±5%	498 g
+8. Packaging and Shipping Inspection
+
+The report should verify:
+
+Export cartons
+
+Carton strength
+
+Internal protection
+
+Labels
+
+Barcodes
+
+Shipping marks
+
+Palletisation
+
+Container loading condition
+
+Photos should show:
+
+Finished cartons
+
+Labels
+
+Pallets
+
+Container loading (if inspected)
+
+9. Documentation Review
+
+The inspector should confirm availability of:
+
+Commercial invoice information
+
+Packing list
+
+Certificates (if required)
+
+Test reports
+
+User manuals
+
+Warranty documents
+
+Compliance documents
+
+For Australian imports, check relevant documents such as:
+
+Electrical compliance evidence where applicable
+
+Product safety documentation
+
+Material declarations where required
+
+10. Defect Summary and Corrective Actions
+
+The report should clearly state:
+
+Total defects found
+
+Defect classification
+
+Whether defects exceed AQL limits
+
+Required corrective action
+
+Re-inspection requirement
+
+Example:
+
+Inspection failed due to major defects exceeding AQL 2.5. Supplier must replace damaged units and provide photographic evidence before shipment approval.
+
+11. Final Recommendation
+
+The inspector should provide a clear conclusion:
+
+✅ Approve shipment
+
+⚠ Approve after correction
+
+❌ Reject shipment
+
+The buyer should not rely only on "Pass/Fail"; the report should explain why.
+
+12. Photo Evidence
+
+A professional PSI report should include:
+
+Factory exterior
+
+Production line
+
+Finished goods warehouse
+
+Randomly selected cartons
+
+Product close-ups
+
+Defects
+
+Packaging
+
+Labels
+
+Testing process
+
+Recommended Australian Buyer Release Process
+
+Before releasing final payment:
+
+Supplier completes production.
+
+Buyer commissions PSI.
+
+Inspector checks against PO/specifications.
+
+Buyer reviews PSI report and photos.
+
+Buyer approves shipment.
+
+Final payment is released.
+
+Supplier ships goods.
+
+For higher-value China orders, Australian importers should also require that the PSI report includes the original defect photos, AQL calculation, test records, and signed inspection checklist, rather than accepting a simple pass certificate.

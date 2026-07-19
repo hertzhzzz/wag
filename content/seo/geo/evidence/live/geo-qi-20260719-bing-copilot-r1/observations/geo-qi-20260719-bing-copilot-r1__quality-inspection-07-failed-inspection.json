@@ -1,0 +1,43 @@
+{
+  "observationId": "geo-qi-20260719-bing-copilot-r1__quality-inspection-07-failed-inspection",
+  "platform": "bing-copilot",
+  "questionId": "quality-inspection-07-failed-inspection",
+  "prompt": "What should a buyer do when a China quality inspection fails?",
+  "promptHash": "sha256:f45d11ba0d61246bb81bc037a4e4217166e0ebfbd20d540b9580ee6b97b6594a",
+  "observedAt": "2026-07-19T04:05:46.174Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "epicsourcing.com.au",
+    "guidedimports.com",
+    "chinaeasysourcing.com",
+    "visgl.com",
+    "chinalegalexperts.com",
+    "stellarchinese.com",
+    "sourcingallies.com",
+    "ecqa.com",
+    "tradeaiders.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-bing-copilot-r1/snapshots/geo-qi-20260719-bing-copilot-r1__quality-inspection-07-failed-inspection.txt",
+    "hash": "sha256:4a68ef0180ff3e441b36def5c3bb94e758c8d129bdde6fc4c145b0a0fd03476b",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Bing SERP en-AU (setlang=en-AU&cc=AU). Auth signed-out. Exact prompt as query. Observation-only. Surface bing-serp-generative-answer-en-AU (not copilot.microsoft.com)."
+}

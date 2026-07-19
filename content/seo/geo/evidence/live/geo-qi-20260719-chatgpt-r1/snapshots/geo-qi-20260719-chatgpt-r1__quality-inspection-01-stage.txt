@@ -1,0 +1,93 @@
+For an Australian importer buying from a Chinese factory, the best pre-shipment inspection (PSI) stage is usually when production is 100% complete and at least 80–100% of goods are packed for export, but before the shipment leaves the factory.
+
+This is the most common inspection stage because it allows the buyer to verify the actual finished order before paying the final balance or authorising shipment.
+
+Recommended inspection stages
+Inspection stage	When to use	What it checks	Suitable for
+Pre-production inspection (PPI)	Before manufacturing starts	Raw materials, specifications, production plan, supplier readiness	New suppliers, high-risk products
+During production inspection (DPI/DUPRO)	Around 20–50% production completed	Workmanship, assembly process, early defects, production progress	Large orders, complex products
+Pre-shipment inspection (PSI)	Finished goods completed before shipment	Quantity, appearance, functionality, packaging, labelling, export readiness	Most Australian import orders
+Container loading inspection (CLI)	During container loading	Correct goods loaded, quantities, packaging condition, seal numbers	High-value shipments, repeat problems
+For most Australian importers: use PSI before final payment
+
+A typical process:
+
+Factory completes production.
+
+Inspector visits the factory.
+
+Inspector selects samples using an acceptable quality limit (AQL) sampling method.
+
+Inspector checks:
+
+Product specifications against purchase order
+
+Dimensions and materials
+
+Workmanship defects
+
+Functional testing
+
+Safety requirements
+
+Packaging and carton markings
+
+Quantity confirmation
+
+Shipping documents
+
+Buyer reviews inspection report.
+
+Buyer approves shipment and releases remaining payment.
+
+Do not rely only on pre-shipment inspection when:
+1. The product has safety or compliance risks
+
+Examples:
+
+Electrical equipment
+
+Lighting products
+
+Children's products
+
+Machinery
+
+Automotive components
+
+Use pre-production + during-production + final inspection because defects discovered at the end may be expensive to correct.
+
+2. The order value is high
+
+For a large Australian import order, consider:
+
+Factory audit before purchase order
+
+Production monitoring during manufacturing
+
+Final PSI before shipment
+
+Container loading check
+
+3. The supplier is new
+
+A first order from an unknown Chinese factory should usually include:
+
+Supplier verification
+
+Factory audit
+
+Pre-production inspection
+
+Pre-shipment inspection
+
+Australian importer decision rule
+Situation	Recommended inspection
+First order with new Chinese supplier	Factory audit + PSI
+Repeat supplier with good history	PSI
+Order over AUD $50k	DPI + PSI
+Custom-made products	PPI + DPI + PSI
+Electronics/regulated products	Technical inspection + compliance verification
+Previous quality issues	DPI + PSI + loading inspection
+
+For most Australian businesses importing manufactured goods from China, the minimum risk-control point is a third-party pre-shipment inspection completed before final payment and before the container leaves the factory.

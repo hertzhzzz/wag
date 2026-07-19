@@ -1,0 +1,43 @@
+{
+  "observationId": "geo-qi-20260719-bing-copilot-r1__quality-inspection-02-aql",
+  "platform": "bing-copilot",
+  "questionId": "quality-inspection-02-aql",
+  "prompt": "How should a buyer set an AQL standard and defect limits for a China production order?",
+  "promptHash": "sha256:57c91cd9b4e9a7cb08e74054aac2eabf4adebcf7a7456d72afc79385b81399b2",
+  "observedAt": "2026-07-19T04:05:21.746Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "huangsourcing.com",
+    "aqiservice.com",
+    "newbuyingagent.com",
+    "linkedin.com",
+    "tradeaiders.com",
+    "maplesourcing.com",
+    "chinawithme.com",
+    "qima.com",
+    "cosmosourcing.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-bing-copilot-r1/snapshots/geo-qi-20260719-bing-copilot-r1__quality-inspection-02-aql.txt",
+    "hash": "sha256:a65da06dec5f806b38e952ae8f2a30104cd3d5908f377fc70fd0e49345f3a157",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Bing SERP en-AU (setlang=en-AU&cc=AU). Auth signed-out. Exact prompt as query. Observation-only. Surface bing-serp-generative-answer-en-AU (not copilot.microsoft.com)."
+}

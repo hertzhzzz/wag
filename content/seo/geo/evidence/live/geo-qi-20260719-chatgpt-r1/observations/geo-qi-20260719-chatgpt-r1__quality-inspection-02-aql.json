@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-qi-20260719-chatgpt-r1__quality-inspection-02-aql",
+  "platform": "chatgpt",
+  "questionId": "quality-inspection-02-aql",
+  "prompt": "How should a buyer set an AQL standard and defect limits for a China production order?",
+  "promptHash": "sha256:57c91cd9b4e9a7cb08e74054aac2eabf4adebcf7a7456d72afc79385b81399b2",
+  "observedAt": "2026-07-19T04:08:27.856Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/geo-qi-20260719-chatgpt-r1__quality-inspection-02-aql.txt",
+    "hash": "sha256:ba93341272eaf3e36500c828222ef410ce2c2492a3ab61a5c579a8a7cf772b12",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "ChatGPT web signed-in Mark He Free. New chat per question. Exact prompt. Observation-only."
+}

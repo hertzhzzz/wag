@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-qi-20260719-chatgpt-r1__quality-inspection-05-defect-classes",
+  "platform": "chatgpt",
+  "questionId": "quality-inspection-05-defect-classes",
+  "prompt": "What is the difference between critical, major, and minor defects in a quality inspection?",
+  "promptHash": "sha256:917bf42fc5a699549165ba2f95ae27d259933bb2acdbade941e12b8bb118deb8",
+  "observedAt": "2026-07-19T04:09:29.336Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/geo-qi-20260719-chatgpt-r1__quality-inspection-05-defect-classes.txt",
+    "hash": "sha256:083cb32f38a063b43b765dd1cb7b96b4ceecd6b0662aa5e531cf373527a05083",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "ChatGPT web signed-in Mark He Free. New chat per question. Exact prompt. Observation-only."
+}

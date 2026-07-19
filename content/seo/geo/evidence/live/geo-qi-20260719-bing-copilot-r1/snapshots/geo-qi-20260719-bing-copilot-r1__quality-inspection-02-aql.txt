@@ -1,0 +1,192 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=How%20should%20a%20buyer%20set%20an%20AQL%20standard%20and%20defect%20limits%20for%20a%20China%20production%20order%3F&setlang=en-AU&cc=AU
+TITLE: How should a buyer set an AQL standard and defect limits for a China production order? - Search
+OBSERVED_AT: 2026-07-19T04:05:21.746Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU
+PROMPT: How should a buyer set an AQL standard and defect limits for a China production order?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+To set an AQL standard and defect limits for a China production order, a buyer should follow these steps:
+Define Defect Categories: Clearly categorize defects into critical, major, and minor based on the product's intended use and safety.
+1
+Select Inspection Level: Choose an inspection level based on ISO 2859-1 standards, with Level II being the default for most consumer goods.
+1
+Agree on Sample Size: Use standardized AQL tables to determine the sample size needed for the inspection.
+1
+Set AQL Values: Assign AQL values to each defect category, indicating the maximum number of defects allowed to pass the inspection.
+1
+Document the Plan: Write down the AQL inspection plan, including defect definitions, action plans for failed inspections, and release rules.
+1
+By following these steps, a buyer can ensure a fair and consistent inspection process for their production orders, minimizing the risk of defective products reaching the market.
+4 Sources
+Read more
+huangsourcing.com
+AQL Inspection in China: Sample Size and Defect Limits
+Before the factory visit, the buyer should approve the sampling standard, lot size, inspection level, defect definitions, AQL values, and action to take when a limit is reached. AQ…
+AQI Service
+ISO 2859-1 (2026 Update): AQL Sampling Guide for Importers
+Acceptance Quality Limit (AQL): The maximum defect rate considered acceptable as a process average. Common configurations for importers: critical defects at AQL 0 (zero tolerance),…
+View all
+huangsourcing.com
+https://www.huangsourcing.com › aql-inspection-china-sample-size-defect...
+AQL Inspection China: Sample Size & Defect Limits
+19 June 2026 · An AQL inspection in China uses a defined random sample to make an accept-or-reject decision about a production lot. Before the factory visit, the buyer should approve the sampling …
+Videos of How Should A Buyer Set An AQL Standard and Defect Limit…
+9:26
+How to Use the AQL Table for Product Sampling and Inspection
+YouTubeAsia Quality Focus
+187.1K views7 Dec 2016
+6:15
+Master AQL Tables: Quality control & Inspection Guide (Step by Step)
+YouTubeKnowledge Factory-Lean Six Sigma
+2.5K views25 Sept 2023
+6:40
+Acceptance quality limit: How to Read a AQL Tables in 1 Minutes? - AQL Sample Table
+YouTubeSupplyia Sourcing
+14.6K views25 June 2021
+AQI Service
+https://aqiservice.com
+ISO 2859-1 (2026 Update): AQL Sampling Guide for Importers
+3 July 2026 · A practical breakdown of ISO 2859-1 and AQL sampling for importers, buyers, and product managers sourcing from Asia or global factories.
+newbuyingagent.com
+https://www.newbuyingagent.com › wiki › aql-acceptable-quality-limit
+Understanding AQL (Acceptable Quality Limit) in QC Inspections
+Learn how AQL tables work in international trade quality control. Master defect classification, sample sizes, and how to set AQL limits for your imports.
+LinkedIn
+https://www.linkedin.com › pulse › how-set-aql-quality-inspection...
+How to Set AQL Quality Inspection Standards with China ... - LinkedIn
+In this guide, we break down exactly how to choose sampling levels, enforce AQL compliance, classify defects clearly, and handle failed batches.
+tradeaiders.com
+https://www.tradeaiders.com › what-is-aql-acceptable-quality-limit...
+What Is AQL? Acceptable Quality Limit Defined with Tables for China ...
+8 May 2026 · A typical inspection specification sets three separate AQL levels simultaneously: AQL 0 for critical defects, AQL 2.5 for major defects, and AQL 4.0 for minor defects.
+tradeaiders.com
+https://www.tradeaiders.com › what-is-an-aql-inspection-plan-how-to-set...
+AQL Inspection Plan Setup - TradeAider
+8 June 2026 · If you need an AQL plan for a China order, send TradeAider your SKU list, lot size, approved files, defect examples, and supplier history. The next step is to ask TradeAider to set up …
+maplesourcing.com
+https://www.maplesourcing.com › aql-inspection.html
+chinawithme.com
+https://chinawithme.com › guides › china-quality-control-guide
+QIMA
+https://www.qima.com › aql
+Cosmo Sourcing
+https://www.cosmosourcing.com › blog › aql-acceptable-quality-level-guide
+Like
+Dislike
+Sampling plans by inspection level
+Applying ISO 2859-1 in quality control
+ISO 2859-1 sampling plans
+---
+ORGANIC:
+1. Define Defect Categories: Clearly categorize defects into critical, major, and minor based on the product's intended use and safety. | https://www.huangsourcing.com/aql-inspection-china-sample-size-defect-limits
+2. Select Inspection Level: Choose an inspection level based on ISO 2859-1 standards, with Level II being the default for most consumer goods. | https://aqiservice.com/iso-2859-1-aql-sampling-inspection-guide/
+3. Set AQL Values: Assign AQL values to each defect category, indicating the maximum number of defects allowed to pass the inspection. | https://www.newbuyingagent.com/wiki/A/aql-acceptable-quality-limit
+4. Document the Plan: Write down the AQL inspection plan, including defect definitions, action plans for failed inspections, and release rules. | https://www.linkedin.com/pulse/how-set-aql-quality-inspection-standards-china-sourcing-allen-zeng-bw0oc
+5. tradeaiders.com | https://www.tradeaiders.com/what-is-aql-acceptable-quality-limit-defined-with-tables-for-china-importers.html
+6. maplesourcing.com
+https://www.maplesourcing.com › aql-inspection.html | https://www.maplesourcing.com/aql-inspection.html
+7. chinawithme.com
+https://chinawithme.com › guides › china-quality-control-guide | https://chinawithme.com/guides/china-quality-control-guide
+8. QIMA
+https://www.qima.com › aql | https://www.qima.com/aql-acceptable-quality-limit
+9. Cosmo Sourcing
+https://www.cosmosourcing.com › blog › aql-acceptable-quality-level-guide | https://www.cosmosourcing.com/blog/aql-acceptable-quality-level-guide
+---
+SERP_TEXT_SNIPPET:
+Skip to content
+Accessibility Feedback
+6
+AllSearchVideosImagesMapsNewsCopilot
+More
+About 7,050 results
+To set an AQL standard and defect limits for a China production order, a buyer should follow these steps:
+Define Defect Categories: Clearly categorize defects into critical, major, and minor based on the product's intended use and safety. 
+1
+Select Inspection Level: Choose an inspection level based on ISO 2859-1 standards, with Level II being the default for most consumer goods. 
+1
+Agree on Sample Size: Use standardized AQL tables to determine the sample size needed for the inspection. 
+1
+Set AQL Values: Assign AQL values to each defect category, indicating the maximum number of defects allowed to pass the inspection. 
+1
+Document the Plan: Write down the AQL inspection plan, including defect definitions, action plans for failed inspections, and release rules. 
+1
+
+By following these steps, a buyer can ensure a fair and consistent inspection process for their production orders, minimizing the risk of defective products reaching the market.
+4 Sources
+Read more
+huangsourcing.com
+AQL Inspection in China: Sample Size and Defect Limits
+Before the factory visit, the buyer should approve the sampling standard, lot size, inspection level, defect definitions, AQL values, and action to take when a limit is reached. AQ…
+AQI Service
+ISO 2859-1 (2026 Update): AQL Sampling Guide for Importers
+Acceptance Quality Limit (AQL): The maximum defect rate considered acceptable as a process average. Common configurations for importers: critical defects at AQL 0 (zero tolerance),…
+View all
+ 
+huangsourcing.com
+https://www.huangsourcing.com › aql-inspection-china-sample-size-defect...
+AQL Inspection China: Sample Size & Defect Limits
+
+19 June 2026 · An AQL inspection in China uses a defined random sample to make an accept-or-reject decision about a production lot. Before the factory visit, the buyer should approve the sampling …
+
+ 
+Videos of How Should A Buyer Set An AQL Standard and Defect Limit…
+9:26
+How to Use the AQL Table for Product Sampling and Inspection
+YouTubeAsia Quality Focus
+187.1K views7 Dec 2016
+6:15
+Master AQL Tables: Quality control & Inspection Guide (Step by Step)
+YouTubeKnowledge Factory-Lean Six Sigma
+2.5K views25 Sept 2023
+6:40
+Acceptance quality limit: How to Read a AQL Tables in 1 Minutes? - AQL Sample Table
+YouTubeSupplyia Sourcing
+14.6K views25 June 2021
+AQI Service
+https://aqiservice.com
+ISO 2859-1 (2026 Update): AQL Sampling Guide for Importers
+
+3 July 2026 · A practical breakdown of ISO 2859-1 and AQL sampling for importers, buyers, and product managers sourcing from Asia or global factories.
+
+newbuyingagent.com
+https://www.newbuyingagent.com › wiki › aql-acceptable-quality-limit
+Understanding AQL (Acceptable Quality Limit) in QC Inspections
+
+Learn how AQL tables work in international trade quality control. Master defect classification, sample sizes, and how to set AQL limits for your imports.
+
+LinkedIn
+https://www.linkedin.com › pulse › how-set-aql-quality-inspection...
+How to Set AQL Quality Inspection Standards with China ... - LinkedIn
+
+In this guide, we break down exactly how to choose sampling levels, enforce AQL compliance, classify defects clearly, and handle failed batches.
+
+tradeaiders.com
+https://www.tradeaiders.com › what-is-aql-acceptable-quality-limit...
+What Is AQL? Acceptable Quality Limit Defined with Tables for China ...
+
+8 May 2026 · A typical inspection specification sets three separate AQL levels simultaneously: AQL 0 for critical defects, AQL 2.5 for major defects, and AQL 4.0 for minor defects.
+
+tradeaiders.com
+https://www.tradeaiders.com › what-is-an-aql-inspection-plan-how-to-set...
+AQL Inspection Plan Setup - TradeAider
+
+8 June 2026 · If you need an AQL plan for a China order, send TradeAider your SKU list, lot size, approved files, defect examples, and supplier history. The next step is to ask TradeAider to set up …
+
+maplesourcing.com
+https://www.maplesourcing.com › aql-inspection.html
+chinawithme.com
+https://chinawithme.com › guides › china-quality-control-guide
+QIMA
+https://www.qima.com › aql
+Cosmo Sourcing
+https://www.cosmosourcing.com › blog › aql-acceptable-quality-level-guide
+Like
+Dislike
+ 
+Sampling plans by inspection level
+Applying ISO 2859-1 in quality control
+ISO 2859-1 sampling plans

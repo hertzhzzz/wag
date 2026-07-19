@@ -94,8 +94,63 @@ Separate named acceptance required for Ticket 32 evidence under this platform. T
 - [x] Understood observation-only: no ranking / optimisation causality claims
 - [x] Fill Date + Signature for Ticket 32 acceptance when ready
 
-**Ticket 32 Approver:** Mark He  
-**Ticket 32 Date:** 2026-07-19  
+**Ticket 32 Approver:** Mark He
+**Ticket 32 Date:** 2026-07-19
 **Ticket 32 Signature:** Mark He (oral authorization recorded 2026-07-19)
 
 > Signed under Mark oral authorization 2026-07-19.
+
+## Ticket 33 live package (Quality Inspection) — APPROVED
+
+Separate named acceptance required for Ticket 33 evidence under this platform. Ticket 31/32 signatures above do **not** auto-close Ticket 33.
+
+| Field | Value |
+|---|---|
+| Ticket | 33 — Quality Inspection GEO baseline |
+| Platform | `chatgpt` |
+| Run ID | `geo-qi-20260719-chatgpt-r1` |
+| Surface / account | chatgpt-chat-web; signed-in free test account (Mark He Free); desktop; locale en-AU |
+| Provenance | `external-platform-observation` |
+| Claim mode | observation-only |
+| Evidence root | `content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/` |
+| Manifest | `content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/manifest.json` |
+| Observations | `content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/observations/` (10 JSON) |
+| Snapshots | `content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/` |
+| Capture log | `content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/capture-log.md` |
+| Question set | `content/seo/geo/questions/quality-inspection.json` (JSON status: draft) |
+| Question-set digest | `sha256:7ea4fd81936885385e0d3a9322996609deda06f73345a9daca12ee56dc2cbd1e` |
+| Matrix rollup | `.scratch/seo-growth-system/research/2026-07-19-geo-matrix-quality-inspection.md` |
+
+### Observation counts (Ticket 33 run only)
+
+| Metric | Count |
+|---|---|
+| observations | 10/10 |
+| observed-answer | 10 |
+| observed-surface-absent | 0 |
+| blocked | 0 |
+| brandMention=yes | 0/10 |
+| ownedUrlCited=yes | 0/10 |
+
+### Capture notes
+
+- All ten prompts returned observed-answer.
+- brandMention / ownedUrlCited: 0/10 this window.
+- Outbound citations often empty in Free chat UI; recorded as quality risk where applicable.
+- Evidence is observation-only; not a ranking or causality claim.
+
+### Approver checklist (Mark — Ticket 33)
+
+- [x] Confirmed Ticket 33 evidence paths exist and are readable
+- [x] Confirmed provenance is live observation (not synthetic fixture)
+- [x] Accepted surface/account description for this package
+- [x] Understood observation-only: no ranking / optimisation causality claims
+- [x] Filled Date + Signature for Ticket 33 acceptance under Mark written authorization
+
+**Ticket 33 Approver:** Mark He
+**Ticket 33 Date:** 2026-07-19
+**Ticket 33 Signature:** Mark He (written authorization recorded 2026-07-19)
+
+> Signature recorded only after Mark explicit written authorization on 2026-07-19.
+
+> Ticket 33 signed under Mark written authorization 2026-07-19.

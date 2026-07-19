@@ -1,0 +1,130 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=When%20is%20reinspection%20necessary%20after%20a%20factory%20claims%20that%20defects%20have%20been%20corrected%3F&hl=en-AU&gl=au
+TITLE: When is reinspection necessary after a factory claims that defects have been corrected? - Google Search
+OBSERVED_AT: 2026-07-19T04:03:39.195Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: When is reinspection necessary after a factory claims that defects have been corrected?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+AI_OVERVIEW: (none detected)
+ORGANIC_DOMAINS:
+1. ownerinspections.com.au
+2. blackstonesolicitorsltd.co.uk
+3. homeinspector.org
+4. adelaide.ispect.com.au
+5. atomicprojects.com.au
+6. sa.gov.au
+7. picagroup.com.au
+8. tga.gov.au
+9. buildassure.com.au
+10. mansegroup.com.au
+---
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Shopping
+Images
+Short videos
+Videos
+More
+Tools
+Search Results
+These are results for When is inspection necessary after a factory claims that defects have been corrected?
+Search instead for When is reinspection necessary after a factory claims that defects have been corrected?
+
+Web results
+Construction Defect Inspection: Identify and Prevent Issues
+
+Owner Inspections
+https://ownerinspections.com.au › ... › Defect Investigation
+14 Mar 2025 — Need a thorough construction defect inspection? Identify problems and hidden issues with inspections. Get detailed report for peace of mind.
+People also ask
+What is the end of year defects inspection?
+What should be done if an inspection reveals a defect?
+What is the Australian standard pre purchase inspection for major structural defects?
+What are the 4 types of inspection?
+Web results
+New Home Warranty (Defect) Inspection Adelaide
+
+iSPECT Building Inspections
+https://adelaide.ispect.com.au › adelaide › warranty-defe...
+11 months after your Building Handover Inspection to meet the 12 month non-structural building defects warranty period.
+4.5(623)
+Defect Warranty Works
+
+Atomic Projects
+https://www.atomicprojects.com.au › defect-rectification
+When defects arise — whether minor cosmetic issues or serious structural failures — they must be rectified quickly, permanently, and with full documentation.Read more
+Defective vehicles
+
+SA.GOV
+https://www.sa.gov.au › driving-and-transport › vehicles
+If you have ensured that all possible defects have been corrected, there is less likelihood of it needing a second inspection. Vehicles that are excessively ...Read more
+Fixing defects in new buildings
+
+PICA Group
+https://picagroup.com.au › fixing-defects-in-new-buildings
+Building inspection reports and accurate diagnostics sit at the centre of successful defect rectification processes. Defects have traditionally been diagnosed ...Read more
+Manufacturer inspections: an overview
+
+Therapeutic Goods Administration (TGA)
+https://www.tga.gov.au › products › manufacturing › m...
+12 May 2016 — Manufacturer's responses are normally reviewed within 4 weeks of receipt and if accepted, the inspection will be closed and an inspection ...
+Missing: defects ‎| Show results with: defects
+Practical Completion Defects Inspection — Build Assure
+
+buildassure.com.au
+https://www.buildassure.com.au › practical-completion-i...
+Once issued our inspection report, the builder will have 10-days to rectify issues. Once defects have been rectified and you are satisfied that the building ...Read more
+Missing: factory ‎| Show results with: factory
+What Happens If Your Stage Inspection Finds Defects?
+
+Owner Inspections
+https://ownerinspections.com.au › articles › what-happen...
+26 Feb 2026 — The timeframe depends on the severity of the defects most builders aim to complete rectification within 7 to 14 days for standard defects.
+Missing: factory ‎| Show results with: factory
+How do I know if defects identified in a private inspection ...
+
+Manse Group
+https://www.mansegroup.com.au › 2022/10 › 11-reaso...
+We usually advise clients not to worry until after a re-inspection has been completed. Give the builder a chance to rectify the items and if they don't, we can ...Read more
+Missing: factory ‎| Show results with: factory
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-qi-20260719-chatgpt-r1__quality-inspection-03-report",
+  "platform": "chatgpt",
+  "questionId": "quality-inspection-03-report",
+  "prompt": "What should a pre-shipment inspection report include before an Australian buyer releases final payment?",
+  "promptHash": "sha256:7ac30f187264e63419427f5554791af8f5eafd061c7e72180246a6b7e82f0df6",
+  "observedAt": "2026-07-19T04:08:50.359Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/geo-qi-20260719-chatgpt-r1__quality-inspection-03-report.txt",
+    "hash": "sha256:ed43ca2e04e72fe17527e2f10259d2237ebee8b8aaac3a25cee418dab9d6dba7",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "ChatGPT web signed-in Mark He Free. New chat per question. Exact prompt. Observation-only."
+}

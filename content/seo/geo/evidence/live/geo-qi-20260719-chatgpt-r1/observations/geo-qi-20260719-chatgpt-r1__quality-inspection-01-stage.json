@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-qi-20260719-chatgpt-r1__quality-inspection-01-stage",
+  "platform": "chatgpt",
+  "questionId": "quality-inspection-01-stage",
+  "prompt": "Which product inspection stage should an Australian importer use before goods leave a factory in China?",
+  "promptHash": "sha256:977e23f0f2f7d437ccb72e7029ed6bd41b94547d9639d083f484b77ed0d46721",
+  "observedAt": "2026-07-19T04:07:54.561Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/geo-qi-20260719-chatgpt-r1__quality-inspection-01-stage.txt",
+    "hash": "sha256:e9210a66613e0dbce9413a829b73f46b2b2c53ee296802b13cd0c062bdb028d9",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "ChatGPT web signed-in Mark He Free. New chat per question. Exact prompt. Observation-only."
+}

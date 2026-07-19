@@ -1,0 +1,60 @@
+When a China quality inspection fails, the buyer should immediately halt shipment, analyse the report objectively, and negotiate corrective actions with the supplier before any goods leave the factory.
+guidedimports
++1
+youtube
+
+Immediate actions (first 24–48 hours)
+
+Stop the shipment – Insist the manufacturer does not ship anything until the issue is investigated and settled.
+youtube
+tradeaiders
+
+Review the inspection report carefully – Identify whether failures are critical, major, or minor defects, and how they compare to your agreed quality standard and AQL limits.
+china-quality-inspection
++1
+
+Gather evidence – Save photos, videos, and test data from the inspector; retain all communication with the supplier about specifications and samples.
+forevereastco
+
+Notify the supplier formally – Share the report in a neutral, fact-based way, highlighting gaps between agreed specs and actual findings, and request their written response within a set deadline (e.g. 3 days).
+tradeaiders
+youtube
+
+Negotiation and resolution options
+
+Based on the severity and type of defects, you typically have five core options:
+tradeaiders
++1
+
+Option	When it fits	Key considerations
+Rework at factory	Defects are fixable (e.g. cosmetic, assembly, packaging)	Supplier bears cost; re-inspect before shipment; delay timeline
+Partial acceptance + discount	Minor defects that don’t affect function or safety	Agree on price reduction reflecting defect rate; document in writing
+Replace defective units	Critical/major defects in a portion of the batch	Supplier produces replacements; may split shipment; verify quality again
+Cancel and reorder	Systemic quality failure; trust broken	Use deposit leverage; consider alternative supplier; review contract terms
+Accept as-is (with risk)	Minor issues; urgent timeline; low impact on end use	Document acceptance; plan for customer communication or warranty buffer
+
+Use your payment terms as leverage – if you still owe the balance (e.g. 70% after 30% deposit), do not release it until the issue is resolved or a written concession is secured.
+tradeaiders
++1
+
+Preventing recurrence
+
+Once the immediate issue is settled, put in place corrective and preventive actions so the same problem doesn’t repeat:
+youtube
+forevereastco
+
+Root cause analysis – Ask the factory to provide an 8D report or similar, explaining what went wrong and how it will be fixed.
+youtube
+
+Update quality documentation – Revise tech packs, inspection checklists, and golden samples to close any ambiguity.
+stellarchinese
+
+Add earlier inspections – Introduce DUPRO (mid-production) checks for high-risk orders, not just final PSI.
+cngreentime
++1
+
+Strengthen contracts – Include clear defect definitions, AQL thresholds, penalties, and re-inspection clauses in future agreements.
+linkedin
++1
+
+Given your work with WAG and factory visits, you’re well positioned to use on-the-ground leverage and third-party inspectors to push for rework or replacement rather than letting defective goods ship.

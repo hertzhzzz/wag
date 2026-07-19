@@ -56,3 +56,28 @@ Scope extension for Factory Audit evidence under the same retention rules. **Mar
 
 > Signed under Mark oral authorization 2026-07-19.
 
+
+## Ticket 33 live packages covered (2026-07-19) — REAFFIRMED
+
+Scope extension for Quality Inspection evidence under the same retention rules, reaffirmed under Mark written authorization on 2026-07-19.
+
+| Platform | Run ID | Observations |
+|---|---|---|
+| chatgpt | `geo-qi-20260719-chatgpt-r1` | 10 |
+| perplexity | `geo-qi-20260719-perplexity-r1` | 10 |
+| google-ai-overviews | `geo-qi-20260719-google-ai-overviews-r1` | 10 |
+| bing-copilot | `geo-qi-20260719-bing-copilot-r1` | 10 |
+
+- Matrix: `.scratch/seo-growth-system/research/2026-07-19-geo-matrix-quality-inspection.md`
+- Same secrets rule: no passwords, cookies, API tokens under evidence paths
+- Observation-only; not public marketing claims
+- brandMention=yes 0/40; ownedUrlCited=yes 0/40 (counts only; not causal)
+
+**Ticket 33 reaffirmation:** APPROVED
+**Ticket 33 Approver:** Mark He
+**Ticket 33 Date:** 2026-07-19
+**Ticket 33 Signature:** Mark He (written authorization recorded 2026-07-19)
+
+> Signature recorded only after Mark explicit written authorization on 2026-07-19.
+
+> Ticket 33 retention/privacy coverage reaffirmed under Mark written authorization 2026-07-19.

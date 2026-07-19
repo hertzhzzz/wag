@@ -1,0 +1,226 @@
+An importer should create a product-specific inspection checklist by converting the product requirements, supplier agreement, and quality risks into measurable inspection points. A generic checklist only checks broad items (appearance, quantity, packaging); a product-specific checklist verifies whether the goods actually meet the buyer’s expectations.
+
+1. Start with the product specification sheet
+
+Collect all approved product information:
+
+Product drawings or CAD files
+
+Technical specifications
+
+Material requirements
+
+Approved samples (“golden sample”)
+
+Colour references (Pantone/RAL codes if relevant)
+
+Packaging requirements
+
+Labelling requirements
+
+Compliance documents
+
+User manuals or installation instructions
+
+Purchase order requirements
+
+Every inspection point should trace back to one of these documents.
+
+2. Divide the checklist into inspection categories
+
+A typical structure:
+
+Category	Product-specific examples
+Quantity	Carton count, unit count, spare parts included
+Product appearance	Surface finish, scratches, colour consistency, stitching quality
+Dimensions	Length, width, thickness, tolerance limits
+Materials	Grade of steel, fabric composition, plastic type
+Function testing	Power-on test, load test, water resistance test, movement test
+Safety	Sharp edges, insulation, warning labels
+Assembly	Screw torque, alignment, component fit
+Packaging	Carton strength, foam protection, barcode placement
+Documentation	Certificates, manuals, warranty cards
+3. Convert requirements into measurable inspection points
+
+Avoid vague checks.
+
+Weak checklist item:
+
+Check product quality.
+
+Better checklist items:
+
+Verify aluminium frame thickness is 2.0 ± 0.1 mm using a calliper.
+
+Test each unit’s power switch for 20 activation cycles.
+
+Confirm product colour matches approved sample under daylight lighting.
+
+Measure product dimensions against drawing tolerance ±3 mm.
+
+4. Define defect standards before inspection
+
+Create acceptance rules:
+
+Critical defects
+
+Safety or legal issues:
+
+Electrical safety failure
+
+Incorrect certification markings
+
+Dangerous sharp edges
+
+Wrong product model
+
+Usually:
+
+Zero tolerance
+
+Major defects
+
+Affects usability or customer satisfaction:
+
+Product does not function correctly
+
+Incorrect materials
+
+Visible damage
+
+Missing components
+
+Example:
+
+AQL 2.5
+
+Minor defects
+
+Cosmetic issues:
+
+Small scratches
+
+Slight packaging damage
+
+Minor colour variation
+
+Example:
+
+AQL 4.0
+
+5. Include product-specific testing procedures
+
+Examples:
+
+Electronics
+
+Voltage compatibility
+
+Charging test
+
+Battery capacity test
+
+Screen/panel inspection
+
+Firmware version verification
+
+Furniture
+
+Load-bearing test
+
+Stability test
+
+Surface finish inspection
+
+Hardware completeness
+
+Lighting equipment
+
+Power-on test
+
+Brightness verification
+
+Colour temperature check
+
+DMX/control testing
+
+Cable and connector inspection
+
+Machinery
+
+Operational cycle test
+
+Noise/vibration test
+
+Safety guard inspection
+
+Hydraulic/pneumatic pressure test
+
+6. Add sampling requirements
+
+Specify:
+
+Inspection level (for example, ANSI/ASQ Z1.4)
+
+Sample quantity
+
+Random sampling method
+
+AQL limits
+
+Example:
+
+Inspect 200 units from a 5,000-unit shipment using General Inspection Level II, AQL 1.5 major defects and 4.0 minor defects.
+
+7. Include photo evidence requirements
+
+The checklist should require inspectors to capture:
+
+Overall product photos
+
+Defect close-ups
+
+Measurement photos
+
+Test result photos
+
+Packaging condition
+
+Shipping marks
+
+This helps resolve disputes with suppliers.
+
+8. Match the checklist to the production stage
+
+Different stages need different checklists:
+
+Stage	Focus
+Pre-production	Materials, samples, supplier capability
+During production	Process control, workmanship, early defects
+Pre-shipment inspection	Finished product quality, quantity, packaging
+Container loading	Correct cartons, loading condition, sealing
+9. Have the factory approve the checklist before production
+
+Before mass production:
+
+Send the checklist to the supplier.
+
+Confirm they understand requirements.
+
+Update unclear points.
+
+Freeze the final version.
+
+Use the same checklist for inspection.
+
+This reduces arguments such as “we did not know this was required.”
+
+For an Australian importer buying from China, the strongest approach is usually a three-document system:
+
+Product specification sheet — what the product must be.
+
+Inspection checklist — how compliance is measured.
+
+Defect standard/AQL plan — what level of failure is acceptable.
+
+This creates an objective basis for approving or rejecting a shipment before releasing final payment.

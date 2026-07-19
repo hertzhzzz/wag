@@ -1,0 +1,43 @@
+{
+  "observationId": "geo-qi-20260719-google-ai-overviews-r1__quality-inspection-05-defect-classes",
+  "platform": "google-ai-overviews",
+  "questionId": "quality-inspection-05-defect-classes",
+  "prompt": "What is the difference between critical, major, and minor defects in a quality inspection?",
+  "promptHash": "sha256:917bf42fc5a699549165ba2f95ae27d259933bb2acdbade941e12b8bb118deb8",
+  "observedAt": "2026-07-19T04:03:23.466Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "proqc.com",
+    "intouch-quality.com",
+    "amrepmexico.com",
+    "qcadvisor.com",
+    "visgl.com",
+    "hqts.com",
+    "gqc.io",
+    "rsware.es",
+    "apparel.wiki"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-google-ai-overviews-r1/snapshots/geo-qi-20260719-google-ai-overviews-r1__quality-inspection-05-defect-classes.txt",
+    "hash": "sha256:1d44ca4ca6459a084dc67aec17d730b964ec238c2ae468985db8bdf1610fbbe0",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

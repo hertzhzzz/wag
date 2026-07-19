@@ -1,0 +1,188 @@
+For a China production order, an Australian buyer should set the AQL (Acceptable Quality Limit) standard before production begins and include it in the purchase contract, quality agreement, or inspection specification. The goal is to define what defect levels are acceptable and what conditions will trigger rejection.
+
+1. Define the inspection scope first
+
+Before choosing AQL numbers, specify:
+
+Product category and risk level
+
+Inspection stage (pre-production, during production, pre-shipment)
+
+Inspection quantity (sampling size)
+
+Defect classification method
+
+Testing requirements
+
+Acceptance/rejection rules
+
+AQL only works when the inspection process is clearly defined.
+
+2. Classify defects into three categories
+
+Most international inspections use three defect levels:
+
+Defect Type	Meaning	Typical Buyer Treatment
+Critical defect	Safety, legal, regulatory, or serious function failure	Usually AQL 0.0 (zero tolerance)
+Major defect	Product cannot be used/sold normally or customer dissatisfaction likely	Usually AQL 1.5–2.5
+Minor defect	Cosmetic issue or small deviation	Usually AQL 2.5–4.0
+
+Example for imported lighting equipment:
+
+Critical: Electrical safety failure, exposed live wire, non-compliant certification marking
+
+Major: Product does not operate, wrong specification, damaged housing
+
+Minor: Small scratches, packaging imperfections, minor printing errors
+
+3. Choose an AQL level based on product risk
+
+Common standards:
+
+Product Risk	Suggested AQL
+Safety-critical products	Critical: 0 / Major: 1.0–1.5 / Minor: 2.5
+Electronics, machinery, commercial equipment	Critical: 0 / Major: 1.5 / Minor: 2.5
+General consumer goods	Critical: 0 / Major: 2.5 / Minor: 4.0
+Low-value promotional items	Major: 2.5–4.0 / Minor: 4.0–6.5
+
+For most Australian importers buying from China, a common starting point is:
+
+Critical: 0
+Major: 1.5
+Minor: 2.5
+
+4. Use ISO 2859-1 sampling tables
+
+AQL is usually implemented using ISO 2859-1.
+
+The process:
+
+Determine production lot size
+Example: 5,000 units
+
+Select inspection level
+Common:
+
+General Inspection Level II (normal inspection)
+
+Level III for higher confidence
+
+Find sample size code letter
+
+Select AQL acceptance numbers
+
+Example:
+
+Order quantity: 5,000 units
+
+Inspection Level II
+
+Sample size: 200 units
+
+AQL Major 1.5
+
+AQL Minor 2.5
+
+Possible acceptance limits:
+
+Major defects found above allowed number → reject lot
+
+Minor defects found above allowed number → reject lot
+
+(The exact acceptance numbers depend on the ISO sampling table.)
+
+5. Define defect examples in writing
+
+Avoid vague wording such as:
+
+"Product quality must be acceptable."
+
+Instead create a defect standard:
+
+Example:
+
+Major defects:
+
+Product does not power on
+
+Wrong model supplied
+
+Missing required component
+
+Performance below specification
+
+Packaging damage affecting resale
+
+Minor defects:
+
+Small cosmetic marks
+
+Slight colour variation
+
+Minor label alignment issue
+
+6. Add tightened inspection rules for early orders
+
+For a new Chinese supplier:
+
+First 1–3 shipments: use stricter AQL
+
+After consistent performance: consider normal AQL
+
+Example:
+
+First orders:
+
+Critical: 0
+
+Major: 1.0
+
+Minor: 2.5
+
+Established supplier:
+
+Critical: 0
+
+Major: 1.5
+
+Minor: 2.5
+
+7. Include AQL requirements in the purchase contract
+
+A buyer should include:
+
+Applicable AQL standard
+
+Inspection level
+
+Sampling method
+
+Defect definitions
+
+Rework requirements
+
+Who pays inspection costs
+
+Whether rejected goods must be repaired/replaced
+
+Example clause:
+
+Goods shall meet ISO 2859-1 inspection requirements. Inspection shall be performed at General Inspection Level II with AQL limits of Critical 0, Major 1.5, Minor 2.5. Any shipment exceeding these limits may be rejected or subject to supplier corrective action.
+
+8. Do not rely only on AQL
+
+AQL does not guarantee perfect quality. A buyer should combine it with:
+
+Factory audit before production
+
+Approved product samples
+
+First article inspection
+
+Production monitoring
+
+Pre-shipment inspection
+
+Container loading inspection
+
+For high-value China orders, AQL should be part of a broader quality control plan rather than the only acceptance criterion.

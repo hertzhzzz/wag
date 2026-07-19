@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-qi-20260719-chatgpt-r1__quality-inspection-08-reinspection",
+  "platform": "chatgpt",
+  "questionId": "quality-inspection-08-reinspection",
+  "prompt": "When is reinspection necessary after a factory claims that defects have been corrected?",
+  "promptHash": "sha256:dea90c03fd9aa0e04586f8395f6aa1d79904f98e8eeb787d7c8ed53a19c4f957",
+  "observedAt": "2026-07-19T04:10:30.669Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/geo-qi-20260719-chatgpt-r1__quality-inspection-08-reinspection.txt",
+    "hash": "sha256:ad93c60098a110d23f476c427ebb3f78f71b8c38fa063c8421c9808baa8ea590",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "ChatGPT web signed-in Mark He Free. New chat per question. Exact prompt. Observation-only."
+}

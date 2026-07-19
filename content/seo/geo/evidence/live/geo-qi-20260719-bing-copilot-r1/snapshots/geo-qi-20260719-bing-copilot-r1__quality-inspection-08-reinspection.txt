@@ -1,0 +1,175 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=When%20is%20reinspection%20necessary%20after%20a%20factory%20claims%20that%20defects%20have%20been%20corrected%3F&setlang=en-AU&cc=AU
+TITLE: When is reinspection necessary after a factory claims that defects have been corrected? - Search
+OBSERVED_AT: 2026-07-19T04:05:50.964Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU
+PROMPT: When is reinspection necessary after a factory claims that defects have been corrected?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+Re-inspection is necessary after a factory claims that defects have been corrected when there are still excessive defects present in the products. This is to ensure that the corrective actions taken have been effective and that the products meet the required quality standards. The re-inspection process involves a second formal quality check conducted after the supplier has reworked or sorted the defective goods from the original failed batch. It is essential to conduct a re-inspection to verify that the quality issues have been resolved and to avoid potential downstream issues.
+Insight Quality Services
++2
+Read more
+Insight Quality Services
+Should You Re-inspect Your Goods if a Lot Fails QC Inspection?
+When your inspection comes back with reports of excessive defects and low-quality products, you may need to schedule a re-inspection after your factory reworks the goods. In this a…
+tradeaiders.com
+Re-Inspection vs Accept-Discount: Defect Decision Guide · TradeAider
+When a pre-shipment inspection report comes back with a "Fail" result, you face an immediate decision under time pressure: demand rework followed by re-inspection, or accept the sh…
+View all
+Insight Quality Services
+https://insight-quality.com › re-inspection-consumer-goods
+Should You Re-inspect Your Goods if a Lot Fails QC Inspection?
+31 Aug 2022 · A re-inspection is necessary when an inspector finds excessive defects with the products in a given lot and the manufacturer has taken steps to resolve that issue.
+tradeaiders.com
+https://www.tradeaiders.com › re-inspection-vs-accept-and-discount-how...
+Re-Inspection vs Accept-Discount: Defect Decision Guide · TradeAider
+13 May 2026 · The determining factor is defect severity: minor cosmetic defects with no safety or functional impact may be acceptable with a negotiated discount, while major or critical defects …
+gqc.io
+https://www.gqc.io › articles
+100% Manufacturing supervision | GQC
+19 May 2022 · In most cases, factories do not perform proper rework because they don’t have enough time to fix the rejected products. They want to keep costs down, so they ask for a re-inspection even …
+QualityInspection.org
+https://qualityinspection.org › corrective-action-plan-after-failed-inspection
+Use a Corrective Action Plan after a Failed Inspection
+6 Jan 2022 · If that was already done but the results were not satisfactory, and if you have no obvious reason to suspect your supplier of dishonest behavior, you have to assume it is due to a …
+Therapeutic Goods Administration (TGA)
+https://www.tga.gov.au › resources › resources › user-guide › australian...
+21: Conducting follow-up inspections - Therapeutic Goods …
+We schedule routine follow-up inspections and advise the Australian manufacturer or Australian sponsor shortly before the inspection date. The frequency of routine follow-up inspections depends on the …
+PRETESH BISWAS
+https://preteshbiswas.com
+IATF 16949:2016 Clause 8.7.1.4 Control of reworked product
+3 Aug 2023 · Re-inspection Requirements: Describe the re-inspection process to verify that the rework has been performed correctly and that the non-conformities have been effectively addressed. This …
+ownerinspections.com.au
+https://ownerinspections.com.au › articles › when-defects-are-found-do...
+When Defects Are Found, Do Inspectors Re-inspect. Do You Pay Extra?
+16 Mar 2026 · Explains what happens after defects in new-build stage inspections, when re-inspections are needed, and common fee models in Australia.
+QualityInspection.org
+https://qualityinspection.org › recurring-production-problems-when-to...
+Recurring Production Problems: When to Fix the Supplier and When …
+6 days ago · However, repeated basic mistakes after a product has been manufactured for some time suggest that the supplier lacks effective systems, checks, and controls. A capable factory should …
+the-inspection-company.com
+https://beta.the-inspection-company.com › blogs › what-to-do-after-a...
+What to Do After a Failed Quality Inspection: A 2026 Step-by-Step Guide
+11 June 2026 · Relying on a factory to self-correct after a failure is a significant operational risk. When deciding what to do after a failed quality inspection, importers often fall into the trap of trusting the …
+PRETESH BISWAS
+https://preteshbiswas.com
+IATF 16949:2016 Clause 8.7.1.5 Control of repaired product
+Like
+Dislike
+Deep dive into When is reinspection necessary after a factory claims th…
+corrective action plan after inspection
+failed inspection corrective action plan
+re inspection of goods
+---
+ORGANIC:
+1. Re-inspection is necessary after a factory claims that defects have been corrected when there are still excessive defects present in the products. This is to ensure that the corrective actions taken h | https://insight-quality.com/re-inspection-consumer-goods/
+2. tradeaiders.com
+Re-Inspection vs Accept-Discount: Defect Decision Guide · TradeAider
+When a pre-shipment inspection report comes back with a "Fail" result, you face an immediate decision under time pr | https://www.tradeaiders.com/re-inspection-vs-accept-and-discount-how-to-decide-when-defects-are-found.html
+3. gqc.io | https://www.gqc.io/articles/3-tips-on-how-to-re-inspect
+4. qualityinspection.org | https://qualityinspection.org/corrective-action-plan-after-failed-inspection/
+5. tga.gov.au | https://www.tga.gov.au/resources/resources/user-guide/australian-manufacturing-licences-and-overseas-gmp-certification/21-conducting-follow-inspections
+6. PRETESH BISWASIATF 16949:2016 Clause 8.7.1.4 Control of reworked productRework refers to the process of correcting defects or non-conformities found in a product or process during the production or ma | https://preteshbiswas.com/2023/08/03/iatf-169492016-clause-8-7-1-3-control-of-reworked-product/
+7. ownerinspections.com.au
+https://ownerinspections.com.au › articles › when-defects-are-found-do... | https://ownerinspections.com.au/articles/when-defects-are-found-do-inspectors-re-inspect
+8. the-inspection-company.com
+https://beta.the-inspection-company.com › blogs › what-to-do-after-a... | https://beta.the-inspection-company.com/blogs/what-to-do-after-a-failed-quality-inspection-a-2026-step-by-step-guide
+---
+SERP_TEXT_SNIPPET:
+Skip to content
+Accessibility Feedback
+6
+AllSearchImagesVideosMapsNewsCopilot
+More
+About 30,400 results
+Re-inspection is necessary after a factory claims that defects have been corrected when there are still excessive defects present in the products. This is to ensure that the corrective actions taken have been effective and that the products meet the required quality standards. The re-inspection process involves a second formal quality check conducted after the supplier has reworked or sorted the defective goods from the original failed batch. It is essential to conduct a re-inspection to verify that the quality issues have been resolved and to avoid potential downstream issues. 
+Insight Quality Services
++2
+Read more
+Insight Quality Services
+Should You Re-inspect Your Goods if a Lot Fails QC Inspection?
+When your inspection comes back with reports of excessive defects and low-quality products, you may need to schedule a re-inspection after your factory reworks the goods. In this a…
+tradeaiders.com
+Re-Inspection vs Accept-Discount: Defect Decision Guide · TradeAider
+When a pre-shipment inspection report comes back with a "Fail" result, you face an immediate decision under time pressure: demand rework followed by re-inspection, or accept the sh…
+View all
+ 
+Insight Quality Services
+https://insight-quality.com › re-inspection-consumer-goods
+Should You Re-inspect Your Goods if a Lot Fails QC Inspection?
+
+31 Aug 2022 · A re-inspection is necessary when an inspector finds excessive defects with the products in a given lot and the manufacturer has taken steps to resolve that issue.
+
+ 
+tradeaiders.com
+https://www.tradeaiders.com › re-inspection-vs-accept-and-discount-how...
+Re-Inspection vs Accept-Discount: Defect Decision Guide · TradeAider
+
+13 May 2026 · The determining factor is defect severity: minor cosmetic defects with no safety or functional impact may be acceptable with a negotiated discount, while major or critical defects …
+
+gqc.io
+https://www.gqc.io › articles
+100% Manufacturing supervision | GQC
+
+19 May 2022 · In most cases, factories do not perform proper rework because they don’t have enough time to fix the rejected products. They want to keep costs down, so they ask for a re-inspection even …
+
+QualityInspection.org
+https://qualityinspection.org › corrective-action-plan-after-failed-inspection
+Use a Corrective Action Plan after a Failed Inspection
+
+6 Jan 2022 · If that was already done but the results were not satisfactory, and if you have no obvious reason to suspect your supplier of dishonest behavior, you have to assume it is due to a …
+
+Therapeutic Goods Administration (TGA)
+https://www.tga.gov.au › resources › resources › user-guide › australian...
+21: Conducting follow-up inspections - Therapeutic Goods …
+
+We schedule routine follow-up inspections and advise the Australian manufacturer or Australian sponsor shortly before the inspection date. The frequency of routine follow-up inspections depends on the …
+
+PRETESH BISWAS
+https://preteshbiswas.com
+IATF 16949:2016 Clause 8.7.1.4 Control of reworked product
+
+3 Aug 2023 · Re-inspection Requirements: Describe the re-inspection process to verify that the rework has been performed correctly and that the non-conformities have been effectively addressed. This …
+
+ownerinspections.com.au
+https://ownerinspections.com.au › articles › when-defects-are-found-do...
+When Defects Are Found, Do Inspectors Re-inspect. Do You Pay Extra?
+
+16 Mar 2026 · Explains what happens after defects in new-build stage inspections, when re-inspections are needed, and common fee models in Australia.
+
+QualityInspection.org
+https://qualityinspection.org › recurring-production-problems-when-to...
+Recurring Production Problems: When to Fix the Supplier and When …
+
+6 days ago · However, repeated basic mistakes after a product has been manufactured for some time suggest that the supplier lacks effective systems, checks, and controls. A capable factory should …
+
+the-inspection-company.com
+https://beta.the-inspection-company.com › blogs › what-to-do-after-a...
+What to Do After a Failed Quality Inspection: A 2026 Step-by-Step Guide
+
+11 June 2026 · Relying on a factory to self-correct after a failure is a significant operational risk. When deciding what to do after a failed quality inspection, importers often fall into the trap of trusting the …
+
+PRETESH BISWAS
+https://preteshbiswas.com
+IATF 16949:2016 Clause 8.7.1.5 Control of repaired product
+Like
+Dislike
+ 
+Deep dive into When is reinspection necessary after a factory claims th…
+corrective action plan after inspection
+failed inspection corrective action plan
+re inspection of goods
+re inspection for good quality
+what is a re inspection
+factory rework guidelines
+qc inspection failures
+qc inspection problems
+ 
+Continuous quality improvement methods
+Steps to improve quality rating
+CQC reinspection process

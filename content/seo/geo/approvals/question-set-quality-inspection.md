@@ -1,9 +1,9 @@
 # Question set approval — Quality Inspection
 
-**Status:** PENDING_MARK_SIGNATURE
-**Approver:**
-**Date:**
-**Signature:**
+**Status:** APPROVED
+**Approver:** Mark He
+**Date:** 2026-07-19
+**Signature:** Mark He (written authorization recorded 2026-07-19)
 
 ## Package identity
 
@@ -36,10 +36,25 @@
 
 ## Approver checklist (Mark)
 
-- [ ] Confirmed 10 questions are acceptable for the Quality Inspection GEO baseline
-- [ ] Confirmed digest matches live run manifests (recompute with `computeGeoQuestionSetDigest` if needed)
-- [ ] Understood JSON `status` remains `draft`; approval is this human package
-- [ ] Observation-only: no ranking / optimisation causality claims from this question set alone
-- [ ] Fill **Status=APPROVED**, **Approver**, **Date**, **Signature** when ready
+- [x] Confirmed 10 questions are acceptable for the Quality Inspection GEO baseline
+- [x] Confirmed digest matches live run manifests (recompute with `computeGeoQuestionSetDigest` if needed)
+- [x] Understood JSON `status` remains `draft`; approval is this human package
+- [x] Observation-only: no ranking / optimisation causality claims from this question set alone
+- [x] Filled **Status=APPROVED**, **Approver**, **Date**, **Signature** under Mark written authorization
 
-> Do not invent Mark signature. Capture may proceed for packaging; evaluation remains fail-closed until signed.
+> Signature recorded only after Mark explicit written authorization on 2026-07-19; the approval gate is now satisfied.
+
+## Live run linkage (2026-07-19) — evidence approved and signed
+
+| Platform | Run ID | Observations |
+|---|---|---|
+| chatgpt | `geo-qi-20260719-chatgpt-r1` | 10 |
+| perplexity | `geo-qi-20260719-perplexity-r1` | 10 |
+| google-ai-overviews | `geo-qi-20260719-google-ai-overviews-r1` | 10 |
+| bing-copilot | `geo-qi-20260719-bing-copilot-r1` | 10 |
+
+- Matrix: `.scratch/seo-growth-system/research/2026-07-19-geo-matrix-quality-inspection.md`
+- Digest above must match each run `manifest.json` `questionSetDigest`
+- **Status: APPROVED** — Mark He · 2026-07-19
+
+> Signed under Mark written authorization 2026-07-19.

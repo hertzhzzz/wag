@@ -1,0 +1,43 @@
+{
+  "observationId": "geo-qi-20260719-bing-copilot-r1__quality-inspection-06-during-production",
+  "platform": "bing-copilot",
+  "questionId": "quality-inspection-06-during-production",
+  "prompt": "When should an Australian buyer arrange a during-production inspection rather than wait for pre-shipment inspection?",
+  "promptHash": "sha256:60d0af49c1d2da420febfd32c48428b1fa801d921a5905bbb9e0f535e3f9abd5",
+  "observedAt": "2026-07-19T04:05:41.344Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "thirdtesting.com",
+    "nbnqc.com",
+    "zignify.net",
+    "ecqa.com",
+    "the-inspection-company.com",
+    "ezshipmate.com",
+    "us.goodada.com",
+    "lmats.com.au",
+    "svigloballtd.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-bing-copilot-r1/snapshots/geo-qi-20260719-bing-copilot-r1__quality-inspection-06-during-production.txt",
+    "hash": "sha256:4b893c3b2c390736172dd1131e1976577a4daabfd1738489717eee7a4288c3d7",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Bing SERP en-AU (setlang=en-AU&cc=AU). Auth signed-out. Exact prompt as query. Observation-only. Surface bing-serp-generative-answer-en-AU (not copilot.microsoft.com)."
+}

@@ -1,0 +1,132 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=When%20should%20an%20Australian%20buyer%20arrange%20a%20during-production%20inspection%20rather%20than%20wait%20for%20pre-shipment%20inspection%3F&hl=en-AU&gl=au
+TITLE: When should an Australian buyer arrange a during-production inspection rather than wait for pre-shipment inspection? - Google Search
+OBSERVED_AT: 2026-07-19T04:03:28.846Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: When should an Australian buyer arrange a during-production inspection rather than wait for pre-shipment inspection?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+AI_OVERVIEW: (none detected)
+ORGANIC_DOMAINS:
+1. ecqa.com
+2. sell.amazon.in
+3. tradeaiders.com
+4. goaudits.com
+5. chinadirectsourcing.com.au
+6. productsafety.gov.au
+7. svigloballtd.com
+8. the-inspection-company.com
+9. us.goodada.com
+10. excellencial.com
+11. export.business.gov.au
+---
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Short videos
+Forums
+Images
+Shopping
+Videos
+More
+Tools
+Search Results
+Web results
+During Production VS. Pre-Shipment Inspection - ECQA
+
+ecqa.com
+https://ecqa.com › Blog
+23 June 2025 — Pre-Shipment Inspection is conducted after production is completed to verify whether finished goods meet buyer requirements before shipment.Read more
+Missing: Australian ‎arrange ‎wait
+People also ask
+What is the need of pre-shipment inspection?
+What is the Australian standard for pre purchase structural inspection?
+When should packages normally be inspected?
+Why carrying out inspection during production in a manufacturing industry?
+Web results
+Inspect Before Shipment, or Not when Importing from China?
+
+ChinaDirect Sourcing
+https://www.chinadirectsourcing.com.au › inspect-before...
+The answer depends on a few variables, Pre-Shipment Inspection Occurs when the merchandise is completed, packed and ready for shipment, or at least 80% of  ...
+Missing: arrange ‎wait
+WHAT YOU
+
+ACCC Product Safety
+https://www.productsafety.gov.au › system › files
+PDF
+A pre-shipment inspection can be easily organised for as little as AUD$100 or so depending on the location of the factory, the size of the consignment, and so ...
+Missing: buyer ‎arrange ‎wait
+During Production Inspection: What Is It & Best Practices
+
+SVI Global
+https://www.svigloballtd.com › quality-assurance › wha...
+2 days ago — Waiting until the final inspection to identify problems is risky, as defects may have already affected a large portion of the order, which could ...Read more
+Missing: Australian ‎| Show results with: Australian
+Using During Production Inspection to Prevent Delays
+
+TIC - The Inspection Company
+https://www.the-inspection-company.com › blogs › usi...
+2 June 2026 — The ideal window is when 20% to 60% of your order is completed and the factory has started the initial packing process.
+Missing: Australian ‎buyer
+During Production Inspection Explained
+
+Goodada
+https://us.goodada.com › inspection-guides › during-pro...
+In many cases, this means the inspection is booked when around 20% to 60% of the order is complete, although the right timing depends on the product type,
+Missing: Australian ‎wait
+When Should a Shipment Be Inspected for Quality
+
+TradeAider
+https://www.tradeaiders.com › when-should-a-shipment-...
+If production has started and defects may spread, During Production Inspection can check early output and correction evidence. If goods are complete and packed ...Read more
+Missing: Australian ‎| Show results with: Australian
+During Production Inspection, Is It Important?
+
+Excellencial
+https://www.excellencial.com › Blog
+10 Feb 2022 — To avoid and minimize this issue, many importers agree that inspection should begin earlier or during the production process. The goal is to ...Read more
+Pre-Shipment Inspection for Bulk and Break-Bulk Cargo
+
+Business.gov.au
+https://export.business.gov.au › phl › product-documents
+A document certifying that bulk and break-bulk goods to be imported have been inspected. Required for customs clearance.Read more
+Missing: wait ‎| Show results with: wait
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

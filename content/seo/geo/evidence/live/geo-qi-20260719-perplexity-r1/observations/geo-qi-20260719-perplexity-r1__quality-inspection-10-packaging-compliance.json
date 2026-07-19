@@ -1,0 +1,33 @@
+{
+  "observationId": "geo-qi-20260719-perplexity-r1__quality-inspection-10-packaging-compliance",
+  "platform": "perplexity",
+  "questionId": "quality-inspection-10-packaging-compliance",
+  "prompt": "What packaging, labelling, and compliance checks should an AU-NZ importer add to a China inspection?",
+  "promptHash": "sha256:f04c088fffd733db82795f56ee9feaf4ef2609dacdd219d118c7add596fdb2ce",
+  "observedAt": "2026-07-19T04:16:09.713Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-perplexity-r1/snapshots/geo-qi-20260719-perplexity-r1__quality-inspection-10-packaging-compliance.txt",
+    "hash": "sha256:65633ee0e9b594f4d1edb205dc3584cc2ac7c64edf3695d2005a6ab3d9c335ea",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity web. Exact prompt. Observation-only. New search per question."
+}

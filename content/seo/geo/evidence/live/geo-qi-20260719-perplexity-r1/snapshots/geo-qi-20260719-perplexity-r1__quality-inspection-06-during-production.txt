@@ -1,0 +1,63 @@
+An Australian buyer should arrange a during-production inspection (DPI) when they need to catch and correct quality or process issues while the factory is still making the goods, rather than only verifying the final result at the end.
+nbnqc
++1
+
+Key situations to choose during-production inspection
+
+Use DPI instead of waiting for pre-shipment inspection (PSI) when:
+
+The supplier is new or unproven – You need early visibility into whether they can execute your specs consistently before they complete the full order.
+huangsourcing
++1
+
+The order is large or high-value – The cost of discovering a systemic defect at the end is too high; you want the option to stop, rework, or adjust mid-run.
+nbnqc
++1
+
+Products have tight tolerances or complex workmanship – Dimensions, surface finish, assembly method, color consistency, logo placement, or packaging direction can drift during bulk production.
+huangsourcing
+
+Custom specs, private label, or multiple SKUs – When there are multiple styles, colors, sizes, or packaging details, consistency problems often emerge before the order is finished.
+nbnqc
++1
+
+Early signs of material or process changes – If you suspect the supplier is changing materials, packaging, labels, or subcontracting steps after sample approval, inspect during production to confirm and correct.
+huangsourcing
+
+Tight delivery schedule – You need evidence early enough to allow corrective action withoutmissing the shipment window.
+nbnqc
+
+You need leverage before the supplier continues full production – DPI gives you objective evidence to decide whether to let production continue under current instructions, adjust the process, or halt.
+huangsourcing
+
+When pre-shipment inspection is more appropriate
+
+PSI is better suited when:
+
+Goods are finished or nearly finished and you need final evidence before releasing balance payment, approving pickup, or allowing cartons to leave the factory.
+huangsourcing
+
+Your main risks are packaging, labels, barcodes, FNSKU, carton marks, SKU separation, or carton condition.
+huangsourcing
+
+You need a final go/hold/rework decision based on the completed order, not mid-process corrections.
+huangsourcing
+
+Practical rule of thumb for Australian importers
+
+Think about your next money or movement decision:
+huangsourcing
+
+If the factory is still producing and you’re unsure whether the quality direction is correct → inspect during production (typically when 20–80% of the order is complete).
+nbnqc
++1
+
+If the factory says goods are finished and you’re about to pay the balance, schedule pickup, or release shipment → inspect pre-shipment.
+huangsourcing
+
+For first orders with new suppliers or high-risk products, consider both: DPI to control process risk early, and PSI to verify final readiness.
+huangsourcing
+
+This approach aligns with 2026 guidance for Australian importers sourcing from China, where DPI is positioned as an early risk-control tool and PSI as final shipment-validation.
+epicsourcing.com
++2

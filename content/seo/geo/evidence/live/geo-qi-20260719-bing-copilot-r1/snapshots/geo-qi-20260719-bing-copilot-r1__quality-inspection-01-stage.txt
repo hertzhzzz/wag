@@ -1,0 +1,139 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=Which%20product%20inspection%20stage%20should%20an%20Australian%20importer%20use%20before%20goods%20leave%20a%20factory%20in%20China%3F&setlang=en-AU&cc=AU
+TITLE: Which product inspection stage should an Australian importer use before goods leave a factory in China? - Search
+OBSERVED_AT: 2026-07-19T04:05:16.939Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU
+PROMPT: Which product inspection stage should an Australian importer use before goods leave a factory in China?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+The Pre-shipment Inspection (PSI) is the recommended stage for Australian importers before goods leave a factory in China. This inspection is crucial as it is the last opportunity to catch any issues before the goods are shipped. The PSI involves an independent third-party inspection where an inspector checks a sample of the finished goods against the specifications, approved sample, and packaging requirements. This inspection is particularly important for ensuring that the factory is using the specified materials and that the production setup matches what was quoted. If the inspection fails, the importer has the leverage to negotiate with the factory for rework, which can prevent significant financial losses.
+Epic Sourcing
++5
+Read more
+Epic Sourcing
+Product Quality Control When Sourcing from China: A Complete Guide for ...
+Here's a stat that should make every importer sit up straight: over 60% of businesses experience a significant quality decline after their first successful order from a Chinese sup…
+soloimporter.com
+Pre-Shipment Inspection Guide: How to Check Goods Before They Leave China
+This guide explains what a pre-shipment inspection is, when small importers should use one, how to arrange it, and what to do if the inspection fails. What Is a Pre-Shipment Inspec…
+View all
+Εpіс Soυrсing
+https://www.epicsourcing.com.au › post › product-quality-control-sourcing...
+Product Quality Control When Sourcing from China: A Complete …
+It's entirely preventable — if you have the right quality control (QC) processes in place before a single unit leaves China. This is the complete guide to product quality control for Australian importers …
+ѕolοimporter.com
+https://www.soloimporter.com › pre-shipment-inspection-guide
+Pre-Shipment Inspection Guide: How to Check Goods Before They …
+14 May 2026 · Learn when and how to arrange a pre-shipment inspection for China imports, what inspectors check, how to read AQL results, and what to do if the inspection fails.
+Epic Sourcing
+https://www.epicsourcing.com.au › post › quality-control-importing-from...
+Quality Control When Importing from China: A No-Nonsense Guide for ...
+Start with a solid QC checklist, use the right inspection type for each stage of production, understand your Australian compliance requirements, and work with people who know Chinese manufacturing …
+сrοssbгidgeinspectioոѕ.cοm.аu
+https://crossbridgeinspections.com.au
+Crossbridge Inspections — Independent China Inspection for …
+Independent onsite inspection in China for Australian importers. We check quality, count quantities, verify packaging, and report back — before your goods leave the factory.
+trаdeaіdеrs.сom
+https://www.tradeaiders.com
+5 Types of Quality Inspection for Importers · TradeAider
+1 July 2026 · Learn when importers should use pre-production, during-production, pre-shipment, container loading, and testing or audit checks before releasing a China order.
+Videos of Which Product Inspection Stage Should An Australian Impor…
+10:28
+How We Do Product Inspection in China? Camp Bed Factory QC Walkthrough
+YouTubeTony Sourcing
+62 views2 months ago
+3:48
+Goods Rejected Abroad? Here’s Why! Quality Control and Preshipment Inspection for Exporters
+YouTubeEXIM COACH
+43 views18 May 2025
+3:17
+1688 Importation: How We Inspect Goods for 1688 Importation Before Shipping? #1688importation
+YouTubeSupplyia Sourcing
+1.2K views3 months ago
+---
+ORGANIC:
+1. Ιոtегtek Ιոfοгm https://www.intertekinform.com › Australian › Standards | https://www.intertekinform.com/en-au/?msclkid={msclkid}
+2. The Pre-shipment Inspection (PSI) is the recommended stage for Australian importers before goods leave a factory in China. This inspection is crucial as it is the last opportunity to catch any issues  | https://www.epicsourcing.com.au/post/product-quality-control-sourcing-china-australian-importers-2026
+3. soloimporter.com
+Pre-Shipment Inspection Guide: How to Check Goods Before They Leave China
+This guide explains what a pre-shipment inspection is, when small importers should use one, how to arrange it | https://www.soloimporter.com/pre-shipment-inspection-guide/
+4. crossbridgeinspections.com.au | https://crossbridgeinspections.com.au/
+5. tradeaiders.com | https://www.tradeaiders.com/5-types-of-quality-inspection-and-when-to-use-them.html
+6. corporatealliance.comA Guide to Quality Control: Pre-Shipment Inspections and Factory AuditsFor Australian importers, quality control isn’t just about maintaining standards—it’s about protecting your  | https://corporatealliance.com/blog/business/a-guide-to-quality-control-pre-shipment-inspections-and-factory-audits/
+---
+SERP_TEXT_SNIPPET:
+Skip to content
+Accessibility Feedback
+6
+AllSearchImagesVideosMapsNewsCopilot
+More
+About 7,200 results
+ 
+Pre-shipment Inspection (PSI)
+The Pre-shipment Inspection (PSI) is the recommended stage for Australian importers before goods leave a factory in China. This inspection is crucial as it is the last opportunity to catch any issues before the goods are shipped. The PSI involves an independent third-party inspection where an inspector checks a sample of the finished goods against the specifications, approved sample, and packaging requirements. This inspection is particularly important for ensuring that the factory is using the specified materials and that the production setup matches what was quoted. If the inspection fails, the importer has the leverage to negotiate with the factory for rework, which can prevent significant financial losses. 
+Epic Sourcing
++5
+Read more
+Epic Sourcing
+Product Quality Control When Sourcing from China: A Complete Guide for ...
+Here's a stat that should make every importer sit up straight: over 60% of businesses experience a significant quality decline after their first successful order from a Chinese sup…
+soloimporter.com
+Pre-Shipment Inspection Guide: How to Check Goods Before They Leave China
+This guide explains what a pre-shipment inspection is, when small importers should use one, how to arrange it, and what to do if the inspection fails. What Is a Pre-Shipment Inspec…
+View all
+ 
+Εpіс Soυrсing
+https://www.epicsourcing.com.au › post › product-quality-control-sourcing...
+Product Quality Control When Sourcing from China: A Complete …
+
+It's entirely preventable — if you have the right quality control (QC) processes in place before a single unit leaves China. This is the complete guide to product quality control for Australian importers …
+
+ 
+ѕolοimporter.com
+https://www.soloimporter.com › pre-shipment-inspection-guide
+Pre-Shipment Inspection Guide: How to Check Goods Before They …
+
+14 May 2026 · Learn when and how to arrange a pre-shipment inspection for China imports, what inspectors check, how to read AQL results, and what to do if the inspection fails.
+
+Epic Sourcing
+https://www.epicsourcing.com.au › post › quality-control-importing-from...
+Quality Control When Importing from China: A No-Nonsense Guide for ...
+
+Start with a solid QC checklist, use the right inspection type for each stage of production, understand your Australian compliance requirements, and work with people who know Chinese manufacturing …
+
+сrοssbгidgeinspectioոѕ.cοm.аu
+https://crossbridgeinspections.com.au
+Crossbridge Inspections — Independent China Inspection for …
+
+Independent onsite inspection in China for Australian importers. We check quality, count quantities, verify packaging, and report back — before your goods leave the factory.
+
+trаdeaіdеrs.сom
+https://www.tradeaiders.com
+5 Types of Quality Inspection for Importers · TradeAider
+
+1 July 2026 · Learn when importers should use pre-production, during-production, pre-shipment, container loading, and testing or audit checks before releasing a China order.
+
+Videos of Which Product Inspection Stage Should An Australian Impor…
+10:28
+How We Do Product Inspection in China? Camp Bed Factory QC Walkthrough
+YouTubeTony Sourcing
+62 views2 months ago
+3:48
+Goods Rejected Abroad? Here’s Why! Quality Control and Preshipment Inspection for Exporters
+YouTubeEXIM COACH
+43 views18 May 2025
+3:17
+1688 Importation: How We Inspect Goods for 1688 Importation Before Shipping? #1688importation
+YouTubeSupplyia Sourcing
+1.2K views3 months ago
+See more
+ 
+1
+2
+3
+Final building inspection requirements
+Specialized home inspection types
+Final inspection for new construction

@@ -1,0 +1,129 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=What%20packaging%2C%20labelling%2C%20and%20compliance%20checks%20should%20an%20AU-NZ%20importer%20add%20to%20a%20China%20inspection%3F&hl=en-AU&gl=au
+TITLE: What packaging, labelling, and compliance checks should an AU-NZ importer add to a China inspection? - Google Search
+OBSERVED_AT: 2026-07-19T04:03:49.406Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: What packaging, labelling, and compliance checks should an AU-NZ importer add to a China inspection?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+AI_OVERVIEW: (none detected)
+ORGANIC_DOMAINS:
+1. chinamarket.afgc.org.au
+2. trade.gov
+3. eximpe.com
+4. foodauthority.nsw.gov.au
+5. foodstandards.gov.au
+6. my.nzte.govt.nz
+7. worldfirst.com
+8. agriculture.gov.au
+9. sinopartners.com.au
+10. matthews.com.au
+11. china-briefing.com
+12. mutualsourcing.com
+---
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Short videos
+Shopping
+Images
+Videos
+More
+Tools
+Search Results
+Web results
+Food and Beverage Labelling Guide for Exports to China
+
+Australian Food & Grocery Council
+https://chinamarket.afgc.org.au › uploads › 2021/02
+PDF
+If the imported prepackaged food is selected for inspection or testing, the importer must provide the GACC with all certification material, including the ...Read more
+People also ask
+What are the requirements for labeling and packaging in China?
+Do you what compliance or custom procedure have to follow if buying from China?
+What are the 12 food labelling requirements?
+Who enforces compliance with requirements of the Australia New Zealand Food Standards Code by Australian food manufacturers and processors?
+Web results
+What you need to know about China compliance ...
+
+New Zealand Trade and Enterprise (NZTE)
+https://my.nzte.govt.nz › article › what-you-need-to-kno...
+Your freight forwarder/importer should help you confirm the country of origin, Harmonized System (HS) code, and tariff rate. Ensure your Chinese agent or  ...
+Exporting to China from Australia: The complete guide
+
+WorldFirst
+https://www.worldfirst.com › ecommerce-seller-resources
+4 Aug 2025 — These tests check everything from contamination levels to adherence to food labelling requirements. Some products may also need to meet ...Read more
+Inspecting and testing imported food
+
+DAFF
+https://www.agriculture.gov.au › inspection-testing
+21 July 2025 — This includes compliance with: the Australia and New Zealand Food Standards Code country of origin food labelling requirements.
+Missing: packaging, ‎add ‎China
+Pre-Shipment Inspection China | Quality Control Australia
+
+Sino Partners
+https://www.sinopartners.com.au › sourcing › pre-ship...
+Labelling Accuracy: Check country of origin marking, product descriptions, compliance marks and all other required labelling elements. · Packaging Integrity: ...Read more
+Missing: add ‎| Show results with: add
+Exporting To China? Here's What You Need to Consider First
+
+Matthews Australasia
+https://www.matthews.com.au › blog › exporting-to-chin...
+27 Oct 2021 — Your products must pass a quarantine inspection performed by China Inspection. If your goods don't , excessive moisture, mis-labelling, and ...
+Missing: NZ ‎| Show results with: NZ
+Imported foods
+
+Food Standards Australia New Zealand
+https://www.foodstandards.gov.au › consumer › importe...
+13 Aug 2025 — Foods imported for sale in Australia must comply with the Australia New Zealand Food Standards Code (the Code). All imported foods must also comply with strict ...Read more
+Missing: checks ‎China
+Exporting Food Products to China: A Step by Step Guide
+
+China Briefing
+https://www.china-briefing.com › china › sector-insights
+21 Aug 2023 — All labels must be approved by the Chinese Inspection and Quarantine (CIQ) under AQSIQ. As label standards in China are subject to change, you ...Read more
+Quality Check Guide for China Sourcing Before Shipment
+
+mutualsourcing.com
+https://mutualsourcing.com › quality-check-guide-for-c...
+1 July 2026 — Outer cartons should be strong enough for storage and transport. The inspection should cover carton size, gross weight, net weight, carton mark, ...Read more
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

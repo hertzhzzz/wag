@@ -1,0 +1,150 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=How%20should%20a%20buyer%20set%20an%20AQL%20standard%20and%20defect%20limits%20for%20a%20China%20production%20order%3F&hl=en-AU&gl=au
+TITLE: How should a buyer set an AQL standard and defect limits for a China production order? - Google Search
+OBSERVED_AT: 2026-07-19T04:03:08.444Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: How should a buyer set an AQL standard and defect limits for a China production order?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+AI_OVERVIEW: (none detected)
+ORGANIC_DOMAINS:
+1. qima.com
+2. eurofins.com
+3. hqts.com
+4. guidedimports.com
+5. guangzhousourcing.com
+6. qualityinspection.org
+7. huangsourcing.com
+8. aqiservice.com
+9. myfactoryguy.com
+10. qcadvisor.com
+11. reddit.com
+12. facebook.com
+---
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Shopping
+Images
+Short videos
+Videos
+More
+Tools
+Search Results
+Web results
+Acceptable Quality Limit, AQL
+
+QIMA
+https://www.qima.com › aql-acceptable-quality-limit
+The Acceptance Quality Limit (AQL) is used in product inspections to determine the maximum acceptable number of defective items in a sample batch.Read more
+People also ask
+What is the defect limit of AQL?
+How to choose the correct aql level?
+What is the AQL rule for inspection?
+What is AQL 2.5 in final inspection?
+Web results
+What Is AQL? Quality Acceptance Standards for China ...
+
+Guided Imports
+https://guidedimports.com › Blog
+5 Feb 2026 — Buyers can regulate the overall quality of their goods by arranging their AQLs for critical, major, and minor defects. On the top of AQL Table ...
+AQL Inspection in China: Guide for Quality Control
+
+Guangzhou Sourcing
+https://www.guangzhousourcing.com › blog › aql-inspe...
+6 Jan 2026 — A guide to AQL inspection in China covering sample sizes, defect limits, supplier communication, inspection results, and quality control ...
+4 Proven Ways To Enforce A Quality Standard In China
+
+QualityInspection.org
+https://qualityinspection.org › Quality Control Tips
+12 July 2010 — 1. Insist on getting a “perfect” sample · 2. Define tolerances wherever applicable · 3. Set a limit on the proportion of defects · 4. A quality ...Read more
+AQL Inspection China: Sample Size & Defect Limits
+
+huangsourcing.com
+https://www.huangsourcing.com › aql-inspection-china-...
+19 June 2026 — Before the factory visit, the buyer should approve the sampling standard, lot size, inspection level, defect definitions, AQL values, and ...
+AQL Inspection Levels Guide: Reduce Defects by 35% ...
+
+AQI Service
+https://aqiservice.com › aql-inspection-levels-guide-red...
+16 Dec 2025 — 1. Define product category and customer expectations. 2. Analyze defect criticality. 3. Use AQL tables. 4. Balance cost and risk. 5. Validate ...
+What is an AQL? The Operator's Guide to Quality Limits in China
+
+myfactoryguy.com
+https://myfactoryguy.com › article › what-is-an-aql-qua...
+13 Apr 2026 — You must define your defect limits before production starts ... You should use these levels to set clear boundaries in your purchase order.Read more
+Acceptable Quality Limit (AQL) Classification: Three Main ...
+
+qcadvisor
+https://www.qcadvisor.com › blog › acceptable-quality-...
+15 Jan 2026 — AQL inspections use three defect classes—minor, major, and critical—because they represent a practical severity ladder tied to customer outcome.Read more
+Discussions and forums
+AQL Inspection Guide: Acceptable Quality Limit for China Sourcing
+Reddit · 
+r/AmazonFBATips
+ · 
+2 comments
+ · 
+1 month ago
+ · 
+Pro-Tip: You do not have to use a single tier for the whole product. The most common setup for e-commerce importers is a split approach: ...  
+More
+Acceptance Quality Limit (AQL) for Product Inspection
+Facebook · 
+Food Safety Network - ISO 2200…
+ · 
+1 comment
+ · 
+4 years ago
+ · 
+What is the acceptable quality level (AQL) sampling for garments ...
+Facebook · 
+Quality Assurances BD(QA)
+ · 
+2 comments
+ · 
+4 years ago
+ · 
+See more
+People also search for
+Ltpd sampling plan calculator
+Aerospace aql
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

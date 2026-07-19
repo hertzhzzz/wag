@@ -1,0 +1,33 @@
+{
+  "observationId": "geo-qi-20260719-perplexity-r1__quality-inspection-08-reinspection",
+  "platform": "perplexity",
+  "questionId": "quality-inspection-08-reinspection",
+  "prompt": "When is reinspection necessary after a factory claims that defects have been corrected?",
+  "promptHash": "sha256:dea90c03fd9aa0e04586f8395f6aa1d79904f98e8eeb787d7c8ed53a19c4f957",
+  "observedAt": "2026-07-19T04:15:33.784Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-perplexity-r1/snapshots/geo-qi-20260719-perplexity-r1__quality-inspection-08-reinspection.txt",
+    "hash": "sha256:97af8a70d24a5cf58b47527138aea7e5de579a70bc515c7ff035f8092337c6a8",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity web. Exact prompt. Observation-only. New search per question."
+}

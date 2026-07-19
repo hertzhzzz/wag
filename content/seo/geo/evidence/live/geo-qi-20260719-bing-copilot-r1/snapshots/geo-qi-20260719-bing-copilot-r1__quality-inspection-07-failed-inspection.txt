@@ -1,0 +1,160 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=What%20should%20a%20buyer%20do%20when%20a%20China%20quality%20inspection%20fails%3F&setlang=en-AU&cc=AU
+TITLE: What should a buyer do when a China quality inspection fails? - Search
+OBSERVED_AT: 2026-07-19T04:05:46.174Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU
+PROMPT: What should a buyer do when a China quality inspection fails?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+When a China quality inspection fails, a buyer should first gather information to make a rational decision. The first step is to understand the nature of the problem and whether the defects are acceptable to ship. If the defects are minor and the product can be reworked, the buyer should ensure that the supplier has the necessary authority to perform the rework and that the rework is completed within the agreed timeframe. If the defects are significant and the product cannot be reworked, the buyer should prepare an action plan to decide whether to ship the goods or if they need to be re-worked and re-inspected before shipping. It is crucial to assert oneself and not accept goods that do not meet the buyer's quality requirements.
+Epic Sourcing
+Read more
+Epic Sourcing
+Product Quality Control When Sourcing from China: A Complete Guide for ...
+If the inspection fails, you have leverage to negotiate with the factory for rework — while the goods are still in China, not after they've been shipped to Australia. This is the i…
+Guided Imports
+What to Do When Your Product Fails a Quality Inspection
+Depending on what type of inspection you performed, you’ll have some different options to resolve the situation. First, fight the temptation to curse out your supplier, as this wil…
+View all
+Epic Sourcing
+https://www.epicsourcing.com.au › post › product-quality-control-sourcing...
+Product Quality Control When Sourcing from China: A Complete …
+Over 60% of businesses experience a quality decline after their first order from China. Here's your complete guide to QC inspections, AQL standards, and spec sheets for 2026.
+Guided Imports
+https://guidedimports.com › blog › failed-inspection-report
+Failed Inspection Report? Here’s What to Do Next - Guided Imports
+What Determines A “Failed” QC Inspection?Most Common Reasons Quality Inspections FailMisconceptions of Failed Inspection
+Resist the knee-jerk reaction to immediately cancel your order. An inspection result itself isn’t the only factor that you should use to determine whether your order should ship. Before you make an assessment, it’s important to know the nature of the failure. Inspections are determined on a pass/fail basis using statistical tools known asAQL tables...
+See more on guidedimports.com
+Epic Sourcing
+https://www.epicsourcing.com.au › post › quality-control-importing-from...
+Quality Control When Importing from China: A No-Nonsense Guide for ...
+This guide covers everything you need to know about quality control when importing from China in 2026 — from types of inspections to what to include in your QC checklist, plus the hard lessons …
+chinaeasysourcing.com
+https://chinaeasysourcing.com › quality-control-china-imports-complete-guide
+Quality Control for China Imports: The Complete Guide (AQL, …
+9 May 2026 · Everything you need to know about quality control for China imports — pre-shipment inspections, AQL sampling, factory audits, QIMA vs Bureau Veritas vs SGS, and how to handle …
+visgl.com
+https://visgl.com › what-to-do-when-your-product-fails-a-quality...
+What to Do When Your Product Fails a Quality Inspection: A Practical ...
+12 June 2023 · In this article, we outline the key actions you should take when your product fails a quality inspection in Asia or the European Union, including manufacturing locations such as China, …
+chinalegalexperts.com
+https://www.chinalegalexperts.com › news › chinese-factory-sent-defective...
+Chinese Factory Sent Defective Products: What Now?
+Quality control is essential when sourcing products from Chinese manufacturers. Effective quality inspections and detailed factory audits can significantly reduce the risk of receiving defective …
+stellarchinese.com
+https://www.stellarchinese.com › qc-inspection-in-china
+QC Inspection In China: Pre-Shipment Inspection, AQL, Cost, And …
+A buyer's guide to QC inspection in China: the inspection types, how AQL sampling works, what it costs, what inspectors check, and what to do if it fails.
+Sourcing Allies
+https://www.sourcingallies.com › blog › poor-quality-products-from-china...
+Poor Quality from China: What to Do | Sourcing Allies
+What to do when goods from China do not match your order — dispute options, supplier negotiation, prevention, and when to cut your losses.
+ecqa.com
+https://ecqa.com › supplier-dispute-after-failed-inspection
+How to Handle a Supplier Dispute After a Failed Inspection
+tradeaiders.com
+https://www.tradeaiders.com › what-to-do-when-your-pre-shipment...
+Like
+Dislike
+Deep dive into What should a buyer do when a China quality inspectio…
+---
+ORGANIC:
+1. When a China quality inspection fails, a buyer should first gather information to make a rational decision. The first step is to understand the nature of the problem and whether the defects are accept | https://www.epicsourcing.com.au/post/product-quality-control-sourcing-china-australian-importers-2026
+2. Guided Imports
+What to Do When Your Product Fails a Quality Inspection
+Depending on what type of inspection you performed, you’ll have some different options to resolve the situation. First, fight the | https://guidedimports.com/blog/failed-inspection-report/
+3. chinaeasysourcing.com | https://chinaeasysourcing.com/quality-control-china-imports-complete-guide/
+4. visgl.com | https://visgl.com/what-to-do-when-your-product-fails-a-quality-inspection-a-practical-guide-for-importers/
+5. chinalegalexperts.comChinese Factory Sent Defective Products: What Now?When a Chinese factory sends defective products, it can throw your business operations into disarray, raising immediate concerns  | https://www.chinalegalexperts.com/news/chinese-factory-sent-defective-products
+6. stellarchinese.com
+https://www.stellarchinese.com › qc-inspection-in-china | https://www.stellarchinese.com/qc-inspection-in-china/
+7. Sourcing Allies
+https://www.sourcingallies.com › blog › poor-quality-products-from-china... | https://www.sourcingallies.com/blog/poor-quality-products-from-china-what-to-do
+8. ecqa.com
+https://ecqa.com › supplier-dispute-after-failed-inspection | https://ecqa.com/supplier-dispute-after-failed-inspection/
+9. tradeaiders.com
+https://www.tradeaiders.com › what-to-do-when-your-pre-shipment... | https://www.tradeaiders.com/what-to-do-when-your-pre-shipment-inspection-fails-a-step-by-step-response-plan.html
+---
+SERP_TEXT_SNIPPET:
+Skip to content
+Accessibility Feedback
+6
+AllSearchImagesVideosMapsNewsCopilot
+More
+About 16,200 results
+When a China quality inspection fails, a buyer should first gather information to make a rational decision. The first step is to understand the nature of the problem and whether the defects are acceptable to ship. If the defects are minor and the product can be reworked, the buyer should ensure that the supplier has the necessary authority to perform the rework and that the rework is completed within the agreed timeframe. If the defects are significant and the product cannot be reworked, the buyer should prepare an action plan to decide whether to ship the goods or if they need to be re-worked and re-inspected before shipping. It is crucial to assert oneself and not accept goods that do not meet the buyer's quality requirements. 
+Epic Sourcing
+Read more
+Epic Sourcing
+Product Quality Control When Sourcing from China: A Complete Guide for ...
+If the inspection fails, you have leverage to negotiate with the factory for rework — while the goods are still in China, not after they've been shipped to Australia. This is the i…
+Guided Imports
+What to Do When Your Product Fails a Quality Inspection
+Depending on what type of inspection you performed, you’ll have some different options to resolve the situation. First, fight the temptation to curse out your supplier, as this wil…
+View all
+ 
+Epic Sourcing
+https://www.epicsourcing.com.au › post › product-quality-control-sourcing...
+Product Quality Control When Sourcing from China: A Complete …
+
+Over 60% of businesses experience a quality decline after their first order from China. Here's your complete guide to QC inspections, AQL standards, and spec sheets for 2026.
+
+ 
+Guided Imports
+https://guidedimports.com › blog › failed-inspection-report
+Failed Inspection Report? Here’s What to Do Next - Guided Imports
+What Determines A “Failed” QC Inspection?Most Common Reasons Quality Inspections FailMisconceptions of Failed Inspection
+Resist the knee-jerk reaction to immediately cancel your order. An inspection result itself isn’t the only factor that you should use to determine whether your order should ship. Before you make an assessment, it’s important to know the nature of the failure. Inspections are determined on a pass/fail basis using statistical tools known asAQL tables...
+See more on guidedimports.com
+Epic Sourcing
+https://www.epicsourcing.com.au › post › quality-control-importing-from...
+Quality Control When Importing from China: A No-Nonsense Guide for ...
+
+This guide covers everything you need to know about quality control when importing from China in 2026 — from types of inspections to what to include in your QC checklist, plus the hard lessons …
+
+chinaeasysourcing.com
+https://chinaeasysourcing.com › quality-control-china-imports-complete-guide
+Quality Control for China Imports: The Complete Guide (AQL, …
+
+9 May 2026 · Everything you need to know about quality control for China imports — pre-shipment inspections, AQL sampling, factory audits, QIMA vs Bureau Veritas vs SGS, and how to handle …
+
+visgl.com
+https://visgl.com › what-to-do-when-your-product-fails-a-quality...
+What to Do When Your Product Fails a Quality Inspection: A Practical ...
+
+12 June 2023 · In this article, we outline the key actions you should take when your product fails a quality inspection in Asia or the European Union, including manufacturing locations such as China, …
+
+chinalegalexperts.com
+https://www.chinalegalexperts.com › news › chinese-factory-sent-defective...
+Chinese Factory Sent Defective Products: What Now?
+
+Quality control is essential when sourcing products from Chinese manufacturers. Effective quality inspections and detailed factory audits can significantly reduce the risk of receiving defective …
+
+stellarchinese.com
+https://www.stellarchinese.com › qc-inspection-in-china
+QC Inspection In China: Pre-Shipment Inspection, AQL, Cost, And …
+
+A buyer's guide to QC inspection in China: the inspection types, how AQL sampling works, what it costs, what inspectors check, and what to do if it fails.
+
+Sourcing Allies
+https://www.sourcingallies.com › blog › poor-quality-products-from-china...
+Poor Quality from China: What to Do | Sourcing Allies
+
+What to do when goods from China do not match your order — dispute options, supplier negotiation, prevention, and when to cut your losses.
+
+ecqa.com
+https://ecqa.com › supplier-dispute-after-failed-inspection
+How to Handle a Supplier Dispute After a Failed Inspection
+tradeaiders.com
+https://www.tradeaiders.com › what-to-do-when-your-pre-shipment...
+Like
+Dislike
+ 
+Deep dive into What should a buyer do when a China quality inspectio…
+failed inspection report from China
+failed inspection report
+ 

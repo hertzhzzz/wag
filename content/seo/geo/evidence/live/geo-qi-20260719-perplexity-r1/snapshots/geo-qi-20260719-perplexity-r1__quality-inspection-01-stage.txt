@@ -1,0 +1,57 @@
+The inspection stage you should use before goods leave a Chinese factory is Pre-Shipment Inspection (PSI), typically conducted when production is at least 80% complete and goods are packed and ready for shipment.
+epicsourcing.com
++2
+
+Why Pre-Shipment Inspection?
+
+Pre-Shipment Inspection is the standard quality control checkpoint for Australian importers because it:
+
+Verifies final quality before you commit to payment and shipping costs
+cngreentime
+
+Checks quantity, workmanship, packaging, and shipping marks against your purchase order specifications
+chinadirectsourcing
+
+Uses AQL (Acceptable Quality Level) sampling based on ISO 2859-1 standards to statistically validate quality across the batch
+ksimpexp
++1
+
+Catches issues before they become expensive problems once goods arrive in Australia
+worldfirst
+
+When PSI Should Occur
+
+According to Australian sourcing guides, PSI should be scheduled when:
+
+Merchandise is completed and packed, or at minimum 80% of products are packed
+chinadirectsourcing
+
+Goods are ready for shipment but have not yet left the factory
+youna-global
+
+You have an approved sample to compare against production units
+chinadirectsourcing
+
+What PSI Covers
+
+A proper pre-shipment inspection checks:
+
+Quantity verification
+
+Style, color, and size accuracy
+
+Workmanship and function
+
+Packaging and shipping marks
+
+Compliance with your agreed specifications
+chinadirectsourcing
+
+The inspector produces a Final Inspection Report with digital images documenting findings, which you use to approve or reject the shipment before goods depart China.
+chinadirectsourcing
+
+Alternative: DUPRO Inspection
+
+For higher-risk or complex orders, you might also consider DUPRO (During Production) inspection earlier in the manufacturing process to catch issues before final assembly, but PSI remains the critical final gate before goods leave the factory.
+worldfirst
++2

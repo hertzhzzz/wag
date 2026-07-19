@@ -1,0 +1,56 @@
+In a quality inspection, critical, major, and minor defects are categories used to classify product issues by their impact on safety, function, appearance, compliance, or customer acceptance. These categories are commonly used with AQL (Acceptable Quality Limit) inspection standards.
+
+Defect Level	Definition	Typical Impact	Examples
+Critical defect	A defect that creates a safety risk, violates legal requirements, or makes the product dangerous or unusable.	Product failure, injury risk, regulatory non-compliance, brand damage.	Electrical product with exposed live wires; incorrect medical device function; counterfeit safety certification; dangerous sharp edges; wrong voltage rating causing fire risk.
+Major defect	A defect that significantly affects product function, performance, durability, or customer usability, but is not normally a direct safety hazard.	Customer dissatisfaction, returns, reduced product value.	Product does not operate correctly; missing important component; incorrect dimensions affecting use; damaged packaging causing product protection issues; significant cosmetic damage.
+Minor defect	A small issue that does not significantly affect function, safety, or usability but falls outside agreed quality standards.	Cosmetic concern or small deviation from specification.	Minor scratches; slight colour variation; small printing error; loose thread; minor packaging imperfections.
+Practical inspection approach for importers
+
+For an Australian importer inspecting goods from a Chinese factory:
+
+Critical defects
+
+Usually have a zero tolerance requirement.
+
+Any confirmed critical defect normally results in inspection failure.
+
+Supplier must investigate and provide corrective action before shipment.
+
+Major defects
+
+Controlled through AQL limits.
+
+Common AQL levels:
+
+AQL 1.5: stricter quality requirement
+
+AQL 2.5: common commercial standard
+
+AQL 4.0: more tolerant standard
+
+Minor defects
+
+Usually accepted in higher quantities because they do not affect product performance.
+
+Often managed through a higher AQL limit (for example AQL 4.0).
+
+Example: LED lighting product inspection
+Issue Found	Classification
+Product fails electrical safety test	Critical
+Incorrect wattage compared with purchase specification	Major
+Scratched aluminium housing visible to customer	Minor
+Missing Australian compliance label	Critical or Major depending on regulatory requirement
+Slightly uneven packaging print	Minor
+For purchase orders, buyers should define:
+
+The defect classification rules before production starts.
+
+Acceptable AQL levels.
+
+Zero-tolerance defects.
+
+Testing requirements (electrical, safety, performance).
+
+Required corrective action process after inspection failure.
+
+A well-written inspection checklist should convert these categories into specific acceptance criteria for the exact product rather than relying only on generic AQL definitions.

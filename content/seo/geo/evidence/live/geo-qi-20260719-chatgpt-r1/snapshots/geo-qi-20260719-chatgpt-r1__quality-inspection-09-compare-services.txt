@@ -1,0 +1,222 @@
+When comparing quality inspection services in China, an Australian business should compare more than just the inspection fee. The key factors are inspector capability, inspection methodology, reporting quality, independence, geographic coverage, and suitability for the product risk.
+
+1. Compare inspection scope and methodology
+
+Ask each provider:
+
+What inspection types do they offer?
+
+Pre-production inspection (PPI)
+
+During-production inspection (DPI/DUPRO)
+
+Pre-shipment inspection (PSI)
+
+Container loading inspection (CLI)
+
+Factory audit
+
+Product testing coordination
+
+What inspection standard do they use?
+
+AQL sampling (ANSI/ASQ Z1.4 or equivalent)
+
+100% inspection
+
+Customer-specific checklist
+
+A cheaper provider using a generic checklist may miss product-specific failures.
+
+2. Compare inspector expertise
+
+Check whether inspectors have experience with your product category:
+
+Product	Important inspector knowledge
+Electronics	Function testing, safety standards, firmware checks
+Furniture	Materials, dimensions, assembly quality
+Lighting	Electrical testing, certifications, component verification
+Apparel	Fabric, stitching, measurements, colour consistency
+Machinery	Technical specifications, performance testing
+
+Ask:
+
+Are inspectors employees or outsourced freelancers?
+
+How many years of experience do they have?
+
+Do they inspect similar products regularly?
+
+3. Compare inspection reports
+
+A good inspection report should include:
+
+Product information
+
+Purchase order details
+
+Supplier information
+
+Quantity inspected
+
+Production status
+
+Inspection results
+
+Sample size
+
+Defect classification
+
+AQL limits
+
+Pass/fail decision
+
+Evidence
+
+High-resolution defect photos
+
+Measurements
+
+Test results
+
+Packaging photos
+
+Barcode/label verification
+
+Recommendations
+
+Whether shipment should proceed
+
+Required corrective actions
+
+Avoid providers that only provide a simple pass/fail statement.
+
+4. Compare independence and conflict risks
+
+A reliable inspection company should:
+
+Inspect based on buyer requirements
+
+Not receive incentives from factories
+
+Keep inspection results confidential
+
+Allow buyers to communicate directly with inspectors
+
+Warning signs:
+
+The supplier recommends and pays the inspector
+
+The inspection company refuses to share raw evidence
+
+Reports appear identical across suppliers
+
+Inspectors are not allowed to fail products
+
+5. Compare geographic coverage in China
+
+China manufacturing is spread across regions:
+
+Region	Common industries
+Guangdong	Electronics, lighting, hardware, furniture
+Zhejiang	Small goods, textiles, machinery
+Jiangsu	Industrial products
+Fujian	Footwear, apparel
+Shandong	Manufacturing, agricultural products
+
+Check:
+
+Can they send inspectors quickly?
+
+Do they cover factories outside major cities?
+
+Are travel fees transparent?
+
+6. Compare pricing structure
+
+Typical pricing models:
+
+Pricing method	Advantage	Risk
+Fixed daily rate	Simple comparison	May exclude travel
+Per inspection fee	Predictable	May reduce inspection depth
+Subscription model	Useful for frequent imports	May not suit occasional buyers
+
+Compare the total cost:
+
+Inspection fee
+
+Travel costs
+
+Testing fees
+
+Report fees
+
+Urgent inspection surcharge
+
+A low inspection cost is insignificant compared with the cost of receiving defective goods.
+
+7. Check turnaround time
+
+For China production schedules, compare:
+
+Booking lead time
+
+Factory appointment confirmation
+
+Inspection duration
+
+Report delivery time
+
+A practical target:
+
+Inspection completed within 1 day
+
+Report delivered within 24 hours
+
+Defect evidence available immediately
+
+8. Check whether they support Australian import requirements
+
+Australian buyers should ask whether the service understands:
+
+Australian electrical standards
+
+RCM requirements where applicable
+
+Packaging and labelling requirements
+
+Consumer product safety expectations
+
+Australian retailer compliance requirements
+
+A factory may pass a general quality inspection but still fail Australian market requirements.
+
+9. Review sample reports before hiring
+
+Request:
+
+A redacted inspection report
+
+A failed inspection example
+
+A product-specific checklist example
+
+Evaluate:
+
+Are defects clearly explained?
+
+Are photos sufficient?
+
+Can a buyer make a shipment decision from the report alone?
+
+10. Suggested comparison checklist
+Criteria	Weight
+Product expertise	25%
+Inspector qualifications	20%
+Report quality	20%
+Inspection methodology	15%
+Price transparency	10%
+China coverage	5%
+Response speed	5%
+
+For most Australian importers, the best inspection provider is usually not the cheapest one; it is the one that can identify the specific failure modes that would cause financial loss, customer complaints, or Australian compliance problems before shipment leaves China.

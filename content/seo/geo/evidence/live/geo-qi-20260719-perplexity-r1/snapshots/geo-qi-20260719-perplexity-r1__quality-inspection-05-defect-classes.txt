@@ -1,0 +1,82 @@
+In quality inspection, defects are classified into three severity levels—critical, major, and minor—based on their impact on safety, functionality, and appearance. This classification determines whether a shipment passes or fails under AQL (Acceptable Quality Limit) standards.
+visgl
++1
+
+Defect Classification Overview
+Criteria	Critical Defect	Major Defect	Minor Defect
+Impact	Safety risk or legal non-compliance	Affects function, usability, or marketability	Cosmetic only; no functional impact
+Customer effect	Dangerous or unusable product; potential injury	Product may fail, be returned, or unsaleable	Slight dissatisfaction; still saleable
+AQL tolerance	0 (zero tolerance)	Typically 2.5	Typically 4.0
+Action	Automatic rejection; full rework required	Usually reject or rework depending on quantity	Usually acceptable within AQL limits
+Example	Electrical short circuit; toxic material	Broken zipper; missing components; wrong dimensions	Surface scratch; minor color variation; slight labeling misalignment
+
+proqc
++2
+
+Critical Defects
+
+Critical defects are the most severe and are unacceptable under any condition. They include:
+
+Safety hazards that could cause injury or harm to users
+
+Non-compliance with mandatory regulations (e.g., toxic materials, electrical safety failures)
+
+Structural failures that could lead to product collapse
+
+Sharp edges or conditions endangering life or safety
+proqc
++2
+
+The default AQL tolerance for critical defects is 0, meaning even one critical defect found in a sample typically results in automatic shipment rejection.
+v-trust
+
+Major Defects
+
+Major defects affect the functionality, usability, or marketability of the product. These include:
+
+Product does not function properly for its intended purpose
+
+Missing key components or incorrect dimensions affecting usability
+
+Packaging failure that compromises product integrity
+
+Obvious appearance disfiguration that affects salability
+proqc
++2
+
+The typical AQL tolerance for major defects is 2.5. For example, in a sample of 200 pieces, up to 10 major defects may be acceptable; 11 or more would result in rejection.
+v-trust
+
+Minor Defects
+
+Minor defects are cosmetic or aesthetic issues that do not reduce the product's usability or function. Examples include:
+
+Surface scratches, spots, or dirt marks
+
+Minor color variation within tolerance
+
+Slight labeling misalignment
+
+Small imperfections on non-central parts of the product
+proqc
++2
+
+The default AQL acceptance limit for minor defects is 4.0. In a sample of 200 pieces, up to 14 minor defects may be acceptable; 15 or more would fail inspection.
+v-trust
+
+Where This Classification Is Used
+
+This defect classification system is standard in:
+
+Pre-shipment inspection (PSI)
+
+During production inspection (DPI)
+
+Factory audits and quality assessments
+
+AQL sampling based on ISO 2859 standards
+insight-quality
++2
+
+Understanding these categories helps importers, sourcing managers, and quality control teams make consistent pass/fail decisions and reduce the risk of defective shipments in global supply chains.
+visgl

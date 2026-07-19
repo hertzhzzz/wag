@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-qi-20260719-bing-copilot-r1__quality-inspection-09-compare-services",
+  "platform": "bing-copilot",
+  "questionId": "quality-inspection-09-compare-services",
+  "prompt": "How should an Australian business compare quality inspection services in China?",
+  "promptHash": "sha256:f847549dd633d299b4a03da56034ec0a452bdc2d05ed59aaa0f57687602e7771",
+  "observedAt": "2026-07-19T04:05:55.744Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "epicsourcing.com.au",
+    "macsamuelglobalsourcing.com.au",
+    "maplesourcing.com",
+    "tetrainspection.com",
+    "linkedin.com",
+    "ddpchain.com",
+    "crossbridgeinspections.com.au",
+    "famisourcing.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-bing-copilot-r1/snapshots/geo-qi-20260719-bing-copilot-r1__quality-inspection-09-compare-services.txt",
+    "hash": "sha256:8d04f090be59379d574a7cbf9262c0c899c9b1faf2e7ca84919ddb392f7b44ec",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Bing SERP en-AU (setlang=en-AU&cc=AU). Auth signed-out. Exact prompt as query. Observation-only. Surface bing-serp-generative-answer-en-AU (not copilot.microsoft.com)."
+}

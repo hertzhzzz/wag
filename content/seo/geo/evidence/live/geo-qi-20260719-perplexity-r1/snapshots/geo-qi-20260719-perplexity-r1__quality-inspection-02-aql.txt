@@ -1,0 +1,253 @@
+How to set an AQL standard and defect limits for a China production order
+
+AQL (Acceptable Quality Limit) is the statistical sampling standard used in China manufacturing to decide whether a shipment passes or fails inspection. You set it by choosing defect categories, AQL values for each, an inspection level, and then writing these explicitly into your purchase contract so a third‑party inspector can apply them without ambiguity.
+guidedimports
++3
+
+1. Understand what AQL actually means
+
+AQL is not “the shipment will have at most X% defects.”
+linkedin
+
+It means: if the true defect rate is at or below the AQL you set, the lot has a high probability (about 95%) of passing the sampling inspection.
+linkedin
+
+Inspectors draw a random sample from your total batch using ISO 2859‑1 tables, then compare the number of defects found to the Accept/Reject (Ac/Re) limits for your chosen AQL.
+huangsourcing
++1
+
+2. Classify your defects before picking AQL numbers
+
+Work with your supplier early and define three tiers of defects for your product:
+
+Critical defects
+
+Safety or regulatory failures (sharp edges on toys, electrical hazards, prohibited chemicals, mislabelled safety warnings).
+
+Usually: AQL 0 (no critical defects allowed).
+linkedin
++1
+
+Major defects
+
+Functional or durability issues likely to cause returns/complaints (broken parts, wrong size, major colour mismatch, missing components).
+
+Typical range: AQL 1.0–2.5, depending on how strict your brand needs to be.
+linkedin
++1
+
+Minor defects
+
+Cosmetic or small deviations unlikely to cause returns (small scratches, slight colour variation, minor packaging misalignment).
+
+Typical range: AQL 2.5–4.0 for general consumer goods.
+linkedin
++1
+
+Write these as a defect classification list in your contract/spec sheet, with examples and photos so an inspector can judge consistently.
+redflagsolutions
+
+3. Choose your AQL values and inspection level
+
+A common, defensible starting point for many consumer goods sourced from China:
+
+Critical defects: AQL 0
+
+Major defects: AQL 2.5
+
+Minor defects: AQL 4.0
+
+Inspection level: General Inspection Level II (GII) – the industry default.
+redflagsolutions
++1
+
+Adjust tighter or looser based on:
+
+Product risk:
+
+Electronics, baby products, toys, anything with safety/liability → tighten major to AQL 1.0 or even 0 for some attributes.
+linkedin
+
+Low‑risk items (simple packaging, promotional goods) → you might accept higher minor AQL.
+
+Your quality expectations and price point:
+
+Premium brand / high unit price → tighter AQLs.
+
+Very low‑margin, high‑volume commodity → sometimes accept slightly higher defect rates if financially justified.
+
+Always specify the full formula in your contract, e.g.:
+
+“AQL 0 / 2.5 / 4.0, General Inspection Level II, single sampling plan, per ISO 2859‑1.”
+redflagsolutions
+
+4. Use the AQL tables to determine sample size and pass/fail limits
+
+Once you know:
+
+Total order quantity (lot size)
+
+Chosen inspection level (usually GII)
+
+Chosen AQL values for each defect tier
+
+you use the ISO 2859‑1 AQL tables:
+
+Find the lot size range in Table 1 (e.g. 501–1,200 units).
+
+Select your inspection level (GII) to get the sample size code letter (e.g. “J”).
+examinechina
+
+Use that letter in Table 2 to get:
+
+Sample size (e.g. 80 units for code J)
+
+Accept (Ac) and Reject (Re) numbers for each AQL (e.g. for AQL 2.5 and sample 80, maybe Ac = 5, Re = 6).
+linkedin
++1
+
+Practical rule of thumb:
+
+Larger orders → larger samples, but the percentage sampled drops.
+
+Stricter AQLs → lower Ac numbers, so fewer defects are tolerated before rejection.
+
+You don’t need to memorize the tables; most inspection agencies provide an AQL calculator or will do this for you if you specify the AQL and inspection level.
+qima
+
+5. Bake AQL into your purchase order / contract
+
+To make AQL enforceable:
+
+State the standard clearly in the PO or contract:
+
+AQL values (critical/major/minor)
+
+Inspection level (e.g. GII)
+
+Sampling plan type (single, normal)
+
+Reference to ISO 2859‑1 or ANSI/ASQC Z1.4.
+redflagsolutions
+
+Tie payment to inspection results:
+
+Hold back final payment (commonly 20–30%) until a pre‑shipment inspection passes.
+redflagsolutions
+
+Make the inspection certificate or your written release a condition for shipment.
+redflagsolutions
+
+Define consequences of failure:
+
+Supplier must rework or re‑produce at their cost.
+
+Supplier pays re‑inspection fees.
+
+Delivery date does not extend due to quality failure.
+redflagsolutions
+
+Add protection for latent/field failures:
+
+State that passing AQL does not waive claims for hidden or later‑emerging defects.
+
+Include an “epidemic failure” clause: if field defect rate exceeds, say, 2–3% within warranty, supplier bears replacements, freight, and a defined share of costs.
+redflagsolutions
+
+6. Use a golden sample and detailed spec sheet
+
+AQL sampling only works if the inspector knows what “defect” means for your product:
+
+Golden sample:
+
+Signed and stamped by both parties.
+
+One copy with you, one with the factory.
+
+Referenced by number in the contract.
+redflagsolutions
+
+Specification sheet (contract annex):
+
+Materials, dimensions and tolerances, Pantone colours, packaging, labelling.
+
+Applicable safety standards (EN 71, CE, FCC, etc., as needed).
+redflagsolutions
+
+Defect list with examples:
+
+Photos or clear descriptions of what counts as critical/major/minor for your specific item.
+redflagsolutions
+
+This prevents disputes where the factory claims “it’s within tolerance” while you see a clear quality problem.
+
+7. Plan inspections at the right time
+
+During production (DUPRO):
+
+Inspect when 20–40% of units are complete to catch issues early, before full production.
+redflagsolutions
+
+Pre‑shipment inspection (PSI):
+
+After 100% production and at least 80% packed, before goods leave the factory.
+chinamakershub
++1
+
+This is where AQL is typically applied.
+
+Make sure the contract gives you:
+
+Right to inspect during production and before shipment, by you or a third party (SGS, BV, TÜV, Intertek, etc.) on short notice.
+redflagsolutions
+
+Goods do not ship until inspection is passed or you release them in writing.
+redflagsolutions
+
+8. Example: setting AQL for a 5,000‑unit order
+
+Suppose you’re ordering 5,000 home‑goods units:
+
+Decide defect tiers:
+
+Critical: safety issues → AQL 0
+
+Major: functional defects, breakage → AQL 2.5
+
+Minor: cosmetic issues → AQL 4.0
+
+Choose: General Inspection Level II, single sampling.
+
+Using AQL tables (or an inspector’s calculator):
+
+For 5,000 units at GII, you might get a sample size around 200 units.
+milasourcing
+
+For AQL 2.5 major on 200 samples, the lot might pass if ≤ 10 major defects are found, and fail at 11 or more.
+milasourcing
+
+For AQL 4.0 minor, you might allow more minor defects before failing.
+
+You then write into your PO:
+
+“Pre‑shipment inspection: AQL 0 / 2.5 / 4.0, General Inspection Level II, single sampling, ISO 2859‑1. Final 30% payment upon passed inspection. Supplier bears rework and re‑inspection costs if failed.”
+redflagsolutions
+
+9. Common mistakes to avoid
+
+Using only “AQL 2.5” without defining critical/major/minor or inspection level. This invites disputes.
+redflagsolutions
+
+Assuming AQL 2.5 guarantees ≤ 2.5% defects in the whole shipment. It’s a statistical acceptance rule, not a defect cap.
+linkedin
+
+Paying 100% before inspection. You lose leverage if the goods fail.
+redflagsolutions
+
+No golden sample or defect list. Inspectors and suppliers interpret “defect” differently.
+redflagsolutions
+
+No epidemic‑failure or latent‑defect clause. You can pass AQL but still face high field return rates.
+redflagsolutions
+
+If you share your product type, order size, and risk level (e.g., kids’ toy vs. simple promotional item), I can suggest concrete AQL values and an example clause ready to paste into your PO or contract.

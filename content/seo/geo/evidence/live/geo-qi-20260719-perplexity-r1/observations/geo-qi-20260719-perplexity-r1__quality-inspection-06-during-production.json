@@ -1,0 +1,43 @@
+{
+  "observationId": "geo-qi-20260719-perplexity-r1__quality-inspection-06-during-production",
+  "platform": "perplexity",
+  "questionId": "quality-inspection-06-during-production",
+  "prompt": "When should an Australian buyer arrange a during-production inspection rather than wait for pre-shipment inspection?",
+  "promptHash": "sha256:60d0af49c1d2da420febfd32c48428b1fa801d921a5905bbb9e0f535e3f9abd5",
+  "observedAt": "2026-07-19T04:14:53.828Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "huangsourcing.com",
+    "nbnqc.com",
+    "productsafety.gov.au",
+    "papers.ssrn.com",
+    "epicsourcing.com.au",
+    "insight-quality.com",
+    "tetrainspection.com",
+    "ecqa.com",
+    "tradeaiders.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-perplexity-r1/snapshots/geo-qi-20260719-perplexity-r1__quality-inspection-06-during-production.txt",
+    "hash": "sha256:8fb63efcb42535856b295374234d109b3167b2951fde0ed55e3c69b819b220ec",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity web. Exact prompt. Observation-only. New search per question."
+}

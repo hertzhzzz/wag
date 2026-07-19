@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-qi-20260719-chatgpt-r1__quality-inspection-07-failed-inspection",
+  "platform": "chatgpt",
+  "questionId": "quality-inspection-07-failed-inspection",
+  "prompt": "What should a buyer do when a China quality inspection fails?",
+  "promptHash": "sha256:f45d11ba0d61246bb81bc037a4e4217166e0ebfbd20d540b9580ee6b97b6594a",
+  "observedAt": "2026-07-19T04:10:10.238Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/geo-qi-20260719-chatgpt-r1__quality-inspection-07-failed-inspection.txt",
+    "hash": "sha256:4df12fa90efcb68041385d54b2f0bcefb2f726cb507219d7e04dd6cf8b07afc8",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "ChatGPT web signed-in Mark He Free. New chat per question. Exact prompt. Observation-only."
+}

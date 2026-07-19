@@ -1,0 +1,252 @@
+For an AU-NZ importer, a China inspection should not only check product quality; it should also verify that packaging, labels, and compliance requirements are ready for Australian and New Zealand market entry. These checks should be added as explicit inspection points in the inspection checklist rather than left to the factory.
+
+1. Packaging checks
+Carton and shipping packaging
+
+Inspect:
+
+Carton dimensions and weight match the agreed specification
+
+Carton strength is suitable for sea/air transport
+
+Export cartons are dry, clean, and undamaged
+
+Correct carton markings:
+
+Product name
+
+SKU/model number
+
+Quantity per carton
+
+Country of origin marking (where required)
+
+Handling marks (fragile, keep dry, orientation arrows)
+
+Pallet requirements:
+
+Pallet size and material
+
+Heat treatment requirements for wooden pallets (ISPM 15 if applicable)
+
+Secure wrapping and strapping
+
+Inner packaging
+
+Check:
+
+Product protection against scratches, moisture, impact
+
+Foam, bags, inserts, protective films match approved samples
+
+Accessories are packed correctly
+
+User manuals and warranty cards included
+
+No missing components
+
+Packaging quantity verification
+
+Confirm:
+
+Units per inner carton
+
+Cartons per master carton
+
+Total shipment quantity
+
+Spare parts/accessories quantities
+
+2. Product labelling checks
+
+The inspection should compare physical labels against approved artwork.
+
+Check:
+
+Product identification
+
+Brand name
+
+Model number
+
+SKU
+
+Batch/lot number (if required)
+
+Serial number (if applicable)
+
+Country of origin
+
+Verify:
+
+"Made in China" or equivalent origin marking where required
+
+Origin information is consistent across:
+
+Product label
+
+Packaging
+
+Commercial documents
+
+Consumer information
+
+For Australian and New Zealand markets, check:
+
+English language instructions
+
+Warning statements
+
+Safety information
+
+Correct units:
+
+Metric measurements
+
+Australian/New Zealand spelling where relevant
+
+Barcode and traceability
+
+Verify:
+
+Barcode scans correctly
+
+Barcode matches product database/SKU
+
+Batch coding is readable
+
+Labels are permanent and durable
+
+3. Australian compliance checks
+
+The inspection checklist should include product-specific regulatory verification.
+
+Examples:
+
+Electrical products
+
+Check:
+
+Correct Australian plug type (Type I)
+
+Correct voltage/frequency marking:
+
+220–240V
+
+50Hz
+
+Required regulatory markings
+
+Supplier has evidence of applicable compliance obligations
+
+For regulated electrical equipment, verify documentation related to the Australian Competition and Consumer Commission requirements and applicable Australian electrical safety schemes.
+
+Radio/wireless products
+
+Check:
+
+Required markings and documentation for wireless equipment
+
+Supplier has appropriate conformity evidence for the Australian market
+
+Toys and children's products
+
+Check:
+
+Age grading
+
+Safety warnings
+
+Small parts warnings
+
+Test reports
+
+Materials compliance documentation
+
+Cosmetics, food-contact items, and chemicals
+
+Check:
+
+Ingredient/material declarations
+
+Safety documentation
+
+Required warnings
+
+Batch information
+
+4. New Zealand compliance checks
+
+For NZ-bound goods, include:
+
+English labelling
+
+Product safety warnings
+
+Electrical compliance requirements where applicable
+
+Documentation consistency between Australia and New Zealand requirements
+
+For products sold across both markets, many importers use a combined AU/NZ compliance review because requirements often overlap but are not identical.
+
+5. Documentation verification during inspection
+
+Ask the inspector to verify factory records:
+
+Document	Check
+Product specification sheet	Matches approved sample
+Packing list	Matches actual carton contents
+Test reports	Correct model/product
+Certificates	Valid issuer and dates
+User manual	Correct language/version
+Artwork approval	Matches final production
+Material declarations	Correct product
+6. Common inspection failures for AU-NZ imports
+
+Typical issues found:
+
+Chinese-only manuals included
+
+Incorrect plug type fitted
+
+Missing safety warnings
+
+Wrong barcode printed
+
+Packaging artwork differs from approval sample
+
+Missing compliance labels
+
+Fake or unrelated test reports
+
+Product model on certificates does not match shipment
+
+Carton labels inconsistent with packing list
+
+Accessories missing
+
+7. Recommended inspection checklist structure
+
+A practical AU-NZ inspection checklist:
+
+Product specification verification
+
+Appearance and workmanship
+
+Function testing
+
+Quantity verification
+
+Packaging inspection
+
+Label and artwork verification
+
+Compliance marking verification
+
+Documentation review
+
+Carton loading inspection
+
+Photo evidence collection
+
+For higher-risk products, add a pre-production compliance review before manufacturing begins, because fixing labels or packaging after production is often expensive.

@@ -1,0 +1,153 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=When%20should%20an%20Australian%20buyer%20arrange%20a%20during-production%20inspection%20rather%20than%20wait%20for%20pre-shipment%20inspection%3F&setlang=en-AU&cc=AU
+TITLE: When should an Australian buyer arrange a during-production inspection rather than wait for pre-shipment inspection? - Search
+OBSERVED_AT: 2026-07-19T04:05:41.344Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU
+PROMPT: When should an Australian buyer arrange a during-production inspection rather than wait for pre-shipment inspection?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+An Australian buyer should arrange a During Production Inspection (DPI) rather than waiting for a Pre-shipment Inspection (PSI) when the order involves new suppliers, strict workmanship requirements, tight delivery schedules, or when the order includes multiple styles, colors, sizes, or packaging details. DPI allows buyers to identify quality and production issues early, enabling corrective actions before the full order is completed. This is particularly beneficial for orders with higher risk or tighter delivery requirements, as it provides better visibility and control over quality and production progress.
+thirdtesting.com
++2
+thirdtesting.com
+During Production Inspection: When Should You Arrange It?
+During Production Inspection is usually arranged when buyers need a clearer view of supplier capability, product quality or shipment readiness. A structured approach helps reduce d…
+nbnqc.com
+During Production Inspection Guide | When to Use DPI
+During production inspection helps buyers identify quality and production issues before the order is completed, so corrective action can be taken earlier. During production inspect…
+View all
+thirdtesting.com
+https://www.thirdtesting.com › insights › audit-playbooks › during...
+During Production Inspection: When Should You Arrange It?
+Buyers should consider this service when working with a new supplier, launching a new product, increasing order volume, changing packaging or receiving repeated quality complaints. It is also …
+nbnqc.com
+https://www.nbnqc.com › during-production-inspection-guide
+During Production Inspection Guide | When to Use DPI
+10 Jan 2025 · Learn when during production inspection should be arranged, what it checks, and how DPI helps buyers identify quality and production issues before completion.
+zignify.net
+https://zignify.net › blog › during-production-inspection-dupro
+During Production Inspection (DUPRO): When and What It Catches
+6 days ago · Production Inspection, usually shortened to DUPRO or DPI, closes that gap. It checks your goods while they are still being made, typically when 20 to 60 percent of the order is complete, so …
+ecqa.com
+https://ecqa.com › during-production-vs-pre-shipment-inspection
+During Production VS. Pre-Shipment Inspection | ECQA
+23 June 2024 · Discover the key differences between during production and pre-shipment inspections. Learn when to use each method to ensure product quality.
+the-inspection-company.com
+https://www.the-inspection-company.com › blogs › improving-supplier...
+Improving Supplier Performance: Pre-Shipment vs During Production ...
+27 May 2026 · Discover when to use pre-shipment vs during production inspection. Stop costly defects and improve supplier performance with our expert quality control guide.
+ezshipmate.com
+https://ezshipmate.com › pre-shipment-inspection-vs-during-production...
+Pre-Shipment Inspection vs During Production Inspection - EZShipMate
+29 Apr 2026 · A Pre-Shipment Inspection happens when 80% to 100% of production is complete. An independent inspector visits the factory, pulls a random sample from the finished goods, and checks …
+goodada.com
+https://us.goodada.com › inspection-guides › during-production-inspection...
+During Production Inspection Explained | Goodada Inspections
+A during production inspection takes place while manufacturing is still in progress, whereas a pre-shipment inspection takes place when goods are substantially complete and ready for dispatch.
+lmats.com.au
+https://www.lmats.com.au › services › product-quality-inspections › product...
+Product Inspections FAQ - LMATS
+By inspecting the goods before you pay to ship them, you can be sure that you receive what you expected. It is far easier to negotiate with manufacturers to fix product defects before they leave the …
+svigloballtd.com
+https://www.svigloballtd.com › ... › what-is-during-production-inspection
+How During Production Inspection Catch Problems Before Ends
+2 days ago · A during production inspection helps prevent these issues by evaluating product quality while manufacturing is still underway. Conducted when production reaches a certain stage, you can …
+ecqa.com
+https://ecqa.com › during-production-inspection
+During Production Inspection (DUPRO) - ecqa.com
+---
+ORGANIC:
+1. An Australian buyer should arrange a During Production Inspection (DPI) rather than waiting for a Pre-shipment Inspection (PSI) when the order involves new suppliers, strict workmanship requirements,  | https://www.thirdtesting.com/insights/audit-playbooks/during-production-inspection-when-should-you-arrange-it/
+2. nbnqc.com
+During Production Inspection Guide | When to Use DPI
+During production inspection helps buyers identify quality and production issues before the order is completed, so corrective action can  | https://www.nbnqc.com/during-production-inspection-guide/
+3. zignify.net | https://zignify.net/blog/during-production-inspection-dupro/
+4. ecqa.com | https://ecqa.com/during-production-vs-pre-shipment-inspection/
+5. the-inspection-company.com | https://www.the-inspection-company.com/blogs/improving-supplier-performance-pre-shipment-vs-during-production-inspection
+6. ezshipmate.comPre-Shipment Inspection vs During Production Inspection – Which Do You ...If you’re sourcing from Asia, Europe, or Latin America, you’ve likely encountered two common quality control che | https://ezshipmate.com/pre-shipment-inspection-vs-during-production-inspection-which-do-you-need/
+7. goodada.com
+https://us.goodada.com › inspection-guides › during-production-inspection... | https://us.goodada.com/inspection-guides/during-production-inspection-explained
+8. lmats.com.au
+https://www.lmats.com.au › services › product-quality-inspections › product... | https://www.lmats.com.au/services/product-quality-inspections/product-inspections-faq
+9. svigloballtd.com
+https://www.svigloballtd.com › ... › what-is-during-production-inspection | https://www.svigloballtd.com/quality-assurance/what-is-during-production-inspection/
+---
+SERP_TEXT_SNIPPET:
+Skip to content
+Accessibility Feedback
+6
+AllSearchImagesVideosMapsNewsCopilot
+More
+About 4,990 results
+An Australian buyer should arrange a During Production Inspection (DPI) rather than waiting for a Pre-shipment Inspection (PSI) when the order involves new suppliers, strict workmanship requirements, tight delivery schedules, or when the order includes multiple styles, colors, sizes, or packaging details. DPI allows buyers to identify quality and production issues early, enabling corrective actions before the full order is completed. This is particularly beneficial for orders with higher risk or tighter delivery requirements, as it provides better visibility and control over quality and production progress. 
+thirdtesting.com
++2
+thirdtesting.com
+During Production Inspection: When Should You Arrange It?
+During Production Inspection is usually arranged when buyers need a clearer view of supplier capability, product quality or shipment readiness. A structured approach helps reduce d…
+nbnqc.com
+During Production Inspection Guide | When to Use DPI
+During production inspection helps buyers identify quality and production issues before the order is completed, so corrective action can be taken earlier. During production inspect…
+View all
+ 
+thirdtesting.com
+https://www.thirdtesting.com › insights › audit-playbooks › during...
+During Production Inspection: When Should You Arrange It?
+
+Buyers should consider this service when working with a new supplier, launching a new product, increasing order volume, changing packaging or receiving repeated quality complaints. It is also …
+
+ 
+nbnqc.com
+https://www.nbnqc.com › during-production-inspection-guide
+During Production Inspection Guide | When to Use DPI
+
+10 Jan 2025 · Learn when during production inspection should be arranged, what it checks, and how DPI helps buyers identify quality and production issues before completion.
+
+zignify.net
+https://zignify.net › blog › during-production-inspection-dupro
+During Production Inspection (DUPRO): When and What It Catches
+
+6 days ago · Production Inspection, usually shortened to DUPRO or DPI, closes that gap. It checks your goods while they are still being made, typically when 20 to 60 percent of the order is complete, so …
+
+ecqa.com
+https://ecqa.com › during-production-vs-pre-shipment-inspection
+During Production VS. Pre-Shipment Inspection | ECQA
+
+23 June 2024 · Discover the key differences between during production and pre-shipment inspections. Learn when to use each method to ensure product quality.
+
+the-inspection-company.com
+https://www.the-inspection-company.com › blogs › improving-supplier...
+Improving Supplier Performance: Pre-Shipment vs During Production ...
+
+27 May 2026 · Discover when to use pre-shipment vs during production inspection. Stop costly defects and improve supplier performance with our expert quality control guide.
+
+ezshipmate.com
+https://ezshipmate.com › pre-shipment-inspection-vs-during-production...
+Pre-Shipment Inspection vs During Production Inspection - EZShipMate
+
+29 Apr 2026 · A Pre-Shipment Inspection happens when 80% to 100% of production is complete. An independent inspector visits the factory, pulls a random sample from the finished goods, and checks …
+
+goodada.com
+https://us.goodada.com › inspection-guides › during-production-inspection...
+During Production Inspection Explained | Goodada Inspections
+
+A during production inspection takes place while manufacturing is still in progress, whereas a pre-shipment inspection takes place when goods are substantially complete and ready for dispatch.
+
+lmats.com.au
+https://www.lmats.com.au › services › product-quality-inspections › product...
+Product Inspections FAQ - LMATS
+
+By inspecting the goods before you pay to ship them, you can be sure that you receive what you expected. It is far easier to negotiate with manufacturers to fix product defects before they leave the …
+
+svigloballtd.com
+https://www.svigloballtd.com › ... › what-is-during-production-inspection
+How During Production Inspection Catch Problems Before Ends
+
+2 days ago · A during production inspection helps prevent these issues by evaluating product quality while manufacturing is still underway. Conducted when production reaches a certain stage, you can …
+
+ecqa.com
+https://ecqa.com › during-production-inspection
+During Production Inspection (DUPRO) - ecqa.com

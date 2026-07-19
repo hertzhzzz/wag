@@ -1,0 +1,184 @@
+A pre-shipment inspection (PSI) report for an Australian buyer should be a decision‑ready document that clearly shows whether the goods match the contract before final payment is released. In practice, it needs to cover quantity, quality, specifications, packaging/labeling, and include enough evidence (photos, measurements, test results) to support a clear pass/fail/pending recommendation.
+ecom
++1
+
+Core elements every PSI report should include
+1. Basic shipment and contract details
+
+Buyer and supplier names and addresses (including factory name if different from supplier).
+ecom
+
+Purchase order / contract number, product description, and Incoterms.
+ecom
+
+Inspection date, location (factory/warehouse), and inspector name/company (ideally independent third party).
+bureauveritas
++1
+
+Total order quantity and shipping marks / carton marks as stated on the commercial invoice and packing list.
+ecom
+
+2. Sampling method and inspection standard
+
+Clear statement of the sampling plan used (e.g. ANSI/ASQ Z1.4, ISO 2859-1) and the AQL levels for critical/major/minor defects.
+nbnqc
++1
+
+Number of units inspected vs total production lot, and how samples were selected (random, by carton, by production line).
+nbnqc
+
+This section is crucial because it tells you whether the conclusions are statistically meaningful and defensible if there’s a dispute.
+nbnqc
+
+3. Quantity verification
+
+Confirmed packed quantity by SKU / model / size / colour, plus total carton count.
+ecom
+
+Any shortages, overages, or missing accessories/components.
+ecom
+
+Reconciliation with the commercial invoice and packing list (e.g. “10,200 pcs inspected vs 10,000 pcs on invoice”).
+ecom
+
+For Australian buyers, this protects against paying for goods that are short‑shipped or incorrectly assorted.
+ecom
+
+4. Workmanship and visual quality findings
+
+Summary of defects found, classified by severity (critical / major / minor) and by defect type (e.g. scratches, stitching issues, colour variation, printing errors).
+nbnqc
++1
+
+Defect rate expressed as a percentage or as number of defects per AQL category, compared to the agreed acceptance criteria.
+nbnqc
+
+Notes on overall finish consistency and any patterns (e.g. “defects concentrated in cartons from Line 2”).
+ecom
+
+This is often the main section you use to decide whether to accept the lot, request rework, or reject.
+ecom
+
+5. Specification and measurement conformity
+
+Verification that key specs match your approved sample or tech pack: dimensions, weight, materials, components, logo placement, colours, etc.
+ecom
+
+Actual measurement results for a sample of units (e.g. length/width/thickness, voltage, capacity), with tolerances noted.
+ecom
+
+Confirmation that the correct model/version is being shipped (especially important if you have multiple revisions).
+ecom
+
+For Australian compliance, this is where you also check alignment with relevant standards (e.g. electrical safety, toy safety, food contact materials) if applicable.
+ecom
+
+6. Packaging, labeling, and shipping marks
+
+Condition and suitability of inner and outer packaging (carton quality, padding, moisture protection).
+ecom
+
+Correctness of retail packaging, barcodes, hangtags, user manuals, and any country‑specific labels (e.g. “Made in China”, care labels, warnings).
+ecom
+
+Accuracy of shipping marks, carton numbers, and pallet configuration against your instructions and the shipping documents.
+ecom
+
+This matters for Australian customs clearance and for avoiding delays or extra charges at the port.
+ecom
+
+7. Functional and safety testing (if applicable)
+
+Description of any on‑site functional tests performed (e.g. power‑on test, drop test, leak test, button/zipper function).
+ecom
+
+Results of those tests, including pass/fail counts and any failures observed.
+ecom
+
+If relevant, notes on compliance withAustralian regulatory requirements (e.g. RCM marking for electrical goods, toy safety standards, food‑grade certifications) and any certificates sighted.
+bureauveritas
++1
+
+For higher‑risk products, this section can be the difference between a smooth clearance and a recall or seizure.
+ecom
+
+8. Photo and video evidence
+
+Clear, dated photos of:
+
+Production/packing area and inspection setup.
+ecom
+
+Sampled cartons (shows carton marks and condition).
+ecom
+
+Representative good and defective units, with close‑ups of defects.
+ecom
+
+Measurements being taken (ruler/caliper in frame).
+ecom
+
+Packaging, labels, and shipping marks.
+ecom
+
+Good photo evidence is essential if you need to negotiate rework, claim against the supplier, or justify holding payment.
+ecom
+
+9. Clear conclusion and recommendation
+
+An explicit overall result: Pass, Fail, or Pending (with conditions).
+ecom
+
+A concise summary of key risks and whether the lot meets the agreed AQL and specs.
+nbnqc
++1
+
+Recommended next steps:
+
+Release shipment and final payment.
+
+Allow shipment but require rectification before next order.
+
+Hold shipment until rework and re‑inspection.
+
+Reject lot and negotiate replacement or refund.
+ecom
+
+This section should be unambiguous so your finance team knows whether it is safe to release payment.
+ecom
+
+Additional items that strengthen the report for Australian buyers
+
+Non‑conformity log: A table listing each defect type, quantity found, and severity, tied to your contract quality clauses.
+nbnqc
+
+Inspector credentials and independence statement: Especially important if your bank or contract requires an “independent certificate of inspection” before transfer.
+lmats
++1
+
+Cross‑reference to documents: Explicit links to the commercial invoice, packing list, bill of lading draft, and your purchase order, showing consistency or discrepancies.
+ecom
+
+Compliance notes for Australia: Any known Australian regulatory requirements for the product category and whether they appear to be met (e.g. electrical safety, chemical restrictions, labeling laws).
+ecom
+
+How to use the PSI report before releasing payment
+
+Treat the PSI report as the final quality gate: do not authorise final payment until you have reviewed it and are satisfied with the Pass/Pending conditions.
+ecom
+
+If the report shows Fail or serious Pending issues, use it to:
+
+Negotiate rework at the supplier’s cost.
+
+Arrange a re‑inspection before shipment.
+
+Justify delaying payment under your contract terms.
+lmats
++1
+
+Keep the PSI report with your import file as evidence of due diligence, useful for disputes, insurance claims, or audits.
+bureauveritas
++1
+
+If you tell me your product category (e.g. electronics, textiles, food, cosmetics), I can outline an Australia‑specific PSI checklist with the exact standards and labeling you should insist on seeing in the report.

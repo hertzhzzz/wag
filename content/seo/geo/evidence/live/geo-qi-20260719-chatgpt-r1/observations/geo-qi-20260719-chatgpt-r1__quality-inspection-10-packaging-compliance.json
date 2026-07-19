@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-qi-20260719-chatgpt-r1__quality-inspection-10-packaging-compliance",
+  "platform": "chatgpt",
+  "questionId": "quality-inspection-10-packaging-compliance",
+  "prompt": "What packaging, labelling, and compliance checks should an AU-NZ importer add to a China inspection?",
+  "promptHash": "sha256:f04c088fffd733db82795f56ee9feaf4ef2609dacdd219d118c7add596fdb2ce",
+  "observedAt": "2026-07-19T04:11:11.592Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1/snapshots/geo-qi-20260719-chatgpt-r1__quality-inspection-10-packaging-compliance.txt",
+    "hash": "sha256:b4f051ff778c6b522365fa146be29d238f964a06063c7e05281d093f619715c8",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "ChatGPT web signed-in Mark He Free. New chat per question. Exact prompt. Observation-only."
+}

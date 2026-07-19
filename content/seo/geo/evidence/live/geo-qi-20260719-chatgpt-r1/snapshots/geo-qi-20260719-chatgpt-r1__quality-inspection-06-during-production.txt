@@ -1,0 +1,141 @@
+An Australian buyer should arrange a during-production inspection (DPI) rather than relying only on a pre-shipment inspection (PSI) when there is a meaningful risk that defects, delays, or process problems could become expensive or impossible to fix after production is complete.
+
+Use during-production inspection when:
+1. The order is large or high-value
+
+A DPI is recommended when the financial exposure is significant, such as:
+
+Large purchase orders
+
+Custom-made products
+
+Private-label goods
+
+First orders with a new factory
+
+Products requiring tooling or specialised processes
+
+Finding problems halfway through production allows the factory to correct them before the entire batch is completed.
+
+2. The product has complex manufacturing steps
+
+DPI is useful for products involving multiple production stages, for example:
+
+Electronics assembly
+
+Furniture with multiple components
+
+Machinery
+
+Lighting and AV equipment
+
+Garments requiring dyeing, cutting, and stitching
+
+Products requiring testing or certification
+
+A PSI may identify failures only after thousands of units are already produced.
+
+3. Quality problems cannot be easily reworked
+
+Arrange DPI if defects would require:
+
+Re-manufacturing
+
+Re-ordering components
+
+Factory shutdowns
+
+Expensive repairs
+
+Long delays before shipping
+
+Examples:
+
+Wrong materials used
+
+Incorrect dimensions
+
+Failed safety testing
+
+Incorrect colour batches
+
+Missing certifications
+
+4. The factory is new or not fully trusted
+
+For a first purchase from a Chinese supplier, DPI helps verify:
+
+Production has actually started
+
+Materials match specifications
+
+The factory is following approved samples
+
+The supplier is not outsourcing without approval
+
+Production capacity is realistic
+
+5. Delivery deadlines are strict
+
+If late delivery would cause commercial damage, DPI can check:
+
+Production progress against schedule
+
+Whether bottlenecks exist
+
+Whether raw materials are available
+
+Whether manpower and equipment are sufficient
+
+A PSI performed at the end of production may discover delays too late to recover.
+
+6. The product requires regulatory compliance
+
+Australian importers should consider DPI where compliance is critical, such as:
+
+Electrical products requiring Australian compliance checks
+
+Products requiring test reports or certifications
+
+Safety-related products
+
+Children's products
+
+Medical or industrial equipment
+
+The inspector can verify compliance-related processes before shipment.
+
+Typical timing for a during-production inspection
+
+A common approach:
+
+Production stage	Inspection purpose
+10–30% complete	Check materials, components, first production output
+30–70% complete	Identify production issues while correction is still possible
+Before final assembly/packing	Verify critical workmanship and specifications
+Before shipment	Conduct final PSI
+
+For many Chinese factory orders, the most useful point is around 30–50% production completion.
+
+DPI vs PSI decision
+Situation	Recommended inspection
+Small repeat order from trusted supplier	PSI only
+First order with unknown factory	DPI + PSI
+Large custom production	DPI + PSI
+Simple stocked product	PSI may be enough
+Tight delivery deadline	DPI
+High compliance risk	DPI + PSI
+Expensive tooling or moulds	DPI
+Practical recommendation for Australian importers
+
+A common risk-control sequence is:
+
+Supplier verification / factory audit before purchase order
+
+During-production inspection after production begins
+
+Pre-shipment inspection before final payment
+
+Container loading inspection for high-risk shipments
+
+For a first-time Chinese supplier or a high-value order, waiting until pre-shipment inspection is usually too late because the buyer may discover problems only after the factory has already committed most resources and the shipment deadline is approaching.

@@ -1,0 +1,40 @@
+{
+  "observationId": "geo-qi-20260719-bing-copilot-r1__quality-inspection-01-stage",
+  "platform": "bing-copilot",
+  "questionId": "quality-inspection-01-stage",
+  "prompt": "Which product inspection stage should an Australian importer use before goods leave a factory in China?",
+  "promptHash": "sha256:977e23f0f2f7d437ccb72e7029ed6bd41b94547d9639d083f484b77ed0d46721",
+  "observedAt": "2026-07-19T04:05:16.939Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "intertekinform.com",
+    "epicsourcing.com.au",
+    "soloimporter.com",
+    "crossbridgeinspections.com.au",
+    "tradeaiders.com",
+    "corporatealliance.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-bing-copilot-r1/snapshots/geo-qi-20260719-bing-copilot-r1__quality-inspection-01-stage.txt",
+    "hash": "sha256:8c8d32d896db3264168582d3202a13ef562aee139afd6211fe794f701e3b9af2",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Bing SERP en-AU (setlang=en-AU&cc=AU). Auth signed-out. Exact prompt as query. Observation-only. Surface bing-serp-generative-answer-en-AU (not copilot.microsoft.com)."
+}

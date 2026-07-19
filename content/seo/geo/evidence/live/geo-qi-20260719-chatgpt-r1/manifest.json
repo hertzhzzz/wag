@@ -1,0 +1,64 @@
+{
+  "runId": "geo-qi-20260719-chatgpt-r1",
+  "platform": "chatgpt",
+  "schemaVersion": "geo-live-capture-v1",
+  "methodologyVersion": "methodology-live-v1",
+  "benchmarkVersion": "benchmark-live-v1",
+  "questionSetVersion": "1",
+  "questionSetPath": "content/seo/geo/questions/quality-inspection.json",
+  "questionSetDigest": "sha256:7ea4fd81936885385e0d3a9322996609deda06f73345a9daca12ee56dc2cbd1e",
+  "cluster": "quality-inspection",
+  "ticket": 33,
+  "fixtureOnly": false,
+  "provenance": "external-platform-observation",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "expectedRepetitions": 1,
+  "asOf": "2026-07-19T04:07:54.561Z",
+  "questions": [
+    {
+      "id": "quality-inspection-01-stage",
+      "prompt": "Which product inspection stage should an Australian importer use before goods leave a factory in China?"
+    },
+    {
+      "id": "quality-inspection-02-aql",
+      "prompt": "How should a buyer set an AQL standard and defect limits for a China production order?"
+    },
+    {
+      "id": "quality-inspection-03-report",
+      "prompt": "What should a pre-shipment inspection report include before an Australian buyer releases final payment?"
+    },
+    {
+      "id": "quality-inspection-04-checklist",
+      "prompt": "How can an importer create a product-specific inspection checklist instead of relying on a generic checklist?"
+    },
+    {
+      "id": "quality-inspection-05-defect-classes",
+      "prompt": "What is the difference between critical, major, and minor defects in a quality inspection?"
+    },
+    {
+      "id": "quality-inspection-06-during-production",
+      "prompt": "When should an Australian buyer arrange a during-production inspection rather than wait for pre-shipment inspection?"
+    },
+    {
+      "id": "quality-inspection-07-failed-inspection",
+      "prompt": "What should a buyer do when a China quality inspection fails?"
+    },
+    {
+      "id": "quality-inspection-08-reinspection",
+      "prompt": "When is reinspection necessary after a factory claims that defects have been corrected?"
+    },
+    {
+      "id": "quality-inspection-09-compare-services",
+      "prompt": "How should an Australian business compare quality inspection services in China?"
+    },
+    {
+      "id": "quality-inspection-10-packaging-compliance",
+      "prompt": "What packaging, labelling, and compliance checks should an AU-NZ importer add to a China inspection?"
+    }
+  ],
+  "evidencePath": "content/seo/geo/evidence/live/geo-qi-20260719-chatgpt-r1",
+  "blocked": false
+}

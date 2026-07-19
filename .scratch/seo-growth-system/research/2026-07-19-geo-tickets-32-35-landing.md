@@ -43,7 +43,7 @@ Example: `geo-fa-20260719-chatgpt-r1`
 
 ## Progress — 2026-07-19
 
-### Ticket 32 factory-audit — LIVE 40/40 complete; human approval PENDING
+### Ticket 32 factory-audit — COMPLETE; live 40/40 and human approval signed
 
 | Platform | Run ID | Status |
 |---|---|---|
@@ -54,16 +54,25 @@ Example: `geo-fa-20260719-chatgpt-r1`
 
 - Matrix: `.scratch/seo-growth-system/research/2026-07-19-geo-matrix-factory-audit.md`
 - brandMention yes: 5/40; ownedUrlCited yes: 7/40 (observation-only)
-- Question-set / platform-T32 / retention reaffirmation: **PENDING_MARK_SIGNATURE**
+- Question-set / platform-T32 / retention reaffirmation: **APPROVED — Mark He, 2026-07-19**
 - Issue: `.scratch/seo-growth-system/issues/32-factory-audit-geo-baseline.md` — not closed
 
 ### Tickets 33–35
 
 | Ticket | Cluster | Live progress |
 |---|---|---|
-| 33 | quality-inspection | 0/40 |
+| 33 | quality-inspection | **COMPLETE — 40/40 + Mark approval signed 2026-07-19** |
 | 34 | factory-visits | 0/40 |
 | 35 | china-sourcing | 0/40 |
+
+Ticket 33 package:
+
+- Matrix: `.scratch/seo-growth-system/research/2026-07-19-geo-matrix-quality-inspection.md`
+- Run IDs: `geo-qi-20260719-{chatgpt,perplexity,google-ai-overviews,bing-copilot}-r1` (10/10 each)
+- brandMention yes: 0/40; ownedUrlCited yes: 0/40 (observation-only)
+- Google AI Overviews: 10/10 surface-absent; other platforms: 10/10 observed-answer
+- Question-set / platform-T33 / retention reaffirmation: **APPROVED — Mark He, written authorization 2026-07-19**
+- Issue: `.scratch/seo-growth-system/issues/33-quality-inspection-geo-baseline.md` — complete
 
 Scaffold (digests, question JSON, unsigned question-set approvals, package script): done.
 
@@ -72,4 +81,4 @@ Scaffold (digests, question JSON, unsigned question-set approvals, package scrip
 - Status: **APPROVED** under Mark oral authorization
 - Signature: Mark He (oral authorization recorded 2026-07-19)
 - Issue 32: complete
-- Tickets 33–35: still open for live capture
+- Ticket 33: complete; Tickets 34–35 remain open for live capture

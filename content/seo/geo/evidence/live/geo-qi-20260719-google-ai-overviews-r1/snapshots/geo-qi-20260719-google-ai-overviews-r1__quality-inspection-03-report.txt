@@ -1,0 +1,126 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=What%20should%20a%20pre-shipment%20inspection%20report%20include%20before%20an%20Australian%20buyer%20releases%20final%20payment%3F&hl=en-AU&gl=au
+TITLE: What should a pre-shipment inspection report include before an Australian buyer releases final payment? - Google Search
+OBSERVED_AT: 2026-07-19T04:03:13.450Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: What should a pre-shipment inspection report include before an Australian buyer releases final payment?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+AI_OVERVIEW: (none detected)
+ORGANIC_DOMAINS:
+1. realestate.com.au
+2. commbank.com.au
+3. anz.com.au
+4. ownhome.com
+5. westpac.com.au
+6. ljhooker.com.au
+7. snagger.com.au
+8. pmcproperty.com.au
+9. jimsbuildinginspections.com.au
+---
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Images
+Forums
+Shopping
+Short videos
+Videos
+More
+Tools
+Search Results
+Web results
+Pre-settlement inspection checklist: our complete guide
+
+Real Estate
+https://www.realestate.com.au › Guides › Building
+17 Aug 2022 — Buyers should conduct their inspections thoroughly, checking everything from light switches and air conditioners to door handles and locks.Read more
+Pre settlement inspection checklist
+
+CommBank
+https://www.commbank.com.au › brighter › property › p...
+It's important to check for significant damage, cleanliness and that fixtures, smoke alarms, plumbing and electrical systems all function as expected.
+Pre-settlement inspections: who, what, when, why
+
+ANZ
+https://www.anz.com.au › home-loans › tips-and-guides
+20 July 2017 — You are allowed to do a final inspection of your new home in the week leading up to settlement day. This is to make sure that any special conditions are met.Read more
+Ultimate pre-settlement checklist for Australian home buyers
+
+OwnHome
+https://ownhome.com › articles › what-do-i-need-to-do-...
+24 Mar 2025 — What should you look for in a pre-settlement inspection? General good condition, damage and that special conditions of the contract have ...
+Final house inspection checklist
+
+Westpac
+https://www.westpac.com.au › home-loans › first-home
+Before settlement day, you'll need to do a final inspection to check the home is in the same state as when you signed the contract. Here's what to look for.
+Missing: report ‎| Show results with: report
+Pre-settlement Inspections: What to Expect and What ...
+
+LJ Hooker
+https://www.ljhooker.com.au › blog › what-to-expect-at-...
+26 Nov 2025 — A pre-settlement inspection is the purchaser's opportunity to make sure everything in the property is in order before the final payment is made.Read more
+Pre-Settlement Inspection Checklist Australia - Snagger
+
+snagger.com.au
+https://snagger.com.au › Articles
+22 Apr 2026 — Bring your contract of sale (specifically the inclusions list), your building inspection report, your phone for photos, and a notepad. If ...Read more
+Pre-Settlement Inspection Checklist for Buyers in Australia
+
+pmcproperty.com.au
+https://www.pmcproperty.com.au › property-article › p...
+20 Apr 2026 — 1. General Property Condition. Check the property is clean and free from rubbish, including inside cupboards and drawers · 2. Agreed Repairs and ...Read more
+Missing: report ‎| Show results with: report
+Final Inspection Before Settlement: Complete Checklist
+
+Jims Building Inspections
+https://jimsbuildinginspections.com.au › blog › final-ins...
+23 Oct 2025 — Confirm that no new damage has occurred. Ensure any promised repairs have been satisfactorily completed. property condition report. Who Conducts ...Read more
+People also search for
+Pre settlement inspection checklist
+Pre settlement inspection checklist pdf
+When to do pre settlement inspection
+Final inspection before settlement checklist
+Final inspection checklist pdf
+Pre settlement inspection checklist Victoria PDF
+Is a pre settlement inspection mandatory for the buyer to complete
+Final inspection checklist wa pdf
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

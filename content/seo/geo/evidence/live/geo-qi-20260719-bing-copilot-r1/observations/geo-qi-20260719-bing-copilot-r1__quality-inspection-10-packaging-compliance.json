@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-qi-20260719-bing-copilot-r1__quality-inspection-10-packaging-compliance",
+  "platform": "bing-copilot",
+  "questionId": "quality-inspection-10-packaging-compliance",
+  "prompt": "What packaging, labelling, and compliance checks should an AU-NZ importer add to a China inspection?",
+  "promptHash": "sha256:f04c088fffd733db82795f56ee9feaf4ef2609dacdd219d118c7add596fdb2ce",
+  "observedAt": "2026-07-19T04:06:00.640Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "my.nzte.govt.nz",
+    "spotyard.com.au",
+    "epicsourcing.com.au",
+    "shanghaijungle.com",
+    "foreigngo.com",
+    "chinamarket.afgc.org.au",
+    "donesafe.com",
+    "intertekinform.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-qi-20260719-bing-copilot-r1/snapshots/geo-qi-20260719-bing-copilot-r1__quality-inspection-10-packaging-compliance.txt",
+    "hash": "sha256:7132a74329218c2c149a3947a31f881129a2264badce9c9e4ff04f654b1905bf",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Bing SERP en-AU (setlang=en-AU&cc=AU). Auth signed-out. Exact prompt as query. Observation-only. Surface bing-serp-generative-answer-en-AU (not copilot.microsoft.com)."
+}

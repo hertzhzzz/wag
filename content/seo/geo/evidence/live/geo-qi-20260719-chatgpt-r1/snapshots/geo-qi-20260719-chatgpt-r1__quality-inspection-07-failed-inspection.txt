@@ -1,0 +1,271 @@
+When a China quality inspection fails, the buyer should treat the failure as a production control issue requiring evidence-based corrective action, rather than immediately accepting or rejecting the shipment. The correct response depends on the severity of defects, order timing, contract terms, and supplier history.
+
+1. Review the inspection report carefully
+
+Confirm:
+
+Inspection stage
+
+During-production inspection (DUPRO)
+
+Pre-shipment inspection (PSI)
+
+Container loading inspection (CLI)
+
+Defect classification
+
+Critical defects
+
+Major defects
+
+Minor defects
+
+AQL results
+
+Number of samples checked
+
+Defect quantities found
+
+Whether the lot exceeded agreed AQL limits
+
+Evidence
+
+Photos
+
+Videos
+
+Measurements
+
+Test results
+
+Packaging checks
+
+Do not rely only on the inspector's conclusion; verify whether the findings relate to agreed specifications.
+
+2. Stop final payment if contract terms allow
+
+For most China imports:
+
+Do not release the remaining balance until the supplier provides an acceptable resolution.
+
+Do not approve shipment based only on supplier promises.
+
+Ensure payment terms include inspection acceptance conditions.
+
+Common payment structure:
+
+30% deposit before production
+
+70% after passing inspection
+
+A failed inspection should normally pause the 70% payment.
+
+3. Categorise the failure
+Minor issues
+
+Examples:
+
+Cosmetic marks
+
+Small packaging inconsistencies
+
+Label placement errors
+
+Possible actions:
+
+Accept with discount
+
+Request rework
+
+Require correction before shipment
+
+Major issues
+
+Examples:
+
+Wrong dimensions
+
+Missing components
+
+Poor assembly
+
+Functional failures
+
+Incorrect materials
+
+Possible actions:
+
+Supplier rework
+
+Replace defective units
+
+Repeat inspection after correction
+
+Critical issues
+
+Examples:
+
+Safety failures
+
+Electrical hazards
+
+Non-compliance with Australian regulations
+
+Counterfeit materials
+
+Dangerous defects
+
+Possible actions:
+
+Reject shipment
+
+Cancel order
+
+Escalate supplier investigation
+
+4. Request a corrective action plan (CAP)
+
+The supplier should provide:
+
+Root cause analysis
+
+Why did the defect happen?
+
+Corrective action
+
+What will be changed?
+
+Preventive action
+
+How will recurrence be prevented?
+
+Completion timeline
+
+When will rework finish?
+
+Example:
+
+Problem	Cause	Correction
+Incorrect wiring	Worker used old specification	Update production drawings and retrain workers
+Scratched surfaces	Poor packaging protection	Add protective film and revise packing method
+5. Decide whether to re-inspect
+
+After correction:
+
+Arrange a follow-up inspection.
+
+Use the same checklist and AQL standard.
+
+Confirm that defects have actually been fixed.
+
+Do not rely on factory photos alone.
+
+A second inspection is especially important for:
+
+First production orders
+
+Large-value shipments
+
+Custom products
+
+Regulated goods
+
+6. Negotiate the commercial solution
+
+Possible outcomes:
+
+Accept shipment with compensation
+
+Suitable when:
+
+Defects are usable
+
+Repair cost is low
+
+Market timing is important
+
+Examples:
+
+Price reduction
+
+Free replacement parts
+
+Credit note on next order
+
+Require rework
+
+Suitable when:
+
+Product can be corrected before export
+
+Supplier has enough production time
+
+Reject shipment
+
+Suitable when:
+
+Safety issues exist
+
+Defect rate is high
+
+Supplier cannot provide reliable correction
+
+7. Investigate whether the problem is supplier or specification related
+
+A failed inspection may reveal:
+
+Supplier problems
+
+Poor factory controls
+
+Subcontracting
+
+Weak quality management
+
+Production shortcuts
+
+Buyer problems
+
+Unclear specifications
+
+Missing drawings
+
+No approved samples
+
+Ambiguous packaging requirements
+
+Update the product specification and inspection checklist before the next order.
+
+8. Record the failure for supplier performance tracking
+
+Maintain:
+
+Inspection reports
+
+Defect photos
+
+Corrective action records
+
+Supplier responses
+
+Final resolution
+
+This creates a supplier scorecard covering:
+
+Quality performance
+
+Delivery reliability
+
+Communication
+
+Corrective action speed
+
+Recommended decision framework for Australian importers
+Situation	Recommended action
+Minor defects within acceptable limits	Accept or negotiate compensation
+AQL failure but repairable	Require rework + reinspection
+Major functional defects	Hold payment and investigate
+Safety/compliance failure	Reject shipment
+Repeated failures	Reassess or replace supplier
+
+For Australian buyers importing from China, a failed inspection should usually trigger a controlled correction and verification process, not an immediate shipment rejection or acceptance. The goal is to prevent defective goods from leaving China while preserving a workable supplier relationship when the supplier can demonstrate effective corrective action.
