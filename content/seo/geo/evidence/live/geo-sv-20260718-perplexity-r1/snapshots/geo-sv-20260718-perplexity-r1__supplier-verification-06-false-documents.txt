@@ -1,0 +1,281 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-perplexity-r1
+platform: perplexity
+questionId: supplier-verification-06-false-documents
+observedAt: 2026-07-18T13:29:46.745Z
+url: https://www.perplexity.ai/search/9ee7ee61-8bd4-46a8-aee5-c051203d8a88
+title: What warning signs suggest that a Chinese supplier's business licence or...
+auth: signed-in-test-account
+accountTier: free
+surface: perplexity-search-free
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+
+## Answer (UI text extract)
+New
+⌘K
+Computer
+Spaces
+Artifacts
+Customize
+Connectors
+Skills
+Workflows
+Memory
+History
+What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?
+What should be included in a paid supplier verification service for an Australian importer?
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+What official records should an Australian importer check before engaging a supplier in China?
+如何注册成美国k12的学校
+基于我们整个对话的全部上下文，重新审视并评估这个项目，而不是默认沿用之前的结论。 你拥有以下背景信息： 我提供了一份澳大利亚 2026 年 7 月 3 日至 10 日的 Google 热搜数据（CSV
+https://augstudy.com/australia/ 全面分析这家公司和他们的specialty
+给我鸡肉奶油蘑菇通心粉的完美菜单和完美的克重比例数据
+网站： https://www.winningadventure.com.au/ 你是一位资深 SEO Growth Consultant（SEO增长顾问），同时具备以下专业能力： SEO战略规划 T
+Google ads 设置每次电话带来的价值，我们的服务费3000刀的话，每一通电话的价值是应该设置多少
+客户：Joseph
+任务：从本 Space 的全部对话与文件中，提取所有客户/线索信息，输出为 JSON 数组。 每条客户对象必须且只能包含以下字段（无信息则留空字符串）： - name: 联系人姓名 - compan
+请你担任我的 2026 SEO 私人教练、增长顾问和实战陪跑者。 我的网站是： https://www.winningadventure.com.au/ 我的目标不是学习一套通用 SEO 课程，而是通
+Comprehensive Website Audit and Strategy
+请基于 Google Search Console、Google Analytics、Google Business Profile 三个数据源，全面分析 winningadventure.com.a
+分析这个新上传的文件
+请撰写一份《中国企业出海澳大利亚产业机会分析报告》。报告需围绕中国企业在澳大利亚市场的出海机会展开，重点分析适合进入的产业赛道。请从宏观环境、行业增长潜力、政策监管、市场需求、竞争格局、中国企业优势、
+中国企业出海澳洲，适合的产业
+Upgrade plan
+Zhe He
+Free plan
+Answer
+Links
+Images
+Share
+What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+
+Yes — the biggest warning sign is any mismatch between the supplier’s claims and the documents they send. In practice, fake licences and certificates usually show up through inconsistency, poor document quality, or refusal to verify details.
+chinesecheck
++2
+
+Business licence red flags
+
+The supplier refuses to provide a business licence at all.
+betterproductsourcing
++1
+
+The company name, legal representative, registration date, or business scope does not match what they told you.
+chinesecheck
++1
+
+The licence says the company is a trading company, but they claim to be a factory.
+winningadventure.com
++1
+
+The company says it has many years of history, but the registration date is very recent.
+chinacartbridge
++2
+
+The registered address looks like a residential building, virtual office, or unrelated location.
+chinesecheck
++1
+
+The current status is cancelled, revoked, or abnormal in official records.
+betterproductsourcing
++1
+
+The document looks like a poor scan, has blurry text, uneven ink, cropped edges, or formatting that does not match standard licence layout.
+chinesecheck
++1
+
+Certificate red flags
+
+The supplier claims ISO, CE, FDA, or other certifications but cannot provide the actual certificate.
+chinesecheck
++1
+
+The certificate number cannot be checked with the issuing body.
+silkwaysourcing
++2
+
+The company name on the certificate does not match the business licence.
+chinesecheck
++1
+
+The product name, model, or scope on the certificate does not match the item being sold.
+sourcingwill
++1
+
+The certificate has missing issue dates, vague wording, or weak detail.
+sourcingwill
+
+The certificate looks edited, has inconsistent fonts, blurred seals, or a QR code that does not resolve properly.
+qcckyc
+
+The supplier keeps delaying verification or says they will “send it later” instead of producing a checkable document.
+silkwaysourcing
+
+Behavioural warning signs
+
+They are reluctant to give their official Chinese company name or Unified Social Credit Code.
+betterproductsourcing
++1
+
+Their details change across platforms, invoices, chat messages, and certificates.
+chinesecheck
++1
+
+They push urgency, ask for fast payment, or avoid live video verification.
+chinesecheck
+
+Their claimed product range is too broad or unrelated to the business scope on paper.
+winningadventure.com
++1
+
+Practical checks
+
+Ask for a clear scan of the business licence and the exact Chinese company name.
+chinesecheck
++1
+
+Compare the licence against official registration records, especially the company name, legal representative, registration date, business scope, and status.
+betterproductsourcing
++1
+
+Verify certificates directly with the issuing organisation, not just with the supplier.
+silkwaysourcing
++1
+
+Treat any mismatch as a serious risk signal until explained.
+chinacartbridge
++1
+
+High-risk pattern
+
+One red flag alone may be a mistake, but several together usually mean the document is not trustworthy.
+qcckyc
++2
+
+The most dangerous pattern is: recent registration, inconsistent company identity, unverifiable certificates, and reluctance to share official records.
+chinesecheck
++2
+
+Would you like a simple supplier verification checklist you can use before paying a Chinese supplier?
+
+10 sources
+Follow-ups
+Yes please, provide a checklist for vetting a Chinese supplier
+Yes, please provide a checklist for verifying suppliers before payment
+Yes, I would appreciate a checklist for evaluating new suppliers
+Yes, can you share a step-by-step supplier verification checklist
+Yes, that would be very helpful, please provide the checklist
+Sources
+chinesecheck
+Chinese Business License Verification: How to Check If It's ...
+How to verify a Chinese business license: read key fields, check via GSXT, spot fakes, and understand the Unified Social Credit Code.
+chinesecheck
+Chinese Supplier Scams: How to Identify and Avoid Them ...
+Common Chinese supplier scams exposed: fake credentials, bait-and-switch, payment fraud. Learn prevention strategies from official sources.
+betterproductsourcing
+How to Verify a Chinese Supplier is Legitimate (Scam ...
+Prevent supplier fraud with this comprehensive verification guide. Learn 15 red flags and 6 verification methods to ensure your Chinese supplier is legitimate before ordering.
+winningadventure.com
+How to Avoid China Supplier Scams: An Australian Buyer's Field Guide (2026)
+How Australian importers get scammed by Chinese suppliers — and how to avoid it. The six most common scams, the warning signs, and how to protect your deposit before you pay.
+silkwaysourcing
+Silk Way Sourcing — Your sourcing team inside China
+Factory search, verification, quality control, and delivery to Eastern Europe, CIS, Africa, and the Middle East — built on our founder's 10+ years inside China.
+chinacartbridge
+How to Verify Chinese Suppliers: 10 Red Flags to Watch
+Last month, a client sent me photos of 5,000 phone cases. The stitching was crooked. The logos were off-center. The supplier had vanished.They'd paid $18,000 upfront. No contract. No factory audit. Just a few WeChat messages and a promise.This isn't rare. I've seen it happen dozens of times in my 15 years sourcing from China.The difference between success and disaster? Knowing what red flags to spot before you wire money.In this guide, I'll show you the 10 warning signs that separate real factor
+chinesecheck
+How to Spot Fake Suppliers on Alibaba: 15 Signals (2026 Guide)
+Alibaba's badge system is imperfect. Learn the 15 concrete signals that expose fake suppliers on Alibaba — and how to cross-check the data with GSXT before you wire.
+chinesecheck
+How to Verify a Chinese Supplier: 7 Methods That Work ...
+7 proven methods to verify Chinese suppliers before paying. Business license checks, court records, factory audits, and more.
+qcckyc
+How to Spot a Fake Chinese Business License in 5 Minutes
+To check a Chinese business license, take the 18-character Unified Social Credit Code (USCC) printed on it and search that exact code on NECIPS — Chin
+sourcingwill
+How to Spot Fake Certifications and Documents from Chinese Suppliers
+Some suppliers may alter the registration numbers listed on certification documents to make them appear valid. These altered numbers may correspond to legitimate organizations or certification bodies, but when checked with the appropriate authorities, they may not match the product or company in question. Suppliers sometimes forge inspection reports from laboratories or certification bodies to make their products seem compliant with international standards. These fake reports often lack...
+
+
+
+
+Ask a follow-up
+Search
+Computer
+Model
+
+## Links
+[
+  {
+    "rank": 1,
+    "url": "https://www.sourcingwill.com/how-to-spot-fake-certifications-and-documents-from-chinese-suppliers/",
+    "title": "sourcingwill",
+    "domain": "sourcingwill.com"
+  },
+  {
+    "rank": 2,
+    "url": "https://www.qcckyc.com/blog-detail/china-business-license-check",
+    "title": "qcckyc",
+    "domain": "qcckyc.com"
+  },
+  {
+    "rank": 3,
+    "url": "https://www.silkwaysourcing.com/blog/china-supplier-scam-signs",
+    "title": "silkwaysourcing",
+    "domain": "silkwaysourcing.com"
+  },
+  {
+    "rank": 4,
+    "url": "https://chinesecheck.com/blog/spot-fake-suppliers-alibaba",
+    "title": "chinesecheck",
+    "domain": "chinesecheck.com"
+  },
+  {
+    "rank": 5,
+    "url": "https://chinesecheck.com/blog/chinese-business-license-verification",
+    "title": "chinesecheck\nChinese Business License Verification: How to Check If It's ...\nHow to verify a Chinese business license: read key fields, check via GSXT, spot fak",
+    "domain": "chinesecheck.com"
+  },
+  {
+    "rank": 6,
+    "url": "https://chinesecheck.com/blog/chinese-supplier-scam-prevention",
+    "title": "chinesecheck\nChinese Supplier Scams: How to Identify and Avoid Them ...\nCommon Chinese supplier scams exposed: fake credentials, bait-and-switch, payment fraud.",
+    "domain": "chinesecheck.com"
+  },
+  {
+    "rank": 7,
+    "url": "https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention",
+    "title": "betterproductsourcing\nHow to Verify a Chinese Supplier is Legitimate (Scam ...\nPrevent supplier fraud with this comprehensive verification guide. Learn 15 red f",
+    "domain": "betterproductsourcing.com.au"
+  },
+  {
+    "rank": 8,
+    "url": "https://www.winningadventure.com.au/article/china-supplier-scams",
+    "title": "winningadventure.com\nHow to Avoid China Supplier Scams: An Australian Buyer's Field Guide (2026)\nHow Australian importers get scammed by Chinese suppliers — and",
+    "domain": "winningadventure.com.au"
+  },
+  {
+    "rank": 9,
+    "url": "https://www.chinacartbridge.com/post/how-to-verify-chinese-suppliers-10-red-flags-to-watch",
+    "title": "chinacartbridge\nHow to Verify Chinese Suppliers: 10 Red Flags to Watch\nLast month, a client sent me photos of 5,000 phone cases. The stitching was crooked. The ",
+    "domain": "chinacartbridge.com"
+  },
+  {
+    "rank": 10,
+    "url": "https://chinesecheck.com/blog/how-to-verify-chinese-supplier",
+    "title": "chinesecheck\nHow to Verify a Chinese Supplier: 7 Methods That Work ...\n7 proven methods to verify Chinese suppliers before paying. Business license checks, cour",
+    "domain": "chinesecheck.com"
+  }
+]
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: yes

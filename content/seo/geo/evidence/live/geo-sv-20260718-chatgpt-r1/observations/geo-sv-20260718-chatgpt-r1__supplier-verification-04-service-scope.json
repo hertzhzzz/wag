@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-04-service-scope",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-04-service-scope",
+  "prompt": "What should be included in a paid supplier verification service for an Australian importer?",
+  "promptHash": "sha256:269e079c6604a143365467205d10b36695cd0ecaa4c299c5dea0ba2bcc548f9f",
+  "observedAt": "2026-07-18T13:21:18.681Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-04-service-scope.txt",
+    "hash": "sha256:b38e96595c5cafc572c51ca881a763fb8a23efc83f1ab1c8327f1d6a6ea6f789",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Conversation https://chatgpt.com/c/6a5b7db9-0df8-83ec-b1c3-2633d6153473"
+}

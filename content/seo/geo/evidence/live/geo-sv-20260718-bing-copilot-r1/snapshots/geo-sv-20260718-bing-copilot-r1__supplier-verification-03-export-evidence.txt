@@ -1,0 +1,154 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=What%20evidence%20should%20I%20request%20to%20verify%20that%20a%20Chinese%20supplier%20can%20legally%20export%20my%20product%3F&setlang=en-AU&cc=AU
+TITLE: What evidence should I request to verify that a Chinese supplier can legally export my product? - Search
+OBSERVED_AT: 2026-07-18T13:51:09.599Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU (copilot.microsoft.com may require sign-in; SERP generative block captured when present)
+PROMPT: What evidence should I request to verify that a Chinese supplier can legally export my product?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: yes
+---
+To verify that a Chinese supplier can legally export your product, you should request the following evidence:
+Business License: A valid business license is a primary official document for any legal entity, including Chinese suppliers. It should be publicly searchable and match the supplier's claims. 
+6
+Unified Social Credit Code: This is an 18-character alphanumeric identifier that functions like a corporate ID number. It should appear on the business license and match what you find online. 
+6
+Export License: If the supplier is involved in export transactions, they should have their own export license or disclose the export agent used. 
+6
+Government Registry: Check the supplier's registration status, including establishment date, registered capital, legal representative, shareholders, business scope, and any administrative penalties or abnormal operation flags. 
+6
+Credit History: Verify the supplier's credit history to ensure they are financially stable and can meet their obligations. 
+6
+
+These checks will help you confirm that the supplier is legally authorized to export your product and that they have the necessary documentation to comply with export regulations. 
+6
+6 Sources
+Read more
+Epic Sourcing
+How to Verify a Chinese Supplier Before You Pay (2026 Checklist)
+This 2026 checklist shows exactly how to verify a Chinese supplier before you pay — licence checks, video tours, samples, red flags and safe payment terms. Last updated: 25 June 20…
+winningadventure.com.au
+How to Verify a Chinese Supplier: Complete Guide for Australian Buyers
+The verification framework we use for every supplier before Australian clients pay a deposit 1 A valid business license does not guarantee a factory. Check the business scope for p…
+View all
+---
+ORGANIC:
+1. Translation Services | Need an Official Translation? | https://www.bing.com/ck/a?!&&p=4f8b6f1b3a14ff75ec2ade2ca8b25998489c422a3439a1ddf71c659e4ff59a62JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly90cmFuc2xheXRlLmNvbS9vcmRlcnMvY3JlYXRlP21zY2xraWQ9e21zY2xraWR9JnV0bV9zb3VyY2U9YmluZyZ1dG1fbWVkaXVtPWNwYyZ1dG1fY2FtcGFpZ249QVUlMjBSZW1hcmtldGluZyUyMFBNYXglMjDilINEVFMmdXRtX3Rlcm09dHJhbnNsYXl0ZS5jb20mdXRtX2NvbnRlbnQ9QXNzZXQlMjBHcm91cCUyMDE&ntb=1
+2. How to Verify a Chinese Supplier Before You Pay (2026 Checklist) | https://www.bing.com/ck/a?!&&p=17ad8d4d9635483c99612118e73b81eafac6f3aface8eb0b892810d0c4720c8bJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZXBpY3NvdXJjaW5nLmNvbS5hdS9wb3N0LzI1LTA2LWhvdy10by12ZXJpZnktYS1jaGluZXNlLXN1cHBsaWVyLWJlZm9yZS15b3UtcGF5LTIwMjYtY2hlY2tsaXN0&ntb=1
+3. How to Verify a Chinese Supplier: Complete Guide for Australian Buyers | https://www.bing.com/ck/a?!&&p=8e22b641af5c86cb0600376d4b7b5964e5852af88bf86f7200c80a92867ad767JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cud2lubmluZ2FkdmVudHVyZS5jb20uYXUvYXJ0aWNsZS92ZXJpZnktY2hpbmVzZS1zdXBwbGllcg&ntb=1
+4. Verifying Overseas Suppliers: Australian Importer Checklist | https://www.bing.com/ck/a?!&&p=8c79b1cf3c198a901324dd0fe6e372b439675a12403827bb0e5d1467fb2bda32JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9ibG9nLnN3aWZ0Y2FyZ28uc29sdXRpb25zL3ZlcmlmeS1zdXBwbGllci1jaGluYS1hdXN0cmFsaWEv&ntb=1
+5. How to Verify a Chinese Supplier — Factory Audit Checklist (2026) | https://www.bing.com/ck/a?!&&p=33276b3621321d8f10196a4d8b87c3b76fa5a1f9a3aaa2ac7aaf8e51772989e5JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZXBvd2VyY24uY29tL2Jsb2cvYmxvZy12ZXJpZnktY2hpbmVzZS1zdXBwbGllci1jaGVja2xpc3QuaHRtbA&ntb=1
+6. Verify a Chinese Supplier (2026): Full Checklist | https://www.bing.com/ck/a?!&&p=5247449a6fc304c459392bea4b46ace716a21fc9168c2bd99c4b24827ded824eJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluYXdpdGhtZS5jb20vZ3VpZGVzL3ZlcmlmeS1jaGluZXNlLXN1cHBsaWVyLTIwMjY&ntb=1
+7. How to Verify a Chinese Supplier: A Step-by-Step Guide | https://www.bing.com/ck/a?!&&p=460729bde04c5f3dde8a9a780cda99cfb343cb344fc8b67775bf9508cf2b01f4JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuY2FudG9ucGFydG5lci5jb20vYmxvZy9ob3ctdG8tdmVyaWZ5LWNoaW5lc2Utc3VwcGxpZXI&ntb=1
+8. 8 Essential Documents You Should Request from Chinese Suppliers | https://www.bing.com/ck/a?!&&p=0fc98dc5836b3229f473771de43ab7725bb98a4cce0ef04c261af0c2885e0d6aJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9lbi5teWRpZGFkaS5jb20vOC1Fc3NlbnRpYWwtRG9jdW1lbnRzLVlvdS1TaG91bGQtUmVxdWVzdC1mcm9tLUNoaW5lc2UtU3VwcGxpZXJz&ntb=1
+9. China Export Compliance 2026: Risks for Importers | https://www.bing.com/ck/a?!&&p=3255eefaf170e6973bb6afe3a942d71780c44ce77939671ff60659bdfc8a3ef8JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly90ZmdnbG9iYWwuY29tLmF1L2NoaW5hLWV4cG9ydC1jb21wbGlhbmNlLWF1c3RyYWxpYW4taW1wb3J0ZXJzLw&ntb=1
+10. How to Verify Chinese Suppliers: 5-Step Verification Checklist (2026) | https://www.bing.com/ck/a?!&&p=a9bde417da6bc3507c353988038fbc1bfc582bc2e66859715c41913aafdf15bdJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9wYXhwb3J0dHJhZGluZy5jb20vYmxvZy9ob3ctdG8tdmVyaWZ5LWNoaW5lc2Utc3VwcGxpZXJzLWd1aWRlLmh0bWw&ntb=1
+11. Documents for exporting | Laws and regulations - business | https://www.bing.com/ck/a?!&&p=3131b1b27bbace71335bf5fa564e52a8faac1208c9996126700a7ac819396dedJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9leHBvcnQuYnVzaW5lc3MuZ292LmF1L2xhd3MtYW5kLXJlZ3VsYXRpb25zL2RvY3VtZW50cy1mb3ItZXhwb3J0aW5n&ntb=1
+
+LINKS:
+- how Bing delivers search results | https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3
+- Business License: A valid business license is a primary official document for any legal entity, including Chinese suppliers. It should be pu | https://www.epicsourcing.com.au/post/25-06-how-to-verify-a-chinese-supplier-before-you-pay-2026-checklist
+- winningadventure.com.au How to Verify a Chinese Supplier: Complete Guide for Australian Buyers The verification framework we use for every s | https://www.winningadventure.com.au/article/verify-chinese-supplier
+- blog.swiftcargo.solutions | https://blog.swiftcargo.solutions/verify-supplier-china-australia/
+- epowercn.com | https://www.epowercn.com/blog/blog-verify-chinese-supplier-checklist.html
+- chinawithme.com | https://chinawithme.com/guides/verify-chinese-supplier-2026
+- cantonpartner.comHow to Verify a Chinese Supplier: A Step-by-Step Guide | Canton PartnerBefore you can verify anything, you need the raw mat | https://www.cantonpartner.com/blog/how-to-verify-chinese-supplier
+- Τгаnѕⅼaytе https://translayte.com | https://translayte.com/orders/create?msclkid={msclkid}&utm_source=bing&utm_medium=cpc&utm_campaign=AU%20Remarketing%20PMax%20┃DTS&utm_term=translayte.com&utm_content=Asset%20Group%201
+- mydidаԁi.com https://en.mydidadi.com | https://en.mydidadi.com/8-Essential-Documents-You-Should-Request-from-Chinese-Suppliers
+- tfggⅼobal.com.au https://tfgglobal.com.au › china-export-compliance-australian-importers | https://tfgglobal.com.au/china-export-compliance-australian-importers/
+- pаxpoгttradiոg.com https://paxporttrading.com › blog › how-to-verify-chinese-suppliers-guide.html | https://paxporttrading.com/blog/how-to-verify-chinese-suppliers-guide.html
+- business.gov.aυ https://export.business.gov.au › laws-and-regulations › documents-for... | https://export.business.gov.au/laws-and-regulations/documents-for-exporting
+- Some results have been removed | http://go.microsoft.com/fwlink/?LinkID=617350
+
+BODY (truncated):
+Skip to content
+Accessibility Feedback
+6
+AllSearchShoppingImagesVideosMapsCopilot
+More
+About 17,200 results
+To verify that a Chinese supplier can legally export your product, you should request the following evidence:
+Business License: A valid business license is a primary official document for any legal entity, including Chinese suppliers. It should be publicly searchable and match the supplier's claims. 
+6
+Unified Social Credit Code: This is an 18-character alphanumeric identifier that functions like a corporate ID number. It should appear on the business license and match what you find online. 
+6
+Export License: If the supplier is involved in export transactions, they should have their own export license or disclose the export agent used. 
+6
+Government Registry: Check the supplier's registration status, including establishment date, registered capital, legal representative, shareholders, business scope, and any administrative penalties or abnormal operation flags. 
+6
+Credit History: Verify the supplier's credit history to ensure they are financially stable and can meet their obligations. 
+6
+
+These checks will help you confirm that the supplier is legally authorized to export your product and that they have the necessary documentation to comply with export regulations. 
+6
+6 Sources
+Read more
+Epic Sourcing
+How to Verify a Chinese Supplier Before You Pay (2026 Checklist)
+This 2026 checklist shows exactly how to verify a Chinese supplier before you pay — licence checks, video tours, samples, red flags and safe payment terms. Last updated: 25 June 20…
+winningadventure.com.au
+How to Verify a Chinese Supplier: Complete Guide for Australian Buyers
+The verification framework we use for every supplier before Australian clients pay a deposit 1 A valid business license does not guarantee a factory. Check the business scope for p…
+View all
+ 
+Eрic Sourcinɡ
+https://www.epicsourcing.com.au › post
+How to Verify a Chinese Supplier Before You Pay (2026 Checklist)
+
+25 June 2026 · A step-by-step 2026 checklist to verify a Chinese supplier before you pay: business licence, Trade Assurance, video calls, samples, red flags and safe payment terms.
+
+winningadveոture.com.au
+https://www.winningadventure.com.au › article › verify-chinese-supplier
+How to Verify a Chinese Supplier: Complete Guide for Australian Buyers
+
+8 Mar 2026 · Learn how to verify a Chinese supplier with this complete guide for Australian importers. Document checks, factory visits, and professional verification services.
+
+sԝiftcargo.solutions
+https://blog.swiftcargo.solutions › verify-supplier-china-australia
+Verifying Overseas Suppliers: Australian Importer Checklist
+
+23 June 2026 · Certain product categories require Chinese or Vietnamese export licences in addition to standard business registration. China restricts exports of certain chemicals, precursors, dual-use …
+
+epοwеrcn.com
+https://www.epowercn.com › blog › blog-verify-chinese-supplier-checklist.html
+How to Verify a Chinese Supplier — Factory Audit Checklist (2026)
+
+30 June 2026 · Complete guide to verifying Chinese manufacturers. Covers remote supplier verification, factory audit checklist, red flags, certifications (ISO 9001, CE, BSCI), video call questions, and third …
+
+chinaԝіtһme.сom
+https://chinawithme.com › guides
+Verify a Chinese Supplier (2026): Full Checklist
+
+Verify a Chinese supplier in 2026: business-license checks, factory vs trading company, audits, sample testing, payment safety, and the red flags to walk from.
+
+caոtoոрartner.com
+https://www.cantonpartner.com › blog › how-to-verify-chinese-supplier
+How to Verify a Chinese Supplier: A Step-by-Step Guide
+
+23 Apr 2026 · Before you commit to any order from a Chinese supplier, run these seven checks — business licence, government registry, export qualifications, credit history, and more.
+
+mydidаԁi.com
+https://en.mydidadi.com
+8 Essential Documents You Should Request from Chinese Suppliers
+
+12 July 2024 · Discover the 8 essential documents to request from Chinese suppliers—verify legitimacy, product quality, export compliance, bank account, and social audit reports. | DIDADI Logistics
+
+tfggⅼobal.com.au
+https://tfgglobal.com.au › china-export-compliance-australian-importers
+China Export Compliance 2026: Risks for Importers
+
+4 May 2026 · In practical terms, China export compliance now requires the exporter of record to be legitimate, traceable, and fully authorised. If that entity cannot legally export, the shipment does not …
+
+pаxpoгttradiոg.com
+https://paxporttrading.com › blog › how-to-verify-chinese-suppliers-guide.html
+How to Verify Chinese Suppliers: 5-Step Verification Checklist (2026)
+business.gov.aυ
+https://export.business.gov.au › laws-and-regulations › documents-for...
+Documents for exporting | Laws and regulations - business
+Like
+Dislike
+ 
+Accredited issuers for Certificate of Origin
+Certificate of Origin requirements Australia
+Certificate of Origin application process

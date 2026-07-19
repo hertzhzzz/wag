@@ -1,0 +1,113 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-06-false-documents",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-06-false-documents",
+  "prompt": "What warning signs suggest that a Chinese supplier's business licence or certificates may be false?",
+  "promptHash": "sha256:8d6588d86a3de05fb01c172aed1ad1af0091f1875eddb5157c400bcad6791afe",
+  "observedAt": "2026-07-18T13:51:40.329Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "chinesecheck.com",
+    "epicsourcing.com.au",
+    "newbuyingagent.com",
+    "owlsourcing.com",
+    "betterproductsourcing.com.au",
+    "paxporttrading.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3",
+      "title": "how Bing delivers search results",
+      "domain": "support.microsoft.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://chinesecheck.com/blog/chinese-business-license-verification",
+      "title": "Refuses to provide business license: A legitimate supplier should readily share their business license and registration details. ",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.epicsourcing.com.au/post/25-06-how-to-verify-a-chinese-supplier-before-you-pay-2026-checklist",
+      "title": "Epic Sourcing How to Verify a Chinese Supplier Before You Pay (2026 Checklist) This 2026 checklist shows exactly how to verify a Chinese sup",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://chinesecheck.com/blog/chinese-supplier-scam-prevention",
+      "title": "chinesecheck.com",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.newbuyingagent.com/resources/how-to-read-a-chinese-business-license-and-verify-a-supplier",
+      "title": "newbuyingagent.com",
+      "domain": "newbuyingagent.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://owlsourcing.com/verify-chinese-suppliers-legitimacy/",
+      "title": "owlsourcing.com",
+      "domain": "owlsourcing.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention",
+      "title": "betterproductsourcing.com.auHow to Verify a Chinese Supplier is Legitimate (Scam Prevention Guide)We'll cover 15 warning signs, 6 verificati",
+      "domain": "betterproductsourcing.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://paxporttrading.com/blog/how-to-verify-chinese-suppliers-guide.html",
+      "title": "paxporttrading.com https://paxporttrading.com › blog › how-to-verify-chinese-suppliers-guide.html",
+      "domain": "paxporttrading.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://chinawithme.com/guides/verify-chinese-supplier",
+      "title": "chinawithme.com https://chinawithme.com › guides › verify-chinese-supplier Translate this result",
+      "domain": "chinawithme.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.chinasourcelab.com/how-to-verify-a-chinese-supplier/",
+      "title": "chinasourcelab.com https://www.chinasourcelab.com › how-to-verify-a-chinese-supplier",
+      "domain": "chinasourcelab.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://chinawithme.com/guides/verify-chinese-supplier-2026",
+      "title": "chinawithme.com https://chinawithme.com › guides",
+      "domain": "chinawithme.com"
+    },
+    {
+      "rank": 12,
+      "url": "http://go.microsoft.com/fwlink/?LinkID=617350",
+      "title": "Some results have been removed",
+      "domain": "go.microsoft.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-06-false-documents.txt",
+    "hash": "sha256:97c9df646c7fa2539faff86ec2a2ee44253052a27b979ba48b9cd866aef0341e",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent."
+}

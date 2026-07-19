@@ -1,0 +1,254 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-01-registration-records
+observedAt: 2026-07-18T13:07:55.637Z
+url: https://chatgpt.com/c/6a5b7a13-6dc8-83ec-ad3c-59f14d886697
+title: Australian Importer Supplier Checks
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What official records should an Australian importer check before engaging a supplier in China?
+
+## User message (UI)
+What official records should an Australian importer check before engaging a supplier in China?
+
+## Assistant answer (UI text)
+Before engaging a Chinese supplier, an Australian importer should verify both the supplier's legal existence in China and their ability to export products that comply with Australian requirements.
+
+1. Verify the Chinese company's legal registration
+
+Check the supplier's official business registration through China's government records.
+
+Important records include:
+
+Business License (营业执照)
+
+Official company name (Chinese)
+
+Unified Social Credit Code
+
+Legal representative
+
+Registered capital
+
+Establishment date
+
+Business scope
+
+Registration status (active, revoked, cancelled)
+
+Company Registration Record
+
+Shareholders
+
+Ownership structure
+
+Registered address
+
+Branch offices
+
+Historical changes
+
+Useful government source:
+
+China's National Enterprise Credit Information Publicity System (国家企业信用信息公示系统)
+
+2. Review the company's compliance history
+
+Look for:
+
+Administrative penalties
+
+Serious violations
+
+Abnormal operating status
+
+Court judgments
+
+Enforcement actions
+
+Bankruptcy proceedings
+
+These can indicate financial or legal risk.
+
+3. Confirm export capability
+
+Not every manufacturer is legally equipped to export.
+
+Verify whether the supplier has:
+
+Export rights
+
+Customs registration
+
+Export licence (where applicable)
+
+Experience exporting to Australia
+
+Request examples of:
+
+Previous Bills of Lading
+
+Export declarations
+
+Australian customers (if they can disclose them)
+
+4. Verify tax information
+
+Request:
+
+VAT registration
+
+VAT invoice capability (增值税专用发票)
+
+Taxpayer classification
+
+This helps confirm they are operating legitimately.
+
+5. Confirm manufacturing capability
+
+If they claim to be a manufacturer, request:
+
+Factory address
+
+Production licence (if applicable)
+
+Factory audit reports
+
+ISO certifications
+
+Employee count
+
+Production capacity
+
+Many "manufacturers" are actually trading companies.
+
+6. Check intellectual property records
+
+Search for:
+
+Registered trademarks
+
+Patents
+
+IP infringement cases
+
+This reduces the risk of purchasing products that infringe third-party rights.
+
+7. Review litigation records
+
+Search for:
+
+Contract disputes
+
+Product quality disputes
+
+Labour disputes
+
+Debt collection cases
+
+A company involved in frequent litigation may present elevated commercial risk.
+
+8. Verify product certifications
+
+Depending on the products:
+
+For Australia:
+
+RCM (where applicable)
+
+EMC reports
+
+Electrical safety reports
+
+AS/NZS compliance
+
+Test reports from accredited laboratories
+
+For international products:
+
+CE
+
+FCC
+
+RoHS
+
+REACH
+
+UL (where relevant)
+
+Always verify that certificates correspond to the exact product being purchased.
+
+9. Financial due diligence
+
+Request evidence such as:
+
+Years in operation
+
+Major customers
+
+Annual export markets
+
+Factory photographs
+
+Banking information
+
+Trade references
+
+Commercial credit reports can also provide insight into financial stability.
+
+10. Verify shipping information
+
+Request copies of previous:
+
+Bills of Lading
+
+Commercial invoices
+
+Packing lists
+
+Certificates of Origin
+
+These help demonstrate genuine export activity.
+
+11. Australian import requirements
+
+Before placing an order, ensure:
+
+The goods are permitted to enter Australia.
+
+They comply with applicable Australian standards.
+
+They satisfy any quarantine or biosecurity requirements administered by the relevant Australian authorities.
+
+Required product markings, labelling, and documentation are available.
+
+Practical due diligence checklist
+Area	What to verify
+Legal identity	Business licence, registration status, legal representative
+Ownership	Shareholders, registered capital, company history
+Compliance	Administrative penalties, court cases, abnormal operations
+Export capability	Customs registration, export experience
+Manufacturing	Factory existence, audit reports, production capacity
+Product compliance	Test reports, Australian certifications
+Financial health	Credit reports, trade references
+Logistics	Previous export documents
+IP	Trademark and patent ownership
+Australian compliance	Import eligibility, applicable standards and biosecurity requirements
+
+For higher-value purchases or long-term supplier relationships, many importers also engage an independent inspection or audit firm to perform an on-site factory audit before committing to production. This can help verify that the factory, equipment, workforce, and quality systems match the supplier's claims.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+winningadventure.com.au: no
+winningadventure.com: no

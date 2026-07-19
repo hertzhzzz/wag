@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-03-export-evidence",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-03-export-evidence",
+  "prompt": "What evidence should I request to verify that a Chinese supplier can legally export my product?",
+  "promptHash": "sha256:fca55952ae2d4f5adfdd9c0e5ee1c13c2e33fb9f517fd41a6435287cb1d686cf",
+  "observedAt": "2026-07-18T13:46:14.087Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "qcckyc.com",
+    "fdichina.com",
+    "agriculture.gov.au",
+    "chinesecheck.com",
+    "couriersandfreight.com.au",
+    "reddit.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "How to Verify a Chinese Supplier: Complete Guide for ...",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.qcckyc.com/insights-verify-china-company",
+      "title": "A Step-by-Step Guide to Verifying a China Company - QCC",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://fdichina.com/blog/chinese-company-due-diligence-checklist/",
+      "title": "Chinese Company Due Diligence Checklist: How to Verify ... - FDI China",
+      "domain": "fdichina.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.agriculture.gov.au/biosecurity-trade/export/export-registration-with-china",
+      "title": "Export registration with China",
+      "domain": "agriculture.gov.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://chinesecheck.com/blog/how-to-verify-chinese-supplier",
+      "title": "How to Verify a Chinese Supplier: 7 Methods That Work ...",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.couriersandfreight.com.au/blog/how-to-source-trusted-suppliers-in-china-a-step-by-step-guide",
+      "title": "How to Source Trusted Suppliers in China: A Step-by- ...",
+      "domain": "couriersandfreight.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.reddit.com/r/dropship/comments/1mulcw2/heres_how_i_verify_if_a_supplier_from_china_is/",
+      "title": "Here's how I verify if a supplier from China is legit in under ...",
+      "domain": "reddit.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.linkedin.com/pulse/how-verify-chinese-suppliers-5-tips-global-buyers-chemball-y6duc",
+      "title": "How to Verify Chinese Suppliers: 5 Tips for Global Buyers",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.synergyfreight.com.au/china-export-licence/",
+      "title": "China Export Licence Rule Changes 2025",
+      "domain": "synergyfreight.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://auscus.com.au/new-china-export-licence-compliance-rules-how-to-protect-your-supply-chain-and-avoid-origin-side-delays/",
+      "title": "New China Export Licence/Compliance Rules",
+      "domain": "auscus.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-03-export-evidence.txt",
+    "hash": "sha256:6b2005a805ecb31365f8707897b2c67c92caa9640c6e6af6a81a30fdc794e820",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-07-remote-or-onsite",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-07-remote-or-onsite",
+  "prompt": "When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?",
+  "promptHash": "sha256:a50351bbb6132c77b2836cb0cb1de2c90621180f15068f57e7b051df7aa19bcf",
+  "observedAt": "2026-07-18T13:22:26.648Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-07-remote-or-onsite.txt",
+    "hash": "sha256:d7e65f56499b6a842a710e6529b24ea5b7678458c1b768e29315cc0f4fc68e07",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Conversation https://chatgpt.com/c/6a5b7dfe-0508-83ec-b84f-ca9bed750e45"
+}

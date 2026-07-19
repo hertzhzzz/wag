@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-03-export-evidence",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-03-export-evidence",
+  "prompt": "What evidence should I request to verify that a Chinese supplier can legally export my product?",
+  "promptHash": "sha256:fca55952ae2d4f5adfdd9c0e5ee1c13c2e33fb9f517fd41a6435287cb1d686cf",
+  "observedAt": "2026-07-18T13:28:52.813Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.worldfirst.com/af/blog/business-with-china/china-supplier-verification-guide-morocco/",
+      "title": "worldfirst",
+      "domain": "worldfirst.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.plutoniaglobal.com/guides/sv-documents-prove-factory-legitimate",
+      "title": "plutoniaglobal",
+      "domain": "plutoniaglobal.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.agriculture.gov.au/biosecurity-trade/export/export-registration-with-china",
+      "title": "agriculture\nExport registration with China\nThe People’s Republic of China is introducing new regulations under Decree 280 that come into effect from 1 June 2026",
+      "domain": "agriculture.gov.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://blogs.tradlinx.com/how-to-know-if-your-supplier-is-legit-before-you-ship-2025-checklist/",
+      "title": "blogs.tradlinx\nHow to Know If Your Supplier Is Legit Before You Ship ...\nDon’t trust a supplier just because they’re listed on a marketplace. In this practical ",
+      "domain": "blogs.tradlinx.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://greathandshake.com/en/how-to-conduct-due-diligence-on-chinese-supplier/",
+      "title": "greathandshake\nHow to Conduct a Proper Due Diligence on a Chinese Supplier - 很棒的握手 - Great Handshake\nA step-by-step guide for foreign buyers on vetting Chinese ",
+      "domain": "greathandshake.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://en.mydidadi.com/8-Essential-Documents-You-Should-Request-from-Chinese-Suppliers",
+      "title": "en.mydidadi\n8 Essential Documents You Should Request from Chinese Suppliers\nDiscover the 8 essential documents to request from Chinese suppliers—verify legitima",
+      "domain": "en.mydidadi.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://jrandfirm.com/verify-a-chinese-supplier/",
+      "title": "jrandfirm\nVerify a Chinese Supplier: Practical 12-Point Checklist 2025\nVerify A Chinese Supplier in 2026: the costs, timelines, documents and steps that matter,",
+      "domain": "jrandfirm.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.cantonpartner.com/blog/how-to-verify-chinese-supplier.html",
+      "title": "cantonpartner\nHow to Verify a Chinese Supplier - Canton Partner\nSeven layered checks — from free government registry lookups to factory audits — calibrated by o",
+      "domain": "cantonpartner.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://silkroadleo.com/blog/posts/2026-05-29-china-supplier-verification-checklist/",
+      "title": "silkroadleo\nChina Supplier Verification Checklist: 12 Points Before You ...\nThe 12-point checklist MENA buyers use to verify Chinese factories before placing an",
+      "domain": "silkroadleo.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://auscus.com.au/new-china-export-licence-compliance-rules-how-to-protect-your-supply-chain-and-avoid-origin-side-delays/",
+      "title": "auscus\nNew China Export Licence/Compliance Rules\nChina has recently changed their export compliance rules. Protect your supply chain by reading AUSCUS guide to ",
+      "domain": "auscus.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-03-export-evidence.txt",
+    "hash": "sha256:62bf5772718ed64f9ccd01ed057c6df33a476b8c27333f5769c06e43b472c181",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Search https://www.perplexity.ai/search/078b40e5-ef89-43ba-9316-ebfdad51f66c"
+}

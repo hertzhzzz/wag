@@ -1,0 +1,162 @@
+platform: google-ai-overviews
+runId: geo-sv-20260718-google-ai-overviews-r1
+questionId: supplier-verification-04-service-scope
+prompt: What should be included in a paid supplier verification service for an Australian importer?
+observedUrl: https://www.google.com/search?q=What%20should%20be%20included%20in%20a%20paid%20supplier%20verification%20service%20for%20an%20Australian%20importer%3F&hl=en-AU&gl=au&pws=0
+pageTitle: What should be included in a paid supplier verification service for an Australian importer? - Google Search
+status: observed-surface-absent
+surface: google-search-serp-en-AU
+brandMention: yes
+ownedUrlCited: yes
+aioUnavailable: false
+aioLabel: false
+
+=== AI Overview extract ===
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+8 Mar 2026 — Learn how to verify a Chinese supplier with this complete guide for Australian importers. Document checks, factory visits, and professional ...
+
+8 July 2026 — We authenticate business licenses, audit capability, and. We confirm the unified social credit code, legal status, and registered business scope
+
+31 Mar 2025 — The ACMA may conduct audits and investigations of suppliers to check compliance with any applicable technical standards and our labelling rules.Read more
+
+=== Organic titles ===
+1. How to Verify a Chinese Supplier: Complete Guide for ... | https://www.winningadventure.com.au/article/verify-chinese-supplier
+2. Supplier Verification in China for Australian Importers | https://www.winningadventure.com.au/supplier-verification
+3. Know what you must do as a supplier | https://www.acma.gov.au/know-what-you-must-do
+4. Supplier Verification: How to Verify a Manufacturer (2026) | https://tetrainspection.com/supplier-verification-guide/
+5. Due diligence for importers | https://www.agriculture.gov.au/agriculture-land/forestry/policies/illegal-logging/importers/due-diligence
+6. Importing from China to Australia: Step-by-Step Guide for ... | https://www.couriersandfreight.com.au/blog/importing-from-china-to-australia-step-by-step-guide-for-businesses
+7. How to Find Legitimate and Verified Alibaba Suppliers for ... | https://www.epicsourcing.com.au/post/how-to-find-verified-and-legitimate-alibaba-suppliers-australia
+8. How to Check a Chinese Supplier Before Paying | https://www.prestigesourcing.net/guides/how-to-check-a-chinese-supplier-before-paying/
+9. Supplier Approval Program for Food Manufacturers (Free Template) | https://www.alleratech.com/blog/supplier-approval-program#:~:text=A%20supplier%20approval%20program%20is%20a%20documented%20quality%20management%20system,used%20in%20your%20production%20process.
+10. Commonwealth Supplier Code of Conduct - Overview | https://www.finance.gov.au/government/procurement/ethical-conduct-suppliers/commonwealth-supplier-code-conduct-overview#:~:text=The%20Code%20outlines%20the%20Commonwealth's,%2C%20safety%2C%20and%20employee%20welfare.
+11. Introducing Verified Suppliers - Alibaba.com | https://fuwu.alibaba.com/page/verifiedsuppliers.htm#:~:text=To%20qualify%20as%20a%20Verified,consistent%20expertise%20on%20Alibaba.com.
+12. Importer in Distribution: Definition, Role, and Responsibilities | https://simplydepo.com/glossary/what-is-importer/#:~:text=An%20importer%20is%20a%20company,shipping%2C%20customs%2C%20and%20paperwork.
+
+=== Links ===
+winningadventure.com.au | https://www.winningadventure.com.au/article/verify-chinese-supplier
+winningadventure.com.au | https://www.winningadventure.com.au/supplier-verification
+acma.gov.au | https://www.acma.gov.au/know-what-you-must-do
+acma.gov.au | https://www.acma.gov.au/know-what-you-must-do#:~:text=The%20ACMA%20may%20conduct%20audits,standards%20and%20our%20labelling%20rules.
+tetrainspection.com | https://tetrainspection.com/supplier-verification-guide/
+agriculture.gov.au | https://www.agriculture.gov.au/agriculture-land/forestry/policies/illegal-logging/importers/due-diligence
+couriersandfreight.com.au | https://www.couriersandfreight.com.au/blog/importing-from-china-to-australia-step-by-step-guide-for-businesses
+epicsourcing.com.au | https://www.epicsourcing.com.au/post/how-to-find-verified-and-legitimate-alibaba-suppliers-australia
+prestigesourcing.net | https://www.prestigesourcing.net/guides/how-to-check-a-chinese-supplier-before-paying/
+alleratech.com | https://www.alleratech.com/blog/supplier-approval-program#:~:text=A%20supplier%20approval%20program%20is%20a%20documented%20quality%20management%20system,used%20in%20your%20production%20process.
+finance.gov.au | https://www.finance.gov.au/government/procurement/ethical-conduct-suppliers/commonwealth-supplier-code-conduct-overview#:~:text=The%20Code%20outlines%20the%20Commonwealth's,%2C%20safety%2C%20and%20employee%20welfare.
+fuwu.alibaba.com | https://fuwu.alibaba.com/page/verifiedsuppliers.htm#:~:text=To%20qualify%20as%20a%20Verified,consistent%20expertise%20on%20Alibaba.com.
+simplydepo.com | https://simplydepo.com/glossary/what-is-importer/#:~:text=An%20importer%20is%20a%20company,shipping%2C%20customs%2C%20and%20paperwork.
+ezyshield.com.au | https://ezyshield.com.au/learn/supplier-verification-australia/
+ezyshield.com.au | https://ezyshield.com.au/learn/supplier-verification-australia/#:~:text=Protecting%20Australian%20businesses%20from%20payment&text=Protecting%20Australian%20businesses%20from%20payment&text=Protecting%20Australian%20businesses%20from%20payment
+
+=== Body text (truncated) ===
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Shopping
+Images
+Short videos
+Videos
+More
+Tools
+Search Results
+Web results
+How to Verify a Chinese Supplier: Complete Guide for ...
+
+Winning Adventure Global
+https://www.winningadventure.com.au › Articles
+8 Mar 2026 — Learn how to verify a Chinese supplier with this complete guide for Australian importers. Document checks, factory visits, and professional ...
+Supplier Verification in China for Australian Importers
+
+Winning Adventure Global
+https://www.winningadventure.com.au › Services
+8 July 2026 — We authenticate business licenses, audit capability, and. We confirm the unified social credit code, legal status, and registered business scope
+Know what you must do as a supplier
+
+ACMA
+https://www.acma.gov.au › know-what-you-must-do
+31 Mar 2025 — The ACMA may conduct audits and investigations of suppliers to check compliance with any applicable technical standards and our labelling rules.Read more
+Missing: verification ‎| Show results with: verification
+Supplier Verification: How to Verify a Manufacturer (2026)
+
+Tetra Inspection
+https://tetrainspection.com › Quality Control Services
+Actual production capacity should be verifiable through equipment counts name, unified social credit code ・ registered capital, business scope ・ legal ...
+Due diligence for importers
+
+DAFF
+https://www.agriculture.gov.au › illegal-logging › due-...
+3 June 2025 — The due diligence system must include: The importer's name, street and postal address, contact number and email address.
+Importing from China to Australia: Step-by-Step Guide for ...
+
+Couriers and Freight
+https://www.couriersandfreight.com.au › blog › importi...
+28 Oct 2025 — It includes: What you paid the supplier (known as the Free On Board FOB value) Shipping and insurance costs Any duty that applies
+How to Find Legitimate and Verified Alibaba Suppliers for ...
+
+Epic Sourcing
+https://www.epicsourcing.com.au › post › how-to-find-...
+22 July 2025 — Essential documents for customs clearance: Commercial Invoice (detailed product description, values, supplier information) Packing List ( ...
+How to Check a Chinese Supplier Before Paying
+
+Prestige Sourcing Group
+https://www.prestigesourcing.net › guides › how-to-che...
+4 days ago — Learn how to verify a Chinese supplier before paying a deposit, including business checks, factory verification, warning signs and payment ...
+People also ask
+What is the FSMA supplier approval program?
+What is the supplier code of conduct in Australia?
+What does "verified supplier" on Alibaba mean?
+Is an importer a supplier?
+Web results
+Supplier Verification Australia | How to Verify Suppliers
+
+ezyshield
+https://ezyshield.com.au › Learn
+What to verify before you pay · 1. The business (ABN/ASIC). Validate the supplier's ABN against the Australian Business Register. · 2. The person (identity).Read more
+Missing: importer? ‎| Show results with: importer?
+People also search for
+Acma responsible supplier
+ACMA 5 steps for suppliers
+Product compliance Australia
+How to become a supplier in Australia
+ACMA regulations
+Australian communication
+Australian electrical compliance
+Eess responsible supplier registration
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are not personalised
+Australia
+Adelaide, South Australia - From your IP address
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

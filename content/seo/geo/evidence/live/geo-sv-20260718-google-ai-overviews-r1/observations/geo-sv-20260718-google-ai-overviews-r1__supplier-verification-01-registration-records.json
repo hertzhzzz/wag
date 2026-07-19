@@ -1,0 +1,37 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-01-registration-records",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-01-registration-records",
+  "prompt": "What official records should an Australian importer check before engaging a supplier in China?",
+  "promptHash": "sha256:356387f04841deb2efce4f1b0777e156e6ea218e98d93cf714c3656a5d0230cb",
+  "observedAt": "2026-07-18T12:37:22.331Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "swiftcargo.solutions",
+    "Epic Sourcing",
+    "Synergy Freight Management",
+    "Lynch Meyer Lawyers"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-01-registration-records.txt",
+    "hash": "sha256:8d384dcbfe93b5b99faffd183a14296e8f30d56a037d09b7a793c2c1e2e82ff6",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

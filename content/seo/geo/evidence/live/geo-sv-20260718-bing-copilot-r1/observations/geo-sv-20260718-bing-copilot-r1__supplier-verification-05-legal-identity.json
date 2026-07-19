@@ -1,0 +1,113 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-05-legal-identity",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-05-legal-identity",
+  "prompt": "How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?",
+  "promptHash": "sha256:99d434c7c1a04c3d53df94354fade3a87b860b941fd328782cd8719579cd9013",
+  "observedAt": "2026-07-18T13:51:30.203Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "chinverify.com",
+    "qcckyc.com",
+    "verisupplier.com",
+    "chinesecheck.com",
+    "chenqingkai.com",
+    "chinesesourcingagents.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3",
+      "title": "how Bing delivers search results",
+      "domain": "support.microsoft.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.chinverify.com/en/checker",
+      "title": "The Unified Social Credit Code (USCC) is the primary identifier for every legal entity in China. It is an 18-character alphanumeric code tha",
+      "domain": "chinverify.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.chinverify.com/en/china-business-registry",
+      "title": " To verify a USCC, you can search for the company on China's official National Enterprise Credit Information Publicity System (GSXT) at gsxt",
+      "domain": "chinverify.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.qcckyc.com/blog-detail/china-uscc-lookup",
+      "title": "qcckyc.com",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://verisupplier.com/china-business-license-lookup",
+      "title": "verisupplier.com",
+      "domain": "verisupplier.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://chinesecheck.com/blog/unified-social-credit-code-explained",
+      "title": "chinesecheck.com",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://chinesecheck.com/blog/chinese-business-license-verification",
+      "title": "chinesecheck.comChinese Business License Verification: How to Check If It's RealUnified Social Credit Code (统一社会信用代码) This is the single mos",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://chenqingkai.com/2026/06/How_to_Verify_a_Chinese_Supplier_Before_You_Pay/",
+      "title": "chenqingkai.com https://chenqingkai.com › How_to_Verify_a_Chinese_Supplier...",
+      "domain": "chenqingkai.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://chinesesourcingagents.com/how-to-verify-a-chinese-supplier/",
+      "title": "chinesesourcingagents.com https://chinesesourcingagents.com › how-to-verify-a-chinese-supplier",
+      "domain": "chinesesourcingagents.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.epicsourcing.com.au/post/25-06-how-to-verify-a-chinese-supplier-before-you-pay-2026-checklist",
+      "title": "Epic Sourcing https://www.epicsourcing.com.au › post",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 11,
+      "url": "https://qincheck.com/unified-social-credit-code-check",
+      "title": "qincheck.com https://qincheck.com › unified-social-credit-code-check",
+      "domain": "qincheck.com"
+    },
+    {
+      "rank": 12,
+      "url": "http://go.microsoft.com/fwlink/?LinkID=617350",
+      "title": "Some results have been removed",
+      "domain": "go.microsoft.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-05-legal-identity.txt",
+    "hash": "sha256:75544bb8043e10153482985aa571a62f46aafb801af622d4ab052b606f667882",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent."
+}

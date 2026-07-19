@@ -1,0 +1,325 @@
+PLATFORM: perplexity
+URL: https://www.perplexity.ai/search/161c6b30-29e3-4f04-9957-f3037cd7a778
+TITLE: What official records should an Australian importer check before engaging a...
+OBSERVED_AT: 2026-07-18T12:47:08.649Z
+AUTH: signed-in-test-account (Zhe He Free plan)
+PROMPT: What official records should an Australian importer check before engaging a supplier in China?
+---
+Core Answer
+
+Before engaging a Chinese supplier, an Australian importer should verify the following official records:
+
+Business License (营业执照) — checked against China's State Administration for Market Regulation (SAMR) registry at gsxt.gov.cn or samr.gov.cn
+epicsourcing.com
++2
+
+Unified Social Credit Code — the 18-digit registration number that confirms legal existence, registered capital, business scope, and current status
+winningadventure.com
++1
+
+Export License / Customs Registration — confirms the supplier is authorised to export (required for customs clearance)
+chinasleuth
++1
+
+Product-Specific Certifications — ISO 9001, CE, CB, or industry-specific certificates, verified directly with the issuing body (not just file copies)
+epicsourcing.com
++1
+
+Bank Account Details — must match the company name on the business license; never pay to personal accounts
+betterproductsourcing.com
++1
+
+Why These Records Matter
+
+Under Australian Consumer Law, you — the Australian importer — carry legal responsibility for product quality, safety compliance, and supply chain integrity, not the factory or freight forwarder. If products fail to meet Australian standards or the supplier turns out to be a shell company, you bear the loss. Checking official records before paying any deposit is the primary risk mitigation step.
+winningadventure.com
+
+Detailed Checklist: What to Verify and How
+1. Business License & Company Registration (SAMR/GSXT)
+
+What to check:
+
+Company exists — search the Chinese company name or Unified Social Credit Code on gsxt.gov.cn (National Enterprise Credit Information Publicity System)
+epicsourcing.com
++1
+
+Current status — should show "Operating" (not "Cancelled," "Revoked," or "Dissolved")
+epicsourcing.com
++1
+
+Business scope — must explicitly include manufacturing, production, or processing terms (not just "wholesale," "export," or "trading")
+epicsourcing.com
++1
+
+Registration date — prefer suppliers operating 3+ years; newly registered companies (<1 year) are higher risk
+betterproductsourcing.com
++1
+
+Registered capital — indicates company scale (1–5 million RMB = small factory; 20+ million RMB = large factory)
+betterproductsourcing.com
+
+Legal representative — cross-check with LinkedIn or company website
+betterproductsourcing.com
+
+Red flags:
+
+No SAMR record = immediate walk away
+winningadventure.com
+
+Business scope describes only trading/wholesale, not manufacturing
+winningadventure.com
+
+Recent address changes (within 12 months)
+winningadventure.com
+
+2. Registered Address Verification
+
+What to check:
+
+Address is in an industrial zone — factories require industrial zoning; commercial office addresses are a red flag
+epicsourcing.com
++1
+
+Satellite imagery — drop the address into Google Maps or Baidu Maps to confirm what is actually at that location
+winningadventure.com
+
+Address consistency — cross-check the registered address against sample shipment origin, invoice company name, and shipping documents
+epicsourcing.com
++1
+
+Red flags:
+
+Registered address shows a commercial office building or residential location
+betterproductsourcing.com
++1
+
+Sample shipped from a different city than the factory's registered address
+winningadventure.com
+
+Three different entity names across business license, invoice, and shipping documents
+winningadventure.com
+
+3. Export License & Customs Registration
+
+What to check:
+
+Export license — confirms the supplier is legally authorised to export goods from China
+chinasleuth
++1
+
+Customs registration — required for customs clearance; verify the company name matches the business license
+winningadventure.com
++1
+
+Why it matters:
+
+Without valid export documentation, your goods may be held at Chinese customs or Australian border, causing delays and additional costs.
+winningadventure.com
+
+4. Product Certifications & Compliance Documents
+
+What to check:
+
+ISO 9001 (quality management) — verify certificate number with the issuing body's online portal
+epicsourcing.com
++1
+
+CE, CB, or industry-specific certificates — verify each certificate directly with the issuing organisation (SGS, Bureau Veritas, Intertek, etc.)
+epicsourcing.com
++1
+
+Certificate scope — ensure the certificate covers the specific product category you are ordering (a CE certificate for electronics does not cover mechanical equipment)
+winningadventure.com
+
+Expiration dates — certificates can be valid but expired
+winningadventure.com
+
+Australian compliance — RCM marking (electronics), AS/NZS standards, safety warnings in English, country-of-origin labelling
+betterproductsourcing.com
+
+Red flags:
+
+Supplier provides only file copies without certificate numbers
+winningadventure.com
+
+Certificates belong to a parent company, not the subsidiary producing your goods
+winningadventure.com
+
+Certificate number does not exist in the issuing body's database
+winningadventure.com
+
+5. Bank Account Verification
+
+What to check:
+
+Company name on bank account — must match exactly the company name on the business license
+betterproductsourcing.com
++1
+
+Bank is in China — never wire money to accounts in other countries (e.g., Dubai, as in the $40,000 invoice scam case)
+betterproductsourcing.com
+
+Payment method — use Alibaba Trade Assurance, PayPal Goods & Services, or Letter of Credit for buyer protection; avoid Western Union, MoneyGram, or personal accounts
+epicsourcing.com
++1
+
+Red flags:
+
+Bank account name differs from business license
+betterproductsourcing.com
+
+Supplier requests payment to personal account or non-Chinese bank
+betterproductsourcing.com
+
+Supplier pressures you to pay 100% upfront (no legitimate supplier requires this)
+betterproductsourcing.com
+
+How to Access These Records
+Record	Where to Check	Notes
+Business License / Company Registration	gsxt.gov.cn (National Enterprise Credit Information Publicity System) or samr.gov.cn (SAMR) 
+epicsourcing.com
++1
+	Website is in Chinese; use company name in Chinese characters or 18-digit Unified Social Credit Code
+Export License	Request from supplier; verify with Chinese customs or trade authority 
+chinasleuth
+	Supplier should provide copy; confirm company name matches business license
+Product Certifications	Issuing body's online verification portal (SGS, Bureau Veritas, Intertek, etc.) 
+winningadventure.com
++1
+	Ask for certificate number; verify directly — do not accept file copies alone
+Bank Account	Request bank account verification letter from supplier 
+betterproductsourcing.com
+	Company name must match business license exactly
+Additional Verification Steps (Beyond Official Records)
+
+While official records are foundational, combine them with:
+
+Live video factory walkthrough — request unedited, real-time video of the production line handling your order
+epicsourcing.com
++1
+
+Third-party factory audit — hire SGS, Bureau Veritas, or Intertek for on-site inspection ($350–800)
+epicsourcing.com
++1
+
+Reference checks — contact 3–5 previous Australian or Western clients
+epicsourcing.com
++1
+
+Sample testing — order paid samples and test in NATA-accredited Australian lab if compliance is required ($200–1,000)
+betterproductsourcing.com
+
+Before You Pay Any Deposit
+
+Confirm all five of these before transferring funds:
+
+Business license verified — checked against SAMR/GSXT registry
+epicsourcing.com
++1
+
+Factory address confirmed — matches an actual industrial manufacturing location
+winningadventure.com
+
+Certifications verified — checked with issuing bodies, not just file copies
+epicsourcing.com
++1
+
+Live factory evidence — video walkthrough or on-site visit completed
+winningadventure.com
+
+Company name matches — across business license, invoice, bank account, and shipping documents
+epicsourcing.com
++1
+
+If you cannot confirm all five, do not pay the deposit.
+winningadventure.com
+
+Need Help?
+
+Given your role at Winning Adventure Global, you already conduct these checks professionally for clients. For your own business imports (e.g., eyewear sourcing), the same framework applies — the verification cost is a fraction of what a lost deposit or compliance failure costs.
+winningadventure.com
++2
+
+If you want, I can help you draft a supplier onboarding checklist template in English and Chinese for your own use or client handouts.
+
+10 sources
+Follow-ups
+Audit checklist: Every official China record an Aussie importer must verify before paying, and the 15 red flags that kill a deal
+Computer
+​
+Build a supplier-risk scorecard for your Chinese vendors — score legal identity, factory capability, and export compliance in one sheet
+Computer
+​
+Yes, please draft an onboarding checklist template for my team
+Can you create a checklist for a retail business importing electronics
+Yes, include a section for verifying factory certifications in it
+Sources
+industry.gov
+PUBLIC RECORD
+epicsourcing.com
+China Supplier Verification | Find Genuine Chinese Factories
+Verify China suppliers in 48 hours. Comprehensive factory reports, business license checks, production capacity analysis for Australian importers. Our verification reveals real manufacturers vs traders. Get direct factory access for better pricing.
+winningadventure.com
+How to Verify a Chinese Supplier: Complete Guide for ...
+Learn how to verify a Chinese supplier with this complete guide for Australian importers. Document checks, factory visits, and professional verification services.
+epicsourcing.com
+How to Verify a Chinese Supplier Before You Pay (2026 Checklist)
+A step-by-step 2026 checklist to verify a Chinese supplier before you pay: business licence, Trade Assurance, video calls, samples, red flags and safe payment terms.
+chinasleuth
+Verify Supplier in China | Supplier Check & Factory Visit
+Protect your procurement with supplier verification in China. We check suppliers, inspect factories, and help verify any China supplier before payment.
+betterproductsourcing.com
+How to Verify a Chinese Supplier is Legitimate (Scam Prevention ...
+Prevent supplier fraud with this comprehensive verification guide. Learn 15 red flags and 6 verification methods to ensure your Chinese supplier is legitimate before ordering.
+winningadventure.com
+How to Import from China | Australian Business Guide
+A practical guide to importing from China for Australian businesses. Covers ABN registration, customs requirements, supplier verification, shipping, and ChAFTA duty rates.
+winningadventure.com
+Supplier Verification in China | Winning Adventure Global
+Remote, Australia-based supplier verification: business-license authentication, capability audit, and quality inspection across 1,200+ pre-screened Chinese factories.
+winningadventure.com
+China Sourcing Agent vs Going Direct: What Australian Importers ...
+A China sourcing agent earns its fee on verification, on-ground checks, and negotiation — not contacts. Here is when an Australian importer needs one and when going direct is fine.
+blog.swiftcargo
+How to Verify a Supplier Before Shipping: A Practical Guide for Australian Importers - Swift Cargo Solutions
+A systematic process for verifying overseas suppliers before shipping — SAMR business registration checks, factory audits, test report verification, pre-shipment inspection, and annual supplier review cycles.
+---
+CITATION_LINKS:
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- chinasleuth | https://chinasleuth.com/services/verify-supplier/
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- chinasleuth
+Verify Supplier in China | Supplier Check & Factory Visit
+Protect your procurement with supplier verificatio | https://chinasleuth.com/services/verify-supplier/
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined
+- undefined | undefined

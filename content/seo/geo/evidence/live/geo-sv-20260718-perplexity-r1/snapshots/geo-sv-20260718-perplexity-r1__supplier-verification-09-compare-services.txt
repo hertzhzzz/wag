@@ -1,0 +1,261 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-perplexity-r1
+platform: perplexity
+questionId: supplier-verification-09-compare-services
+observedAt: 2026-07-18T13:32:20.060Z
+url: https://www.perplexity.ai/search/8fe1fa5b-b13c-4fe8-82f4-6cec6a06a218
+title: How should an Australian business compare supplier verification services for...
+auth: signed-in-test-account
+accountTier: free
+surface: perplexity-search-free
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+How should an Australian business compare supplier verification services for work in China?
+
+## Answer (UI text extract)
+New
+⌘K
+Computer
+Spaces
+Artifacts
+Customize
+Connectors
+Skills
+Workflows
+Memory
+History
+How should an Australian business compare supplier verification services for work in China?
+How should I verify bank account details before paying a new Chinese supplier?
+When is remote supplier verification enough, and when should an Australian buyer commission an on-si
+What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?
+What should be included in a paid supplier verification service for an Australian importer?
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+What official records should an Australian importer check before engaging a supplier in China?
+如何注册成美国k12的学校
+基于我们整个对话的全部上下文，重新审视并评估这个项目，而不是默认沿用之前的结论。 你拥有以下背景信息： 我提供了一份澳大利亚 2026 年 7 月 3 日至 10 日的 Google 热搜数据（CSV
+https://augstudy.com/australia/ 全面分析这家公司和他们的specialty
+给我鸡肉奶油蘑菇通心粉的完美菜单和完美的克重比例数据
+网站： https://www.winningadventure.com.au/ 你是一位资深 SEO Growth Consultant（SEO增长顾问），同时具备以下专业能力： SEO战略规划 T
+Google ads 设置每次电话带来的价值，我们的服务费3000刀的话，每一通电话的价值是应该设置多少
+客户：Joseph
+任务：从本 Space 的全部对话与文件中，提取所有客户/线索信息，输出为 JSON 数组。 每条客户对象必须且只能包含以下字段（无信息则留空字符串）： - name: 联系人姓名 - compan
+请你担任我的 2026 SEO 私人教练、增长顾问和实战陪跑者。 我的网站是： https://www.winningadventure.com.au/ 我的目标不是学习一套通用 SEO 课程，而是通
+Comprehensive Website Audit and Strategy
+请基于 Google Search Console、Google Analytics、Google Business Profile 三个数据源，全面分析 winningadventure.com.a
+Upgrade plan
+Zhe He
+Free plan
+Answer
+Links
+Images
+Share
+How should an Australian business compare supplier verification services for work in China?
+
+An Australian business should compare supplier verification services in China on what they actually verify, how they verify it, and how usable the report is for your buying decision. The best option is usually the one that reduces the risk of fake factories, trading-company misrepresentation, and quality surprises before money is committed.
+winningadventure.com
++1
+
+What to compare
+
+Business legitimacy checks: legal registration, unified social credit code, registered scope, and whether the company is real and allowed to make or sell the product.
+sgsgroup.com
++1
+
+Factory capability checks: equipment, workforce, production capacity, certifications, and whether the supplier can actually make your product at the promised scale.
+winningadventure.com
++1
+
+Export-history and trade experience: whether the supplier has a genuine record of serving overseas buyers and shipping the relevant product category.
+winningadventure.com
+
+On-site inspection depth: whether the service includes a physical visit, photo/video evidence, and a written report rather than just database lookup.
+sgsgroup.com
++1
+
+Quality-control coverage: whether the verification includes pre-shipment checks against your specification, not just company background checks.
+winningadventure.com
+
+Response speed and turnaround: how fast they can deliver a report when you need to make a purchasing decision.
+epicsourcing.com
+
+Industry relevance: whether they have experience in your product category, because verification quality is stronger when the provider understands the real factory landscape in that sector.
+winningadventure.com
++1
+
+Questions to ask each provider
+
+What documents do you check, and can you show examples of the final report?
+
+Do you physically visit the factory, or only verify documents online?
+
+How do you distinguish a real manufacturer from a trader or middleman?
+
+Do you verify production capability, or only company registration?
+
+Can you inspect the goods before shipment as part of the same engagement?
+
+What is included in the fee, and what costs extra?
+
+How quickly can you complete the verification?
+
+What evidence do you provide so my team can make a go/no-go decision?
+
+Simple scoring method
+
+Use a 1–5 score for each provider across these categories:
+
+Category	Weight
+Legal identity verification	20%
+Factory capability audit	20%
+On-site presence in China	15%
+Quality inspection coverage	15%
+Industry-specific experience	10%
+Report clarity and evidence	10%
+Turnaround time	5%
+Price transparency	5%
+
+A provider that only checks registration details should score much lower than one that combines document checks, factory visits, and pre-shipment inspection.
+sgsgroup.com
++1
+
+Best-fit options
+
+Choose a specialist sourcing/verification firm when you need practical buying support, supplier matching, and factory-floor insight, especially for first-time China sourcing.
+winningadventure.com
++2
+
+Choose a global inspection/certification company when you want standardized third-party verification and a formal audit style.
+sgsgroup.com
+
+Choose a fast background-check service when you mainly need quick legitimacy screening and do not need deep operational validation.
+linkedin
++1
+
+Decision rule
+
+For most Australian importers, the strongest service is the one that combines document authentication, on-site factory verification, and pre-shipment quality inspection in a single process. If the report does not help you answer “Is this the real factory, can it make my product, and is this shipment acceptable?”, it is probably too shallow for sourcing work in China.
+winningadventure.com
++1
+
+I can also turn this into a one-page vendor comparison checklist you can use for supplier vetting.
+
+10 sources
+Follow-ups
+Yes, please provide a one-page vendor comparison checklist
+Can you create a checklist focused on electronics manufacturing
+I need a checklist for verifying small-batch textile suppliers
+Yes, make a checklist but prioritize physical inspection steps
+I prefer a checklist focused on verifying legal registration documents
+Sources
+linkedin
+VerifyChina.Net | Information Services
+VerifyChina.Net is an efficient agency dedicated to providing comprehensive Chinese company information reports. We are a customer-focused Australian business located in Brisbane determined to facilitate a safer commerce environment by providing the necessary data to assist you in performing a more comprehensive company evaluation & risk analysis of your Chinese clients & suppliers before the trade. There are a lot of misunderstandings as well as distrust between China and other countries in...
+epicsourcing.com
+China Supplier Verification | Find Genuine Chinese Factories
+Verify China suppliers in 48 hours. Comprehensive factory reports, business license checks, production capacity analysis for Australian importers. Our verification reveals real manufacturers vs traders. Get direct factory access for better pricing.
+winningadventure.com
+Supplier Verification in China | Winning Adventure Global
+Remote, Australia-based supplier verification: business-license authentication, capability audit, and quality inspection across 1,200+ pre-screened Chinese factories.
+winningadventure.com
+China Sourcing Agent Australia | Factory Tours & Supplier Verification
+Find and vet China suppliers for Australian businesses — or visit and verify a factory you already know. AV & lighting, construction, agricultural machinery.
+betterproductsourcing.com
+How to Verify a Chinese Supplier is Legitimate (Scam Prevention ...
+Prevent supplier fraud with this comprehensive verification guide. Learn 15 red flags and 6 verification methods to ensure your Chinese supplier is legitimate before ordering.
+winningadventure.com
+WAG | China Sourcing Australia | Factory Tours & Supplier Verification
+Winning Adventure Global helps Australian businesses source from China with factory tours, supplier verification, and end-to-end procurement support. Based in Adelaide.
+winningadventure.com
+China Sourcing Agent Services
+Dedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-end procurement support.
+winningadventure.com
+How to Verify a Chinese Supplier: Complete Guide for ...
+Learn how to verify a Chinese supplier with this complete guide for Australian importers. Document checks, factory visits, and professional verification services.
+asiaction
+Supplier Verification in China – Check, Investigate, Audit
+Verify your Chinese supplier with Asiaction: legal company check-up, in-depth investigation, and full factory audit since 2008
+sgsgroup.com
+Supplier Verification Program | SGS China
+SGS’s supplier verification program – instills confidence between clients and suppliers in a digital age.
+
+
+
+
+Ask a follow-up
+Search
+Computer
+Model
+
+## Links
+[
+  {
+    "rank": 1,
+    "url": "https://www.winningadventure.com.au/supplier-verification",
+    "title": "winningadventure.com",
+    "domain": "winningadventure.com.au"
+  },
+  {
+    "rank": 2,
+    "url": "https://www.epicsourcing.com.au/get-your-supplier-verified",
+    "title": "epicsourcing.com",
+    "domain": "epicsourcing.com.au"
+  },
+  {
+    "rank": 3,
+    "url": "https://www.sgsgroup.com.cn/en-cn/services/supplier-verification-program",
+    "title": "sgsgroup.com",
+    "domain": "sgsgroup.com.cn"
+  },
+  {
+    "rank": 4,
+    "url": "https://www.linkedin.com/company/verifychina.net",
+    "title": "linkedin\nVerifyChina.Net | Information Services\nVerifyChina.Net is an efficient agency dedicated to providing comprehensive Chinese company information reports.",
+    "domain": "linkedin.com"
+  },
+  {
+    "rank": 5,
+    "url": "https://www.winningadventure.com.au/",
+    "title": "winningadventure.com\nChina Sourcing Agent Australia | Factory Tours & Supplier Verification\nFind and vet China suppliers for Australian businesses — or visit an",
+    "domain": "winningadventure.com.au"
+  },
+  {
+    "rank": 6,
+    "url": "https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention",
+    "title": "betterproductsourcing.com\nHow to Verify a Chinese Supplier is Legitimate (Scam Prevention ...\nPrevent supplier fraud with this comprehensive verification guide.",
+    "domain": "betterproductsourcing.com.au"
+  },
+  {
+    "rank": 7,
+    "url": "https://winningadventure.com.au/",
+    "title": "winningadventure.com\nWAG | China Sourcing Australia | Factory Tours & Supplier Verification\nWinning Adventure Global helps Australian businesses source from Chi",
+    "domain": "winningadventure.com.au"
+  },
+  {
+    "rank": 8,
+    "url": "https://www.winningadventure.com.au/article/china-sourcing-agent",
+    "title": "winningadventure.com\nChina Sourcing Agent Services\nDedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-e",
+    "domain": "winningadventure.com.au"
+  },
+  {
+    "rank": 9,
+    "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+    "title": "winningadventure.com\nHow to Verify a Chinese Supplier: Complete Guide for ...\nLearn how to verify a Chinese supplier with this complete guide for Australian imp",
+    "domain": "winningadventure.com.au"
+  },
+  {
+    "rank": 10,
+    "url": "https://www.asiaction.com/en/supplier-verification-china/",
+    "title": "asiaction\nSupplier Verification in China – Check, Investigate, Audit\nVerify your Chinese supplier with Asiaction: legal company check-up, in-depth investigation",
+    "domain": "asiaction.com"
+  }
+]
+
+## Brand scan
+Winning Adventure Global: yes
+ownedUrlCited: yes

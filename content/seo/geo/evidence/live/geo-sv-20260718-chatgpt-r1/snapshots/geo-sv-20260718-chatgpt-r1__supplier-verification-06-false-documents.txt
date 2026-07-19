@@ -1,0 +1,301 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-06-false-documents
+observedAt: 2026-07-18T13:22:01.923Z
+url: https://chatgpt.com/c/6a5b7de8-6930-83ec-8b58-26c86a049c11
+title: Warning signs of fake certificates
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+
+## User message (UI)
+What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+
+## Assistant answer (UI text)
+Warning signs that a Chinese supplier’s business licence or certificates may be false, altered, expired, or misleading include:
+
+1. Business licence inconsistencies
+
+Company name mismatch
+
+The Chinese legal name on the business licence does not exactly match:
+
+the quotation
+
+sales contract
+
+invoice (发票)
+
+bank account holder
+
+customs documents
+
+Incorrect Unified Social Credit Code (统一社会信用代码)
+
+The 18-digit code is missing, has incorrect formatting, or does not match official records.
+
+Suspicious registration details
+
+The registered address appears to be:
+
+a residential apartment for a supposedly large factory
+
+a virtual office
+
+unrelated to manufacturing activity
+
+Business scope mismatch (经营范围)
+
+Example:
+
+Supplier claims to manufacture LED lighting equipment.
+
+Business scope only covers trading, consulting, or unrelated products.
+
+A supplier may legally trade products without manufacturing them, but they should not falsely claim factory ownership.
+
+Recent registration with no operating history
+
+A company registered only a few months ago claiming "20 years of manufacturing experience" is a red flag.
+
+2. Document quality issues
+
+Low-resolution scans
+
+Blurry licences, inconsistent fonts, missing seals, or uneven text alignment.
+
+Edited PDFs or images
+
+Signs include:
+
+different font styles in the same document
+
+inconsistent spacing
+
+copied stamps/seals
+
+unnatural backgrounds
+
+metadata showing recent editing
+
+Missing official stamps
+
+Chinese official documents normally contain government-issued formatting and seals.
+
+Incorrect terminology
+
+Examples:
+
+wrong Chinese legal terms
+
+simplified/traditional Chinese inconsistencies
+
+incorrect government department names
+
+3. Certificate authenticity problems
+ISO certificates
+
+Warning signs:
+
+Certificate issued by an unknown certification body
+
+Certification body cannot be found in accreditation databases
+
+Certificate number cannot be verified
+
+Scope is too broad:
+
+"Manufacturing of all electronic products"
+
+"Global quality management"
+
+Certificate covers a product category unrelated to the supplier
+
+Verify:
+
+issuing organisation
+
+certificate number
+
+validity dates
+
+audit scope
+
+Product certifications
+
+Examples:
+
+CE
+
+RoHS
+
+FCC
+
+UL
+
+RCM (Australia/New Zealand)
+
+Warning signs:
+
+Supplier provides only a logo instead of a certificate/report
+
+Test report does not show:
+
+manufacturer name
+
+model number
+
+testing laboratory
+
+standards used
+
+Certificate belongs to another company
+
+Example:
+
+Supplier sells LED fixtures but provides an RCM certificate under another unrelated Chinese company.
+
+This may indicate:
+
+reseller behaviour
+
+certificate misuse
+
+counterfeit documentation
+
+4. Bank account warning signs
+
+High-risk indicators:
+
+Payment requested to:
+
+personal account
+
+unrelated company account
+
+Hong Kong company without explanation
+
+Bank account name does not exactly match the registered Chinese company name.
+
+Example:
+
+Business licence:
+
+Guangzhou ABC Lighting Technology Co., Ltd.
+
+Payment request:
+
+Shenzhen XYZ Trading Limited
+
+Possible explanations:
+
+legitimate trading company relationship
+
+export agent arrangement
+
+But the supplier should provide written evidence.
+
+5. Factory-related warning signs
+
+If claiming to be a manufacturer:
+
+Refuses a live video factory inspection
+
+Only shows:
+
+showroom
+
+warehouse
+
+office
+
+Factory photos:
+
+appear professionally staged
+
+contain no employees
+
+lack production equipment
+
+Cannot answer technical manufacturing questions:
+
+production capacity
+
+machinery
+
+QC process
+
+raw material suppliers
+
+6. Verification red flags during checks
+
+A supplier should be investigated further if:
+
+Issue	Risk
+Licence name differs from contract	Contract enforcement problems
+Certificate holder differs from supplier	Certification misuse
+Address cannot be found	Fake company possibility
+Website domain created recently	Possible short-term trading operation
+Refuses company registration details	Transparency issue
+Pushes urgent payment	Fraud risk
+Price far below market	Possible quality/document problems
+7. Recommended verification steps for Australian importers
+
+Before paying a deposit:
+
+Obtain:
+
+Chinese business licence (营业执照)
+
+Unified Social Credit Code
+
+company bank account details
+
+export licence information (if applicable)
+
+certificates and test reports
+
+Verify:
+
+company registration through China’s official National Enterprise Credit Information Publicity System (国家企业信用信息公示系统)
+
+certificate issuer databases
+
+laboratory accreditation records
+
+Match all names:
+
+business licence
+
+contract
+
+invoice
+
+bank account
+
+certification documents
+
+For high-value orders:
+
+conduct third-party factory inspection
+
+request production samples
+
+use staged payments linked to inspection results
+
+The biggest warning sign is usually not one incorrect document, but multiple inconsistencies between the legal entity, payment entity, factory identity, and certification holder.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

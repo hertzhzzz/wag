@@ -1,0 +1,130 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-01-registration-records",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-01-registration-records",
+  "prompt": "What official records should an Australian importer check before engaging a supplier in China?",
+  "promptHash": "sha256:356387f04841deb2efce4f1b0777e156e6ea218e98d93cf714c3656a5d0230cb",
+  "observedAt": "2026-07-18T12:50:32.518Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "Epic Sourcing",
+    "Swift Cargo Solutions",
+    "Spotyard",
+    "XYX Trade"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.bing.com/copilotsearch?q=What+official+records+should+an+Australian+importer+check+before+engaging+a+supplier+in+China%3f&FORM=CSSCOP",
+      "title": "Search",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.bing.com/ck/a?!&&p=77cd4df1d1f08540abef5523b919a5f06f49a3f6ca146a3e17fe126e1d0f0e6eJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1L2NoYXQ_cHJvbXB0PVdoYXQrb2ZmaWNpYWwrcmVjb3JkcytzaG91bGQrYW4rQXVzdHJhbGlhbitpbXBvcnRlcitjaGVjaytiZWZvcmUrZW5nYWdpbmcrYStzdXBwbGllcitpbitDaGluYSUzZiZzZW5kcXVlcnk9MSZGT1JNPVNDQ09EWA&ntb=1",
+      "title": "Copilot",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.bing.com/ck/a?!&&p=8c79b1cf3c198a901324dd0fe6e372b439675a12403827bb0e5d1467fb2bda32JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9ibG9nLnN3aWZ0Y2FyZ28uc29sdXRpb25zL3ZlcmlmeS1zdXBwbGllci1jaGluYS1hdXN0cmFsaWEv&ntb=1",
+      "title": "swiftcargo.solutions Verifying Overseas Suppliers: Australian Importer Checklist Verification operates at four distinct ",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.bing.com/ck/a?!&&p=8e22b641af5c86cb0600376d4b7b5964e5852af88bf86f7200c80a92867ad767JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cud2lubmluZ2FkdmVudHVyZS5jb20uYXUvYXJ0aWNsZS92ZXJpZnktY2hpbmVzZS1zdXBwbGllcg&ntb=1",
+      "title": "winningadventure.com.au How to Verify a Chinese Supplier: Complete Guide for Australian Buyers The verification framewor",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.bing.com/ck/a?!&&p=8c79b1cf3c198a901324dd0fe6e372b439675a12403827bb0e5d1467fb2bda32JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9ibG9nLnN3aWZ0Y2FyZ28uc29sdXRpb25zL3ZlcmlmeS1zdXBwbGllci1jaGluYS1hdXN0cmFsaWEv&ntb=1",
+      "title": "swiftcargo.solutionsVerifying Overseas Suppliers: Australian Importer ChecklistVerification operates at four distinct po",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.bing.com/ck/a?!&&p=8e22b641af5c86cb0600376d4b7b5964e5852af88bf86f7200c80a92867ad767JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cud2lubmluZ2FkdmVudHVyZS5jb20uYXUvYXJ0aWNsZS92ZXJpZnktY2hpbmVzZS1zdXBwbGllcg&ntb=1",
+      "title": "winningadventure.com.auHow to Verify a Chinese Supplier: Complete Guide for Australian BuyersThe verification framework ",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.bing.com/ck/a?!&&p=a9a770c26816aa6f5534779ed3cb820f261817c5238aeaf91b908b35db47f15bJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9zcG90eWFyZC5jb20uYXUva25vd2xlZGdlLWJhc2Uvc291cmNpbmctdGlwcy9zdXBwbGllci1hdWRpdC1jaGVja2xpc3QtY2hpbmEtZmFjdG9yeQ&ntb=1",
+      "title": "spotyard.com.auSupplier Audit Checklist for Australian Brands Working with ChinaBefore wiring deposits, Australian buyer",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.bing.com/ck/a?!&&p=1edee91a67ae9a56a9235f1b94729f86f245e46287b133636746fe924158bf18JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZXBpY3NvdXJjaW5nLmNvbS5hdS9wb3N0L3Byb2R1Y3QtcXVhbGl0eS1jb250cm9sLXNvdXJjaW5nLWNoaW5hLWF1c3RyYWxpYW4taW1wb3J0ZXJzLTIwMjY&ntb=1",
+      "title": "Epic SourcingProduct Quality Control When Sourcing from China: A Complete Guide for ...Here's a stat that should make ev",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.bing.com/ck/a?!&&p=50fe4599b9115ddc6ec912a106f54bad75c19a0fd95aa32cf20e574a7edf1ccbJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly94eXh0cmFkZS5jb20uYXUvcGFnZXMvZ3VpZGUtdHJhZGUtMjAyNi5odG1s&ntb=1",
+      "title": "xyxtrade.com.auComplete Guide to Bridging China-Australia Trade in 2026If you are unsure which lane fits, start from cas",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.bing.com/ck/a?!&&p=8c79b1cf3c198a901324dd0fe6e372b439675a12403827bb0e5d1467fb2bda32JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9ibG9nLnN3aWZ0Y2FyZ28uc29sdXRpb25zL3ZlcmlmeS1zdXBwbGllci1jaGluYS1hdXN0cmFsaWEv&ntb=1",
+      "title": "swiftcargo.solutions https://blog.swiftcargo.solutions › verify-supplier-china-australia",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.bing.com/ck/a?!&&p=8e22b641af5c86cb0600376d4b7b5964e5852af88bf86f7200c80a92867ad767JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cud2lubmluZ2FkdmVudHVyZS5jb20uYXUvYXJ0aWNsZS92ZXJpZnktY2hpbmVzZS1zdXBwbGllcg&ntb=1",
+      "title": "winningadventure.com.au https://www.winningadventure.com.au › article › verify-chinese-supplier",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 12,
+      "url": "https://www.bing.com/ck/a?!&&p=a9a770c26816aa6f5534779ed3cb820f261817c5238aeaf91b908b35db47f15bJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9zcG90eWFyZC5jb20uYXUva25vd2xlZGdlLWJhc2Uvc291cmNpbmctdGlwcy9zdXBwbGllci1hdWRpdC1jaGVja2xpc3QtY2hpbmEtZmFjdG9yeQ&ntb=1",
+      "title": "spotyard.com.au https://spotyard.com.au › ... › supplier-audit-checklist-china-factory",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 13,
+      "url": "https://www.bing.com/ck/a?!&&p=1edee91a67ae9a56a9235f1b94729f86f245e46287b133636746fe924158bf18JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZXBpY3NvdXJjaW5nLmNvbS5hdS9wb3N0L3Byb2R1Y3QtcXVhbGl0eS1jb250cm9sLXNvdXJjaW5nLWNoaW5hLWF1c3RyYWxpYW4taW1wb3J0ZXJzLTIwMjY&ntb=1",
+      "title": "Epic Sourcing https://www.epicsourcing.com.au › post › product-quality-control-sourcing...",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 14,
+      "url": "https://www.bing.com/ck/a?!&&p=50fe4599b9115ddc6ec912a106f54bad75c19a0fd95aa32cf20e574a7edf1ccbJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly94eXh0cmFkZS5jb20uYXUvcGFnZXMvZ3VpZGUtdHJhZGUtMjAyNi5odG1s&ntb=1",
+      "title": "xyxtrade.com.au https://xyxtrade.com.au › pages",
+      "domain": "www.bing.com"
+    },
+    {
+      "rank": 15,
+      "url": "https://www.bing.com/ck/a?!&&p=f9bbc8598f719848c958297df04bea19443fbf8c34bccfdecb1c13a56b9f9e75JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZXBpY3NvdXJjaW5nLmNvbS5hdS9wb3N0L3F1YWxpdHktY29udHJvbC1pbXBvcnRpbmctZnJvbS1jaGluYS1ndWlkZS1hdXN0cmFsaWFuLWJ1c2luZXNzZXMtMjAyNg&ntb=1",
+      "title": "Epic Sourcing https://www.epicsourcing.com.au › post › quality-control-importing-from...",
+      "domain": "www.bing.com"
+    }
+  ],
+  "qualityRisks": [
+    "Bing full Copilot chat surface required Microsoft sign-in; observation uses SERP generative answer block which cites sources including owned URL."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-01-registration-records.txt",
+    "hash": "sha256:a8174c2ac0dbd248031434a096e142e50717c16b5349fc99aa03ab45ba85ee8e",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

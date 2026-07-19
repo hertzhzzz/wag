@@ -1,0 +1,211 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-09-compare-services
+observedAt: 2026-07-18T13:23:56.883Z
+url: https://chatgpt.com/c/6a5b7e55-4320-83ec-b00e-350c1b940d02
+title: Supplier Verification in China
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+How should an Australian business compare supplier verification services for work in China?
+
+## User message (UI)
+How should an Australian business compare supplier verification services for work in China?
+
+## Assistant answer (UI text)
+An Australian business comparing supplier verification services for work in China should compare verification depth, evidence quality, independence, local capability, and risk coverage, not just price.
+
+1. Compare the verification scope
+Area	Basic service	Strong service
+Company registration	Checks business name only	Verifies Chinese legal entity, Unified Social Credit Code, registration status
+Ownership	Limited	Checks shareholders, legal representative, registered capital
+Factory existence	Online check	Physical factory visit with photos/video/GPS evidence
+Manufacturing capability	Supplier claims	Production lines, machinery, workers, capacity verification
+Export ability	Self-declaration	Checks export licences, customs capability, export history
+Certifications	Document review	Validates issuing body, certificate number, test reports
+Financial risk	Usually absent	Credit checks, litigation, debt indicators
+Reputation	Reviews only	Industry references and customer verification
+2. Check who performs the verification
+
+A strong provider should disclose:
+
+Who visits the factory
+
+Whether inspectors are employees or subcontractors
+
+Their China coverage (cities/provinces)
+
+Whether they speak Mandarin
+
+Whether reports are produced locally or remotely
+
+Conflict-of-interest controls
+
+Avoid services that only:
+
+Forward supplier documents
+
+Copy Alibaba profiles
+
+Provide AI-generated summaries
+
+Accept supplier-provided photos as proof
+
+3. Compare evidence provided
+
+A useful verification report should include:
+
+Company identity
+
+Chinese company name
+
+Business licence copy
+
+Unified Social Credit Code
+
+Registration authority record
+
+Legal representative
+
+Registered address
+
+Factory evidence
+
+Factory entrance photo
+
+Production floor photos
+
+Machinery list
+
+Employee estimate
+
+Warehouse inspection
+
+Production workflow
+
+Commercial evidence
+
+Export history
+
+Main markets served
+
+Customer references (where possible)
+
+Product samples reviewed
+
+Risk findings
+
+Warning signs
+
+Inconsistencies
+
+Recommended actions
+
+4. Evaluate service levels
+
+A typical comparison:
+
+Service type	Suitable for	Typical limitation
+Online supplier check	Small trial orders	Cannot confirm factory reality
+Video factory audit	Medium-risk suppliers	Supplier may control the environment
+Third-party factory inspection	Larger purchases	Costs more
+Full due diligence	High-value contracts	Longer process
+
+For Australian importers, a physical verification is usually justified when:
+
+First order exceeds roughly A$10,000–50,000
+
+Custom tooling is involved
+
+Product safety/compliance matters
+
+Supplier requires large deposits
+
+Supplier refuses normal verification requests
+
+5. Check industry experience
+
+Prefer providers with experience in your product category:
+
+Examples:
+
+Electronics → compliance testing, CE/RCM documentation, component tracing
+
+Machinery → factory capability and engineering review
+
+Furniture → materials, production capacity, QC processes
+
+Lighting/AV → certifications, electrical safety, export history
+
+A generic supplier checker may miss industry-specific risks.
+
+6. Compare pricing against risk exposure
+
+Do not compare only:
+
+"Supplier verification = A$200 vs A$800"
+
+Compare:
+
+"Verification cost vs potential loss"
+
+Example:
+
+Order value: A$80,000
+
+Deposit: 40% = A$32,000
+
+Verification cost: A$500–1,500
+
+A proper verification may prevent a six-figure loss.
+
+7. Questions to ask verification providers
+
+Before hiring, ask:
+
+Do you verify the Chinese legal entity directly?
+
+Do you physically visit factories?
+
+Are visits announced or unannounced?
+
+Can you verify bank account ownership?
+
+Do you check whether the supplier is a manufacturer or trading company?
+
+Do you verify certificates with issuing organisations?
+
+What evidence is included in the final report?
+
+Can you inspect samples before shipment?
+
+Do you have experience with Australian import requirements?
+
+Recommended comparison framework
+
+Score each provider out of 100:
+
+Category	Weight
+Legal verification	20
+Physical factory inspection	25
+Industry expertise	15
+Evidence quality	15
+Independence	10
+Compliance knowledge	10
+Price/value	5
+
+For most Australian businesses importing from China, the strongest option is usually a local China-based inspection company or due-diligence provider that combines government record checks with physical factory verification. A purely online verification service is best treated as an initial screening step, not final approval.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

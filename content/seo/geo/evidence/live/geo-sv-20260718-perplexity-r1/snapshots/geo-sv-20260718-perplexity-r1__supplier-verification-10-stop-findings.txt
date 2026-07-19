@@ -1,0 +1,282 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-perplexity-r1
+platform: perplexity
+questionId: supplier-verification-10-stop-findings
+observedAt: 2026-07-18T13:32:42.114Z
+url: https://www.perplexity.ai/search/413dc885-ae9d-4861-90fb-c84e8bea474a
+title: What supplier verification findings should stop an Australian buyer from...
+auth: signed-in-test-account
+accountTier: free
+surface: perplexity-search-free
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?
+
+## Answer (UI text extract)
+New
+⌘K
+Computer
+Spaces
+Artifacts
+Customize
+Connectors
+Skills
+Workflows
+Memory
+History
+What supplier verification findings should stop an Australian buyer from proceeding with a purchase
+How should an Australian business compare supplier verification services for work in China?
+How should I verify bank account details before paying a new Chinese supplier?
+When is remote supplier verification enough, and when should an Australian buyer commission an on-si
+What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?
+What should be included in a paid supplier verification service for an Australian importer?
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+What official records should an Australian importer check before engaging a supplier in China?
+如何注册成美国k12的学校
+基于我们整个对话的全部上下文，重新审视并评估这个项目，而不是默认沿用之前的结论。 你拥有以下背景信息： 我提供了一份澳大利亚 2026 年 7 月 3 日至 10 日的 Google 热搜数据（CSV
+https://augstudy.com/australia/ 全面分析这家公司和他们的specialty
+给我鸡肉奶油蘑菇通心粉的完美菜单和完美的克重比例数据
+网站： https://www.winningadventure.com.au/ 你是一位资深 SEO Growth Consultant（SEO增长顾问），同时具备以下专业能力： SEO战略规划 T
+Google ads 设置每次电话带来的价值，我们的服务费3000刀的话，每一通电话的价值是应该设置多少
+客户：Joseph
+任务：从本 Space 的全部对话与文件中，提取所有客户/线索信息，输出为 JSON 数组。 每条客户对象必须且只能包含以下字段（无信息则留空字符串）： - name: 联系人姓名 - compan
+请你担任我的 2026 SEO 私人教练、增长顾问和实战陪跑者。 我的网站是： https://www.winningadventure.com.au/ 我的目标不是学习一套通用 SEO 课程，而是通
+Comprehensive Website Audit and Strategy
+Upgrade plan
+Zhe He
+Free plan
+Answer
+Links
+Images
+Share
+What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?
+
+Several critical supplier verification findings should immediately stop an Australian buyer from proceeding with a purchase order, particularly when sourcing from international suppliers like those in China. These red flags protect your business from fraud, compliance breaches, financial loss, and reputational damage.
+icac.nsw.gov
++1
+
+Critical red flags that should halt a purchase
+1. Legitimacy and identity issues
+
+Supplier cannot be verified as a genuine business entity – No valid business registration, ABN (for Australian suppliers), or equivalent overseas registration documentation
+icac.nsw.gov
+
+Mismatched bank account details – The bank account name doesn't match the registered business name or the entity on the contract
+vendorverify.com
+
+False declarations discovered – Supplier has provided falsified business registration, certifications, or identity documents
+info.buy.nsw.gov
+
+Unable to confirm physical address or factory location – No verifiable business premises, or addresses that don't match official records
+tetrainspection
+
+2. Financial viability concerns
+
+Bankrupt or insolvent status – Supplier is currently bankrupt, in liquidation, or insolvent
+info.buy.nsw.gov
+
+Failure to pay taxes – Evidence of outstanding tax obligations or tax evasion
+info.buy.nsw.gov
+
+Severe financial distress indicators – Inability to provide three years of financial statements, consistent losses, or negative cash flow that threatens delivery capability
+trinitygroup
+
+Unwillingness to share financial documentation – Refusal to provide audited financial statements or proof of financial capacity
+trinitygroup
+
+3. Integrity and conduct issues
+
+Corrupt or unlawful conduct findings – Supplier, directors, or managers found by ICAC or equivalent bodies to have engaged in corrupt conduct within the past 10 years
+info.buy.nsw.gov
+
+Serious criminal convictions – Convictions for offences punishable by more than 2 years' imprisonment or fines exceeding $200,000
+info.buy.nsw.gov
+
+Professional misconduct findings – Convictions for professional or unprofessional conduct in any Australian jurisdiction
+info.buy.nsw.gov
+
+Dishonest, unfair, or unconscionable conduct – Documented findings of such conduct against the business or its leadership
+info.buy.nsw.gov
+
+4. Performance and capability failures
+
+Prior contract non-performance – Failure to perform in any substantive matter under a previous contract with government or major commercial clients
+info.buy.nsw.gov
+
+Inability to demonstrate required capabilities – Cannot show evidence of technical capacity, quality systems, or production capability for your specific requirements
+tetrainspection
+
+Missing required licences or authorities – Lacks mandatory industry licences, export permits, or regulatory approvals needed for your product category
+icac.nsw.gov
+
+5. Quality and compliance red flags
+
+Failed audits or inspections – Recent failures in quality management system audits (ISO, etc.), social compliance audits, or product safety inspections
+tetrainspection
+
+Product safety or regulatory non-compliance – History of products failing Australian standards (e.g., electrical safety, food safety, product labelling requirements)
+
+Inability to provide compliance documentation – Cannot produce test reports, certificates of conformity, or compliance declarations for Australian regulatory requirements
+
+6. Communication and transparency issues
+
+Evasive or inconsistent responses – Cannot provide straight answers to due diligence questions, or responses contradict previous statements
+tetrainspection
+
+Refusal to allow site visits or third-party audits – Unwillingness to permit factory inspections, especially critical for China-based suppliers
+tetrainspection
+
+Pressure tactics – Urging immediate payment or PO commitment before due diligence is complete
+vendorverify.com
+
+Special considerations for China-Australia sourcing
+
+Given your work with WAG, these additional factors are particularly relevant:
+
+Trading company posing as factory – Supplier claims to be a manufacturer but is actually a middleman without production capability
+tetrainspection
+
+Export licence verification – Cannot verify valid Chinese export licences or business scope permits
+tetrainspection
+
+Social compliance failures – Evidence of labour violations, child labour, or unsafe working conditions that could create reputational and legal risks for Australian buyers
+hpw.qld.gov
+
+Intellectual property concerns – History of IP infringement or unwillingness to sign appropriate confidentiality and IP protection agreements
+
+Best practice approach
+
+Australian procurement guidelines recommend conducting due diligence across five key categories before any supplier enters your financial gateway:
+icac.nsw.gov
+
+Is the supplier genuine?
+
+Is the supplier capable and reliable?
+
+Is the supplier financially viable?
+
+Does the supplier have required authorities, licences and status?
+
+Is the supplier of good repute and integrity?
+
+When any of these checks reveal serious concerns—particularly those listed above—the prudent course is to halt the purchase order process until concerns are fully resolved, or to seek alternative suppliers entirely.
+finance.gov
++1
+
+10 sources
+Follow-ups
+How to conduct an independent audit of an overseas supplier
+Common signs of a fake supplier business registration document
+Best practices for verifying international bank account ownership
+Legal recourse for Australian businesses after a supplier fraud loss
+How to assess supplier financial health using public records
+Sources
+finance
+Commonwealth Purchase Order Terms v6.2 1 January 2020
+The Supplier must take all reasonable steps to prevent and detect Fraud in relation to the performance of this Contract. The Supplier ...
+finance.gov
+Due Diligence in Procurement
+hpw.qld.gov
+Guidelines: Ethical Supplier Threshold
+info.buy.nsw.gov
+Tender evaluation criteria | info.buy.nsw
+Know how to provide suppliers with the evaluation criteria they need so they can be successful in tendering for government work.
+trinitygroup
+Due Diligence on a Business Purchase Before They Sign
+This guide from Trinity Accounting Practice sets out what proper financial due diligence on a business purchase looks like in Australia, what the typical red
+icac.nsw.gov
+JUNE 2020
+dcs.bluescope
+Purchase Order General Conditions (AU) Version 7 Page 1 ...
+Purchaser may cancel all or part of a Purchase Order at any time before the supply or receipt of all or part of the relevant Goods or Services, ...
+vendorverify.com
+Vendor Verify — Stop paying fraudsters. Verify every supplier ...
+Vendor Verify connects directly to Xero and QuickBooks and uses Australia's Consumer Data Right to confirm every supplier's bank account is real, active, and belongs to who you think it does — before a single dollar moves. ... In Mobius Group v Inoteq, Australian courts confirmed the payer bears the loss when invoices are redirected. A "salutary reminder" to verify bank details, the Court said.
+icac.nsw.gov
+Corruption Matters - June 2020 | Issue 55
+The purpose of conducting sound due diligence with suppliers is to identify any red flags before a new supplier is entered into an agency’s financial gateway. ... The ICAC has produced a guide to help the NSW public sector conduct due diligence checks on potential suppliers in order to The guide is arranged into the following five categories: 1) Is the supplier genuine? 2) Is the supplier capable and reliable? 3) Is the supplier financially viable? 4) Does the supplier have the required...
+tetrainspection
+Supplier Verification Audit: Process, Checks & Red Flags
+Supplier verification audit explained: what it checks, the on-site process, and the red flags that expose trading-company fraud. Confirm any factory's legitimacy across China, Vietnam & India — 24-hour report.
+
+
+
+
+Ask a follow-up
+Search
+Computer
+Model
+
+## Links
+[
+  {
+    "rank": 1,
+    "url": "https://www.icac.nsw.gov.au/newsletter/issue55/diligence.html",
+    "title": "icac.nsw.gov",
+    "domain": "icac.nsw.gov.au"
+  },
+  {
+    "rank": 2,
+    "url": "https://vendorverify.com.au/",
+    "title": "vendorverify.com",
+    "domain": "vendorverify.com.au"
+  },
+  {
+    "rank": 3,
+    "url": "https://www.info.buy.nsw.gov.au/buyer-guidance/source/select-suppliers/evaluation-criteria",
+    "title": "info.buy.nsw.gov",
+    "domain": "info.buy.nsw.gov.au"
+  },
+  {
+    "rank": 4,
+    "url": "https://tetrainspection.com/supplier-verification-audit/",
+    "title": "tetrainspection",
+    "domain": "tetrainspection.com"
+  },
+  {
+    "rank": 5,
+    "url": "https://trinitygroup.com.au/post/due-diligence-business-purchase/",
+    "title": "trinitygroup",
+    "domain": "trinitygroup.com.au"
+  },
+  {
+    "rank": 6,
+    "url": "https://www.hpw.qld.gov.au/__data/assets/pdf_file/0015/3741/ethicalsupplierthresholdguidelines.pdf",
+    "title": "hpw.qld.gov",
+    "domain": "hpw.qld.gov.au"
+  },
+  {
+    "rank": 7,
+    "url": "https://www.finance.gov.au/sites/default/files/2019-12/Commonwealth_Purchase_Order_Terms_v6.2_1_January2020.pdf",
+    "title": "finance\nCommonwealth Purchase Order Terms v6.2 1 January 2020\nThe Supplier must take all reasonable steps to prevent and detect Fraud in relation to the perform",
+    "domain": "finance.gov.au"
+  },
+  {
+    "rank": 8,
+    "url": "https://www.finance.gov.au/sites/default/files/2023-11/Due-Diligence-in-Procurement.pdf",
+    "title": "finance.gov\nDue Diligence in Procurement",
+    "domain": "finance.gov.au"
+  },
+  {
+    "rank": 9,
+    "url": "https://www.icac.nsw.gov.au/ArticleDocuments/232/Supplier-Due-Diligence-a-guide-for-NSW-public-sector-agencies_June2020.pdf.aspx",
+    "title": "icac.nsw.gov\nJUNE 2020",
+    "domain": "icac.nsw.gov.au"
+  },
+  {
+    "rank": 10,
+    "url": "https://cdn.dcs.bluescope.com.au/download/standard-terms-and-conditions-of-purchase-orders-australia",
+    "title": "dcs.bluescope\nPurchase Order General Conditions (AU) Version 7 Page 1 ...\nPurchaser may cancel all or part of a Purchase Order at any time before the supply or ",
+    "domain": "cdn.dcs.bluescope.com.au"
+  }
+]
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: yes

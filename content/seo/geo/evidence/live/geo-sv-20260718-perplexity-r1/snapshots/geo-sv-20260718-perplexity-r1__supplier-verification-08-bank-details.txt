@@ -1,0 +1,241 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-perplexity-r1
+platform: perplexity
+questionId: supplier-verification-08-bank-details
+observedAt: 2026-07-18T13:31:59.915Z
+url: https://www.perplexity.ai/search/3104c0d5-bbb1-4181-bb00-96ffcd09319a
+title: How should I verify bank account details before paying a new Chinese supplier?
+auth: signed-in-test-account
+accountTier: free
+surface: perplexity-search-free
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+How should I verify bank account details before paying a new Chinese supplier?
+
+## Answer (UI text extract)
+New
+⌘K
+Computer
+Spaces
+Artifacts
+Customize
+Connectors
+Skills
+Workflows
+Memory
+History
+How should I verify bank account details before paying a new Chinese supplier?
+When is remote supplier verification enough, and when should an Australian buyer commission an on-si
+What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?
+What should be included in a paid supplier verification service for an Australian importer?
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+What official records should an Australian importer check before engaging a supplier in China?
+如何注册成美国k12的学校
+基于我们整个对话的全部上下文，重新审视并评估这个项目，而不是默认沿用之前的结论。 你拥有以下背景信息： 我提供了一份澳大利亚 2026 年 7 月 3 日至 10 日的 Google 热搜数据（CSV
+https://augstudy.com/australia/ 全面分析这家公司和他们的specialty
+给我鸡肉奶油蘑菇通心粉的完美菜单和完美的克重比例数据
+网站： https://www.winningadventure.com.au/ 你是一位资深 SEO Growth Consultant（SEO增长顾问），同时具备以下专业能力： SEO战略规划 T
+Google ads 设置每次电话带来的价值，我们的服务费3000刀的话，每一通电话的价值是应该设置多少
+客户：Joseph
+任务：从本 Space 的全部对话与文件中，提取所有客户/线索信息，输出为 JSON 数组。 每条客户对象必须且只能包含以下字段（无信息则留空字符串）： - name: 联系人姓名 - compan
+请你担任我的 2026 SEO 私人教练、增长顾问和实战陪跑者。 我的网站是： https://www.winningadventure.com.au/ 我的目标不是学习一套通用 SEO 课程，而是通
+Comprehensive Website Audit and Strategy
+请基于 Google Search Console、Google Analytics、Google Business Profile 三个数据源，全面分析 winningadventure.com.a
+分析这个新上传的文件
+Upgrade plan
+Zhe He
+Free plan
+Answer
+Links
+Images
+Share
+How should I verify bank account details before paying a new Chinese supplier?
+
+Before paying a new Chinese supplier, verify the bank details through at least two independent channels and make sure the beneficiary name exactly matches the company name on the business license. Treat any request to pay a personal account, a different company name, or a suddenly changed account as a red flag until it is fully explained in writing.
+chinesecheck
++2
+
+Practical verification steps
+
+Ask for a formal invoice or proforma invoice on company letterhead showing the company name, registered address, registration number, bank name, branch/city, account number, and currency.
+epicsourcing
++1
+
+Request a bank confirmation letter or bank account certificate issued by the bank, showing the account holder name, account number, and branch.
+jrandfirm
+
+Confirm the details by calling a phone number you already trust, not the number in the same email that sent the new bank details.
+alibaba
++1
+
+Reconfirm the last 4 digits of the account number, bank name, and beneficiary name over a separate channel such as WeChat, WhatsApp, or a known phone number.
+exswap.com
++1
+
+If the supplier changed bank details close to payment time, pause and verify again before sending anything.
+blog.ibanfirst
++1
+
+Red flags to stop on
+
+Beneficiary name does not match the registered company name exactly.
+medium
++1
+
+They ask for a personal account instead of a corporate account.
+chinesecheck
++1
+
+The bank is in a different country or region than expected without a clear explanation.
+epicsourcing
++1
+
+They pressure you to pay immediately to “secure a discount” or avoid losing the goods.
+exswap.com
+
+They refuse to provide stamped confirmation or a bank letter.
+jrandfirm
++1
+
+Safer payment habits
+
+For a first payment, consider a small test transfer before sending the full amount.
+epicsourcing
++1
+
+Keep a paper trail: invoice, bank confirmation, chat logs, transfer receipt, and any payment confirmation from the supplier.
+exswap.com
+
+If the order is on a platform like Alibaba, confirm payment details through the platform as well as directly.
+chinesecheck
+
+Message you can send
+
+“Please confirm the beneficiary name, bank name and branch, account number, and currency by reply and send a stamped bank confirmation letter on company letterhead. I will only pay after matching it with your business license and our signed invoice.”
+jrandfirm
++1
+
+For a new supplier, the safest rule is simple: no exact name match, no bank letter, no payment.
+alibaba
++1
+
+10 sources
+Follow-ups
+How can I verify a Chinese business license online
+What are the safest payment methods for importing from China
+How to request a bank confirmation letter from a Chinese supplier
+What are common B2B payment scams in international trade
+How to use trade assurance on platforms like Alibaba
+Sources
+blog.ibanfirst
+How to verify international supplier payment details (2026) - iBanFirst
+Spot a changed bank account request? Learn how to verify supplier payment details with IBAN checks, document cross-checks, and callback calls.
+sofeast
+Supplier Bank Account Verification - Sofeast
+The Bank Account Verification is a fast, cost-effective way to assure that the bank account information provided is that of your supplier.
+monitorpay
+Cross-Border Bank Account Verification: How to Pay Suppliers ...
+Cross-Border Bank Account Verification: How to Pay Suppliers in 50+ Countries Without Failed Transfers — MonitorPay Roughly one in eight cross-border payments fails. The cause is almost always the same — nobody verified the account before the money moved, because verifying internationally is harder than verifying domestically. The numbers behind that single sentence add up […]
+chinesecheck
+Chinese Supplier Wants Payment to Personal Bank Account? STOP ...
+A Chinese supplier asking you to wire payment to a personal bank account instead of a corporate account is 99% a scam. Learn the 3 fraud patterns, PRC legal requirements, email hijack detection, and exact steps to verify before you send a single dollar.
+epicsourcing
+How to Pay Your Chinese Supplier: A Complete Guide to Payment Methods, Terms and Risk Management
+You have found the right supplier. The sample looks great. The price is right. Now comes the part that makes most first-time importers nervous: sending money...
+jrandfirm
+Verify a Chinese Supplier: Practical 12-Point Checklist 2025
+Verify A Chinese Supplier in 2026: the costs, timelines, documents and steps that matter, explained by JR & Firm. costs, timelines, document
+exswap.com
+How to Verify a China Supplier's Bank Details - Exswap
+Simple, practical steps Nigerians can use to confirm a Chinese supplier’s bank Details before paying and avoid scams
+chinaguide
+Payment Methods for Chinese Suppliers 2026: Complete Guide to Paying Factories in China | ChinaGuide
+Guide to paying Chinese suppliers in 2026. Compare wire transfer, Trade Assurance, PayPal, Letter of Credit, and learn safe payment structures for imports.
+medium
+Everything you need to know about verifying supplier in China
+Dealing with Chinese companies can present many challenges and risks since they are special not only to approach and negotiate but also to…
+alibaba
+How to Source & Verify Suppliers in Global B2C ... - Alibaba
+Learn best practices for sourcing and verifying suppliers, including bank detail validation, response time assessment, and price benchmarking. Use Oracle R12 supplier data management and evaluate partners based on financial accuracy, compliance, and responsiveness.
+
+
+
+
+Ask a follow-up
+Search
+Computer
+Model
+
+## Links
+[
+  {
+    "rank": 1,
+    "url": "https://jrandfirm.com/verify-a-chinese-supplier/",
+    "title": "jrandfirm",
+    "domain": "jrandfirm.com"
+  },
+  {
+    "rank": 2,
+    "url": "https://exswap.com.ng/how-to-verify-a-china-suppliers-bank-details/",
+    "title": "exswap.com",
+    "domain": "exswap.com.ng"
+  },
+  {
+    "rank": 3,
+    "url": "https://chinesecheck.com/blog/chinese-supplier-personal-bank-account",
+    "title": "chinesecheck",
+    "domain": "chinesecheck.com"
+  },
+  {
+    "rank": 4,
+    "url": "https://blog.ibanfirst.com/en/verify-supplier-payment-details",
+    "title": "blog.ibanfirst\nHow to verify international supplier payment details (2026) - iBanFirst\nSpot a changed bank account request? Learn how to verify supplier payment",
+    "domain": "blog.ibanfirst.com"
+  },
+  {
+    "rank": 5,
+    "url": "https://www.sofeast.com/supply-chain-management/supplier-bank-account-verification/",
+    "title": "sofeast\nSupplier Bank Account Verification - Sofeast\nThe Bank Account Verification is a fast, cost-effective way to assure that the bank account information pro",
+    "domain": "sofeast.com"
+  },
+  {
+    "rank": 6,
+    "url": "https://monitorpay.ai/cross-border-bank-account-verification-how-to-pay-suppliers-worldwide-without-failed-transfers/",
+    "title": "monitorpay\nCross-Border Bank Account Verification: How to Pay Suppliers ...\nCross-Border Bank Account Verification: How to Pay Suppliers in 50+ Countries Withou",
+    "domain": "monitorpay.ai"
+  },
+  {
+    "rank": 7,
+    "url": "https://www.epicsourcing.co/post/how-to-pay-your-chinese-supplier-a-complete-guide-to-payment-methods-terms-and-risk-management",
+    "title": "epicsourcing\nHow to Pay Your Chinese Supplier: A Complete Guide to Payment Methods, Terms and Risk Management\nYou have found the right supplier. The sample look",
+    "domain": "epicsourcing.co"
+  },
+  {
+    "rank": 8,
+    "url": "https://chinaguide.in/resources/payment-methods/",
+    "title": "chinaguide\nPayment Methods for Chinese Suppliers 2026: Complete Guide to Paying Factories in China | ChinaGuide\nGuide to paying Chinese suppliers in 2026. Compa",
+    "domain": "chinaguide.in"
+  },
+  {
+    "rank": 9,
+    "url": "https://medium.com/@importigy/everything-you-need-to-know-about-verifying-supplier-in-china-300e8080339d",
+    "title": "medium\nEverything you need to know about verifying supplier in China\nDealing with Chinese companies can present many challenges and risks since they are special",
+    "domain": "medium.com"
+  },
+  {
+    "rank": 10,
+    "url": "https://www.alibaba.com/price-comparison/supplier-bank-account-query-in-r12",
+    "title": "alibaba\nHow to Source & Verify Suppliers in Global B2C ... - Alibaba\nLearn best practices for sourcing and verifying suppliers, including bank detail validation",
+    "domain": "alibaba.com"
+  }
+]
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: yes

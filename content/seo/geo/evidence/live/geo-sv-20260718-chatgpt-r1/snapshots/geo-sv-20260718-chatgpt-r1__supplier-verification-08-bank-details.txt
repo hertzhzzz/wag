@@ -1,0 +1,223 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-08-bank-details
+observedAt: 2026-07-18T13:23:30.098Z
+url: https://chatgpt.com/c/6a5b7e42-a518-83ec-9970-bec502e72ce3
+title: Verifying Chinese Supplier Payments
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+How should I verify bank account details before paying a new Chinese supplier?
+
+## User message (UI)
+How should I verify bank account details before paying a new Chinese supplier?
+
+## Assistant answer (UI text)
+Before paying a new Chinese supplier, verify the bank account details through independent channels and confirm that the payment recipient is the same legal entity you contracted with. Many supplier fraud cases involve legitimate-looking invoices with changed bank details.
+
+1. Match the bank account to the supplier’s legal entity
+
+Request:
+
+Chinese company legal name (Chinese characters)
+
+Unified Social Credit Code (统一社会信用代码)
+
+Registered address
+
+Business licence copy
+
+Bank account name (账户名称)
+
+Bank account number
+
+Bank name and branch (开户行)
+
+Check that:
+
+Item	Must match
+Contract party	Supplier’s registered Chinese company name
+Invoice issuer	Same company
+Bank account holder	Same company (preferably)
+Business licence	Same legal entity
+
+Avoid paying a personal account or an unrelated company account unless you have a documented reason and additional verification.
+
+2. Verify the company’s official registration
+
+Use China’s official corporate registry:
+
+National Enterprise Credit Information Publicity System
+
+Search using the supplier’s:
+
+Chinese company name
+
+Unified Social Credit Code
+
+Confirm:
+
+Company status is active (存续/在业)
+
+Legal representative
+
+Registered capital
+
+Business scope
+
+Registration date
+
+Address
+
+A recently created company with little history requires more caution.
+
+3. Confirm the bank details directly with the supplier
+
+Do not rely only on email attachments.
+
+Use a second communication channel:
+
+Call the supplier’s known business phone number
+
+Use a video call
+
+Contact the sales manager through a verified company domain email
+
+Ask:
+
+“Please confirm your company bank account details verbally. We received the payment instructions and need to verify before transfer.”
+
+This helps detect invoice interception scams.
+
+4. Check whether the account is a company account
+
+For international payments, request:
+
+Bank account certificate (银行开户许可证 or equivalent bank information document)
+
+Company stamped payment instruction letter (盖公章)
+
+The document should show:
+
+Company name
+
+Bank name
+
+Account number
+
+Official company stamp
+
+Be cautious if they provide only:
+
+Screenshot of online banking
+
+Personal bank details
+
+WhatsApp message with changed account numbers
+
+5. Verify SWIFT and international payment information
+
+For overseas payments, confirm:
+
+Beneficiary name exactly
+
+SWIFT/BIC code
+
+Bank name
+
+Bank branch
+
+Currency account (USD/EUR/AUD etc.)
+
+The beneficiary name should normally match the registered company name.
+
+Small differences matter:
+
+❌ Guangzhou ABC Trading Ltd
+✅ 广州ABC贸易有限公司
+
+Ask your bank if the beneficiary name matches before releasing funds.
+
+6. Watch for common payment fraud signals
+
+High-risk indicators:
+
+“Our bank account changed because of tax reasons”
+
+“Pay our Hong Kong company instead”
+
+“Pay our employee’s account temporarily”
+
+“Use a different account for this order”
+
+Last-minute bank detail changes before payment
+
+Pressure to pay immediately
+
+Supplier refuses video verification
+
+Treat any bank change request as suspicious until independently confirmed.
+
+7. Start with a controlled payment
+
+For a first transaction:
+
+Avoid paying 100% upfront
+
+Use staged payments:
+
+20–30% deposit
+
+Balance after inspection/photos/testing
+
+Consider:
+
+Letter of Credit (L/C)
+
+Escrow
+
+Trade assurance mechanisms
+
+Third-party inspection before final payment
+
+8. For larger payments, perform enhanced verification
+
+For payments above roughly AUD $10,000–50,000+, consider:
+
+Paid supplier verification report
+
+Factory audit
+
+Bank account verification service
+
+On-site inspection
+
+A verification service should confirm:
+
+Legal company existence
+
+Factory/business location
+
+Ownership/management links
+
+Export capability
+
+Bank account ownership
+
+Production capability
+
+The key rule: never trust bank details from a single email or PDF. Verify the beneficiary independently before every first payment and every account change.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-05-legal-identity",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-05-legal-identity",
+  "prompt": "How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?",
+  "promptHash": "sha256:99d434c7c1a04c3d53df94354fade3a87b860b941fd328782cd8719579cd9013",
+  "observedAt": "2026-07-18T13:46:30.856Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "qcckyc.com",
+    "chinesecheck.com",
+    "chinverify.com",
+    "fdichina.com",
+    "blog.verifychinesesuppliers.com",
+    "betterproductsourcing.com.au"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.qcckyc.com/blog-detail?id=aa00f70d8ce044c89d59e65134525ae7#:~:text=The%20Unified%20Social%20Credit%20Code%20is%20the%2018%2Dcharacter%20ID,status%2C%20and%20core%20registration%20data.",
+      "title": "China USCC Lookup Guide 2026: Verify a Unified Social Credit ... - QCC",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.qcckyc.com/insights-verify-china-company",
+      "title": "A Step-by-Step Guide to Verifying a China Company - QCC",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://chinesecheck.com/blog/how-to-verify-chinese-supplier",
+      "title": "How to Verify a Chinese Supplier: 7 Methods That Work ...",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.qcckyc.com/blog-detail/china-business-license-check",
+      "title": "How to Spot a Fake Chinese Business License in 5 Minutes",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.chinverify.com/en/checker",
+      "title": "China Company Search & USCC Lookup",
+      "domain": "chinverify.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://fdichina.com/blog/china-company-verification/",
+      "title": "How to Verify Chinese Companies To Avoid Scams?",
+      "domain": "fdichina.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://blog.verifychinesesuppliers.com/5-ways-verify-chinese-companies/",
+      "title": "5 Ways to Verify Chinese Companies Before Doing Business",
+      "domain": "blog.verifychinesesuppliers.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention",
+      "title": "How to Verify a Chinese Supplier is Legitimate (Scam ...",
+      "domain": "betterproductsourcing.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://lookuptax.com/validate/china/usci",
+      "title": "Validate China USCI (Unified Social Credit Code)",
+      "domain": "lookuptax.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.youtube.com/shorts/5M6f97cQKuo",
+      "title": "How to verify a Chinese supplier when you're not actually in ...",
+      "domain": "youtube.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-05-legal-identity.txt",
+    "hash": "sha256:f27a160a3957a37580d5e6f8c5a1b69d965dcfdc187f10a1d6891969f44471bb",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

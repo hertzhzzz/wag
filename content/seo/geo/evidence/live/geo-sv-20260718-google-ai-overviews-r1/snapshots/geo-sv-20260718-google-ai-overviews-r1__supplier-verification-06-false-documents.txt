@@ -1,0 +1,182 @@
+platform: google-ai-overviews
+runId: geo-sv-20260718-google-ai-overviews-r1
+questionId: supplier-verification-06-false-documents
+prompt: What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+observedUrl: https://www.google.com/search?q=What%20warning%20signs%20suggest%20that%20a%20Chinese%20supplier%27s%20business%20licence%20or%20certificates%20may%20be%20false%3F&hl=en-AU&gl=au&pws=0
+pageTitle: What warning signs suggest that a Chinese supplier's business licence or certificates may be false? - Google Search
+status: observed-surface-absent
+surface: google-search-serp-en-AU
+brandMention: yes
+ownedUrlCited: yes
+aioUnavailable: false
+aioLabel: false
+
+=== AI Overview extract ===
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+19 June 2026 — Blurred seals, inconsistent fonts, cropped scans, or a QR code that does not resolve to the official NECIPS page are classic indicators of a ...
+
+31 Mar 2026 — The most reliable way to verify a Chinese supplier is to cross-reference their business license information against official Chinese government ...Read more
+
+8 Mar 2026 — 1A valid business license does not guarantee a factory. · 2Use China's official SAMR registry to verify company details — not just file copies of ...Read more
+
+=== Organic titles ===
+1. How to Spot a Fake Chinese Business License in 5 Minutes | https://www.qcckyc.com/blog-detail/china-business-license-check
+2. How to Verify Chinese Companies To Avoid Scams? - FDI China | https://fdichina.com/blog/china-company-verification/
+3. Chinese Company Due Diligence Checklist: How to Verify ... - FDI China | https://fdichina.com/blog/chinese-company-due-diligence-checklist/
+4. How to Verify a Chinese Supplier: 7 Methods That Work ... | https://chinesecheck.com/blog/how-to-verify-chinese-supplier
+5. How to Verify a Chinese Supplier: Complete Guide for ... | https://www.winningadventure.com.au/article/verify-chinese-supplier
+6. Here's how I verify if a supplier from China is legit in under ... | https://www.reddit.com/r/dropship/comments/1mulcw2/heres_how_i_verify_if_a_supplier_from_china_is/
+7. How to Verify a Chinese Supplier is Legitimate (Scam ... | https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention
+8. How to Verify Chinese Companies To Avoid Scams? | https://fdichina.com/blog/china-company-verification/
+9. Chinese supplier due diligence checklist | https://www.mybusiness.com.au/how-we-help/grow-your-business/preparing-to-export/chinese-supplier-due-diligence-checklist
+10. How to Check if a China Company Is Legit | https://www.china-agent.com/blog/how-to-check-if-a-china-company-is-legit-real-verification-guide
+
+=== Links ===
+qcckyc.com | https://www.qcckyc.com/blog-detail/china-business-license-check
+fdichina.com | https://fdichina.com/blog/china-company-verification/
+fdichina.com | https://fdichina.com/blog/chinese-company-due-diligence-checklist/
+chinesecheck.com | https://chinesecheck.com/blog/how-to-verify-chinese-supplier
+chinesecheck.com | https://chinesecheck.com/blog/how-to-verify-chinese-supplier#:~:text=The%20most%20reliable%20way%20to,information%20against%20official%20Chinese%20government
+winningadventure.com.au | https://www.winningadventure.com.au/article/verify-chinese-supplier
+winningadventure.com.au | https://www.winningadventure.com.au/article/verify-chinese-supplier#:~:text=1A%20valid%20business%20license%20does,production%2C%20processing%2C%20or%20manufacturing%20terms&text=2Use%20China's%20official%20SAMR%20registry,just%20file%20copies%20of%20certificates
+reddit.com | https://www.reddit.com/r/dropship/comments/1mulcw2/heres_how_i_verify_if_a_supplier_from_china_is/
+reddit.com | https://www.reddit.com/r/smallbusiness/comments/1sfizbn/how_i_verify_a_chinese_supplier_before_sending/
+reddit.com | https://www.reddit.com/r/Alibaba/comments/1t810vt/i_built_a_tool_to_verify_alibaba_suppliers_by/
+betterproductsourcing.com.au | https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention
+betterproductsourcing.com.au | https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention#:~:text=Fake%20Business%20License%20Warning%20Signs%3A,status%20shows%20%22Revoked%22%20or%20%22Cancelled%22
+quora.com | https://www.quora.com/How-do-you-know-if-a-Chinese-supplier-is-legit
+quora.com | https://www.quora.com/How-do-you-know-if-a-Chinese-supplier-is-legit?top_ans=18260770
+quora.com | https://www.quora.com/How-do-you-know-if-a-Chinese-supplier-is-legit?top_ans=9497413
+quora.com | https://www.quora.com/How-do-you-know-if-a-Chinese-supplier-is-legit?top_ans=9484009
+go4worldbusiness.com | https://www.go4worldbusiness.com/answers/2514899/How-can-I-check-legitimacy-of-a-Chinese-company-supplier
+fdichina.com | https://fdichina.com/blog/china-company-verification/#:~:text=Red%20Flags%20and%20Warning%20Signs,license%20or%20inconsistent%20registration%20details.
+mybusiness.com.au | https://www.mybusiness.com.au/how-we-help/grow-your-business/preparing-to-export/chinese-supplier-due-diligence-checklist
+mybusiness.com.au | https://www.mybusiness.com.au/how-we-help/grow-your-business/preparing-to-export/chinese-supplier-due-diligence-checklist#:~:text=1.%20Do%20they%20have%20a,genuine%20business%20licence%3F&text=2.%20Are%20they%20a%20manufacturer,or%20a%20supplier%3F&text=3.%20Do%20they%20have%20the,your%20current%20and%20future%20demand%3F
+china-agent.com | https://www.china-agent.com/blog/how-to-check-if-a-china-company-is-legit-real-verification-guide
+china-agent.com | https://www.china-agent.com/blog/how-to-check-if-a-china-company-is-legit-real-verification-guide#:~:text=1.%20A%20business%20license%20tells,you%20almost%20nothing&text=2.%20The%20address%20is%20the,first%20real%20red%20flag&text=3.%20Online%20checks%20don't%20prove,legitimacy&text=4.%20To%20know%20if%20the,legit%2C%20you%20need%206%20confirmations
+
+=== Body text (truncated) ===
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Shopping
+Images
+Short videos
+Videos
+More
+Tools
+Search Results
+Web results
+How to Spot a Fake Chinese Business License in 5 Minutes
+
+QCC International
+https://www.qcckyc.com › blog-detail › china-business-li...
+19 June 2026 — Blurred seals, inconsistent fonts, cropped scans, or a QR code that does not resolve to the official NECIPS page are classic indicators of a ...
+People also ask
+How to know if a Chinese supplier is legit?
+How to check authenticity of Chinese company?
+How to check if a company is scamming?
+How to investigate a Chinese company?
+Web results
+How to Verify a Chinese Supplier: 7 Methods That Work ...
+
+ChineseCheck
+https://chinesecheck.com › Blog
+31 Mar 2026 — The most reliable way to verify a Chinese supplier is to cross-reference their business license information against official Chinese government ...Read more
+How to Verify a Chinese Supplier: Complete Guide for ...
+
+Winning Adventure Global
+https://www.winningadventure.com.au › Articles
+8 Mar 2026 — 1A valid business license does not guarantee a factory. · 2Use China's official SAMR registry to verify company details — not just file copies of ...Read more
+Here's how I verify if a supplier from China is legit in under ...
+
+Reddit · r/dropship
+70+ comments · 11 months ago
+If nothing consistent shows up, red flag. Certificates & business license – request it. A real supplier won't hesitate. Middlemen usually stall ...
+How I Verify a Chinese Supplier Before Sending Any ...
+4 posts
+8 Apr 2026
+I built a tool to verify Alibaba suppliers by their Chinese ...
+6 posts
+9 May 2026
+More results from www.reddit.com
+How to Verify a Chinese Supplier is Legitimate (Scam ...
+
+betterproductsourcing.com.au
+https://betterproductsourcing.com.au › Blog
+8 Jan 2026 — Fake Business License Warning Signs: Poor quality scan or photo; Information doesn't match gsxt.gov.cn; Company status shows "Revoked" or ...Read more
+Discussions and forums
+How to know if a Chinese supplier is legit
+Quora · 
+6 answers
+ · 
+10 years ago
+ · 
+Pls define legit. My definition of same is that the "legit" supplier will supply the goods ...  
+More
+Top answer · 10 votes · 10 years ago
+Besides all the answers below, I'd say pay a third party to do due diligence or an agent ...  
+More
+4 votes · 11 years ago
+As a Chinese,I learned more than you,if your sample value is not big,you can ask for the sample ...  
+More
+3 votes · 11 years ago
+How can I check legitimacy of a Chinese company/supplier?
+go4WorldBusiness · 
+7 years ago
+ · 
+See more
+Web results
+How to Verify Chinese Companies To Avoid Scams?
+
+FDI China
+https://fdichina.com › blog › china-company-verification
+4 Mar 2025 — Red Flags and Warning Signs. Be cautious if a company exhibits any of the following warning signs: No valid business license or inconsistent ...Read more
+Missing: certificates ‎| Show results with: certificates
+Chinese supplier due diligence checklist
+
+Mybusiness.com.au
+https://www.mybusiness.com.au › preparing-to-export
+1. Do they have a genuine business licence? · 2. Are they a manufacturer or a supplier? · 3. Do they have the capabilities to meet your current and future demand?Read more
+Missing: warning ‎certificates
+How to Check if a China Company Is Legit
+
+China Agent
+https://www.china-agent.com › blog › how-to-check-if-a...
+16 Nov 2025 — 1. A business license tells you almost nothing · 2. The address is the first real red flag · 3. Online checks don't prove legitimacy · 4. To know ...Read more
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are not personalised
+Australia
+Adelaide, South Australia - From your IP address
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

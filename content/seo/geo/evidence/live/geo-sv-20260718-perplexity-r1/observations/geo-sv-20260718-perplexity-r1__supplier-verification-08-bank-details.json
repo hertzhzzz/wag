@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-08-bank-details",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-08-bank-details",
+  "prompt": "How should I verify bank account details before paying a new Chinese supplier?",
+  "promptHash": "sha256:287cc2c5550ea5cba5092e9858ae4fae2abebb9ac534f76d175d28756d283b0f",
+  "observedAt": "2026-07-18T13:31:59.915Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://jrandfirm.com/verify-a-chinese-supplier/",
+      "title": "jrandfirm",
+      "domain": "jrandfirm.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://exswap.com.ng/how-to-verify-a-china-suppliers-bank-details/",
+      "title": "exswap.com",
+      "domain": "exswap.com.ng"
+    },
+    {
+      "rank": 3,
+      "url": "https://chinesecheck.com/blog/chinese-supplier-personal-bank-account",
+      "title": "chinesecheck",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://blog.ibanfirst.com/en/verify-supplier-payment-details",
+      "title": "blog.ibanfirst\nHow to verify international supplier payment details (2026) - iBanFirst\nSpot a changed bank account request? Learn how to verify supplier payment",
+      "domain": "blog.ibanfirst.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.sofeast.com/supply-chain-management/supplier-bank-account-verification/",
+      "title": "sofeast\nSupplier Bank Account Verification - Sofeast\nThe Bank Account Verification is a fast, cost-effective way to assure that the bank account information pro",
+      "domain": "sofeast.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://monitorpay.ai/cross-border-bank-account-verification-how-to-pay-suppliers-worldwide-without-failed-transfers/",
+      "title": "monitorpay\nCross-Border Bank Account Verification: How to Pay Suppliers ...\nCross-Border Bank Account Verification: How to Pay Suppliers in 50+ Countries Withou",
+      "domain": "monitorpay.ai"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.epicsourcing.co/post/how-to-pay-your-chinese-supplier-a-complete-guide-to-payment-methods-terms-and-risk-management",
+      "title": "epicsourcing\nHow to Pay Your Chinese Supplier: A Complete Guide to Payment Methods, Terms and Risk Management\nYou have found the right supplier. The sample look",
+      "domain": "epicsourcing.co"
+    },
+    {
+      "rank": 8,
+      "url": "https://chinaguide.in/resources/payment-methods/",
+      "title": "chinaguide\nPayment Methods for Chinese Suppliers 2026: Complete Guide to Paying Factories in China | ChinaGuide\nGuide to paying Chinese suppliers in 2026. Compa",
+      "domain": "chinaguide.in"
+    },
+    {
+      "rank": 9,
+      "url": "https://medium.com/@importigy/everything-you-need-to-know-about-verifying-supplier-in-china-300e8080339d",
+      "title": "medium\nEverything you need to know about verifying supplier in China\nDealing with Chinese companies can present many challenges and risks since they are special",
+      "domain": "medium.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.alibaba.com/price-comparison/supplier-bank-account-query-in-r12",
+      "title": "alibaba\nHow to Source & Verify Suppliers in Global B2C ... - Alibaba\nLearn best practices for sourcing and verifying suppliers, including bank detail validation",
+      "domain": "alibaba.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-08-bank-details.txt",
+    "hash": "sha256:31a5aa3a48f5e630188e413501d52cdb8dfde4c55a8ed9336b12e091a348f101",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Search https://www.perplexity.ai/search/3104c0d5-bbb1-4181-bb00-96ffcd09319a"
+}

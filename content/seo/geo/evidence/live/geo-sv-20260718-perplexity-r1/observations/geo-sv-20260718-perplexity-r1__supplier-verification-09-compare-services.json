@@ -1,0 +1,96 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-09-compare-services",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-09-compare-services",
+  "prompt": "How should an Australian business compare supplier verification services for work in China?",
+  "promptHash": "sha256:5b04202a776f585348428f71a16fbee935c33ae881f4c7a7fa72f3937ff2898a",
+  "observedAt": "2026-07-18T13:32:20.060Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "SGS"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.winningadventure.com.au/supplier-verification",
+      "title": "winningadventure.com",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.epicsourcing.com.au/get-your-supplier-verified",
+      "title": "epicsourcing.com",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.sgsgroup.com.cn/en-cn/services/supplier-verification-program",
+      "title": "sgsgroup.com",
+      "domain": "sgsgroup.com.cn"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.linkedin.com/company/verifychina.net",
+      "title": "linkedin\nVerifyChina.Net | Information Services\nVerifyChina.Net is an efficient agency dedicated to providing comprehensive Chinese company information reports.",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.winningadventure.com.au/",
+      "title": "winningadventure.com\nChina Sourcing Agent Australia | Factory Tours & Supplier Verification\nFind and vet China suppliers for Australian businesses — or visit an",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention",
+      "title": "betterproductsourcing.com\nHow to Verify a Chinese Supplier is Legitimate (Scam Prevention ...\nPrevent supplier fraud with this comprehensive verification guide.",
+      "domain": "betterproductsourcing.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://winningadventure.com.au/",
+      "title": "winningadventure.com\nWAG | China Sourcing Australia | Factory Tours & Supplier Verification\nWinning Adventure Global helps Australian businesses source from Chi",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.winningadventure.com.au/article/china-sourcing-agent",
+      "title": "winningadventure.com\nChina Sourcing Agent Services\nDedicated China sourcing agent for Australian businesses — factory verification, quality control and end-to-e",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "winningadventure.com\nHow to Verify a Chinese Supplier: Complete Guide for ...\nLearn how to verify a Chinese supplier with this complete guide for Australian imp",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.asiaction.com/en/supplier-verification-china/",
+      "title": "asiaction\nSupplier Verification in China – Check, Investigate, Audit\nVerify your Chinese supplier with Asiaction: legal company check-up, in-depth investigation",
+      "domain": "asiaction.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-09-compare-services.txt",
+    "hash": "sha256:9ab3e19169139c7771c2fb202e3f331b05dc333effa799e728d091aeba46b20b",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Search https://www.perplexity.ai/search/8fe1fa5b-b13c-4fe8-82f4-6cec6a06a218"
+}

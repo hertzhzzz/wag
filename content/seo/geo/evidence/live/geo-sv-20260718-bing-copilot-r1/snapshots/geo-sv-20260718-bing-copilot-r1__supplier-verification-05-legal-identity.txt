@@ -1,0 +1,134 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=How%20can%20I%20verify%20the%20Chinese%20legal%20name%20and%20Unified%20Social%20Credit%20Code%20on%20a%20supplier%27s%20documents%3F&setlang=en-AU&cc=AU
+TITLE: How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents? - Search
+OBSERVED_AT: 2026-07-18T13:51:30.203Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU (copilot.microsoft.com may require sign-in; SERP generative block captured when present)
+PROMPT: How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+Unified Social Credit Code Explained: The 18-Digit China Business ID
+The Unified Social Credit Code (USCC) is the primary identifier for every legal entity in China. It is an 18-character alphanumeric code that serves as the company's unique national identity number. This code replaced the previously separate business registration number, organization code, and tax ID. The USCC is issued once at the time of registration and never reused after dissolution, making it a crucial tool for verifying the legitimacy and authenticity of Chinese companies. 
+chinverify.com
+
+To verify a USCC, you can search for the company on China's official National Enterprise Credit Information Publicity System (GSXT) at gsxt.gov.cn. The search will return the registered legal name, status, legal representative, and registered capital, which must match the company's business license exactly. This verification is essential for confirming the business license is real and for pulling litigation or penalty records. 
+chinverify.com
+Read more
+chinverify.com
+China Company Search & USCC Lookup | ChinVerify
+Enter the company name, Chinese legal name, or 18-digit USCC. Compare official registration details and explainable public risk signals. Save the result, share the link, or downloa…
+chinverify.com
+China Business Registry Search | ChinVerify
+Search Chinese company registry data by company name or USCC, then use ChinVerify to confirm registration status, legal identity, business scope, and public risk signals before you…
+View all
+---
+ORGANIC:
+1. China Company Search & USCC Lookup | ChinVerify | https://www.bing.com/ck/a?!&&p=90a2b5541c3ca526529dd357ca7d2172078539a37f40f602fa8676c6d5b0b4e4JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuY2hpbnZlcmlmeS5jb20vZW4vY2hlY2tlcg&ntb=1
+2. China Business Registry Search | ChinVerify | https://www.bing.com/ck/a?!&&p=d1ec671c32ceb49eca3516cdf9833f0ed940cd3eaa19e4711acebb72acee4bc4JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuY2hpbnZlcmlmeS5jb20vZW4vY2hpbmEtYnVzaW5lc3MtcmVnaXN0cnk&ntb=1
+3. China USCC Lookup Guide 2026: Verify a Unified Social Credit … | https://www.bing.com/ck/a?!&&p=db4ec610c5adea510c29e735a956ae234cbdc494259d5c5d913dc25a0fda16b8JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cucWNja3ljLmNvbS9ibG9nLWRldGFpbC9jaGluYS11c2NjLWxvb2t1cA&ntb=1
+4. China Business License Lookup & USCC Decoder | VeriSupplier | https://www.bing.com/ck/a?!&&p=af36c9df0ad1ddc55fbcae0138c3453c4a9513394ac136488445e562b9c9ff80JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly92ZXJpc3VwcGxpZXIuY29tL2NoaW5hLWJ1c2luZXNzLWxpY2Vuc2UtbG9va3Vw&ntb=1
+5. Unified Social Credit Code Explained: The 18-Digit China Business ID | https://www.bing.com/ck/a?!&&p=7664d5e9ba176b7ef06eb13fe4aa05f5de778c384959a88093c1d3eed72669f9JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluZXNlY2hlY2suY29tL2Jsb2cvdW5pZmllZC1zb2NpYWwtY3JlZGl0LWNvZGUtZXhwbGFpbmVk&ntb=1
+6. Chinese Business License Verification: How to Check If It's Real | https://www.bing.com/ck/a?!&&p=b138f66cbae9dd8e9cb8c644531f979c98230b83af79a900f8ab2d977b333e03JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluZXNlY2hlY2suY29tL2Jsb2cvY2hpbmVzZS1idXNpbmVzcy1saWNlbnNlLXZlcmlmaWNhdGlvbg&ntb=1
+7. How to Verify a Chinese Supplier Before You Pay | https://www.bing.com/ck/a?!&&p=18d69c1be437b699170bd1cd74ad3ab3bda4f94e5884f8ff2ebe331b23992830JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGVucWluZ2thaS5jb20vMjAyNi8wNi9Ib3dfdG9fVmVyaWZ5X2FfQ2hpbmVzZV9TdXBwbGllcl9CZWZvcmVfWW91X1BheS8&ntb=1
+8. HOW TO VERIFY A CHINESE SUPPLIER - Chinese Sourcing Agents | https://www.bing.com/ck/a?!&&p=af579f38a1ba8c504891aaab4a2cceacc137e7cdd4a558873e6aec3630814c6fJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluZXNlc291cmNpbmdhZ2VudHMuY29tL2hvdy10by12ZXJpZnktYS1jaGluZXNlLXN1cHBsaWVyLw&ntb=1
+9. How to Verify a Chinese Supplier Before You Pay (2026 Checklist) | https://www.bing.com/ck/a?!&&p=17ad8d4d9635483c99612118e73b81eafac6f3aface8eb0b892810d0c4720c8bJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZXBpY3NvdXJjaW5nLmNvbS5hdS9wb3N0LzI1LTA2LWhvdy10by12ZXJpZnktYS1jaGluZXNlLXN1cHBsaWVyLWJlZm9yZS15b3UtcGF5LTIwMjYtY2hlY2tsaXN0&ntb=1
+10. qincheck.com
+https://qincheck.com › unified-social-credit-code-check | https://www.bing.com/ck/a?!&&p=76a8ac7759932c540109a935f691af790f3b544a22f82b2e76c74e2f2946bfe1JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9xaW5jaGVjay5jb20vdW5pZmllZC1zb2NpYWwtY3JlZGl0LWNvZGUtY2hlY2s&ntb=1
+
+LINKS:
+- how Bing delivers search results | https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3
+- The Unified Social Credit Code (USCC) is the primary identifier for every legal entity in China. It is an 18-character alphanumeric code tha | https://www.chinverify.com/en/checker
+-  To verify a USCC, you can search for the company on China's official National Enterprise Credit Information Publicity System (GSXT) at gsxt | https://www.chinverify.com/en/china-business-registry
+- qcckyc.com | https://www.qcckyc.com/blog-detail/china-uscc-lookup
+- verisupplier.com | https://verisupplier.com/china-business-license-lookup
+- chinesecheck.com | https://chinesecheck.com/blog/unified-social-credit-code-explained
+- chinesecheck.comChinese Business License Verification: How to Check If It's RealUnified Social Credit Code (统一社会信用代码) This is the single mos | https://chinesecheck.com/blog/chinese-business-license-verification
+- chenqingkai.com https://chenqingkai.com › How_to_Verify_a_Chinese_Supplier... | https://chenqingkai.com/2026/06/How_to_Verify_a_Chinese_Supplier_Before_You_Pay/
+- chinesesourcingagents.com https://chinesesourcingagents.com › how-to-verify-a-chinese-supplier | https://chinesesourcingagents.com/how-to-verify-a-chinese-supplier/
+- Epic Sourcing https://www.epicsourcing.com.au › post | https://www.epicsourcing.com.au/post/25-06-how-to-verify-a-chinese-supplier-before-you-pay-2026-checklist
+- qincheck.com https://qincheck.com › unified-social-credit-code-check | https://qincheck.com/unified-social-credit-code-check
+- Some results have been removed | http://go.microsoft.com/fwlink/?LinkID=617350
+
+BODY (truncated):
+Skip to content
+Accessibility Feedback
+6
+AllSearchImagesVideosMapsNewsCopilot
+More
+About 4,260 results
+Unified Social Credit Code Explained: The 18-Digit China Business ID
+The Unified Social Credit Code (USCC) is the primary identifier for every legal entity in China. It is an 18-character alphanumeric code that serves as the company's unique national identity number. This code replaced the previously separate business registration number, organization code, and tax ID. The USCC is issued once at the time of registration and never reused after dissolution, making it a crucial tool for verifying the legitimacy and authenticity of Chinese companies. 
+chinverify.com
+
+To verify a USCC, you can search for the company on China's official National Enterprise Credit Information Publicity System (GSXT) at gsxt.gov.cn. The search will return the registered legal name, status, legal representative, and registered capital, which must match the company's business license exactly. This verification is essential for confirming the business license is real and for pulling litigation or penalty records. 
+chinverify.com
+Read more
+chinverify.com
+China Company Search & USCC Lookup | ChinVerify
+Enter the company name, Chinese legal name, or 18-digit USCC. Compare official registration details and explainable public risk signals. Save the result, share the link, or downloa…
+chinverify.com
+China Business Registry Search | ChinVerify
+Search Chinese company registry data by company name or USCC, then use ChinVerify to confirm registration status, legal identity, business scope, and public risk signals before you…
+View all
+ 
+chinverify.com
+https://www.chinverify.com › en › checker
+China Company Search & USCC Lookup | ChinVerify
+
+Search and verify Chinese companies by name or USCC. Check registration status, business license details, legal identity, and public risk signals.
+
+ 
+chinverify.com
+https://www.chinverify.com › en › china-business-registry
+China Business Registry Search | ChinVerify
+
+Search Chinese company registry data by company name or USCC, then use ChinVerify to confirm registration status, legal identity, business scope, and public risk signals before you approve a …
+
+qcckyc.com
+https://www.qcckyc.com › blog-detail › china-uscc-lookup
+China USCC Lookup Guide 2026: Verify a Unified Social Credit …
+
+8 June 2026 · GSXT accepts searches by either the USCC or the exact Chinese legal name. Entering the 18-character code returns the company's registration status and whether it is flagged as …
+
+verisupplier.com
+https://verisupplier.com › china-business-license-lookup
+China Business License Lookup & USCC Decoder | VeriSupplier
+
+To verify if the document represents a valid, active business entity, you must check it against China's official corporate database. This guide walks you through reading, translating, and verifying a …
+
+chinesecheck.com
+https://chinesecheck.com › blog › unified-social-credit-code-explained
+Unified Social Credit Code Explained: The 18-Digit China Business ID
+
+17 Apr 2026 · The Unified Social Credit Code is the 18-character ID every Chinese company carries. Learn how to decode, validate, and verify a USCC before you wire a dollar.
+
+chinesecheck.com
+https://chinesecheck.com › blog › chinese-business-license-verification
+Chinese Business License Verification: How to Check If It's Real
+
+31 Mar 2026 · How to verify a Chinese business license: read key fields, check via GSXT, spot fakes, and understand the Unified Social Credit Code.
+
+chenqingkai.com
+https://chenqingkai.com › How_to_Verify_a_Chinese_Supplier...
+How to Verify a Chinese Supplier Before You Pay
+
+27 June 2026 · This guide explains, step by step, how to verify a Chinese supplier’s legal identity, business reality, and credit record using public and lawful channels, so that you pay based on facts …
+
+chinesesourcingagents.com
+https://chinesesourcingagents.com › how-to-verify-a-chinese-supplier
+HOW TO VERIFY A CHINESE SUPPLIER - Chinese Sourcing Agents
+
+19 June 2026 · Verifying a Chinese supplier is a critical step to mitigate risk and avoid fraud. Here is a comprehensive guide on how to do so, from free online checks to hiring professional services.
+
+Epic Sourcing
+https://www.epicsourcing.com.au › post
+How to Verify a Chinese Supplier Before You Pay (2026 Checklist)
+qincheck.com
+https://qincheck.com › unified-social-credit-code-check
+Like
+Dislike
+ 
+How to verify USCC online
+USCC national security role

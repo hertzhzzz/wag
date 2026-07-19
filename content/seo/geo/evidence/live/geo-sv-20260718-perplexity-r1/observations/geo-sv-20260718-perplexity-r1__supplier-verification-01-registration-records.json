@@ -1,0 +1,50 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-01-registration-records",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-01-registration-records",
+  "prompt": "What official records should an Australian importer check before engaging a supplier in China?",
+  "promptHash": "sha256:356387f04841deb2efce4f1b0777e156e6ea218e98d93cf714c3656a5d0230cb",
+  "observedAt": "2026-07-18T12:47:08.649Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "Epic Sourcing",
+    "Swift Cargo Solutions",
+    "Better Product Sourcing"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://chinasleuth.com/services/verify-supplier/",
+      "title": "chinasleuth",
+      "domain": "chinasleuth.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://chinasleuth.com/services/verify-supplier/",
+      "title": "chinasleuth\nVerify Supplier in China | Supplier Check & Factory Visit\nProtect your procurement with supplier verificatio",
+      "domain": "chinasleuth.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-01-registration-records.txt",
+    "hash": "sha256:91e6cdcb4dfda7f4c6a561d9ecdc9f728dc624552dad35ebca60818f2719d89d",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Answer mentions brand contextually (Winning Adventure Global). Source cards cite winningadventure.com (some UI domains omit .au)."
+}

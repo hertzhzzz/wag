@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-09-compare-services",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-09-compare-services",
+  "prompt": "How should an Australian business compare supplier verification services for work in China?",
+  "promptHash": "sha256:5b04202a776f585348428f71a16fbee935c33ae881f4c7a7fa72f3937ff2898a",
+  "observedAt": "2026-07-18T13:23:56.883Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-09-compare-services.txt",
+    "hash": "sha256:ed9158e391d80d1c463f2b2b39e71e5989581a514852415d6c1680ed196daece",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Conversation https://chatgpt.com/c/6a5b7e55-4320-83ec-b00e-350c1b940d02"
+}

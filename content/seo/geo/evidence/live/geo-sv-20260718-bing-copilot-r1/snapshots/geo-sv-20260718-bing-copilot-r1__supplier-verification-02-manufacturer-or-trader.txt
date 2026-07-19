@@ -1,0 +1,170 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=How%20can%20an%20Australian%20buyer%20distinguish%20a%20Chinese%20manufacturer%20from%20a%20trading%20company%3F&setlang=en-AU&cc=AU
+TITLE: How can an Australian buyer distinguish a Chinese manufacturer from a trading company? - Search
+OBSERVED_AT: 2026-07-18T13:50:25.387Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU (copilot.microsoft.com may require sign-in; SERP generative block captured when present)
+PROMPT: How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+How to Verify Chinese Suppliers: 5-Step Verification Checklist
+To verify Chinese suppliers, particularly between manufacturers and trading companies, follow these steps:
+Check the Business License: Ensure the supplier's business license includes manufacturing verbs like 生产 (produce), 制造 (manufacture), or 加工 (process). If it only includes terms like 销售 (sales), 批发 (wholesale), or 贸易 (trade), it is likely a trading company. 
+2
+Verify VAT Invoice Capability: Only qualified manufacturers can issue 17% VAT invoices for export tax rebates. Ask if they can provide a VAT invoice for export tax refund. 
+1
+Test MOQ Flexibility: Factories prioritize efficiency and scale. If a supplier easily accepts small trial orders, they are likely not a direct factory. 
+1
+Analyze Product Range: A true factory usually specializes in a specific product category. 
+1
+Request Factory Audit Reports: Serious factories working with global buyers often have audit reports to demonstrate their quality control and production capabilities. 
+1
+
+By following these steps, Australian buyers can better ensure they are working with legitimate manufacturers and avoid potential risks associated with trading companies.
+3 Sources
+Read more
+chinesecheck.com
+How to Check If a Chinese Supplier Is a Real Factory or Trading Company ...
+Our trading company vs manufacturer guide explains the structural differences between the two business models — why they exist, when each is legitimate, and why the confusion matte…
+chinesecheck.com
+China Trading Company vs Manufacturer: How to Tell the Difference (2026)
+This guide gives you 7+ proven methods to determine whether a Chinese supplier is a genuine manufacturer or a trading company, explains when each type is actually the better choice…
+View all
+---
+ORGANIC:
+1. How to Check If a Chinese Supplier Is a Real Factory or Trading … | https://www.bing.com/ck/a?!&&p=f08f43b2275f3d95ace018741b05c4d674fe491619f2fbadd966cb0d6e6127c9JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluZXNlY2hlY2suY29tL2Jsb2cvaWRlbnRpZnktcmVhbC1mYWN0b3J5LXZzLXRyYWRpbmctY29tcGFueQ&ntb=1
+2. China Trading Company vs Manufacturer: How to Tell the Difference … | https://www.bing.com/ck/a?!&&p=a367feb9f955edf65b6a368a6ad02c7efed5fbe3667fc4f026e147ebe5822d58JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluZXNlY2hlY2suY29tL2Jsb2cvY2hpbmEtdHJhZGluZy1jb21wYW55LXZzLW1hbnVmYWN0dXJlcg&ntb=1
+3. How to verify a Chinese manufacturer before you place an ... - LinkedIn | https://www.bing.com/ck/a?!&&p=e3e14f5f713f0ffc219073982d9608cebc7e4c4e3eb301056f9ef284088241d4JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL3B1bHNlL2hvdy12ZXJpZnktY2hpbmVzZS1tYW51ZmFjdHVyZXItYmVmb3JlLXlvdS1wbGFjZS1vcmRlci1zdGVwLWJ5LXN0ZXAtZnJjYmU&ntb=1
+4. How to Verify Chinese Suppliers in 2026 | Factory vs Trading … | https://www.bing.com/ck/a?!&&p=8c4315d75a7da8adf0f76d503ab971ab3dd6ae8ab84d0d9cc62775fd155f6ddcJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly91Y3NvdXJjaW5nLmNvbS93aHktdmVyaWZ5aW5nLWNoaW5lc2Utc3VwcGxpZXJzLXN0aWxsLW1hdHRlcnMtbW9yZS10aGFuLWV2ZXIv&ntb=1
+5. How to Verify a Chinese Manufacturer Before You Order | https://www.bing.com/ck/a?!&&p=3e74be43c18c0afb3f22fb957ac2c44ba9228ede837426bc3e9678517fed7df6JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly96aWduaWZ5Lm5ldC9ibG9nL2hvdy10by12ZXJpZnktYS1jaGluZXNlLW1hbnVmYWN0dXJlci8&ntb=1
+6. How to Verify Chinese Suppliers: 5-Step Verification Checklist (2026) | https://www.bing.com/ck/a?!&&p=a9bde417da6bc3507c353988038fbc1bfc582bc2e66859715c41913aafdf15bdJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9wYXhwb3J0dHJhZGluZy5jb20vYmxvZy9ob3ctdG8tdmVyaWZ5LWNoaW5lc2Utc3VwcGxpZXJzLWd1aWRlLmh0bWw&ntb=1
+7. How To Find Reliable Manufacturers In China? Trader Or Not? | https://www.bing.com/ck/a?!&&p=6854c99962abf9d523175b6682c02509ef04783133ed049c99552b9eca77673bJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9zb3VyY2luZ3Bpb25lZXIuY29tL2hvdy10by1maW5kLXJlbGlhYmxlLW1hbnVmYWN0dXJlcnMtaW4tY2hpbmEv&ntb=1
+8. 2026 Guide: How to Spot a Real Factory vs Trading Company | https://www.bing.com/ck/a?!&&p=df65540ad282ac6b17b9a6e7ab0c3a56fd7d49151a0f9c23f58e81b39cfa145dJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuY2hpbGx0aXRhbi5jb20vZmFjdG9yeS12cy10cmFkaW5nLWNvbXBhbnktdmVyaWZpY2F0aW9uLWd1aWRlLw&ntb=1
+9. How to Verify a Chinese Supplier: Complete Checklist for Importers | https://www.bing.com/ck/a?!&&p=3fb07ec125351696fa1dbb127d6c33a35ab462da0a21882e314155b389d419c3JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9taW5kZW5zb3VyY2luZy5jb20vaG93LXRvLXZlcmlmeS1hLWNoaW5lc2Utc3VwcGxpZXIv&ntb=1
+10. Epic Sourcing
+https://www.epicsourcing.com.au › post › buying-from-china-australian... | https://www.bing.com/ck/a?!&&p=9b0b7e5baf8b8a18f122b9c64d1a066d9e72ae7a385d3f103160e1d5234f3114JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZXBpY3NvdXJjaW5nLmNvbS5hdS9wb3N0L2J1eWluZy1mcm9tLWNoaW5hLWF1c3RyYWxpYW4tYnVzaW5lc3Nlcy1wcmFjdGljYWwtZ3VpZGUtMjAyNg&ntb=1
+
+LINKS:
+- how Bing delivers search results | https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3
+- Check the Business License: Ensure the supplier's business license includes manufacturing verbs like 生产 (produce), 制造 (manufacture), or 加工 ( | https://chinesecheck.com/blog/identify-real-factory-vs-trading-company
+- Verify VAT Invoice Capability: Only qualified manufacturers can issue 17% VAT invoices for export tax rebates. Ask if they can provide a VAT | https://www.linkedin.com/pulse/how-verify-chinese-manufacturer-before-you-place-order-step-by-step-frcbe
+- chinesecheck.com China Trading Company vs Manufacturer: How to Tell the Difference (2026) This guide gives you 7+ proven methods to determin | https://chinesecheck.com/blog/china-trading-company-vs-manufacturer
+- ucsourcing.com | https://ucsourcing.com/why-verifying-chinese-suppliers-still-matters-more-than-ever/
+- zignify.net | https://zignify.net/blog/how-to-verify-a-chinese-manufacturer/
+- paxporttrading.comHow to Verify Chinese Suppliers: 5-Step Verification Checklist (2026)China's manufacturing ecosystem is massive — over 10  | https://paxporttrading.com/blog/how-to-verify-chinese-suppliers-guide.html
+- Your Trusted Forex Broker | Multi-Regulated Broker | https://www.bing.com/aclick?ld=e8UGxJdrySeAOC8ZEYrNaDzzVUCUx8Dt7fZREFZUlh-orebbxHj7qavly3ytsWfpsmBYF8zrpgg9ayxsvJSBWdFZsZCqbwuHJLPsYlAdRxTo4XaS4UAaL4GIuSYcpijjpXBPO5aYcwUKCniPkfCipor4dsV47KykFFIQz4bRGPMd33JOt5eR0Lymx_stDKGQoOR9Zo_SQqWKmd7S03YYbiqWG_MXE&u=aHR0cHMlM2ElMmYlMmZwZXBwZXJzdG9uZS5jb20lMmZlbi1hdSUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nLXBlcmZvcm1hbmNlLW1heC1jYXRlZ29yeSUyNnV0bV9tZWRpdW0lM2R2YXJpb3VzLWFzc2V0cyUyNnV0bV9jYW1wYWlnbiUzZGJyb2tlci1mb3JleC0yMzExLXByb3NwZWN0aW5nLWF1LWVuLWFzaWMlMjZ1dG1faWQlM2Q2NjM0ODA5MjklMjZ1dG1fdGVybSUzZHBlcHBlcnN0b25lLmNvbSUyNnV0bV9jb250ZW50JTNkJTI2cHRuX2NhbXBhaWduJTNkQVUlMjUyMEFTSUMlMjUyMCUyNTVCUGVyZm9ybWFuY2UlMjUyME1heCUyNTVEJTI1MjBCcm9rZXIlMjZwdG5fYWRncm91cCUzZEFVJTI1MjBBU0lDJTI1MjAlMjU1QlBlcmZvcm1hbmNlJTI1MjBNYXglMjU1RCUyNTIwQnJva2VyJTI2cHRuX3JlZ2lvbiUzZFBlcHBlcnN0b25lX0FVJTI2Z2NsaWQlM2Q4MWM3YTc0MTU0YjgxNmUwMzE1ZGNkMWFkMDIxMjg3YyUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDgxYzdhNzQxNTRiODE2ZTAzMTVkY2QxYWQwMjEyODdj&rlid=81c7a74154b816e0315dcd1ad021287c&ntb=1
+- TradingView | https://www.bing.com/aclick?ld=e848NMHIIsFqf_XyXvJjwZnTVUCUws1PReqRWlR_6HyyUsswcNl_8j5GI5S_XxLPXBmM96W1EXaZXftFiOHUH84xOwPaIj61i7lq4i6dd4-ew4PRruDMzAbWx_h3qM5S2ZYU_U_HUVSnurzbT01ORSlGfnFeAI6RAfX6m2t2Men-GgVKSYUShw_H4G8VJq1EDAoIKzvbiyWhbKKxG-UYnjJihgjk3QkYmxlePjxWAeIw2yNZ8p&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q1ODcwMDAwODk0MzEzMzg0NSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfY2FpZCUzZDIyODg2OTQ1ODkyJTI2JTI2ZHNfZV9hZGlkJTNkODIxMjAxNzQ4NTkxOTklMjZkc19lX3RhcmdldF9pZCUzZGt3ZC0yMzMzOTE5NTg5MzQ1ODA2JTNhbG9jLTklMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnBlcHBlcnN0b25lLmNvbSUyZmVuLWF1JTJmcGxhdGZvcm1zJTJmdHJhZGluZy1wbGF0Zm9ybXMlMmZ0cmFkaW5ndmlldyUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHZhcmlvdXMtYXNzZXRzJTI2dXRtX2NhbXBhaWduJTNkdHJhZGluZ3ZpZXctc2l0ZWxpbmstZXh0ZW5zaW9ucy1wcm9zcGVjdGluZy1hdS1lbi1hc2ljJTI2dXRtX3Rlcm0lM2QlN2JrZXl3b3JkJTdkJTI2dXRtX2NvbnRlbnQlM2QlN2JjcmVhdGl2ZSU3ZCUyNnV0bV9zb3VyY2UlM2RiaW5nLXBlcmZvcm1hbmNlLW1heC1jYXRlZ29yeSUyNnV0bV9tZWRpdW0lM2R2YXJpb3VzLWFzc2V0cyUyNnV0bV9jYW1wYWlnbiUzZGJyb2tlci1mb3JleC0yMzExLXByb3NwZWN0aW5nLWF1LWVuLWFzaWMlMjZ1dG1faWQlM2Q2NjM0ODA5MjklMjZ1dG1fdGVybSUzZHBlcHBlcnN0b25lLmNvbSUyNnV0bV9jb250ZW50JTNkJTI2cHRuX2NhbXBhaWduJTNkQVUlMjUyMEFTSUMlMjUyMCUyNTVCUGVyZm9ybWFuY2UlMjUyME1heCUyNTVEJTI1MjBCcm9rZXIlMjZwdG5fYWRncm91cCUzZEFVJTI1MjBBU0lDJTI1MjAlMjU1QlBlcmZvcm1hbmNlJTI1MjBNYXglMjU1RCUyNTIwQnJva2VyJTI2cHRuX3JlZ2lvbiUzZFBlcHBlcnN0b25lX0FVJTI2Z2NsaWQlM2RiM2IxYWM4Y2E5N2UxZjU4MzQ0MmM2ZDcyZGU3MGZmZSUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZGIzYjFhYzhjYTk3ZTFmNTgzNDQyYzZkNzJkZTcwZmZl&rlid=b3b1ac8ca97e1f583442c6d72de70ffe&ntb=1
+- MetaTrader 5 | https://www.bing.com/aclick?ld=e8BA_vvvokrtDbb8Ta_rT1gTVUCUwBI4ARNShdDdOEHPphXuo4sAZVAhSbhLs6DY5-CgNiTI11TMXMFDawZ8btfEPuiBy4EaM9HbwwPQQY50KmOkmQB6l9trOVJiiZ7ZzYZ9z7lqX_Z0-y2_FetmXOJtX9cEA8VVgj4I8tax3Plm__6AkKPsfz7_wVHrjzS05kAWoblD72kvN_54kJ82mtLBGAFBRC5h_cUzfTHIYJ0OwN6RbF&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q1ODcwMDAwODk0MzEzMzg0NSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfY2FpZCUzZDIyODg2OTQ1ODkyJTI2JTI2ZHNfZV9hZGlkJTNkODIxMjAxNzQ4NTkxOTklMjZkc19lX3RhcmdldF9pZCUzZGt3ZC0yMzMzOTE5NTg5MzQ1ODA2JTNhbG9jLTklMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnBlcHBlcnN0b25lLmNvbSUyZmVuLWF1JTJmZ28lMmZ1bHRpbWF0ZS1tdDUtZXhwZXJpZW5jZSUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHRleHQtYWQlMjZ1dG1fY2FtcGFpZ24lM2RvcGVuLWEtbXQ1LWZvcmV4LWFjY291bnQtc2l0ZWxpbmstZXh0ZW5zaW9ucy1wcm9zcGVjdGluZy1hdS1lbi1hc2ljJTI2dXRtX3Rlcm0lM2QlN2JrZXl3b3JkJTdkJTI2dXRtX2NvbnRlbnQlM2QlN2JjcmVhdGl2ZSU3ZCUyNnV0bV9zb3VyY2UlM2RiaW5nLXBlcmZvcm1hbmNlLW1heC1jYXRlZ29yeSUyNnV0bV9tZWRpdW0lM2R2YXJpb3VzLWFzc2V0cyUyNnV0bV9jYW1wYWlnbiUzZGJyb2tlci1mb3JleC0yMzExLXByb3NwZWN0aW5nLWF1LWVuLWFzaWMlMjZ1dG1faWQlM2Q2NjM0ODA5MjklMjZ1dG1fdGVybSUzZHBlcHBlcnN0b25lLmNvbSUyNnV0bV9jb250ZW50JTNkJTI2cHRuX2NhbXBhaWduJTNkQVUlMjUyMEFTSUMlMjUyMCUyNTVCUGVyZm9ybWFuY2UlMjUyME1heCUyNTVEJTI1MjBCcm9rZXIlMjZwdG5fYWRncm91cCUzZEFVJTI1MjBBU0lDJTI1MjAlMjU1QlBlcmZvcm1hbmNlJTI1MjBNYXglMjU1RCUyNTIwQnJva2VyJTI2cHRuX3JlZ2lvbiUzZFBlcHBlcnN0b25lX0FVJTI2Z2NsaWQlM2QwNGYwNTIwNTNhZTkxNDBiODhlMzM4NWViZTcwOTY5YiUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDA0ZjA1MjA1M2FlOTE0MGI4OGUzMzg1ZWJlNzA5Njli&rlid=04f052053ae9140b88e3385ebe70969b&ntb=1
+- _Trading Platforms | https://www.bing.com/aclick?ld=e8u_p1q299BDPo-dMG77ckqTVUCUzWvDNJlx-QGR0lbCiq7JYuHH5UO3WQAUkIZ-UnJs2xN30ej_jinGZLlg6xxl8RBIU4qbr3lI7FtJAIpTXjXe7lMvvkU2NxhqR-ryEr1sWJh5g_pFijL9qk1t2f_aHZgE0uGq7vWVIN-172FCQgj_pnAcSdvE47Ja-DTtGsLVGmy7011-o-t9SqyZTDsbY8kOcmqrVddcHRVXr7ho5iYloU&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q1ODcwMDAwODk0MzEzMzg0NSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfY2FpZCUzZDIyODg2OTQ1ODkyJTI2ZHNfeF9hZHhpZCUzZDgzNzAwMDI2NjAxMzMwMTU0JTI2ZHNfeF9hZHh0eXBlJTNkMSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfZXh0aWQlM2QyNzQ4MDA3MzgyNDklMjZkc19lX2FkaWQlM2Q4MjEyMDE3NDg1OTE5OSUyNmRzX2VfdGFyZ2V0X2lkJTNka3dkLTIzMzM5MTk1ODkzNDU4MDYlM2Fsb2MtOSUyNiUyNmRzX2VfbmV0d29yayUzZG8lMjZkc191cmxfdiUzZDIlMjZkc19kZXN0X3VybCUzZGh0dHBzJTNhJTJmJTJmcGVwcGVyc3RvbmUuY29tJTJmZW4tYXUlMmZwbGF0Zm9ybXMlMmZ0cmFkaW5nLXBsYXRmb3JtcyUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHZhcmlvdXMtYXNzZXRzJTI2dXRtX2NhbXBhaWduJTNkdHJhZGluZy1wbGF0Zm9ybXMtc2l0ZWxpbmstZXh0ZW5zaW9ucy1wcm9zcGVjdGluZy1hdS1lbi1hc2ljJTI2dXRtX3Rlcm0lM2RwZXBwZXJzdG9uZS5jb20lMjZ1dG1fY29udGVudCUzZCUyNnB0bl9jYW1wYWlnbiUzZEFVJTI1MjBBU0lDJTI1MjAlMjU1QlBlcmZvcm1hbmNlJTI1MjBNYXglMjU1RCUyNTIwQnJva2VyJTI2cHRuX2FkZ3JvdXAlM2RBVSUyNTIwQVNJQyUyNTIwJTI1NUJQZXJmb3JtYW5jZSUyNTIwTWF4JTI1NUQlMjUyMEJyb2tlciUyNnB0bl9yZWdpb24lM2RQZXBwZXJzdG9uZV9BVSUyNmdjbGlkJTNkYTI3YjQyNTI3YjgxMTRjNzMwNTQyODA5ZmYxODE3ZTklMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2RhMjdiNDI1MjdiODExNGM3MzA1NDI4MDlmZjE4MTdlOSUyNm1zY2xraWQlM2RhMjdiNDI1MjdiODExNGM3MzA1NDI4MDlmZjE4MTdlOQ&rlid=a27b42527b8114c730542809ff1817e9&ntb=1
+- MT5 | https://www.bing.com/aclick?ld=e8byjiU201Hru0hvL5-Jr95DVUCUxrHzeZ8bi1p6cxdP3LwXmVgVJvVUeSV5Pph9GaB1xwic_y9UrKSMtl5h9a0hUD0R7tsi596jX08JsCyaW01_xlytP89L6VcDJpHVdqDbQUCpf5FkL2Ui-6aLnFRjxbicPgrVTCr2oz9Bxw_bJPz8-Ss6PO76wmMcLPJFfKvWw8DEt97aeCbfP86jyJEI_kUYc1dtLjqE0-24ENO0n0fcY5&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q1ODcwMDAwODk0MzEzMzg0NSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfY2FpZCUzZDIyODg2OTQ1ODkyJTI2JTI2ZHNfZV9hZGlkJTNkODIxMjAxNzQ4NTkxOTklMjZkc19lX3RhcmdldF9pZCUzZGt3ZC0yMzMzOTE5NTg5MzQ1ODA2JTNhbG9jLTklMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnBlcHBlcnN0b25lLmNvbSUyZmVuLWF1JTJmZ28lMmZ1bHRpbWF0ZS1tdDUtZXhwZXJpZW5jZSUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHRleHQtYWQlMjZ1dG1fY2FtcGFpZ24lM2RvcGVuLWEtbXQ1LWZvcmV4LWFjY291bnQtc2l0ZWxpbmstZXh0ZW5zaW9ucy1wcm9zcGVjdGluZy1hdS1lbi1hc2ljJTI2dXRtX3Rlcm0lM2QlN2JrZXl3b3JkJTdkJTI2dXRtX2NvbnRlbnQlM2QlN2JjcmVhdGl2ZSU3ZCUyNnV0bV9zb3VyY2UlM2RiaW5nLXBlcmZvcm1hbmNlLW1heC1jYXRlZ29yeSUyNnV0bV9tZWRpdW0lM2R2YXJpb3VzLWFzc2V0cyUyNnV0bV9jYW1wYWlnbiUzZGJyb2tlci1mb3JleC0yMzExLXByb3NwZWN0aW5nLWF1LWVuLWFzaWMlMjZ1dG1faWQlM2Q2NjM0ODA5MjklMjZ1dG1fdGVybSUzZHBlcHBlcnN0b25lLmNvbSUyNnV0bV9jb250ZW50JTNkJTI2cHRuX2NhbXBhaWduJTNkQVUlMjUyMEFTSUMlMjUyMCUyNTVCUGVyZm9ybWFuY2UlMjUyME1heCUyNTVEJTI1MjBCcm9rZXIlMjZwdG5fYWRncm91cCUzZEFVJTI1MjBBU0lDJTI1MjAlMjU1QlBlcmZvcm1hbmNlJTI1MjBNYXglMjU1RCUyNTIwQnJva2VyJTI2cHRuX3JlZ2lvbiUzZFBlcHBlcnN0b25lX0FVJTI2Z2NsaWQlM2RhMWU3M2Y0ZmI5M2QxMWE3MDFhNzU1MTQzZGE0ODliOSUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZGExZTczZjRmYjkzZDExYTcwMWE3NTUxNDNkYTQ4OWI5&rlid=a1e73f4fb93d11a701a755143da489b9&ntb=1
+- _Crypto CFD Trading | https://www.bing.com/aclick?ld=e8QWaWrQw2PejWDT2QdkO6ZTVUCUwc1BnEDe-FX9sD4K6Ij8M5tXxS8_k7GXqzrmXMMSOs_nNgz4fptapsxMqJ7ObtOJf-OU5mq8iqpCKwZou8ohzZyfxXyq8VGjS03U4Z6Wq9HnYiE__XLr4RG8r-N_zcCt8GsrzG5Ek17eKEz8pt7mOgbJTkSmwNiv4NPgkMBZ1LfTS66iH79_glovRDlzO9iwkVi-FKI7kSLgDy6eFyUB9H&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q1ODcwMDAwODk0MzEzMzg0NSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfY2FpZCUzZDIyODg2OTQ1ODkyJTI2ZHNfeF9hZHhpZCUzZDgzNzAwMDI2NjAxMzMwMTY5JTI2ZHNfeF9hZHh0eXBlJTNkMSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfZXh0aWQlM2QyNzQ4MDA3MzgyNjQlMjZkc19lX2FkaWQlM2Q4MjEyMDE3NDg1OTE5OSUyNmRzX2VfdGFyZ2V0X2lkJTNka3dkLTIzMzM5MTk1ODkzNDU4MDYlM2Fsb2MtOSUyNiUyNmRzX2VfbmV0d29yayUzZG8lMjZkc191cmxfdiUzZDIlMjZkc19kZXN0X3VybCUzZGh0dHBzJTNhJTJmJTJmcGVwcGVyc3RvbmUuY29tJTJmZW4tYXUlMmZtYXJrZXRzLWFuZC1zeW1ib2xzJTJmY3J5cHRvY3VycmVuY2llcyUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHZhcmlvdXMtYXNzZXRzJTI2dXRtX2NhbXBhaWduJTNkY3J5cHRvLXRyYWRpbmctY2Zkcy1zaXRlbGluay1leHRlbnNpb25zLXByb3NwZWN0aW5nLWF1LWVuLWFzaWMlMjZ1dG1faWQlM2Q2NjM0ODA5MjklMjZ1dG1fdGVybSUzZHBlcHBlcnN0b25lLmNvbSUyNnV0bV9jb250ZW50JTNkJTI2cHRuX2NhbXBhaWduJTNkQVUlMjUyMEFTSUMlMjUyMCUyNTVCUGVyZm9ybWFuY2UlMjUyME1heCUyNTVEJTI1MjBCcm9rZXIlMjZwdG5fYWRncm91cCUzZEFVJTI1MjBBU0lDJTI1MjAlMjU1QlBlcmZvcm1hbmNlJTI1MjBNYXglMjU1RCUyNTIwQnJva2VyJTI2cHRuX3JlZ2lvbiUzZFBlcHBlcnN0b25lX0FVJTI2Z2NsaWQlM2Q3OTg3MjM4ZDUyMmIxY2Q2ZDk2MDQ5ZDZkNmIyMzU2NyUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDc5ODcyMzhkNTIyYjFjZDZkOTYwNDlkNmQ2YjIzNTY3JTI2bXNjbGtpZCUzZDc5ODcyMzhkNTIyYjFjZDZkOTYwNDlkNmQ2YjIzNTY3&rlid=7987238d522b1cd6d96049d6d6b23567&ntb=1
+- Trading Platforms | https://www.bing.com/aclick?ld=e8vGwIAj6c3b_l3etaDPRYazVUCUyC42lvQG0odL0fYOCGMTBFO353kEthWJ3XjIg2atWgfSn7yQv4ViEmjjgWm4nEGufYvjaaRJIK4H8Um9YhX7LwjQyNkwrlVYAcYIKd52F14rpXXKUes2ChWafkm5dd5oEEhp6p1ns5rxsks8SkwLGZrIvyrLM6-LawNtqME246woPv5aDt-R4FgN6YClliTln2ilyJR2TYokpXz8pKyZWJ&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q1ODcwMDAwODk0MzEzMzg0NSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfY2FpZCUzZDIyODg2OTQ1ODkyJTI2JTI2ZHNfZV9hZGlkJTNkODIxMjAxNzQ4NTkxOTklMjZkc19lX3RhcmdldF9pZCUzZGt3ZC0yMzMzOTE5NTg5MzQ1ODA2JTNhbG9jLTklMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnBlcHBlcnN0b25lLmNvbSUyZmVuLWF1JTJmcGxhdGZvcm1zJTJmdHJhZGluZy1wbGF0Zm9ybXMlMmYlM2Z1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2R2YXJpb3VzLWFzc2V0cyUyNnV0bV9jYW1wYWlnbiUzZHRyYWRpbmctcGxhdGZvcm1zLXNpdGVsaW5rLWV4dGVuc2lvbnMtcHJvc3BlY3RpbmctYXUtZW4tYXNpYyUyNnV0bV90ZXJtJTNkJTdia2V5d29yZCU3ZCUyNnV0bV9jb250ZW50JTNkJTdiY3JlYXRpdmUlN2QlMjZ1dG1fc291cmNlJTNkYmluZy1wZXJmb3JtYW5jZS1tYXgtY2F0ZWdvcnklMjZ1dG1fbWVkaXVtJTNkdmFyaW91cy1hc3NldHMlMjZ1dG1fY2FtcGFpZ24lM2Ricm9rZXItZm9yZXgtMjMxMS1wcm9zcGVjdGluZy1hdS1lbi1hc2ljJTI2dXRtX2lkJTNkNjYzNDgwOTI5JTI2dXRtX3Rlcm0lM2RwZXBwZXJzdG9uZS5jb20lMjZ1dG1fY29udGVudCUzZCUyNnB0bl9jYW1wYWlnbiUzZEFVJTI1MjBBU0lDJTI1MjAlMjU1QlBlcmZvcm1hbmNlJTI1MjBNYXglMjU1RCUyNTIwQnJva2VyJTI2cHRuX2FkZ3JvdXAlM2RBVSUyNTIwQVNJQyUyNTIwJTI1NUJQZXJmb3JtYW5jZSUyNTIwTWF4JTI1NUQlMjUyMEJyb2tlciUyNnB0bl9yZWdpb24lM2RQZXBwZXJzdG9uZV9BVSUyNmdjbGlkJTNkN2JhNGVjZDliNWEwMWJkMGQwMWY4NjgyMzEzOTlhM2QlMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2Q3YmE0ZWNkOWI1YTAxYmQwZDAxZjg2ODIzMTM5OWEzZA&rlid=7ba4ecd9b5a01bd0d01f868231399a3d&ntb=1
+- _Aston Martin Partnership | https://www.bing.com/aclick?ld=e8NIo_0QGOaYwihGpdh0E7KzVUCUxtlUyRQff6zLz3nopBg1jqW9_xqfIkWDzi5k3WpzUd7STLnyLXgHvIK2xM_Yky7lws7LrSf57dOYqlu50FQie9_pxrpqxltMgQLX0p94z-vh7Tg9rkK2QZaQJcWbBAem810Vpx1NyhTeSvDE7z6_gJFXc2lKu80ZfoAlyUo90M9qv91EP_7loH5e-OCq96jx0krrwHRyYo7IwgBEDsIHDN&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q1ODcwMDAwODk0MzEzMzg0NSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfY2FpZCUzZDIyODg2OTQ1ODkyJTI2ZHNfeF9hZHhpZCUzZDgzNzAwMDI2NjAxMzMwMTcyJTI2ZHNfeF9hZHh0eXBlJTNkMSUyNmRzX2FfY2lkJTNkNjY1MzU1Njg1NiUyNmRzX2FfZXh0aWQlM2QyNzQ4MDA3MzgyNjclMjZkc19lX2FkaWQlM2Q4MjEyMDE3NDg1OTE5OSUyNmRzX2VfdGFyZ2V0X2lkJTNka3dkLTIzMzM5MTk1ODkzNDU4MDYlM2Fsb2MtOSUyNiUyNmRzX2VfbmV0d29yayUzZG8lMjZkc191cmxfdiUzZDIlMjZkc19kZXN0X3VybCUzZGh0dHBzJTNhJTJmJTJmcGVwcGVyc3RvbmUuY29tJTJmZW4tYXUlMmZ3aGVyZWJldHRlcnRyYWRlcyUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHZhcmlvdXMtYXNzZXRzJTI2dXRtX2NhbXBhaWduJTNkY2ZiLWF3YXJkLTI1MDEtc2l0ZWxpbmstZXh0ZW5zaW9ucy1wcm9zcGVjdGluZy1hdS1lbi1hc2ljJTI2dXRtX2lkJTNkNjYzNDgwOTI5JTI2dXRtX3Rlcm0lM2RwZXBwZXJzdG9uZS5jb20lMjZ1dG1fY29udGVudCUzZCUyNnB0bl9jYW1wYWlnbiUzZEFVJTI1MjBBU0lDJTI1MjAlMjU1QlBlcmZvcm1hbmNlJTI1MjBNYXglMjU1RCUyNTIwQnJva2VyJTI2cHRuX2FkZ3JvdXAlM2RBVSUyNTIwQVNJQyUyNTIwJTI1NUJQZXJmb3JtYW5jZSUyNTIwTWF4JTI1NUQlMjUyMEJyb2tlciUyNnB0bl9yZWdpb24lM2RQZXBwZXJzdG9uZV9BVSUyNmdjbGlkJTNkMGVhMTMyOTNkYTljMTFkN2JlNjg1OGM4NWUwNTU5YTIlMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2QwZWExMzI5M2RhOWMxMWQ3YmU2ODU4Yzg1ZTA1NTlhMiUyNm1zY2xraWQlM2QwZWExMzI5M2RhOWMxMWQ3YmU2ODU4Yzg1ZTA1NTlhMg&rlid=0ea13293da9c11d7be6858c85e0559a2&ntb=1
+
+BODY (truncated):
+Skip to content
+Accessibility Feedback
+6
+AllSearchShoppingImagesVideosMapsCopilot
+More
+About 18,400 results
+How to Verify Chinese Suppliers: 5-Step Verification Checklist
+To verify Chinese suppliers, particularly between manufacturers and trading companies, follow these steps:
+Check the Business License: Ensure the supplier's business license includes manufacturing verbs like 生产 (produce), 制造 (manufacture), or 加工 (process). If it only includes terms like 销售 (sales), 批发 (wholesale), or 贸易 (trade), it is likely a trading company. 
+2
+Verify VAT Invoice Capability: Only qualified manufacturers can issue 17% VAT invoices for export tax rebates. Ask if they can provide a VAT invoice for export tax refund. 
+1
+Test MOQ Flexibility: Factories prioritize efficiency and scale. If a supplier easily accepts small trial orders, they are likely not a direct factory. 
+1
+Analyze Product Range: A true factory usually specializes in a specific product category. 
+1
+Request Factory Audit Reports: Serious factories working with global buyers often have audit reports to demonstrate their quality control and production capabilities. 
+1
+
+By following these steps, Australian buyers can better ensure they are working with legitimate manufacturers and avoid potential risks associated with trading companies.
+3 Sources
+Read more
+chinesecheck.com
+How to Check If a Chinese Supplier Is a Real Factory or Trading Company ...
+Our trading company vs manufacturer guide explains the structural differences between the two business models — why they exist, when each is legitimate, and why the confusion matte…
+chinesecheck.com
+China Trading Company vs Manufacturer: How to Tell the Difference (2026)
+This guide gives you 7+ proven methods to determine whether a Chinese supplier is a genuine manufacturer or a trading company, explains when each type is actually the better choice…
+View all
+ 
+Pepperstone
+https://pepperstone.com
+Your Trusted Forex Broker | Multi-Regulated Broker
+Sponsored
+Trading CFDs/FX carries risk. Enjoy the freedom to trade your way. Trading CFDs/FX carries risk.
+Site visitors: Over 10K in the past month
+
+Fast Execution · Global Market Access · Advanced Trading Tools · Tight Spreads
+
+Trading Platforms: Mobile Apps, MetaTrader 5, MetaTrader 4, Pro Tools and more
+TradingView
+MetaTrader 5
+_Trading Platforms
+MT5
+_Crypto CFD Trading
+Trading Platforms
+_Aston Martin Partnership
+_MT4 Forex Account
+chinesecheck.com
+https://chinesecheck.com › blog › identify-real-factory-vs-trading-company
+How to Check If a Chinese Supplier Is a Real Factory or Trading …
+
+24 Apr 2026 · 12 practical, field-tested methods to verify whether your Chinese supplier is a genuine factory or a trading company in disguise — business license, VAT invoices, video calls, and more.
+
+chinesecheck.com
+https://chinesecheck.com › blog › china-trading-company-vs-manufacturer
+China Trading Company vs Manufacturer: How to Tell the Difference …
+
+8 Apr 2026 · Learn 7+ proven methods to tell if your Chinese supplier is a trading company or a real manufacturer. Business license checks, pricing analysis, factory visits, and more.
+
+LinkedIn
+https://www.linkedin.com › pulse › how-verify-chinese-manufacturer-before...
+How to verify a Chinese manufacturer before you place an ... - LinkedIn
+
+14 May 2026 · How can I verify a Chinese manufacturer is not a trading company? Ask for the exact factory address, the models and quantity of machines on the production line, and a live video...
+
+ucsourcing.com
+https://ucsourcing.com › why-verifying-chinese-suppliers-still-matters...
+How to Verify Chinese Suppliers in 2026 | Factory vs Trading …
+
+Learn how to verify Chinese suppliers in 2026 with proven methods. Discover the difference between factories, trading companies, and sourcing agents, and how to reduce risk when importing from China.
+
+zignify.net
+https://zignify.net › blog › how-to-verify-a-chinese-manufacturer
+How to Verify a Chinese Manufacturer Before You Order
+
+27 May 2026 · Step-by-step China supplier verification process. Learn how to spot trading companies, benchmark prices, lock contracts before you place an order.
+
+paxporttrading.com
+https://paxporttrading.com › blog › how-to-verify-chinese-suppliers-guide.html
+How to Verify Chinese Suppliers: 5-Step Verification Checklist (2026)
+
+24 Mar 2026 · The difference between a successful first order and a $50,000 disaster often comes down to one thing: proper supplier due diligence. This guide gives you a practical, step-by-step framework …
+
+sourcingpioneer.com
+https://sourcingpioneer.com › how-to-find-reliable-manufacturers-in-china
+How To Find Reliable Manufacturers In China? Trader Or Not?
+
+Want to know how to Find Reliable Manufacturers in China? Discover 12 tips for Factory vs Trader identification—spot real suppliers and save time!
+
+chilltitan.com
+https://www.chilltitan.com › factory-vs-trading-company-verification-guide
+2026 Guide: How to Spot a Real Factory vs Trading Company
+
+10 Jan 2026 · Navigate the complexities of bulk sourcing and distinguish between reliable manufacturers and risky trading companies. Our guide provides the strategic framework you need to secure high …
+
+mindensourcing.com
+https://mindensourcing.com › how-to-verify-a-chinese-supplier
+How to Verify a Chinese Supplier: Complete Checklist for Importers
+Epic Sourcing
+https://www.epicsourcing.com.au › post › buying-from-china-australian...
+Like
+Dislike
+ 

@@ -1,0 +1,113 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-03-export-evidence
+observedAt: 2026-07-18T13:20:18.344Z
+url: https://chatgpt.com/c/6a5b7d80-bce8-83ec-8ff4-e3e11957683a
+title: Verifying Chinese Export Legality
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+
+## User message (UI)
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+
+## Assistant answer (UI text)
+When importing from China into Australia, do not rely on a supplier's statement that they are "licensed to export." China no longer requires a general export licence for most products, but exporters still need the correct registrations and must comply with any product-specific export controls.
+
+Request the following evidence:
+
+Evidence	Why it matters	What to verify
+Chinese Business Licence	Confirms the company legally exists	Company name, Unified Social Credit Code, business scope
+Customs Registration (Customs Filing)	Shows the company is registered with Chinese Customs to conduct import/export activities	Registration number matches the company
+Export Declaration Examples	Demonstrates actual export experience	Remove commercial information if necessary, but check exporter name and product type
+VAT Export Invoices (redacted)	Indicates genuine export transactions	Company name matches the supplier
+Bill of Lading (redacted)	Confirms they have previously shipped internationally	Exporter or shipper name should match
+Product-specific export permits (if applicable)	Required for controlled goods	Verify validity and applicability
+Manufacturer authorisation (if trading company)	Confirms authority to export the manufacturer's products	Signed agreement or authorisation letter
+
+Also ask for:
+
+HS code they intend to declare.
+
+Country of origin declaration.
+
+Factory address.
+
+Production photos or videos.
+
+Recent shipping destinations (Australia, EU, US, etc.).
+
+Verify whether export controls apply
+
+Some categories require additional approvals, including:
+
+Military or dual-use goods.
+
+Chemicals.
+
+Medical devices.
+
+Food and agricultural products.
+
+Timber and endangered species products.
+
+Cultural relics.
+
+If your product falls into one of these categories, request copies of the relevant export approvals before placing an order.
+
+Cross-check independently
+
+Do not rely solely on documents provided by the supplier. You should:
+
+Verify the company registration details against Chinese government records.
+
+Confirm the company name is identical across:
+
+Business licence
+
+Customs registration
+
+Proforma invoice
+
+Bank account
+
+Check whether the exporter on shipping documents matches the contracting party.
+
+Confirm the HS code is appropriate for the product.
+
+Ensure there are no Chinese export restrictions or Australian import prohibitions affecting the goods.
+
+A practical request to send the supplier
+
+Please provide the following documents for our compliance review:
+
+Your current Chinese Business Licence.
+
+Your China Customs import/export registration (or customs filing certificate).
+
+Your intended HS code for our product.
+
+Two recent export shipment documents (Bill of Lading or Export Declaration, with customer details redacted if necessary).
+
+Any export permits or licences required for this product.
+
+If you are a trading company, a letter authorising you to export on behalf of the manufacturer.
+
+We use these documents solely to complete our supplier due diligence before placing an order.
+
+For Australian importers, this should be combined with Australian-side checks (such as tariff classification, biosecurity requirements, sanctions screening, and product compliance requirements like RCM, electrical safety, or other applicable standards) before the first shipment.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

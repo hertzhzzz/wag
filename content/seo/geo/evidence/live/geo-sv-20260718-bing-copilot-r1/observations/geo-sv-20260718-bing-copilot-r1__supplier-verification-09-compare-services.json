@@ -1,0 +1,129 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-09-compare-services",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-09-compare-services",
+  "prompt": "How should an Australian business compare supplier verification services for work in China?",
+  "promptHash": "sha256:5b04202a776f585348428f71a16fbee935c33ae881f4c7a7fa72f3937ff2898a",
+  "observedAt": "2026-07-18T13:52:10.884Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "macsamuelglobalsourcing.com.au",
+    "epicsourcing.com.au",
+    "signalx.ai",
+    "businesselectricityquotes.com.au"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3",
+      "title": "how Bing delivers search results",
+      "domain": "support.microsoft.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.winningadventure.com.au/supplier-verification",
+      "title": "Verification Process: Look for services that offer a comprehensive verification process, including business license checks, audit capability",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://macsamuelglobalsourcing.com.au/factory-audit-supplier-verification-in-china/",
+      "title": "Experience and Expertise: Choose a service provider with a proven track record of successfully verifying Chinese suppliers. Services that ha",
+      "domain": "macsamuelglobalsourcing.com.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.epicsourcing.com.au/post/25-06-how-to-verify-a-chinese-supplier-before-you-pay-2026-checklist",
+      "title": "Risk Assessment: Services that offer risk assessment and provide a clear understanding of the supplier's risk profile are beneficial. This i",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.winningadventure.com.au/services",
+      "title": "Customization and Flexibility: Services that offer customization and flexibility in their verification approach can cater to the specific ne",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.epicsourcing.com.au/get-your-supplier-verified",
+      "title": "epicsourcing.com.au",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://signalx.ai/china-supplier-due-diligence/",
+      "title": "SignalX AIChina Supplier Due Diligence: Complete 2026 Guide for Verification ...It is a structured process that allows businesses to verify ",
+      "domain": "signalx.ai"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.businesselectricityquotes.com.au/?utm_source=bing&utm_medium=pmax&utm_campaign=energyau_pmax_st_audience&utm_term=www.businesselectricityquotes.com.au&msclkid={msclkid}",
+      "title": "ВυѕіnеѕѕElесtгіcіtуQuotеѕ https://www.businesselectricityquotes.com.au › business-energy › quotes",
+      "domain": "businesselectricityquotes.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.bing.com/aclick?ld=e82Pum257d0NpeNDnGWP6TCDVUCUzrXQcbtmFxwsguD70LuD_INM0sKTflVk6Xv0Q3BtbiS2JNXoiRE3KgO73XquKnwE5yojhhghKbxGkwlRlAcLEG8kZMocpxeNa6HtiC9uJnDQSeuCXP_JZ0uxPjBpFv1uBHzteava6gQPcqlMHal9auB_ut-O-CDgcWsxK7ENz3UYpr_Cj8vWanO5O62wUO6VqbSsTzoPg450-an7l26gI5&u=aHR0cHMlM2ElMmYlMmZ3d3cuYnVzaW5lc3NlbGVjdHJpY2l0eXF1b3Rlcy5jb20uYXUlMmYlM2Ztc2Nsa2lkJTNkMWY2YmEwOTEyY2UwMWM1Njg5NjdjYWNhYTllMjcyYzMlMjNlbGVjdHJpY2l0eSUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHBtYXglMjZ1dG1fY2FtcGFpZ24lM2RlbmVyZ3lhdV9wbWF4X3N0X2F1ZGllbmNlJTI2dXRtX3Rlcm0lM2R3d3cuYnVzaW5lc3NlbGVjdHJpY2l0eXF1b3Rlcy5jb20uYXU&rlid=1f6ba0912ce01c568967cacaa9e272c3&ntb=1",
+      "title": "Compare Electricity Plans",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.bing.com/aclick?ld=e89UVJFA_R-9bepZag8HhQoDVUCUzwCmpQwT6LW497r56siCj7X7ZLnXpRXo5esIUR9Wt4PL2xVJlWZjXkoKp6fTwnSAGtdyVC2KX8PV138PN_l2miuzsxxCXfvTommgXysm5s9VezclqQZH-E_YoNEsTrNWhCo2d170-3Nih93rxFx6Zt0wnRQk1j3K7c4vqz2V66M-uMHfUlXYq0SgOJ_yZVXwGe1uMXEXlEAXHkapZtM5fw&u=aHR0cHMlM2ElMmYlMmZ3d3cuYnVzaW5lc3NlbGVjdHJpY2l0eXF1b3Rlcy5jb20uYXUlMmYlM2Z1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RwbWF4JTI2dXRtX2NhbXBhaWduJTNkZW5lcmd5YXVfcG1heF9zdF9hdWRpZW5jZSUyNnV0bV90ZXJtJTNkd3d3LmJ1c2luZXNzZWxlY3RyaWNpdHlxdW90ZXMuY29tLmF1JTI2bXNjbGtpZCUzZDUwMGY1Y2JiMmJlZTFmNjhlYWI1MzZlMGFlZWNhZGUw&rlid=500f5cbb2bee1f68eab536e0aeecade0&ntb=1",
+      "title": "Compare Plans & Providers",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.bing.com/aclick?ld=e83SLqvwqj9__QE3BlrGq-LDVUCUz4kqFzpFoQPD7NPF-99OtCEnHTffj-D9eXJsJSjjLe_fY7OPuWot6jhl5n8E8n0S-ye3ZDkHGJcIrR6I5nC6BoSQWk3Qw393VWNJcytaCNbjJ0tY5PkpaWPDJwjeo8LpgeYrAa9ZMnKem1JE6XALJ3G5aUO_JYQt0mAZ6GCfvJ5Af5lmkwogHASLC8tHppajcOMi7bRdvFky_jkTgaYgz5&u=aHR0cHMlM2ElMmYlMmZ3d3cuYnVzaW5lc3NlbGVjdHJpY2l0eXF1b3Rlcy5jb20uYXUlMmYlM2Ztc2Nsa2lkJTNkZDY4ZjVmOWUxYTFmMTVkZDQ3MGUzNWM1OWYxZGY2MTMlMjNidW5kbGUlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RwbWF4JTI2dXRtX2NhbXBhaWduJTNkZW5lcmd5YXVfcG1heF9zdF9hdWRpZW5jZSUyNnV0bV90ZXJtJTNkd3d3LmJ1c2luZXNzZWxlY3RyaWNpdHlxdW90ZXMuY29tLmF1&rlid=d68f5f9e1a1f15dd470e35c59f1df613&ntb=1",
+      "title": "Electricity & Gas Bundles",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 12,
+      "url": "https://www.bing.com/aclick?ld=e8D7ldQEd3MnZjqayca3NPczVUCUweX6Rp4vQoiQpSbI1Y114v_M4pIakgEV07w798T6erMIvWHgDsRRxXieBBlbYTZXLBmMgFNGUAIZFvJg85KT1IbVgQQqdimayee2sBdkyKiE7v3ito66HDyvgA3QEG0WaIA1LysgEbhzkkcvu7Out2Y676siPan6T9gdjksMSjVSjnmypmNdI5975z9B0OND0dafRH-71JNUCw92OCd3bK&u=aHR0cHMlM2ElMmYlMmZ3d3cuYnVzaW5lc3NlbGVjdHJpY2l0eXF1b3Rlcy5jb20uYXUlMmYlM2Ztc2Nsa2lkJTNkNjliZmY0ZmQxNDU4MTQwN2MzNzg5ZWE2OTE1YWVkNTElMjNlbGVjdHJpY2l0eS1xdW90ZXMlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RwbWF4JTI2dXRtX2NhbXBhaWduJTNkZW5lcmd5YXVfcG1heF9zdF9hdWRpZW5jZSUyNnV0bV90ZXJtJTNkd3d3LmJ1c2luZXNzZWxlY3RyaWNpdHlxdW90ZXMuY29tLmF1&rlid=69bff4fd14581407c3789ea6915aed51&ntb=1",
+      "title": "Get an Electricity Quote",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 13,
+      "url": "https://www.bing.com/aclick?ld=e8tZmWdG7cu8zWGfAi7D6R0DVUCUz1t98wRotdadHttGdSqJK_CNkLwoS3yFvu1D4k6bz81Nx48y2rLv3KJw0_CbWkEU7vzTMeRdMWTdmC-RWUMyCYQEvg2jdcdY1TfBsM6iELajn0qOF46qwEDCsXZ8GCRHso0bRBcgjMHHobwx_k2d71N8Bzj5_LYSm-Ox6N2eQmGAddLIfAY3KxTejJVDtpy43IkRCusVROIMHjbt0ZaHcN&u=aHR0cHMlM2ElMmYlMmZ3d3cuYnVzaW5lc3NlbGVjdHJpY2l0eXF1b3Rlcy5jb20uYXUlMmYlM2Ztc2Nsa2lkJTNkYjM1ODliYzk4MDAzMTBmYjE0YWFmMTkyMDUwMWRjNTUlMjNlbmVyZ3klMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RwbWF4JTI2dXRtX2NhbXBhaWduJTNkZW5lcmd5YXVfcG1heF9zdF9hdWRpZW5jZSUyNnV0bV90ZXJtJTNkd3d3LmJ1c2luZXNzZWxlY3RyaWNpdHlxdW90ZXMuY29tLmF1&rlid=b3589bc9800310fb14aaf1920501dc55&ntb=1",
+      "title": "Business Energy Plans",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 14,
+      "url": "https://www.bing.com/aclick?ld=e8B83ZExjO5qd5ocrHAwWx9jVUCUzB_J9ILzViHhLokmi5ZBcYD3JhY6hyUeLhEhK0fPHESci3qsDeolTsgmLY-8TKQIPDQLjgTY5tl0xlGfUcd3B7DM4Pr_hY8U7QvxlXGqPWIcvSqWWlX8Zeb4wiUGO3HFXgRRWYab3qe2zFGh8gS9zE-jZhUuha-Ls2AJ5122So1G_CKnGI-SokXHpxk_yj1sDvO5jwGgYEto23wovLZEEi&u=aHR0cHMlM2ElMmYlMmZ3d3cuYnVzaW5lc3NlbGVjdHJpY2l0eXF1b3Rlcy5jb20uYXUlMmYlM2Ztc2Nsa2lkJTNkNjcyZGU2N2RjZjMwMTFkMWY4ODM4YzI2NGEzMjNmNGUlMjNuc3clMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RwbWF4JTI2dXRtX2NhbXBhaWduJTNkZW5lcmd5YXVfcG1heF9zdF9hdWRpZW5jZSUyNnV0bV90ZXJtJTNkd3d3LmJ1c2luZXNzZWxlY3RyaWNpdHlxdW90ZXMuY29tLmF1&rlid=672de67dcf3011d1f8838c264a323f4e&ntb=1",
+      "title": "NSW Business Electricity",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 15,
+      "url": "https://www.bing.com/aclick?ld=e87pE-XveM-x0fdewHI0PmZDVUCUx1BFIGlDSFLJTnqvdL1Gn79xUiO5oX5RxXqQXtveoV9knk75ZNuGU5BnRrMgFTD7Bmn3khD61GePgWu6Lv_E6IdUAOfpO2SkIubSU3D_THJKcJptq5BYi81uoq5P0JRq2OxLlQjapq8oEUSRR_-FFLwX5saIrohtWPVKH7JPL4tDp22gNTJ_0Vd5ELsKdhFHGp3JfQOHkkukXsO1ki6vBa&u=aHR0cHMlM2ElMmYlMmZ3d3cuYnVzaW5lc3NlbGVjdHJpY2l0eXF1b3Rlcy5jb20uYXUlMmYlM2Z1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RwbWF4JTI2dXRtX2NhbXBhaWduJTNkZW5lcmd5YXVfcG1heF9zdF9hdWRpZW5jZSUyNnV0bV90ZXJtJTNkd3d3LmJ1c2luZXNzZWxlY3RyaWNpdHlxdW90ZXMuY29tLmF1JTI2bXNjbGtpZCUzZDRkMDhjZmVkZjBiYTFmYTBjMGY2YTViNjc1YjhjZDgz&rlid=4d08cfedf0ba1fa0c0f6a5b675b8cd83&ntb=1",
+      "title": "Business Electricity...",
+      "domain": "bing.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-09-compare-services.txt",
+    "hash": "sha256:e3f90f41933f43202787ec774cafdb143bb7e3db10e8fc3246cb78886850768a",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent."
+}

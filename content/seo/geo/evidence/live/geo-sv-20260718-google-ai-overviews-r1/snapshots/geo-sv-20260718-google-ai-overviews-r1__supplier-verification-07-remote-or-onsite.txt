@@ -1,0 +1,166 @@
+platform: google-ai-overviews
+runId: geo-sv-20260718-google-ai-overviews-r1
+questionId: supplier-verification-07-remote-or-onsite
+prompt: When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?
+observedUrl: https://www.google.com/search?q=When%20is%20remote%20supplier%20verification%20enough%2C%20and%20when%20should%20an%20Australian%20buyer%20commission%20an%20on-site%20check%3F&hl=en-AU&gl=au&pws=0
+pageTitle: When is remote supplier verification enough, and when should an Australian buyer commission an on-site check? - Google Search
+status: observed-surface-absent
+surface: google-search-serp-en-AU
+brandMention: yes
+ownedUrlCited: yes
+aioUnavailable: false
+aioLabel: false
+
+=== AI Overview extract ===
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+(function(){window.sn={_setImageSrc:function(b,c){var a=document.getElementById(`${b}`);a!==null&&(a.src=c,a.setAttribute("data-deferred","2"),google.rll(a,!0,()=>{a.setAttribute("data-imgprocessed","true")}))}};}).call(this);Yes, an agent must generally tell you that competing offers exist. While they are legally required to notify you that a multiple-offer situation is happening, they cannot disclose the exact dollar amount or specific terms of those competing offers to you without explicit permission from the seller. Sapphire Estate Agents Queensland +3Here is what you need to know about the process: You will be asked for your "best and final": Because they cannot leak the other buyers' numbers, agents in a multiple-offer situation will usually call for all interested buyers to submit their absolute highest and best offer by a strict deadline. Sapphire Estate Agents Queensland +1The seller makes the final call: Sellers don't always pick the highest offer. They may choose a lower offer with more favorable terms, such as an all-cash purchase, a shorter closing timeline, or fewer contingencies. NSW Government +3False claims are illegal: Strict laws prohibit real estate agents from making up fake offers to pressure you into raising your price. If you suspect they are bluffing, you can ask for written proof or file a complaint with your local real estate regulatory board or state consumer affairs office. NSW Government +2Rules can vary depending on your location, so check with your local state or regional real estate commission (such as the NSW Fair Trading or the Consumer Affairs Victoria for Australian buyers) for exact jurisdictional requirements. NSW Government +2Making an offer on a property - NSW GovernmentThe agent and seller may choose not to disclose any price, either in advertising or verbally. Research recent sale prices for simi...NSW GovernmentCan Real Estate Agents Tell You About Other Offers in QLD?Under the Property Occupations Act 2014 (POA), Queensland real estate agents have specific obligations when it comes to handling a...Sapphire Estate Agents QueenslandWHAT HAPPENS IS A MULTIPLE OFFERS SITUTATION? A BUYER’S GUIDE - News - Ray White GladstoneA real estate agent is required to: * Notify all parties of a multiple offer situation * Provide each buyer with the opportunity t...Ray White Gladstone1:08Can You Find Out Other Offers On a HouseYouTube·Move iQAdvertising and representations – estate agent obligationsIt is an offence under state and federal law for an estate agent or agents' representative to mislead or deceive by their conduct ...Consumer Affairs VictoriaCan Real Estate Agents Disclose Offers to Other Buyers?Rules for Disclosing Offers to Other Buyers In Australia, real estate agents are prohibited from disclosing the details of offers ...gawlereastrealestate.auREIQ | What you need to know about multiple offer scenariosSellers will examine all the terms and conditions of each offer before deciding to accept or reject any particular offer. Some sel...Real Estate Institute of Queensland (REIQ)0:45Did you know it is actually rare for a buyer's agent to call the listing ...Instagram·Shannon Gillette6 sitesMaking an offer on a property - NSW GovernmentThe agent and seller may choose not to disclose any price, either in advertising or verbally. Research recent sale prices for simi...NSW GovernmentCan Real Estate Agents Tell You About Other Offers in QLD?Under the Property Occupations Act 2014 (POA), Queensland real estate agents have specific obligations when it comes to handling a...Sapphire Estate Agents QueenslandWHAT HAPPENS IS A MULTIPLE OFFERS SITUTATION? A BUYER’S GUIDE - News - Ray White GladstoneA real estate agent is required to: * Notify all parties of a multiple offer situation * Provide each buyer with the opportunity t...Ray White GladstoneCan You Find Out Other Offers On a Housethinking of putting in an offer on a house but wondering if the estate agent has to tell you about other offers. we
+
+Related linksAI can make mistakes, so double-check responses
+
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+3 days ago — From 1 July 2026, new legislation requires Satterley to undertake additional steps to verify the identity of purchasers. Visit our website ...
+
+=== Organic titles ===
+1. New Buyer Identity Verification Requirements | https://satterley.com.au/verification-of-identity/
+2. Real estate | ACCC | https://www.accc.gov.au/consumers/specific-products-and-activities/real-estate#:~:text=a%20lower%20price).-,Encouraging%20higher%20offers%20or%20bids,buyer%20is%20willing%20to%20pay
+3. Important New AML Identity Verification Requirements for ... | https://re88.com.au/blog/important-new-aml-identity-verification-requirements-for-property-buyers-sellers
+4. Understanding the new identity verification… | https://www.jelliscraig.com.au/blog/understanding-the-new-identity-verification-requirements-for-property-vendors-and-purchasers
+5. What the New AML Laws Mean for Buyers and Sellers | https://sterlingproperty.au/aml-laws-buyers-sellers-2026/
+6. AML/CTF Obligations for Buyers Agents in Australia | https://amltranche.com.au/blog/aml-buyers-agent-obligations-australia
+7. New AML Rules Are Coming to Australian Property | https://realway.com.au/blog/new-aml-rules-are-coming-to-australian-property
+8. How to Verify a Buyers Agent | https://www.buyersagents.com.au/guides/verify-buyers-agent
+9. AML/CTF Answers for Buyers and Sellers | https://www.percival.com.au/aml-ctf-answers-for-buyers-and-sellers/
+10. How to Verify a Chinese Supplier: Complete Guide for ... | https://www.winningadventure.com.au/article/verify-chinese-supplier
+
+=== Links ===
+satterley.com.au | https://satterley.com.au/verification-of-identity/
+sapphirebrisbane.com.au | https://www.sapphirebrisbane.com.au/multiple-offers-disclosure-rule-qld/
+nsw.gov.au | https://www.nsw.gov.au/housing-and-construction/buying-and-selling-property/buying-property-nsw/making-an-offer-on-a-property
+fairtrading.nsw.gov.au | https://www.fairtrading.nsw.gov.au/
+consumer.vic.gov.au | https://www.consumer.vic.gov.au/
+raywhitegladstone.com.au | https://raywhitegladstone.com.au/news/multiple-offers
+youtube.com | https://www.youtube.com/shorts/wuA1wTR_rj0
+consumer.vic.gov.au | https://www.consumer.vic.gov.au/licensing-and-registration/estate-agents/running-your-business/advertising-and-representations
+gawlereastrealestate.au | https://gawlereastrealestate.au/can-real-estate-agents-disclose-offers-to-other-buyers/
+reiq.com | https://www.reiq.com/articles/property-sales/what-you-need-to-know-about-multiple-offer-scenarios
+instagram.com | https://www.instagram.com/reel/DVv7kxujrt_/?hl=en
+accc.gov.au | https://www.accc.gov.au/consumers/specific-products-and-activities/real-estate#:~:text=a%20lower%20price).-,Encouraging%20higher%20offers%20or%20bids,buyer%20is%20willing%20to%20pay
+re88.com.au | https://re88.com.au/blog/important-new-aml-identity-verification-requirements-for-property-buyers-sellers
+re88.com.au | https://re88.com.au/blog/important-new-aml-identity-verification-requirements-for-property-buyers-sellers#:~:text=From%201%20July%202026%2C%20new,part%20of%20many%20property%20transactions.
+jelliscraig.com.au | https://www.jelliscraig.com.au/blog/understanding-the-new-identity-verification-requirements-for-property-vendors-and-purchasers
+jelliscraig.com.au | https://www.jelliscraig.com.au/blog/understanding-the-new-identity-verification-requirements-for-property-vendors-and-purchasers#:~:text=Under%20the%20new%20laws%2C%20real,checks%20for%20vendors%20and%20purchasers.
+sterlingproperty.au | https://sterlingproperty.au/aml-laws-buyers-sellers-2026/
+sterlingproperty.au | https://sterlingproperty.au/aml-laws-buyers-sellers-2026/#:~:text=When%20do%20the%20new%20AML%2FCTF
+amltranche.com.au | https://amltranche.com.au/blog/aml-buyers-agent-obligations-australia
+amltranche.com.au | https://amltranche.com.au/blog/aml-buyers-agent-obligations-australia#:~:text=Currently%20you%20can%20take%20on,before%20the%20property%20search%20begins.
+realway.com.au | https://realway.com.au/blog/new-aml-rules-are-coming-to-australian-property
+realway.com.au | https://realway.com.au/blog/new-aml-rules-are-coming-to-australian-property#:~:text=From%201%20July%202026%2C%20buying,of%20identity%20and%20source%2Dof%2Dfunds%20checks.
+buyersagents.com.au | https://www.buyersagents.com.au/guides/verify-buyers-agent
+percival.com.au | https://www.percival.com.au/aml-ctf-answers-for-buyers-and-sellers/
+percival.com.au | https://www.percival.com.au/aml-ctf-answers-for-buyers-and-sellers/#:~:text=Buying%20or%20selling%20a%20property%3F,that%20was%20not%20previously%20required.
+
+=== Body text (truncated) ===
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Short videos
+Shopping
+Images
+Videos
+More
+Tools
+Search Results
+Web results
+New Buyer Identity Verification Requirements
+
+Satterley
+https://satterley.com.au › verification-of-identity
+3 days ago — From 1 July 2026, new legislation requires Satterley to undertake additional steps to verify the identity of purchasers. Visit our website ...
+Missing: remote ‎supplier ‎enough, ‎commission
+People also ask
+Does a real estate agent have to tell you about other offers?
+What must the agent do if they change their estimate of selling price?
+Can real estate agents lie about offers in Australia?
+How long does a seller have to respond to an offer on a house in Australia?
+Web results
+Important New AML Identity Verification Requirements for ...
+
+Realestate 88
+https://re88.com.au › blog › important-new-aml-identity-...
+10 June 2026 — From 1 July 2026, new Australian legislation will require real estate agencies to complete identity verification and customer due diligence ...Read more
+Missing: remote ‎supplier ‎enough, ‎commission
+Understanding the new identity verification…
+
+Jellis Craig
+https://www.jelliscraig.com.au › blog › understanding-t...
+29 June 2026 — Under the new laws, real estate agencies across Australia are required to complete identity and verification checks for vendors and purchasers.Read more
+What the New AML Laws Mean for Buyers and Sellers
+
+Sterling Property
+https://sterlingproperty.au › aml-laws-buyers-sellers-2026
+1 July 2026 — From 1 July 2026, real estate is subject to the same standard — requiring agents to verify the identity of all parties before a transaction can ...Read more
+Missing: remote ‎supplier ‎enough, ‎commission
+AML/CTF Obligations for Buyers Agents in Australia
+
+amltranche.com.au
+https://amltranche.com.au › Blog
+10 Mar 2026 — From 1 July 2026, you must verify your client's identity and assess their risk profile before providing the designated service. This means CDD ...Read more
+Missing: remote ‎enough, ‎commission
+New AML Rules Are Coming to Australian Property
+
+RealWay Australia
+https://realway.com.au › blog › new-aml-rules-are-comi...
+26 May 2026 — From 1 July 2026, buying or selling property in Australia will include a new layer of identity and source-of-funds checks.Read more
+Missing: remote ‎supplier ‎enough, ‎commission
+How to Verify a Buyers Agent
+
+buyersagents.com.au
+https://www.buyersagents.com.au › guides › verify-buy...
+How to verify an Australian buyers agent: check their real estate licence, PI insurance, and independent verification. State register links included.
+Missing: remote ‎enough,
+AML/CTF Answers for Buyers and Sellers
+
+Percival Property
+https://www.percival.com.au › aml-ctf-answers-for-buyer...
+1 July 2026 — Buying or selling a property? Here's what you need to know about AML/CTF. New legal requirements now apply to Australian real estate.Read more
+How to Verify a Chinese Supplier: Complete Guide for ...
+
+Winning Adventure Global
+https://www.winningadventure.com.au › Articles
+8 Mar 2026 — A basic verification — document checks, business license confirmation, and certificate verification — typically takes 3-7 business days. More ...Read more
+Missing: commission ‎| Show results with: commission
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are not personalised
+Australia
+Adelaide, South Australia - From your IP address
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

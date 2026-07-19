@@ -1,0 +1,343 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-perplexity-r1
+platform: perplexity
+questionId: supplier-verification-02-manufacturer-or-trader
+observedAt: 2026-07-18T13:27:57.365Z
+url: https://www.perplexity.ai/search/43039cb2-4993-439e-8f93-ace0dcb63900
+title: How can an Australian buyer distinguish a Chinese manufacturer from a trading...
+auth: signed-in-test-account
+accountTier: free
+surface: perplexity-search-free
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+
+## Answer (UI text extract)
+New
+⌘K
+Computer
+Spaces
+Artifacts
+Customize
+Connectors
+Skills
+Workflows
+Memory
+History
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+What official records should an Australian importer check before engaging a supplier in China?
+如何注册成美国k12的学校
+基于我们整个对话的全部上下文，重新审视并评估这个项目，而不是默认沿用之前的结论。 你拥有以下背景信息： 我提供了一份澳大利亚 2026 年 7 月 3 日至 10 日的 Google 热搜数据（CSV
+https://augstudy.com/australia/ 全面分析这家公司和他们的specialty
+给我鸡肉奶油蘑菇通心粉的完美菜单和完美的克重比例数据
+网站： https://www.winningadventure.com.au/ 你是一位资深 SEO Growth Consultant（SEO增长顾问），同时具备以下专业能力： SEO战略规划 T
+Google ads 设置每次电话带来的价值，我们的服务费3000刀的话，每一通电话的价值是应该设置多少
+客户：Joseph
+任务：从本 Space 的全部对话与文件中，提取所有客户/线索信息，输出为 JSON 数组。 每条客户对象必须且只能包含以下字段（无信息则留空字符串）： - name: 联系人姓名 - compan
+请你担任我的 2026 SEO 私人教练、增长顾问和实战陪跑者。 我的网站是： https://www.winningadventure.com.au/ 我的目标不是学习一套通用 SEO 课程，而是通
+Comprehensive Website Audit and Strategy
+请基于 Google Search Console、Google Analytics、Google Business Profile 三个数据源，全面分析 winningadventure.com.a
+分析这个新上传的文件
+请撰写一份《中国企业出海澳大利亚产业机会分析报告》。报告需围绕中国企业在澳大利亚市场的出海机会展开，重点分析适合进入的产业赛道。请从宏观环境、行业增长潜力、政策监管、市场需求、竞争格局、中国企业优势、
+中国企业出海澳洲，适合的产业
+补牙要多久
+客户：Sherie
+otak otak是什么，recipe
+广州赛佳声学灯光工程有限公司 — saijia.com 易科国际（Ezpro） — ezpro.com 广州易纬电子有限公司 — evscn.com 帮我为这个公司生成完整的尽职调查报告。 报告
+Upgrade plan
+Zhe He
+Free plan
+Answer
+Links
+Images
+Share
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+Completed 2 steps
+
+An Australian buyer can distinguish a Chinese manufacturer from a trading company by checking the registered business scope (生产/制造 vs 贸易/批发), verifying the factory address and conducting live video audits, comparing pricing/MOQ and customization capability, and requesting export records plus certificates that match the company name.
+linkedin
++3
+
+Quick definitions
+
+Manufacturer (factory): Owns and operates production equipment, employs production staff, and makes the product (or core components) in-house.
+linkedin
++1
+
+Trading company: Buys from factories and resells to overseas buyers; often adds services like consolidation, quality control, and logistics but does not own the production line.
+linkedin
++1
+
+Practical ways to tell them apart
+
+Use several signals together; no single check is decisive.
+
+1. Business license and registered scope (most reliable paper check)
+
+Ask for the company’s business license (营业执照) and look up the Unified Social Credit Code on Chinese registries such as Qichacha (企查查) or Tianyancha (天眼查), or the official National Enterprise Credit Information Publicity System (gsxt.gov.cn).
+linkedin
++2
+
+Read the business scope (经营范围):
+
+Manufacturer: includes words like 生产 / 制造 / 加工 (production/manufacturing/processing).
+linkedin
++2
+
+Trading company: mainly 贸易 / 批发 / 进出口 (trade/wholesale/import‑export) with no production wording.
+linkedin
++2
+
+Also note the registered address: an office-tower address for a claimed “factory” is a red flag; factories are usually in industrial zones or manufacturing hubs.
+linkedin
++2
+
+2. Factory address and on‑site verification
+
+Ask for the exact factory address and check it on maps (Google/Baidu).
+linkedin
++1
+
+Whenever possible, visit the factory or send a local agent. If that’s not feasible, insist on a live video call to:
+
+See the production line, equipment, and workers in action.
+linkedin
++1
+
+Ask them to show today’s production board, molds, and QC area.
+xsourcinggroup
+
+Polished pre-recorded videos are easy to share; real-time access is harder to fake.
+xsourcinggroup
+
+3. Product range and specialization
+
+Manufacturers usually have a narrower, deeper product range focused on what they actually make.
+sourcingarts
++1
+
+Trading companies often show a very broad catalog across unrelated categories (e.g., electronics, home goods, apparel) because they source from many factories.
+sourcingarts
++1
+
+4. Pricing, MOQ, and flexibility
+
+Manufacturers typically offer more competitive unit prices but require higher MOQs and batch production.
+linkedin
++1
+
+Trading companies often accept smaller orders and provide flexibility but at a marked-up price.
+linkedin
++1
+
+Be aware: a large trader can sometimes beat a factory’s price on small/medium orders due to aggregated volume.
+xsourcinggroup
+
+5. Customization and OEM/ODM capability
+
+Manufacturers can usually modify materials, dimensions, tooling, and processes, and offer true OEM/ODM services.
+linkedin
++1
+
+Trading companies may claim customization but often have limited control and must go back to the factory for changes, leading to slower responses and higher costs for bespoke requests.
+linkedin
++1
+
+6. Certificates, test reports, and export records
+
+Check quality certificates (e.g., ISO 9001, CE, FDA, BRC, HACCP) and ensure the certificate holder name matches the business license.
+linkedin
++1
+
+Review test reports (e.g., SGS, Intertek) and confirm the factory name on the report.
+v-trust
+
+Use customs/export data or third‑party platforms (e.g., ImportGenius, Panjiva) to see if the company has direct export records as the exporter of record.
+linkedin
++1
+
+7. Payment details and bank account name
+
+The bank account name on the proforma invoice should match the licensed company name.
+xsourcinggroup
+
+Requests to pay into a personal account or a different company are strong red flags.
+xsourcinggroup
+
+8. Online presence and platform badges
+
+Company profiles on websites or platforms (Alibaba, Global Sources) often state whether they are a manufacturer or trading company; read beyond marketing blurbs.
+v-trust
+
+Platform badges like “Verified Manufacturer” can be useful as a first filter but are not conclusive; still check the license and do a video/physical audit.
+xsourcinggroup
+
+When a trading company might be the better choice
+
+Sometimes a trader is preferable even if you can identify them:
+
+You need multiple product categories in one container or shipment.
+xsourcinggroup
+
+You have no Mandarin-speaking staff and want help with coordination, QC, and logistics.
+xsourcinggroup
+
+Your order volumes are moderate, and the trader’s aggregated buying power gives you a better net price or service level.
+xsourcinggroup
+
+A simple verification checklist for Australian buyers
+
+Get business license; check scope for 生产/制造 vs 贸易 on gsxt.gov.cn or Qichacha/Tianyancha.
+linkedin
++2
+
+Confirm factory address; map it and check if it’s in an industrial zone.
+linkedin
++1
+
+Do a live video walk-through of the production line and QC area.
+linkedin
++1
+
+Compare price/MOQ and test how flexible they are on custom specs.
+linkedin
++1
+
+Verify certificates/test reports and ensure names match the company.
+linkedin
++1
+
+Check export records if available.
+linkedin
++1
+
+Ensure payment goes to the licensed company’s bank account.
+xsourcinggroup
+
+If you’d like, I can turn this into a one-page checklist PDF you can use when vetting suppliers for WAG or your own imports.
+
+10 sources
+Follow-ups
+Supplier audit checklist: verify if your Chinese partner is a manufacturer, trader, or middleman before you pay the deposit
+Computer
+​
+Interactive factory vs. trader scorecard: filter 10+ verification signals to instantly rank your Chinese suppliers
+Computer
+​
+Yes, please provide a checklist for vetting my potential suppliers
+That sounds helpful, how do I structure a supplier audit checklist
+Can you help me identify red flags during a factory video call
+Sources
+linkedin
+How to Distinguish Between a Manufacturer and a Trading ...
+When sourcing from China, identifying a genuine manufacturer rather than a trading company is crucial for cost control, quality assurance, and supply chain efficiency. Many overseas buyers struggle with this distinction.
+chinesecheck
+China Trading Company vs Manufacturer: How to Tell the Difference ...
+Learn 7+ proven methods to tell if your Chinese supplier is a trading company or a real manufacturer. Business license checks, pricing analysis, factory visits, and more.
+xsourcinggroup
+Factory or Trading Company? How to Verify Who You're Really Buying From in China
+"We are factory" is China sourcing's most common English sentence. A former retail-chain buyer on license checks, video audits, and when a trader is the better deal.
+v-trust
+How can I distinguish manufacturers from trading companies? - V-Trustwww.v-trust.com › blog › how-can-i-distinguish-manufacturers-from-tradi...
+Before buying from China, most purchasers will need to take this question into account: Who should I do business with? Shall I purchase directly from manufacturers or from a trading company?
+newbuyingagent
+Manufacturer, Supplier, or Trading Company? China Sourcing 2026
+China manufacturer vs supplier vs trading company — the differences decide your price, quality, and accountability. Learn to tell them apart before you order in 2026.
+sourcingarts
+How To Choose Factory & trading Company When Import ...
+80% of Alibaba's Chinese suppliers are traders. If you can find a real factory, it will save you 30% of purchasing costs.
+winningadventure
+Factory vs Trading Company: How to Tell Who You're ...
+Trading companies look more professional than real factories. Learn the 5 concrete ways to tell if your Chinese supplier is a factory or an intermediary — and the 3 questions that expose the truth instantly.
+sinospect
+How can you tell if a Chinese supplier is a manufacturer or a trading ...
+Tell a Chinese manufacturer from a trading company before you order: check the registered business scope, capital, factory address, and the questions that separate them.
+blog.swiftcargo
+How to Verify a Supplier Before Shipping: A Practical Guide for Australian Importers - Swift Cargo Solutions
+How Australian importers verify overseas suppliers: business registration checks, factory audits, test report verification, and pre-shipment inspection.
+advantasourcing
+Factory vs Trading Company China: Know the Difference
+Think you're buying direct from a Chinese factory? Many importers aren't. Learn how to verify suppliers, spot red flags, and protect your sourcing strategy.
+Use Computer for deeper insights with CB Insights data
+Computer orchestrates research agents across the web and premium sources, distilling vast information into clear, connected insights.
+Try Computer
+
+
+
+
+Ask a follow-up
+Search
+Computer
+Model
+
+## Links
+[
+  {
+    "rank": 1,
+    "url": "https://xsourcinggroup.com/factory-vs-trading-company-china/",
+    "title": "xsourcinggroup",
+    "domain": "xsourcinggroup.com"
+  },
+  {
+    "rank": 2,
+    "url": "https://www.v-trust.com/en/blog/how-can-i-distinguish-manufacturers-from-trading-companies",
+    "title": "v-trust",
+    "domain": "v-trust.com"
+  },
+  {
+    "rank": 3,
+    "url": "https://www.linkedin.com/pulse/how-distinguish-between-manufacturer-trading-company-carol-ei50c",
+    "title": "linkedin\nHow to Distinguish Between a Manufacturer and a Trading ...\nWhen sourcing from China, identifying a genuine manufacturer rather than a trading company ",
+    "domain": "linkedin.com"
+  },
+  {
+    "rank": 4,
+    "url": "https://chinesecheck.com/blog/china-trading-company-vs-manufacturer",
+    "title": "chinesecheck\nChina Trading Company vs Manufacturer: How to Tell the Difference ...\nLearn 7+ proven methods to tell if your Chinese supplier is a trading company",
+    "domain": "chinesecheck.com"
+  },
+  {
+    "rank": 5,
+    "url": "https://www.newbuyingagent.com/resources/china-manufacturer-vs-supplier-vs-trading-company-critical-differences-explained",
+    "title": "newbuyingagent\nManufacturer, Supplier, or Trading Company? China Sourcing 2026\nChina manufacturer vs supplier vs trading company — the differences decide your p",
+    "domain": "newbuyingagent.com"
+  },
+  {
+    "rank": 6,
+    "url": "https://www.sourcingarts.com/distinguish-china-manufacturers-and-trading-companies/",
+    "title": "sourcingarts\nHow To Choose Factory & trading Company When Import ...\n80% of Alibaba's Chinese suppliers are traders. If you can find a real factory, it will sav",
+    "domain": "sourcingarts.com"
+  },
+  {
+    "rank": 7,
+    "url": "https://www.winningadventure.com.au/article/factory-vs-trading-company-china-guide",
+    "title": "winningadventure\nFactory vs Trading Company: How to Tell Who You're ...\nTrading companies look more professional than real factories. Learn the 5 concrete ways ",
+    "domain": "winningadventure.com.au"
+  },
+  {
+    "rank": 8,
+    "url": "https://sinospect.com/resources/china-supplier-qualification/manufacturer-vs-trading-company",
+    "title": "sinospect\nHow can you tell if a Chinese supplier is a manufacturer or a trading ...\nTell a Chinese manufacturer from a trading company before you order: check t",
+    "domain": "sinospect.com"
+  },
+  {
+    "rank": 9,
+    "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+    "title": "blog.swiftcargo\nHow to Verify a Supplier Before Shipping: A Practical Guide for Australian Importers - Swift Cargo Solutions\nHow Australian importers verify ove",
+    "domain": "blog.swiftcargo.solutions"
+  },
+  {
+    "rank": 10,
+    "url": "https://www.advantasourcing.com/blog/factory-vs-trading-company-china",
+    "title": "advantasourcing\nFactory vs Trading Company China: Know the Difference\nThink you're buying direct from a Chinese factory? Many importers aren't. Learn how to ver",
+    "domain": "advantasourcing.com"
+  }
+]
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: yes

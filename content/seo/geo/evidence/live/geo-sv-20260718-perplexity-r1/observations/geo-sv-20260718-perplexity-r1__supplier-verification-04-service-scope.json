@@ -1,0 +1,96 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-04-service-scope",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-04-service-scope",
+  "prompt": "What should be included in a paid supplier verification service for an Australian importer?",
+  "promptHash": "sha256:269e079c6604a143365467205d10b36695cd0ecaa4c299c5dea0ba2bcc548f9f",
+  "observedAt": "2026-07-18T13:29:12.838Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "SGS"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+      "title": "swiftcargo",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.wa.gov.au/organisation/department-of-justice/supplier-verification-eftsure-department-of-justice",
+      "title": "www\nSupplier verification with Eftsure: Department of Justice\nSuppliers must be independently verified by Eftsure before onboarding. Eftsure validates ABN, GST ",
+      "domain": "wa.gov.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.sgs.com/en-au/services/supplier-verification-program",
+      "title": "sgs\nSupplier Verification Program\nSGS’s supplier verification program – instills confidence between clients and suppliers in a digital age.",
+      "domain": "sgs.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://gst-verify.com.au/for-bookkeepers",
+      "title": "gst-verify.com\nGST-Verify for Bookkeepers\nGST-Verify helps bookkeepers verify ABNs and GST registration status efficiently. Bulk verify up to 500 ABNs, generate",
+      "domain": "gst-verify.com.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://vendorverify.com.au/",
+      "title": "vendorverify.com\nVendor Verify — Stop paying fraudsters. Verify every supplier ...\nVendor Verify connects directly to Xero and QuickBooks and uses Australia's C",
+      "domain": "vendorverify.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.tiq.qld.gov.au/contact/payment-verification",
+      "title": "tiq\nTIQ - Supplier payments verification\nHow to get verified as a supplier to Trade and Investment Queensland",
+      "domain": "tiq.qld.gov.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "winningadventure\nHow to Verify a Chinese Supplier: Complete Guide for ...\nLearn how to verify a Chinese supplier with this complete guide for Australian importe",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.payok.com.au/payment-verification",
+      "title": "payok.com\nHelping eliminate payment fraud and pay suppliers with confidence\nPayOK verifies your suppliers bank account details before you make a payment, ensuri",
+      "domain": "payok.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://ezyshield.com.au/learn/supplier-verification-australia/",
+      "title": "ezyshield.com\nSupplier Verification in Australia: How to Verify Before You Pay\nLearn how to verify Australian suppliers before making payments. Check ABN status",
+      "domain": "ezyshield.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://audit.wa.gov.au/reports-and-publications/reports/supplier-master-files-better-practice-guide/",
+      "title": "audit\nSupplier Master Files – Better Practice Guide - Audit.wa.gov.au\nmay include: business registration documents / details (and company details if relevant) c",
+      "domain": "audit.wa.gov.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-04-service-scope.txt",
+    "hash": "sha256:ef305fb1fba28ce7d2c6db26af5e0ecce0ebe1706f309129a700faf84ff2ba9f",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Search https://www.perplexity.ai/search/9b5fb0be-9b64-40cc-a318-7ab3200bfdfc"
+}

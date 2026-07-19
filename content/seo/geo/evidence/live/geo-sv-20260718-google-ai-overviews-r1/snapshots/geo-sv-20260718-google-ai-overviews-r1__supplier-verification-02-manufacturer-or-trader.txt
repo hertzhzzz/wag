@@ -1,0 +1,164 @@
+platform: google-ai-overviews
+runId: geo-sv-20260718-google-ai-overviews-r1
+questionId: supplier-verification-02-manufacturer-or-trader
+prompt: How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+observedUrl: https://www.google.com/search?q=How%20can%20an%20Australian%20buyer%20distinguish%20a%20Chinese%20manufacturer%20from%20a%20trading%20company%3F&hl=en-AU&gl=au&pws=0
+pageTitle: How can an Australian buyer distinguish a Chinese manufacturer from a trading company? - Google Search
+status: observed-surface-absent
+surface: google-search-serp-en-AU
+brandMention: yes
+ownedUrlCited: yes
+aioUnavailable: false
+aioLabel: false
+
+=== AI Overview extract ===
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+14 Apr 2026 — Trading companies look more professional than real factories. Learn the 5 concrete ways to tell if your Chinese supplier is a factory or an ...
+
+Quick answer: the fastest way to tell a real manufacturer from a trading company posing as one is to read the registered business scope on its ...Read more
+
+7 Apr 2026 — The most reliable method is to check the supplier's Chinese business license (营业执照). The Business Scope (经营范围) field reveals whether the ...Read more
+
+=== Organic titles ===
+1. Factory vs Trading Company: How to Tell Who You're ... | https://www.winningadventure.com.au/article/factory-vs-trading-company-china-guide
+2. Factory or Middleman? A Side-by-Side Checklist to Tell ... | https://medium.com/@winning-adventure-global/factory-or-middleman-33fa21d7fd13
+3. China Trading Company vs Manufacturer: How to Tell the ... | https://chinesecheck.com/blog/china-trading-company-vs-manufacturer
+4. How to Find a Manufacturer in China (That Won't Let You ... | https://www.epicsourcing.com.au/post/how-to-find-manufacturer-in-china
+5. A Step-by-Step Guide to Verifying a China Company - QCC | https://www.qcckyc.com/insights-verify-china-company
+6. How to Tell If a Product Is Made in China - TradeAider | https://www.tradeaiders.com/3-simple-ways-how-to-check-something-that-from-china.html#:~:text=To%20check%20whether%20something%20is,collect%20inspection%20photos%20before%20shipment.
+7. Chinese Company Due Diligence Checklist: How to Verify ... - FDI China | https://fdichina.com/blog/chinese-company-due-diligence-checklist/
+8. How to Verify a Chinese Supplier: A Practical Guide for ... | https://www.winningadventure.com.au/article/china-supplier-verification
+9. Manufacturer or trading company? Verify a Chinese supplier | https://sinospect.com/resources/china-supplier-qualification/manufacturer-vs-trading-company
+10. Sourcing from China: Top tips for Victorian businesses | https://www.victorianchamber.com.au/news/sourcing-from-china-top-tips-for-victorian-businesses
+11. How to check if your Chinese supplier is a factory, ... | https://www.quora.com/How-do-you-check-if-your-Chinese-supplier-is-a-factory-a-manufacturer-or-a-trader
+12. Factory vs Trading Company China: Know the Difference | https://www.advantasourcing.com/blog/factory-vs-trading-company-china
+
+=== Links ===
+winningadventure.com.au | https://www.winningadventure.com.au/article/factory-vs-trading-company-china-guide
+medium.com | https://medium.com/@winning-adventure-global/factory-or-middleman-33fa21d7fd13
+medium.com | https://medium.com/@winning-adventure-global/factory-or-middleman-33fa21d7fd13#:~:text=Quick%20answer%3A%20the%20fastest%20way,registered%20business%20scope%20on%20its
+chinesecheck.com | https://chinesecheck.com/blog/china-trading-company-vs-manufacturer
+chinesecheck.com | https://chinesecheck.com/blog/china-trading-company-vs-manufacturer#:~:text=The%20most%20reliable%20method%20is,(%E7%BB%8F%E8%90%A5%E8%8C%83%E5%9B%B4)%20field%20reveals%20whether%20the
+epicsourcing.com.au | https://www.epicsourcing.com.au/post/how-to-find-manufacturer-in-china
+qcckyc.com | https://www.qcckyc.com/insights-verify-china-company
+tradeaiders.com | https://www.tradeaiders.com/3-simple-ways-how-to-check-something-that-from-china.html#:~:text=To%20check%20whether%20something%20is,collect%20inspection%20photos%20before%20shipment.
+fdichina.com | https://fdichina.com/blog/chinese-company-due-diligence-checklist/
+winningadventure.com.au | https://www.winningadventure.com.au/article/china-supplier-verification
+winningadventure.com.au | https://www.winningadventure.com.au/article/china-supplier-verification#:~:text=Ask%20to%20see%20QC%20records,have%20they%20had%20any%20shipments
+sinospect.com | https://sinospect.com/resources/china-supplier-qualification/manufacturer-vs-trading-company
+victorianchamber.com.au | https://www.victorianchamber.com.au/news/sourcing-from-china-top-tips-for-victorian-businesses
+victorianchamber.com.au | https://www.victorianchamber.com.au/news/sourcing-from-china-top-tips-for-victorian-businesses#:~:text=Manufacturer%20or%20trading%20company%3F,mark%2Dup%20over%20the%20factory%20price.
+quora.com | https://www.quora.com/How-do-you-check-if-your-Chinese-supplier-is-a-factory-a-manufacturer-or-a-trader
+quora.com | https://www.quora.com/How-do-you-check-if-your-Chinese-supplier-is-a-factory-a-manufacturer-or-a-trader?top_ans=261437391
+advantasourcing.com | https://www.advantasourcing.com/blog/factory-vs-trading-company-china
+
+=== Body text (truncated) ===
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Videos
+Short videos
+Images
+Shopping
+More
+Tools
+Search Results
+Web results
+Factory vs Trading Company: How to Tell Who You're ...
+
+Winning Adventure Global
+https://www.winningadventure.com.au › Articles
+14 Apr 2026 — Trading companies look more professional than real factories. Learn the 5 concrete ways to tell if your Chinese supplier is a factory or an ...
+Factory or Middleman? A Side-by-Side Checklist to Tell ...
+
+Medium
+1 week ago
+Quick answer: the fastest way to tell a real manufacturer from a trading company posing as one is to read the registered business scope on its ...Read more
+China Trading Company vs Manufacturer: How to Tell the ...
+
+ChineseCheck
+https://chinesecheck.com › Blog
+7 Apr 2026 — The most reliable method is to check the supplier's Chinese business license (营业执照). The Business Scope (经营范围) field reveals whether the ...Read more
+Missing: Australian ‎| Show results with: Australian
+How to Find a Manufacturer in China (That Won't Let You ...
+
+Epic Sourcing
+https://www.epicsourcing.com.au › post › how-to-find-...
+A practical guide to finding reliable manufacturers in China. Covers where to search, how to distinguish factories from trading companies, red flags to watch ...
+4.9(59)
+People also ask
+How to verify Chinese manufacturer?
+How to identify Chinese products?
+How to investigate a Chinese company?
+How do I know if a Chinese company is legitimate?
+Web results
+How to Verify a Chinese Supplier: A Practical Guide for ...
+
+winningadventure.com.au
+https://www.winningadventure.com.au › Articles
+26 May 2026 — Ask to see QC records from recent production runs. Ask specifically about their experience exporting to Australia — have they had any shipments ...Read more
+Manufacturer or trading company? Verify a Chinese supplier
+
+sinospect.com
+https://sinospect.com › ... › China supplier qualification
+16 June 2026 — Address comparison, registered capital, and a few well-placed technical questions confirm the distinction.
+Missing: Australian ‎| Show results with: Australian
+Sourcing from China: Top tips for Victorian businesses
+
+Victorian Chamber of Commerce and Industry
+https://www.victorianchamber.com.au › news › sourcing...
+Manufacturer or trading company? Most Australian companies sourcing from China request to deal with factories directly rather than trading companies. The ...Read more
+How to check if your Chinese supplier is a factory, ...
+
+Quora
+5 answers · 5 years ago
+How do you check if your Chinese supplier is a factory, a manufacturer, or a trader?
+5 answers
+ 
+·
+ 
+Top answer: 
+The simplest way is to ask. If you don’t trust them to answer honestly, why are you considering ...
+Missing: Australian ‎| Show results with: Australian
+Factory vs Trading Company China: Know the Difference
+
+Advanta Sourcing
+https://www.advantasourcing.com › blog › factory-vs-tr...
+18 Feb 2026 — Think you're buying direct from a Chinese factory? Many importers aren't. Learn how to verify suppliers, spot red flags, and protect your ...
+Missing: Australian ‎| Show results with: Australian
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are not personalised
+Australia
+Adelaide, South Australia - From your IP address
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

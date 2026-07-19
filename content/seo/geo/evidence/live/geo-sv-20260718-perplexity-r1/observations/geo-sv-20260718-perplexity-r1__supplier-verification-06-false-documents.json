@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-06-false-documents",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-06-false-documents",
+  "prompt": "What warning signs suggest that a Chinese supplier's business licence or certificates may be false?",
+  "promptHash": "sha256:8d6588d86a3de05fb01c172aed1ad1af0091f1875eddb5157c400bcad6791afe",
+  "observedAt": "2026-07-18T13:29:46.745Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.sourcingwill.com/how-to-spot-fake-certifications-and-documents-from-chinese-suppliers/",
+      "title": "sourcingwill",
+      "domain": "sourcingwill.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.qcckyc.com/blog-detail/china-business-license-check",
+      "title": "qcckyc",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.silkwaysourcing.com/blog/china-supplier-scam-signs",
+      "title": "silkwaysourcing",
+      "domain": "silkwaysourcing.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://chinesecheck.com/blog/spot-fake-suppliers-alibaba",
+      "title": "chinesecheck",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://chinesecheck.com/blog/chinese-business-license-verification",
+      "title": "chinesecheck\nChinese Business License Verification: How to Check If It's ...\nHow to verify a Chinese business license: read key fields, check via GSXT, spot fak",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://chinesecheck.com/blog/chinese-supplier-scam-prevention",
+      "title": "chinesecheck\nChinese Supplier Scams: How to Identify and Avoid Them ...\nCommon Chinese supplier scams exposed: fake credentials, bait-and-switch, payment fraud.",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention",
+      "title": "betterproductsourcing\nHow to Verify a Chinese Supplier is Legitimate (Scam ...\nPrevent supplier fraud with this comprehensive verification guide. Learn 15 red f",
+      "domain": "betterproductsourcing.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.winningadventure.com.au/article/china-supplier-scams",
+      "title": "winningadventure.com\nHow to Avoid China Supplier Scams: An Australian Buyer's Field Guide (2026)\nHow Australian importers get scammed by Chinese suppliers — and",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.chinacartbridge.com/post/how-to-verify-chinese-suppliers-10-red-flags-to-watch",
+      "title": "chinacartbridge\nHow to Verify Chinese Suppliers: 10 Red Flags to Watch\nLast month, a client sent me photos of 5,000 phone cases. The stitching was crooked. The ",
+      "domain": "chinacartbridge.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://chinesecheck.com/blog/how-to-verify-chinese-supplier",
+      "title": "chinesecheck\nHow to Verify a Chinese Supplier: 7 Methods That Work ...\n7 proven methods to verify Chinese suppliers before paying. Business license checks, cour",
+      "domain": "chinesecheck.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-06-false-documents.txt",
+    "hash": "sha256:4291fef94950088a76e8e98965dfe11cc1368df8aacb2a579dbe352728d7e7b6",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Search https://www.perplexity.ai/search/9ee7ee61-8bd4-46a8-aee5-c051203d8a88"
+}

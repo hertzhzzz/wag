@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-02-manufacturer-or-trader",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-02-manufacturer-or-trader",
+  "prompt": "How can an Australian buyer distinguish a Chinese manufacturer from a trading company?",
+  "promptHash": "sha256:bc07bb82d1ac72e8e36b042b13ca5c7cefd86dce0eadd31d7fc2632422e5b0a8",
+  "observedAt": "2026-07-18T13:46:05.655Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "medium.com",
+    "chinesecheck.com",
+    "epicsourcing.com.au",
+    "qcckyc.com",
+    "tradeaiders.com",
+    "fdichina.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.winningadventure.com.au/article/factory-vs-trading-company-china-guide",
+      "title": "Factory vs Trading Company: How to Tell Who You're ...",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://medium.com/@winning-adventure-global/factory-or-middleman-33fa21d7fd13",
+      "title": "Factory or Middleman? A Side-by-Side Checklist to Tell ...",
+      "domain": "medium.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://chinesecheck.com/blog/china-trading-company-vs-manufacturer",
+      "title": "China Trading Company vs Manufacturer: How to Tell the ...",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.epicsourcing.com.au/post/how-to-find-manufacturer-in-china",
+      "title": "How to Find a Manufacturer in China (That Won't Let You ...",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.qcckyc.com/insights-verify-china-company",
+      "title": "A Step-by-Step Guide to Verifying a China Company - QCC",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.tradeaiders.com/3-simple-ways-how-to-check-something-that-from-china.html#:~:text=To%20check%20whether%20something%20is,collect%20inspection%20photos%20before%20shipment.",
+      "title": "How to Tell If a Product Is Made in China - TradeAider",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://fdichina.com/blog/chinese-company-due-diligence-checklist/",
+      "title": "Chinese Company Due Diligence Checklist: How to Verify ... - FDI China",
+      "domain": "fdichina.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.winningadventure.com.au/article/china-supplier-verification",
+      "title": "How to Verify a Chinese Supplier: A Practical Guide for ...",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://sinospect.com/resources/china-supplier-qualification/manufacturer-vs-trading-company",
+      "title": "Manufacturer or trading company? Verify a Chinese supplier",
+      "domain": "sinospect.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.victorianchamber.com.au/news/sourcing-from-china-top-tips-for-victorian-businesses",
+      "title": "Sourcing from China: Top tips for Victorian businesses",
+      "domain": "victorianchamber.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-02-manufacturer-or-trader.txt",
+    "hash": "sha256:55ec7f71c866b676d799bf5034cb30269560eda1e5858f029d52a65f2f559250",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

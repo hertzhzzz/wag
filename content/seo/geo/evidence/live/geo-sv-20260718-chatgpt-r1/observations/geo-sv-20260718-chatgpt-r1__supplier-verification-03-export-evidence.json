@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-03-export-evidence",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-03-export-evidence",
+  "prompt": "What evidence should I request to verify that a Chinese supplier can legally export my product?",
+  "promptHash": "sha256:fca55952ae2d4f5adfdd9c0e5ee1c13c2e33fb9f517fd41a6435287cb1d686cf",
+  "observedAt": "2026-07-18T13:20:18.344Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-03-export-evidence.txt",
+    "hash": "sha256:3bbffbf0b76c275b92aff10c68f7df169e08cc23bd23b943978996375972305a",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Conversation https://chatgpt.com/c/6a5b7d80-bce8-83ec-8ff4-e3e11957683a"
+}

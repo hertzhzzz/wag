@@ -1,0 +1,193 @@
+platform: google-ai-overviews
+runId: geo-sv-20260718-google-ai-overviews-r1
+questionId: supplier-verification-08-bank-details
+prompt: How should I verify bank account details before paying a new Chinese supplier?
+observedUrl: https://www.google.com/search?q=How%20should%20I%20verify%20bank%20account%20details%20before%20paying%20a%20new%20Chinese%20supplier%3F&hl=en-AU&gl=au&pws=0
+pageTitle: How should I verify bank account details before paying a new Chinese supplier? - Google Search
+status: observed-surface-absent
+surface: google-search-serp-en-AU
+brandMention: yes
+ownedUrlCited: yes
+aioUnavailable: false
+aioLabel: false
+
+=== AI Overview extract ===
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+9 July 2026 — Confirm the Bank Account Before You Wire · The name on the quotation and invoice · The legal entity on the business licence (verified on SAMR, not ...Read more
+
+Trying to understand real-world challenges in international trade. Before sending money or shipping goods, what’s the biggest risk when verifying ...
+
+12 Aug 2025 — Verify the supplier's full bank account details (SWIFT code, IBAN, or Chinese bank account number). Confirm the preferred payment denomination ...
+
+=== Organic titles ===
+1. Financial Procedures - Supplier Account and Bank Set Up | https://baystonhillparishcouncil.org.uk/sites/default/files/financial_procedures_-_supplier_account_and_bank_details_set_up.pdf
+2. 3.3 Verification Of Chinese Bank Accounts | https://china-studies.org/lessons/3-3-verification-of-chinese-bank-accounts-3/
+3. Top 9 ways to pay your suppliers in China - Wise | https://wise.com/us/blog/paying-chinese-suppliers-abroad#:~:text=International%20wire%20transfer%20%2F%20Telegraphic%20Transfer,which%20subsequently%20then%20increases%20yours.
+4. How to Pay Chinese Suppliers Safely: An Australian ... | https://www.winningadventure.com.au/article/pay-chinese-suppliers-safely
+5. What's the hardest part of verifying a supplier before ... | https://www.reddit.com/r/Alibaba/comments/1ps8tbf/whats_the_hardest_part_of_verifying_a_supplier/
+6. How to Pay Suppliers in China: A Complete Guide | https://www.ofx.com/en-ie/blog/how-to-pay-suppliers-in-china-working-with-chinese-vendors/
+7. 3.3 Verification Of Chinese Bank Accounts | https://china-studies.org/lessons/3-3-verification-of-chinese-bank-accounts-3/
+8. How to Verify Chinese Supplier Bank Accounts | https://monitorpay.ai/how-to-verify-chinese-supplier-bank-accounts/
+9. Make These 4 Checks Before Sending a China T/T Payment | https://www.chinacheckup.com/blog/china-tt-payment
+10. How to Pay Chinese Suppliers Safely | Complete Guide | https://www.sellersunionagent.com/how-to-pay-chinese-suppliers/
+11. How to verify Chinese suppliers before sending payment | https://www.facebook.com/groups/224908980871348/posts/28394947353440800/
+
+=== Links ===
+baystonhillparishcouncil.org.uk | https://baystonhillparishcouncil.org.uk/sites/default/files/financial_procedures_-_supplier_account_and_bank_details_set_up.pdf
+china-studies.org | https://china-studies.org/lessons/3-3-verification-of-chinese-bank-accounts-3/
+wise.com | https://wise.com/us/blog/paying-chinese-suppliers-abroad#:~:text=International%20wire%20transfer%20%2F%20Telegraphic%20Transfer,which%20subsequently%20then%20increases%20yours.
+reddit.com | https://www.reddit.com/r/Alibaba/comments/1ohxx0d/how_do_you_verify_account_details_are_correct_for/
+reddit.com | https://www.reddit.com/r/Alibaba/comments/1ohxx0d/how_do_you_verify_account_details_are_correct_for/odgytzj/
+reddit.com | https://www.reddit.com/r/Alibaba/comments/1ohxx0d/how_do_you_verify_account_details_are_correct_for/nlw4yma/
+reddit.com | https://www.reddit.com/r/Alibaba/comments/1ohxx0d/how_do_you_verify_account_details_are_correct_for/nlrvglc/
+facebook.com | https://www.facebook.com/groups/1689704601303874/posts/4474465002827806/
+quora.com | https://www.quora.com/How-can-I-be-sure-of-a-Chinese-factory-before-making-payments
+quora.com | https://www.quora.com/How-can-I-be-sure-of-a-Chinese-factory-before-making-payments?top_ans=232225194
+quora.com | https://www.quora.com/How-can-I-be-sure-of-a-Chinese-factory-before-making-payments?top_ans=232238819
+winningadventure.com.au | https://www.winningadventure.com.au/article/pay-chinese-suppliers-safely
+winningadventure.com.au | https://www.winningadventure.com.au/article/pay-chinese-suppliers-safely#:~:text=Confirm%20the%20Bank%20Account%20Before,You%20Wire&text=The%20name%20on%20the%20quotation,and%20invoice&text=The%20legal%20entity%20on%20the,a%20PDF%20the%20supplier%20sent)
+reddit.com | https://www.reddit.com/r/Alibaba/comments/1ps8tbf/whats_the_hardest_part_of_verifying_a_supplier/
+reddit.com | https://www.reddit.com/r/Alibaba/comments/1ps8tbf/whats_the_hardest_part_of_verifying_a_supplier/nva4aqr/
+ofx.com | https://www.ofx.com/en-ie/blog/how-to-pay-suppliers-in-china-working-with-chinese-vendors/
+monitorpay.ai | https://monitorpay.ai/how-to-verify-chinese-supplier-bank-accounts/
+monitorpay.ai | https://monitorpay.ai/how-to-verify-chinese-supplier-bank-accounts/#:~:text=The%2024%20characters%20are%20ES,and%20a%2010%2Ddigit%20account%20number.
+chinacheckup.com | https://www.chinacheckup.com/blog/china-tt-payment
+sellersunionagent.com | https://www.sellersunionagent.com/how-to-pay-chinese-suppliers/
+facebook.com | https://www.facebook.com/groups/224908980871348/posts/28394947353440800/
+facebook.com | https://www.facebook.com/groups/224908980871348/posts/28394947353440800/#:~:text=%E2%9C%85%20Verify%20their%20business%20registration,before%20placing%20a%20large%20order.
+
+=== Body text (truncated) ===
+Skip to main content
+Accessibility help
+AI Mode
+All
+Short videos
+Forums
+News
+Videos
+Shopping
+More
+Tools
+Search Results
+People also ask
+How to verify supplier bank details?
+How to verify a bank account in China?
+How do I verify a Chinese supplier?
+How to make payment to a China supplier?
+Discussions and forums
+How do you verify account details are correct for company?
+Reddit · 
+r/Alibaba
+ · 
+20+ comments
+ · 
+8 months ago
+ · 
+Hey, did they scam you? I’m thinking about sending a parcel with them.  
+More
+Top answer · 3 months ago
+They are trying to scum you.  
+More
+8 months ago
+This is a complete mismatch. Question is also where the account is located. Many Chinese companies ...  
+More
+8 months ago
+How to verify a Chinese supplier before sending money
+Facebook · 
+LAGOS BUSINESS NETWORK GROUP
+ · 
+1 comment
+ · 
+1 day ago
+ · 
+How to be sure of a Chinese factory before making payments
+Quora · 
+4 answers
+ · 
+5 years ago
+ · 
+See more
+Web results
+How to Pay Chinese Suppliers Safely: An Australian ...
+
+Winning Adventure Global
+https://www.winningadventure.com.au › Articles
+9 July 2026 — Confirm the Bank Account Before You Wire · The name on the quotation and invoice · The legal entity on the business licence (verified on SAMR, not ...Read more
+What's the hardest part of verifying a supplier before ...
+
+Reddit · r/Alibaba
+20+ comments · 6 months ago
+Trying to understand real-world challenges in international trade. Before sending money or shipping goods, what’s the biggest risk when verifying ...
+28 answers
+ 
+·
+ 
+Top answer: 
+If you're buying samples or low MOQ , it's fine to go in deep waters at first try or if the ...
+How to Pay Suppliers in China: A Complete Guide
+
+OFX
+https://www.ofx.com › Home › Blog › Business
+12 Aug 2025 — Verify the supplier's full bank account details (SWIFT code, IBAN, or Chinese bank account number). Confirm the preferred payment denomination ...
+3.3 Verification Of Chinese Bank Accounts
+
+Institute for China Studies
+https://china-studies.org › lessons › 3-3-verification-of-...
+Step 1: Confirm whether the beneficiary is an individual or a company First step in the verification process to ensure that the payment is being transferred. ...
+How to Verify Chinese Supplier Bank Accounts
+
+MonitorPay
+https://monitorpay.ai › how-to-verify-chinese-supplier-...
+3 July 2026 — The 24 characters are ES , two IBAN check digits, then the legacy 20-digit Código Cuenta Cliente (CCC): a 4-digit bank code, a 4-digit branch ...Read more
+Make These 4 Checks Before Sending a China T/T Payment
+
+China Checkup
+https://www.chinacheckup.com › blog › china-tt-payment
+20 Mar 2019 — The China T/T payment bank details you have been provided with will specify the name of the bank and the address of their branch which the ...
+How to Pay Chinese Suppliers Safely | Complete Guide
+
+sellersunionagent.com
+https://www.sellersunionagent.com › how-to-pay-chines...
+11 June 2026 — Before making a payment, carefully review the bank account information. Pay attention to: Beneficiary name Bank account number Bank name SWIFT ...
+How to verify Chinese suppliers before sending payment
+
+Facebook · Nigeria Business Forum
+1 day ago
+✓ Verify their business registration where possible. ✓ Confirm their payment details match the company name. ✓ Start with a sample order before ...Read more
+People also search for
+PayPal
+Airwallex
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are not personalised
+Australia
+Adelaide, South Australia - From your IP address
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

@@ -1,0 +1,119 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-10-stop-findings",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-10-stop-findings",
+  "prompt": "What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?",
+  "promptHash": "sha256:81b4417f19c7bf9d299fe1a59304df205b9da4b5c38e716690f27628d718b9da",
+  "observedAt": "2026-07-18T13:52:21.060Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "checkfile.ai",
+    "australiatenderalerts.com",
+    "ezyshield.com.au",
+    "finance.gov.au",
+    "sellingtogov.finance.gov.au",
+    "ato.gov.au"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3",
+      "title": "here",
+      "domain": "support.microsoft.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.checkfile.ai/en-AU/blog/know-your-supplier-vendor-verification-checklist#:~:text=Know%20Your%20Supplier%20%28KYS%29%20is%20the%20structured%20due,of%20suppliers%20before%20and%20during%20a%20commercial%20relationship.",
+      "title": "Know Your Supplier (KYS): Vendor Verifica… checkfile.ai",
+      "domain": "checkfile.ai"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.checkfile.ai/en-AU/blog/know-your-supplier-vendor-verification-checklist",
+      "title": "Know Your Supplier (KYS): Vendor Verifica… checkfile.ai",
+      "domain": "checkfile.ai"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.checkfile.ai/en-AU/blog/know-your-supplier-kys-vendor-compliance",
+      "title": "Know Your Supplier (KYS): Vendor Verifica… checkfile.ai",
+      "domain": "checkfile.ai"
+    },
+    {
+      "rank": 5,
+      "url": "https://australiatenderalerts.com/blog/procurement-compliance-australia/",
+      "title": "Procurement Compliance Australia: Supplier Rul… australiatenderalert…",
+      "domain": "australiatenderalerts.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://ezyshield.com.au/learn/supplier-verification-australia/",
+      "title": "Supplier Verification Australia | How to Verif… ezyshield.com.au",
+      "domain": "ezyshield.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.finance.gov.au/government/procurement/buying-australian-government/procurement-process-considerations",
+      "title": "Procurement Process Considerations | Depar… finance.gov.au",
+      "domain": "finance.gov.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://sellingtogov.finance.gov.au/faq/supplier-obligations",
+      "title": "Supplier obligations | Selling to Government sellingtogov.finance…",
+      "domain": "sellingtogov.finance.gov.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.ato.gov.au/about-ato/ato-tenders-and-procurement/complying-with-procurement-policy-and-legislation",
+      "title": "Australian Taxation Office https://www.ato.gov.au › about-ato › ato-tenders-and-procurement › complyi…",
+      "domain": "ato.gov.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.traceconsultants.com.au/thinking/compliant-procurement-in-australian-government",
+      "title": "traceconsultants.com.au https://www.traceconsultants.com.au › thinking › compliant-procurement-in...",
+      "domain": "traceconsultants.com.au"
+    },
+    {
+      "rank": 11,
+      "url": "https://australiatenderalerts.com/blog/government-procurement-rules-australia/",
+      "title": "australiatenderalerts.com https://australiatenderalerts.com › blog › government-procurement-rules...",
+      "domain": "australiatenderalerts.com"
+    },
+    {
+      "rank": 12,
+      "url": "https://www.apsc.gov.au/initiatives-and-programs/workforce-information/research-analysis-and-publications/state-service/state-service-report-2023-24/integrity/strengthening-integrity-supplier-conduct",
+      "title": "Australian Public Service Commission (APSC) https://www.apsc.gov.au › ... › strengthening-integrity-supplier-conduct",
+      "domain": "apsc.gov.au"
+    },
+    {
+      "rank": 13,
+      "url": "http://go.microsoft.com/fwlink/?LinkID=617350",
+      "title": "Some results have been removed",
+      "domain": "go.microsoft.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-10-stop-findings.txt",
+    "hash": "sha256:507239bf82b82ba92512f6dced0273e8130d67c2478720364a6aca1474642386",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent."
+}

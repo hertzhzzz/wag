@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-04-service-scope",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-04-service-scope",
+  "prompt": "What should be included in a paid supplier verification service for an Australian importer?",
+  "promptHash": "sha256:269e079c6604a143365467205d10b36695cd0ecaa4c299c5dea0ba2bcc548f9f",
+  "observedAt": "2026-07-18T13:46:22.462Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "acma.gov.au",
+    "tetrainspection.com",
+    "agriculture.gov.au",
+    "couriersandfreight.com.au",
+    "epicsourcing.com.au",
+    "prestigesourcing.net"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "How to Verify a Chinese Supplier: Complete Guide for ...",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.winningadventure.com.au/supplier-verification",
+      "title": "Supplier Verification in China for Australian Importers",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.acma.gov.au/know-what-you-must-do",
+      "title": "Know what you must do as a supplier",
+      "domain": "acma.gov.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://tetrainspection.com/supplier-verification-guide/",
+      "title": "Supplier Verification: How to Verify a Manufacturer (2026)",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.agriculture.gov.au/agriculture-land/forestry/policies/illegal-logging/importers/due-diligence",
+      "title": "Due diligence for importers",
+      "domain": "agriculture.gov.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.couriersandfreight.com.au/blog/importing-from-china-to-australia-step-by-step-guide-for-businesses",
+      "title": "Importing from China to Australia: Step-by-Step Guide for ...",
+      "domain": "couriersandfreight.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.epicsourcing.com.au/post/how-to-find-verified-and-legitimate-alibaba-suppliers-australia",
+      "title": "How to Find Legitimate and Verified Alibaba Suppliers for ...",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.prestigesourcing.net/guides/how-to-check-a-chinese-supplier-before-paying/",
+      "title": "How to Check a Chinese Supplier Before Paying",
+      "domain": "prestigesourcing.net"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.alleratech.com/blog/supplier-approval-program#:~:text=A%20supplier%20approval%20program%20is%20a%20documented%20quality%20management%20system,used%20in%20your%20production%20process.",
+      "title": "Supplier Approval Program for Food Manufacturers (Free Template)",
+      "domain": "alleratech.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.finance.gov.au/government/procurement/ethical-conduct-suppliers/commonwealth-supplier-code-conduct-overview#:~:text=The%20Code%20outlines%20the%20Commonwealth's,%2C%20safety%2C%20and%20employee%20welfare.",
+      "title": "Commonwealth Supplier Code of Conduct - Overview",
+      "domain": "finance.gov.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-04-service-scope.txt",
+    "hash": "sha256:477cd3a806c670f090edab7e26b137ca29edc637334ae28f07ab43aa5d0a13bc",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

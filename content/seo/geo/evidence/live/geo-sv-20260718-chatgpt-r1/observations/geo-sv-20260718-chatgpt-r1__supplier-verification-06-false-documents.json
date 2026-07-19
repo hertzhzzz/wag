@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-06-false-documents",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-06-false-documents",
+  "prompt": "What warning signs suggest that a Chinese supplier's business licence or certificates may be false?",
+  "promptHash": "sha256:8d6588d86a3de05fb01c172aed1ad1af0091f1875eddb5157c400bcad6791afe",
+  "observedAt": "2026-07-18T13:22:01.923Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-06-false-documents.txt",
+    "hash": "sha256:d7eeed913aa7595e0a5651b0cfb33f5584b3dada3241b3fdff7e9af2568de58a",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Conversation https://chatgpt.com/c/6a5b7de8-6930-83ec-8b58-26c86a049c11"
+}

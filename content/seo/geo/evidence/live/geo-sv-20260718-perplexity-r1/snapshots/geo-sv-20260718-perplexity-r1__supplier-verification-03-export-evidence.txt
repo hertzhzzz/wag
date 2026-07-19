@@ -1,0 +1,258 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-perplexity-r1
+platform: perplexity
+questionId: supplier-verification-03-export-evidence
+observedAt: 2026-07-18T13:28:52.813Z
+url: https://www.perplexity.ai/search/078b40e5-ef89-43ba-9316-ebfdad51f66c
+title: What evidence should I request to verify that a Chinese supplier can legally...
+auth: signed-in-test-account
+accountTier: free
+surface: perplexity-search-free
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+
+## Answer (UI text extract)
+New
+⌘K
+Computer
+Spaces
+Artifacts
+Customize
+Connectors
+Skills
+Workflows
+Memory
+History
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+What official records should an Australian importer check before engaging a supplier in China?
+如何注册成美国k12的学校
+基于我们整个对话的全部上下文，重新审视并评估这个项目，而不是默认沿用之前的结论。 你拥有以下背景信息： 我提供了一份澳大利亚 2026 年 7 月 3 日至 10 日的 Google 热搜数据（CSV
+https://augstudy.com/australia/ 全面分析这家公司和他们的specialty
+给我鸡肉奶油蘑菇通心粉的完美菜单和完美的克重比例数据
+网站： https://www.winningadventure.com.au/ 你是一位资深 SEO Growth Consultant（SEO增长顾问），同时具备以下专业能力： SEO战略规划 T
+Google ads 设置每次电话带来的价值，我们的服务费3000刀的话，每一通电话的价值是应该设置多少
+客户：Joseph
+任务：从本 Space 的全部对话与文件中，提取所有客户/线索信息，输出为 JSON 数组。 每条客户对象必须且只能包含以下字段（无信息则留空字符串）： - name: 联系人姓名 - compan
+请你担任我的 2026 SEO 私人教练、增长顾问和实战陪跑者。 我的网站是： https://www.winningadventure.com.au/ 我的目标不是学习一套通用 SEO 课程，而是通
+Comprehensive Website Audit and Strategy
+请基于 Google Search Console、Google Analytics、Google Business Profile 三个数据源，全面分析 winningadventure.com.a
+分析这个新上传的文件
+请撰写一份《中国企业出海澳大利亚产业机会分析报告》。报告需围绕中国企业在澳大利亚市场的出海机会展开，重点分析适合进入的产业赛道。请从宏观环境、行业增长潜力、政策监管、市场需求、竞争格局、中国企业优势、
+中国企业出海澳洲，适合的产业
+补牙要多久
+客户：Sherie
+otak otak是什么，recipe
+Upgrade plan
+Zhe He
+Free plan
+Answer
+Links
+Images
+Share
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+Completed 2 steps
+
+To verify that a Chinese supplier can legally export your product, ask for the supplier’s business license, export registration or export-capable status, and product-specific compliance documents, then verify each one against official records rather than relying on a PDF alone.
+worldfirst
++1
+
+What to request
+
+Business license (营业执照), showing the legal company name, unified social credit code, registered address, legal representative, and business scope.
+worldfirst
++1
+
+Export authorization or export-capable status, so you know the company is allowed to ship goods internationally.
+worldfirst
++1
+
+Product-specific registration or approval, if your product category needs it; for food exports to China, for example, GACC/CIFER registration rules apply and some categories need official verification.
+worldfirst
+
+Certificates and test reports relevant to your product, such as ISO, CCC, CE, RoHS, FDA, or product-specific lab reports, but only if they can be independently verified with the issuer.
+plutoniaglobal
+
+Bank account details in the company’s registered name, because mismatches are a major red flag.
+worldfirst
++1
+
+How to verify it
+
+Check the business license details against China’s public company registry, such as the National Enterprise Credit Information Publicity System.
+worldfirst
+
+Confirm that the supplier’s business scope covers your product, not just general trade.
+greathandshake
++1
+
+Verify certifications and test reports directly with the issuing body or official database, not by accepting the document at face value.
+greathandshake
++1
+
+For food products going to China, use the CIFER system to confirm whether the establishment is registered for the relevant product category.
+worldfirst
+
+Practical red flags
+
+The supplier is a factory on paper but cannot show export registration or a matching company bank account.
+worldfirst
++1
+
+The business scope does not include your product category.
+greathandshake
++1
+
+Certificates look generic, expired, or cannot be verified with the issuer.
+greathandshake
++1
+
+They insist on payment to a different company name than the one on the license.
+worldfirst
++1
+
+Best document bundle to ask for
+
+Business license.
+
+Export registration or proof of export capability.
+
+Product-specific licenses, registrations, or certifications.
+
+Recent test reports for your exact product.
+
+Company bank details.
+
+Factory audit report or live factory video, if the order is meaningful.
+greathandshake
++1
+
+For your sourcing work, the safest rule is: the company name, export rights, bank account, and product scope should all line up. For food exports into China specifically, CIFER registration status matters in addition to the normal supplier checks.
+worldfirst
++1
+
+Would you like me to turn this into a one-page supplier verification checklist you can reuse on future orders?
+
+10 sources
+Follow-ups
+Build a supplier due diligence checklist for your Chinese factory — from registry lookups to certification verification steps
+Computer
+​
+Supplier verification scorecard: compare your supplier's documents against official China registry standards for legal export rights
+Computer
+​
+Yes please create a one page verification checklist for me
+Could you include a section for verifying factory capacity too
+No I would rather have a list of common supplier red flags instead
+Sources
+agriculture
+Export registration with China
+The People’s Republic of China is introducing new regulations under Decree 280 that come into effect from 1 June 2026. The information on this webpage is under review. Please contact the Department at exportlisting@aff.gov.au if you have any queries.
+worldfirst
+Exporting from China: How to Verify Suppliers for Moroccan Importers
+Learn how to verify Chinese suppliers, check export licenses, avoid fraud, and pay safely when importing from China to Morocco. Practical guide for online sellers.
+blogs.tradlinx
+How to Know If Your Supplier Is Legit Before You Ship ...
+Don’t trust a supplier just because they’re listed on a marketplace. In this practical guide, we break down how to verify a supplier before you ship—plus the red flags, key documents, and customs risks to avoid. Learn how to spot trouble early, protect your cargo, and stay compliant in 2025’s…
+plutoniaglobal
+What Documents Prove a Chinese Factory Is Legitimate? | Plutonia Global
+The exact documents that prove a Chinese factory is legitimate: business license, export license, certifications, and bank details — and how to verify each one.
+greathandshake
+How to Conduct a Proper Due Diligence on a Chinese Supplier - 很棒的握手 - Great Handshake
+A step-by-step guide for foreign buyers on vetting Chinese suppliers: business registration checks, factory audits, trade history screening, sanctions compliance, and contract terms that protect your interests.
+en.mydidadi
+8 Essential Documents You Should Request from Chinese Suppliers
+Discover the 8 essential documents to request from Chinese suppliers—verify legitimacy, product quality, export compliance, bank account, and social audit reports. DIDADI Logistics
+jrandfirm
+Verify a Chinese Supplier: Practical 12-Point Checklist 2025
+Verify A Chinese Supplier in 2026: the costs, timelines, documents and steps that matter, explained by JR & Firm. costs, timelines, document
+cantonpartner
+How to Verify a Chinese Supplier - Canton Partner
+Seven layered checks — from free government registry lookups to factory audits — calibrated by order size. Know exactly who you're wiring money to.
+silkroadleo
+China Supplier Verification Checklist: 12 Points Before You ...
+The 12-point checklist MENA buyers use to verify Chinese factories before placing an order. Business registry, export records, production capacity, certifications, and red flags.
+auscus
+New China Export Licence/Compliance Rules
+China has recently changed their export compliance rules. Protect your supply chain by reading AUSCUS guide to navigating the new rules.
+
+
+
+
+Ask a follow-up
+Search
+Computer
+Model
+
+## Links
+[
+  {
+    "rank": 1,
+    "url": "https://www.worldfirst.com/af/blog/business-with-china/china-supplier-verification-guide-morocco/",
+    "title": "worldfirst",
+    "domain": "worldfirst.com"
+  },
+  {
+    "rank": 2,
+    "url": "https://www.plutoniaglobal.com/guides/sv-documents-prove-factory-legitimate",
+    "title": "plutoniaglobal",
+    "domain": "plutoniaglobal.com"
+  },
+  {
+    "rank": 3,
+    "url": "https://www.agriculture.gov.au/biosecurity-trade/export/export-registration-with-china",
+    "title": "agriculture\nExport registration with China\nThe People’s Republic of China is introducing new regulations under Decree 280 that come into effect from 1 June 2026",
+    "domain": "agriculture.gov.au"
+  },
+  {
+    "rank": 4,
+    "url": "https://blogs.tradlinx.com/how-to-know-if-your-supplier-is-legit-before-you-ship-2025-checklist/",
+    "title": "blogs.tradlinx\nHow to Know If Your Supplier Is Legit Before You Ship ...\nDon’t trust a supplier just because they’re listed on a marketplace. In this practical ",
+    "domain": "blogs.tradlinx.com"
+  },
+  {
+    "rank": 5,
+    "url": "https://greathandshake.com/en/how-to-conduct-due-diligence-on-chinese-supplier/",
+    "title": "greathandshake\nHow to Conduct a Proper Due Diligence on a Chinese Supplier - 很棒的握手 - Great Handshake\nA step-by-step guide for foreign buyers on vetting Chinese ",
+    "domain": "greathandshake.com"
+  },
+  {
+    "rank": 6,
+    "url": "https://en.mydidadi.com/8-Essential-Documents-You-Should-Request-from-Chinese-Suppliers",
+    "title": "en.mydidadi\n8 Essential Documents You Should Request from Chinese Suppliers\nDiscover the 8 essential documents to request from Chinese suppliers—verify legitima",
+    "domain": "en.mydidadi.com"
+  },
+  {
+    "rank": 7,
+    "url": "https://jrandfirm.com/verify-a-chinese-supplier/",
+    "title": "jrandfirm\nVerify a Chinese Supplier: Practical 12-Point Checklist 2025\nVerify A Chinese Supplier in 2026: the costs, timelines, documents and steps that matter,",
+    "domain": "jrandfirm.com"
+  },
+  {
+    "rank": 8,
+    "url": "https://www.cantonpartner.com/blog/how-to-verify-chinese-supplier.html",
+    "title": "cantonpartner\nHow to Verify a Chinese Supplier - Canton Partner\nSeven layered checks — from free government registry lookups to factory audits — calibrated by o",
+    "domain": "cantonpartner.com"
+  },
+  {
+    "rank": 9,
+    "url": "https://silkroadleo.com/blog/posts/2026-05-29-china-supplier-verification-checklist/",
+    "title": "silkroadleo\nChina Supplier Verification Checklist: 12 Points Before You ...\nThe 12-point checklist MENA buyers use to verify Chinese factories before placing an",
+    "domain": "silkroadleo.com"
+  },
+  {
+    "rank": 10,
+    "url": "https://auscus.com.au/new-china-export-licence-compliance-rules-how-to-protect-your-supply-chain-and-avoid-origin-side-delays/",
+    "title": "auscus\nNew China Export Licence/Compliance Rules\nChina has recently changed their export compliance rules. Protect your supply chain by reading AUSCUS guide to ",
+    "domain": "auscus.com.au"
+  }
+]
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: yes

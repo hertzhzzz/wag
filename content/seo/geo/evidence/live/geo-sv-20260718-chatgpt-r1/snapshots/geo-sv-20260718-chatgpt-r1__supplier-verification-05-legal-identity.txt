@@ -1,0 +1,238 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-05-legal-identity
+observedAt: 2026-07-18T13:21:41.319Z
+url: https://chatgpt.com/c/6a5b7dd1-c920-83ec-b462-5e565838d090
+title: Verify Supplier Legal Info
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?
+
+## User message (UI)
+How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?
+
+## Assistant answer (UI text)
+To verify a Chinese supplier’s legal name (公司名称) and Unified Social Credit Code (统一社会信用代码 / USCC), you should cross-check the supplier’s documents against official Chinese government records and ensure the entity details match exactly.
+
+1. Obtain the supplier’s official documents
+
+Request:
+
+Business License (营业执照)
+
+Must show:
+
+Company legal name (公司名称)
+
+Unified Social Credit Code (统一社会信用代码)
+
+Legal representative (法定代表人)
+
+Registered address (住所)
+
+Business scope (经营范围)
+
+Registration authority (登记机关)
+
+Bank account certificate (开户许可证 or bank information confirmation)
+
+The account holder name should match the company legal name.
+
+Export-related documents (if applicable)
+
+Customs registration information
+
+Exporter/foreign trade operator registration records (if applicable)
+
+Tax registration details
+
+Ask for a clear scanned copy with the official company seal (公章).
+
+2. Check the Unified Social Credit Code online
+
+Use China's official enterprise registration database:
+
+National Enterprise Credit Information Publicity System (国家企业信用信息公示系统)
+
+Search using either:
+
+Unified Social Credit Code
+
+Chinese company name
+
+Verify:
+
+Field	Should Match
+Company name	Exact Chinese characters
+USCC	Exact 18-digit code
+Legal representative	Matches license
+Registered address	Matches documents
+Company status	Should be "存续" (active)
+Registration date	Reasonable business history
+Business scope	Relevant to your product
+3. Understand the Unified Social Credit Code format
+
+A Chinese USCC has 18 characters:
+
+Example:
+
+91440101MA5XXXXX8A
+
+Structure:
+
+Position	Meaning
+1	Registration authority code
+2	Entity type
+3–8	Administrative division
+9–17	Organization identifier
+18	Check digit
+
+A supplier should not have:
+
+Missing digits
+
+Altered characters
+
+A code belonging to another company
+
+4. Verify the company name translation
+
+Chinese suppliers often provide an English name that is not legally registered.
+
+Example:
+
+Chinese legal name:
+
+广州XX照明科技有限公司
+
+Possible English names:
+
+Guangzhou XX Lighting Technology Co., Ltd.
+
+The English name is usually not legally binding.
+
+For contracts and payments, use:
+
+Chinese legal company name
++
+Unified Social Credit Code
+
+Do not rely only on the English name.
+
+5. Check whether the supplier is actually a manufacturer
+
+The business scope can reveal whether they are a trading company.
+
+Look for terms:
+
+Manufacturer indicators:
+
+生产 (production)
+
+制造 (manufacturing)
+
+加工 (processing)
+
+研发 (R&D)
+
+Trading indicators:
+
+贸易 (trade)
+
+进出口 (import/export)
+
+销售 (sales)
+
+A company with only:
+
+货物进出口
+批发
+零售
+
+may be a trading company rather than a factory.
+
+6. Match the supplier's bank account
+
+Before payment:
+
+Request:
+
+RMB company bank account details
+
+Bank confirmation letter if possible
+
+Check:
+
+Document	Match
+Business license name	✓
+Bank account holder	✓
+Contract entity	✓
+Invoice issuer	✓
+
+Avoid paying:
+
+Personal accounts
+
+Unrelated companies
+
+Hong Kong accounts without explanation
+
+7. Use third-party verification for higher-value purchases
+
+For larger Australian imports, consider:
+
+Chinese corporate credit reports
+
+Factory audits
+
+On-site inspections
+
+Video factory verification
+
+Customs export history checks
+
+A supplier verification report should confirm:
+
+Legal existence
+
+Ownership structure
+
+Registered capital
+
+Litigation history
+
+Administrative penalties
+
+Export capability
+
+Manufacturing capability
+
+Minimum verification checklist for an Australian importer
+
+Before signing a purchase contract:
+
+✅ Business license received
+✅ USCC verified on government database
+✅ Chinese legal name confirmed
+✅ Bank account matches company name
+✅ Business scope matches product
+✅ Export capability confirmed
+✅ Factory/manufacturer status checked
+✅ Contract uses Chinese legal entity name
+
+The most important rule: the company name and Unified Social Credit Code on the business license must match the entity receiving payment and signing the contract.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

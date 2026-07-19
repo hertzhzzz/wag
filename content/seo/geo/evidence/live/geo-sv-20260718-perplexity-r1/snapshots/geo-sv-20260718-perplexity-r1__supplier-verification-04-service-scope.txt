@@ -1,0 +1,260 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-perplexity-r1
+platform: perplexity
+questionId: supplier-verification-04-service-scope
+observedAt: 2026-07-18T13:29:12.838Z
+url: https://www.perplexity.ai/search/9b5fb0be-9b64-40cc-a318-7ab3200bfdfc
+title: What should be included in a paid supplier verification service for an...
+auth: signed-in-test-account
+accountTier: free
+surface: perplexity-search-free
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What should be included in a paid supplier verification service for an Australian importer?
+
+## Answer (UI text extract)
+New
+⌘K
+Computer
+Spaces
+Artifacts
+Customize
+Connectors
+Skills
+Workflows
+Memory
+History
+What should be included in a paid supplier verification service for an Australian importer?
+What evidence should I request to verify that a Chinese supplier can legally export my product?
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+What official records should an Australian importer check before engaging a supplier in China?
+如何注册成美国k12的学校
+基于我们整个对话的全部上下文，重新审视并评估这个项目，而不是默认沿用之前的结论。 你拥有以下背景信息： 我提供了一份澳大利亚 2026 年 7 月 3 日至 10 日的 Google 热搜数据（CSV
+https://augstudy.com/australia/ 全面分析这家公司和他们的specialty
+给我鸡肉奶油蘑菇通心粉的完美菜单和完美的克重比例数据
+网站： https://www.winningadventure.com.au/ 你是一位资深 SEO Growth Consultant（SEO增长顾问），同时具备以下专业能力： SEO战略规划 T
+Google ads 设置每次电话带来的价值，我们的服务费3000刀的话，每一通电话的价值是应该设置多少
+客户：Joseph
+任务：从本 Space 的全部对话与文件中，提取所有客户/线索信息，输出为 JSON 数组。 每条客户对象必须且只能包含以下字段（无信息则留空字符串）： - name: 联系人姓名 - compan
+请你担任我的 2026 SEO 私人教练、增长顾问和实战陪跑者。 我的网站是： https://www.winningadventure.com.au/ 我的目标不是学习一套通用 SEO 课程，而是通
+Comprehensive Website Audit and Strategy
+请基于 Google Search Console、Google Analytics、Google Business Profile 三个数据源，全面分析 winningadventure.com.a
+分析这个新上传的文件
+请撰写一份《中国企业出海澳大利亚产业机会分析报告》。报告需围绕中国企业在澳大利亚市场的出海机会展开，重点分析适合进入的产业赛道。请从宏观环境、行业增长潜力、政策监管、市场需求、竞争格局、中国企业优势、
+中国企业出海澳洲，适合的产业
+补牙要多久
+客户：Sherie
+Upgrade plan
+Zhe He
+Free plan
+Answer
+Links
+Images
+Share
+What should be included in a paid supplier verification service for an Australian importer?
+
+A paid supplier verification service for an Australian importer should usually cover three things: confirming the supplier is a real business, confirming the factory and operational capability are legitimate, and reducing payment or contract risk before money is sent. For overseas suppliers, especially in China, a stronger service should go beyond paperwork and include on-the-ground checks, because registration documents alone do not prove the factory actually exists or can produce at the promised quality.
+winningadventure
++1
+
+Core checks
+
+Business identity verification, including legal name, registration details, and whether the supplier is active and consistent across documents.
+gst-verify.com
++1
+
+Factory existence and address verification, ideally with site photos, GPS/location confirmation, and evidence the site matches the claimed business.
+swiftcargo
++1
+
+Ownership and contact verification, including checking that the person you are dealing with is actually connected to the business.
+winningadventure
++1
+
+Bank account verification, so deposits and balance payments go to the correct recipient and not an impersonator.
+www
++3
+
+Operational checks
+
+Production capability review, including machinery, staffing, capacity, and whether the factory can meet your order size and timeline.
+swiftcargo
++1
+
+Product scope verification, to confirm the factory really makes the products or components it claims to make.
+winningadventure
++1
+
+Quality-system review, such as ISO certificates, internal QC processes, testing records, and whether certificates are genuine.
+swiftcargo
++1
+
+Export-readiness checks, including packaging, labeling, compliance documents, and shipping experience for Australian import requirements.
+swiftcargo
+
+Risk controls
+
+Verification of ABN/GST status for Australian suppliers, where relevant, to support compliance and supplier-master-data quality.
+www
++3
+
+Fraud screening for duplicate entities, mismatched bank details, or suspicious changes to payment instructions.
+www
++2
+
+Evidence pack with timestamps, report ID, photos, and notes, so you can show due diligence internally or to financiers, insurers, or auditors.
+gst-verify.com
++1
+
+Follow-up re-checks when a supplier changes address, bank account, ownership, or product line.
+www
++1
+
+Deliverables to include
+
+A written verification report with a clear recommendation: approve, approve with conditions, or reject.
+
+A photo and document appendix.
+
+A checklist of findings against your sourcing criteria.
+
+A risk rating and specific next steps, such as sample testing, a video call, or a factory audit.
+
+Optional raw data export for your CRM, accounting system, or procurement records.
+payok.com
++1
+
+Best-practice service design
+
+Offer different tiers: desktop-only, enhanced document review, and full factory visit/on-site verification.
+
+Make the scope explicit before payment, because importers often need verification for either onboarding, deposit protection, or pre-shipment confidence.
+
+Separate “business legitimacy” from “product quality” and “payment safety,” because each one answers a different risk question.
+
+For China suppliers, include local-language communication and document review, since mismatches in company names, stamps, or bank details are common failure points.
+winningadventure
++1
+
+For an Australian importer, the most valuable paid service is one that tells you: “Is this supplier real, can they actually make what they claim, and is it safe to pay them?”
+vendorverify.com
++2
+
+10 sources
+Follow-ups
+How do verification services confirm Chinese factory authenticity
+Differences between remote and on-site factory verification checks
+Risks of relying solely on manufacturer ISO certifications
+Verifying supplier export compliance for Australian Customs standards
+Common signs of fake supplier websites or bank account scams
+Sources
+www
+Supplier verification with Eftsure: Department of Justice
+Suppliers must be independently verified by Eftsure before onboarding. Eftsure validates ABN, GST registration and bank details to ensure payment to the correct recipient. More info: eftsure.com.au
+sgs
+Supplier Verification Program
+SGS’s supplier verification program – instills confidence between clients and suppliers in a digital age.
+gst-verify.com
+GST-Verify for Bookkeepers
+GST-Verify helps bookkeepers verify ABNs and GST registration status efficiently. Bulk verify up to 500 ABNs, generate compliance reports, and streamline your bookkeeping workflow.
+vendorverify.com
+Vendor Verify — Stop paying fraudsters. Verify every supplier ...
+Vendor Verify connects directly to Xero and QuickBooks and uses Australia's Consumer Data Right to confirm every supplier's bank account is real, active, and belongs to who you think it does — before a single dollar moves.
+tiq
+TIQ - Supplier payments verification
+How to get verified as a supplier to Trade and Investment Queensland
+winningadventure
+How to Verify a Chinese Supplier: Complete Guide for ...
+Learn how to verify a Chinese supplier with this complete guide for Australian importers. Document checks, factory visits, and professional verification services.
+payok.com
+Helping eliminate payment fraud and pay suppliers with confidence
+PayOK verifies your suppliers bank account details before you make a payment, ensuring funds go to the correct account, every time.
+swiftcargo
+Verifying Overseas Suppliers: Australian Importer Checklist
+How Australian importers verify overseas suppliers: business registration checks, factory audits, test report verification, and pre-shipment inspection.
+ezyshield.com
+Supplier Verification in Australia: How to Verify Before You Pay
+Learn how to verify Australian suppliers before making payments. Check ABN status, confirm identity, and validate bank account ownership to prevent payment fraud.
+audit
+Supplier Master Files – Better Practice Guide - Audit.wa.gov.au
+may include: business registration documents / details (and company details if relevant) contact information details of the goods and/or ...
+
+
+
+
+Ask a follow-up
+Search
+Computer
+Model
+
+## Links
+[
+  {
+    "rank": 1,
+    "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+    "title": "swiftcargo",
+    "domain": "blog.swiftcargo.solutions"
+  },
+  {
+    "rank": 2,
+    "url": "https://www.wa.gov.au/organisation/department-of-justice/supplier-verification-eftsure-department-of-justice",
+    "title": "www\nSupplier verification with Eftsure: Department of Justice\nSuppliers must be independently verified by Eftsure before onboarding. Eftsure validates ABN, GST ",
+    "domain": "wa.gov.au"
+  },
+  {
+    "rank": 3,
+    "url": "https://www.sgs.com/en-au/services/supplier-verification-program",
+    "title": "sgs\nSupplier Verification Program\nSGS’s supplier verification program – instills confidence between clients and suppliers in a digital age.",
+    "domain": "sgs.com"
+  },
+  {
+    "rank": 4,
+    "url": "https://gst-verify.com.au/for-bookkeepers",
+    "title": "gst-verify.com\nGST-Verify for Bookkeepers\nGST-Verify helps bookkeepers verify ABNs and GST registration status efficiently. Bulk verify up to 500 ABNs, generate",
+    "domain": "gst-verify.com.au"
+  },
+  {
+    "rank": 5,
+    "url": "https://vendorverify.com.au/",
+    "title": "vendorverify.com\nVendor Verify — Stop paying fraudsters. Verify every supplier ...\nVendor Verify connects directly to Xero and QuickBooks and uses Australia's C",
+    "domain": "vendorverify.com.au"
+  },
+  {
+    "rank": 6,
+    "url": "https://www.tiq.qld.gov.au/contact/payment-verification",
+    "title": "tiq\nTIQ - Supplier payments verification\nHow to get verified as a supplier to Trade and Investment Queensland",
+    "domain": "tiq.qld.gov.au"
+  },
+  {
+    "rank": 7,
+    "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+    "title": "winningadventure\nHow to Verify a Chinese Supplier: Complete Guide for ...\nLearn how to verify a Chinese supplier with this complete guide for Australian importe",
+    "domain": "winningadventure.com.au"
+  },
+  {
+    "rank": 8,
+    "url": "https://www.payok.com.au/payment-verification",
+    "title": "payok.com\nHelping eliminate payment fraud and pay suppliers with confidence\nPayOK verifies your suppliers bank account details before you make a payment, ensuri",
+    "domain": "payok.com.au"
+  },
+  {
+    "rank": 9,
+    "url": "https://ezyshield.com.au/learn/supplier-verification-australia/",
+    "title": "ezyshield.com\nSupplier Verification in Australia: How to Verify Before You Pay\nLearn how to verify Australian suppliers before making payments. Check ABN status",
+    "domain": "ezyshield.com.au"
+  },
+  {
+    "rank": 10,
+    "url": "https://audit.wa.gov.au/reports-and-publications/reports/supplier-master-files-better-practice-guide/",
+    "title": "audit\nSupplier Master Files – Better Practice Guide - Audit.wa.gov.au\nmay include: business registration documents / details (and company details if relevant) c",
+    "domain": "audit.wa.gov.au"
+  }
+]
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: yes

@@ -1,0 +1,277 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-07-remote-or-onsite
+observedAt: 2026-07-18T13:22:26.648Z
+url: https://chatgpt.com/c/6a5b7dfe-0508-83ec-b84f-ca9bed750e45
+title: Remote vs On-Site Check
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?
+
+## User message (UI)
+When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?
+
+## Assistant answer (UI text)
+For an Australian buyer importing from China (or another overseas supplier), remote supplier verification is usually enough for low-risk, repeat, or small-value purchases, but an on-site inspection becomes justified when the financial, compliance, or operational risk is significant.
+
+Remote verification is usually enough when:
+1. The order value is low
+
+Examples:
+
+Trial order under ~A$5,000–10,000
+
+Small quantities
+
+Non-critical products
+
+Remote checks can often confirm:
+
+Legal company existence
+
+Export capability
+
+Product documentation
+
+Basic manufacturing capability
+
+Banking details
+
+2. The supplier is already proven
+
+Remote verification may be sufficient if:
+
+You have successfully completed multiple shipments
+
+Quality has been consistent
+
+Payment history is reliable
+
+The supplier has long-term customers or references
+
+3. The product has low compliance risk
+
+Examples:
+
+Simple consumer goods
+
+Non-regulated accessories
+
+Standard components
+
+Less need for physical verification if failure would not create major liability.
+
+4. The supplier provides strong documentation
+
+Useful remote evidence includes:
+
+Chinese business licence
+
+Unified Social Credit Code verification
+
+Export licence or customs registration evidence
+
+Factory address and production photos/videos
+
+Product certifications
+
+Test reports from recognised laboratories
+
+Customer references
+
+Video call from the factory floor
+
+Bank account matching the registered company name
+
+An on-site check is recommended when:
+1. The order value is high
+
+Consider an inspection when:
+
+First order exceeds ~A$20,000–50,000
+
+Large deposit is required
+
+Custom tooling or moulds are involved
+
+Long-term supply agreement is planned
+
+A single factory visit can prevent losses from:
+
+Fake factories
+
+Trading companies pretending to manufacture
+
+Misrepresented capacity
+
+Poor quality systems
+
+2. Product compliance risk is high
+
+For Australia, consider on-site verification for products involving:
+
+Electrical equipment
+
+Lighting products
+
+AV equipment
+
+Batteries
+
+Machinery
+
+Children's products
+
+Safety equipment
+
+Products requiring Australian certifications
+
+Examples:
+
+A supplier claims RCM compliance but cannot show test reports
+
+Certificates belong to another company/model
+
+The factory cannot explain production controls
+
+3. The supplier claims to be a manufacturer
+
+A common issue is a trading company presenting itself as a factory.
+
+On-site checks can verify:
+
+Actual production lines
+
+Machinery ownership
+
+Number of workers
+
+Assembly capability
+
+Quality control department
+
+Raw material storage
+
+Packaging process
+
+Warning signs requiring inspection:
+
+Very broad product catalogue
+
+No factory photos
+
+Refuses video calls
+
+Factory address changes frequently
+
+Prices significantly below competitors
+
+4. You need production assurance
+
+Remote verification cannot reliably confirm:
+
+Whether your order is actually being produced
+
+Whether materials match specifications
+
+Whether QC procedures exist
+
+Whether subcontracting is occurring
+
+For important orders, use:
+
+Factory verification before payment
+
+Production inspection during manufacturing
+
+Pre-shipment inspection before final payment
+
+5. The supplier requests risky payment terms
+
+On-site checks are strongly recommended when:
+
+100% payment upfront is requested
+
+Payment goes to a personal account
+
+Payment goes to a different company
+
+Supplier refuses escrow or trade assurance mechanisms
+
+The supplier is newly established
+
+Practical decision framework
+Situation	Recommended approach
+Sample order under A$5k	Remote verification
+Repeat supplier, proven history	Remote verification + periodic audits
+First order A$10k–50k	Remote verification + consider factory audit
+First order above A$50k	On-site inspection recommended
+Custom tooling/moulds	On-site verification
+Electrical/safety products	On-site or third-party audit
+Supplier claims own factory	Verify physically
+Large annual contract	Initial audit + annual review
+Minimum verification package before sending money
+
+For most Australian importers, the minimum should include:
+
+Chinese company registration check
+
+Legal Chinese name
+
+Unified Social Credit Code
+
+Registered address
+
+Business scope
+
+Ownership and payment verification
+
+Bank account matches company name
+
+No unexplained third-party payments
+
+Factory capability evidence
+
+Live video call
+
+Production line footage
+
+Equipment list
+
+Employee count
+
+Export evidence
+
+Customs registration
+
+Previous export records where possible
+
+Product compliance verification
+
+Test reports
+
+Certification ownership
+
+Model numbers matching your product
+
+A useful rule for Australian importers is:
+
+Remote verification proves the supplier exists.
+An on-site inspection proves the supplier can actually deliver.
+
+For a first-time supplier relationship involving significant money, regulated products, or a long-term partnership, an on-site check is usually cheaper than recovering from a failed shipment.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

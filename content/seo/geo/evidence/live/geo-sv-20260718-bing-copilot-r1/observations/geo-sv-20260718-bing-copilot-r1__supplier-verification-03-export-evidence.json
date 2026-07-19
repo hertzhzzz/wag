@@ -1,0 +1,119 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-03-export-evidence",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-03-export-evidence",
+  "prompt": "What evidence should I request to verify that a Chinese supplier can legally export my product?",
+  "promptHash": "sha256:fca55952ae2d4f5adfdd9c0e5ee1c13c2e33fb9f517fd41a6435287cb1d686cf",
+  "observedAt": "2026-07-18T13:51:09.599Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "epicsourcing.com.au",
+    "blog.swiftcargo.solutions",
+    "epowercn.com",
+    "chinawithme.com",
+    "cantonpartner.com",
+    "translayte.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3",
+      "title": "how Bing delivers search results",
+      "domain": "support.microsoft.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.epicsourcing.com.au/post/25-06-how-to-verify-a-chinese-supplier-before-you-pay-2026-checklist",
+      "title": "Business License: A valid business license is a primary official document for any legal entity, including Chinese suppliers. It should be pu",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "winningadventure.com.au How to Verify a Chinese Supplier: Complete Guide for Australian Buyers The verification framework we use for every s",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+      "title": "blog.swiftcargo.solutions",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.epowercn.com/blog/blog-verify-chinese-supplier-checklist.html",
+      "title": "epowercn.com",
+      "domain": "epowercn.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://chinawithme.com/guides/verify-chinese-supplier-2026",
+      "title": "chinawithme.com",
+      "domain": "chinawithme.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.cantonpartner.com/blog/how-to-verify-chinese-supplier",
+      "title": "cantonpartner.comHow to Verify a Chinese Supplier: A Step-by-Step Guide | Canton PartnerBefore you can verify anything, you need the raw mat",
+      "domain": "cantonpartner.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://translayte.com/orders/create?msclkid={msclkid}&utm_source=bing&utm_medium=cpc&utm_campaign=AU%20Remarketing%20PMax%20┃DTS&utm_term=translayte.com&utm_content=Asset%20Group%201",
+      "title": "Τгаnѕⅼaytе https://translayte.com",
+      "domain": "translayte.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://en.mydidadi.com/8-Essential-Documents-You-Should-Request-from-Chinese-Suppliers",
+      "title": "mydidаԁi.com https://en.mydidadi.com",
+      "domain": "en.mydidadi.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://tfgglobal.com.au/china-export-compliance-australian-importers/",
+      "title": "tfggⅼobal.com.au https://tfgglobal.com.au › china-export-compliance-australian-importers",
+      "domain": "tfgglobal.com.au"
+    },
+    {
+      "rank": 11,
+      "url": "https://paxporttrading.com/blog/how-to-verify-chinese-suppliers-guide.html",
+      "title": "pаxpoгttradiոg.com https://paxporttrading.com › blog › how-to-verify-chinese-suppliers-guide.html",
+      "domain": "paxporttrading.com"
+    },
+    {
+      "rank": 12,
+      "url": "https://export.business.gov.au/laws-and-regulations/documents-for-exporting",
+      "title": "business.gov.aυ https://export.business.gov.au › laws-and-regulations › documents-for...",
+      "domain": "export.business.gov.au"
+    },
+    {
+      "rank": 13,
+      "url": "http://go.microsoft.com/fwlink/?LinkID=617350",
+      "title": "Some results have been removed",
+      "domain": "go.microsoft.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-03-export-evidence.txt",
+    "hash": "sha256:1be58619a0aa27828df1fa793c824bc592e3e970a8c3da84078af2194d2deeee",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent."
+}

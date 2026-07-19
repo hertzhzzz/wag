@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-02-manufacturer-or-trader",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-02-manufacturer-or-trader",
+  "prompt": "How can an Australian buyer distinguish a Chinese manufacturer from a trading company?",
+  "promptHash": "sha256:bc07bb82d1ac72e8e36b042b13ca5c7cefd86dce0eadd31d7fc2632422e5b0a8",
+  "observedAt": "2026-07-18T13:19:57.366Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-02-manufacturer-or-trader.txt",
+    "hash": "sha256:c0d4bd57a5017ce41504b309039d5891c4c5d17b5678ebf70985458fd59c1410",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Conversation https://chatgpt.com/c/6a5b7d69-f25c-83ec-aad1-2a9f92970c78"
+}

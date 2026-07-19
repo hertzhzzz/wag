@@ -1,0 +1,197 @@
+platform: google-ai-overviews
+runId: geo-sv-20260718-google-ai-overviews-r1
+questionId: supplier-verification-03-export-evidence
+prompt: What evidence should I request to verify that a Chinese supplier can legally export my product?
+observedUrl: https://www.google.com/search?q=What%20evidence%20should%20I%20request%20to%20verify%20that%20a%20Chinese%20supplier%20can%20legally%20export%20my%20product%3F&hl=en-AU&gl=au&pws=0
+pageTitle: What evidence should I request to verify that a Chinese supplier can legally export my product? - Google Search
+status: observed-surface-absent
+surface: google-search-serp-en-AU
+brandMention: yes
+ownedUrlCited: yes
+aioUnavailable: false
+aioLabel: false
+
+=== AI Overview extract ===
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+(function(){window.sn={_setImageSrc:function(b,c){var a=document.getElementById(`${b}`);a!==null&&(a.src=c,a.setAttribute("data-deferred","2"),google.rll(a,!0,()=>{a.setAttribute("data-imgprocessed","true")}))}};}).call(this);To verify a Chinese supplier, first request their official Chinese business license and check the Unified Social Credit Code on the National Enterprise Credit Information Publicity System (GSXT). Cross-reference the company name, verify banking details match the registered entity, and use third-party auditors like SGS or QIMA to conduct on-site factory inspections. SGS China +4Core Verification StepsBusiness Registration Check: Every legitimate Chinese business has a license. Enter the Chinese name or Unified Social Credit Code into local registry platforms like QCC to verify the registered capital, legal representative, operational status, and business scope. QCC International +2Live Video Audits: Ask for a real-time video tour of the production lines and warehouse on platforms like Zoom or WeChat. Factories will generally accommodate this, while trading companies posing as factories may struggle to do so. Reddit·r/ProductSourcingPayment Routing: Scammers frequently use third-party or personal bank accounts. Ensure the beneficiary name on the Proforma Invoice perfectly matches the registered Chinese company name on their business license. Reddit·r/ProductSourcing +1Document Authenticity: Verify if export certificates (such as CE, FCC, or ISO 9001) are genuine by matching the certificate numbers in the relevant government or issuing agency databases. YouTube·Borderless CommerceUsing B2B Sourcing PlatformsIf you are using platforms like Alibaba or Made-in-China, leverage their built-in verification features to filter out unvetted vendors: YouTube·Made-in-China.com +3Audited Suppliers: Use site filters to display only suppliers that have completed on-site inspections by third-party organizations like SGS or TÜV. YouTube·Made-in-China.comTransaction History: Check the supplier's volume and historical reviews to confirm they have a track record of fulfilling international orders. YouTube·Alibaba.com Buyer CentralFree Audit Reports: Many B2B platforms offer downloadable assessment reports on the supplier's capabilities and certifications directly on their storefronts. YouTube·Made-in-China.comFor tips on navigating these domestic sites and verifying the data:1mHow to Vet China Suppliers for US & EU Compliance CE, FCC, FDA7 months agoYouTube · Borderless CommerceSupplier Verification Program | SGS ChinaSupplier Verification Program Benefits. Our verified supplier mark provides a reliable way for buyers and consumers to choose thei...SGS ChinaHow to Do China Supplier Verification: Practical WaysHere are some ways to verify Chinese suppliers: * **Visit the government database** * China's National Enterprise Credit Informati...SVI Global1:16How to find Verified Suppliers on Made-in-China.com?YouTube·Made-in-China.comChina Factory Sourcing: How to Verify Suppliers Without Traveling to ...China Factory Sourcing: How to Verify Suppliers Without Traveling to China * Check Their Business License. Ask for a scanned copy ...RedditHow to Verify a Supplier in China Before Sending Money (2026 Guide)How to Verify a Supplier in China * Company registration review via QCC.com and GSXT, covering ownership, operational status, lega...Tiroflx3mHow to Vet China Suppliers for US & EU Compliance CE, FCC, FDAYouTube·Borderless CommerceHow to Verify a Chinese Vendor or Supplier in 2025 - QCC1. Conduct a Chinese Business Registration Lookup. A Chinese business registration lookup is the foundation for all supplier verif...QCC InternationalHow to Verify a Chinese Supplier: 7 Methods That Work (2026)Conclusion: The 7-Step Verification Checklist Verifying a Chinese supplier does not have to be complicated, but it does have to be...ChineseCheck0:51How to verify a Chinese supplier when you're not actually in ChinaYouTube·tiainchina0:253 ste
+
+Related linksAI can make mistakes, so double-check responses
+
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+8 Mar 2026 — A legitimate manufacturer should provide: a valid business license (营业执照) showing manufacturing in the business scope, export license, ...
+
+=== Organic titles ===
+1. How to Verify a Chinese Supplier: Complete Guide for ... | https://www.winningadventure.com.au/article/verify-chinese-supplier
+2. A Step-by-Step Guide to Verifying a China Company - QCC | https://www.qcckyc.com/insights-verify-china-company
+3. Chinese Company Due Diligence Checklist: How to Verify ... - FDI China | https://fdichina.com/blog/chinese-company-due-diligence-checklist/
+4. Export registration with China | https://www.agriculture.gov.au/biosecurity-trade/export/export-registration-with-china
+5. How to Verify a Chinese Supplier: 7 Methods That Work ... | https://chinesecheck.com/blog/how-to-verify-chinese-supplier
+6. How to Source Trusted Suppliers in China: A Step-by- ... | https://www.couriersandfreight.com.au/blog/how-to-source-trusted-suppliers-in-china-a-step-by-step-guide
+7. Here's how I verify if a supplier from China is legit in under ... | https://www.reddit.com/r/dropship/comments/1mulcw2/heres_how_i_verify_if_a_supplier_from_china_is/
+8. How to Verify Chinese Suppliers: 5 Tips for Global Buyers | https://www.linkedin.com/pulse/how-verify-chinese-suppliers-5-tips-global-buyers-chemball-y6duc
+9. China Export Licence Rule Changes 2025 | https://www.synergyfreight.com.au/china-export-licence/
+10. New China Export Licence/Compliance Rules | https://auscus.com.au/new-china-export-licence-compliance-rules-how-to-protect-your-supply-chain-and-avoid-origin-side-delays/
+
+=== Links ===
+winningadventure.com.au | https://www.winningadventure.com.au/article/verify-chinese-supplier
+sgsgroup.com.cn | https://www.sgsgroup.com.cn/en-cn/services/supplier-verification-program
+qima.com | https://www.qima.com/
+qcckyc.com | https://www.qcckyc.com/
+qcckyc.com | https://www.qcckyc.com/blog-detail?id=0d8208ef7b664fd7b4d941df1a585ee5
+reddit.com | https://www.reddit.com/r/ProductSourcing/comments/1o997lb/china_factory_sourcing_how_to_verify_suppliers/
+youtube.com | https://www.youtube.com/watch?v=0OOsJNoA2Kk&t=20
+youtube.com | https://www.youtube.com/watch?v=7NQekuKKQxc
+youtube.com | https://www.youtube.com/shorts/Qmbf8ky5X4c
+youtube.com | https://www.youtube.com/watch?v=0OOsJNoA2Kk&t=423
+svigloballtd.com | https://www.svigloballtd.com/sourcing/suppliers-verification/
+tiroflx.com | https://tiroflx.com/how-to-verify-a-supplier-in-china-before-sending-money/
+chinesecheck.com | https://chinesecheck.com/blog/how-to-verify-chinese-supplier
+youtube.com | https://www.youtube.com/shorts/5M6f97cQKuo
+statrys.com | https://statrys.com/blog/find-chinese-suppliers
+insights.made-in-china.com | https://insights.made-in-china.com/Audited-Suppliers-on-Made-in-China-com_uaRGErPcWxHD.html
+qcckyc.com | https://www.qcckyc.com/insights-verify-china-company
+fdichina.com | https://fdichina.com/blog/chinese-company-due-diligence-checklist/
+agriculture.gov.au | https://www.agriculture.gov.au/biosecurity-trade/export/export-registration-with-china
+quora.com | https://www.quora.com/How-do-I-safely-source-products-from-China-without-getting-scammed-or-facing-quality-issues?no_redirect=1
+quora.com | https://www.quora.com/How-do-I-safely-source-products-from-China-without-getting-scammed-or-facing-quality-issues?top_ans=28571276
+quora.com | https://www.quora.com/How-do-I-safely-source-products-from-China-without-getting-scammed-or-facing-quality-issues?top_ans=28571834
+quora.com | https://www.quora.com/How-do-I-safely-source-products-from-China-without-getting-scammed-or-facing-quality-issues?top_ans=28598855
+quora.com | https://www.quora.com/How-do-I-verify-that-a-Chinese-bulk-supplier-is-legitimate-and-trustworthy
+couriersandfreight.com.au | https://www.couriersandfreight.com.au/blog/how-to-source-trusted-suppliers-in-china-a-step-by-step-guide
+
+=== Body text (truncated) ===
+Skip to main content
+Accessibility help
+AI Mode
+All
+Short videos
+Forums
+Shopping
+Images
+Videos
+More
+Tools
+Search Results
+Web results
+How to Verify a Chinese Supplier: Complete Guide for ...
+
+Winning Adventure Global
+https://www.winningadventure.com.au › Articles
+8 Mar 2026 — A legitimate manufacturer should provide: a valid business license (营业执照) showing manufacturing in the business scope, export license, ...
+People also ask
+How to verify a Chinese supplier?
+What is the Chinese 0.1% rule?
+How to tell if a Chinese company is legitimate?
+How to investigate a Chinese company?
+Web results
+Export registration with China
+
+DAFF
+https://www.agriculture.gov.au › biosecurity-trade › ex...
+2 June 2026 — what you submit into the CIFER system should be considered as information that you are sending directly to China.
+Missing: evidence ‎| Show results with: evidence
+How to Verify a Chinese Supplier: 7 Methods That Work ...
+
+ChineseCheck
+https://chinesecheck.com › Blog
+31 Mar 2026 — 7 proven methods to verify Chinese suppliers before paying. Business license checks, court records, factory audits, and more.
+Discussions and forums
+China Factory Sourcing: How to Verify Suppliers Without Traveling to China
+Reddit · 
+r/ProductSourcing
+ · 
+8 comments
+ · 
+9 months ago
+ · 
+Ask for a scanned copy of their Chinese business license (营业执照). ... Inspection companies in China can verify factories on your behalf:.  
+More
+How to safely source products from China without getting scammed or ...
+Quora · 
+1 answer
+ · 
+7 months ago
+ · 
+How do I verify that a Chinese bulk supplier is legitimate and trustworthy?
+Quora · 
+1 answer
+ · 
+3 years ago
+ · 
+See more
+Web results
+How to Source Trusted Suppliers in China: A Step-by- ...
+
+Couriers and Freight
+https://www.couriersandfreight.com.au › blog › how-to...
+17 Jan 2026 — Look for a focused product range, evidence of export experience, valid business licences, and signs that the company operates a factory rather ...
+Here's how I verify if a supplier from China is legit in under ...
+
+Reddit · r/dropship
+70+ comments · 11 months ago
+You can use Certificates & business license to check the supplier's equity structure, history, number of employees, and legal disputes. Of ...Read more
+China Factory Sourcing: How to Verify Suppliers Without ...
+8 posts
+17 Oct 2025
+How I Verify a Chinese Supplier Before Sending Any ...
+4 posts
+8 Apr 2026
+More results from www.reddit.com
+How to Verify Chinese Suppliers: 5 Tips for Global Buyers
+
+LinkedIn · Chemball(Hangzhou) Chemicals Ltd
+3 reactions · 11 months ago
+Tip: Verify that the business scope includes the product category you're sourcing. ✓ 2. Ask for Export Certificates and Compliance Documents.Read more
+China Export Licence Rule Changes 2025
+
+Synergy Freight Management
+https://www.synergyfreight.com.au › Blog
+20 Aug 2025 — To safeguard your imports, request written confirmation and supporting documents from your Chinese suppliers. Here's what to ask for:.Read more
+Missing: product? ‎| Show results with: product?
+New China Export Licence/Compliance Rules
+
+www.auscus.com.au
+https://auscus.com.au › new-china-export-licence-comp...
+9 Feb 2026 — 1. Business licence showing the business scope includes “import &amp; export” · 2. Exporter registration evidence (e.g., China Single Window ...Read more
+People also search for
+Export registered establishment
+Export daff registered establishments
+Export rules
+Export services daff
+Exporting pet food
+Export labelling requirements
+Poultry export
+Export Act
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are not personalised
+Australia
+Adelaide, South Australia - From your IP address
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

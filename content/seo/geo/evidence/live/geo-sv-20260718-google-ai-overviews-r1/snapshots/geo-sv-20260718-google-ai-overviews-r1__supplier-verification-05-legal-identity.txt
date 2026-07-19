@@ -1,0 +1,165 @@
+platform: google-ai-overviews
+runId: geo-sv-20260718-google-ai-overviews-r1
+questionId: supplier-verification-05-legal-identity
+prompt: How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?
+observedUrl: https://www.google.com/search?q=How%20can%20I%20verify%20the%20Chinese%20legal%20name%20and%20Unified%20Social%20Credit%20Code%20on%20a%20supplier%27s%20documents%3F&hl=en-AU&gl=au&pws=0
+pageTitle: How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents? - Google Search
+status: observed-surface-absent
+surface: google-search-serp-en-AU
+brandMention: no
+ownedUrlCited: no
+aioUnavailable: false
+aioLabel: false
+
+=== AI Overview extract ===
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.Thinking
+
+31 Mar 2026 — The most reliable way to verify a Chinese supplier is to cross-reference their business license information against official Chinese government ...Read more
+
+19 June 2026 — You search it by entering a company's exact Simplified Chinese name or its 18-character Unified Social Credit Code, then solving a CAPTCHA.Read more
+
+Search and verify Chinese companies by name or USCC. Use the company name, Chinese legal name, or 18-digit Unified Social Credit Code. ChinVerify returns ...
+
+=== Organic titles ===
+1. China USCC Lookup Guide 2026: Verify a Unified Social Credit ... - QCC | https://www.qcckyc.com/blog-detail?id=aa00f70d8ce044c89d59e65134525ae7#:~:text=The%20Unified%20Social%20Credit%20Code%20is%20the%2018%2Dcharacter%20ID,status%2C%20and%20core%20registration%20data.
+2. A Step-by-Step Guide to Verifying a China Company - QCC | https://www.qcckyc.com/insights-verify-china-company
+3. How to Verify a Chinese Supplier: 7 Methods That Work ... | https://chinesecheck.com/blog/how-to-verify-chinese-supplier
+4. How to Spot a Fake Chinese Business License in 5 Minutes | https://www.qcckyc.com/blog-detail/china-business-license-check
+5. China Company Search & USCC Lookup | https://www.chinverify.com/en/checker
+6. How to Verify Chinese Companies To Avoid Scams? | https://fdichina.com/blog/china-company-verification/
+7. 5 Ways to Verify Chinese Companies Before Doing Business | https://blog.verifychinesesuppliers.com/5-ways-verify-chinese-companies/
+8. How to Verify a Chinese Supplier is Legitimate (Scam ... | https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention
+9. Validate China USCI (Unified Social Credit Code) | https://lookuptax.com/validate/china/usci
+10. How to verify a Chinese supplier when you're not actually in ... | https://www.youtube.com/shorts/5M6f97cQKuo
+
+=== Links ===
+qcckyc.com | https://www.qcckyc.com/blog-detail?id=aa00f70d8ce044c89d59e65134525ae7#:~:text=The%20Unified%20Social%20Credit%20Code%20is%20the%2018%2Dcharacter%20ID,status%2C%20and%20core%20registration%20data.
+qcckyc.com | https://www.qcckyc.com/insights-verify-china-company
+chinesecheck.com | https://chinesecheck.com/blog/how-to-verify-chinese-supplier
+chinesecheck.com | https://chinesecheck.com/blog/how-to-verify-chinese-supplier#:~:text=The%20most%20reliable%20way%20to,information%20against%20official%20Chinese%20government
+qcckyc.com | https://www.qcckyc.com/blog-detail/china-business-license-check
+qcckyc.com | https://www.qcckyc.com/blog-detail/china-business-license-check#:~:text=You%20search%20it%20by%20entering,Code%2C%20then%20solving%20a%20CAPTCHA.
+chinverify.com | https://www.chinverify.com/en/checker
+fdichina.com | https://fdichina.com/blog/china-company-verification/
+fdichina.com | https://fdichina.com/blog/china-company-verification/#:~:text=A%20key%20step%20in%20China,18%2Ddigit%20number%20identifying%20the%20company.
+blog.verifychinesesuppliers.com | https://blog.verifychinesesuppliers.com/5-ways-verify-chinese-companies/
+blog.verifychinesesuppliers.com | https://blog.verifychinesesuppliers.com/5-ways-verify-chinese-companies/#:~:text=1.%20Check%20the%20Unified%20Social,Credit%20Code%20(USCC)&text=2.%20Request%20and%20Verify%20the,Business%20License&text=3.%20Use%20Professional%20Verification%20Services&text=4.%20Verify%20Factory%20and%20Operations
+betterproductsourcing.com.au | https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention
+betterproductsourcing.com.au | https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention#:~:text=Registration%20Number%2FUnified%20Social%20Credit%20Code%3A,legally%20responsible%20for%20the%20company.
+lookuptax.com | https://lookuptax.com/validate/china/usci
+youtube.com | https://www.youtube.com/shorts/5M6f97cQKuo
+quora.com | https://www.quora.com/How-can-I-verify-a-China-company-s-legitimacy-and-check-their-credit?no_redirect=1
+quora.com | https://www.quora.com/What-is-the-best-way-for-a-foreigner-to-verify-a-Chinese-company
+quora.com | https://www.quora.com/What-is-the-best-way-for-a-foreigner-to-verify-a-Chinese-company?top_ans=1477743632485986
+quora.com | https://www.quora.com/What-is-the-best-way-for-a-foreigner-to-verify-a-Chinese-company?top_ans=77681030
+quora.com | https://www.quora.com/What-is-the-best-way-for-a-foreigner-to-verify-a-Chinese-company?top_ans=5129789
+
+=== Body text (truncated) ===
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+News
+Shopping
+Images
+Videos
+More
+Tools
+Search Results
+People also ask
+How do I verify my unified social credit code in China?
+How to verify Chinese suppliers?
+How to check if a Chinese company is real?
+How to check if a supplier is legit?
+Web results
+How to Verify a Chinese Supplier: 7 Methods That Work ...
+
+ChineseCheck
+https://chinesecheck.com › Blog
+31 Mar 2026 — The most reliable way to verify a Chinese supplier is to cross-reference their business license information against official Chinese government ...Read more
+How to Spot a Fake Chinese Business License in 5 Minutes
+
+QCC International
+https://www.qcckyc.com › blog-detail › china-business-li...
+19 June 2026 — You search it by entering a company's exact Simplified Chinese name or its 18-character Unified Social Credit Code, then solving a CAPTCHA.Read more
+China Company Search & USCC Lookup
+
+ChinVerify
+https://www.chinverify.com › checker
+Search and verify Chinese companies by name or USCC. Use the company name, Chinese legal name, or 18-digit Unified Social Credit Code. ChinVerify returns ...
+How to Verify Chinese Companies To Avoid Scams?
+
+FDI China
+https://fdichina.com › blog › china-company-verification
+4 Mar 2025 — A key step in China company verification is requesting a copy of the business license and verifying the following details: Unified Social Credit ...Read more
+5 Ways to Verify Chinese Companies Before Doing Business
+
+verifychinesesuppliers.com
+https://blog.verifychinesesuppliers.com › 5-ways-verify...
+12 Jan 2026 — 1. Check the Unified Social Credit Code (USCC) · 2. Request and Verify the Business License · 3. Use Professional Verification Services · 4. Verify ...Read more
+How to Verify a Chinese Supplier is Legitimate (Scam ...
+
+betterproductsourcing.com.au
+https://betterproductsourcing.com.au › Blog
+8 Jan 2026 — Registration Number/Unified Social Credit Code: 18-digit code unique to the company. Verify on gsxt.gov.cn. Legal Representative: The owner or ...Read more
+Validate China USCI (Unified Social Credit Code)
+
+Lookuptax
+https://lookuptax.com › Supported Countries
+With the Lookuptax API, you can validate hundreds or thousands of Chinese USCIs in a single batch run, making it ideal for periodic supplier due-diligence ...
+How to verify a Chinese supplier when you're not actually in ...
+
+YouTube · tiainchina
+1.1K+ views · 1 week ago
+0:51
+How to verify a Chinese supplier when you're not actually in China - YouTube. Learn more @tiainchina Subscribe
+Discussions and forums
+How to verify a China company's legitimacy and check their credit
+Quora · 
+1 answer
+ · 
+11 months ago
+ · 
+The document contains this critical 18-digit alphanumeric string, known as the Unified Social Credit Code (统一社会信用代码). If a company ...  
+More
+What is the best way for a foreigner to verify a Chinese company?
+Quora · 
+10+ answers
+ · 
+12 years ago
+ · 
+See more
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are not personalised
+Australia
+Adelaide, South Australia - From your IP address
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

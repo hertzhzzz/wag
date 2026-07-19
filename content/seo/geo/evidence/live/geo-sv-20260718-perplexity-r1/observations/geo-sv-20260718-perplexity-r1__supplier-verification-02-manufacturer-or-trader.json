@@ -1,0 +1,98 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-02-manufacturer-or-trader",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-02-manufacturer-or-trader",
+  "prompt": "How can an Australian buyer distinguish a Chinese manufacturer from a trading company?",
+  "promptHash": "sha256:bc07bb82d1ac72e8e36b042b13ca5c7cefd86dce0eadd31d7fc2632422e5b0a8",
+  "observedAt": "2026-07-18T13:27:57.365Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "Swift Cargo",
+    "SGS",
+    "Intertek"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://xsourcinggroup.com/factory-vs-trading-company-china/",
+      "title": "xsourcinggroup",
+      "domain": "xsourcinggroup.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.v-trust.com/en/blog/how-can-i-distinguish-manufacturers-from-trading-companies",
+      "title": "v-trust",
+      "domain": "v-trust.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.linkedin.com/pulse/how-distinguish-between-manufacturer-trading-company-carol-ei50c",
+      "title": "linkedin\nHow to Distinguish Between a Manufacturer and a Trading ...\nWhen sourcing from China, identifying a genuine manufacturer rather than a trading company ",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://chinesecheck.com/blog/china-trading-company-vs-manufacturer",
+      "title": "chinesecheck\nChina Trading Company vs Manufacturer: How to Tell the Difference ...\nLearn 7+ proven methods to tell if your Chinese supplier is a trading company",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.newbuyingagent.com/resources/china-manufacturer-vs-supplier-vs-trading-company-critical-differences-explained",
+      "title": "newbuyingagent\nManufacturer, Supplier, or Trading Company? China Sourcing 2026\nChina manufacturer vs supplier vs trading company — the differences decide your p",
+      "domain": "newbuyingagent.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.sourcingarts.com/distinguish-china-manufacturers-and-trading-companies/",
+      "title": "sourcingarts\nHow To Choose Factory & trading Company When Import ...\n80% of Alibaba's Chinese suppliers are traders. If you can find a real factory, it will sav",
+      "domain": "sourcingarts.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.winningadventure.com.au/article/factory-vs-trading-company-china-guide",
+      "title": "winningadventure\nFactory vs Trading Company: How to Tell Who You're ...\nTrading companies look more professional than real factories. Learn the 5 concrete ways ",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://sinospect.com/resources/china-supplier-qualification/manufacturer-vs-trading-company",
+      "title": "sinospect\nHow can you tell if a Chinese supplier is a manufacturer or a trading ...\nTell a Chinese manufacturer from a trading company before you order: check t",
+      "domain": "sinospect.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+      "title": "blog.swiftcargo\nHow to Verify a Supplier Before Shipping: A Practical Guide for Australian Importers - Swift Cargo Solutions\nHow Australian importers verify ove",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.advantasourcing.com/blog/factory-vs-trading-company-china",
+      "title": "advantasourcing\nFactory vs Trading Company China: Know the Difference\nThink you're buying direct from a Chinese factory? Many importers aren't. Learn how to ver",
+      "domain": "advantasourcing.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-02-manufacturer-or-trader.txt",
+    "hash": "sha256:996775381a18038c7e2e5a2ab41e36d8ff7362e22c40b51f49a1a65203af1737",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Search https://www.perplexity.ai/search/43039cb2-4993-439e-8f93-ace0dcb63900"
+}

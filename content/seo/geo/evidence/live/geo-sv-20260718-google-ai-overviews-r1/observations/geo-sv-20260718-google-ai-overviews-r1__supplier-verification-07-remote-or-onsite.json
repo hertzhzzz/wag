@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-07-remote-or-onsite",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-07-remote-or-onsite",
+  "prompt": "When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?",
+  "promptHash": "sha256:a50351bbb6132c77b2836cb0cb1de2c90621180f15068f57e7b051df7aa19bcf",
+  "observedAt": "2026-07-18T13:46:47.630Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "satterley.com.au",
+    "accc.gov.au",
+    "re88.com.au",
+    "jelliscraig.com.au",
+    "sterlingproperty.au",
+    "amltranche.com.au"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://satterley.com.au/verification-of-identity/",
+      "title": "New Buyer Identity Verification Requirements",
+      "domain": "satterley.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.accc.gov.au/consumers/specific-products-and-activities/real-estate#:~:text=a%20lower%20price).-,Encouraging%20higher%20offers%20or%20bids,buyer%20is%20willing%20to%20pay",
+      "title": "Real estate | ACCC",
+      "domain": "accc.gov.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://re88.com.au/blog/important-new-aml-identity-verification-requirements-for-property-buyers-sellers",
+      "title": "Important New AML Identity Verification Requirements for ...",
+      "domain": "re88.com.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.jelliscraig.com.au/blog/understanding-the-new-identity-verification-requirements-for-property-vendors-and-purchasers",
+      "title": "Understanding the new identity verification…",
+      "domain": "jelliscraig.com.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://sterlingproperty.au/aml-laws-buyers-sellers-2026/",
+      "title": "What the New AML Laws Mean for Buyers and Sellers",
+      "domain": "sterlingproperty.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://amltranche.com.au/blog/aml-buyers-agent-obligations-australia",
+      "title": "AML/CTF Obligations for Buyers Agents in Australia",
+      "domain": "amltranche.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://realway.com.au/blog/new-aml-rules-are-coming-to-australian-property",
+      "title": "New AML Rules Are Coming to Australian Property",
+      "domain": "realway.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.buyersagents.com.au/guides/verify-buyers-agent",
+      "title": "How to Verify a Buyers Agent",
+      "domain": "buyersagents.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.percival.com.au/aml-ctf-answers-for-buyers-and-sellers/",
+      "title": "AML/CTF Answers for Buyers and Sellers",
+      "domain": "percival.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "How to Verify a Chinese Supplier: Complete Guide for ...",
+      "domain": "winningadventure.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-07-remote-or-onsite.txt",
+    "hash": "sha256:3152ac8d0cb6f5469eb4b1a18224631ad375e577054c4c78fd5aea8777797233",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

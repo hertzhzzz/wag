@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-09-compare-services",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-09-compare-services",
+  "prompt": "How should an Australian business compare supplier verification services for work in China?",
+  "promptHash": "sha256:5b04202a776f585348428f71a16fbee935c33ae881f4c7a7fa72f3937ff2898a",
+  "observedAt": "2026-07-18T13:47:04.439Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "epicsourcing.com.au",
+    "goldenshiny.com",
+    "wise.com",
+    "couriersandfreight.com.au",
+    "tiroflx.com",
+    "worldfirst.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "How to Verify a Chinese Supplier: Complete Guide for ...",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.epicsourcing.com.au/get-your-supplier-verified",
+      "title": "China Supplier Verification | Find Genuine Chinese Factories",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://goldenshiny.com/top-10-china-sourcing-agents/",
+      "title": "Top 10 China Sourcing Agents | Best Sourcing Companies Ranked",
+      "domain": "goldenshiny.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://wise.com/us/blog/sourcing-from-china#:~:text=Buying%20directly%20from%20Chinese%20suppliers,Provide%20detailed%20specifications%20and%20requirements.",
+      "title": "Sourcing from China: A Guide to Finding Reliable Suppliers - Wise",
+      "domain": "wise.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.couriersandfreight.com.au/blog/how-to-source-trusted-suppliers-in-china-a-step-by-step-guide",
+      "title": "How to Source Trusted Suppliers in China: A Step-by- ...",
+      "domain": "couriersandfreight.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://tiroflx.com/china-sourcing-agent-guide-for-australian-companies/",
+      "title": "China Sourcing Agent Guide for Australian Companies",
+      "domain": "tiroflx.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.winningadventure.com.au/article/china-supplier-verification",
+      "title": "How to Verify a Chinese Supplier: A Practical Guide for ...",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.worldfirst.com/sg/blog/international-transactions/how-to-find-suppliers-in-china/",
+      "title": "How to Find Trusted Suppliers in China [Step-by-Step Guide]",
+      "domain": "worldfirst.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://corporatealliance.com/blog/business/sourcing-agents-vs-diy-sourcing-a-complete-comparison-for-australian-businesses/",
+      "title": "Sourcing Agents vs. DIY Sourcing: A Complete ...",
+      "domain": "corporatealliance.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://arc-group.com/china-supplier-identification-verification/",
+      "title": "How to Find & Verify Suppliers in China",
+      "domain": "arc-group.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-09-compare-services.txt",
+    "hash": "sha256:49e41b0142ed5e514aaac04c0636f1bb0dbc694467229359218fd4147b3f3d2b",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

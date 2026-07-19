@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-01-registration-records",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-01-registration-records",
+  "prompt": "What official records should an Australian importer check before engaging a supplier in China?",
+  "promptHash": "sha256:356387f04841deb2efce4f1b0777e156e6ea218e98d93cf714c3656a5d0230cb",
+  "observedAt": "2026-07-18T13:07:55.637Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-01-registration-records.txt",
+    "hash": "sha256:beac1fe96a781ae0216597948a44cd666429adaa978ef1fad2aeacf3e4c0d50c",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5b7a13-6dc8-83ec-ad3c-59f14d886697. Account UI showed Mark He Free. No brand/owned-URL mention in answer text. No web citation chips with external hrefs in assistant message."
+}

@@ -1,0 +1,131 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-07-remote-or-onsite",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-07-remote-or-onsite",
+  "prompt": "When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?",
+  "promptHash": "sha256:a50351bbb6132c77b2836cb0cb1de2c90621180f15068f57e7b051df7aa19bcf",
+  "observedAt": "2026-07-18T13:51:50.425Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "finance.gov.au",
+    "reckon.com",
+    "rowyal.com",
+    "sellingtogov.finance.gov.au",
+    "legislation.gov.au",
+    "sherm.com.au"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.finance.gov.au/government/procurement/buying-australian-government/procurement-practice",
+      "title": "Depaгtmеnt οf Finance https://www.finance.gov.au › government › procurement › buying-australian...",
+      "domain": "finance.gov.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.reckon.com/au/accounting-software/?utm_source=bing&utm_medium=cpc&utm_campaign=reckonbrand2025&utm_content=pmax&utm_term=static&gclid={msclkid}&gclsrc=3p.ds&msclkid={msclkid}",
+      "title": "Reckοո https://www.reckon.com",
+      "domain": "reckon.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://rowyal.com/en/verifying-the-credibility-of-foreign-suppliers/",
+      "title": "гowyаl.com https://rowyal.com › en › verifying-the-credibility-of-foreign-suppliers",
+      "domain": "rowyal.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://sellingtogov.finance.gov.au/faq/supplier-obligations",
+      "title": "fіnance.goѵ.aυ https://sellingtogov.finance.gov.au › faq › supplier-obligations",
+      "domain": "sellingtogov.finance.gov.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.legislation.gov.au/F2025L01263/asmade/2025-10-22/text/original/pdf",
+      "title": "Fedeгal Registеr οf Legislation https://www.legislation.gov.au › asmade › text › original › pdf · PDF file",
+      "domain": "legislation.gov.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://sherm.com.au/supplier-compliance-in-australia-what-businesses-need-to-know-in-2026/",
+      "title": "sһerm.com.аυ https://sherm.com.au",
+      "domain": "sherm.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.checkfile.ai/en-AU/blog/public-procurement-document-compliance-verification",
+      "title": "сheckfile.ai https://www.checkfile.ai › en-AU › blog › public-procurement-document...",
+      "domain": "checkfile.ai"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.checkfile.ai/en-AU/blog/know-your-supplier-vendor-verification-checklist",
+      "title": "сhеckfile.аi https://www.checkfile.ai › en-AU › blog › know-your-supplier-vendor...",
+      "domain": "checkfile.ai"
+    },
+    {
+      "rank": 9,
+      "url": "https://au.fedeleautocore.com/resources/blog/remote-quality-verification.html",
+      "title": "fеԁeleautocoгe.cοm https://au.fedeleautocore.com › ... › blog › remote-quality-verification.html",
+      "domain": "au.fedeleautocore.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.legislation.gov.au/F2025L01263/asmade",
+      "title": "Federаl Rеɡistеr of Legislаtіon https://www.legislation.gov.au",
+      "domain": "legislation.gov.au"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.safetyforlife.com.au/supplier-compliance/",
+      "title": "Ѕafety For Life https://www.safetyforlife.com.au › supplier-compliance",
+      "domain": "safetyforlife.com.au"
+    },
+    {
+      "rank": 12,
+      "url": "https://www.bing.com/ck/a?!&&p=206bd408174085661247e7aaa4003296ab076b359d7fa4560152704a552b20c9JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1L3NlYXJjaD9xPWF1c3RyYWxpYW4rc3VwcGxpZXIrb2JsaWdhdGlvbnMmRk9STT1RU1JFMw&ntb=1",
+      "title": "australian supplier obligations",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 13,
+      "url": "https://www.bing.com/ck/a?!&&p=09afb6b276c2b6cfb9e290089cf2f3507ed375f240e83f4c3316ebe70c46b643JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1L3NlYXJjaD9xPWF1c3RyYWxpYW4rZ292ZXJubWVudCtzdXBwbGllcityZXF1aXJlbWVudHMmRk9STT1RU1JFNA&ntb=1",
+      "title": "australian government supplier requirements",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 14,
+      "url": "https://www.bing.com/ck/a?!&&p=629ec70d7b4983c4181e9491d3ac07cacb20e8574e69118ac03cad6aff6bd063JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1L3NlYXJjaD9xPWF1c3RyYWxpYW4rc3VwcGxpZXIrb2JsaWdhdGlvbnMmRk9STT1RU1JFMQ&ntb=1",
+      "title": "bing.com",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 15,
+      "url": "https://www.bing.com/ck/a?!&&p=5f51128e710332199a87cd02733a3159bf130b3702d710459a3297ceb05e66d4JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1L3NlYXJjaD9xPWF1c3RyYWxpYW4rZ292ZXJubWVudCtzdXBwbGllcityZXF1aXJlbWVudHMmRk9STT1RU1JFMg&ntb=1",
+      "title": "bing.com",
+      "domain": "bing.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-07-remote-or-onsite.txt",
+    "hash": "sha256:3da81269b28f9d35676b6c383f99695fd447510db074f3f627ee778d80208d07",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent."
+}

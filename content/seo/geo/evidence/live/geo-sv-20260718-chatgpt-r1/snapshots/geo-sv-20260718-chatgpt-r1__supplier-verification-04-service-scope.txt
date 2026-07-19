@@ -1,0 +1,157 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-04-service-scope
+observedAt: 2026-07-18T13:21:18.681Z
+url: https://chatgpt.com/c/6a5b7db9-0df8-83ec-b1c3-2633d6153473
+title: Supplier Verification for Importers
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What should be included in a paid supplier verification service for an Australian importer?
+
+## User message (UI)
+What should be included in a paid supplier verification service for an Australian importer?
+
+## Assistant answer (UI text)
+For an Australian importer sourcing from China, a paid supplier verification service should go well beyond checking whether a business registration exists. Its purpose is to reduce commercial, operational, legal, and quality risk before purchase orders are placed.
+
+A comprehensive verification package would typically include:
+
+Category	What should be verified	Why it matters
+Company identity	Legal company name (Chinese), Unified Social Credit Code, registration status, registered address, legal representative, registered capital, establishment date	Confirms the supplier is a legitimate registered business.
+Export capability	Whether the company can legally export directly or relies on an export agent	Determines who will actually appear as the exporter on customs documentation.
+Business scope	Products the company is legally permitted to manufacture or trade	Ensures the goods fall within its registered activities.
+Ownership	Parent company, subsidiaries, beneficial ownership (where available)	Identifies related-party risks and corporate structure.
+Financial status	Registered capital, operating status, bankruptcy proceedings, abnormal business listings	Helps identify financially distressed suppliers.
+Litigation	Court cases, enforcement actions, administrative penalties, IP disputes	Reveals legal and compliance risks.
+Tax status	Tax registration and abnormal tax records (where publicly available)	Indicates regulatory compliance.
+Manufacturing capability	Factory address, production lines, machinery, employee count, production capacity	Distinguishes manufacturers from trading companies.
+Quality systems	ISO certifications, quality management procedures, calibration systems	Demonstrates process maturity.
+Product certifications	CE, FCC, RCM, UL, RoHS, REACH, or other relevant approvals	Confirms products can meet destination-market requirements.
+Export history	Main export markets, shipment frequency, customs records (where available)	Shows actual exporting experience.
+Customer references	Existing overseas customers (when permission is granted)	Provides independent confidence.
+Supply chain	Key raw material suppliers and subcontractors	Identifies concentration risks.
+ESG & labour	Environmental permits, labour compliance, audit reports (SMETA, BSCI, SA8000, etc.)	Important for larger importers and retailers.
+Insurance	Product liability insurance and business insurance	Useful if defects or recalls occur.
+Intellectual property	Trademark ownership, patent disputes, infringement history	Important for branded or OEM products.
+Factory verification
+
+A higher-tier service should include an on-site audit rather than relying only on document review.
+
+The audit should verify:
+
+Physical existence of the factory
+
+Production actually occurring
+
+Number of workers
+
+Equipment matching claimed capabilities
+
+Warehouse inventory
+
+Incoming quality inspection
+
+Final quality inspection
+
+Packaging process
+
+Health and safety conditions
+
+Photographs and videos
+
+GPS location confirmation
+
+Export compliance
+
+For Australian importers, verification should specifically confirm:
+
+Ability to issue commercial invoices and packing lists correctly
+
+Export customs registration
+
+Experience exporting to Australia
+
+Experience with Australian standards
+
+Understanding of RCM (where applicable)
+
+Ability to provide certificates of origin if required
+
+Risk assessment
+
+Rather than simply presenting raw information, the report should include an overall assessment, for example:
+
+Identity risk
+
+Financial risk
+
+Production risk
+
+Quality risk
+
+Export risk
+
+Compliance risk
+
+Overall supplier rating (e.g. Low / Medium / High risk)
+
+Each rating should be supported by evidence.
+
+Documentation package
+
+The final deliverable should include:
+
+Company registration documents
+
+Business licence translation
+
+Corporate ownership chart
+
+Factory photographs
+
+Production capability summary
+
+Certification verification
+
+Litigation search results
+
+Sanctions screening
+
+Verification of contact details
+
+Recommendations and identified red flags
+
+Optional premium services
+
+For larger purchases, additional services can provide further assurance:
+
+Initial factory audit before ordering
+
+Pre-production capability assessment
+
+During-production inspections
+
+Pre-shipment inspection
+
+Container loading supervision
+
+Product testing at accredited laboratories
+
+Ongoing supplier monitoring with alerts for changes such as deregistration, litigation, or ownership changes
+
+For Australian SMEs importing from China, the strongest value typically comes from combining desktop due diligence, an on-site factory audit, and pre-shipment quality inspection. This approach addresses the three largest sources of risk: verifying the supplier is legitimate, confirming it can manufacture the product as claimed, and ensuring the shipped goods meet the agreed specifications before they leave China.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

@@ -1,0 +1,134 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-10-stop-findings
+observedAt: 2026-07-18T13:24:13.546Z
+url: https://chatgpt.com/c/6a5b7e6f-febc-83ec-b5ba-7e0010e520d0
+title: Supplier Verification Red Flags
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?
+
+## User message (UI)
+What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?
+
+## Assistant answer (UI text)
+An Australian buyer should generally stop or pause issuing a purchase order if supplier verification reveals issues that materially increase the risk of fraud, non-delivery, regulatory breaches, or inability to enforce the contract.
+
+Immediate stop conditions (red flags)
+Finding	Why it should stop the purchase
+Bank account does not match the verified legal entity	Common indicator of payment fraud, fake suppliers, or unauthorised intermediaries. Do not pay until ownership is independently verified.
+Supplier refuses to provide official business registration details	A legitimate exporter should be able to provide its Chinese legal name, Unified Social Credit Code, business licence, and registered address.
+Business licence information cannot be verified on official Chinese government databases	May indicate forged documents, an inactive company, or a fake identity.
+Company name on contract, invoice, bank account, and certificates do not match	Creates enforcement and payment disputes. Require a documented relationship (e.g., authorised trading company agreement).
+Supplier asks for payment to a personal account or unrelated offshore account	High fraud risk and often inconsistent with normal business practice.
+Supplier refuses video call, factory inspection, or basic verification	Especially concerning for high-value orders or products requiring manufacturing capability.
+Factory claims cannot be confirmed	If the supplier presents itself as a manufacturer but verification shows only an office, apartment, or unrelated location, reassess.
+Certificates appear altered, copied, expired, or unverifiable	Could expose the buyer to Australian compliance failures, recalls, or customs problems.
+Supplier cannot prove export capability	Lack of export registration, customs history, or experience can indicate a broker or inexperienced entity.
+Unrealistically low pricing compared with market suppliers	Often indicates counterfeit goods, lower specifications, hidden costs, or fraud.
+Pressure to pay quickly before verification is complete	Fraudulent suppliers commonly create urgency.
+Supplier changes bank details shortly before payment	Treat as a potential business email compromise (BEC) event until independently confirmed.
+Product compliance findings that should stop the order
+
+For regulated or safety-sensitive products, stop if the supplier cannot provide:
+
+Valid test reports from recognised laboratories.
+
+Correct Australian compliance documentation where required.
+
+Evidence that certificates apply to the exact model being purchased.
+
+Traceable product specifications.
+
+Material declarations where relevant.
+
+Examples:
+
+Electrical equipment: missing or questionable RCM-related evidence.
+
+Wireless products: missing Australian radio compliance evidence.
+
+Safety equipment: missing applicable certification.
+
+Children's products: missing required safety documentation.
+
+Manufacturing capability findings
+
+Stop or require further investigation if:
+
+The factory address differs from the address shown in documents.
+
+The supplier cannot show production equipment, workers, or quality-control processes.
+
+Production capacity claims are unrealistic.
+
+The supplier refuses to identify subcontractors.
+
+Previous customer references cannot be verified.
+
+Samples are significantly different from production commitments.
+
+Legal and ownership concerns
+
+Do not proceed if:
+
+The company has abnormal legal status (for example, cancelled, revoked, or inactive registration).
+
+Ownership information is inconsistent.
+
+The supplier has repeated legal disputes related to fraud, contracts, or unpaid debts.
+
+The supplier refuses written contracts governed by clear terms.
+
+Payment-related stop rules
+
+Before paying a deposit:
+
+Verify the beneficiary name independently using contact details already known, not only email instructions.
+
+Confirm payment instructions by phone/video with a verified company representative.
+
+Avoid changing payment destinations based solely on email messages.
+
+A common safer structure for first orders:
+
+Small trial order.
+
+Third-party inspection before shipment.
+
+Controlled payment milestones.
+
+Balance payment only after inspection approval.
+
+A practical decision rule
+
+An Australian importer should usually not proceed when any of these occur:
+
+❌ Identity cannot be independently verified
+
+❌ Payment recipient cannot be verified
+
+❌ Compliance documents cannot be validated
+
+❌ Supplier refuses reasonable verification
+
+❌ Manufacturing claims cannot be proven
+
+❌ The supplier identity changes during negotiations
+
+One major unresolved red flag is often enough to delay the purchase order; multiple minor inconsistencies should be treated as a combined risk signal.
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-06-false-documents",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-06-false-documents",
+  "prompt": "What warning signs suggest that a Chinese supplier's business licence or certificates may be false?",
+  "promptHash": "sha256:8d6588d86a3de05fb01c172aed1ad1af0091f1875eddb5157c400bcad6791afe",
+  "observedAt": "2026-07-18T13:46:39.264Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "qcckyc.com",
+    "fdichina.com",
+    "chinesecheck.com",
+    "reddit.com",
+    "betterproductsourcing.com.au",
+    "mybusiness.com.au"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.qcckyc.com/blog-detail/china-business-license-check",
+      "title": "How to Spot a Fake Chinese Business License in 5 Minutes",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://fdichina.com/blog/china-company-verification/",
+      "title": "How to Verify Chinese Companies To Avoid Scams? - FDI China",
+      "domain": "fdichina.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://fdichina.com/blog/chinese-company-due-diligence-checklist/",
+      "title": "Chinese Company Due Diligence Checklist: How to Verify ... - FDI China",
+      "domain": "fdichina.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://chinesecheck.com/blog/how-to-verify-chinese-supplier",
+      "title": "How to Verify a Chinese Supplier: 7 Methods That Work ...",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "How to Verify a Chinese Supplier: Complete Guide for ...",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.reddit.com/r/dropship/comments/1mulcw2/heres_how_i_verify_if_a_supplier_from_china_is/",
+      "title": "Here's how I verify if a supplier from China is legit in under ...",
+      "domain": "reddit.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention",
+      "title": "How to Verify a Chinese Supplier is Legitimate (Scam ...",
+      "domain": "betterproductsourcing.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://fdichina.com/blog/china-company-verification/",
+      "title": "How to Verify Chinese Companies To Avoid Scams?",
+      "domain": "fdichina.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.mybusiness.com.au/how-we-help/grow-your-business/preparing-to-export/chinese-supplier-due-diligence-checklist",
+      "title": "Chinese supplier due diligence checklist",
+      "domain": "mybusiness.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.china-agent.com/blog/how-to-check-if-a-china-company-is-legit-real-verification-guide",
+      "title": "How to Check if a China Company Is Legit",
+      "domain": "china-agent.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-06-false-documents.txt",
+    "hash": "sha256:122913ce3cc832ebb2e6e6d7b11ee4c5b2d91072129858160af7ca3126c82104",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

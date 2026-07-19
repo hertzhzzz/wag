@@ -1,0 +1,129 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-08-bank-details",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-08-bank-details",
+  "prompt": "How should I verify bank account details before paying a new Chinese supplier?",
+  "promptHash": "sha256:287cc2c5550ea5cba5092e9858ae4fae2abebb9ac534f76d175d28756d283b0f",
+  "observedAt": "2026-07-18T13:52:00.625Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "westworldtrade.com",
+    "epicsourcing.com.au",
+    "blog.ibanfirst.com",
+    "verisupplier.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.bing.com/aclick?ld=e8xUMaNZi9gRo1ImsBoGZRxzVUCUz3BtBTNc3e16g5RyXrPbMYiqD7LY2-Fej1n10a74n6lEa3rppOW5C0-c3_qjoZXgnPk-AS9aXgADPlXQAhI0MLZONu8XoohCpuevikiJKFzevQxUarOORmy5DzOnOXphcdgPuZkRqNQ3-BwaXF3MifY9QgBXTx9GMUWSKUM-hNMt05dd-u5ATwi8xU9n_sQGo&u=aHR0cHMlM2ElMmYlMmZlenlzaGllbGQuY29tLmF1JTJmaG93LWl0LXdvcmtzJTJmJTNmdXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkcGFpZCUyNnV0bV9jYW1wYWlnbiUzZDQ4Nzk4OTM2MyUyNnV0bV9jb250ZW50JTNkMTIzMzY1MzU2MjgxNjk2OCUyNnV0bV90ZXJtJTNkYmFuayUyNTIwYWNjb3VudCUyNTIwdmVyaWZpY2F0aW9uJTI2Z2FkaWQlM2QlMjZtc2Nsa2lkJTNkZTg3NGRmNjg4MGJhMTc1MzU5NmZiNTMzMDQ0MmZjNmM&rlid=e874df6880ba1753596fb5330442fc6c&ntb=1",
+      "title": "Verify Before You Pay | Bank Account Verification",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.bing.com/aclick?ld=e8J-Ny3NhwLW8qPKdyGdaIdjVUCUzYo3o7a7Lzmc_AQ-YPIVAmXNr2lYZbkeX5aQ1ZjMlTjMIGjK0AQAOF7wwPitG7M_wPm2bzPZijmim7IGo_cVzxn-gCstjW4uTioImomWf8hkyp8G1b4_6CC7EkkCi4ltoH8wjYn7NytrRl949aHgvivnnxHw2Z6_vCDLAT0TjQSLuywB6PM_mqZrKCSkzqm7s&u=aHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZhdSUyZmFjY291bnRpbmctc29mdHdhcmUlMmZwYXktYmlsbHMlMmYlM2Z1dG1fc291cmNlJTNkTUlDUk9TT0ZUJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEFVJTJiLSUyYk5CJTJiLSUyYkxGJTJiLSUyYlNNQiUyYi0lMmJEU0ElMmJDQSUyNnV0bV9jb250ZW50JTNkQWNjb3VudGluZyUyNnV0bV90ZXJtJTNkRFlOQU1JQyUyYlNFQVJDSCUyYkFEUyUyNmRzX2tpZCUzZDI0MjQ3MzA5MDE0NDIlMjZnY2xpZCUzZDdhMmNkMWYwNTg5NDFjNzVlMTFiYmJhYmRjNmNiN2Q3JTI2Z2Nsc3JjJTNkM3AuZHMlMjZtc2Nsa2lkJTNkN2EyY2QxZjA1ODk0MWM3NWUxMWJiYmFiZGM2Y2I3ZDc&rlid=7a2cd1f058941c75e11bbbabdc6cb7d7&ntb=1",
+      "title": "Xero Accounts Payable - Xero Australia",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.bing.com/aclick?ld=e87ltYbIij47xqFjQSNjLbXDVUCUyEVrOiLu6ekZje7zq3TiYN5fmDEFV8ly-ldnUBJh3tSDUH36hsd6Yjn41Mo-ir4RKZ8gKTOhQzJgI1U6NoHFVACyk9-_MO4fRhaPVdUquXESm_DJBjY3nbL8scBola9GSmIxsM0HLDHx7ZcC6y4sJOUATxegc_-Ju5A0OaL-O2Isl2SNqBDuV853lmigbPjDR-heFSOze8LH3Q-TUcu6Ik&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2QzOTcwMDA4MjE2NTgyMjkzNyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODkwNTY1NzYyMCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxNTI3MzkzOTk1JTI2ZHNfYV9hZ2lkJTNkMTgyMjg0OTg3NTY0JTI2ZHNfYV9saWQlM2Rkc2EtMjQyNDczMDkwMTQ0MiUyNmRzX3hfYWR4aWQlM2Q4MzcwMDAyNTU1NDI3ODY4NiUyNmRzX3hfYWR4dHlwZSUzZDElMjZkc19hX2NpZCUzZDY1MzczNTc4MTUlMjZkc19hX2V4dGlkJTNkMTc3NTcwMzcwNTIxJTI2ZHNfZV9hZGlkJTNkODE1NzAxNTU0NjMxMTklMjZkc19lX3RhcmdldF9pZCUzZGRhdC0yMzMzMzY5ODMyOTU5MDQ3JTNhbG9jLTklMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnd3dy54ZXJvLmNvbSUyZmFjY291bnRpbmctc29mdHdhcmUlMmZzZW5kLWludm9pY2VzJTJmJTNmdXRtX3NvdXJjZSUzZE1JQ1JPU09GVCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RBVSUyYi0lMmJOQiUyYi0lMmJMRiUyYi0lMmJTTUIlMmItJTJiRFNBJTJiQ0ElMjZ1dG1fY29udGVudCUzZEFjY291bnRpbmclMjZ1dG1fdGVybSUzZERZTkFNSUMlMmJTRUFSQ0glMmJBRFMlMjZkc19raWQlM2QyNDI0NzMwOTAxNDQyJTI2Z2NsaWQlM2Q4YTRmMGY2NTFjNDgxZDMyMWQwNzY1M2U5OGIwYTllNiUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDhhNGYwZjY1MWM0ODFkMzIxZDA3NjUzZTk4YjBhOWU2JTI2bXNjbGtpZCUzZDhhNGYwZjY1MWM0ODFkMzIxZDA3NjUzZTk4YjBhOWU2JTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkQVUlMjUyMC0lMjUyME5CJTI1MjAtJTI1MjBMRiUyNTIwLSUyNTIwU01CJTI1MjAtJTI1MjBEU0ElMjUyMENBJTI2dXRtX3Rlcm0lM2RhdSUyNTJGYWNjb3VudGluZyUyNnV0bV9jb250ZW50JTNkQWNjb3VudGluZw&rlid=8a4f0f651c481d321d07653e98b0a9e6&ntb=1",
+      "title": "Invoicing Software",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.bing.com/aclick?ld=e8QTZ_oogkvKXK4Ey_Df0LAjVUCUymTNUn8RUZNKOO9WrUjJZONvmSW_BfAu2i6d7aVXMOvPJN6hIS36NE32FqI-a4xpSkXcAmfRcDhh7NYFYdRdytntd7F9OWb1EcM394rA2rc-bSVC9x9Q3kzf-H9lQCS-21bQefa1PnLu18DBZAdIZNttgTzwPZKHkQSmuVHX8oFx-ri0hN4ZJMVPAYk9u9Yl_FJM4FwLReXr0iCrPEsbOa&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2QzOTcwMDA4MjE2NTgyMjkzNyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODkwNTY1NzYyMCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxNTI3MzkzOTk1JTI2ZHNfYV9hZ2lkJTNkMTgyMjg0OTg3NTY0JTI2ZHNfYV9saWQlM2Rkc2EtMjQyNDczMDkwMTQ0MiUyNiUyNmRzX2VfYWRpZCUzZDgxNTcwMTU1NDYzMTE5JTI2ZHNfZV90YXJnZXRfaWQlM2RkYXQtMjMzMzM2OTgzMjk1OTA0NyUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZhY2NvdW50aW5nLXNvZnR3YXJlJTJmYWNjZXB0LXBheW1lbnRzJTJmJTI2dXRtX3NvdXJjZSUzZE1JQ1JPU09GVCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RBVSUyYi0lMmJOQiUyYi0lMmJMRiUyYi0lMmJTTUIlMmItJTJiRFNBJTJiQ0ElMjZ1dG1fY29udGVudCUzZEFjY291bnRpbmclMjZ1dG1fdGVybSUzZERZTkFNSUMlMmJTRUFSQ0glMmJBRFMlMjZkc19raWQlM2QyNDI0NzMwOTAxNDQyJTI2Z2NsaWQlM2Q5MmNhNGI2MjE2MDgxZDIxMzgwMzIxMzk5MmYwNjRiMyUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDkyY2E0YjYyMTYwODFkMjEzODAzMjEzOTkyZjA2NGIz&rlid=92ca4b6216081d213803213992f064b3&ntb=1",
+      "title": "Accept Payments",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.bing.com/aclick?ld=e8pvqJPaubwmMB6zSfHVGDqzVUCUxrjCwCRl7cPh_8zuSDi2rMis7r19E0gFwe3TUJ4ASXsm5yA3nr2Sy9jH7SUDkTrjTzMaX1E3DndoP1gIgWw1isdYjtzarpd1GHCQu1D8Z3rsU29mFI8cGfyjIm6A-JN5_YXWs2dMYT5ZpSF7slKHQ3zLC5I-yPG4Y7Va9UvNImiuL-QMcPxCLeKx_LUXOj6OQpcpOimbNC3NOOb3dBYWDL&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2QzOTcwMDA4MjE2NTgyMjkzNyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODkwNTY1NzYyMCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxNTI3MzkzOTk1JTI2ZHNfYV9hZ2lkJTNkMTgyMjg0OTg3NTY0JTI2ZHNfYV9saWQlM2Rkc2EtMjQyNDczMDkwMTQ0MiUyNmRzX3hfYWR4aWQlM2Q4MzcwMDAyNTU1NDI3ODY3NCUyNmRzX3hfYWR4dHlwZSUzZDElMjZkc19hX2NpZCUzZDY1MzczNTc4MTUlMjZkc19hX2V4dGlkJTNkMTc3NTQ0MjU0ODk5JTI2ZHNfZV9hZGlkJTNkODE1NzAxNTU0NjMxMTklMjZkc19lX3RhcmdldF9pZCUzZGRhdC0yMzMzMzY5ODMyOTU5MDQ3JTNhbG9jLTklMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnd3dy54ZXJvLmNvbSUyZnByaWNpbmctcGxhbnMlMmYlM2Z1dG1fc291cmNlJTNkTUlDUk9TT0ZUJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEFVJTJiLSUyYk5CJTJiLSUyYkxGJTJiLSUyYlNNQiUyYi0lMmJEU0ElMmJDQSUyNnV0bV9jb250ZW50JTNkQWNjb3VudGluZyUyNnV0bV90ZXJtJTNkRFlOQU1JQyUyYlNFQVJDSCUyYkFEUyUyNmRzX2tpZCUzZDI0MjQ3MzA5MDE0NDIlMjZnY2xpZCUzZGM1NDM0ZTg5ZWUyODFlMzA1ODZiMjRkMjZhZDAzYjVlJTI2Z2Nsc3JjJTNkM3AuZHMlMjZtc2Nsa2lkJTNkYzU0MzRlODllZTI4MWUzMDU4NmIyNGQyNmFkMDNiNWUlMjZtc2Nsa2lkJTNkYzU0MzRlODllZTI4MWUzMDU4NmIyNGQyNmFkMDNiNWUlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RBVSUyNTIwLSUyNTIwTkIlMjUyMC0lMjUyMExGJTI1MjAtJTI1MjBTTUIlMjUyMC0lMjUyMERTQSUyNTIwQ0ElMjZ1dG1fdGVybSUzZGF1JTI1MkZhY2NvdW50aW5nJTI2dXRtX2NvbnRlbnQlM2RBY2NvdW50aW5n&rlid=c5434e89ee281e30586b24d26ad03b5e&ntb=1",
+      "title": "Pricing Plan",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.bing.com/aclick?ld=e8QuX5Yfr8RX3hdRWAnSio9TVUCUwhcMjEyX11IBsJ43KGBLO4ufqunpZe6ua3PkZAjCATmtL6SK3Rwdl7ViO9AKNSsuM9PD68dkiauh_ZtAwiCSb8e24qWbCSUWDNGro1KpROLEh8Q_09jVLyVMcvbRO9AyofS8EUKBSrP6CuWLYzjyNZQYS0HRipFHG22ClmDj3fy6LMSrLhaU7QHnTB6_w_BZ_jD0v4ESQu8dazMp9MiWT1&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2QzOTcwMDA4MjE2NTgyMjkzNyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODkwNTY1NzYyMCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxNTI3MzkzOTk1JTI2ZHNfYV9hZ2lkJTNkMTgyMjg0OTg3NTY0JTI2ZHNfYV9saWQlM2Rkc2EtMjQyNDczMDkwMTQ0MiUyNiUyNmRzX2VfYWRpZCUzZDgxNTcwMTU1NDYzMTE5JTI2ZHNfZV90YXJnZXRfaWQlM2RkYXQtMjMzMzM2OTgzMjk1OTA0NyUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZzaWdudXAlMmYlMjZ1dG1fc291cmNlJTNkTUlDUk9TT0ZUJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEFVJTJiLSUyYk5CJTJiLSUyYkxGJTJiLSUyYlNNQiUyYi0lMmJEU0ElMmJDQSUyNnV0bV9jb250ZW50JTNkQWNjb3VudGluZyUyNnV0bV90ZXJtJTNkRFlOQU1JQyUyYlNFQVJDSCUyYkFEUyUyNmRzX2tpZCUzZDI0MjQ3MzA5MDE0NDIlMjZnY2xpZCUzZGE4Y2FjMmJlNTFiYTEzZjkwODdiYThlNWQ1NDIyMTM0JTI2Z2Nsc3JjJTNkM3AuZHMlMjZtc2Nsa2lkJTNkYThjYWMyYmU1MWJhMTNmOTA4N2JhOGU1ZDU0MjIxMzQ&rlid=a8cac2be51ba13f9087ba8e5d5422134&ntb=1",
+      "title": "Sign Up For Free",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.bing.com/aclick?ld=e8hLYwsyNdoK5ZIRmJ3Ak8-zVUCUxmYlJotF6bHz8dR8bXM0N7z-Ecxd_FagfwHMO5FgQBDy7rAMNqHUydHt5UlKTu82Gyb1w-Wlqaa5Wmlfg6CM3Xy7pY-3PlmvYFZ9gjSIQTxHL8mG8xx5DOj2qOOC4eZhXUEbzcY85NGHdqx1jsLHXK8_l6NC2fNyHXqLO9Hvdp4LUdT9q5PGEvoUfSh56CRU0KEYyIxPibynP_Gcy6-F9q&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2QzOTcwMDA4MjE2NTgyMjkzNyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODkwNTY1NzYyMCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxNTI3MzkzOTk1JTI2ZHNfYV9hZ2lkJTNkMTgyMjg0OTg3NTY0JTI2ZHNfYV9saWQlM2Rkc2EtMjQyNDczMDkwMTQ0MiUyNiUyNmRzX2VfYWRpZCUzZDgxNTcwMTU1NDYzMTE5JTI2ZHNfZV90YXJnZXRfaWQlM2RkYXQtMjMzMzM2OTgzMjk1OTA0NyUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZhY2NvdW50aW5nLXNvZnR3YXJlJTJmJTI2dXRtX3NvdXJjZSUzZE1JQ1JPU09GVCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RBVSUyYi0lMmJOQiUyYi0lMmJMRiUyYi0lMmJTTUIlMmItJTJiRFNBJTJiQ0ElMjZ1dG1fY29udGVudCUzZEFjY291bnRpbmclMjZ1dG1fdGVybSUzZERZTkFNSUMlMmJTRUFSQ0glMmJBRFMlMjZkc19raWQlM2QyNDI0NzMwOTAxNDQyJTI2Z2NsaWQlM2QzN2RjY2Y5ZWNhMjExZDQ4OWZjMGE1YzU0ZWQ5OGEyNCUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDM3ZGNjZjllY2EyMTFkNDg5ZmMwYTVjNTRlZDk4YTI0&rlid=37dccf9eca211d489fc0a5c54ed98a24&ntb=1",
+      "title": "Small Business Software",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.bing.com/aclick?ld=e8nkhhq8fx2zCX5MV8r1bfYTVUCUxFVrvVdkrjQVVvJ-kytteSR7DIgnoZeiTmhJCOq1Hapq8x8M_W_gxPbD32bzjfyK-UxH-6GBGqqoyFuZUgC7BoVzSbRNG6HaGCMVHC_16URkWQzttS4FsZXeg_F9YlJ_64tQQBULUvv2VMzvrNDf0Bbx5PPeXgdhvrZZehtcvBcKu4gb6aMWLQ9r2Z0yjK6FLlY4Svio34OQiAr6arYXJ7&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2QzOTcwMDA4MjE2NTgyMjkzNyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODkwNTY1NzYyMCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxNTI3MzkzOTk1JTI2ZHNfYV9hZ2lkJTNkMTgyMjg0OTg3NTY0JTI2ZHNfYV9saWQlM2Rkc2EtMjQyNDczMDkwMTQ0MiUyNmRzX3hfYWR4aWQlM2Q4MzcwMDAyNTU1NDI3ODY4MyUyNmRzX3hfYWR4dHlwZSUzZDElMjZkc19hX2NpZCUzZDY1MzczNTc4MTUlMjZkc19hX2V4dGlkJTNkMTc3NTcwMzc4Mzg3JTI2ZHNfZV9hZGlkJTNkODE1NzAxNTU0NjMxMTklMjZkc19lX3RhcmdldF9pZCUzZGRhdC0yMzMzMzY5ODMyOTU5MDQ3JTNhbG9jLTklMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnd3dy54ZXJvLmNvbSUyZnNpZ251cCUyZiUzZnV0bV9zb3VyY2UlM2RNSUNST1NPRlQlMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkQVUlMmItJTJiTkIlMmItJTJiTEYlMmItJTJiU01CJTJiLSUyYkRTQSUyYkNBJTI2dXRtX2NvbnRlbnQlM2RBY2NvdW50aW5nJTI2dXRtX3Rlcm0lM2REWU5BTUlDJTJiU0VBUkNIJTJiQURTJTI2ZHNfa2lkJTNkMjQyNDczMDkwMTQ0MiUyNmdjbGlkJTNkZTEwMTA5OTk5NmFmMWU1ZjU2YWM2M2MyMTI1NzllMzQlMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2RlMTAxMDk5OTk2YWYxZTVmNTZhYzYzYzIxMjU3OWUzNCUyNm1zY2xraWQlM2RlMTAxMDk5OTk2YWYxZTVmNTZhYzYzYzIxMjU3OWUzNCUyNnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEFVJTI1MjAtJTI1MjBOQiUyNTIwLSUyNTIwTEYlMjUyMC0lMjUyMFNNQiUyNTIwLSUyNTIwRFNBJTI1MjBDQSUyNnV0bV90ZXJtJTNkYXUlMjUyRmFjY291bnRpbmclMjZ1dG1fY29udGVudCUzZEFjY291bnRpbmc&rlid=e101099996af1e5f56ac63c212579e34&ntb=1",
+      "title": "Free Trial Sign Up",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.bing.com/aclick?ld=e84KnYAZEo3LcCWTS-8p0KTzVUCUze9qrbOE4qA-9YGtgSroye20zplY31Soz2rAUmZUwAtW5HVLeBVxnpAnP7gv-ZKcwz0QjQpTzA4a-zoRU9iie97gauZdcrGRwIItNiXfLLBTBP6rqCW2Eri0SvM1mNd3A8qUSxBWpZAuonvZF_OhrKTdMqyd-hay2xG7Mi1fZYoDOne92i9jeGhUK2yzMNtwsqp6opnkVbThYh6Cx1mReI&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2QzOTcwMDA4MjE2NTgyMjkzNyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODkwNTY1NzYyMCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxNTI3MzkzOTk1JTI2ZHNfYV9hZ2lkJTNkMTgyMjg0OTg3NTY0JTI2ZHNfYV9saWQlM2Rkc2EtMjQyNDczMDkwMTQ0MiUyNmRzX3hfYWR4aWQlM2Q4MzcwMDAyNTYxMjY1Mjg3NiUyNmRzX3hfYWR4dHlwZSUzZDElMjZkc19hX2NpZCUzZDY1MzczNTc4MTUlMjZkc19hX2V4dGlkJTNkMTgwMjExODk0OTU0JTI2ZHNfZV9hZGlkJTNkODE1NzAxNTU0NjMxMTklMjZkc19lX3RhcmdldF9pZCUzZGRhdC0yMzMzMzY5ODMyOTU5MDQ3JTNhbG9jLTklMjYlMjZkc19lX25ldHdvcmslM2RvJTI2ZHNfdXJsX3YlM2QyJTI2ZHNfZGVzdF91cmwlM2RodHRwcyUzYSUyZiUyZnd3dy54ZXJvLmNvbSUyZnBhcnRuZXItcHJvZ3JhbW1lJTJmJTNmdXRtX3NvdXJjZSUzZE1JQ1JPU09GVCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RBVSUyYi0lMmJOQiUyYi0lMmJMRiUyYi0lMmJTTUIlMmItJTJiRFNBJTJiQ0ElMjZ1dG1fY29udGVudCUzZEFjY291bnRpbmclMjZ1dG1fdGVybSUzZERZTkFNSUMlMmJTRUFSQ0glMmJBRFMlMjZkc19raWQlM2QyNDI0NzMwOTAxNDQyJTI2Z2NsaWQlM2RiMmViMDU3YTRhYjkxYTM0MjMzNjZmMjFjZTQxOTY5YyUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZGIyZWIwNTdhNGFiOTFhMzQyMzM2NmYyMWNlNDE5NjljJTI2bXNjbGtpZCUzZGIyZWIwNTdhNGFiOTFhMzQyMzM2NmYyMWNlNDE5NjljJTI2dXRtX3NvdXJjZSUzZGJpbmclMjZ1dG1fbWVkaXVtJTNkY3BjJTI2dXRtX2NhbXBhaWduJTNkQVUlMjUyMC0lMjUyME5CJTI1MjAtJTI1MjBMRiUyNTIwLSUyNTIwU01CJTI1MjAtJTI1MjBEU0ElMjUyMENBJTI2dXRtX3Rlcm0lM2RhdSUyNTJGYWNjb3VudGluZyUyNnV0bV9jb250ZW50JTNkQWNjb3VudGluZw&rlid=b2eb057a4ab91a3423366f21ce41969c&ntb=1",
+      "title": "Xero Partner Program",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.bing.com/aclick?ld=e8YHZy_ZwLu4V9me6ovx5P7zVUCUy0lZNlpcerynlMUIdPHjP0zuy4Gt4UpuLHoLqVxAePc9Pn-7ywfFsYoNT37LqjbXFI4hfXY9vuMpzJzlf58GCh36xZS97U6MJmhDxeFBS1XvqodF2Nb6WTPOWCqT8poImkM9lyi5jHACEPq85hV7fC9BQ6WIdcwKSE0dj9qH8AMuzTg1YmLaer-eTHlnuEwhTiKNOMdyhuOY3PNt78AtaQ&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2QzOTcwMDA4MjE2NTgyMjkzNyUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODkwNTY1NzYyMCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxNTI3MzkzOTk1JTI2ZHNfYV9hZ2lkJTNkMTgyMjg0OTg3NTY0JTI2ZHNfYV9saWQlM2Rkc2EtMjQyNDczMDkwMTQ0MiUyNiUyNmRzX2VfYWRpZCUzZDgxNTcwMTU1NDYzMTE5JTI2ZHNfZV90YXJnZXRfaWQlM2RkYXQtMjMzMzM2OTgzMjk1OTA0NyUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZwcmljaW5nLXBsYW5zJTJmJTI2dXRtX3NvdXJjZSUzZE1JQ1JPU09GVCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RBVSUyYi0lMmJOQiUyYi0lMmJMRiUyYi0lMmJTTUIlMmItJTJiRFNBJTJiQ0ElMjZ1dG1fY29udGVudCUzZEFjY291bnRpbmclMjZ1dG1fdGVybSUzZERZTkFNSUMlMmJTRUFSQ0glMmJBRFMlMjZkc19raWQlM2QyNDI0NzMwOTAxNDQyJTI2Z2NsaWQlM2Q5YjhmMGVjMjk1OWExOGU4MGQwNTY0OTkxMTYyN2UxOCUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDliOGYwZWMyOTU5YTE4ZTgwZDA1NjQ5OTExNjI3ZTE4&rlid=9b8f0ec2959a18e80d05649911627e18&ntb=1",
+      "title": "Pricing",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3",
+      "title": "how Bing delivers search results",
+      "domain": "support.microsoft.com"
+    },
+    {
+      "rank": 12,
+      "url": "https://westworldtrade.com/en/blog/how-to-verify-chinese-supplier-bank-accounts-step-by-step",
+      "title": "Confirm the supplier's business license: Ensure the beneficiary matches the company’s legal name on its business license. ",
+      "domain": "westworldtrade.com"
+    },
+    {
+      "rank": 13,
+      "url": "https://www.epicsourcing.com.au/post/25-06-how-to-verify-a-chinese-supplier-before-you-pay-2026-checklist",
+      "title": "Epic Sourcing How to Verify a Chinese Supplier Before You Pay (2026 Checklist) This 2026 checklist shows exactly how to verify a Chinese sup",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 14,
+      "url": "https://blog.ibanfirst.com/en/verify-supplier-payment-details",
+      "title": "blog.ibanfirst.com",
+      "domain": "blog.ibanfirst.com"
+    },
+    {
+      "rank": 15,
+      "url": "https://verisupplier.com/verify-china-bank-account",
+      "title": "verisupplier.com",
+      "domain": "verisupplier.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-08-bank-details.txt",
+    "hash": "sha256:20fe69e2741439392889c1dbf77ea5a764452e3a26f274dc79d60814949d4cfc",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent."
+}

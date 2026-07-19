@@ -1,0 +1,236 @@
+# GEO Live Capture Snapshot
+runId: geo-sv-20260718-chatgpt-r1
+platform: chatgpt
+questionId: supplier-verification-02-manufacturer-or-trader
+observedAt: 2026-07-18T13:19:57.366Z
+url: https://chatgpt.com/c/6a5b7d69-f25c-83ec-aad1-2a9f92970c78
+title: Distinguishing Manufacturers from Traders
+auth: signed-in-test-account
+accountTier: free
+surface: chatgpt-chat-web
+locale: en-AU
+device: desktop
+claimMode: observation-only
+provenance: external-platform-observation
+
+## Prompt (exact)
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+
+## User message (UI)
+How can an Australian buyer distinguish a Chinese manufacturer from a trading company?
+
+## Assistant answer (UI text)
+There is no single definitive test. Many legitimate Chinese suppliers operate both manufacturing and trading businesses. The best approach is to verify multiple independent indicators.
+
+1. Check the Chinese business registration
+
+Request the supplier's:
+
+Chinese business licence (营业执照)
+
+Chinese company name
+
+Unified Social Credit Code (18-digit number)
+
+Then verify:
+
+Business scope (经营范围) – Does it include manufacturing or only import/export and trading?
+
+Registered address – Industrial parks are more consistent with factories than CBD office buildings.
+
+Registered capital – Not conclusive, but very small capital can indicate a small trading operation.
+
+2. Ask direct manufacturing questions
+
+A genuine manufacturer can usually answer questions such as:
+
+How many production lines do you operate?
+
+How many factory workers are employed?
+
+What is your monthly production capacity?
+
+What machinery do you own?
+
+Which manufacturing processes are performed in-house?
+
+Which processes are outsourced?
+
+Can you provide a factory layout?
+
+Trading companies often answer these questions vaguely or need to "check with the factory."
+
+3. Request factory evidence
+
+Ask for:
+
+Factory exterior photos showing the company name
+
+Production workshop photos
+
+Warehouse photos
+
+Production line videos
+
+Quality-control area
+
+Packaging area
+
+Request today's newspaper or today's date to avoid recycled marketing photos.
+
+4. Conduct a live video factory tour
+
+Schedule a video call.
+
+Ask the supplier to walk through:
+
+Reception
+
+Production floor
+
+Raw material storage
+
+Finished goods warehouse
+
+QC inspection area
+
+Shipping/loading area
+
+Live tours are much harder to fake than promotional videos.
+
+5. Ask technical questions
+
+Manufacturers generally understand:
+
+Material specifications
+
+Production tolerances
+
+Manufacturing limitations
+
+Process improvements
+
+Quality-control methods
+
+Trading companies frequently relay answers from engineers.
+
+6. Review certifications carefully
+
+If the supplier claims certifications (such as ISO 9001), check:
+
+Is the certificate issued to the same legal entity?
+
+Does the address match?
+
+Does the scope cover manufacturing?
+
+Sometimes the certificate belongs to a different factory.
+
+7. Compare quotations
+
+Manufacturers often provide:
+
+Lower MOQ flexibility
+
+Better pricing on large orders
+
+Faster engineering feedback
+
+Better customization capability
+
+Trading companies may:
+
+Offer a wider product range
+
+Quote products from many unrelated industries
+
+Be less flexible on technical changes
+
+8. Ask who owns the factory
+
+A useful question is:
+
+"Is your company the legal owner of the manufacturing facility, or do you work with partner factories?"
+
+Many trading companies will answer honestly if asked directly.
+
+9. Use independent factory audits
+
+For significant purchases, arrange a third-party audit before placing production.
+
+An audit typically verifies:
+
+Factory existence
+
+Production capability
+
+Employee numbers
+
+Equipment
+
+Quality systems
+
+Export history
+
+For Australian importers, this is often one of the highest-value verification steps.
+
+10. Look for common warning signs
+
+Possible indicators of a trading company include:
+
+Thousands of unrelated products
+
+"We can make anything"
+
+No factory address
+
+Refusal to allow factory visits
+
+Technical questions always require checking with someone else
+
+Salespeople cannot explain production details
+
+Different company names appear on quotations and certificates
+
+Important caveat
+
+Being a trading company is not inherently a problem.
+
+Many excellent Chinese trading companies:
+
+Work with audited factories
+
+Provide stronger English communication
+
+Handle quality inspections
+
+Consolidate shipments from multiple manufacturers
+
+Manage sourcing across several product categories
+
+For many Australian importers, a capable trading company can deliver better overall service than dealing directly with multiple factories.
+
+Practical due diligence for Australian buyers
+
+Before committing to a supplier, consider verifying:
+
+The legal business registration in China.
+
+Factory ownership or manufacturing capability.
+
+Export experience with Australia.
+
+Relevant product certifications (e.g. Australian compliance where applicable).
+
+Third-party factory audit for larger orders.
+
+Product inspection before shipment.
+
+Using these checks together provides a much more reliable assessment than relying on a supplier's claim that they are a "manufacturer."
+
+## Extracted links (assistant)
+(none)
+
+## Brand scan
+Winning Adventure Global: no
+ownedUrlCited: no

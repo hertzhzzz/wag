@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-08-bank-details",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-08-bank-details",
+  "prompt": "How should I verify bank account details before paying a new Chinese supplier?",
+  "promptHash": "sha256:287cc2c5550ea5cba5092e9858ae4fae2abebb9ac534f76d175d28756d283b0f",
+  "observedAt": "2026-07-18T13:46:56.019Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "baystonhillparishcouncil.org.uk",
+    "china-studies.org",
+    "wise.com",
+    "reddit.com",
+    "ofx.com",
+    "monitorpay.ai"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://baystonhillparishcouncil.org.uk/sites/default/files/financial_procedures_-_supplier_account_and_bank_details_set_up.pdf",
+      "title": "Financial Procedures - Supplier Account and Bank Set Up",
+      "domain": "baystonhillparishcouncil.org.uk"
+    },
+    {
+      "rank": 2,
+      "url": "https://china-studies.org/lessons/3-3-verification-of-chinese-bank-accounts-3/",
+      "title": "3.3 Verification Of Chinese Bank Accounts",
+      "domain": "china-studies.org"
+    },
+    {
+      "rank": 3,
+      "url": "https://wise.com/us/blog/paying-chinese-suppliers-abroad#:~:text=International%20wire%20transfer%20%2F%20Telegraphic%20Transfer,which%20subsequently%20then%20increases%20yours.",
+      "title": "Top 9 ways to pay your suppliers in China - Wise",
+      "domain": "wise.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.winningadventure.com.au/article/pay-chinese-suppliers-safely",
+      "title": "How to Pay Chinese Suppliers Safely: An Australian ...",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.reddit.com/r/Alibaba/comments/1ps8tbf/whats_the_hardest_part_of_verifying_a_supplier/",
+      "title": "What's the hardest part of verifying a supplier before ...",
+      "domain": "reddit.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.ofx.com/en-ie/blog/how-to-pay-suppliers-in-china-working-with-chinese-vendors/",
+      "title": "How to Pay Suppliers in China: A Complete Guide",
+      "domain": "ofx.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://china-studies.org/lessons/3-3-verification-of-chinese-bank-accounts-3/",
+      "title": "3.3 Verification Of Chinese Bank Accounts",
+      "domain": "china-studies.org"
+    },
+    {
+      "rank": 8,
+      "url": "https://monitorpay.ai/how-to-verify-chinese-supplier-bank-accounts/",
+      "title": "How to Verify Chinese Supplier Bank Accounts",
+      "domain": "monitorpay.ai"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.chinacheckup.com/blog/china-tt-payment",
+      "title": "Make These 4 Checks Before Sending a China T/T Payment",
+      "domain": "chinacheckup.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.sellersunionagent.com/how-to-pay-chinese-suppliers/",
+      "title": "How to Pay Chinese Suppliers Safely | Complete Guide",
+      "domain": "sellersunionagent.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-08-bank-details.txt",
+    "hash": "sha256:47c27edbdf745121d69afd3d3fc6c1d3f9c699200c5922724cb52aed5ca41269",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}

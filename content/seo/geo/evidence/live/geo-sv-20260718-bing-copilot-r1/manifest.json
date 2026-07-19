@@ -1,0 +1,64 @@
+{
+  "runId": "geo-sv-20260718-bing-copilot-r1",
+  "platform": "bing-copilot",
+  "schemaVersion": "geo-live-capture-v1",
+  "methodologyVersion": "methodology-live-v1",
+  "benchmarkVersion": "benchmark-live-v1",
+  "questionSetVersion": "1",
+  "questionSetPath": "content/seo/geo/questions/supplier-verification.json",
+  "questionSetDigest": "sha256:336cf79f882d02538db0dac2adf27f318a516245c24a050c674f7b9cebab6cc9",
+  "cluster": "supplier-verification",
+  "ticket": 31,
+  "fixtureOnly": false,
+  "provenance": "external-platform-observation",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "expectedRepetitions": 1,
+  "asOf": "2026-07-18T13:53:32.487Z",
+  "questions": [
+    {
+      "id": "supplier-verification-01-registration-records",
+      "prompt": "What official records should an Australian importer check before engaging a supplier in China?"
+    },
+    {
+      "id": "supplier-verification-02-manufacturer-or-trader",
+      "prompt": "How can an Australian buyer distinguish a Chinese manufacturer from a trading company?"
+    },
+    {
+      "id": "supplier-verification-03-export-evidence",
+      "prompt": "What evidence should I request to verify that a Chinese supplier can legally export my product?"
+    },
+    {
+      "id": "supplier-verification-04-service-scope",
+      "prompt": "What should be included in a paid supplier verification service for an Australian importer?"
+    },
+    {
+      "id": "supplier-verification-05-legal-identity",
+      "prompt": "How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?"
+    },
+    {
+      "id": "supplier-verification-06-false-documents",
+      "prompt": "What warning signs suggest that a Chinese supplier's business licence or certificates may be false?"
+    },
+    {
+      "id": "supplier-verification-07-remote-or-onsite",
+      "prompt": "When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?"
+    },
+    {
+      "id": "supplier-verification-08-bank-details",
+      "prompt": "How should I verify bank account details before paying a new Chinese supplier?"
+    },
+    {
+      "id": "supplier-verification-09-compare-services",
+      "prompt": "How should an Australian business compare supplier verification services for work in China?"
+    },
+    {
+      "id": "supplier-verification-10-stop-findings",
+      "prompt": "What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?"
+    }
+  ],
+  "evidencePath": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1",
+  "notes": "Surface primarily bing-serp-generative-answer-en-AU; full Copilot chat not required when SERP generative block present."
+}

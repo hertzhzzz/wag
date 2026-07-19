@@ -1,0 +1,97 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-07-remote-or-onsite",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-07-remote-or-onsite",
+  "prompt": "When is remote supplier verification enough, and when should an Australian buyer commission an on-site check?",
+  "promptHash": "sha256:a50351bbb6132c77b2836cb0cb1de2c90621180f15068f57e7b051df7aa19bcf",
+  "observedAt": "2026-07-18T13:31:43.698Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "Swift Cargo",
+    "SGS"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.finance.gov.au/sites/default/files/2023-11/Due-Diligence-in-Procurement.pdf",
+      "title": "finance.gov\nDue Diligence in Procurement",
+      "domain": "finance.gov.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.industry.gov.au/sites/default/files/adc/public-record/047habasremoteverification-publicrecordversion.pdf",
+      "title": "industry.gov\nFOR PUBLIC RECORD",
+      "domain": "industry.gov.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.sgs.com/en-au/services/supplier-verification-program",
+      "title": "sgs\nSupplier Verification Program\nSGS’s supplier verification program – instills confidence between clients and suppliers in a digital age.",
+      "domain": "sgs.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.winningadventure.com.au/article/virtual-factory-audit",
+      "title": "winningadventure.com\nVirtual Factory Audit Guide 2026: Remote Verification and Digital Due Diligence\nHow to conduct a factory audit remotely when you cannot tra",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.paperindex.com/academy/the-zero-trust-sourcing-model-how-to-verify-overseas-suppliers-without-travel/",
+      "title": "paperindex\nThe Zero-Trust Sourcing Model: How to Verify Overseas Suppliers ...\nVerify overseas suppliers through five evidence gates—identity, capability, compl",
+      "domain": "paperindex.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "winningadventure.com\nHow to Verify a Chinese Supplier: Complete Guide for ...\nLearn how to verify a Chinese supplier with this complete guide for Australian imp",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://checkconnect.com.au/services",
+      "title": "checkconnect.com\nWe're here when you can't be | Operate in Australia without local office\nGround support to those needing Australian market entry support; opera",
+      "domain": "checkconnect.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+      "title": "blog.swiftcargo\nHow to Verify a Supplier Before Shipping: A Practical Guide for Australian Importers - Swift Cargo Solutions\nHow Australian importers verify ove",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.paperindex.com/academy/sourcing-safety-checklist-when-to-audit-vs-when-to-trust/",
+      "title": "paperindex\nSourcing Safety Checklist: When to Audit vs. When to Trust\nMatch supplier verification to transaction risk by scoring four levers—product sensitivity",
+      "domain": "paperindex.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.foodakai.com/travel-restrictions-supplier-audits-how-to-perform-a-remote-assessment/",
+      "title": "foodakai\nTravel restrictions & supplier audits: How to perform a ...\nWith restrictions applied in a large number of countries, the Food Safety and Quality Assur",
+      "domain": "foodakai.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-07-remote-or-onsite.txt",
+    "hash": "sha256:2681ca4eb271b282b515343a3de2a6fbb43fb58e1360c1873e6b81f144bf58fd",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Search https://www.perplexity.ai/search/9f636824-f168-4929-95b9-a3c2fd4f9d56"
+}

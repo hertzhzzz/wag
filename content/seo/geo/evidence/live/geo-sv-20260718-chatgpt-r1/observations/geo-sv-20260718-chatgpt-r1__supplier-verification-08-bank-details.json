@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-08-bank-details",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-08-bank-details",
+  "prompt": "How should I verify bank account details before paying a new Chinese supplier?",
+  "promptHash": "sha256:287cc2c5550ea5cba5092e9858ae4fae2abebb9ac534f76d175d28756d283b0f",
+  "observedAt": "2026-07-18T13:23:30.098Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-08-bank-details.txt",
+    "hash": "sha256:4882596494412b492fb7d0787d2a0279b21bc0f76dea4ec9789b6a75b5cd8c19",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Conversation https://chatgpt.com/c/6a5b7e42-a518-83ec-9970-bec502e72ce3"
+}

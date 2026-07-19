@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-sv-20260718-perplexity-r1__supplier-verification-05-legal-identity",
+  "platform": "perplexity",
+  "questionId": "supplier-verification-05-legal-identity",
+  "prompt": "How can I verify the Chinese legal name and Unified Social Credit Code on a supplier's documents?",
+  "promptHash": "sha256:99d434c7c1a04c3d53df94354fade3a87b860b941fd328782cd8719579cd9013",
+  "observedAt": "2026-07-18T13:29:28.690Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.chinverify.com/en/guide",
+      "title": "chinverify",
+      "domain": "chinverify.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.linkedin.com/pulse/how-verify-chinese-supplier-hong-zhong-xy4cc",
+      "title": "linkedin\nHow to Verify a Chinese Supplier - LinkedIn\n#ChinaTrade #SupplierVerification #DueDiligence #ImportExport #SupplyChain #SourcingFromChina #CantonFair #",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.chinverify.com/en/blog/uscc-vs-tin-in-china",
+      "title": "chinverify\nUSCC vs TIN in China: What Number Do You Need to ...\nLearn the difference between China's USCC, TIN, business license number, and company registratio",
+      "domain": "chinverify.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.qcckyc.com/blog-detail?id=aa00f70d8ce044c89d59e65134525ae7",
+      "title": "qcckyc\nChina USCC Lookup Guide 2026: Verify a Unified Social ...\nA Unified Social Credit Code (USCC) search verifies a Chinese company by entering its 18-charac",
+      "domain": "qcckyc.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://chinesecheck.com/blog/unified-social-credit-code-explained",
+      "title": "chinesecheck\nUnified Social Credit Code Explained: The 18-Digit China ...\nThe Unified Social Credit Code is the 18-character ID every Chinese company carries. L",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.chinverify.com/en/checker",
+      "title": "chinverify\nChina Company Search & USCC Lookup\nSearch and verify Chinese companies by name or USCC. Check registration status, business license details, legal id",
+      "domain": "chinverify.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://qincheck.com/unified-social-credit-code-check",
+      "title": "qincheck\nUnified Social Credit Code (USCC) Check - QINCheck\nValidate any Chinese company USCC with checksum verification, entity decoding, and SAMR matching.",
+      "domain": "qincheck.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://xilinkglobaltrade.com/china-company-due-diligence-buyer-workflow/",
+      "title": "xilinkglobaltrade\nChina Company Due Diligence | XILINK\nAn 8-step legal and financial due diligence workflow for overseas buyers verifying a Chinese supplier — f",
+      "domain": "xilinkglobaltrade.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://westworldtrade.com/en/blog/how-to-read-and-verify-chinese-business-license",
+      "title": "westworldtrade\nHow to Read & Verify a Chinese Business License (营业执照)\nLearn how to read a Chinese business license (营业执照), interpret key fields, spot red flags,",
+      "domain": "westworldtrade.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://chinacompanylookup.com/china-official/free-tools-verify-chinese-suppliers/",
+      "title": "chinacompanylookup\nFree Tools To Verify Chinese Suppliers & Avoid Import Scams\nLearn how to instantly verify Chinese suppliers for free using GSXT, China Judgme",
+      "domain": "chinacompanylookup.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-perplexity-r1/snapshots/geo-sv-20260718-perplexity-r1__supplier-verification-05-legal-identity.txt",
+    "hash": "sha256:bfa34b39cbb90c066a9012a1839af6ec6fc7a096e81990b8be437cbb02f4f449",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Search https://www.perplexity.ai/search/598d595b-7c94-4c8c-bc98-743b546d4a83"
+}

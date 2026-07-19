@@ -1,0 +1,153 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=What%20supplier%20verification%20findings%20should%20stop%20an%20Australian%20buyer%20from%20proceeding%20with%20a%20purchase%20order%3F&setlang=en-AU&cc=AU
+TITLE: What supplier verification findings should stop an Australian buyer from proceeding with a purchase order? - Search
+OBSERVED_AT: 2026-07-18T13:52:21.060Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU (copilot.microsoft.com may require sign-in; SERP generative block captured when present)
+PROMPT: What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+Know Your Supplier (KYS) is the structured due diligence process used by Australian procurement and compliance teams to verify the legal identity, beneficial ownership, sanctions profile, and bank account details of suppliers before and during a commercial relationship.
+Learn more:
+1
+Know Your Supplier (KYS): Vendor Verifica…
+checkfile.ai
+2
+Know Your Supplier (KYS): Vendor Verifica…
+checkfile.ai
+3
+Know Your Supplier (KYS): Vendor Verifica…
+checkfile.ai
+4
+Procurement Compliance Australia: Supplier Rul…
+australiatenderalert…
+5
+Supplier Verification Australia | How to Verif…
+ezyshield.com.au
+6
+Procurement Process Considerations | Depar…
+finance.gov.au
+7
+Supplier obligations | Selling to Government
+sellingtogov.finance…
+---
+ORGANIC:
+1. Know Your Supplier (KYS): Vendor Verification Checklist for Australian ... | https://www.bing.com/ck/a?!&&p=4974c93da52b59e66d57474af4cb47201fda85035d3594dd5de8ab521013ff59JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuY2hlY2tmaWxlLmFpL2VuLUFVL2Jsb2cva25vdy15b3VyLXN1cHBsaWVyLXZlbmRvci12ZXJpZmljYXRpb24tY2hlY2tsaXN0&ntb=1
+2. Know Your Supplier (KYS): Vendor Verification and Compliance in ... | https://www.bing.com/ck/a?!&&p=277e55abb502ce89151d3182a7f9ae2d73ae5cd4a58554900ea97d6eaa2c2584JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuY2hlY2tmaWxlLmFpL2VuLUFVL2Jsb2cva25vdy15b3VyLXN1cHBsaWVyLWt5cy12ZW5kb3ItY29tcGxpYW5jZQ&ntb=1
+3. Procurement Compliance Australia: Supplier Rules | https://www.bing.com/ck/a?!&&p=b4ce860a1c7ac7f87818739b48fdfb8294fd8bbaae3c9dafe3395b11d3834cd5JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9hdXN0cmFsaWF0ZW5kZXJhbGVydHMuY29tL2Jsb2cvcHJvY3VyZW1lbnQtY29tcGxpYW5jZS1hdXN0cmFsaWEv&ntb=1
+4. Supplier Verification Australia | How to Verify Suppliers | ezyshield | https://www.bing.com/ck/a?!&&p=6ff8f0b26dacbd344283d46972a06f2b3279ed036f7dfeacd1cc967bdf150251JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9lenlzaGllbGQuY29tLmF1L2xlYXJuL3N1cHBsaWVyLXZlcmlmaWNhdGlvbi1hdXN0cmFsaWEv&ntb=1
+5. Procurement Process Considerations | Department of Finance | https://www.bing.com/ck/a?!&&p=3b3c2b114b714ff8f3e6aa69d3a3ac2aee00b23ec47cacdb02feb556c0a97b7bJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZmluYW5jZS5nb3YuYXUvZ292ZXJubWVudC9wcm9jdXJlbWVudC9idXlpbmctYXVzdHJhbGlhbi1nb3Zlcm5tZW50L3Byb2N1cmVtZW50LXByb2Nlc3MtY29uc2lkZXJhdGlvbnM&ntb=1
+6. Supplier obligations | Selling to Government | https://www.bing.com/ck/a?!&&p=178b0a804a6cd5f763f56472abbe8a2a8c1771b9df513a8aee048ef191ef3ce0JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9zZWxsaW5ndG9nb3YuZmluYW5jZS5nb3YuYXUvZmFxL3N1cHBsaWVyLW9ibGlnYXRpb25z&ntb=1
+7. Complying with procurement policy and legislation | Australian … | https://www.bing.com/ck/a?!&&p=d836c2f0d6cc6e9763063c8e5f35cb80e4d216b7bb1cd44673683812b286696bJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuYXRvLmdvdi5hdS9hYm91dC1hdG8vYXRvLXRlbmRlcnMtYW5kLXByb2N1cmVtZW50L2NvbXBseWluZy13aXRoLXByb2N1cmVtZW50LXBvbGljeS1hbmQtbGVnaXNsYXRpb24&ntb=1
+8. Australian Government Procurement Compliance | Trace | https://www.bing.com/ck/a?!&&p=432bf4403aa98838c6b443a102ec4a553a1e97a62a343827f760eddc4bf561a2JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cudHJhY2Vjb25zdWx0YW50cy5jb20uYXUvdGhpbmtpbmcvY29tcGxpYW50LXByb2N1cmVtZW50LWluLWF1c3RyYWxpYW4tZ292ZXJubWVudA&ntb=1
+9. Government Procurement Rules Australia | Supplier Guide | https://www.bing.com/ck/a?!&&p=45d1713f765c92f4f4b08df7707019924f45bb0b5518fd5a586710f43dde7787JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9hdXN0cmFsaWF0ZW5kZXJhbGVydHMuY29tL2Jsb2cvZ292ZXJubWVudC1wcm9jdXJlbWVudC1ydWxlcy1hdXN0cmFsaWEv&ntb=1
+10. Australian Public Service Commission (APSC)
+https://www.apsc.gov.au › ... › strengthening-integrity-supplier-conduct | https://www.bing.com/ck/a?!&&p=d752eab99942809e353dad6b1f2d784b3c771161b13d7885c5104f76d7758fd6JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuYXBzYy5nb3YuYXUvaW5pdGlhdGl2ZXMtYW5kLXByb2dyYW1zL3dvcmtmb3JjZS1pbmZvcm1hdGlvbi9yZXNlYXJjaC1hbmFseXNpcy1hbmQtcHVibGljYXRpb25zL3N0YXRlLXNlcnZpY2Uvc3RhdGUtc2VydmljZS1yZXBvcnQtMjAyMy0yNC9pbnRlZ3JpdHkvc3RyZW5ndGhlbmluZy1pbnRlZ3JpdHktc3VwcGxpZXItY29uZHVjdA&ntb=1
+
+LINKS:
+- here | https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3
+- Know Your Supplier (KYS): Vendor Verifica… checkfile.ai | https://www.checkfile.ai/en-AU/blog/know-your-supplier-vendor-verification-checklist#:~:text=Know%20Your%20Supplier%20%28KYS%29%20is%20the%20structured%20due,of%20suppliers%20before%20and%20during%20a%20commercial%20relationship.
+- Know Your Supplier (KYS): Vendor Verifica… checkfile.ai | https://www.checkfile.ai/en-AU/blog/know-your-supplier-vendor-verification-checklist
+- Know Your Supplier (KYS): Vendor Verifica… checkfile.ai | https://www.checkfile.ai/en-AU/blog/know-your-supplier-kys-vendor-compliance
+- Procurement Compliance Australia: Supplier Rul… australiatenderalert… | https://australiatenderalerts.com/blog/procurement-compliance-australia/
+- Supplier Verification Australia | How to Verif… ezyshield.com.au | https://ezyshield.com.au/learn/supplier-verification-australia/
+- Procurement Process Considerations | Depar… finance.gov.au | https://www.finance.gov.au/government/procurement/buying-australian-government/procurement-process-considerations
+- Supplier obligations | Selling to Government sellingtogov.finance… | https://sellingtogov.finance.gov.au/faq/supplier-obligations
+- Australian Taxation Office https://www.ato.gov.au › about-ato › ato-tenders-and-procurement › complyi… | https://www.ato.gov.au/about-ato/ato-tenders-and-procurement/complying-with-procurement-policy-and-legislation
+- traceconsultants.com.au https://www.traceconsultants.com.au › thinking › compliant-procurement-in... | https://www.traceconsultants.com.au/thinking/compliant-procurement-in-australian-government
+- australiatenderalerts.com https://australiatenderalerts.com › blog › government-procurement-rules... | https://australiatenderalerts.com/blog/government-procurement-rules-australia/
+- Australian Public Service Commission (APSC) https://www.apsc.gov.au › ... › strengthening-integrity-supplier-conduct | https://www.apsc.gov.au/initiatives-and-programs/workforce-information/research-analysis-and-publications/state-service/state-service-report-2023-24/integrity/strengthening-integrity-supplier-conduct
+- Some results have been removed | http://go.microsoft.com/fwlink/?LinkID=617350
+
+BODY (truncated):
+Skip to content
+Accessibility Feedback
+6
+AllSearchImagesVideosMapsNewsCopilot
+More
+About 5,690 results
+Know Your Supplier (KYS) is the structured due diligence process used by Australian procurement and compliance teams to verify the legal identity, beneficial ownership, sanctions profile, and bank account details of suppliers before and during a commercial relationship.
+Learn more:
+1
+Know Your Supplier (KYS): Vendor Verifica…
+checkfile.ai
+2
+Know Your Supplier (KYS): Vendor Verifica…
+checkfile.ai
+3
+Know Your Supplier (KYS): Vendor Verifica…
+checkfile.ai
+4
+Procurement Compliance Australia: Supplier Rul…
+australiatenderalert…
+5
+Supplier Verification Australia | How to Verif…
+ezyshield.com.au
+6
+Procurement Process Considerations | Depar…
+finance.gov.au
+7
+Supplier obligations | Selling to Government
+sellingtogov.finance…
+ 
+checkfile.ai
+https://www.checkfile.ai › en-AU › blog › know-your-supplier-vendor...
+Know Your Supplier (KYS): Vendor Verification Checklist for Australian ...
+
+27 Apr 2026 · Know Your Supplier (KYS) is the structured due diligence process used by Australian procurement and compliance teams to verify the legal identity, beneficial ownership, sanctions …
+
+ 
+checkfile.ai
+https://www.checkfile.ai › en-AU › blog › know-your-supplier-kys-vendor...
+Know Your Supplier (KYS): Vendor Verification and Compliance in ...
+
+11 June 2026 · Best practice is annual re-verification for all active suppliers, plus immediate re-verification at any triggering event: director changes, banking detail modifications, contract renewals, …
+
+australiatenderalerts.com
+https://australiatenderalerts.com › blog › procurement-compliance-australia
+Procurement Compliance Australia: Supplier Rules
+
+17 Mar 2026 · This guide covers the compliance landscape for government procurement in Australia, from the rules that govern the process to the practical steps suppliers must take to stay compliant at …
+
+ezyshield.com.au
+https://ezyshield.com.au › learn › supplier-verification-australia
+Supplier Verification Australia | How to Verify Suppliers | ezyshield
+
+Learn how to verify Australian suppliers before making payments. Check ABN status, confirm identity, and validate bank account ownership to prevent payment fraud.
+
+Department of Finance
+https://www.finance.gov.au › government › procurement › buying-australian...
+Procurement Process Considerations | Department of Finance
+
+Officials should ensure that they identify any requirements for external expertise in the planning stages of the procurement to manage schedule, budget and delegate approval risks.
+
+finance.gov.au
+https://sellingtogov.finance.gov.au › faq › supplier-obligations
+Supplier obligations | Selling to Government
+
+When you are working with the Australian Government, you have certain obligations as a supplier. These will be outlined in the terms and conditions of any contract you enter into with an Australian …
+
+Australian Taxation Office
+https://www.ato.gov.au › about-ato › ato-tenders-and-procurement › complyi…
+Complying with procurement policy and legislation | Australian …
+
+8 Sept 2025 · Businesses tendering for Australian Government procurements that are undertaken through open tenders and have an estimated total value of over $4 million (including GST) must …
+
+traceconsultants.com.au
+https://www.traceconsultants.com.au › thinking › compliant-procurement-in...
+Australian Government Procurement Compliance | Trace
+
+Clear requirements, structured evaluation, transparent decision-making, and thorough documentation are the foundations. When these are in place, compliance is a byproduct of good practice, not a …
+
+australiatenderalerts.com
+https://australiatenderalerts.com › blog › government-procurement-rules...
+Government Procurement Rules Australia | Supplier Guide
+Australian Public Service Commission (APSC)
+https://www.apsc.gov.au › ... › strengthening-integrity-supplier-conduct
+Like
+Dislike
+ 
+Key negotiation clauses for multiple sellers
+Modern slavery in supplier contracts

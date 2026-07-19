@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-sv-20260718-chatgpt-r1__supplier-verification-10-stop-findings",
+  "platform": "chatgpt",
+  "questionId": "supplier-verification-10-stop-findings",
+  "prompt": "What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?",
+  "promptHash": "sha256:81b4417f19c7bf9d299fe1a59304df205b9da4b5c38e716690f27628d718b9da",
+  "observedAt": "2026-07-18T13:24:13.546Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-chatgpt-r1/snapshots/geo-sv-20260718-chatgpt-r1__supplier-verification-10-stop-findings.txt",
+    "hash": "sha256:41950d39b72a358442b559549a495b11f3735bbb0a8a491ae416686f05667dd3",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Conversation https://chatgpt.com/c/6a5b7e6f-febc-83ec-b5ba-7e0010e520d0"
+}

@@ -1,0 +1,149 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=What%20warning%20signs%20suggest%20that%20a%20Chinese%20supplier%27s%20business%20licence%20or%20certificates%20may%20be%20false%3F&setlang=en-AU&cc=AU
+TITLE: What warning signs suggest that a Chinese supplier's business licence or certificates may be false? - Search
+OBSERVED_AT: 2026-07-18T13:51:40.329Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU (copilot.microsoft.com may require sign-in; SERP generative block captured when present)
+PROMPT: What warning signs suggest that a Chinese supplier's business licence or certificates may be false?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+Warning Signs Suggesting False Business License or Certificates
+Refuses to provide business license: A legitimate supplier should readily share their business license and registration details. 
+1
+Uses free email services: Suppliers using Gmail, Yahoo, or Hotmail instead of company domain email addresses may be hiding something or not an established business. 
+1
+Requests payment via Western Union or personal account: These payment methods offer zero buyer protection, making them dangerous. 
+1
+Refuses factory visit or video call: Legitimate factories are proud to show their facilities and want you to see their capabilities. 
+1
+Prices significantly below market average: Quotes that are 40% or more below average are suspicious and may indicate a false business license. 
+1
+
+These warning signs should prompt caution and further investigation when dealing with a Chinese supplier. Always verify the legitimacy of a supplier's business license and certificates to avoid potential scams and ensure a safe transaction.
+1 Source
+Read more
+chinesecheck.com
+Chinese Business License Verification: How to Check If It's Real
+This comprehensive guide will teach you exactly how to read a Chinese business license, verify its authenticity through official channels, spot common forgery indicators, and under…
+Epic Sourcing
+How to Verify a Chinese Supplier Before You Pay (2026 Checklist)
+This 2026 checklist shows exactly how to verify a Chinese supplier before you pay — licence checks, video tours, samples, red flags and safe payment terms. Last updated: 25 June 20…
+View all
+---
+ORGANIC:
+1. Chinese Business License Verification: How to Check If It's Real | https://www.bing.com/ck/a?!&&p=b138f66cbae9dd8e9cb8c644531f979c98230b83af79a900f8ab2d977b333e03JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluZXNlY2hlY2suY29tL2Jsb2cvY2hpbmVzZS1idXNpbmVzcy1saWNlbnNlLXZlcmlmaWNhdGlvbg&ntb=1
+2. How to Verify a Chinese Supplier Before You Pay (2026 Checklist) | https://www.bing.com/ck/a?!&&p=17ad8d4d9635483c99612118e73b81eafac6f3aface8eb0b892810d0c4720c8bJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuZXBpY3NvdXJjaW5nLmNvbS5hdS9wb3N0LzI1LTA2LWhvdy10by12ZXJpZnktYS1jaGluZXNlLXN1cHBsaWVyLWJlZm9yZS15b3UtcGF5LTIwMjYtY2hlY2tsaXN0&ntb=1
+3. Chinese Supplier Scams: How to Identify and Avoid Them (2026) | https://www.bing.com/ck/a?!&&p=e1d30a7359103ec2f8e60c8b416408c902daea420feb0c69b63dde2cac2f823dJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluZXNlY2hlY2suY29tL2Jsb2cvY2hpbmVzZS1zdXBwbGllci1zY2FtLXByZXZlbnRpb24&ntb=1
+4. How to Read a Chinese Business License and Verify a Supplier | https://www.bing.com/ck/a?!&&p=27a2525786a1b62f9b678454352ea4b084e9bca661d03fea77eb8ce220996228JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cubmV3YnV5aW5nYWdlbnQuY29tL3Jlc291cmNlcy9ob3ctdG8tcmVhZC1hLWNoaW5lc2UtYnVzaW5lc3MtbGljZW5zZS1hbmQtdmVyaWZ5LWEtc3VwcGxpZXI&ntb=1
+5. How to Verify a Chinese Supplier’s Legitimacy in 2026? | https://www.bing.com/images/search?view=detailV2&ccid=f8CUt2jf&id=F9B0990B816B56B010D878040F9D7039C14E20C0&thid=OIP.f8CUt2jfeUIw3QP11GGuXQAAAA&mediaurl=https://owlsourcing.com/wp-content/uploads/2025/06/Product-Development.jpg&q=What+warning+signs+suggest+that+a+Chinese+supplier%27s+business+licence+or+certificates+may+be+false%3f&ck=606A63BE272281821B3BC6AD1B02563F&idpp=rc&expw=474&exph=474&form=rc2idp
+6. How to Verify a Chinese Supplier is Legitimate (Scam Prevention Guide) | https://www.bing.com/ck/a?!&&p=751d9045a742b68c3ff3dbe259c71a8f8479a5f587e624d3560f09b32ef0cfe2JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9iZXR0ZXJwcm9kdWN0c291cmNpbmcuY29tLmF1L2Jsb2cvdmVyaWZ5LWNoaW5lc2Utc3VwcGxpZXItbGVnaXRpbWF0ZS1zY2FtLXByZXZlbnRpb24&ntb=1
+7. How to Verify Chinese Suppliers: 5-Step Verification Checklist (2026) | https://www.bing.com/ck/a?!&&p=a9bde417da6bc3507c353988038fbc1bfc582bc2e66859715c41913aafdf15bdJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9wYXhwb3J0dHJhZGluZy5jb20vYmxvZy9ob3ctdG8tdmVyaWZ5LWNoaW5lc2Utc3VwcGxpZXJzLWd1aWRlLmh0bWw&ntb=1
+8. How to Verify a Chinese Supplier (2026) — Don't Get Scammed | https://www.bing.com/ck/a?!&&p=42055e8486ceb953d11212d9aeeb7a7bc02487b60f86fb17ba8aa05e71d26ad6JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluYXdpdGhtZS5jb20vZ3VpZGVzL3ZlcmlmeS1jaGluZXNlLXN1cHBsaWVy&ntb=1
+9. How to Verify a Chinese Supplier Before You Pay | https://www.bing.com/ck/a?!&&p=3dab11530d18f26480962c07771c8bcd67556831963495ade251774c9cead473JmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly93d3cuY2hpbmFzb3VyY2VsYWIuY29tL2hvdy10by12ZXJpZnktYS1jaGluZXNlLXN1cHBsaWVyLw&ntb=1
+10. chinawithme.com
+https://chinawithme.com › guides | https://www.bing.com/ck/a?!&&p=5247449a6fc304c459392bea4b46ace716a21fc9168c2bd99c4b24827ded824eJmltdHM9MTc4NDMzMjgwMA&ptn=3&ver=2&hsh=4&fclid=09861a70-974f-6424-22db-0de196236501&u=a1aHR0cHM6Ly9jaGluYXdpdGhtZS5jb20vZ3VpZGVzL3ZlcmlmeS1jaGluZXNlLXN1cHBsaWVyLTIwMjY&ntb=1
+
+LINKS:
+- how Bing delivers search results | https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3
+- Refuses to provide business license: A legitimate supplier should readily share their business license and registration details.  | https://chinesecheck.com/blog/chinese-business-license-verification
+- Epic Sourcing How to Verify a Chinese Supplier Before You Pay (2026 Checklist) This 2026 checklist shows exactly how to verify a Chinese sup | https://www.epicsourcing.com.au/post/25-06-how-to-verify-a-chinese-supplier-before-you-pay-2026-checklist
+- chinesecheck.com | https://chinesecheck.com/blog/chinese-supplier-scam-prevention
+- newbuyingagent.com | https://www.newbuyingagent.com/resources/how-to-read-a-chinese-business-license-and-verify-a-supplier
+- owlsourcing.com | https://owlsourcing.com/verify-chinese-suppliers-legitimacy/
+- betterproductsourcing.com.auHow to Verify a Chinese Supplier is Legitimate (Scam Prevention Guide)We'll cover 15 warning signs, 6 verificati | https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention
+- paxporttrading.com https://paxporttrading.com › blog › how-to-verify-chinese-suppliers-guide.html | https://paxporttrading.com/blog/how-to-verify-chinese-suppliers-guide.html
+- chinawithme.com https://chinawithme.com › guides › verify-chinese-supplier Translate this result | https://chinawithme.com/guides/verify-chinese-supplier
+- chinasourcelab.com https://www.chinasourcelab.com › how-to-verify-a-chinese-supplier | https://www.chinasourcelab.com/how-to-verify-a-chinese-supplier/
+- chinawithme.com https://chinawithme.com › guides | https://chinawithme.com/guides/verify-chinese-supplier-2026
+- Some results have been removed | http://go.microsoft.com/fwlink/?LinkID=617350
+
+BODY (truncated):
+Skip to content
+Accessibility Feedback
+6
+AllSearchImagesVideosMapsNewsCopilot
+More
+About 4,160 results
+Warning Signs Suggesting False Business License or Certificates
+Refuses to provide business license: A legitimate supplier should readily share their business license and registration details. 
+1
+Uses free email services: Suppliers using Gmail, Yahoo, or Hotmail instead of company domain email addresses may be hiding something or not an established business. 
+1
+Requests payment via Western Union or personal account: These payment methods offer zero buyer protection, making them dangerous. 
+1
+Refuses factory visit or video call: Legitimate factories are proud to show their facilities and want you to see their capabilities. 
+1
+Prices significantly below market average: Quotes that are 40% or more below average are suspicious and may indicate a false business license. 
+1
+
+These warning signs should prompt caution and further investigation when dealing with a Chinese supplier. Always verify the legitimacy of a supplier's business license and certificates to avoid potential scams and ensure a safe transaction.
+1 Source
+Read more
+chinesecheck.com
+Chinese Business License Verification: How to Check If It's Real
+This comprehensive guide will teach you exactly how to read a Chinese business license, verify its authenticity through official channels, spot common forgery indicators, and under…
+Epic Sourcing
+How to Verify a Chinese Supplier Before You Pay (2026 Checklist)
+This 2026 checklist shows exactly how to verify a Chinese supplier before you pay — licence checks, video tours, samples, red flags and safe payment terms. Last updated: 25 June 20…
+View all
+ 
+chinesecheck.com
+https://chinesecheck.com › blog › chinese-business-license-verification
+Chinese Business License Verification: How to Check If It's Real
+
+31 Mar 2026 · How to verify a Chinese business license: read key fields, check via GSXT, spot fakes, and understand the Unified Social Credit Code.
+
+ 
+Epic Sourcing
+https://www.epicsourcing.com.au › post
+How to Verify a Chinese Supplier Before You Pay (2026 Checklist)
+
+25 June 2026 · Getting scammed is the number-one fear for Aussie SMEs sourcing from China. This 2026 checklist shows exactly how to verify a Chinese supplier before you pay — licence checks, …
+
+chinesecheck.com
+https://chinesecheck.com › blog › chinese-supplier-scam-prevention
+Chinese Supplier Scams: How to Identify and Avoid Them (2026)
+
+31 Mar 2026 · This guide exposes the most common Chinese supplier scams in 2026, explains the official warning signs identified by Chinese government agencies, and provides a practical framework …
+
+newbuyingagent.com
+https://www.newbuyingagent.com › resources › how-to-read-a-chinese...
+How to Read a Chinese Business License and Verify a Supplier
+
+Match three things across documents: the license name, the bank account name, and the contract counterparty name. All three must be identical, character-for-character. Mismatch is the single most …
+
+owlsourcing.com
+https://owlsourcing.com › verify-chinese-suppliers-legitimacy
+How to Verify a Chinese Supplier’s Legitimacy in 2026?
+
+8 Dec 2023 · How to Verify Chinese Companies & Suppliers? You will learn to verify suppliers by yourself in 8 steps with this post.
+
+betterproductsourcing.com.au
+https://betterproductsourcing.com.au › blog › verify-chinese-supplier...
+How to Verify a Chinese Supplier is Legitimate (Scam Prevention Guide)
+
+8 Jan 2026 · Prevent supplier fraud with this comprehensive verification guide. Learn 15 red flags and 6 verification methods to ensure your Chinese supplier is legitimate before ordering.
+
+paxporttrading.com
+https://paxporttrading.com › blog › how-to-verify-chinese-suppliers-guide.html
+How to Verify Chinese Suppliers: 5-Step Verification Checklist (2026)
+
+24 Mar 2026 · Check their business license — the business scope (经营范围) will indicate manufacturing (生产/制造) or trading (贸易/销售). Also check their address on satellite maps, ask production …
+
+chinawithme.com
+https://chinawithme.com › guides › verify-chinese-supplier
+Translate this result
+How to Verify a Chinese Supplier (2026) — Don't Get Scammed
+
+Is this Alibaba supplier legit? How to verify Chinese factories — Tianyancha checks, factory audits, sample orders, red flags. From someone who does this professionally.
+
+chinasourcelab.com
+https://www.chinasourcelab.com › how-to-verify-a-chinese-supplier
+How to Verify a Chinese Supplier Before You Pay
+chinawithme.com
+https://chinawithme.com › guides
+Like
+Dislike
+ 

@@ -1,0 +1,131 @@
+{
+  "observationId": "geo-sv-20260718-bing-copilot-r1__supplier-verification-04-service-scope",
+  "platform": "bing-copilot",
+  "questionId": "supplier-verification-04-service-scope",
+  "prompt": "What should be included in a paid supplier verification service for an Australian importer?",
+  "promptHash": "sha256:269e079c6604a143365467205d10b36695cd0ecaa4c299c5dea0ba2bcc548f9f",
+  "observedAt": "2026-07-18T13:51:20.027Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "blog.swiftcargo.solutions",
+    "checkfile.ai",
+    "ezyshield.com.au",
+    "sgs.com",
+    "linkvigor.com",
+    "xero.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://support.microsoft.com/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3",
+      "title": "how Bing delivers search results",
+      "domain": "support.microsoft.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+      "title": "Legal Business Verification: Confirm the supplier's legal status, including registration with the Australian Business Register and ASIC. ",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.checkfile.ai/en-AU/blog/know-your-supplier-kys-vendor-compliance",
+      "title": "Financial Health Check: Review the supplier's financial records, including balance sheets, profit and loss statements, and cash flow stateme",
+      "domain": "checkfile.ai"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.checkfile.ai/en-AU/blog/know-your-supplier-vendor-verification-checklist",
+      "title": "www.checkfile.ai Know Your Supplier (KYS): Vendor Verification Checklist for Australian ... Know Your Supplier (KYS) is the structured due d",
+      "domain": "checkfile.ai"
+    },
+    {
+      "rank": 5,
+      "url": "https://ezyshield.com.au/learn/supplier-verification-australia/",
+      "title": "ezyshield.com.au",
+      "domain": "ezyshield.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.sgs.com/en-au/services/supplier-verification-program",
+      "title": "sgs.com",
+      "domain": "sgs.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.linkvigor.com/supplier-verification-guide/",
+      "title": "linkvigor.comThe Complete Guide to Supplier Verification: What Every Importer Needs ...Supplier verification is the cornerstone of safe inte",
+      "domain": "linkvigor.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.xero.com/au/accounting-software/submit-gst-returns/?utm_source=MICROSOFT&utm_medium=cpc&utm_campaign=AU+-+NB+-+MF+-+SMB+-+Guides&utm_content=GST&utm_term=gst+on+exports&ds_kid=352832496625&gclid={msclkid}&gclsrc=3p.ds&msclkid={msclkid}",
+      "title": "Χeгο https://www.xero.com › Xero › GST",
+      "domain": "xero.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.xero.com/au/accounting-software/submit-gst-returns/?utm_source=MICROSOFT&utm_medium=cpc&utm_campaign=AU+-+NB+-+MF+-+SMB+-+Guides&utm_content=GST&utm_term=gst+on+exports&ds_kid=352832496625&gclid={msclkid}&gclsrc=3p.ds&msclkid={msclkid}&msockid=09861a70974f642422db0de196236501",
+      "title": "Lodge Your BAS Online | Try for Free Now",
+      "domain": "xero.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.bing.com/aclick?ld=e86DjwkfIDq1YVLBhYjjOeuzVUCUywD3L-2rlU9nYXj-m1yqBb7hkOO4d0sySH_5d51LSdBTyS4tRpi_czLfloHk20LjfAh865-6f5YoruchVdemb5w-B6T2BsZf_DLCyJkwbaq3K5D9d8b55DCNdsH-CHxUTzm7BHPbRk7AkWZRw0IzchwF2c_P6ubXYcTLZUe34cNDoMoW1fBJObEEVvB_xiezlD-3O1YB7V0f_s3mMeKJ3j&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MDkzMzk5Nzg3NSUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODc5MzIwMTU0NCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxODE2NDU2Mzc0JTI2ZHNfYV9hZ2lkJTNkMTc1NzY3MDA3MTA0JTI2ZHNfYV9saWQlM2Rrd2QtMzUyODMyNDk2NjI1JTI2JTI2ZHNfZV9hZGlkJTNkODEwODkxMTA3NzE2MDElMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTA4OTMxODc2MjA3MSUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZhdSUyZmd1aWRlcyUyZmhpcmluZy1lbXBsb3llZXMlMmYlMjZ1dG1fc291cmNlJTNkTUlDUk9TT0ZUJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEFVJTJiLSUyYk5CJTJiLSUyYk1GJTJiLSUyYlNNQiUyYi0lMmJHdWlkZXMlMjZ1dG1fY29udGVudCUzZEdTVCUyNnV0bV90ZXJtJTNkZ3N0JTJib24lMmJleHBvcnRzJTI2ZHNfa2lkJTNkMzUyODMyNDk2NjI1JTI2Z2NsaWQlM2RiYjljNzVhNjY1Y2QxZjE2MmUyMzFmZmRlMTAyYzQzNiUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZGJiOWM3NWE2NjVjZDFmMTYyZTIzMWZmZGUxMDJjNDM2&rlid=bb9c75a665cd1f162e231ffde102c436&ntb=1",
+      "title": "Download Now for Free",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.bing.com/aclick?ld=e8qcyrjJUA-N-_YiTAJxUzVTVUCUz-dxoTEDcKAG9sD2_53B4wCEKH9UNoH-90ZzYFaI-maSVzNs9OWBZx5rMEYs7cy7b-uE0vFA3Shh7yRfTbXxu37YSaU1oOPBEQ_E4lE9CzpwRAWVzEIFK32tq636A2vd9N_lUBH5M8IGe6nCBQkw99ncCzWaDI5mm56U4dR70nm2QUdfOYoCKMSnPpzspPogN1V43dcG1p_f9JMkRsVNvM&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MDkzMzk5Nzg3NSUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODc5MzIwMTU0NCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxODE2NDU2Mzc0JTI2ZHNfYV9hZ2lkJTNkMTc1NzY3MDA3MTA0JTI2ZHNfYV9saWQlM2Rrd2QtMzUyODMyNDk2NjI1JTI2JTI2ZHNfZV9hZGlkJTNkODEwODkxMTA3NzE2MDElMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTA4OTMxODc2MjA3MSUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZhdSUyZmFjY291bnRpbmctc29mdHdhcmUlMmZzZW5kLWludm9pY2VzJTJmJTI2dXRtX3NvdXJjZSUzZE1JQ1JPU09GVCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RBVSUyYi0lMmJOQiUyYi0lMmJNRiUyYi0lMmJTTUIlMmItJTJiR3VpZGVzJTI2dXRtX2NvbnRlbnQlM2RHU1QlMjZ1dG1fdGVybSUzZGdzdCUyYm9uJTJiZXhwb3J0cyUyNmRzX2tpZCUzZDM1MjgzMjQ5NjYyNSUyNmdjbGlkJTNkMWQwZjlkOWE2MDUzMTZhY2E1ZDBmN2MxZTQ5YzUyNjclMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2QxZDBmOWQ5YTYwNTMxNmFjYTVkMGY3YzFlNDljNTI2Nw&rlid=1d0f9d9a605316aca5d0f7c1e49c5267&ntb=1",
+      "title": "Billing Solution That...",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 12,
+      "url": "https://www.bing.com/aclick?ld=e86I1AdcQrj8Hsmkh_fhT_EjVUCUzvdZzSqUKg_HDOK-1WO3gTXF-eQnlAoOrX8B6q1QxpNNlz_6zU1ApswoE2KJw8bRiv0bLjkDb0UB14r0TT9Km9XhBwkON9UkS9ov_l9t3Q8UM_WkbmiUNRTtpVXZZQhBnjKradZ2w2tE7Ev1qwR8RXo7SuVKWi187pkahRkx54aGfMODtZ84gNS7JpmyWCx_lE27274kk6pixP4DB1Pmhr&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MDkzMzk5Nzg3NSUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODc5MzIwMTU0NCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxODE2NDU2Mzc0JTI2ZHNfYV9hZ2lkJTNkMTc1NzY3MDA3MTA0JTI2ZHNfYV9saWQlM2Rrd2QtMzUyODMyNDk2NjI1JTI2JTI2ZHNfZV9hZGlkJTNkODEwODkxMTA3NzE2MDElMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTA4OTMxODc2MjA3MSUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZhdSUyZmd1aWRlcyUyZnN0YXJ0aW5nLWEtYnVzaW5lc3MlMmYlMjZ1dG1fc291cmNlJTNkTUlDUk9TT0ZUJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEFVJTJiLSUyYk5CJTJiLSUyYk1GJTJiLSUyYlNNQiUyYi0lMmJHdWlkZXMlMjZ1dG1fY29udGVudCUzZEdTVCUyNnV0bV90ZXJtJTNkZ3N0JTJib24lMmJleHBvcnRzJTI2ZHNfa2lkJTNkMzUyODMyNDk2NjI1JTI2Z2NsaWQlM2QyYzBhMWVhNTk5NGMxODJlYmVmNDc0ZmUxZDgzYzc4NSUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDJjMGExZWE1OTk0YzE4MmViZWY0NzRmZTFkODNjNzg1&rlid=2c0a1ea5994c182ebef474fe1d83c785&ntb=1",
+      "title": "Tools For Your Business",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 13,
+      "url": "https://www.bing.com/aclick?ld=e8q35VD948gZqir0OrofIvUDVUCUxTS6yg3P89YljGf5wg0JcQV8i0495_TXtnLfoYlUs-hWPz289Yblw9ZhbcclXZ_DrnyncYtbhMFZVrAyomLuroDIKnvOpQiSiLQ0oWMdqmN1aoLFEbQfHeS1LTFC8cMJJHpPH4JDik3zEVoLIFOKos8wURPCrfcJ9Eiv_Sv5t4DGZHPmzHoA2lo6tG6pMECB7pc513fx9ifldGAoBRRbkw&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MDkzMzk5Nzg3NSUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODc5MzIwMTU0NCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxODE2NDU2Mzc0JTI2ZHNfYV9hZ2lkJTNkMTc1NzY3MDA3MTA0JTI2ZHNfYV9saWQlM2Rrd2QtMzUyODMyNDk2NjI1JTI2JTI2ZHNfZV9hZGlkJTNkODEwODkxMTA3NzE2MDElMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTA4OTMxODc2MjA3MSUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZhdSUyZmd1aWRlcyUyZmFwcGx5LWZvci1hbi1hYm4lMmYlMjZ1dG1fc291cmNlJTNkTUlDUk9TT0ZUJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEFVJTJiLSUyYk5CJTJiLSUyYk1GJTJiLSUyYlNNQiUyYi0lMmJHdWlkZXMlMjZ1dG1fY29udGVudCUzZEdTVCUyNnV0bV90ZXJtJTNkZ3N0JTJib24lMmJleHBvcnRzJTI2ZHNfa2lkJTNkMzUyODMyNDk2NjI1JTI2Z2NsaWQlM2RmMTNmMTA3N2NhODAxNTgwNDQxNjdhMmM0ZTRmNjc3ZSUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZGYxM2YxMDc3Y2E4MDE1ODA0NDE2N2EyYzRlNGY2Nzdl&rlid=f13f1077ca80158044167a2c4e4f677e&ntb=1",
+      "title": "Download Today",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 14,
+      "url": "https://www.bing.com/aclick?ld=e8ryb5n9RlfgngE5xkvC-jIzVUCUzUw07130k0FegBH2ZEGDTI1C2Btyp5R9y5mywLjzrr7l7YAqTokapsgtRQp6KGCZ3_qCCiqRoIYZ3a2HBb-7CuSVJOSWkJ3-AvuIKyeiL-XTMZxDXQqUU5-RllTRkDAEfdJsc8MCUKPqFvprECkRFb1z8yPUCn6FZoIHfntIs6U80kryXtd6UgWe_HJoD3H6J_RSlu6HMoLAN4EPTib9vv&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MDkzMzk5Nzg3NSUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODc5MzIwMTU0NCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxODE2NDU2Mzc0JTI2ZHNfYV9hZ2lkJTNkMTc1NzY3MDA3MTA0JTI2ZHNfYV9saWQlM2Rrd2QtMzUyODMyNDk2NjI1JTI2JTI2ZHNfZV9hZGlkJTNkODEwODkxMTA3NzE2MDElMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTA4OTMxODc2MjA3MSUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZhY2NvdW50aW5nLXNvZnR3YXJlJTJmYWNjZXB0LXBheW1lbnRzJTJmJTI2dXRtX3NvdXJjZSUzZE1JQ1JPU09GVCUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fY2FtcGFpZ24lM2RBVSUyYi0lMmJOQiUyYi0lMmJNRiUyYi0lMmJTTUIlMmItJTJiR3VpZGVzJTI2dXRtX2NvbnRlbnQlM2RHU1QlMjZ1dG1fdGVybSUzZGdzdCUyYm9uJTJiZXhwb3J0cyUyNmRzX2tpZCUzZDM1MjgzMjQ5NjYyNSUyNmdjbGlkJTNkMjgwZTQwOTNjY2M3MWFiOWFiMDkyYWM4NDgwODRjZGUlMjZnY2xzcmMlM2QzcC5kcyUyNm1zY2xraWQlM2QyODBlNDA5M2NjYzcxYWI5YWIwOTJhYzg0ODA4NGNkZQ&rlid=280e4093ccc71ab9ab092ac848084cde&ntb=1",
+      "title": "Accept Payments",
+      "domain": "bing.com"
+    },
+    {
+      "rank": 15,
+      "url": "https://www.bing.com/aclick?ld=e8GlA6-eLKxx-6TOS82_CTsDVUCUxePaxh4I-1W1aoPveAgM5KbrPBqwNw9y84iUC8YYV9SetyGsAbMUIyb4yYk_YbEbbpGuRFAcHt80hfRwMYqFBWZZC6q9iKp9H6JDmwe1jiTp7nx_abJeWcv-T58Y4vBZN-EtY9nOs7PamNh8k7LCg1fbVpE_fiKNv4wgVY9xwJXfdIyeQFsYNgjv7jmeZ2jc_h00Y3pCNgUzjfrnBeORJd&u=aHR0cHMlM2ElMmYlMmZhZC5kb3VibGVjbGljay5uZXQlMmZzZWFyY2hhZHMlMmZsaW5rJTJmY2xpY2slM2ZsaWQlM2Q0MzcwMDA4MDkzMzk5Nzg3NSUyNmRzX3Nfa3dnaWQlM2Q1ODcwMDAwODc5MzIwMTU0NCUyNmRzX2FfY2lkJTNkNjUzNzM1NzgxNSUyNmRzX2FfY2FpZCUzZDIxODE2NDU2Mzc0JTI2ZHNfYV9hZ2lkJTNkMTc1NzY3MDA3MTA0JTI2ZHNfYV9saWQlM2Rrd2QtMzUyODMyNDk2NjI1JTI2JTI2ZHNfZV9hZGlkJTNkODEwODkxMTA3NzE2MDElMjZkc19lX3RhcmdldF9pZCUzZGt3ZC04MTA4OTMxODc2MjA3MSUzYWxvYy05JTI2JTI2ZHNfZV9uZXR3b3JrJTNkbyUyNmRzX3VybF92JTNkMiUyNmRzX2Rlc3RfdXJsJTNkaHR0cHMlM2ElMmYlMmZ3d3cueGVyby5jb20lMmZzZyUyZnRyeS1ub3clMmZpbnZvaWNpbmclMmZpbnZvaWNpbmctc29mdHdhcmUlMmYlMjZ1dG1fc291cmNlJTNkTUlDUk9TT0ZUJTI2dXRtX21lZGl1bSUzZGNwYyUyNnV0bV9jYW1wYWlnbiUzZEFVJTJiLSUyYk5CJTJiLSUyYk1GJTJiLSUyYlNNQiUyYi0lMmJHdWlkZXMlMjZ1dG1fY29udGVudCUzZEdTVCUyNnV0bV90ZXJtJTNkZ3N0JTJib24lMmJleHBvcnRzJTI2ZHNfa2lkJTNkMzUyODMyNDk2NjI1JTI2Z2NsaWQlM2QxNmEyZmQ1NGFkYjkxMzk0YWUwYzk3MGYyOTc2ZTQxZiUyNmdjbHNyYyUzZDNwLmRzJTI2bXNjbGtpZCUzZDE2YTJmZDU0YWRiOTEzOTRhZTBjOTcwZjI5NzZlNDFm&rlid=16a2fd54adb91394ae0c970f2976e41f&ntb=1",
+      "title": "Simple & Secure Invoicing",
+      "domain": "bing.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-bing-copilot-r1/snapshots/geo-sv-20260718-bing-copilot-r1__supplier-verification-04-service-scope.txt",
+    "hash": "sha256:b6ae1f5656289daff1e7d2916bd6a93edbc30c8034c394362d55577efd71d812",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent."
+}

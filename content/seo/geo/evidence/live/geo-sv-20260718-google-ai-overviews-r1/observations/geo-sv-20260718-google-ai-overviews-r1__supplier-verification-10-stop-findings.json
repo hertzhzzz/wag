@@ -1,0 +1,100 @@
+{
+  "observationId": "geo-sv-20260718-google-ai-overviews-r1__supplier-verification-10-stop-findings",
+  "platform": "google-ai-overviews",
+  "questionId": "supplier-verification-10-stop-findings",
+  "prompt": "What supplier verification findings should stop an Australian buyer from proceeding with a purchase order?",
+  "promptHash": "sha256:81b4417f19c7bf9d299fe1a59304df205b9da4b5c38e716690f27628d718b9da",
+  "observedAt": "2026-07-18T13:47:12.819Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "transformed.com.au",
+    "planergy.com",
+    "chargebee.com",
+    "info.buy.nsw.gov.au",
+    "finance.gov.au",
+    "clearmarc.com.au"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.transformed.com.au/latest-news/common-procurement-mistakes/",
+      "title": "Common Procurement Mistakes and Fraud Red Flags",
+      "domain": "transformed.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://planergy.com/blog/purchase-order-vs-contract/#:~:text=Legally%20Binding%20Protections&text=POs%20do%20not%20become%20binding,the%20agreed%2Dupon%20time%20period.",
+      "title": "The Difference Between a Purchase Order & a Contract - Planergy",
+      "domain": "planergy.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.chargebee.com/resources/glossaries/what-is-a-purchase-order/#:~:text=Legal%20Status%20of%20a%20Purchase,or%20by%20fulfilling%20the%20order.",
+      "title": "Purchase Order: Definition, Process, and Templates Explained",
+      "domain": "chargebee.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.info.buy.nsw.gov.au/buyer-guidance/plan/before-you-approach-the-market/enforceable-procurement-provisions#:~:text=Enforceable%20procurement%20provisions%20apply%20to,subject%20to%20enforceable%20procurement%20provisions.",
+      "title": "Enforceable procurement provisions (EPP) guidance - info.buy.nsw",
+      "domain": "info.buy.nsw.gov.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.finance.gov.au/government/procurement/buying-australian-government/confidentiality-throughout-procurement-cycle",
+      "title": "Confidentiality throughout the Procurement Cycle",
+      "domain": "finance.gov.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.info.buy.nsw.gov.au/policy-library/policies/enforceable-procurement-provisions",
+      "title": "Enforceable procurement provisions - info.buy.nsw",
+      "domain": "info.buy.nsw.gov.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.clearmarc.com.au/post/10-vendor-due-diligence-red-flags-every-procurement-team-should-check-before-signing-a-new-supplier",
+      "title": "10 Third-Party Due Diligence Red Flags Every Procurement ...",
+      "domain": "clearmarc.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.buyingfor.vic.gov.au/supplier-code-conduct-agency-guidelines",
+      "title": "Supplier Code of Conduct: Agency guidance",
+      "domain": "buyingfor.vic.gov.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://ezyshield.com.au/learn/supplier-verification-australia/",
+      "title": "Supplier Verification Australia | How to Verify Suppliers",
+      "domain": "ezyshield.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.paymentworks.com/2025/11/28/supplier-verification-first-line-of-defense/",
+      "title": "Why Supplier Verification Is the First Line of Defense ...",
+      "domain": "paymentworks.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-sv-20260718-google-ai-overviews-r1/snapshots/geo-sv-20260718-google-ai-overviews-r1__supplier-verification-10-stop-findings.txt",
+    "hash": "sha256:b7da93e4df641c1d6209a49378ffdfe00c59e0a3939f8ea9bac9bd4d4ad7c26b",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture"
+}
