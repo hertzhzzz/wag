@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-07-technical-audit",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-07-technical-audit",
+  "prompt": "When should a buyer use a technical audit instead of a general factory audit?",
+  "promptHash": "sha256:b1b9d060ef7afcc954b8900d6e7ef0ba108ec40d988790119cf06450bbb8333e",
+  "observedAt": "2026-07-19T00:37:19.791Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-07-technical-audit.txt",
+    "hash": "sha256:5fd6b8f91f24c806002e64d4a397892c9fcc2d1543b742a31ebb547dbdc0cd67",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1c33-eea0-83ec-9790-eac616b5c138. Account Mark He Free."
+}

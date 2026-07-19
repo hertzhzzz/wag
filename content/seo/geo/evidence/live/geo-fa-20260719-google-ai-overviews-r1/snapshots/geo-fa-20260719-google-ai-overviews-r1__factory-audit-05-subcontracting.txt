@@ -1,0 +1,13 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=What%20subcontracting%20warning%20signs%20should%20an%20Australian%20buyer%20look%20for%20during%20a%20factory%20audit%3F&hl=en-AU&gl=au
+TITLE: What subcontracting warning signs should an Australian buyer look for during a factory audit? - Google Search
+OBSERVED_AT: 2026-07-19T01:03:04.736Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: What subcontracting warning signs should an Australian buyer look for during a factory audit?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+AI_OVERVIEW:
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.AI Overview

@@ -1,0 +1,111 @@
+A buyer should use a technical audit instead of a general factory audit when the product involves complex manufacturing processes, specialized technical requirements, or when deeper verification of engineering capability and process controls is critical to avoiding costly defects.
+linkedin
++2
+
+Key differences at a glance
+Aspect	General Factory Audit	Technical Audit
+Primary focus	Legitimacy, basic quality system, social compliance, overall capacity	Deep dive into technical capability, process controls, engineering competence, product-specific systems
+Standards basis	Simplified ISO 9000-style checklist	Product- and process-specific technical standards, buyer specs, industry norms
+Depth	Broad overview (“snapshot”) of supplier	Detailed assessment of how the factory actually makes your product
+Typical use	Early-stage supplier screening, basic risk check	Before bulk production of technically complex or high-risk products; when previous quality issues occurred
+Who performs it	General auditor / inspection company	Specialist auditor with product/industry technical expertise
+When to choose a technical audit
+
+Use a technical audit when one or more of these conditions apply:
+
+Product complexity is high
+
+Items with tight tolerances, functional performance requirements, safety-critical components, or complex assemblies (e.g., electronics, machinery, medical devices, advanced textiles, automotive parts).
+linkedin
++1
+
+Products where small process variations can cause major quality or safety issues.
+linkedin
+
+You need to validate specific processes and controls
+
+You must verify that the factory’s process parameters, equipment calibration, testing methods, and process control plans match your technical specifications.
+rsjqa
++1
+
+You want to assess whether they truly understand and can control critical-to-quality (CTQ) characteristics of your product.
+linkedin
+
+Past quality problems or high risk of defects
+
+Previous orders had recurring defects, rework, or field failures.
+linkedin
+
+The product category has a known history of quality issues in that region or supplier base.
+linkedin
+
+New supplier for a technically demanding product line
+
+You’re starting a long-term relationship with a factory for a product line that requires specific engineering know-how, tooling, or process expertise.
+linkedin
++1
+
+You need to confirm they’re not just “capable in general” but actually competent for your product type.
+alscert
++1
+
+Regulatory or customer compliance requirements
+
+Your product must meet strict regulatory standards (safety, medical, automotive, etc.) and you need evidence of robust technical systems, not just paperwork.
+welleinspection
++1
+
+Your own customers or certification bodies require proof of technical capability beyond a basic quality audit.
+linkedin
++1
+
+You’re making a significant investment
+
+Large order volumes, long-term contracts, or co-development of new products where the cost of failure is high.
+linkedin
++1
+
+You’re relying on this factory as a strategic partner rather than a spot supplier.
+linkedin
+
+When a general factory audit is usually enough
+
+A general factory audit is typically sufficient when:
+
+The product is relatively simple or low risk (e.g., basic promotional items, standard packaging, simple garments).
+qcadvisor
++1
+
+You’re doing an initial legitimacy and capability check before investing in deeper audits.
+qcadvisor
++1
+
+Your main concerns are:
+
+Is the factory real and legally registered?
+
+Do they have basic quality management and social compliance?
+
+Can they handle your expected volumes?
+tradeaiders
++2
+
+Practical rule of thumb
+
+Start with a general factory audit to filter out clearly unsuitable suppliers and confirm basic legitimacy.
+alscert
++1
+
+Move to a technical audit when:
+
+The product is technically complex or safety-critical, or
+
+You’ve had quality issues before, or
+
+You’re about to commit significant volume or a long-term partnership and need confidence in their engineering and process control.
+linkedin
++2
+
+Given your work with WAG coordinating factory visits and supplier verification between China and Australia, a technical audit is especially valuable when you’re sourcing products where performance, safety, or precise specifications matter (e.g., specialized equipment, technical goods) and where your clients’ reputations depend on consistent, defect-free production.
+linkedin
++1

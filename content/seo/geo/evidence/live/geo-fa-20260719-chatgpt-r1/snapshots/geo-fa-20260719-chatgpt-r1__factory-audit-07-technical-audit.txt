@@ -1,0 +1,120 @@
+A buyer should use a technical audit instead of (or in addition to) a general factory audit when the main risk is not whether the factory is a real operating business, but whether it can consistently produce the product to the required technical specification.
+
+A general factory audit checks overall supplier capability. A technical audit goes deeper into engineering, manufacturing controls, process capability, and product-specific risks.
+
+Use a technical audit when:
+Situation	Why a technical audit is more suitable
+The product has complex specifications	The auditor needs to verify engineering capability, tolerances, materials, processes, and testing methods
+Product failure could create safety or compliance issues	Focus is needed on quality controls, validation testing, and regulatory requirements
+You are placing a large first order	You need confidence that the factory can actually manufacture your design at scale
+The supplier claims proprietary manufacturing capability	A technical review can test whether the claimed processes and equipment exist
+You have experienced quality problems before	The audit can identify root causes in production rather than just administrative weaknesses
+The product requires custom tooling or moulds	You need to assess tooling design, maintenance, and production stability
+The product requires certification	The audit should verify that certification requirements are integrated into production controls
+You are transferring production from another factory	A technical audit checks whether the new supplier can match existing quality standards
+Examples where a technical audit is preferable
+Electronics
+
+A general audit may confirm:
+
+Factory exists
+
+Workers are employed
+
+Basic QC procedures exist
+
+A technical audit should additionally examine:
+
+PCB assembly process
+
+Component sourcing controls
+
+SMT equipment calibration
+
+Firmware/version control
+
+Reliability testing
+
+Failure analysis procedures
+
+Machinery or industrial equipment
+
+A technical audit should review:
+
+Engineering drawings
+
+CNC capability
+
+Welding procedures
+
+Material traceability
+
+Pressure testing
+
+Factory acceptance testing
+
+Lighting and AV equipment
+
+A technical audit should check:
+
+LED driver quality controls
+
+Electrical safety testing
+
+EMC testing capability
+
+Thermal management testing
+
+IP rating validation
+
+RCM-related documentation readiness for Australia
+
+Signs you need a technical audit
+
+Consider upgrading from a general audit if the supplier:
+
+Cannot explain their production process clearly
+
+Outsources critical processes without disclosure
+
+Has inconsistent samples versus mass production
+
+Cannot provide inspection/test records
+
+Has frequent customer complaints
+
+Makes broad quality claims but provides little evidence
+
+Cannot identify key process control points
+
+When a general factory audit is enough
+
+A standard factory audit is usually sufficient for:
+
+Simple consumer products
+
+Low-value orders
+
+Established suppliers with a strong track record
+
+Products where defects are easy to detect before shipment
+
+Repeat orders with stable production history
+
+For an Australian importer
+
+A common approach is:
+
+Supplier verification
+Confirm legal entity, ownership, export capability, and business legitimacy.
+
+General factory audit
+Confirm factory existence, workforce, capacity, management systems, and basic controls.
+
+Technical audit
+Apply when product complexity, compliance requirements, or order value justify deeper engineering review.
+
+Pre-shipment inspection / production inspection
+Verify the actual batch before shipment.
+
+For high-value imports from China, especially custom products, machinery, electronics, lighting, or regulated goods, a technical audit is often the step that prevents expensive failures after production has already started.

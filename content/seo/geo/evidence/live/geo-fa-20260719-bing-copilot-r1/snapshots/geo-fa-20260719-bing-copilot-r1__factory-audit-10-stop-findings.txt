@@ -1,0 +1,151 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=Which%20factory%20audit%20findings%20should%20be%20resolved%20before%20approving%20a%20Chinese%20factory%20for%20production%3F&setlang=en-AU&cc=AU
+TITLE: Which factory audit findings should be resolved before approving a Chinese factory for production? - Search
+OBSERVED_AT: 2026-07-19T01:08:13.042Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU
+PROMPT: Which factory audit findings should be resolved before approving a Chinese factory for production?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+Before approving a Chinese factory for production, the following factory audit findings should be resolved:
+Legal Verification: Confirm the factory's business license and registration documents, including the Chinese name on the license and date of incorporation. Ensure the license's scope of business includes manufacturing of the product type. 
+1
+Production Capability: Verify the factory's actual production capacity and equipment condition. Ensure the factory's layout is organized and efficient, and that machines are modern and well-maintained. 
+1
+Quality Systems: Confirm the factory's quality systems and compliance with industry standards. Ensure the factory has the necessary technical expertise and equipment for producing the product. 
+1
+Working Conditions: Assess the working conditions, including cleanliness, organization, and storage facilities. Ensure the factory adheres to safety and health regulations. 
+1
+Security: Verify the factory's security measures, including fire safety, pest control, and compliance with environmental regulations. 
+1
+
+Addressing these findings will help ensure that the factory is ready for mass production and can meet the quality and safety standards required for your product.
+2 Sources
+Read more
+LinkedIn
+Factory Audit Checklist: Ensuring Supplier Readiness Before Mass Production
+A factory audit should answer one question before mass production starts: Can this supplier safely produce this exact order? Not just: - Does the company exist? - Did the sample lo…
+easyimex.com
+China Factory Audit Checklist 2026: 47-Point AQL-Based Template
+A China factory audit checklist is a structured evaluation tool that systematically assesses 47 critical checkpoints across legal verification, production capability, quality syste…
+View all
+---
+ORGANIC:
+1. Factory Audit Checklist: Ensuring Supplier Readiness Before Mass ... | https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a
+2. China Factory Audit Checklist 2026: 47-Point AQL-Based Template | https://easyimex.com/blog/china-factory-audit-checklist/
+3. Factory Audit Checklist: 60-Point China Factory Audit Template | https://qualitysourcingfromchina.com/guides/factory-audit-checklist-complete
+4. Factory Audit Checklist for China Manufacturing | https://sourcingagentchina.net/blog/factory-audit-checklist-china
+5. China Factory Audit Checklist: What to Inspect, Document, and Verify | https://www.allforsourcing.com/verify/china-factory-audit-checklist/
+6. Factory Verification Checklist 2026: China Audit Guide | WOWOHCOOL | https://www.wowohcool.com/blog/factory-verification-checklist/
+7. China Factory Audit Checklist 2026 | China Sourcing Agents | https://china-sourcing-agents.com/guides/factory-audit-checklist/
+8. Factory Audit Checklist — Complete Supplier Audit Guide 2026 | https://tetrainspection.com/factory-audit-checklist/
+9. Factory Audit in China: Cost, Checklist & When to Skip It (2026) | https://www.stellarchinese.com/factory-audit-china/
+10. The 27-Point China Factory Audit Checklist | CMH | https://chinamakershub.com/journal/china-factory-audit-checklist
+
+SERP_TEXT_SNIPPET:
+Skip to content
+Accessibility Feedback
+6
+AllSearchImagesVideosMapsNewsCopilot
+More
+About 18,100 results
+Before approving a Chinese factory for production, the following factory audit findings should be resolved:
+Legal Verification: Confirm the factory's business license and registration documents, including the Chinese name on the license and date of incorporation. Ensure the license's scope of business includes manufacturing of the product type. 
+1
+Production Capability: Verify the factory's actual production capacity and equipment condition. Ensure the factory's layout is organized and efficient, and that machines are modern and well-maintained. 
+1
+Quality Systems: Confirm the factory's quality systems and compliance with industry standards. Ensure the factory has the necessary technical expertise and equipment for producing the product. 
+1
+Working Conditions: Assess the working conditions, including cleanliness, organization, and storage facilities. Ensure the factory adheres to safety and health regulations. 
+1
+Security: Verify the factory's security measures, including fire safety, pest control, and compliance with environmental regulations. 
+1
+
+Addressing these findings will help ensure that the factory is ready for mass production and can meet the quality and safety standards required for your product.
+2 Sources
+Read more
+LinkedIn
+Factory Audit Checklist: Ensuring Supplier Readiness Before Mass Production
+A factory audit should answer one question before mass production starts: Can this supplier safely produce this exact order? Not just: - Does the company exist? - Did the sample lo…
+easyimex.com
+China Factory Audit Checklist 2026: 47-Point AQL-Based Template
+A China factory audit checklist is a structured evaluation tool that systematically assesses 47 critical checkpoints across legal verification, production capability, quality syste…
+View all
+ 
+LinkedIn
+https://www.linkedin.com › posts
+Factory Audit Checklist: Ensuring Supplier Readiness Before Mass ...
+
+A factory audit should answer one question before mass production starts: Can this supplier safely produce this exact order? Not just: - Does the company exist? - Did the sample look good? - Did ...
+
+ 
+easyimex.com
+https://easyimex.com › blog › china-factory-audit-checklist
+China Factory Audit Checklist 2026: 47-Point AQL-Based Template
+
+China factory audit checklist with 47 AQL-scored checkpoints that deliver 34% better supplier insights than pass/fail methods. Covers legal, production, quality, and compliance criteria.
+
+qualitysourcingfromchina.com
+https://qualitysourcingfromchina.com › guides › factory-audit-checklist...
+Factory Audit Checklist: 60-Point China Factory Audit Template
+
+6 May 2026 · The 60-point factory audit checklist we use on every China factory visit. Legal, capability, quality, ethical, security — with what each finding actually means.
+
+sourcingagentchina.net
+https://sourcingagentchina.net › blog › factory-audit-checklist-china
+Factory Audit Checklist for China Manufacturing
+
+18 Dec 2025 · Use this comprehensive factory audit checklist to evaluate Chinese manufacturers before placing orders. Cover production capability, quality systems, compliance, and working conditions.
+
+allforsourcing.com
+https://www.allforsourcing.com › verify › china-factory-audit-checklist
+China Factory Audit Checklist: What to Inspect, Document, and Verify
+
+4 days ago · A practical factory audit checklist for importers sourcing from China. Covers pre-audit documents, production floor inspection, QC systems, material traceability, and how to interpret an …
+
+wowohcool.com
+https://www.wowohcool.com › blog › factory-verification-checklist
+Factory Verification Checklist 2026: China Audit Guide | WOWOHCOOL
+
+21 Apr 2026 · During on-site visits or video tours, look for these factory indicators: loading docks with trucks, raw material storage areas, production equipment noise, worker uniforms with the company …
+
+china-sourcing-agents.com
+https://china-sourcing-agents.com › guides › factory-audit-checklist
+China Factory Audit Checklist 2026 | China Sourcing Agents
+
+10 May 2026 · Factory audits intimidate most buyers because they don’t know what to look for. This checklist covers 47 specific things to verify — with explanations of why each matters. If you’re earlier …
+
+Tetra Inspection
+https://tetrainspection.com › factory-audit-checklist
+Factory Audit Checklist — Complete Supplier Audit Guide 2026
+
+A professional factory audit checklist used by auditors and importers to evaluate supplier capabilities, quality management systems, and production facilities. Every checkpoint you need to qualify, …
+
+stellarchinese.com
+https://www.stellarchinese.com › factory-audit-china
+Factory Audit in China: Cost, Checklist & When to Skip It (2026)
+
+A factory audit in China checks whether a supplier is real, capable, and compliant before you wire a deposit. Costs, red flags, a checklist, and when to skip one.
+
+chinamakershub.com
+https://chinamakershub.com › journal › china-factory-audit-checklist
+The 27-Point China Factory Audit Checklist | CMH
+Videos of Which Factory Audit Findings Should Be Resolved Before A…
+2:16
+The Complete Factory Audit Guide To Verify A Chinese Factory’s Real Capabilities Without Visiting In
+YouTubesinoexport
+374 views1 month ago
+0:39
+China Factory Audit Checklist: Evidence Matters
+YouTubeSDI Export Services
+139 views3 weeks ago
+2:21
+Factory Audit for Sourcing/Import from China #chinasourcing #importexport #importfromchina
+YouTubeAlex@Metrolink Sourcing
+222 views4 months ago
+ 
+Quality compliance audit tips
+Factory audit best practices
+Digital factory checklist templates

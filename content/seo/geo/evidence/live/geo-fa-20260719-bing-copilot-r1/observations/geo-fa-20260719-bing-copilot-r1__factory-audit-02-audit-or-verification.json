@@ -1,0 +1,108 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-02-audit-or-verification",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-02-audit-or-verification",
+  "prompt": "How is a factory audit different from supplier verification and product inspection?",
+  "promptHash": "sha256:d9acf42140a3faf167dc46fd0c4a7145492d55ae001a9c63da1c0711e38f08f6",
+  "observedAt": "2026-07-19T01:07:20.945Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "globalvision.co",
+    "tetrainspection.com",
+    "linkedin.com",
+    "jaspetrade.com",
+    "auronixsourcing.com",
+    "amazingqualitycontrol.com",
+    "safetyculture.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://tetrainspection.com/factory-audit-vs-supplier-verification/",
+      "title": "A factory audit evaluates a supplier's manufacturing capability, quality systems, and capacity before placing an order. Supplier verification confirms a factory's existence and legitimacy, taking hour",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://tetrainspection.com/factory-audit-vs-supplier-verification/",
+      "title": "Tetra Inspection\n+5",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://tetrainspection.com/factory-audit-vs-supplier-verification/",
+      "title": "Tetra Inspection\nFactory Audit vs Supplier Verification: Which Do Y… | Tetra Inspection\nA supplier verification confirms a factory exists and is legitimate — it takes hours and costs less. A factory a",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.linkedin.com/pulse/audit-vs-inspection-you-fixing-factory-just-product-tradeaider-coexc",
+      "title": "LinkedIn\nAudit vs. Inspection: Are You Fixing the Factory or Just the Product?\nDefinition: A factory audit evaluates a supplier's manufacturing capability, quality systems, and capacity before you pla",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.jaspetrade.com/post/supplier-inspection-vs-factory-audit",
+      "title": "jaspetrade.com",
+      "domain": "jaspetrade.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.auronixsourcing.com/factory-audit-vs-factory-inspection-whats-the-difference-a-complete-guide-for-importers-in-2026/",
+      "title": "auronixsourcing.com",
+      "domain": "auronixsourcing.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://amazingqualitycontrol.com/factory-audit-vs-product-inspection/",
+      "title": "amazingqualitycontrol.com",
+      "domain": "amazingqualitycontrol.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://tetrainspection.com/factory-audit-vs-supplier-verification/",
+      "title": "Tetra InspectionFactory Audit vs Supplier Verification: Which Do Y… | Tetra InspectionA supplier verification confirms a factory exists and is legitimate — it takes hours and costs less. A factory aud",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.linkedin.com/pulse/audit-vs-inspection-you-fixing-factory-just-product-tradeaider-coexc",
+      "title": "LinkedInAudit vs. Inspection: Are You Fixing the Factory or Just the Product?Definition: A factory audit evaluates a supplier's manufacturing capability, quality systems, and capacity before you place",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.jaspetrade.com/post/supplier-inspection-vs-factory-audit",
+      "title": "jaspetrade.comSupplier Inspection vs Factory AuditFor buyers importing from China, the difference affects supplier selection, product quality, delivery risk, and how much control you actually have bef",
+      "domain": "jaspetrade.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.auronixsourcing.com/factory-audit-vs-factory-inspection-whats-the-difference-a-complete-guide-for-importers-in-2026/",
+      "title": "auronixsourcing.comFactory Audit vs Factory Inspection: What’s the Difference? A Complete ...When sourcing products from China, many importers use the terms factory audit and factory inspection interc",
+      "domain": "auronixsourcing.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-02-audit-or-verification.txt",
+    "hash": "sha256:af606cba600fa6b2852e28d1cecd223d641b3081d6bf4039acfa177999712c22",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

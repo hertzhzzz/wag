@@ -1,0 +1,260 @@
+Before approving a Chinese factory for production, an Australian buyer should require closure of any audit findings that create material risk to product quality, legal compliance, delivery reliability, or supply-chain control. Not every minor observation needs to block approval, but the following findings should generally be resolved before issuing a production purchase order.
+
+1. Factory identity and ownership issues (approval blockers)
+Finding	Why it must be resolved
+Factory cannot provide valid business licence or legal entity information	Risk of dealing with an unrelated trading company or fraudulent supplier
+Registered business name does not match contracts, invoices, or bank details	Creates payment and legal enforcement risk
+Factory refuses site access or restricts key areas during audit	Indicates lack of transparency
+Undisclosed subcontracting or production at another facility	Buyer loses control over quality and compliance
+
+Required closure evidence:
+
+Verified business licence
+
+Confirmed factory address
+
+Contract entity matches payment recipient
+
+Written approval of any subcontractors
+
+2. Quality management system failures
+
+These should be resolved before approval:
+
+Critical findings
+
+No documented quality procedures
+
+No incoming material inspection
+
+No in-process quality checks
+
+No final inspection process
+
+No traceability system
+
+No handling process for defective products
+
+A factory without basic quality controls may produce acceptable samples but fail during mass production.
+
+Required closure evidence:
+
+Quality manual or procedures
+
+Inspection records
+
+Defect handling records
+
+Corrective action reports
+
+Production quality checkpoints
+
+3. Production capability gaps
+
+Approve only after confirming the factory can meet your order requirements.
+
+Red flags:
+
+Factory cannot demonstrate similar product experience
+
+Machinery shown during audit is insufficient
+
+Key processes are outsourced without disclosure
+
+Production capacity claims cannot be supported
+
+No production planning system
+
+Required closure evidence:
+
+Production line demonstration
+
+Equipment list
+
+Capacity calculation
+
+Previous customer examples (where possible)
+
+Production schedule capability
+
+4. Material and supplier control problems
+
+Resolve before approval:
+
+No approved supplier list
+
+No incoming material inspection
+
+Unknown material sources
+
+No batch or lot tracking
+
+Materials stored incorrectly
+
+This is especially important for:
+
+Electronics
+
+Lighting equipment
+
+Machinery
+
+Safety-related products
+
+Products requiring Australian compliance certification
+
+Required closure evidence:
+
+Approved supplier records
+
+Material certificates
+
+Incoming inspection reports
+
+Storage controls
+
+5. Product compliance and certification risks
+
+Production should not begin if the factory cannot prove compliance requirements.
+
+Examples:
+
+Missing Australian regulatory documentation
+
+Fake or unverifiable certificates
+
+Incorrect use of CE/RoHS/RCM markings
+
+No test reports for regulated products
+
+Certification belongs to another factory or model
+
+Required closure evidence:
+
+Valid test reports
+
+Certification ownership confirmation
+
+Product specification sheets
+
+Compliance declarations
+
+6. Factory labour and ethical compliance issues
+
+Serious findings should block approval:
+
+Child labour indicators
+
+Forced labour concerns
+
+Unsafe working conditions
+
+Missing worker safety procedures
+
+Illegal employment practices
+
+For Australian companies, these issues also create reputational and contractual risks.
+
+Required closure evidence:
+
+Safety training records
+
+Emergency procedures
+
+Workplace inspection records
+
+Labour documentation
+
+7. Production process weaknesses
+
+Before approval, verify:
+
+No documented work instructions
+
+Operators rely only on verbal instructions
+
+No process controls for critical steps
+
+No calibration system for measuring equipment
+
+No maintenance records
+
+Required closure evidence:
+
+Work instructions
+
+Process flow charts
+
+Equipment calibration certificates
+
+Maintenance logs
+
+8. Financial and delivery reliability concerns
+
+Not all financial findings are visible in a factory audit, but operational warning signs matter:
+
+Block approval if:
+
+Factory frequently changes payment accounts
+
+Factory depends heavily on one subcontractor
+
+Factory has severe production delays with existing customers
+
+Factory cannot explain workforce fluctuations
+
+Required closure evidence:
+
+Stable banking information
+
+Production planning records
+
+Capacity confirmation
+
+Findings that usually do not block approval
+
+These can often be accepted with a corrective action plan:
+
+Minor housekeeping issues
+
+Slight documentation gaps
+
+Cosmetic facility problems
+
+Small storage improvements
+
+Non-critical training records missing
+
+Example:
+
+"Warehouse labels are inconsistent but materials remain traceable."
+
+This is different from:
+
+"Materials cannot be traced to production batches."
+
+Recommended approval rule for Australian buyers
+
+Use a simple classification:
+
+Finding level	Approval decision
+Critical	Factory approval blocked until closed
+Major	Closure required before production
+Minor	Accept with corrective action deadline
+Observation	Monitor during future audits
+
+Before releasing a large production order, the buyer should ideally have:
+
+Completed factory audit report
+
+Corrective action plan
+
+Evidence of closure for critical/major findings
+
+Approved sample or pilot production result
+
+Pre-production inspection process agreed
+
+Contractual quality requirements documented
+
+The factory audit should be treated as a risk approval gate, not just a supplier scoring exercise.

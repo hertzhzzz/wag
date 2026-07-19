@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-01-scope",
+  "platform": "perplexity",
+  "questionId": "factory-audit-01-scope",
+  "prompt": "What should a factory audit in China cover before an Australian importer places a large order?",
+  "promptHash": "sha256:87573779757e4a5768c4905219cbe24cf9350f67d5a45b1fe6c7a3421c817d02",
+  "observedAt": "2026-07-19T00:40:06.001Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://qualitysourcingfromchina.com/guides/factory-audit-checklist-complete",
+      "title": "qualitysourcingfromchina",
+      "domain": "qualitysourcingfromchina.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.pearlsourcehub.com/resources/china-factory-audit-checklist-for-importers",
+      "title": "pearlsourcehub",
+      "domain": "pearlsourcehub.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://eliteglobaltrade.co/blog/china-factory-audit-checklist",
+      "title": "eliteglobaltrade",
+      "domain": "eliteglobaltrade.co"
+    },
+    {
+      "rank": 4,
+      "url": "https://sinospect.com/resources/china-factory-audit-checklist",
+      "title": "sinospect",
+      "domain": "sinospect.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://woosourcing.com/china-factory-audit-guide/",
+      "title": "woosourcing",
+      "domain": "woosourcing.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://mwtsourcing.com/en/factory-audit-china/",
+      "title": "mwtsourcing\nFactory Audit China: Complete Guide for Importers\nFactory Audit China guide for importers covering audit types, costs, supplier verification, red flags, and how to avoid sourcing risks.",
+      "domain": "mwtsourcing.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://cloudspects.com/blog/factory-audit-china-for-importers.html",
+      "title": "cloudspects\nFactory Audit China for Importers: How to Verify Suppliers Before Your First Order | CloudSpects | CloudSpects\nFactory audit China from $169/man-day. Verify supplier capacity, QC systems, ",
+      "domain": "cloudspects.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://chinamakershub.com/journal/china-factory-audit-checklist",
+      "title": "chinamakershub\nThe 27-Point China Factory Audit Checklist | CMH - ChinaMakersHub\nA 27-point China factory audit checklist covering legal verification, production capacity, quality systems and social c",
+      "domain": "chinamakershub.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.winningadventure.com.au/article/visiting-chinese-factories-australian-business-checklist",
+      "title": "winningadventure.com\nVisiting Chinese Factories: An Australian Business Owner's Complete Checklist (2026)\nComplete checklist for visiting Chinese factories. Step-by-step supplier verification, factory",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "winningadventure\nHow to Verify a Chinese Supplier: Complete Guide for ...\nLearn how to verify a Chinese supplier with this complete guide for Australian importers. Document checks, factory visits, and",
+      "domain": "winningadventure.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-01-scope.txt",
+    "hash": "sha256:621635cdf387431ff929a34aff45763bc9ec35290644dfb0423c9e28d859cfc2",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/b4e08d66-3acc-4e16-ae72-5ff639636316. Account Zhe He Free."
+}

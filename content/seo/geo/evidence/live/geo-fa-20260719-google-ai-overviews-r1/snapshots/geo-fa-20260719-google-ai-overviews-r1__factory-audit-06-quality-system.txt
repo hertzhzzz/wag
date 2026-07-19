@@ -1,0 +1,130 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=How%20should%20an%20Australian%20importer%20assess%20a%20Chinese%20factory%27s%20quality%20management%20system%3F&hl=en-AU&gl=au
+TITLE: How should an Australian importer assess a Chinese factory's quality management system? - Google Search
+OBSERVED_AT: 2026-07-19T01:03:10.279Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: How should an Australian importer assess a Chinese factory's quality management system?
+STATUS: observed-surface-absent
+brandMention: yes
+ownedUrlCited: yes
+---
+No AI Overview generative answer block present; organic results only.
+
+ORGANIC:
+1. A Complete Guide for Australian Importers (2026) | https://www.epicsourcing.com.au/post/product-quality-control-sourcing-china-australian-importers-2026
+2. Factory Audit in China for Australian Importers | https://www.winningadventure.com.au/factory-audit-china
+3. How to manage quality control in China | https://www.worldfirst.com/au/insight/importing-from-china/quality-control-in-china/
+4. How We Handle Quality Control and Factory Inspections in ... | https://www.varaallied.com.au/blog/how-we-handle-quality-control-and-factory-inspections-in-china
+5. Quality Control When Importing from China: A No-Nonsense ... | https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026
+6. Importing From China Compliance In 2026 For Australians | https://www.synergyfreight.com.au/china-compliance/
+7. China Factory Audit: The 2026 Buyer's Guide to All 5 Options | https://chinesecheck.com/blog/china-factory-audit
+8. China Factory Selection, Audit & Quality Control | https://hornetgroup.com.au/import-services/factory-audits-product-quality-assurance-check/
+9. A Step-by-Step Guide to Verifying a China Company - QCC | https://www.qcckyc.com/insights-verify-china-company
+10. China Quality Control and Inspection: Types, Services and Companies | https://www.qcadvisor.com/blog/china-quality-control-and-inspection/#:~:text=Quality%20control%20in%20China%20follows,customer%20expectations%20and%20regulatory%20requirements.
+11. ChAFTA snapshot infographic - Trade and investment - DFAT | https://www.dfat.gov.au/trade/agreements/in-force/chafta/fact-sheets/Pages/chafta-snapshot-infographic
+12. A Proactive Approach to Quality | SUNIL AMIN posted on the topic | https://www.linkedin.com/posts/sunilamin26507_quality-asuarance-whole-book-quality-activity-7334481119137914880-2hqs#:~:text=QUALITY%20ASUARANCE%20%3A%20WHOLE%20BOOK%20Quality,deviations%20from%20the%20desired%20outcome.
+13. Quality Control in China for Australia | MacSamuel | https://macsamuelglobalsourcing.com.au/quality-control-product-inspection-services-in-china/
+
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Images
+Videos
+Forums
+Short videos
+Shopping
+More
+Tools
+Search Results
+Web results
+A Complete Guide for Australian Importers (2026)
+
+Epic Sourcing
+https://www.epicsourcing.com.au › post › product-quali...
+Learn how to set up quality control when sourcing from China. Covers pre-production, DUPRO, pre-shipment inspections, AQL standards, and Australian ...
+4.9(58)
+Factory Audit in China for Australian Importers
+
+Winning Adventure Global
+https://www.winningadventure.com.au › Services
+We examine the supplier's quality management system documentation, product certifications, past audit reports from accredited firms, and export transaction ...
+How to manage quality control in China
+
+WorldFirst
+https://www.worldfirst.com › ... › Importing from China
+23 June 2025 — Take a look at how you can effectively manage quality control with your manufacturers in China and business based overseas.
+Missing: system? ‎| Show results with: system?
+How We Handle Quality Control and Factory Inspections in ...
+
+Vara Allied
+https://www.varaallied.com.au › blog › how-we-handle...
+15 May 2020 — If you have had any problems with quality control of your Chinese manufactured goods, call Vara Allied on (08) 6115 0118 or contact us online.Read more
+Missing: assess ‎system?
+Quality Control When Importing from China: A No-Nonsense ...
+
+Epic Sourcing
+https://www.epicsourcing.com.au › post › quality-contr...
+Prevent costly quality failures with the right QC system. This 2026 guide covers pre-production, DUPRO, and pre-shipment inspections, AQL standards, ...
+Importing From China Compliance In 2026 For Australians
+
+Synergy Freight Management
+https://www.synergyfreight.com.au › Blog
+3 Feb 2026 — In 2026, Australian importers are facing tighter scrutiny on declaration accuracy, stronger goods compliance focus, and ongoing biosecurity ...Read more
+China Factory Audit: The 2026 Buyer's Guide to All 5 Options
+
+ChineseCheck
+https://chinesecheck.com › Blog
+Compare in-person, virtual, self, document-based, and social compliance China factory audits. Real costs, what each catches, and when to use which.
+China Factory Selection, Audit & Quality Control
+
+Hornet Group
+https://hornetgroup.com.au › import-services › factory-a...
+Factories can be assessed for their management and industrial practices. You can relax in the knowledge that your claims regarding your product are correct.Read more
+Missing: system? ‎| Show results with: system?
+People also ask
+How to verify Chinese manufacturer?
+Does China have quality control?
+What are Australia's top 5 imports from China?
+What is a proactive process that aims to prevent defects and ensure products or services meet predefined standards and customer requirements?
+Web results
+Quality Control in China for Australia | MacSamuel
+
+Macsamuel Global Sourcing
+https://macsamuelglobalsourcing.com.au › quality-contr...
+Factory Quality System Assessment. We assess whether a factory can consistently maintain quality — not just pass a single inspection. This includes reviewing ...Read more
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

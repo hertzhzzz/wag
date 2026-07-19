@@ -1,0 +1,109 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-08-report",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-08-report",
+  "prompt": "What should a factory audit report include so an Australian buyer can make a sourcing decision?",
+  "promptHash": "sha256:76b264740e75964f5a71aca282d1d738e4d37f2bd605fa31a997f3ff5ca20e21",
+  "observedAt": "2026-07-19T01:07:59.709Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "safetyculture.com",
+    "thirdtesting.com",
+    "tetrainspection.com",
+    "tradeaiders.com",
+    "hantecorg.com",
+    "importivity.com",
+    "ironaxis-supply.com",
+    "auronixsourcing.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-audit-report-what-information-should-it-include/",
+      "title": "Supplier Sourcing Strategies: This section should outline the strategies used to identify and select suppliers, including market research, supplier databases, and direct sourcing. ",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-audit-report-what-information-should-it-include/",
+      "title": "1",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://tetrainspection.com/factory-audit-checklist/",
+      "title": "Quality Inspection Checklist: A detailed checklist that evaluates the supplier's quality management systems, production processes, and compliance with applicable standards. ",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://tetrainspection.com/factory-audit-checklist/",
+      "title": "1",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html",
+      "title": "Product Certification Standards: Information on the product certification standards that the supplier must meet, including any relevant international standards like ISO 9001 or ISO 14001. ",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html",
+      "title": "1",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.hantecorg.com/news/Industries/manufacturing/A-Factory-Audit-Report-Template-That-Flags-Real-Production-Risk.html",
+      "title": "Ex Factory Price Negotiation Insights: Insights into how to negotiate prices with suppliers after the factory audit, considering factors like cost reduction strategies and supplier sourcing strategies",
+      "domain": "hantecorg.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.hantecorg.com/news/Industries/manufacturing/A-Factory-Audit-Report-Template-That-Flags-Real-Production-Risk.html",
+      "title": "1",
+      "domain": "hantecorg.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html",
+      "title": "Corrective Action Request (CAR) or Corrective Action Plan (CAP): A detailed plan specifying required improvements and a recommended re-audit timeline. ",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html",
+      "title": "1",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.hantecorg.com/news/Industries/manufacturing/What-a-Factory-Audit-Report-Template-Should-Include-First.html",
+      "title": "\nThese components help buyers understand the supplier's capabilities, quality management systems, production processes, and compliance with standards, which are crucial for making informed sourcing de",
+      "domain": "hantecorg.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-08-report.txt",
+    "hash": "sha256:6e96f4a88564b46449e2a5b1054674a10a1ffcd796ca985b2d6b198ada01cbe9",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

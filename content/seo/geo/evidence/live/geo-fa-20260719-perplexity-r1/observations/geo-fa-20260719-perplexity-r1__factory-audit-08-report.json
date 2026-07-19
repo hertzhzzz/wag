@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-08-report",
+  "platform": "perplexity",
+  "questionId": "factory-audit-08-report",
+  "prompt": "What should a factory audit report include so an Australian buyer can make a sourcing decision?",
+  "promptHash": "sha256:76b264740e75964f5a71aca282d1d738e4d37f2bd605fa31a997f3ff5ca20e21",
+  "observedAt": "2026-07-19T00:42:53.949Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-audit-report-what-information-should-it-include/",
+      "title": "thirdtesting",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.hqts.com/what-is-a-supplier-audit/",
+      "title": "hqts",
+      "domain": "hqts.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://asiansourcinggroup.com/the-ultimate-guide-to-factory-audits/",
+      "title": "asiansourcinggroup",
+      "domain": "asiansourcinggroup.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.acnc.gov.au/tools/templates/audit-and-review-report-template",
+      "title": "acnc.gov\nAudit and review report template",
+      "domain": "acnc.gov.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.chinadirectsourcing.com.au/files/factory-audit-report-cd.pdf",
+      "title": "chinadirectsourcing.com\nMicrosoft Word - factory audit service.doc",
+      "domain": "chinadirectsourcing.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.sourcingwise.com/factory-audit/",
+      "title": "sourcingwise\nFactory Audit - Sourcing Wise",
+      "domain": "sourcingwise.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://cdn.alotoftemplates.com/file/audit-report-templates-file-698.doc",
+      "title": "cdn.alotoftemplates\n[DOC] FACTORY AUDIT REPORT",
+      "domain": "cdn.alotoftemplates.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://simplyacacia.com/resoucesblog/how-to-read-a-factory-audit-report-a-stepbystep-guide-for-sourcing-departments.html",
+      "title": "simplyacacia\nHow to Read a Factory Audit Report: A Step-by-Step Guide for Sourcing Departments",
+      "domain": "simplyacacia.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://leelinesourcing.com/wp-content/uploads/2023/09/Leeline-Sourcing-Factory-Report-_XXX-V1.0%EF%BC%88Example%EF%BC%89.pdf",
+      "title": "leelinesourcing\nhttps://leelinesourcing.com",
+      "domain": "leelinesourcing.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.caifutrading.com/wp-content/uploads/2021/07/AUDIT-SAMPLE-REPORT.pdf",
+      "title": "caifutrading\nPAGE 1 OF 22",
+      "domain": "caifutrading.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-08-report.txt",
+    "hash": "sha256:249896649a6ebcf16a3d17811088a69add4eeae4852e1cad010b88333331bdd3",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/2e786bc6-ec8b-463d-8e10-e10aa8d551c7. Account Zhe He Free."
+}

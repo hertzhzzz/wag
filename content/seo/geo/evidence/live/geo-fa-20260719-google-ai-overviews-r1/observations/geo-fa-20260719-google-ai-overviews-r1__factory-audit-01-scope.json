@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-fa-20260719-google-ai-overviews-r1__factory-audit-01-scope",
+  "platform": "google-ai-overviews",
+  "questionId": "factory-audit-01-scope",
+  "prompt": "What should a factory audit in China cover before an Australian importer places a large order?",
+  "promptHash": "sha256:87573779757e4a5768c4905219cbe24cf9350f67d5a45b1fe6c7a3421c817d02",
+  "observedAt": "2026-07-19T00:54:43.597Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "epicsourcing.com.au",
+    "ptl-group.com",
+    "fiscalfx.co.uk",
+    "gsl.org",
+    "en.wikipedia.org",
+    "chinamakershub.com",
+    "hornetgroup.com.au",
+    "worldfirst.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-google-ai-overviews-r1/snapshots/geo-fa-20260719-google-ai-overviews-r1__factory-audit-01-scope.txt",
+    "hash": "sha256:64cdd528d4108f266c8cca9c0928e6175d8c9d50f84ab2b5b490a0661d84c14e",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

@@ -1,0 +1,298 @@
+A production audit in China should go beyond checking whether documents exist. The auditor should verify that records are authentic, current, internally consistent, and match what is observed on the factory floor. Discrepancies between documentation and actual operations are often one of the strongest indicators of quality or supply-chain risk.
+
+Company and legal records
+
+Review documents that confirm the factory's identity and ability to manufacture the products:
+
+Chinese Business Licence (营业执照)
+
+Unified Social Credit Code
+
+Manufacturing scope and registered business activities
+
+Export registration (if the factory exports directly)
+
+Factory organisation chart
+
+Key management contacts
+
+Production site ownership or lease documentation
+
+The legal company name should match purchase contracts, invoices, bank accounts, and quality documentation.
+
+Quality management documentation
+
+Request evidence that the factory operates a documented quality system rather than relying solely on experience.
+
+Typical documents include:
+
+Quality manual
+
+Quality procedures
+
+Standard Operating Procedures (SOPs)
+
+Inspection standards
+
+Incoming Quality Control (IQC) procedures
+
+In-Process Quality Control (IPQC) procedures
+
+Final Quality Control (FQC) procedures
+
+Corrective and Preventive Action (CAPA) records
+
+Internal audit reports
+
+Management review records
+
+Customer complaint logs
+
+Non-conformance reports (NCRs)
+
+An auditor should also verify whether these documents are actively used by production staff.
+
+Production planning records
+
+These demonstrate whether the factory has sufficient production control.
+
+Examples include:
+
+Production schedules
+
+Manufacturing orders
+
+Work orders
+
+Capacity planning reports
+
+Daily production reports
+
+Machine loading plans
+
+Delivery schedules
+
+Production KPI reports
+
+The auditor should compare scheduled production against actual production.
+
+Raw material records
+
+Review documentation covering material control from receipt through consumption.
+
+Typical records include:
+
+Approved supplier list
+
+Material specifications
+
+Incoming inspection reports
+
+Material receiving records
+
+Batch identification records
+
+Warehouse inventory
+
+FIFO implementation records
+
+Material traceability records
+
+The auditor should confirm that material batches can be traced into finished products.
+
+Process control documentation
+
+Each manufacturing process should have documented controls.
+
+Examples:
+
+Process flow charts
+
+Work instructions
+
+Control plans
+
+Process parameters
+
+Machine setup sheets
+
+Changeover records
+
+Operator instructions
+
+First Article Inspection (FAI) records
+
+The documented process should match what operators actually do.
+
+Inspection and testing records
+
+Inspection records demonstrate whether quality checks are consistently performed.
+
+These commonly include:
+
+Incoming inspection reports
+
+Patrol inspection records
+
+In-process inspection records
+
+Final inspection reports
+
+Outgoing inspection reports
+
+Functional test reports
+
+Dimensional inspection reports
+
+Sample retention records
+
+Product release approvals
+
+Review multiple production lots rather than only the most recent batch.
+
+Equipment maintenance records
+
+Reliable production depends on maintained equipment.
+
+Review:
+
+Equipment register
+
+Preventive maintenance schedules
+
+Maintenance logs
+
+Repair records
+
+Machine downtime records
+
+Spare parts records
+
+Equipment qualification records
+
+Poor maintenance often correlates with inconsistent product quality.
+
+Calibration records
+
+Any equipment used for measurement should have current calibration documentation.
+
+Examples:
+
+Calibration certificates
+
+Calibration schedules
+
+Gauge register
+
+Gauge identification labels
+
+Out-of-tolerance investigations
+
+Expired calibration certificates are a common audit finding.
+
+Personnel and training records
+
+Production quality depends heavily on operator competence.
+
+Review:
+
+Training matrix
+
+Operator qualification records
+
+Training attendance
+
+Skills assessments
+
+Special process certifications (where applicable)
+
+Interview operators to verify that training has been understood and applied.
+
+Traceability records
+
+A capable factory should be able to trace products through production.
+
+Typical records include:
+
+Batch numbers
+
+Production dates
+
+Operator identification
+
+Machine identification
+
+Material batch linkage
+
+Finished goods traceability
+
+Shipping records
+
+The auditor should perform a traceability exercise from finished product back to raw materials.
+
+Purchasing and supplier management
+
+If critical components are outsourced, review:
+
+Supplier approval process
+
+Supplier evaluations
+
+Supplier audit reports
+
+Supplier performance metrics
+
+Incoming defect trends
+
+Corrective action requests issued to suppliers
+
+Environmental and safety records
+
+Depending on the product and audit scope:
+
+Hazardous chemical registers
+
+Waste disposal records
+
+Fire inspection records
+
+Emergency drill records
+
+Equipment safety inspections
+
+PPE training records
+
+Product-specific compliance documentation
+
+Where relevant:
+
+Product specifications
+
+Engineering drawings
+
+Bills of Materials (BOM)
+
+Customer-approved samples
+
+Regulatory compliance certificates
+
+Test reports
+
+Packaging specifications
+
+Label approvals
+
+Audit techniques
+
+Rather than checking documents in isolation, an auditor should cross-reference them with physical evidence. For example:
+
+Record reviewed	Verify on the factory floor
+Production order	Product currently being manufactured
+Inspection report	Actual inspection activity and records
+Calibration certificate	Measuring instrument label and serial number
+Maintenance log	Machine condition and maintenance stickers
+Training record	Operator knowledge and correct procedure
+Material receiving record	Warehouse inventory and batch labels
+Traceability record	Finished goods, work-in-progress, and raw materials
+
+The strongest audits combine document review, factory observation, employee interviews, and record traceability. If records appear complete but cannot be matched to actual production practices, or if different documents contain inconsistent dates, quantities, or company details, those discrepancies warrant further investigation before placing significant purchase orders.

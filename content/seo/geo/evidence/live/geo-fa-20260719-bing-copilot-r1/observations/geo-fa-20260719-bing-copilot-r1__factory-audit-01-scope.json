@@ -1,0 +1,109 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-01-scope",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-01-scope",
+  "prompt": "What should a factory audit in China cover before an Australian importer places a large order?",
+  "promptHash": "sha256:87573779757e4a5768c4905219cbe24cf9350f67d5a45b1fe6c7a3421c817d02",
+  "observedAt": "2026-07-19T01:07:14.366Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "safetyculture.com",
+    "epicsourcing.com.au",
+    "stellarchinese.com",
+    "allforsourcing.com",
+    "mwtsourcing.com",
+    "foreigngo.com",
+    "qualitysourcingfromchina.com",
+    "easyimex.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "Supplier Identity Verification: Confirm the supplier's legal status, business documents, and authenticity. Verify the business license, Chinese company name, registered address, unified social credit ",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "1",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "Production Capacity: Assess the supplier's production capacity to meet the order requirements. Ensure the supplier can produce the specified quantity and quality within the agreed timeframe. ",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "1",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "Quality Control Systems: Evaluate the supplier's quality control processes, including documentation, calibration logs, maintenance schedules, training records, and customer complaint files. Confirm th",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "1",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "Material and Packaging: Verify that the supplier's key materials and packaging can meet the market requirements and Australian safety standards. Ensure that the supplier has the necessary certificatio",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "1",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "Social Compliance: Conduct social compliance audits to check worker age verification, wage-record sampling, working hours, and health-and-safety conditions. Ensure that the working conditions comply w",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "1",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "Compliance with Standards: Confirm that the supplier complies with all relevant standards, including safety, environmental, and labor standards. Ensure that the supplier holds the necessary certificat",
+      "domain": "epicsourcing.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-01-scope.txt",
+    "hash": "sha256:6813f5afd8166ee4f31397095ecb1db0b14c2e1e351e08edea70a4a30888da4e",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

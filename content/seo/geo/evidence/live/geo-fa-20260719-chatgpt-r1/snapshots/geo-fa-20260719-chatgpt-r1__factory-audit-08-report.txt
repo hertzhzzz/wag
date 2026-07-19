@@ -1,0 +1,355 @@
+A factory audit report should give an Australian buyer enough evidence to decide whether to approve, conditionally approve, negotiate improvements, or reject a supplier. It should go beyond a checklist score and explain operational risks.
+
+A useful factory audit report should include:
+
+1. Executive Summary
+
+Factory name, legal entity name, location, audit date
+
+Auditor name/company
+
+Product category and scope of audit
+
+Overall rating or risk classification
+
+Key findings:
+
+Critical issues
+
+Major non-conformities
+
+Strengths
+
+Recommended next action
+
+Example decision summary:
+
+✅ Approved — suitable for production
+
+⚠️ Approved with corrective actions
+
+❌ Not recommended — unacceptable risks
+
+2. Supplier Identity Verification
+
+Confirm the supplier is the actual business being audited.
+
+Include:
+
+Registered company name
+
+Chinese business licence details
+
+Unified Social Credit Code
+
+Factory address
+
+Ownership information (where available)
+
+Years operating
+
+Export experience
+
+Main export markets
+
+Contact persons and roles
+
+Red flags:
+
+Audit location differs from registered address
+
+Factory cannot provide legal documents
+
+Supplier claims to manufacture products they cannot demonstrate
+
+3. Factory Profile and Capacity Assessment
+
+The report should verify whether the factory can meet the Australian buyer's order requirements.
+
+Include:
+
+Factory size and production areas
+
+Number of employees
+
+Production lines
+
+Working hours/shifts
+
+Monthly production capacity
+
+Current utilisation rate
+
+Main equipment list
+
+Production bottlenecks
+
+The auditor should compare:
+
+Buyer Requirement	Factory Capability
+10,000 units/month	Factory capacity
+60-day delivery	Production schedule
+Custom packaging	Available capability
+4. Production Process Review
+
+Document the actual manufacturing process.
+
+Include:
+
+Process flow diagram
+
+Raw material receiving
+
+Cutting/forming/assembly
+
+Testing procedures
+
+Packaging
+
+Finished goods storage
+
+Production controls
+
+Evidence:
+
+Photos
+
+Production records
+
+Work instructions
+
+Machine operation observations
+
+5. Quality Management System (QMS)
+
+Assess whether quality is controlled systematically.
+
+Include:
+
+Incoming Quality Control (IQC)
+
+Supplier material inspection
+
+Incoming inspection records
+
+Material approval process
+
+In-Process Quality Control (IPQC)
+
+Inspection points
+
+Operator checks
+
+Defect recording
+
+Final Quality Control (FQC)
+
+Final inspection procedures
+
+Sampling standards
+
+Test reports
+
+Release approval process
+
+Check:
+
+Is QC independent from production?
+
+Are defects tracked?
+
+Are corrective actions documented?
+
+6. Product Testing and Compliance Capability
+
+Important for Australian importers.
+
+Include:
+
+Available testing equipment
+
+Calibration records
+
+Product-specific testing procedures
+
+Compliance certificates
+
+Previous test reports
+
+Depending on product category:
+
+Electrical safety
+
+EMC testing
+
+Material safety
+
+Chemical compliance
+
+Australian regulatory requirements
+
+7. Subcontracting and Supply Chain Assessment
+
+The report should identify whether production is outsourced.
+
+Include:
+
+Which processes are subcontracted
+
+Subcontractor locations
+
+Supplier approval process
+
+Control over outsourced production
+
+Warning signs:
+
+Factory refuses to disclose subcontractors
+
+Production area appears inconsistent with claimed capacity
+
+No traceability for outsourced processes
+
+8. Workforce and Management Review
+
+Include:
+
+Management structure
+
+Production supervisors
+
+Quality team size
+
+Employee turnover indicators
+
+Training records
+
+Worker competency programs
+
+9. Social Compliance and Workplace Conditions
+
+Depending on buyer requirements:
+
+Review:
+
+Working hours
+
+Worker records
+
+Safety equipment
+
+Emergency exits
+
+Fire safety
+
+Environmental controls
+
+For Australian retailers or corporate buyers, this section may be required for supplier approval.
+
+10. Documentation Review
+
+The auditor should list documents reviewed.
+
+Examples:
+
+Business licence
+
+ISO certificates
+
+Production orders
+
+Inspection records
+
+Training records
+
+Calibration certificates
+
+Material certificates
+
+Export documents
+
+The report should indicate:
+
+Verified
+
+Not available
+
+Expired
+
+Requires follow-up
+
+11. Photos and Evidence
+
+A strong report includes dated photos of:
+
+Factory exterior
+
+Production lines
+
+Warehouse
+
+Raw materials
+
+Finished products
+
+QC stations
+
+Testing equipment
+
+Safety facilities
+
+Photos should support findings, not just show the factory looks clean.
+
+12. Risk Assessment Table
+
+A decision-focused report should include:
+
+Area	Risk Level	Finding	Impact	Action
+Capacity	Medium	Production near full utilisation	Possible delays	Confirm schedule
+QC System	High	No traceability records	Quality risk	Require improvement
+Compliance	Low	Certificates verified	Low risk	Proceed
+13. Corrective Action Plan (CAPA)
+
+For problems found, include:
+
+Finding
+
+Root cause
+
+Required corrective action
+
+Responsible person
+
+Deadline
+
+Verification method
+
+Example:
+
+Final inspection records missing for previous three batches. Supplier must implement batch inspection records before mass production approval.
+
+14. Final Recommendation
+
+The auditor should provide a sourcing recommendation:
+
+Approve
+
+Supplier meets requirements.
+
+Conditional Approval
+
+Proceed only after corrective actions.
+
+Reject
+
+Risk too high due to:
+
+Fake capability
+
+Poor quality controls
+
+Compliance failures
+
+Lack of transparency
+
+For an Australian importer placing a large order, the most valuable parts are usually factory identity verification, production capacity evidence, QMS evaluation, subcontracting checks, compliance capability, and risk-based recommendations rather than the audit score alone.

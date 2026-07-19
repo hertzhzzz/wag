@@ -1,0 +1,141 @@
+A factory audit in China before placing a large order should cover legal verification, production capability, quality management systems, compliance and certifications, social/labour conditions, and facility safety. For Australian importers, you’ll also want to confirm export documentation, product-specific standards that align with Australian regulations, and traceability of critical components.
+eliteglobaltrade
++2
+
+Core audit areas to include
+1. Business and legal verification
+
+Valid Chinese business licence (营业执照) matching the factory name, address and Unified Social Credit Code; confirm it on the SAMR/National Enterprise Credit registry.
+sinospect
++2
+
+Export licence and foreign trade registration (对外贸易经营者备案) — without this, they may rely on a third‑party exporter, which adds risk.
+qualitysourcingfromchina
++1
+
+Ownership structure and whether the site is the actual manufacturer (not a trading company using another factory).
+eliteglobaltrade
++1
+
+Bank account on the proforma invoice matches the licensed entity exactly (full Chinese name, correct SWIFT).
+qualitysourcingfromchina
+
+Litigation and enforcement history via China Judgments Online and credit records; look for unpaid debts, contract disputes or administrative penalties.
+pearlsourcehub
++1
+
+2. Production capability and capacity
+
+Machinery inventory with age, maintenance logs and calibration records; check whether equipment is suitable for your product.
+pearlsourcehub
++1
+
+Stated vs actual monthly output, current order load and available capacity for your volume and timeline.
+eliteglobaltrade
++1
+
+Workforce size, skill levels, training programmes and turnover; ask for a skill matrix for key operations.
+pearlsourcehub
++1
+
+Raw material sourcing controls, sub‑supplier qualification and traceability of critical components (e.g., motors, controllers, certified parts).
+sinospect
++1
+
+Line readiness: SOPs at each station, operator discipline, actual throughput vs plan, and downtime/rework ratios.
+pearlsourcehub
+
+3. Quality management system (QMS)
+
+ISO 9001 or equivalent certification, verified with the issuing body and within the surveillance cycle.
+eliteglobaltrade
++1
+
+Incoming Quality Control (IQC): documented inspection criteria, sampling plans (e.g., ISO 2859‑1/AQL) and pass/fail records for materials.
+sinospect
++2
+
+In‑Process Quality Control (IPQC): defined checkpoints, control charts or inspection logs during production.
+eliteglobaltrade
+
+Final Quality Control (FQC) and AQL sampling procedures before shipment; review recent FQC reports.
+eliteglobaltrade
+
+Testing equipment calibration records and third‑party lab test reports for your product category.
+sinospect
++1
+
+Corrective action system: how non‑conformities are logged, root‑cause analysed and closed out (CAPA records).
+sinospect
+
+4. Compliance and product certifications (Australian context)
+
+Product‑specific certifications relevant to Australia: e.g., electrical safety (RCM/AS‑NZS), toys (AS/NZS ISO 8124), food contact materials (AS 2070), etc. Confirm the factory can supply test reports from accredited labs.
+pearlsourcehub
++1
+
+Environmental and chemical compliance where applicable (e.g., RoHS/REACH‑type restrictions if you also sell to EU, or Australian chemical standards).
+eliteglobaltrade
+
+Environmental permits: Environmental Impact Assessment (环评) approval and pollutant discharge permits; non‑compliant factories risk shutdown.
+qualitysourcingfromchina
+
+Fire safety certification from local fire department and evidence of recent fire inspections.
+qualitysourcingfromchina
+
+5. Social compliance and labour conditions
+
+Working hours, overtime records, wage payments and contracts; look for excessive overtime or underpayment.
+mwtsourcing
++1
+
+Health and safety: PPE provision and use, machine guarding, first‑aid, incident logs.
+mwtsourcing
++1
+
+Child labour and forced labour policies; verify age records and recruitment practices.
+mwtsourcing
++1
+
+If you supply retailers or have ESG policies, check alignment with SA8000, SMETA or buyer‑specific codes.
+cloudspects
++1
+
+6. Facility, safety and logistics
+
+5S/factory floor organisation, cleanliness and segregation of good/defective goods.
+pearlsourcehub
++1
+
+Fire exits, extinguishers, alarms, evacuation plans and drills.
+eliteglobaltrade
+
+Storage conditions for raw materials and finished goods (humidity, temperature, pest control where relevant).
+eliteglobaltrade
+
+Security and visitor management; control of access to production and warehouse areas.
+eliteglobaltrade
+
+Export packaging standards: carton strength, palletisation, labelling and compliance with your shipping requirements.
+sinospect
++1
+
+Practical tips for Australian importers
+
+Use a staged audit approach: a basic profile + QMS audit before the first order, then a deeper capability/capacity audit before scaling to large volumes.
+woosourcing
+
+Ask to see recent government inspection records (environmental, fire, labour, tax); reluctance is a yellow flag.
+qualitysourcingfromchina
+
+Require that critical components and materials match what was quoted; insist on disclosure of any sub‑tier changes.
+sinospect
+
+For high‑risk categories (electrical, children’s products, food contact), insist on pre‑production samples tested to Australian standards before bulk production.
+pearlsourcehub
+
+Consider a third‑party audit firm with China experience if you cannot visit in person; typical costs are per man‑day and vary by scope.
+cloudspects
++1
+
+If you’d like, I can turn this into a custom checklist template you can use for WAG client factory visits, tailored to specific product categories you source.

@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-05-subcontracting",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-05-subcontracting",
+  "prompt": "What subcontracting warning signs should an Australian buyer look for during a factory audit?",
+  "promptHash": "sha256:59b709b0339e638856299be5a6331f7bc4b308aa35f4bd09056a02ee7d981f92",
+  "observedAt": "2026-07-19T00:36:46.995Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-05-subcontracting.txt",
+    "hash": "sha256:7c4de347d5ec839e8215d4b3f7cd9f71c764975723ae36379e0b1e670aacb4c2",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1c10-c928-83ec-b627-dde638af2a65. Account Mark He Free."
+}

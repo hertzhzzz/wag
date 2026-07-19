@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-fa-20260719-google-ai-overviews-r1__factory-audit-10-stop-findings",
+  "platform": "google-ai-overviews",
+  "questionId": "factory-audit-10-stop-findings",
+  "prompt": "Which factory audit findings should be resolved before approving a Chinese factory for production?",
+  "promptHash": "sha256:eced04598bee186d5313e95403b2cad6d1a90fe1f3096c8eaf19c1910f62c35e",
+  "observedAt": "2026-07-19T01:03:32.027Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "epicsourcing.com.au",
+    "hornetgroup.com.au",
+    "china2west.com",
+    "yellowbook-cpe.com",
+    "tetrainspection.com",
+    "quizlet.com",
+    "pillarmanagement.com",
+    "qualityinspection.org"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-google-ai-overviews-r1/snapshots/geo-fa-20260719-google-ai-overviews-r1__factory-audit-10-stop-findings.txt",
+    "hash": "sha256:b42adbb0b2a5c7fd926f65801493c9cfe80776f39cc4da7bdb3fefcf3f1cbff5",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

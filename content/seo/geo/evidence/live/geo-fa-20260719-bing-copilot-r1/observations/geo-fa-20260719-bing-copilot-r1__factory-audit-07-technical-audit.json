@@ -1,0 +1,109 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-07-technical-audit",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-07-technical-audit",
+  "prompt": "When should a buyer use a technical audit instead of a general factory audit?",
+  "promptHash": "sha256:b1b9d060ef7afcc954b8900d6e7ef0ba108ec40d988790119cf06450bbb8333e",
+  "observedAt": "2026-07-19T01:07:53.250Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "tetrainspection.com",
+    "linkedin.com",
+    "the-inspection-company.com",
+    "pitsqc.com",
+    "qualitycontrolpartners.com",
+    "welleinspection.com",
+    "qima.com",
+    "tradeaiders.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://tetrainspection.com/technical-audit/",
+      "title": "A buyer should consider a technical audit instead of a general factory audit when they need to assess a supplier's ability to consistently produce goods that meet specific quality and compliance requi",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://tetrainspection.com/technical-audit/",
+      "title": "Tetra Inspection",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://tetrainspection.com/technical-audit/",
+      "title": "Tetra Inspection\nTechnical Audit: Checklist, Process & Methodology | Tetra Inspection\nA technical audit is an independent, on-site evaluation of a supplier's manufacturing capability, quality manageme",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://tetrainspection.com/factory-audit-vs-supplier-verification/",
+      "title": "Tetra Inspection\nFactory Audit vs Supplier Verification: Which Do You Need?\nIf a supplier claims ISO 9001, a factory audit can verify whether the certification is genuine and actually followed. Combin",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.linkedin.com/pulse/audit-vs-inspection-you-fixing-factory-just-product-tradeaider-coexc",
+      "title": "linkedin.com",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.the-inspection-company.com/blogs/what-is-a-factory-technical-audit-a-2026-guide-to-supplier-verification",
+      "title": "the-inspection-company.com",
+      "domain": "the-inspection-company.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://pitsqc.com/2025/08/12/manufacturing-audit-technical-audit-and-factory-ethical-audit-a-complete-guide-for-businesses/",
+      "title": "pitsqc.com",
+      "domain": "pitsqc.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://tetrainspection.com/technical-audit/",
+      "title": "Tetra InspectionTechnical Audit: Checklist, Process & Methodology | Tetra InspectionA technical audit is an independent, on-site evaluation of a supplier's manufacturing capability, quality management",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://tetrainspection.com/factory-audit-vs-supplier-verification/",
+      "title": "Tetra InspectionFactory Audit vs Supplier Verification: Which Do You Need?If a supplier claims ISO 9001, a factory audit can verify whether the certification is genuine and actually followed. Combine ",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.linkedin.com/pulse/audit-vs-inspection-you-fixing-factory-just-product-tradeaider-coexc",
+      "title": "LinkedInAudit vs. Inspection: Are You Fixing the Factory or Just the Product?Definition: A factory audit evaluates a supplier's manufacturing capability, quality systems, and capacity before you place",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.the-inspection-company.com/blogs/what-is-a-factory-technical-audit-a-2026-guide-to-supplier-verification",
+      "title": "the-inspection-company.comWhat is a Factory Technical Audit? A 2026 Guide to Supplier VerificationUnderstanding what is a factory technical audit is the only way to confirm a manufacturer's true produ",
+      "domain": "the-inspection-company.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-07-technical-audit.txt",
+    "hash": "sha256:e971f6458d73cbf1f8355b85fddefa4c16ff3357be8a376c885e186bc08e0681",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

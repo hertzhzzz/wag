@@ -1,0 +1,133 @@
+These three services address different stages of the sourcing process and different types of risk. They complement one another rather than replace one another.
+
+Service	Primary purpose	When to use	Main question answered
+Supplier verification	Confirm the supplier is a legitimate, suitable business	Before requesting samples or placing orders	"Is this the right company to work with?"
+Factory audit	Assess the factory's operational capability and management systems	Before placing a significant order or selecting a long-term supplier	"Can this factory consistently produce what I need?"
+Product inspection	Verify that finished or in-process goods meet requirements	During production or before shipment	"Did this batch meet my specifications?"
+Supplier verification
+
+Supplier verification is primarily a due diligence exercise. It typically includes:
+
+Business licence verification
+
+Unified Social Credit Code confirmation
+
+Legal representative and registered address
+
+Business scope
+
+Export qualifications
+
+Bank account verification
+
+Basic reputation and litigation checks
+
+Confirmation that the company actually exists
+
+This helps reduce the risk of fraud, fake suppliers, or paying the wrong entity.
+
+Factory audit
+
+A factory audit is an on-site evaluation of the manufacturer's ability to produce consistently. A comprehensive audit usually examines:
+
+Factory ownership and legal status
+
+Production capacity
+
+Manufacturing processes
+
+Machinery and maintenance
+
+Workforce size and skills
+
+Quality management systems
+
+Incoming material controls
+
+In-process and final quality controls
+
+Calibration of measuring equipment
+
+Warehouse and inventory management
+
+Traceability systems
+
+Corrective action procedures
+
+Social compliance and workplace safety (if required)
+
+Environmental management (if relevant)
+
+The auditor also looks for warning signs such as:
+
+Production lines inconsistent with claimed capacity
+
+Excessive outsourcing
+
+Poor document control
+
+Weak quality records
+
+Disorganised production flow
+
+Inadequate maintenance
+
+Poor housekeeping
+
+The outcome is an assessment of operational capability, not just legal legitimacy.
+
+Product inspection
+
+A product inspection evaluates the actual goods being produced. Common inspection stages include:
+
+Pre-production inspection
+
+During-production inspection
+
+Pre-shipment inspection
+
+Container loading supervision
+
+Inspectors check:
+
+Quantity
+
+Dimensions
+
+Appearance
+
+Functional testing
+
+Packaging
+
+Labelling
+
+Workmanship
+
+Compliance with the approved specification
+
+Acceptable Quality Limit (AQL) sampling
+
+A product inspection only evaluates the sampled batch—it does not indicate whether the factory is well managed overall.
+
+How they fit together
+
+For an Australian importer sourcing from China, a typical risk-management sequence is:
+
+Supplier verification to confirm the supplier is legitimate.
+
+Factory audit for shortlisted suppliers before committing to substantial orders.
+
+Product inspections on each production run before shipment.
+
+Which is most important?
+
+The answer depends on the purchase:
+
+Small trial order (under about AUD 10,000): Supplier verification and a pre-shipment inspection are often sufficient.
+
+Large purchase order: Use all three services.
+
+Long-term manufacturing relationship: Conduct an initial factory audit, perform supplier verification, and continue with regular product inspections.
+
+No single service replaces the others. A factory can be genuine but produce inconsistent quality, while a shipment can pass inspection even though the factory has weak management systems. Using supplier verification, factory audits, and product inspections together provides much stronger protection against commercial, operational, and quality risks.

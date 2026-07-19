@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-01-scope",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-01-scope",
+  "prompt": "What should a factory audit in China cover before an Australian importer places a large order?",
+  "promptHash": "sha256:87573779757e4a5768c4905219cbe24cf9350f67d5a45b1fe6c7a3421c817d02",
+  "observedAt": "2026-07-19T00:28:18.000Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-01-scope.txt",
+    "hash": "sha256:04b632804ee3b76cea9b424a1d7fb45968acb778f8730c6fc66b00e4600518c0",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1a01-0a10-83ec-8744-a82ca6a71477. Account Mark He Free."
+}

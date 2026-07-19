@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-fa-20260719-google-ai-overviews-r1__factory-audit-07-technical-audit",
+  "platform": "google-ai-overviews",
+  "questionId": "factory-audit-07-technical-audit",
+  "prompt": "When should a buyer use a technical audit instead of a general factory audit?",
+  "promptHash": "sha256:b1b9d060ef7afcc954b8900d6e7ef0ba108ec40d988790119cf06450bbb8333e",
+  "observedAt": "2026-07-19T01:03:15.712Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "sofeast.com",
+    "pkcindia.com",
+    "me-guide.com",
+    "gtsetu.com",
+    "intouch-quality.com",
+    "myideasglobal.com",
+    "tradeaiders.com",
+    "rsjqa.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-google-ai-overviews-r1/snapshots/geo-fa-20260719-google-ai-overviews-r1__factory-audit-07-technical-audit.txt",
+    "hash": "sha256:6850ab080c794b885daa7bb55a5082003b36b327910feba7ec781299bbed146f",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

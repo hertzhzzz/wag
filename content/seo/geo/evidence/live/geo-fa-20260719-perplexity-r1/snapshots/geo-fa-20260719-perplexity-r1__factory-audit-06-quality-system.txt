@@ -1,0 +1,190 @@
+An Australian importer should assess a Chinese factory’s quality management system (QMS) through a structured, on‑the‑ground audit that goes beyond certificates and marketing claims, focusing on how quality is actually controlled at each stage of production.
+winningadventure.com
++2
+
+Start with documentation and certifications (but don’t stop there)
+
+Request and verify key documents:
+
+Business licence, export licence, and legal entity details.
+blog.swiftcargo
+
+ISO 9001 (or equivalent) certificate and scope; verify the issuing body and validity.
+qualityinspection
+
+Product‑specific test reports (e.g., AS/NZS, CE, RoHS) from accredited labs.
+epicsourcing.com
++1
+
+Check for alignment with your product:
+
+Does the ISO scope actually cover your product category and processes?
+qualityinspection
+
+Are test reports for the exact models/materials you’ll order, or generic “similar product” reports?
+blog.swiftcargo
+
+Certificates are a useful filter, but in China they don’t guarantee consistent day‑to‑day quality; they must be validated against real operations.
+qualityinspection
+
+Conduct a structured factory quality system audit
+
+Use an ISO 9000‑style checklist tailored to your product and risk level. Key areas to assess on site:
+qualityinspection
+
+1. Understanding buyer requirements
+
+Is there a clear, written product specification (dimensions, materials, tolerances, performance, packaging)?
+qualityinspection
+
+Are measurement methods and acceptance criteria defined (how each requirement is tested/measured)?
+qualityinspection
+
+Are approved samples and reference standards visibly available on the production line and QC stations?
+qualityinspection
+
+2. Control of raw materials and components (IQC)
+
+How does the factory select and approve its own suppliers? Is there an approved supplier list?
+qualityinspection
+
+What incoming quality control (IQC) is performed on materials/components?
+
+On‑site tests or visual checks?
+qualityinspection
+
+External lab testing frequency and scope?
+qualityinspection
+
+How are materials stored, identified, and traced (labels, barcodes, FIFO/stock rotation)?
+qualityinspection
+
+Are IQC results recorded in formal reports that you can review?
+qualityinspection
+
+3. In‑process production controls (IPQC)
+
+Are there written work instructions for each key operation and QC step?
+qualityinspection
+
+What in‑process checks occur (first‑piece approval, periodic sampling, line audits)?
+qualityinspection
+
+How is defective work‑in‑progress handled (rework, scrap, root cause analysis)?
+qualityinspection
+
+Is there dedicated IPQC staff, and are their findings logged and used for corrective actions?
+qualityinspection
+
+4. Final quality control (FQC) and sampling
+
+When does final QC happen (before/after packing)?
+qualityinspection
+
+What sampling plan and AQL level do they use for final inspection?
+epicsourcing.com
++1
+
+How are non‑conformities escalated and resolved before shipment?
+qualityinspection
+
+Are FQC results documented with photos, defect counts, and pass/fail decisions?
+macsamuelglobalsourcing
++1
+
+5. Equipment, calibration, and maintenance
+
+Are measuring instruments and test equipment calibrated on a documented schedule?
+qualityinspection
+
+Are production machines maintained with records available (maintenance logs, downtime tracking)?
+qualityinspection
+
+Can they show evidence that equipment is suitable for your product’s tolerances and volumes?
+qualityinspection
+
+6. Problem prevention and corrective actions
+
+What is their process when a quality issue appears in samples or bulk production?
+qualityinspection
+
+Do they conduct root cause analysis (e.g., 5 Whys, fishbone) and implement corrective/preventive actions (CAPA)?
+qualityinspection
+
+Can they provide examples of issues they’ve fixed and how recurrence was prevented?
+qualityinspection
+
+7. Subcontracted production (if relevant)
+
+Do they subcontract any processes (plating, moulding, printing, assembly)?
+qualityinspection
+
+How do they control and audit subcontractors (agreements, inspections, test reports)?
+qualityinspection
+
+Are subcontracted operations included in their quality records and traceability?
+qualityinspection
+
+Observe the factory floor and culture
+
+Beyond paperwork, look for practical signs of a mature QMS:
+winningadventure.com
++1
+
+Organization and cleanliness: tidy lines, clear signage, segregated OK/NG areas.
+macsamuelglobalsourcing
+
+Worker understanding: operators can explain critical quality points and show reference samples.
+qualityinspection
+
+Data use: QC boards, defect charts, daily/weekly quality meetings.
+qualityinspection
+
+Willingness to be transparent: they allow photos, show real records (not just “clean” copies), and discuss problems openly.
+macsamuelglobalsourcing
+
+Red flags include: reluctance to show raw records, no clear defect handling process, heavy reliance on “final sorting” instead of process control, and inability to trace a finished item back to material batches.
+macsamuelglobalsourcing
++1
+
+Use independent inspections and pilot orders
+
+For Australian importers, especially SMEs, it’s common to layer additional controls on top of the factory’s QMS:
+epicsourcing
++1
+
+Pre‑production inspection: verify materials, setup, and first articles before mass production.
+epicsourcing.com
++1
+
+DUPRO (during production) inspection: catch issues early when corrections are cheaper.
+epicsourcing.com
++1
+
+Pre‑shipment inspection (PSI): based on AQL standards, with photo‑evidence and clear pass/conditional/fail outcomes.
+epicsourcing.com
++2
+
+Pilot order: start with a small batch to test real‑world performance, logistics, and compliance before scaling.
+gocubic
+
+Many Australian businesses use independent third‑party inspectors or trusted local agents in China to run these checks, rather than relying solely on factory self‑reporting.
+epicsourcing.com
++1
+
+Align with Australian compliance and your risk profile
+
+Your QMS assessment should also consider:
+
+Product compliance obligations (electrical safety, children’s products, food contact, etc.) and whether the factory’s system supports consistent compliance, not just one‑off test reports.
+epicsourcing.com
++1
+
+Your volume and risk tolerance: high‑volume or safety‑critical products justify deeper audits, more frequent inspections, and possibly resident QC.
+gocubic
++1
+
+Contractual levers: embed QMS expectations, inspection rights, AQL levels, and non‑conformance procedures in your supply agreement.
+winningadventure.com
+
+If you’d like, I can turn this into a concise checklist you can use on your next factory visit (including specific questions and what evidence to photograph/collect), tailored to your product category and risk level.

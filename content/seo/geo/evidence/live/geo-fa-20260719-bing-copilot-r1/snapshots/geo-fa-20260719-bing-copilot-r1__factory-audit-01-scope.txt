@@ -1,0 +1,150 @@
+PLATFORM: bing-copilot
+URL: https://www.bing.com/search?q=What%20should%20a%20factory%20audit%20in%20China%20cover%20before%20an%20Australian%20importer%20places%20a%20large%20order%3F&setlang=en-AU&cc=AU
+TITLE: What should a factory audit in China cover before an Australian importer places a large order? - Search
+OBSERVED_AT: 2026-07-19T01:07:14.366Z
+AUTH: signed-out
+SURFACE: bing-serp-generative-answer-en-AU
+PROMPT: What should a factory audit in China cover before an Australian importer places a large order?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: yes
+---
+A factory audit in China should cover the following areas before an Australian importer places a large order:
+Supplier Identity Verification: Confirm the supplier's legal status, business documents, and authenticity. Verify the business license, Chinese company name, registered address, unified social credit code, export license or trading arrangement, bank account information, and the contact person’s authority. 
+1
+Production Capacity: Assess the supplier's production capacity to meet the order requirements. Ensure the supplier can produce the specified quantity and quality within the agreed timeframe. 
+1
+Quality Control Systems: Evaluate the supplier's quality control processes, including documentation, calibration logs, maintenance schedules, training records, and customer complaint files. Confirm that these processes are documented and actively used. 
+1
+Material and Packaging: Verify that the supplier's key materials and packaging can meet the market requirements and Australian safety standards. Ensure that the supplier has the necessary certifications and test reports. 
+1
+Social Compliance: Conduct social compliance audits to check worker age verification, wage-record sampling, working hours, and health-and-safety conditions. Ensure that the working conditions comply with relevant standards. 
+1
+Compliance with Standards: Confirm that the supplier complies with all relevant standards, including safety, environmental, and labor standards. Ensure that the supplier holds the necessary certifications and adheres to all legal requirements. 
+1
+Risk Assessment: Identify any hidden risks in subcontracting, compliance, lead time, or shipment preparation. Assess the supplier's capacity and stability to ensure a smooth production process. 
+1
+Final Inspection: Conduct a final inspection before deposit release or tooling approval to confirm that all issues have been resolved and that the supplier is ready for mass production. 
+1
+
+These areas should be thoroughly covered to ensure that the supplier is capable of producing the order to the required quality and standards, minimizing the risk of quality failures and ensuring compliance with Australian regulations.
+1 Source
+Read more
+Epic Sourcing
+Quality Control When Importing from China: A No-Nonsense Guide for ...
+This 2026 guide covers every inspection type, AQL sampling, Australian compliance requirements, and the common QC failures Aussie importers make — and how to avoid them. Let me pai…
+stellarchinese.com
+Factory Audit in China: Cost, Checklist & When to Skip It (2026)
+This guide explains what an audit actually checks, how it differs from a quality inspection, then goes straight to whether you should pay for one, what most small sellers do instea…
+View all
+---
+ORGANIC:
+1. Good Manufacturing Practices | GMP Checklist App | https://safetyculture.com/checklists/gmp-audit-checklists/?redirectRoute=templates&referrer=marketing-lp-form&utm_term=Good%20Manufacturing%20Practices&utm_campaign=SC-ANZ-NB-Search-Manufacturing&utm_source=bing&utm_medium=ppc&hsa_acc=9765877485&hsa_cam=22917350638&hsa_grp=1320516121477783&hsa_ad=&hsa_src=o&hsa_tgt=kwd-82533689778874:loc-9&hsa_kw=Good%20Manufacturing%20Practices&hsa_mt=b&hsa_net=adwords&hsa_ver=3&msclkid={msclkid}
+2. Quality Control When Importing from China: A No-Nonsense Guide for ... | https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026
+3. Factory Audit in China: Cost, Checklist & When to Skip It (2026) | https://www.stellarchinese.com/factory-audit-china/
+4. Factory Audit in China for Australian Importers | On-Site Capability Audit | https://www.winningadventure.com.au/factory-audit-china
+5. China Factory Audit Checklist: What to Inspect, Document, and Verify | https://www.allforsourcing.com/verify/china-factory-audit-checklist/
+6. Factory Audit China: Complete Guide for Importers | https://mwtsourcing.com/en/factory-audit-china/
+7. China Factory Audit Checklist Before Mass Production: Supplier ... | https://www.foreigngo.com/2026/07/02/china-factory-audit-checklist-before-mass-production/
+8. Factory Audit Checklist: 60-Point China Factory Audit Template | https://qualitysourcingfromchina.com/guides/factory-audit-checklist-complete
+9. China Factory Audit Checklist 2026: 47-Point AQL-Based Template | https://easyimex.com/blog/china-factory-audit-checklist/
+10. Factory Audit in China: What Every Importer Must Know Before Signing | https://www.muzhuoinspection.com/blog/factory-audit-china-importers-guide
+11. Factory Audit Checklist 2026: What Quality Audits Cover · TradeAider | https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html
+
+SERP_TEXT_SNIPPET:
+Skip to content
+Accessibility Feedback
+6
+AllSearchShoppingImagesVideosMapsCopilot
+More
+About 7,200 results
+A factory audit in China should cover the following areas before an Australian importer places a large order:
+Supplier Identity Verification: Confirm the supplier's legal status, business documents, and authenticity. Verify the business license, Chinese company name, registered address, unified social credit code, export license or trading arrangement, bank account information, and the contact person’s authority. 
+1
+Production Capacity: Assess the supplier's production capacity to meet the order requirements. Ensure the supplier can produce the specified quantity and quality within the agreed timeframe. 
+1
+Quality Control Systems: Evaluate the supplier's quality control processes, including documentation, calibration logs, maintenance schedules, training records, and customer complaint files. Confirm that these processes are documented and actively used. 
+1
+Material and Packaging: Verify that the supplier's key materials and packaging can meet the market requirements and Australian safety standards. Ensure that the supplier has the necessary certifications and test reports. 
+1
+Social Compliance: Conduct social compliance audits to check worker age verification, wage-record sampling, working hours, and health-and-safety conditions. Ensure that the working conditions comply with relevant standards. 
+1
+Compliance with Standards: Confirm that the supplier complies with all relevant standards, including safety, environmental, and labor standards. Ensure that the supplier holds the necessary certifications and adheres to all legal requirements. 
+1
+Risk Assessment: Identify any hidden risks in subcontracting, compliance, lead time, or shipment preparation. Assess the supplier's capacity and stability to ensure a smooth production process. 
+1
+Final Inspection: Conduct a final inspection before deposit release or tooling approval to confirm that all issues have been resolved and that the supplier is ready for mass production. 
+1
+
+These areas should be thoroughly covered to ensure that the supplier is capable of producing the order to the required quality and standards, minimizing the risk of quality failures and ensuring compliance with Australian regulations.
+1 Source
+Read more
+Epic Sourcing
+Quality Control When Importing from China: A No-Nonsense Guide for ...
+This 2026 guide covers every inspection type, AQL sampling, Australian compliance requirements, and the common QC failures Aussie importers make — and how to avoid them. Let me pai…
+stellarchinese.com
+Factory Audit in China: Cost, Checklist & When to Skip It (2026)
+This guide explains what an audit actually checks, how it differs from a quality inspection, then goes straight to whether you should pay for one, what most small sellers do instea…
+View all
+ 
+Epic Ѕourcinɡ
+https://www.epicsourcing.com.au › post › quality-control-importing-from...
+Quality Control When Importing from China: A No-Nonsense Guide for ...
+
+Effective QC in China requires physical presence on the factory floor, the ability to conduct random sampling without pre-warning the factory, knowledge of AQL methodology and local manufacturing …
+
+ѕtellarchinese.com
+https://www.stellarchinese.com › factory-audit-china
+Factory Audit in China: Cost, Checklist & When to Skip It (2026)
+
+A factory audit in China checks whether a supplier is real, capable, and compliant before you wire a deposit. Costs, red flags, a checklist, and when to skip one.
+
+winnіngadventυre.cοm.au
+https://www.winningadventure.com.au › factory-audit-china
+Factory Audit in China for Australian Importers | On-Site Capability Audit
+
+Most of our clients order a factory audit when they are evaluating a new supplier for a significant order, revalidating an existing supplier whose quality has drifted, or meeting a buyer code that requires …
+
+Videos of What Should a Factory Audit in China Cover Before An Austr…
+0:39
+China Factory Audit Checklist: Evidence Matters
+YouTubeSDI Export Services
+139 views3 weeks ago
+2:21
+Factory Audit for Sourcing/Import from China #chinasourcing #importexport #importfromchina
+YouTubeAlex@Metrolink Sourcing
+222 views4 months ago
+8:57
+China Factory Audit: How to do a third-party factory audit in China?
+YouTubeSupplyia Sourcing
+2.1K views26 June 2023
+allfοrsouгcing.сom
+https://www.allforsourcing.com › verify › china-factory-audit-checklist
+China Factory Audit Checklist: What to Inspect, Document, and Verify
+
+4 days ago · A practical factory audit checklist for importers sourcing from China. Covers pre-audit documents, production floor inspection, QC systems, material traceability, and how to interpret an …
+
+MWT Souгсіng
+https://mwtsourcing.com › en › factory-audit-china
+Factory Audit China: Complete Guide for Importers
+
+Factory Audit China guide for importers covering audit types, costs, supplier verification, red flags, and how to avoid sourcing risks.
+
+forеigngo.com
+https://www.foreigngo.com › china-factory-audit-checklist...
+China Factory Audit Checklist Before Mass Production: Supplier ...
+
+2 July 2026 · Use this China factory audit checklist before mass production to verify supplier capability, QC systems, documents, capacity, packaging, and shipment risk.
+
+qυalitysourcіngfrοmchina.cοm
+https://qualitysourcingfromchina.com › guides › factory-audit-checklist...
+Factory Audit Checklist: 60-Point China Factory Audit Template
+easyimex.com
+https://easyimex.com › blog › china-factory-audit-checklist
+China Factory Audit Checklist 2026: 47-Point AQL-Based Template
+muzhuoіnspеction.com
+https://www.muzhuoinspection.com › blog › factory-audit-china-importers-gui…
+Factory Audit in China: What Every Importer Must Know Before Signing
+tradeaiders.com
+https://www.tradeaiders.com
+Factory Audit Checklist 2026: What Quality Audits Cover · TradeAider

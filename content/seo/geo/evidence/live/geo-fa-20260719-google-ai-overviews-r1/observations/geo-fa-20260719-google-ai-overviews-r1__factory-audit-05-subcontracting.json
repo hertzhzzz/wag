@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-fa-20260719-google-ai-overviews-r1__factory-audit-05-subcontracting",
+  "platform": "google-ai-overviews",
+  "questionId": "factory-audit-05-subcontracting",
+  "prompt": "What subcontracting warning signs should an Australian buyer look for during a factory audit?",
+  "promptHash": "sha256:59b709b0339e638856299be5a6331f7bc4b308aa35f4bd09056a02ee7d981f92",
+  "observedAt": "2026-07-19T01:03:04.736Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "ecqa.com",
+    "ongrid.in",
+    "viewpoint.pwc.com",
+    "bcasonline.org",
+    "tradeaiders.com",
+    "scm-solution.com",
+    "intouch-quality.com",
+    "safetyspace.co"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-google-ai-overviews-r1/snapshots/geo-fa-20260719-google-ai-overviews-r1__factory-audit-05-subcontracting.txt",
+    "hash": "sha256:b9c04bf0abd83f96c14a9ce340a5c581a01542c1bf1f84a4b6b4c9afa8e0445a",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

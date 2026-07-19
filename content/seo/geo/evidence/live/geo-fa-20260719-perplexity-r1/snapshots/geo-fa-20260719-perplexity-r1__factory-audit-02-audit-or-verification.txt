@@ -1,0 +1,81 @@
+A factory audit, supplier verification, and product inspection are three distinct stages of supply chain quality control, each serving a different purpose:
+
+Supplier verification confirms the supplier is a legitimate, legally registered business before you engage them.
+
+Factory audit evaluates the supplier's systems, capabilities, and compliance to assess whether they can reliably produce quality products.
+
+Product inspection checks the actual finished goods to ensure they meet your specifications before shipment.
+
+Here's how they differ in detail:
+
+Core Differences
+Aspect	Supplier Verification	Factory Audit	Product Inspection
+Primary Focus	Business legitimacy and legal status	Systems, capabilities, and compliance	Finished product quality
+Timing	Before engagement (pre-contract)	Before or during production	After production, before shipment
+What's Checked	Business license, registration, legal existence	Production capacity, quality systems, social compliance, equipment	Product dimensions, function, appearance, packaging, defects
+Outcome	Go/no-go decision on working with supplier	Risk assessment and capability rating	Accept/reject decision on shipment
+Duration	Document review (hours to days)	On-site visit (1–2 days)	On-site sampling (hours to 1 day)
+Supplier Verification
+
+Supplier verification is the first gate in your sourcing process. It's an independent assessment that confirms:
+
+Legal business registration and license validity
+
+Company ownership structure
+
+Business scope matches what they claim to supply
+
+No red flags in legal or compliance history
+tetrainspection
+
+This is typically a document-based check rather than an on-site visit. For your WAG business coordinating China-Australia sourcing, this would involve verifying business licenses (营业执照), checking company registration through official Chinese databases, and confirming the supplier's stated business scope aligns with the products they're offering.
+
+Factory Audit
+
+A factory audit evaluates the supplier as an organization—its systems, capability, and compliance—not the finished products. Key characteristics:
+tradeaiders
+
+Systems-focused: Assesses quality management systems (e.g., ISO 9001 alignment), production processes, and organizational structure
+tetrainspection
+
+Capability assessment: Reviews equipment, workforce skills, production capacity, and R&D capability
+
+Compliance check: May include social compliance (labor practices), environmental compliance, and security standards
+
+Long-term improvement: Drives corrective action plans for systemic improvements
+qualityinspection
+
+Factory audits require auditors with strong social skills to extract information tactfully from auditees, and the findings often influence whether to establish or continue a business relationship. A single failed audit might be enough to stop a business relationship entirely.
+qualityinspection
+
+For your factory visit itineraries with WAG clients, this is the comprehensive assessment you'd conduct when clients want to evaluate whether a supplier can handle their ongoing production needs.
+
+Product Inspection
+
+Product inspection is product-focused and checks the actual goods that have been manufactured:
+
+Strict checklist: Inspectors follow detailed checklists against your product specifications
+
+Sampling-based: Uses statistical sampling (often AQL standards) to check a representative portion of the shipment
+
+Defect identification: Identifies functional defects, cosmetic issues, dimensional problems, packaging errors
+
+Short-term fixes: Drives immediate correction plans for the specific shipment
+qualityinspection
+
+Inspectors need to be familiar with the specific product being checked and often work under stressful circumstances with potential disputes with factory staff. Unlike audits, inspections require extensive photo documentation of defects and product conditions.
+qualityinspection
+
+This is what you'd arrange when your clients have production underway and need to ensure the goods meet quality standards before they're shipped to Australia.
+
+When to Use Each
+
+For your China-Australia sourcing workflow:
+
+Supplier verification: Before introducing any new supplier to WAG clients—confirm they're legitimate businesses
+
+Factory audit: When clients are evaluating suppliers for ongoing partnerships or large orders—assess capability and systems
+
+Product inspection: When production is complete and goods are ready to ship—verify actual product quality
+
+These three processes work together as a comprehensive risk management strategy, with each addressing different types of risk at different stages of the sourcing relationship.

@@ -1,0 +1,109 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-10-stop-findings",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-10-stop-findings",
+  "prompt": "Which factory audit findings should be resolved before approving a Chinese factory for production?",
+  "promptHash": "sha256:eced04598bee186d5313e95403b2cad6d1a90fe1f3096c8eaf19c1910f62c35e",
+  "observedAt": "2026-07-19T01:08:13.042Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "linkedin.com",
+    "easyimex.com",
+    "qualitysourcingfromchina.com",
+    "sourcingagentchina.net",
+    "allforsourcing.com",
+    "wowohcool.com",
+    "china-sourcing-agents.com",
+    "tetrainspection.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "Legal Verification: Confirm the factory's business license and registration documents, including the Chinese name on the license and date of incorporation. Ensure the license's scope of business inclu",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "1",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://easyimex.com/blog/china-factory-audit-checklist/",
+      "title": "Production Capability: Verify the factory's actual production capacity and equipment condition. Ensure the factory's layout is organized and efficient, and that machines are modern and well-maintained",
+      "domain": "easyimex.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://easyimex.com/blog/china-factory-audit-checklist/",
+      "title": "1",
+      "domain": "easyimex.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "Quality Systems: Confirm the factory's quality systems and compliance with industry standards. Ensure the factory has the necessary technical expertise and equipment for producing the product. ",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "1",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "Working Conditions: Assess the working conditions, including cleanliness, organization, and storage facilities. Ensure the factory adheres to safety and health regulations. ",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "1",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "Security: Verify the factory's security measures, including fire safety, pest control, and compliance with environmental regulations. ",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "1",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.linkedin.com/posts/aaron-liu-0b76b1224_chinasourcing-supplierverification-factoryaudit-activity-7482359648906395648-03-a",
+      "title": "2",
+      "domain": "linkedin.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-10-stop-findings.txt",
+    "hash": "sha256:18ef048bcc8684c2c43e8152358a4c0120f4aee0171bab676f05a99369139420",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

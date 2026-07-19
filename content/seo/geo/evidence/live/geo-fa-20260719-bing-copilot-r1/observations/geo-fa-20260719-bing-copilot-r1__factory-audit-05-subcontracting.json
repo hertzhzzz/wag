@@ -1,0 +1,109 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-05-subcontracting",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-05-subcontracting",
+  "prompt": "What subcontracting warning signs should an Australian buyer look for during a factory audit?",
+  "promptHash": "sha256:59b709b0339e638856299be5a6331f7bc4b308aa35f4bd09056a02ee7d981f92",
+  "observedAt": "2026-07-19T01:07:40.258Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "tradeaiders.com",
+    "linkedin.com",
+    "scm-solution.com",
+    "ecqa.com",
+    "ironaxis-supply.com",
+    "ttsqc.com",
+    "importivity.com",
+    "leelinegroup.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.tradeaiders.com/red-flags-in-a-factory-audit-report-12-warning-signs-you-should-never-ignore.html",
+      "title": "Workers Who Cannot Explain Quality Checkpoints: If workers are unable to provide clear explanations of their quality control processes, it could be a sign that the factory is outsourcing production to",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.tradeaiders.com/red-flags-in-a-factory-audit-report-12-warning-signs-you-should-never-ignore.html",
+      "title": "1",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.tradeaiders.com/red-flags-in-a-factory-audit-report-12-warning-signs-you-should-never-ignore.html",
+      "title": "1",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.tradeaiders.com/red-flags-in-a-factory-audit-report-12-warning-signs-you-should-never-ignore.html",
+      "title": "tradeaiders.com\nRed Flags in a Factory Audit Report: 12 Warning Signs You Should Never ...\nA factory audit red flag is any finding in a third-party audit report that indicates a supplier's inability —",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.linkedin.com/pulse/your-supplier-hiding-something-12-audit-report-red-flags-should-ao6jc",
+      "title": "LinkedIn\nIs Your Supplier Hiding Something? 12 Audit Report Red Flags That ...\nA factory audit red flag is any finding in a third-party audit report that indicates a supplier's inability — or unwillin",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://scm-solution.com/factory-audit-red-flags/",
+      "title": "scm-solution.com",
+      "domain": "scm-solution.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://ecqa.com/red-flags-supplier-factory-audit/",
+      "title": "ecqa.com",
+      "domain": "ecqa.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.ironaxis-supply.com/news/industry-insights/the-ultimate-factory-audit-checklist-what-to-look-.html",
+      "title": "ironaxis-supply.com",
+      "domain": "ironaxis-supply.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.tradeaiders.com/red-flags-in-a-factory-audit-report-12-warning-signs-you-should-never-ignore.html",
+      "title": "tradeaiders.comRed Flags in a Factory Audit Report: 12 Warning Signs You Should Never ...A factory audit red flag is any finding in a third-party audit report that indicates a supplier's inability — o",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.linkedin.com/pulse/your-supplier-hiding-something-12-audit-report-red-flags-should-ao6jc",
+      "title": "LinkedInIs Your Supplier Hiding Something? 12 Audit Report Red Flags That ...A factory audit red flag is any finding in a third-party audit report that indicates a supplier's inability — or unwillingn",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://scm-solution.com/factory-audit-red-flags/",
+      "title": "scm-solution.comFactory Audit Red FlagsFactory audit red flags are critical warning signs discovered during a supplier inspection that indicate severe operational, ethical, or financial risks. The mos",
+      "domain": "scm-solution.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-05-subcontracting.txt",
+    "hash": "sha256:685ddbd6cfa7711499d59668697e4f2f03c4cca76dd44e8829b250b44779857e",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

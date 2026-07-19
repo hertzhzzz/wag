@@ -1,0 +1,235 @@
+A capacity assessment should determine whether the factory can realistically produce the buyer's order without causing delays, quality problems, or excessive subcontracting. It should rely on production records and direct observations rather than management assurances.
+
+1. Compare Available Capacity with Required Capacity
+
+Start with the buyer's requirements:
+
+Product specification
+
+Order quantity
+
+Required delivery date
+
+Expected production start date
+
+Then calculate whether the factory has sufficient available production time.
+
+For example:
+
+Item	Example
+Order quantity	80,000 units
+Standard output	2,500 units/day
+Production days required	32 days
+Days available before shipment	40 days
+Existing committed production	18 days
+
+In this example, only 22 production days remain available, suggesting the factory may not be able to meet the delivery schedule.
+
+2. Review Current Production Loading
+
+Request:
+
+Master production schedule
+
+Production planning board
+
+ERP/MRP schedule
+
+Machine loading schedule
+
+Line allocation schedule
+
+Check:
+
+Which customers are already booked
+
+Peak production periods
+
+Overtime assumptions
+
+Planned maintenance shutdowns
+
+National holidays
+
+Seasonal production spikes
+
+An overloaded schedule is often the strongest indicator of delivery risk.
+
+3. Verify Production Records
+
+Review records for the previous 3–12 months.
+
+Examples include:
+
+Daily production reports
+
+Line output reports
+
+Machine utilization reports
+
+Shift reports
+
+Production efficiency reports
+
+Downtime records
+
+Ask:
+
+What is actual daily output?
+
+How much does production fluctuate?
+
+Are claimed capacities regularly achieved?
+
+Actual historical output is generally more reliable than theoretical capacity.
+
+4. Inspect Production Lines
+
+Observe:
+
+Number of active lines
+
+Number of idle lines
+
+Staffing levels
+
+Machine condition
+
+Bottlenecks
+
+Work-in-progress inventory
+
+A factory claiming ten production lines but operating only six may have substantially lower practical capacity.
+
+5. Assess Labour Availability
+
+Review:
+
+Employee roster
+
+Headcount
+
+Attendance records
+
+Turnover rate
+
+Temporary labour usage
+
+Recruitment plans
+
+Questions include:
+
+Can additional shifts be staffed?
+
+Is skilled labour available?
+
+Are key operators shared between production lines?
+
+High labour turnover or dependence on temporary workers can reduce effective capacity.
+
+6. Evaluate Equipment Capacity
+
+Review:
+
+Equipment list
+
+Critical machine quantities
+
+Preventive maintenance records
+
+Breakdown logs
+
+Machine utilisation
+
+Look for bottlenecks such as:
+
+Only one CNC machine
+
+One powder coating line
+
+One test laboratory
+
+One packaging line
+
+The slowest process typically determines overall factory capacity.
+
+7. Check Material Supply Readiness
+
+Production capacity is meaningful only if materials are available.
+
+Review:
+
+Raw material inventory
+
+Supplier lead times
+
+Purchasing plans
+
+Safety stock
+
+Long-lead components
+
+A factory with sufficient production resources but delayed material deliveries may still miss shipment deadlines.
+
+8. Review Delivery Performance
+
+Past performance often predicts future performance.
+
+Request:
+
+On-time delivery KPI
+
+Customer complaints
+
+Late shipment records
+
+Corrective actions
+
+Major production delays
+
+Consistently poor delivery performance may indicate chronic capacity constraints.
+
+9. Identify Hidden Capacity Risks
+
+Watch for indicators such as:
+
+Excessive overtime every month
+
+Frequent weekend production
+
+Constant expedited shipping
+
+Large work-in-progress queues
+
+Significant unfinished orders
+
+Heavy reliance on subcontractors
+
+Frequent schedule changes
+
+These suggest the factory is already operating at or near its limits.
+
+10. Cross-Check Management Claims
+
+Factory management may report optimistic figures. Verify by comparing:
+
+Management Claim	Independent Evidence
+Monthly capacity	Historical production reports
+Machine quantity	Physical inspection
+Number of workers	Payroll and attendance records
+Available production slots	Current production schedule
+On-time delivery	Shipping records
+Production efficiency	Daily output reports
+
+Significant discrepancies warrant further investigation.
+
+Capacity Assessment Outcome
+
+An audit should conclude with a risk-based assessment, for example:
+
+Risk Level	Characteristics
+Low	Demonstrated spare capacity, stable workforce, strong delivery history, realistic production plan
+Medium	Capacity is sufficient but depends on overtime, efficiency improvements, or tight scheduling
+High	Existing commitments exceed available capacity, key bottlenecks exist, or historical delivery performance is poor
+
+For an Australian importer placing a substantial order, the most reliable capacity assessment combines document review, shop-floor observation, historical production data, and production planning analysis. Capacity should be based on verified achievable output, not the factory's stated maximum or theoretical production figures.

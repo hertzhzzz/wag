@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-09-compare-services",
+  "platform": "perplexity",
+  "questionId": "factory-audit-09-compare-services",
+  "prompt": "How should an Australian business compare factory audit services in China?",
+  "promptHash": "sha256:342ec03f1cb78d05f0506edf38232d856692dc256c8eb04a6bce1422ab2ed9d3",
+  "observedAt": "2026-07-19T00:43:27.317Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.krtinspect.com/factory-and-supplier-audits/",
+      "title": "krtinspect",
+      "domain": "krtinspect.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://chinesecheck.com/blog/china-factory-audit",
+      "title": "chinesecheck",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://betterproductsourcing.com.au/blog/verify-chinese-supplier-legitimate-scam-prevention",
+      "title": "betterproductsourcing.com",
+      "domain": "betterproductsourcing.com.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.tradeaiders.com/best-factory-audit-services-in-china-2026-8-companies-compared.html",
+      "title": "tradeaiders",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.winningadventure.com.au/article/virtual-factory-audit",
+      "title": "winningadventure.com\nVirtual Factory Audit Guide 2026: Remote Verification and Digital Due Diligence\nHow to conduct a factory audit remotely when you cannot travel to China. Video verification, busine",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.winningadventure.com.au/factory-audit-china",
+      "title": "winningadventure\nFactory Audit in China for Australian Importers\nWe benchmark every factory against real, comparable plants Our auditors have walked the floors of more than 1,200 Chinese factories acr",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.maplesourcing.com/how-to-conduct-a-successful-factory-audit-in-china.html",
+      "title": "maplesourcing\nHow to Conduct a Successful Factory Audit in China\nHow do you know a potential China factory can actually deliver what your customers expect, before you place a large order and send a de",
+      "domain": "maplesourcing.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.alibaba.com/price-comparison/audit-usine-chine",
+      "title": "alibaba\nFactory Audit Suppliers in China: Guide for B2B Buyers\nEvaluate factory audit suppliers in China using verified performance metrics, including response times ≤2h, on-time delivery rates up to ",
+      "domain": "alibaba.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.tradeaiders.com/ru/best-factory-audit-services-in-china-2026-8-companies-compared.html",
+      "title": "tradeaiders\nBest Factory Audit Services in China 2026: 8 Companies Compared",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "winningadventure\nHow to Verify a Chinese Supplier: Complete Guide for ...\nLearn how to verify a Chinese supplier with this complete guide for Australian importers. Document checks, factory visits, and",
+      "domain": "winningadventure.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-09-compare-services.txt",
+    "hash": "sha256:0054f594fb8c1fd3f17882c9a15dab63ee3ca54d4acab03c87be1f1c0b97343f",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/2d02c40e-f80a-4253-80bd-561b3584d838. Account Zhe He Free."
+}

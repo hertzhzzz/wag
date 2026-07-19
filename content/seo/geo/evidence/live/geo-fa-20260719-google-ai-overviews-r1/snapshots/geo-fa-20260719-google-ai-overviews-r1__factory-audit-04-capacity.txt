@@ -1,0 +1,124 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=How%20can%20an%20audit%20test%20whether%20a%20factory%20has%20enough%20capacity%20for%20an%20Australian%20buyer%27s%20delivery%20schedule%3F&hl=en-AU&gl=au
+TITLE: How can an audit test whether a factory has enough capacity for an Australian buyer's delivery schedule? - Google Search
+OBSERVED_AT: 2026-07-19T01:02:59.262Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: How can an audit test whether a factory has enough capacity for an Australian buyer's delivery schedule?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+No AI Overview generative answer block present; organic results only.
+
+ORGANIC:
+1. Assess Factory Capacity: A Guide to Preventing Production ... | https://www.tradeaiders.com/assess-factory-capacity-a-guide-to-preventing-production-delays.html
+2. How To Validate a Factory's Production Capacity without ... | https://www.sofeast.com/knowledgebase/how-to-validate-a-factorys-production-capacity-without-going-on-site/
+3. Factory Audit: How to Evaluate Your Suppliers in 7 Steps | https://usetorg.com/blog/factory-audit
+4. Can Your Factory Actually Deliver? Check Capacity First | https://www.maplesourcing.com/check-factory-capacity-before-ordering.html
+5. Factory Audit & Supplier Assessment | https://aqmbd.com/quality-control/factory-audit.php
+6. Resourcing At Capacity? :: Supplier Audits & Internal Audit | https://produco.com.au/supplier-audits-and-internal-auditing/
+7. AUS 506 | https://www.auasb.gov.au/admin/file/content102/c3/AUS506_07-02.pdf
+8. How to Conduct a Factory Audit: A Guide for Buyers | https://www.linkedin.com/posts/ejetprocurement_factory-audit-process-explained-what-every-activity-7338373959253467138-3YQ9
+9. Assessing Financial Viability | https://www.finance.gov.au/government/procurement/buying-australian-government/assessing-financial-viability
+
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Shopping
+Images
+Short videos
+Videos
+More
+Tools
+Search Results
+Web results
+Assess Factory Capacity: A Guide to Preventing Production ...
+
+TradeAider
+https://www.tradeaiders.com › assess-factory-capacity-a-...
+16 Dec 2025 — A factory audit gives buyers a clear, verified view of production capacity. Auditors check equipment, management systems, and warehousing to ...Read more
+Missing: enough ‎Australian
+How To Validate a Factory's Production Capacity without ...
+
+Sofeast
+https://www.sofeast.com › knowledgebase › how-to-val...
+7 Nov 2025 — Visits to a supplier's factory help buyers to assess their ability & production capacity. Here's how to get answers without visiting.
+Missing: enough ‎Australian
+Factory Audit: How to Evaluate Your Suppliers in 7 Steps
+
+usetorg.com
+https://usetorg.com › blog › factory-audit
+24 Mar 2026 — Learn how to evaluate suppliers with a factory audit, spot risks early, ensure compliance, and protect your supply chain.
+Missing: Australian ‎| Show results with: Australian
+Can Your Factory Actually Deliver? Check Capacity First
+
+Maple Sourcing
+https://www.maplesourcing.com › check-factory-capaci...
+7 days ago — Start by verifying the factory is real, a registered maker rather than a trader, then run the capacity and capability checks above. After the ...Read more
+Factory Audit & Supplier Assessment
+
+AQM BD
+https://aqmbd.com › quality-control › factory-audit
+A capability audit evaluates whether the factory has the machinery, workforce, quality systems, and capacity to fulfill your orders.
+Missing: enough ‎Australian
+Resourcing At Capacity? :: Supplier Audits & Internal Audit
+
+produco.com.au
+https://produco.com.au › supplier-audits-and-internal-a...
+Supplier audits help build strong customer-supplier relationships. Supplier audits determine if your suppliers performance meets your operational standards.
+AUS 506
+
+Auditing and Assurance Standards Board
+https://www.auasb.gov.au › file › AUS506_07-02
+PDF
+The auditor would assess whether, through the performance of appropriate procedures, changes in inventory between the count date and period end are correctly ...
+9 pages
+Missing: capacity ‎buyer's
+How to Conduct a Factory Audit: A Guide for Buyers
+
+LinkedIn · EJET
+1 year ago
+A factory audit is a crucial step to ensure quality, compliance, and ethical standards before placing an order.Read more
+Assessing Financial Viability
+
+Australian Government Department of Finance
+https://www.finance.gov.au › government › procurement
+19 Dec 2025 — The declaration should affirm that the tenderer: has sufficient financial resources to deliver the goods or services described in the tender ...Read more
+Missing: factory ‎buyer's
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

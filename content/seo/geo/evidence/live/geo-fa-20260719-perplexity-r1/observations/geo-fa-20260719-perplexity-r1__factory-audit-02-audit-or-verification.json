@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-02-audit-or-verification",
+  "platform": "perplexity",
+  "questionId": "factory-audit-02-audit-or-verification",
+  "prompt": "How is a factory audit different from supplier verification and product inspection?",
+  "promptHash": "sha256:d9acf42140a3faf167dc46fd0c4a7145492d55ae001a9c63da1c0711e38f08f6",
+  "observedAt": "2026-07-19T00:40:26.109Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://tetrainspection.com/supplier-verification-audit/",
+      "title": "tetrainspection",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html",
+      "title": "tradeaiders",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://tetrainspection.com/factory-audit/",
+      "title": "tetrainspection",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://qualityinspection.org/factory-audits-product-inspections/",
+      "title": "qualityinspection",
+      "domain": "qualityinspection.org"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.linkedin.com/pulse/audit-vs-inspection-you-fixing-factory-just-product-tradeaider-coexc",
+      "title": "linkedin\nAudit vs. Inspection: Are You Fixing the Factory or Just ...\nIntro In quality management, choosing the wrong tool at the wrong time is a common—and costly—mistake. Should you be vetting a new",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://amazingqualitycontrol.com/factory-audit-vs-product-inspection/",
+      "title": "amazingqualitycontrol\nFactory Audit vs Product Inspection: What's the Difference?\nUnderstand the difference between a factory audit and a product inspection, and learn how to use both to improve manuf",
+      "domain": "amazingqualitycontrol.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.leelinegroup.com/factory-audit-vs-product-inspection/",
+      "title": "leelinegroup\nFactory Audit vs Product Inspection: 5 Differences That Matter\nCompare factory audit vs product inspection clearly. Understand their real differences, costs, and benefits so you can choos",
+      "domain": "leelinegroup.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://asiaproductinspections.com/en/blog/factory-audit-vs-product-inspection/",
+      "title": "asiaproductinspections\nFactory Audit vs Product Inspection: Which One Do Importers Need?\nFactory audit vs product inspection: learn what each checks, when to use them, and how importers reduce supplie",
+      "domain": "asiaproductinspections.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.the-inspection-company.com/blogs/what-is-a-factory-audit-a-complete-guide-for-importers",
+      "title": "the-inspection-company\nWhat is a Factory Audit? A Complete Guide for Importers\nSourcing from a new supplier? Our guide to factory audits explains how to verify capabilities, ensure quality, and minimi",
+      "domain": "the-inspection-company.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.cosmosourcing.com/blog/vietnam-factory-inspections-audits-and-quality-control-the-ultimate-guide",
+      "title": "cosmosourcing\nVietnam Factory Audit Checklist: What to Verify Before ...\nA practical checklist for auditing Vietnamese factories before placing an order. Covers audit types, costs, what to verify on-s",
+      "domain": "cosmosourcing.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-02-audit-or-verification.txt",
+    "hash": "sha256:9b0480f3ee4405d07709e45ce20813b06d761cc4ef21ac28a9f74bf9f6c0e609",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/109c5996-34ad-4a53-8795-8b03030cd30b. Account Zhe He Free."
+}

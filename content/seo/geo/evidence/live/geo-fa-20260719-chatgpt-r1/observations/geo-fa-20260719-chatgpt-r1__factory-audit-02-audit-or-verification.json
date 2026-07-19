@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-02-audit-or-verification",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-02-audit-or-verification",
+  "prompt": "How is a factory audit different from supplier verification and product inspection?",
+  "promptHash": "sha256:d9acf42140a3faf167dc46fd0c4a7145492d55ae001a9c63da1c0711e38f08f6",
+  "observedAt": "2026-07-19T00:35:44.795Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-02-audit-or-verification.txt",
+    "hash": "sha256:834bf42a1b7ef0d2a073b1737423f29d8b33466480d52711c9d0519da6f47a6f",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1bd2-ec24-83ec-8483-c708161f382b. Account Mark He Free."
+}

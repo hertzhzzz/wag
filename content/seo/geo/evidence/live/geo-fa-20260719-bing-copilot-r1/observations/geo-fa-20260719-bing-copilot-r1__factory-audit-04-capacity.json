@@ -1,0 +1,109 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-04-capacity",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-04-capacity",
+  "prompt": "How can an audit test whether a factory has enough capacity for an Australian buyer's delivery schedule?",
+  "promptHash": "sha256:83365e3b021e56b0ef429a6077a0450625762c67fa9c1cb69b67182b21e644e8",
+  "observedAt": "2026-07-19T01:07:33.789Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "thirdtesting.com",
+    "tetrainspection.com",
+    "importivity.com",
+    "sourceoneltd.com",
+    "importrisk.com",
+    "ttsqc.com",
+    "ironaxis-supply.com",
+    "rsjqa.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-capability-audit-what-inspectors-usually-check-on-site/",
+      "title": "Machinery and Production Lines: Review the type, quantity, and condition of production machinery to understand the factory's potential output capacity. ",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-capability-audit-what-inspectors-usually-check-on-site/",
+      "title": "1",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-capability-audit-what-inspectors-usually-check-on-site/",
+      "title": "Production Planning: Evaluate the factory's ability to plan and schedule production to meet the buyer's delivery schedule. ",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-capability-audit-what-inspectors-usually-check-on-site/",
+      "title": "1",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-capability-audit-what-inspectors-usually-check-on-site/",
+      "title": "Workforce Capacity: Assess the factory's workforce, including staff number, training, and production stability. ",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-capability-audit-what-inspectors-usually-check-on-site/",
+      "title": "1",
+      "domain": "thirdtesting.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://tetrainspection.com/factory-audit-checklist/",
+      "title": "Production Planning and Order Tracking: Check the factory's capacity data, process flow, and warehouse condition to ensure they can handle the required volume. ",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://tetrainspection.com/factory-audit-checklist/",
+      "title": "1",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://tetrainspection.com/factory-audit-checklist/",
+      "title": "Integrated Testing, Inspection, and Certification Support: Ensure the factory has the necessary support systems to maintain quality and compliance with buyer requirements. ",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://tetrainspection.com/factory-audit-checklist/",
+      "title": "1",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.thirdtesting.com/insights/audit-playbooks/factory-capability-audit-what-inspectors-usually-check-on-site/",
+      "title": "\nThese areas are critical for ensuring that the factory can meet the buyer's delivery schedule and that the production process is efficient and reliable. ",
+      "domain": "thirdtesting.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-04-capacity.txt",
+    "hash": "sha256:88b626a7dddc3089ba08e86edb277e3ea77718757e5c471ad26d36765d0a52df",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

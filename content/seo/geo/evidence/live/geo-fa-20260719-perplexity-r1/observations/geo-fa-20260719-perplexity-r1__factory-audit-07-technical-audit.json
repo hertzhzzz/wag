@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-07-technical-audit",
+  "platform": "perplexity",
+  "questionId": "factory-audit-07-technical-audit",
+  "prompt": "When should a buyer use a technical audit instead of a general factory audit?",
+  "promptHash": "sha256:b1b9d060ef7afcc954b8900d6e7ef0ba108ec40d988790119cf06450bbb8333e",
+  "observedAt": "2026-07-19T00:42:28.352Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.linkedin.com/pulse/technical-audit-part-1-mohammad-habibur-rahman-chakdar-nowcc",
+      "title": "linkedin",
+      "domain": "linkedin.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://goaudits.com/blog/manufacturing-audit/",
+      "title": "goaudits\nManufacturing Audits: Types, Benefits, Process, and Software\nA manufacturing plant or production audit helps you meet the highest standards of quality and efficiency. Learn to conduct factory",
+      "domain": "goaudits.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.qcadvisor.com/blog/factory-audit-types/",
+      "title": "qcadvisor\nWhat are the 12 Factory Audit Types - QCADVISOR\nSourcing from Asia? Ensure supplier reliability with factory audits. Types include Factory Verification, Technical, and Capacity. Other types ",
+      "domain": "qcadvisor.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.youtube.com/watch?v=c2CnN703GyI",
+      "title": "youtube\nHow To Decide Which Factory Audit You Need?\nIn this video, our CEO, Renaud Anjoran, explains which factory audits you might find most useful depending on your situation if you want to qualify ",
+      "domain": "youtube.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html",
+      "title": "tradeaiders\nFactory Audit Checklist 2026: What Quality Audits Cover\nThe complete factory audit checklist for 2026: what a quality audit actually covers across 7 pillars — and what it cannot catch. Ess",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.soleforgefootwear.com/blog/factory-audits-for-footwear-buyers-social-quality-and-capacity-checks",
+      "title": "soleforgefootwear\nFactory Audits for Footwear Buyers: Social, Quality and Capacity Checks | SoleForge\nFootwear factory audit for China buyers: verify social compliance, quality systems, supplier legit",
+      "domain": "soleforgefootwear.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://tetrainspection.com/technical-audit/",
+      "title": "tetrainspection\nTechnical Audit: Checklist, Process & Methodology - Tetra Inspection\nWhat is a technical audit? Learn the technical audit methodology, a step-by-step checklist, and when to run one to ",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://welleinspection.com/fr_be/audits-compliance/technical-audits-guide/",
+      "title": "welleinspection\nTechnical Audit – Ensure Product Quality & Compliance\nDiscover the meaning of a technical audit in the manufacturing industry and how it ensures supplier quality. This guide also expla",
+      "domain": "welleinspection.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://rsjqa.com/rsj-services/factory-audits/extensive-technical-audit/",
+      "title": "rsjqa\nExtensive Technical Audit\nWhat is Factory Audit? It is a systematic analysis conducted by an expert at the supplier’s facility to assess the supplier’s quality assurance system, capacity and the",
+      "domain": "rsjqa.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://alscert.com/capacity-and-capability-audit/",
+      "title": "alscert\nCapacity and Capability Audit.\nTechnical Audit – Capacity and capability audit. The objective of a general factory audit is to enure that the factory you choose is capable of producing your pr",
+      "domain": "alscert.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-07-technical-audit.txt",
+    "hash": "sha256:427126d2b8f6bc61bbac6bb2b26aae46d2e9ccaf9c2335b1dd48adbb5a7748e0",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/cd132849-431e-4a65-84e7-48504e01b63f. Account Zhe He Free."
+}

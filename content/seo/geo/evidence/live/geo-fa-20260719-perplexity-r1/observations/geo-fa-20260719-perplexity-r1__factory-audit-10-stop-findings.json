@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-10-stop-findings",
+  "platform": "perplexity",
+  "questionId": "factory-audit-10-stop-findings",
+  "prompt": "Which factory audit findings should be resolved before approving a Chinese factory for production?",
+  "promptHash": "sha256:eced04598bee186d5313e95403b2cad6d1a90fe1f3096c8eaf19c1910f62c35e",
+  "observedAt": "2026-07-19T00:43:48.784Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://dev.to/china-sourcing-agents/china-factory-audit-checklist-361f",
+      "title": "dev\nChina Factory Audit Checklist\nA practical checklist for auditing Chinese electronics factories. What to check, why it matters, and what disqualifying failures look like.",
+      "domain": "dev.to"
+    },
+    {
+      "rank": 2,
+      "url": "https://chinamakershub.com/journal/china-factory-audit-checklist",
+      "title": "chinamakershub\nChina Factory Audit Checklist: 27 Points to Verify (2026) | CMH\nA 27-point China factory audit checklist covering legal verification, production capacity, quality systems and social com",
+      "domain": "chinamakershub.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://qualitysourcingfromchina.com/guides/factory-audit-checklist-complete",
+      "title": "qualitysourcingfromchina\nFactory Audit Checklist: 60-Point China Factory Audit Template\nThe 60-point factory audit checklist we use on every China factory visit. Legal, capability, quality, ethical, s",
+      "domain": "qualitysourcingfromchina.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://sinospect.com/resources/china-factory-audit-checklist",
+      "title": "sinospect\nChina factory audit checklist | Sinospect\nWhat a factory audit should cover when qualifying a Chinese supplier: site and entity verification, quality management system (ISO 9001:2015), produ",
+      "domain": "sinospect.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.eliteglobaltrade.co/china-factory-audit-complete-guide",
+      "title": "eliteglobaltrade\nChina Factory Audit — Complete Guide 2026 | What to Check, Red Flags & Costs | Elite Global Trade\nComplete guide to factory audits in China. What to check, red flags to watch for, aud",
+      "domain": "eliteglobaltrade.co"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.mingsourcing.com/blog/factory-audit-checklist-china.html",
+      "title": "mingsourcing\nChina Factory Audit Checklist: 50-Point Guide",
+      "domain": "mingsourcing.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://cantonbuyingdesk.com/blog/factory-audit-china-checklist",
+      "title": "cantonbuyingdesk\nFactory audit China: checklist… | Canton Buying Desk\nFactory audit China stops performative tours when CAPA follow-up audit owners, social compliance audit China signals, and quality ",
+      "domain": "cantonbuyingdesk.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://xilinkglobaltrade.com/factory-audits-in-china/",
+      "title": "xilinkglobaltrade\nFactory Audit China 2026: Free Checklist + Report Sample | XILINK\nWe walk the factory floor, verify licenses and production lines, and send a 30-point photo report before you pay — t",
+      "domain": "xilinkglobaltrade.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html",
+      "title": "tradeaiders\nFactory Audit Checklist 2026: What Quality Audits Cover\nThe complete factory audit checklist for 2026: what a quality audit actually covers across 7 pillars — and what it cannot catch. Ess",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://eliteglobaltrade.co/blog/china-factory-audit-checklist",
+      "title": "eliteglobaltrade\nChina Factory Audit Checklist — Complete Guide for 2026\nComplete China factory audit checklist with 40+ checkpoints: quality systems, capacity, compliance and labour. Free guide by EG",
+      "domain": "eliteglobaltrade.co"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-10-stop-findings.txt",
+    "hash": "sha256:4151bd085c0e729aa22b8241f88e2b57ddb4453d419e9247f45d70f35dbaf650",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/33845fa8-d0e8-43c5-8d88-c7a3f6d2d17c. Account Zhe He Free."
+}

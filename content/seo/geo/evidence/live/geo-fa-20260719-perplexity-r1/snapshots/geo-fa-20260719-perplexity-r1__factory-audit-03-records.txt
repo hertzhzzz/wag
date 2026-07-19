@@ -1,0 +1,209 @@
+An auditor reviewing a Chinese factory should examine documents across several key categories: legal and business registration, quality management system (QMS) documentation, production and process records, supplier and incoming material controls, inspection and testing records, equipment calibration and maintenance logs, and corrective action documentation.
+sinospect
++2
+
+Core Legal and Business Documents
+
+These establish the factory's legitimacy and operational scope:
+
+Business license (营业执照) and company registration documents
+scribd
++1
+
+Organization chart showing management structure
+scribd
+
+Factory floor plans and site layout (厂区/厂房平面图)
+scribd
+
+Export licenses and relevant industry-specific certifications
+pearlsourcehub
++1
+
+ISO 9001:2015 certificate and most recent external audit report (if applicable)
+sinospect
++1
+
+Quality Management System (QMS) Documentation
+
+For ISO 9001-compliant factories, auditors review:
+
+Quality manual (质量手册) outlining the QMS framework
+scribd
+
+Procedure documents (程序文件) for all key processes
+scribd
+
+Quality plan (质量计划) and quality objectives
+scribd
+
+Document control records showing revision history (文件更改收发记录)
+scribd
+
+Internal audit plan and records (内部审核计划、记录)
+scribd
+
+Management review meeting minutes
+sinospect
+
+Production Process Records
+
+These demonstrate actual manufacturing capability and process control:
+
+Production process flowchart (生产工序流程图)
+scribd
+
+Work instructions (作业指导书) at each production station
+scribd
+
+In-line inspection records (巡拉记录 / IPQC records)
+scribd
+
+In-process quality control (IPQC) inspection standards and test records
+scribd
+
+Metal detection records for metal-sensitive products (金属探测记录)
+scribd
+
+Records of rejected/non-conforming goods handling (不良品处理记录)
+scribd
+
+Order review and customer focus procedure records (订单评审和客户关注程序及记录)
+scribd
+
+Incoming Material and Supplier Controls
+
+Auditors verify raw material quality and supplier vetting:
+
+Approved supplier list (合格供应商清单) and supplier evaluation procedures
+scribd
+
+Supplier monitoring records (供应商评审程序及记录)
+scribd
+
+Purchase orders and contracts (采购单、采购合同)
+scribd
+
+Incoming quality control (IQC) standards and specifications (来料验货标准及规格书)
+scribd
+
+Incoming material inspection and test reports (IQC reports) (来料检查、测试报告)
+scribd
+
+Incoming material receiving and distribution records (来料收发记录)
+scribd
+
+Records of returned defective materials or concession approvals (不良品退货、让步接收记录)
+scribd
+
+Final Inspection and Shipping Records
+
+These confirm products meet specifications before delivery:
+
+Final quality control (FQC) and outgoing quality control (OQC) inspection standards
+scribd
+
+Final inspection test reports (终检检验测试标准、记录)
+scribd
+
+Final inspection rejection records (终检不良品处理记录)
+scribd
+
+Packaging stage tool control records (包装工段工具利器收发控制记录)
+scribd
+
+Pre-shipment metal detection records (终检金属探测记录)
+scribd
+
+Shipping/release records (发货记录)
+scribd
+
+Equipment, Calibration, and Testing
+
+Auditors verify measurement accuracy and equipment maintenance:
+
+Equipment and instrument inventory list (仪器设备清单)
+scribd
+
+Calibration records for all testing and measuring equipment (内外校记录报告)
+scribd
+
+Equipment maintenance plan and service records (设备维护计划和记录)
+scribd
+
+Product test reports (CE, EMC, or other relevant certifications) (产品测试化验报告)
+scribd
+
+Third-party lab test reports (相关的产品测试化验报告)
+scribd
+
+Training and Personnel Records
+
+These demonstrate workforce competency:
+
+Employee training plan (员工培训计划)
+scribd
+
+Quality training records for workers (员工质量培训记录)
+scribd
+
+Records showing operator qualifications for specialized equipment
+sinospect
+
+Corrective and Preventive Actions (CAPA)
+
+Critical for continuous improvement and compliance:
+
+Customer complaint handling procedures and records (客户投诉处理记录)
+scribd
+
+Corrective action and preventive action records (纠正与预防措施记录)
+scribd
+
+Root cause analysis documentation for major quality issues
+cantonbuyingdesk
++1
+
+Social Compliance and Safety (if applicable)
+
+For social audits or combined quality/social audits:
+
+Labor contracts and payroll records
+chinamakershub
++1
+
+Working hours and overtime records
+chinamakershub
++1
+
+Health and safety training records
+eliteglobaltrade
++1
+
+Fire safety and emergency evacuation drill records
+pearlsourcehub
++1
+
+Environmental compliance permits and waste disposal records
+eliteglobaltrade
+
+Red Flags Auditors Watch For
+
+Incomplete or missing date stamps on records
+cantonbuyingdesk
+
+Handwritten entries added retroactively
+chinamakershub
+
+Discrepancies between production records and actual capacity
+chinamakershub
+
+Missing calibration certificates for critical measurement tools
+sinospect
+
+No evidence of corrective actions from previous audits
+cantonbuyingdesk
+
+For your WAG business, requesting these documents before arranging factory visits can help you pre-qualify suppliers and identify potential red flags early in the due diligence process.
+pearlsourcehub
++1

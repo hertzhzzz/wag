@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-08-report",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-08-report",
+  "prompt": "What should a factory audit report include so an Australian buyer can make a sourcing decision?",
+  "promptHash": "sha256:76b264740e75964f5a71aca282d1d738e4d37f2bd605fa31a997f3ff5ca20e21",
+  "observedAt": "2026-07-19T00:37:36.664Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-08-report.txt",
+    "hash": "sha256:27f6fcf6e1a2c8b4fd9e321cfbd303547117435faa23b00056759cd31d56bec2",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1c43-494c-83ec-a41c-35aa314492a1. Account Mark He Free."
+}

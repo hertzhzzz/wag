@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-fa-20260719-google-ai-overviews-r1__factory-audit-06-quality-system",
+  "platform": "google-ai-overviews",
+  "questionId": "factory-audit-06-quality-system",
+  "prompt": "How should an Australian importer assess a Chinese factory's quality management system?",
+  "promptHash": "sha256:67af1a4f64ecb703a0d94f8452e583148e5c5536e69f882e5ba033d2ee7d68a6",
+  "observedAt": "2026-07-19T01:03:10.279Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "epicsourcing.com.au",
+    "worldfirst.com",
+    "varaallied.com.au",
+    "synergyfreight.com.au",
+    "chinesecheck.com",
+    "hornetgroup.com.au",
+    "qcckyc.com",
+    "qcadvisor.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-google-ai-overviews-r1/snapshots/geo-fa-20260719-google-ai-overviews-r1__factory-audit-06-quality-system.txt",
+    "hash": "sha256:fdd7c9df92ec0ca31acbcf3e7ccde7dbf265b54a126ac8b823e8c9b8735578f9",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

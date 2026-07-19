@@ -1,0 +1,348 @@
+An Australian importer assessing a Chinese factory’s quality management system (QMS) should verify whether the factory has repeatable processes that prevent defects, not just whether it holds certificates. A factory audit should examine the system from incoming materials through production, inspection, traceability, and corrective actions.
+
+1. Verify quality certifications and their validity
+
+Request and verify:
+
+ISO 9001 certificate:
+
+Certificate number
+
+Certification body
+
+Scope of certification
+
+Expiry date
+
+Actual factory address covered
+
+Product-specific certifications where relevant:
+
+Electrical safety
+
+EMC compliance
+
+Material certifications
+
+Industry-specific approvals
+
+Warning signs:
+
+Certificate scope does not cover the product being purchased
+
+Certificate belongs to a different company/address
+
+Factory cannot provide audit reports from the certification body
+
+Certificates are only marketing documents
+
+2. Review the factory’s quality organisation
+
+Assess whether quality responsibility is independent from production.
+
+Check:
+
+Area	Evidence to review
+Quality manager	Employment record, role description
+QC inspectors	Training records, inspection responsibilities
+Production staff	Quality training records
+Escalation process	Defect reporting flow
+Authority	Ability to stop production
+
+Red flag:
+
+The production manager also controls final quality approval.
+
+3. Examine incoming material controls
+
+A reliable factory should control supplier materials before production begins.
+
+Review:
+
+Incoming Quality Control (IQC) procedures
+
+Supplier approval process
+
+Material inspection records
+
+Raw material certificates
+
+Batch identification system
+
+Rejected material records
+
+Ask:
+
+How are defective materials handled?
+
+Are suppliers scored?
+
+Can they trace materials back to suppliers?
+
+Example:
+For a lighting importer, verify controls over:
+
+LEDs
+
+Drivers
+
+Aluminium housings
+
+Wiring components
+
+Electronic components
+
+4. Audit production quality controls
+
+Review whether quality checks happen during manufacturing.
+
+Look for:
+
+Production documents
+
+Work instructions
+
+Standard Operating Procedures (SOPs)
+
+Assembly drawings
+
+Process control sheets
+
+Inspection checkpoints
+
+In-process inspection
+
+Check:
+
+First article inspection
+
+Random production checks
+
+Automated testing records
+
+Operator self-inspection
+
+Defect recording
+
+Questions:
+
+At what production stage are defects detected?
+
+What happens when a defect rate increases?
+
+Who approves production changes?
+
+5. Assess final inspection procedures
+
+A factory should have a documented final inspection system.
+
+Review:
+
+Final Quality Control (FQC) checklist
+
+Sampling standards
+
+Inspection reports
+
+Product testing records
+
+Packaging inspection
+
+Common standards:
+
+ANSI/ASQ Z1.4 (AQL sampling)
+
+Customer-specific inspection plans
+
+Check:
+
+Does the factory inspect every shipment?
+
+Are inspection results linked to purchase orders?
+
+Are failed inspections documented?
+
+6. Test traceability capability
+
+Traceability is critical for Australian importers because defects may appear after products arrive.
+
+Verify whether the factory can trace:
+
+Production date
+
+Production line
+
+Operator/team
+
+Raw materials batch
+
+Inspection results
+
+Shipment batch
+
+Ask for a sample traceability exercise:
+
+"Select one finished product from last month's shipment and show every record connected to it."
+
+A strong factory should complete this quickly.
+
+7. Review defect and corrective action processes
+
+Assess their handling of problems.
+
+Request examples of:
+
+Non-Conformance Reports (NCR)
+
+Corrective Action Reports (CAR)
+
+Root cause analysis
+
+Customer complaint records
+
+Good systems use methods such as:
+
+5 Why analysis
+
+Fishbone diagrams
+
+Preventive actions
+
+Red flags:
+
+"We rarely have defects"
+
+No historical complaint records
+
+Problems are fixed by rework only
+
+No documented root cause analysis
+
+8. Check calibration and testing equipment
+
+Verify:
+
+Equipment list
+
+Calibration certificates
+
+Calibration frequency
+
+Test procedures
+
+Operator training
+
+Examples:
+
+Electrical safety testers
+
+Torque testers
+
+Dimensional gauges
+
+Environmental testing equipment
+
+Warning signs:
+
+Expired calibration labels
+
+Missing equipment records
+
+Testing equipment owned by another company
+
+9. Evaluate supplier management
+
+A factory's quality depends on its own suppliers.
+
+Review:
+
+Approved supplier list
+
+Supplier audits
+
+Supplier defect statistics
+
+Incoming rejection rates
+
+Supplier corrective actions
+
+Ask:
+
+"What were your three biggest supplier quality problems last year and how did you fix them?"
+
+10. Verify quality performance data
+
+Request historical data:
+
+Defect rate (PPM or percentage)
+
+Customer complaints
+
+Returns
+
+Warranty claims
+
+On-time quality performance
+
+Internal audit results
+
+Avoid accepting only verbal claims.
+
+11. Conduct a factory audit with practical tests
+
+During an on-site audit, perform:
+
+Document check
+
+QMS manuals
+
+Inspection records
+
+Training records
+
+Factory walkthrough
+
+Production lines
+
+QC stations
+
+Warehouse
+
+Finished goods area
+
+Live sampling
+
+Pick random products and ask:
+
+Show inspection records
+
+Show production history
+
+Show test results
+
+Production simulation
+
+Ask the factory to demonstrate:
+
+How a defect is identified
+
+How production is stopped
+
+How corrective action starts
+
+Minimum acceptable QMS before placing a large order
+
+For a high-value Australian import order, the factory should normally demonstrate:
+
+Requirement	Expected evidence
+Valid QMS certification	ISO certificate + scope
+Documented QC process	SOPs + inspection plans
+Incoming inspection	Material records
+In-process inspection	Production QC reports
+Final inspection	Shipment inspection records
+Traceability	Batch records
+Corrective actions	NCR/CAR examples
+Equipment control	Calibration records
+Trained QC team	Training evidence
+
+A factory that can produce quality documents but cannot demonstrate them in actual production should be treated as higher risk. The strongest assessment combines document review + factory walkthrough + production record verification + independent product inspection before shipment.

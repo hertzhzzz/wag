@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-fa-20260719-google-ai-overviews-r1__factory-audit-04-capacity",
+  "platform": "google-ai-overviews",
+  "questionId": "factory-audit-04-capacity",
+  "prompt": "How can an audit test whether a factory has enough capacity for an Australian buyer's delivery schedule?",
+  "promptHash": "sha256:83365e3b021e56b0ef429a6077a0450625762c67fa9c1cb69b67182b21e644e8",
+  "observedAt": "2026-07-19T01:02:59.262Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "tradeaiders.com",
+    "sofeast.com",
+    "usetorg.com",
+    "maplesourcing.com",
+    "aqmbd.com",
+    "produco.com.au",
+    "auasb.gov.au",
+    "linkedin.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-google-ai-overviews-r1/snapshots/geo-fa-20260719-google-ai-overviews-r1__factory-audit-04-capacity.txt",
+    "hash": "sha256:2fad3736753b24bf531c1a34bbe574e194d2c5f955a8a652d4cea954d3675630",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

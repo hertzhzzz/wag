@@ -1,0 +1,64 @@
+{
+  "runId": "geo-fa-20260719-bing-copilot-r1",
+  "platform": "bing-copilot",
+  "schemaVersion": "geo-live-capture-v1",
+  "methodologyVersion": "methodology-live-v1",
+  "benchmarkVersion": "benchmark-live-v1",
+  "questionSetVersion": "1",
+  "questionSetPath": "content/seo/geo/questions/factory-audit.json",
+  "questionSetDigest": "sha256:3bec0f9c3de17e1cb2c6f36562d1b3f907460d34f66c795040f0d7c8259dec6d",
+  "cluster": "factory-audit",
+  "ticket": 32,
+  "fixtureOnly": false,
+  "provenance": "external-platform-observation",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "expectedRepetitions": 1,
+  "asOf": "2026-07-19T01:07:14.366Z",
+  "questions": [
+    {
+      "id": "factory-audit-01-scope",
+      "prompt": "What should a factory audit in China cover before an Australian importer places a large order?"
+    },
+    {
+      "id": "factory-audit-02-audit-or-verification",
+      "prompt": "How is a factory audit different from supplier verification and product inspection?"
+    },
+    {
+      "id": "factory-audit-03-records",
+      "prompt": "What documents and production records should an auditor review at a Chinese factory?"
+    },
+    {
+      "id": "factory-audit-04-capacity",
+      "prompt": "How can an audit test whether a factory has enough capacity for an Australian buyer's delivery schedule?"
+    },
+    {
+      "id": "factory-audit-05-subcontracting",
+      "prompt": "What subcontracting warning signs should an Australian buyer look for during a factory audit?"
+    },
+    {
+      "id": "factory-audit-06-quality-system",
+      "prompt": "How should an Australian importer assess a Chinese factory's quality management system?"
+    },
+    {
+      "id": "factory-audit-07-technical-audit",
+      "prompt": "When should a buyer use a technical audit instead of a general factory audit?"
+    },
+    {
+      "id": "factory-audit-08-report",
+      "prompt": "What should a factory audit report include so an Australian buyer can make a sourcing decision?"
+    },
+    {
+      "id": "factory-audit-09-compare-services",
+      "prompt": "How should an Australian business compare factory audit services in China?"
+    },
+    {
+      "id": "factory-audit-10-stop-findings",
+      "prompt": "Which factory audit findings should be resolved before approving a Chinese factory for production?"
+    }
+  ],
+  "evidencePath": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1",
+  "blocked": false
+}

@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-10-stop-findings",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-10-stop-findings",
+  "prompt": "Which factory audit findings should be resolved before approving a Chinese factory for production?",
+  "promptHash": "sha256:eced04598bee186d5313e95403b2cad6d1a90fe1f3096c8eaf19c1910f62c35e",
+  "observedAt": "2026-07-19T00:38:08.863Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-10-stop-findings.txt",
+    "hash": "sha256:b59e3ce274e8c6117355aad56da64e2d74e67f4d96c4ae6790c506cbc940fd4f",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1c64-dbc0-83ec-8ebe-0f05ce858957. Account Mark He Free."
+}

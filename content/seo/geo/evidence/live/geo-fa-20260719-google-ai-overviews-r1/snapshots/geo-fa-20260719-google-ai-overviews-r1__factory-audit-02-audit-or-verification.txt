@@ -1,0 +1,13 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=How%20is%20a%20factory%20audit%20different%20from%20supplier%20verification%20and%20product%20inspection%3F&hl=en-AU&gl=au
+TITLE: How is a factory audit different from supplier verification and product inspection? - Google Search
+OBSERVED_AT: 2026-07-19T01:02:48.366Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: How is a factory audit different from supplier verification and product inspection?
+STATUS: observed-answer
+brandMention: no
+ownedUrlCited: no
+---
+AI_OVERVIEW:
+An AI Overview is not available for this searchCan't generate an AI overview right now. Try again later.AI Overview

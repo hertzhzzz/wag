@@ -1,0 +1,162 @@
+A factory audit report for an Australian buyer should provide enough verified, structured evidence to assess supplier capability, product quality systems, compliance risk, and shipment readiness in one document.
+hqts
++2
+
+Core sections every report should include
+1. Executive summary and risk rating
+
+Overall conclusion on whether the factory is suitable for the intended order.
+thirdtesting
+
+Clear risk level (e.g., low/medium/high or A/B/C) with a short justification.
+thirdtesting
+
+Key “deal-breaker” issues highlighted up front (e.g., fake certificates, no QC system, major safety non‑compliance).
+hqts
++1
+
+This helps you decide quickly without reading 20+ pages first.
+
+2. Supplier and order context
+
+Supplier details: legal name, address, contact, business type (manufacturer vs trader), years in operation.
+hqts
+
+Order/part reference: product model, PO number, quantity, expected delivery date.
+thirdtesting
+
+Audit scope: what was checked (capability, quality system, social compliance, product-specific checks) and what was not.
+asiansourcinggroup
++1
+
+For your WAG clients, this section makes it easy to match the audit to a specific RFQ or proposal.
+
+3. Factory capability and production capacity
+
+Facility overview: size, layout, main workshops, key equipment.
+hqts
+
+Production capacity: lines, shifts, output per day/week, current utilisation.
+hqts
++1
+
+Workforce: number of workers, skill level, training records, turnover.
+hqts
+
+Subcontracting: whether any processes are outsourced and how they’re controlled.
+hqts
++1
+
+Australian buyers use this to judge whether the factory can reliably handle their volumes and scale with them.
+
+4. Quality management system (QMS)
+
+Certifications: ISO 9001 or other relevant certs, with validity and scope.
+hqts
+
+Documented procedures: incoming inspection, in‑process checks, final inspection, non‑conformance handling.
+hqts
++1
+
+Records: inspection logs, test reports, calibration records, corrective action logs.
+thirdtesting
+
+Traceability: batch/lot tracking from raw materials to finished goods.
+thirdtesting
+
+This is critical for reducing defective shipments and after‑sales costs.
+
+5. Product-specific findings
+
+Workmanship: appearance, finish, consistency across samples.
+thirdtesting
+
+Function and performance: basic functional tests against specs or approved sample.
+thirdtesting
+
+Dimensions and materials: measurements, material grades, comparison to spec/approved sample.
+thirdtesting
+
+Packaging and labelling: carton strength, inner packaging, barcodes, warning labels, manuals, language requirements (e.g., English for Australia).
+thirdtesting
+
+These findings directly inform whether the product will meet Australian consumer expectations and regulatory requirements.
+
+6. Compliance and risk areas
+
+Legal and regulatory: business licence, export licence, product-specific certs (e.g., electrical safety, food contact, toys).
+hqts
++1
+
+Social compliance: working hours, wages, child labour policies, health & safety conditions (PPE, fire exits, machine guarding).
+hqts
++1
+
+Environmental: waste handling, emissions, chemical storage (if relevant to product).
+asiansourcinggroup
+
+For Australian buyers, this section is key for reputational and legal risk management.
+
+7. Photos and evidence
+
+Clear, dated photos of: exterior, production lines, QC stations, warehouse, testing equipment, certificates, sample products, packaging.
+simplyacacia
++1
+
+Close-ups of any defects or non‑compliances found.
+thirdtesting
+
+Photos make the report defensible internally and useful in discussions with the supplier.
+
+8. Non-conformities and corrective actions
+
+List of issues classified by severity (critical/major/minor).
+thirdtesting
+
+Root cause (if identified) and recommended corrective actions.
+thirdtesting
+
+Deadlines and responsibility for follow‑up.
+thirdtesting
+
+This turns the audit from a “snapshot” into an action plan you can use in negotiations or supplier development.
+
+9. Shipment readiness check (if close to production)
+
+Production status vs PO: % complete, remaining quantity, expected completion date.
+thirdtesting
+
+Packing status: cartons packed, marks, labels, palletisation.
+thirdtesting
+
+Shipping documents: commercial invoice, packing list, COO, any required test reports.
+thirdtesting
+
+This helps the buyer decide whether to proceed, delay, or add extra inspections before shipment.
+
+10. Auditor credentials and methodology
+
+Who performed the audit: company name, auditor qualifications, independence statement.
+hqts
+
+Audit standard or checklist used (e.g., internal checklist, ISO-based, BSCI, Sedex).
+asiansourcinggroup
+
+Date(s) of audit and duration on site.
+hqts
+
+Australian buyers often need this for internal compliance or to satisfy their own customers.
+
+How an Australian buyer can use the report to decide
+
+When reviewing a report for a sourcing decision, focus on:
+
+Can this factory reliably make my product at my required volume and quality? (sections 3–5)
+
+Are there any red flags that could cause legal, reputational, or financial problems in Australia? (section 6)
+
+Are the identified issues fixable within my timeline and budget, and is the supplier willing to act? (section 8)
+
+Is there enough evidence (photos, records, certificates) to support the conclusions? (sections 7 and 10)
+
+If you’d like, I can draft a simple factory audit checklist template tailored to WAG’s typical China–Australia sourcing projects (e.g., consumer goods, optical products, small electronics) that you can reuse with clients.

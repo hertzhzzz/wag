@@ -1,0 +1,117 @@
+An audit can objectively verify whether a factory has enough capacity by combining on-site measurements, document reviews, and production data analysis to confirm whether the factory can meet your specific delivery schedule and order quantities.
+qualityinspection
++1
+
+Core capacity verification methods
+
+Auditors typically assess capacity through several complementary approaches:
+
+Production line observation and throughput measurement — Auditors physically observe production lines, count workstations, measure cycle times, and calculate actual output per shift rather than relying on supplier claims.
+tradeaiders
++1
+
+Equipment and machinery inventory — Auditors document the number, condition, and age of production equipment, checking whether machines are operational, well-maintained, or frequently broken down (which reduces effective capacity).
+qualityinspection
+
+Workforce assessment — Auditors verify actual staff numbers, shift patterns, overtime practices, and staff turnover rates, since high turnover or understaffing directly impacts capacity.
+qualityinspection
+
+Production planning and scheduling systems — Auditors review how the factory plans production, including whether they use formal scheduling software, how they prioritize orders, and their track record for on-time delivery.
+tradeaiders
++1
+
+Warehouse and inventory management — Auditors check raw material inventory levels, finished goods storage capacity, and warehouse organization, since poor material planning creates bottlenecks.
+tradeaiders
++1
+
+Key questions and data points auditors collect
+
+A comprehensive capacity audit gathers specific quantitative data:
+
+Daily/weekly production capacity per product line — Actual output figures, not theoretical maximums.
+qualityinspection
+
+Current order book and capacity utilization — What percentage of capacity is already committed to other buyers, and whether there's room for your order.
+qualityinspection
+
+Quality metrics and defect rates — Poor quality requiring rework consumes capacity that should be available for new orders.
+qualityinspection
+
+Sub-supplier and component sourcing — Whether critical components are custom-made (higher supply chain risk) or standard, and the reliability of sub-suppliers.
+qualityinspection
+
+Peak and slow seasons — Factories may have capacity available now but become overloaded during peak seasons (e.g., before Chinese New Year).
+qualityinspection
+
+Engineering change and prototyping processes — How the factory handles samples, prototypes, and design changes using production tooling.
+qualityinspection
+
+Audit types and approaches
+
+Different audit types serve different purposes for capacity verification:
+
+On-site factory audit — Most thorough approach where an auditor physically visits the factory, observes production, interviews management, and reviews documents.
+tetrainspection
++1
+
+Remote/virtual audit — For buyers abroad who cannot travel, remote audits use video calls, photo documentation, and third-party auditors on the ground to verify capacity.
+youtube
+qualityinspection
+
+Technical process audit — Specialized audit focusing specifically on production processes, capacity factors, and technical risks rather than general compliance.
+qualityinspection
+
+Red flags that indicate capacity problems
+
+Auditors watch for warning signs that capacity may be insufficient:
+
+Overstated capacity claims — Factories claiming unrealistic output figures without supporting evidence.
+qualityinspection
+
+High equipment downtime — Multiple broken or non-operational machines on the production floor.
+qualityinspection
+
+Poor production planning — No formal scheduling system, frequent last-minute changes, or chaotic warehouse organization.
+tradeaiders
+
+High staff turnover or understaffing — Visible workforce gaps, excessive overtime, or inability to maintain consistent staffing levels.
+qualityinspection
+
+Quality issues requiring rework — High defect rates that consume capacity meant for new orders.
+qualityinspection
+
+For Australian buyers: practical considerations
+
+Given your Australia-China trade context, consider:
+
+Time zone and cultural communication gaps — Use local auditors or agents who understand both Chinese business culture and Australian buyer expectations.
+youtube
+
+Chinese New Year and holiday periods — Factor in production shutdowns and pre-holiday rushes that can severely impact delivery schedules.
+qualityinspection
+
+Third-party audit services — For buyers unable to visit China on-site, professional audit companies can provide ISO-standard assessments with detailed capacity reports.
+aqmbd
++1
+
+What a capacity audit report should include
+
+A useful audit report provides:
+
+Verified capacity figures — Actual daily/weekly output based on observation, not supplier claims.
+tetrainspection
++1
+
+Capacity utilization analysis — Current workload as a percentage of total capacity.
+qualityinspection
+
+Risk assessment — Identification of potential bottlenecks, equipment issues, or supply chain vulnerabilities.
+qualityinspection
+
+Recommendations — Specific actions to mitigate capacity risks or alternative factory suggestions if capacity is insufficient.
+importivity
++1
+
+This evidence-based approach lets you make informed decisions about whether a factory can realistically meet your delivery schedule before placing orders.
+tradeaiders
++1

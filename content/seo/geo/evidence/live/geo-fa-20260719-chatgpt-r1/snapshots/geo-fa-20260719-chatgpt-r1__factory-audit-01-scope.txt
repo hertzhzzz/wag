@@ -1,0 +1,138 @@
+PLATFORM: chatgpt
+SURFACE: chatgpt-chat-web
+URL: https://chatgpt.com/c/6a5c1a01-0a10-83ec-8744-a82ca6a71477
+PROMPT: What should a factory audit in China cover before an Australian importer places a large order?
+OBSERVED_AT: 2026-07-19T00:28:13.713Z
+
+ANSWER:
+Before placing a large purchase order with a Chinese supplier, an Australian importer should commission a factory audit that verifies not only that the supplier exists, but also that it has the capability, legal status, quality systems, and financial stability to fulfil the order consistently.
+
+A comprehensive pre-order factory audit should cover the following areas:
+
+Area	What should be verified	Why it matters
+Legal identity	Chinese legal name, Unified Social Credit Code, registered address, business scope, legal representative	Confirms you are contracting with the correct legal entity
+Manufacturing capability	Whether the supplier is an actual manufacturer or a trading company, factory ownership, production lines	Ensures production will occur where claimed
+Export capability	Export licence (where applicable), customs registration, previous export history	Confirms the supplier can legally export your products
+Factory facilities	Buildings, machinery, maintenance, utilities, warehouse conditions	Indicates production capacity and operational maturity
+Production capacity	Monthly output, peak capacity, bottlenecks, overtime reliance, subcontracting	Determines whether your order can be completed on time
+Workforce	Number of employees, key technical staff, training, turnover	High turnover can affect product quality and delivery
+Quality management	Incoming inspection, in-process inspection, final inspection, calibration, corrective actions	Demonstrates whether quality is managed systematically
+Certifications	ISO 9001, ISO 14001, ISO 45001 or relevant industry certifications	Certificates should be independently verified
+Supply chain	Major raw material suppliers, traceability, supplier approval process	Reduces risk of inconsistent materials
+Product experience	Similar products manufactured previously, major export markets, customer references	Experience generally reduces production risk
+Equipment	Age, maintenance records, testing equipment, calibration status	Modern, maintained equipment generally produces more consistent results
+Laboratory/testing	In-house testing capability or accredited external laboratories	Important for products requiring compliance testing
+Compliance	Environmental permits, labour compliance, workplace safety	Reduces legal and reputational risk
+Financial indicators	Years in business, litigation, unusual ownership changes, serious credit issues	Helps identify financially unstable suppliers
+Intellectual property controls	Confidentiality procedures, access controls, customer-specific production management	Important when supplying proprietary products
+Quality system assessment
+
+Rather than simply checking whether the supplier has an ISO certificate, the audit should determine whether quality procedures are actually being followed. Examples include:
+
+Incoming material inspection records
+
+Process control documentation
+
+Non-conformance reports
+
+Corrective and preventive action (CAPA) records
+
+Internal audit records
+
+Calibration schedules
+
+Batch traceability
+
+Staff training records
+
+A factory with documented procedures but poor implementation presents a significant risk.
+
+Production capability
+
+The auditor should assess whether the supplier can realistically produce your required volume.
+
+Typical questions include:
+
+What percentage of capacity is already committed?
+
+How many production lines are available?
+
+Are additional shifts required?
+
+Is subcontracting used?
+
+What is the current lead time?
+
+How are production schedules managed?
+
+This helps identify suppliers that accept orders beyond their true capacity.
+
+Red flags
+
+Findings that warrant further investigation include:
+
+Factory address differs from registration documents.
+
+Production occurs primarily through undisclosed subcontractors.
+
+Machinery is inconsistent with the claimed production volume.
+
+Large areas of the factory appear unused.
+
+No documented quality records.
+
+Employee count is far below claimed capacity.
+
+Certificates cannot be independently verified.
+
+Frequent recent changes to company ownership or legal representative.
+
+Poor warehouse organisation and inadequate product identification.
+
+Refusal to allow access to production areas.
+
+A combination of multiple red flags should be treated as a significant commercial risk.
+
+Products requiring Australian regulatory compliance
+
+If the products will be sold in Australia, the audit should also confirm the supplier understands and can support applicable Australian requirements, such as:
+
+Product testing requirements
+
+Technical documentation
+
+Material declarations
+
+Traceability
+
+Packaging and labelling requirements
+
+Ongoing consistency of production after approval
+
+Where applicable, confirm that test reports relate to the actual factory and current product specification rather than older or unrelated products.
+
+Deliverables
+
+A professional factory audit report should typically include:
+
+Executive risk summary
+
+Legal verification results
+
+Photographs of facilities and production lines
+
+Equipment inventory
+
+Production capacity assessment
+
+Quality management evaluation
+
+Compliance findings
+
+Identified risks and non-conformities
+
+Recommended corrective actions
+
+Overall supplier risk rating (for example, low, medium, or high)
+
+For a large Australian import order, a factory audit is usually only one element of supplier due diligence. It is best combined with legal entity verification, independent confirmation of bank account details, export capability verification, pre-production sample approval, and pre-shipment inspection to reduce the risk of fraud, quality failures, or supply disruptions.

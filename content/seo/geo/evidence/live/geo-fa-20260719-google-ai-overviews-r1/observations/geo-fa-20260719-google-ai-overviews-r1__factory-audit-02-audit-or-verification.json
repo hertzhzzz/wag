@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-fa-20260719-google-ai-overviews-r1__factory-audit-02-audit-or-verification",
+  "platform": "google-ai-overviews",
+  "questionId": "factory-audit-02-audit-or-verification",
+  "prompt": "How is a factory audit different from supplier verification and product inspection?",
+  "promptHash": "sha256:d9acf42140a3faf167dc46fd0c4a7145492d55ae001a9c63da1c0711e38f08f6",
+  "observedAt": "2026-07-19T01:02:48.366Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "linkedin.com",
+    "ziprecruiter.com",
+    "flowdit.com",
+    "leelinegroup.com",
+    "insight-quality.com",
+    "amazingqualitycontrol.com",
+    "aqmbd.com",
+    "gtsetu.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-google-ai-overviews-r1/snapshots/geo-fa-20260719-google-ai-overviews-r1__factory-audit-02-audit-or-verification.txt",
+    "hash": "sha256:0a8b84b09ffe489db6131fa523d6d18c829505fdf04503cc77cb45dced6813f0",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

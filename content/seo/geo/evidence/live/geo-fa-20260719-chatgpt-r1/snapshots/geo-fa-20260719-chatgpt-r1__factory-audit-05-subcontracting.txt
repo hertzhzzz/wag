@@ -1,0 +1,247 @@
+During a factory audit, an Australian buyer should treat unexpected subcontracting as a major supply-chain risk because it can affect quality control, delivery reliability, intellectual property protection, compliance obligations, and product traceability. Key warning signs include:
+
+1. Production areas do not match the supplier’s claims
+
+Warning signs:
+
+Factory size appears too small for the order volume quoted.
+
+Machinery shown during previous discussions is missing or unused.
+
+Production lines look inactive despite claimed high output.
+
+Workers cannot explain the product manufacturing process.
+
+The factory only performs simple assembly while claiming full manufacturing capability.
+
+Audit checks:
+
+Compare stated production capacity with:
+
+Number of machines
+
+Number of workers
+
+Shift patterns
+
+Monthly output records
+
+2. Evidence of third-party production inside the factory
+
+Warning signs:
+
+Materials, cartons, labels, or semi-finished goods with another company’s name.
+
+Separate production records for different company names.
+
+Workers mention "partner factories" or "outside processing".
+
+Finished goods are stored in mixed batches from different locations.
+
+Audit checks:
+
+Inspect:
+
+Incoming material records
+
+Production work orders
+
+Batch tracking documents
+
+Warehouse labels
+
+3. Supplier refuses access to production areas
+
+Warning signs:
+
+Auditor is only shown:
+
+Office
+
+Sample room
+
+Showroom
+
+Empty workshop area
+
+Factory claims certain areas are "restricted" without a valid reason.
+
+Audit schedule avoids production hours.
+
+Why it matters:
+A supplier may be presenting a trading company office or sample facility rather than the actual manufacturing site.
+
+4. Quality control is outsourced
+
+Warning signs:
+
+No internal QC staff.
+
+Inspection reports are created by another company.
+
+Workers cannot explain defect handling procedures.
+
+Supplier relies entirely on buyer inspections.
+
+Audit checks:
+Request:
+
+Incoming inspection records
+
+In-process inspection reports
+
+Final inspection reports
+
+Non-conformance reports
+
+5. Production records reveal external factories
+
+Warning signs:
+
+Production schedules reference different factory names.
+
+Purchase orders are issued to unrelated manufacturers.
+
+Material movement records show transfers between locations.
+
+Documents to review:
+
+Production plans
+
+Manufacturing orders
+
+Supplier lists
+
+Outsourcing agreements
+
+Subcontractor approval records
+
+6. Inconsistent answers from management and workers
+
+Warning signs:
+
+Management says "everything is made here."
+
+Workers say certain processes happen elsewhere.
+
+Sales staff cannot explain manufacturing steps.
+
+Different departments give conflicting production timelines.
+
+Audit technique:
+Ask the same question separately to:
+
+Factory owner
+
+Production manager
+
+QC manager
+
+Line workers
+
+7. Lack of subcontractor controls
+
+If subcontracting exists, it is not automatically a problem. The risk is uncontrolled subcontracting.
+
+Acceptable evidence:
+
+Approved subcontractor list
+
+Written subcontracting agreements
+
+Quality requirements transferred to subcontractors
+
+Supplier audits of subcontractors
+
+Traceability records
+
+Warning signs:
+
+"We use several factories but don't track them."
+
+No subcontractor names provided.
+
+No quality checks after outsourced production.
+
+8. Pricing is unrealistically low
+
+Warning signs:
+
+Quote is significantly below comparable suppliers.
+
+Supplier cannot explain cost advantages.
+
+Supplier avoids discussing manufacturing processes.
+
+Possible explanations:
+
+Outsourcing to cheaper factories
+
+Lower-grade materials
+
+Uncontrolled production
+
+9. Certifications do not match the actual production site
+
+Warning signs:
+
+ISO, BSCI, Sedex, CE, or product certificates show another company name/address.
+
+Certificate holder is different from the audited factory.
+
+Factory claims certificates belong to "our group company."
+
+Audit checks:
+Verify:
+
+Certificate holder
+
+Factory address
+
+Scope of certification
+
+Audit dates
+
+10. No traceability system
+
+For Australian importers, especially for regulated products, check whether the factory can trace:
+
+Raw materials → Production line → QC inspection → Finished goods → Shipment
+
+Warning signs:
+
+No batch numbers
+
+Manual records only
+
+Cannot identify which materials went into a shipment
+
+Cannot provide historical production records
+
+Questions an Australian buyer should ask during the audit
+
+"Do you outsource any manufacturing processes?"
+
+"Which processes are completed outside this factory?"
+
+"Can you provide your approved subcontractor list?"
+
+"How do you control subcontractor quality?"
+
+"Can we audit subcontractors if required?"
+
+"Which company name appears on production records and export documents?"
+
+"Who owns the tooling, moulds, and production data?"
+
+Red flags that should trigger a pause before placing an order
+Finding	Risk level
+Supplier hides subcontracting	Critical
+Actual factory cannot be verified	Critical
+Certificates belong to another company	High
+No production traceability	High
+Unapproved subcontractors used	High
+Minor outsourced processes disclosed and controlled	Medium
+Approved subcontractors with audits and records	Low
+
+For a large Australian purchase order, the audit report should clearly state which processes happen at the audited factory, which processes are outsourced, and who is responsible for final quality control before any deposit is paid.

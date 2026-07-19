@@ -1,0 +1,91 @@
+Before approving a Chinese factory for production, you should require resolution of all critical and major audit findings—particularly those involving legal compliance, safety, quality system fundamentals, and undisclosed subcontracting.
+qualitysourcingfromchina
++1
+
+Critical findings (walk-away or must-fix before any order)
+
+These issues typically block supplier approval entirely or require immediate remediation and re-audit before production can begin:
+xilinkglobaltrade
++1
+
+Missing or invalid business licence / entity mismatch — The factory cannot produce a current 营业执照 (business licence) with a matching Unified Social Credit Code, or the registered name/address doesn’t match the contracting entity.
+chinamakershub
++1
+
+No legal right to manufacture the product — Business scope excludes manufacturing, or required product-specific licences are missing (e.g., food production licence, CCC for regulated toys/electronics, medical device approvals, pressure-vessel/explosion-proof certs where applicable).
+sinospect
++1
+
+Fire safety / environmental non-compliance — No fire safety certificate, failed fire inspection, or missing Environmental Impact Assessment (EIA) and pollutant discharge permits; these can lead to sudden shutdowns.
+qualitysourcingfromchina
++1
+
+Evidence of deception — Factory refuses to show the real production floor, appears to be a trading company posing as a manufacturer, or cannot produce original test reports/certificates they claim to hold (e.g., FCC/CE grant letters with matching model numbers).
+dev
++2
+
+Fundamental quality system absence — No QC department, no incoming inspection (IQC), no defined inspection procedures or records, and no calibration system for gauges/test equipment.
+eliteglobaltrade
++2
+
+Serious social compliance breaches - Child labour, forced labour, or severe safety hazards to workers.
+xilinkglobaltrade
++1
+
+Capacity clearly inadequate — Stated monthly output is not credible given floor area, machine count, shift pattern, and workforce; or current order load leaves no realistic capacity for your volumes.
+sinospect
++1
+
+Major findings (must be remediated before or as a condition of production)
+
+These don’t always require walking away, but you should not approve production until the factory has a concrete corrective action plan (CAPA) and, ideally, passes a follow-up audit:
+cantonbuyingdesk
++2
+
+Expired or non-applicable certifications — Product certifications (CE, RoHS, REACH, UL, SONCAP, etc.) are expired, from non-accredited bodies, or don’t cover the exact product/model you’ll order.
+eliteglobaltrade
++1
+
+Weak incoming material and sub-supplier control — No documented IQC process, no sampling plan (e.g., AQL/ISO 2859-1), critical components not traceable to quoted makes/models, or sub-suppliers not approved/monitored.
+cantonbuyingdesk
++1
+
+Poor change control (4M/ECN) — No formal process for engineering changes or 4M changes (man, machine, material, method); changes to materials, sub-suppliers, processes, or tooling can occur without your documented approval.
+sinospect
++1
+
+Calibration and measurement gaps — Key gauges/test equipment not calibrated on schedule, or no procedure for assessing product measured with out-of-tolerance equipment.
+xilinkglobaltrade
++1
+
+Inconsistent or undocumented quality procedures — First article approvals, rework records, batch traceability, and control plans exist in name only or aren’t followed consistently on the floor.
+cantonbuyingdesk
++2
+
+Working hours / labour compliance issues — Systematic overtime violations, missing labour contracts, or wage issues that don’t meet your social compliance standards.
+qualitysourcingfromchina
++1
+
+Packaging and regulatory marking weaknesses — No drop-testing or packaging validation; CE/FCC/other regulatory marks incomplete or incorrectly applied to production units.
+dev
++1
+
+Practical rule of thumb for approval
+
+A common and workable approach is:
+qualitysourcingfromchina
++1
+
+0 critical findings — Required for approval. Any critical finding means either reject the supplier or halt until it’s fixed and re-verified.
+
+Major findings resolved or under CAPA with re-audit — You can proceed only once the factory has:
+
+Provided a written corrective action plan with owners and dates.
+
+Implemented fixes for high-risk majors (quality system, IQC, calibration, change control).
+
+Agreed to a follow-up audit or targeted verification before first shipment.
+
+For your WAG factory-visit service, you can structure your client proposals around this: “Production approval only after all critical findings closed and major findings remediated or covered by agreed CAPA + re-audit.” This aligns with how experienced importers and audit firms classify and act on findings.
+cantonbuyingdesk
++2

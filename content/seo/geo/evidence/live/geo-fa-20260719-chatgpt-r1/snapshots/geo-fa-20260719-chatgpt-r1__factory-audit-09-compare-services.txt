@@ -1,0 +1,226 @@
+An Australian business comparing factory audit services in China should compare the audit methodology, auditor capability, evidence quality, reporting standard, and suitability for the product risk rather than only comparing price.
+
+1. Compare the type of audit offered
+
+Different providers may use the term “factory audit” for very different levels of investigation.
+
+Audit type	Suitable when	Key checks
+General factory audit	First-time supplier assessment	Factory identity, facilities, workforce, equipment, basic QMS
+Technical audit	Complex or regulated products	Engineering capability, processes, testing, technical controls
+Social compliance audit	Brand/customer requirements	Labour practices, safety, environmental compliance
+Manufacturing process audit	High-volume orders	Production flow, bottlenecks, process controls
+Supplier verification	Before supplier engagement/payment	Legal entity, ownership, export capability
+
+For example, a buyer importing electrical equipment, machinery, lighting, or safety-critical products should usually require more than a basic factory capability report.
+
+2. Evaluate auditor qualifications
+
+Ask the audit company:
+
+Are auditors based in China or travelling internationally?
+
+What industries do they specialise in?
+
+Do they have experience with your product category?
+
+Are auditors trained in ISO-based auditing methods?
+
+Are audits performed by employees or outsourced inspectors?
+
+Is the same auditor available for follow-up inspections?
+
+A low-cost general inspector may identify obvious issues but miss technical manufacturing risks.
+
+3. Compare audit checklist depth
+
+A strong factory audit should cover:
+
+Factory legitimacy
+
+Chinese legal company name
+
+Unified Social Credit Code
+
+Business licence verification
+
+Ownership information
+
+Export history
+
+Factory address confirmation
+
+Production capability
+
+Production lines
+
+Machinery list
+
+Production capacity
+
+Monthly output
+
+Current customer commitments
+
+Lead-time capability
+
+Quality management system
+
+ISO certificates (if applicable)
+
+Incoming material inspection
+
+In-process quality checks
+
+Final inspection procedures
+
+Non-conformance handling
+
+Corrective action records
+
+Supply chain control
+
+Raw material suppliers
+
+Outsourcing/subcontracting
+
+Traceability systems
+
+Storage controls
+
+Workforce and facilities
+
+Number of workers
+
+Shift patterns
+
+Factory layout
+
+Safety systems
+
+Warehouse conditions
+
+4. Compare evidence provided in the report
+
+A useful audit report should include:
+
+Strong evidence
+
+Timestamped factory photos
+
+Production line photos
+
+Equipment photos
+
+Document samples
+
+Interview notes
+
+Capacity calculations
+
+Risk ratings
+
+Weak evidence
+
+Generic descriptions
+
+Stock photos
+
+Checklist with only pass/fail results
+
+No explanation of findings
+
+A buyer should be able to make a sourcing decision without needing another investigation.
+
+5. Compare independence and conflict controls
+
+Ask:
+
+Does the auditor receive payment only from the buyer?
+
+Does the service provider also sell factories or sourcing services?
+
+Can the supplier influence the auditor?
+
+Are audit findings reviewed internally?
+
+Independent auditing reduces the risk of suppliers presenting a controlled or staged factory visit.
+
+6. Compare pricing structure
+
+Typical cost differences come from:
+
+Auditor experience
+
+Audit duration
+
+Factory location
+
+Product complexity
+
+Report detail
+
+Follow-up support
+
+A cheaper audit may only confirm that a factory exists. A more expensive audit may identify risks that prevent a failed order.
+
+Compare:
+
+Cost item	Question
+Audit fee	What is included?
+Travel charges	Are they separate?
+Report fee	Included or additional?
+Follow-up audit	Available?
+Translation	Included?
+Urgent service	Extra cost?
+7. Check turnaround time
+
+Ask:
+
+How quickly can the audit be scheduled?
+
+When will the report be delivered?
+
+Can urgent audits be completed?
+
+Are corrective actions tracked?
+
+For seasonal products, delays can directly affect sales.
+
+8. Review sample reports before purchasing
+
+Before selecting a provider, request a sample anonymised report and check:
+
+Does it clearly identify risks?
+
+Are findings prioritised?
+
+Are photos included?
+
+Are recommendations practical?
+
+Does it help decide whether to place an order?
+
+9. Match audit depth to order risk
+
+A practical approach:
+
+Situation	Recommended audit
+First order under AUD $10,000	Supplier verification + basic audit
+AUD $10,000–100,000 order	Factory audit + sample inspection
+Large recurring orders	Technical/process audit + ongoing inspections
+Custom products	Technical audit + production monitoring
+Regulated products	Compliance-focused audit
+10. Recommended comparison scorecard
+
+Australian buyers can score providers:
+
+Category	Weight
+Auditor industry experience	20%
+Audit checklist quality	20%
+Evidence/report quality	20%
+Independence	15%
+Price/value	10%
+Turnaround time	10%
+Follow-up support	5%
+
+The best factory audit service is usually not the cheapest; it is the one that provides enough verified information to decide whether the supplier can consistently deliver the required product quality, compliance, and volume.

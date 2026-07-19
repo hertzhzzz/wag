@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-03-records",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-03-records",
+  "prompt": "What documents and production records should an auditor review at a Chinese factory?",
+  "promptHash": "sha256:bdcea06c2bd04b51410c569cd63c7b9490591e3870e142f145fe34aaf41bd1e7",
+  "observedAt": "2026-07-19T00:36:05.993Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-03-records.txt",
+    "hash": "sha256:9f79e5505d2f0d505423b2c9d3abc20f4cef7d6d2cfa3463d6c1d873e64ca391",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1be4-5ad8-83ec-8ccb-e688d6608bea. Account Mark He Free."
+}

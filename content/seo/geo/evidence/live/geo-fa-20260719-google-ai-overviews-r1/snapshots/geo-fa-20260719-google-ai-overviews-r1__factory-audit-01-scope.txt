@@ -1,0 +1,128 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=What%20should%20a%20factory%20audit%20in%20China%20cover%20before%20an%20Australian%20importer%20places%20a%20large%20order%3F&hl=en-AU&gl=au
+TITLE: What should a factory audit in China cover before an Australian importer places a large order? - Google Search
+OBSERVED_AT: 2026-07-19T00:54:43.597Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: What should a factory audit in China cover before an Australian importer places a large order?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+No AI Overview generative answer block present; organic results only.
+
+ORGANIC:
+1. Factory Audit in China: A Comprehensive Guide to ... | https://www.epicsourcing.com.au/post/factory-audit-in-china-a-comprehensive-guide-to-ensuring-quality-and-compliance
+2. Financial Audit & Compliance in China: Frequently Asked Questions | https://www.ptl-group.com/blog/financial-audit-compliance-in-china-frequently-asked-questions/#:~:text=The%20annual%20audit%20report%20in%20China%20must%20be%20prepared%20after,supplementary%20statement%20of%20financial%20indicators.
+3. Tips for Negotiating the Best Price from Chinese Manufacturers | https://www.fiscalfx.co.uk/tips-for-negotiating-the-best-price-from-chinese-manufacturers/
+4. Audit of a Chinese company, financial statements, accounting, consulting ... | https://gsl.org/en/audit-foreign/audit-china/#:~:text=Consolidated%20financial%20statements-,General%20requirements,financial%20statements%20and%20be%20audited.
+5. National Standards of the Republic of China - Wikipedia | https://en.wikipedia.org/wiki/National_Standards_of_the_Republic_of_China#:~:text=Although%20the%20Republic%20of%20China,from%20ISO%20standards%20into%20Chinese.
+6. China Factory Audit Checklist: 27 Points to Verify (2026) | CMH | https://chinamakershub.com/journal/china-factory-audit-checklist
+7. China Factory Selection, Audit & Quality Control | https://hornetgroup.com.au/import-services/factory-audits-product-quality-assurance-check/
+8. How to manage quality control in China | https://www.worldfirst.com/au/insight/importing-from-china/quality-control-in-china/
+9. Importing from China to Australia: Step-by-Step Guide for ... | https://www.couriersandfreight.com.au/blog/importing-from-china-to-australia-step-by-step-guide-for-businesses
+10. Importing Goods From China to Australia | https://sprintlaw.com.au/articles/importing-goods-from-china-to-australia-essential-legal-compliance/
+11. How to Verify a Factory in China Before Placing an Order | https://kingslermachinery.com/how-to-verify-a-factory-in-china/
+12. Importing From China Compliance In 2026 For Australians | https://www.synergyfreight.com.au/china-compliance/
+13. ISO 9000 factory audits for your China suppliers | https://qualityinspection.org/iso-9000-factory-audit-china/
+
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Images
+Forums
+Short videos
+Shopping
+Videos
+More
+Tools
+Search Results
+Web results
+Factory Audit in China: A Comprehensive Guide to ...
+
+Epic Sourcing
+https://www.epicsourcing.com.au › post › factory-audit...
+A factory audit in China is a thorough check-up of a manufacturing facility. It helps you ensure that the factory you're dealing with meets all the required ...Read more
+People also ask
+What are the requirements for audit in China?
+How to negotiate with a Chinese supplier?
+Do Chinese companies get audited?
+Does China use ISO standards?
+Web results
+China Factory Audit Checklist: 27 Points to Verify (2026) | CMH
+
+chinamakershub.com
+https://chinamakershub.com › Journal
+A 27-point China factory audit checklist covering legal verification, production capacity, quality systems and social compliance — plus the four audit types ...
+Missing: Australian ‎| Show results with: Australian
+China Factory Selection, Audit & Quality Control
+
+Hornet Group
+https://hornetgroup.com.au › import-services › factory-a...
+A factory audit is required before any final decision is made. This allows 'on the ground' verification of production capabilities and processes. When working ...Read more
+Missing: large ‎| Show results with: large
+How to manage quality control in China
+
+WorldFirst
+https://www.worldfirst.com › ... › Importing from China
+23 June 2025 — Before you finalize a supplier and place a large order, conduct in-depth supplier audits to assess the product quality, factory product ...Read more
+Importing from China to Australia: Step-by-Step Guide for ...
+
+Couriers and Freight
+https://www.couriersandfreight.com.au › blog › importi...
+28 Oct 2025 — Here's how to check that a supplier is genuine and reliable: · Ask for their business registration, tax ID, and export licence · Request samples ...Read more
+Importing Goods From China to Australia
+
+Sprintlaw
+https://sprintlaw.com.au › ... › Regulatory Compliance
+22 May 2025 — Do thorough due diligence on manufacturers. Ask for references, factory certifications, audit reports and samples. Be precise about materials, ...
+How to Verify a Factory in China Before Placing an Order
+
+Kingsler Machinery
+https://kingslermachinery.com › how-to-verify-a-factory...
+4 Feb 2026 — Auditors usually verify: Factory location and legal registration Number of workers and shifts Machinery, equipment, and production capacity. If ...
+Importing From China Compliance In 2026 For Australians
+
+Synergy Freight Management
+https://www.synergyfreight.com.au › Blog
+3 Feb 2026 — For stronger China compliance, line these up before cargo departs China: Commercial invoice: clear product description, unit price, currency, ...
+ISO 9000 factory audits for your China suppliers
+
+QualityInspection.org
+https://qualityinspection.org › Sourcing New Suppliers
+3 Jan 2011 — Factory audits in China and other Asian countries are often (loosely) based on a checklist inspired by the ISO 9000 series.Read more
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

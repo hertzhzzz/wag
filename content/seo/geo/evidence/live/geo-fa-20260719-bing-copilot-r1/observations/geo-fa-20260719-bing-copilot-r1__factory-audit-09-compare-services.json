@@ -1,0 +1,109 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-09-compare-services",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-09-compare-services",
+  "prompt": "How should an Australian business compare factory audit services in China?",
+  "promptHash": "sha256:342ec03f1cb78d05f0506edf38232d856692dc256c8eb04a6bce1422ab2ed9d3",
+  "observedAt": "2026-07-19T01:08:06.155Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "businesselectricityquotes.com.au",
+    "chinesecheck.com",
+    "tradeaiders.com",
+    "stellarchinese.com",
+    "epicsourcing.com.au",
+    "spotyard.com.au",
+    "beta.the-inspection-company.com",
+    "newbuyingagent.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://chinesecheck.com/blog/china-factory-audit",
+      "title": "Real-Time Monitoring: Look for services that offer real-time monitoring during the audit, such as live photo and video uploads.\nBy following this checklist, Australian businesses can make an informed ",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://chinesecheck.com/blog/china-factory-audit",
+      "title": "1",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://chinesecheck.com/blog/china-factory-audit",
+      "title": "1",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://chinesecheck.com/blog/china-factory-audit",
+      "title": "chinesecheck.com\nChina Factory Audit: The 2026 Buyer's Guide to All 5 Options\n\"China factory audit\" is an umbrella term covering a spectrum of assurance activities that differ by an order of magnitude",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.tradeaiders.com/best-factory-audit-services-in-china-2026-8-companies-compared.html",
+      "title": "tradeaiders.com\nBest Factory Audit Services in China 2026: 8 Companies Compared\nThis guide ranks the 8 best factory audit providers for China-sourcing importers in 2026, comparing pricing, audit scope",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.winningadventure.com.au/factory-audit-china",
+      "title": "winningadventure.com.au",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.stellarchinese.com/factory-audit-china/",
+      "title": "stellarchinese.com",
+      "domain": "stellarchinese.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "epicsourcing.com.au",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://chinesecheck.com/blog/china-factory-audit",
+      "title": "chinesecheck.comChina Factory Audit: The 2026 Buyer's Guide to All 5 Options\"China factory audit\" is an umbrella term covering a spectrum of assurance activities that differ by an order of magnitude i",
+      "domain": "chinesecheck.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.tradeaiders.com/best-factory-audit-services-in-china-2026-8-companies-compared.html",
+      "title": "tradeaiders.comBest Factory Audit Services in China 2026: 8 Companies ComparedThis guide ranks the 8 best factory audit providers for China-sourcing importers in 2026, comparing pricing, audit scope, ",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.winningadventure.com.au/factory-audit-china",
+      "title": "winningadventure.com.auFactory Audit in China for Australian Importers | On-Site Capability AuditOn-site audit follows a six-step protocol: opening meeting, facility tour, documentation review, produc",
+      "domain": "winningadventure.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-09-compare-services.txt",
+    "hash": "sha256:47313af0e633c61eb43b66b052b555ad3355a3e5780f5ea7bb55523f020e199a",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

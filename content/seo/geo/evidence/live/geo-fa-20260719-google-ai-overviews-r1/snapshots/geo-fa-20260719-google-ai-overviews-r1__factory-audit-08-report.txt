@@ -1,0 +1,129 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=What%20should%20a%20factory%20audit%20report%20include%20so%20an%20Australian%20buyer%20can%20make%20a%20sourcing%20decision%3F&hl=en-AU&gl=au
+TITLE: What should a factory audit report include so an Australian buyer can make a sourcing decision? - Google Search
+OBSERVED_AT: 2026-07-19T01:03:21.145Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: What should a factory audit report include so an Australian buyer can make a sourcing decision?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+No AI Overview generative answer block present; organic results only.
+
+ORGANIC:
+1. Factory Audits Explained: Types, Process, Checklist & How ... | https://gtsetu.com/blogs/factory-audits-explained/
+2. What is an Audit Report? Types, Format & Sample - Farahat & Co. | https://farahatco.com/blog/audit-report-types-dubai/#:~:text=7%20Parts%20of%20Audit%20Report,s%20name%2C%20and%20auditor's%20signature.
+3. 6.4 Conducting audit activities - Pillar Management Associates | https://pillarmanagement.com/training-courses/resouces/audit-process-descriptions/65-6-4-conducting-audit-activities#:~:text=When%20specified%20by%20the%20audit,audit%20evidence%20should%20be%20recorded.
+4. Components of an Audit Report | PDF | Auditor's Report - Scribd | https://www.scribd.com/presentation/663273889/Auditing-I-Ch-6#:~:text=may%20be%20issued.-,An%20audit%20report%20typically%20contains%207%20parts%3A%20the%20report%20title,the%20audit%20firm%2C%20and%20date.
+5. Factory Audit: Process, Report & Meaning | https://tetrainspection.com/factory-audit/
+6. Factory Audit Checklist 2026: What Quality Audits Cover | https://www.tradeaiders.com/factory-audit-checklist-2026-what-a-quality-audit-actually-covers-vs-what-it-doesn-t.html
+7. How to Audit Manufacturing Suppliers Before Ordering | https://www.maplesourcing.com/how-to-audit-manufacturing-suppliers-before-ordering.html
+8. Factory Audit: How to Evaluate Your Suppliers in 7 Steps | https://usetorg.com/blog/factory-audit
+9. How to Conduct a Factory Audit: A Guide for Buyers | https://www.linkedin.com/posts/ejetprocurement_factory-audit-process-explained-what-every-activity-7338373959253467138-3YQ9
+10. Remote Factory Audit: Complete Guide for Asia Buyers | https://www.qcadvisor.com/blog/remote-factory-audit/
+11. AUS 808 | https://www.auasb.gov.au/admin/file/content102/c3/AUS808_10-95.pdf
+12. Proven 7 Factory Audit Checklist: Your Supplier Safety Guide | https://www.leelinegroup.com/factory-audit-checklist/
+
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Forums
+Short videos
+Images
+Shopping
+News
+More
+Tools
+Search Results
+Web results
+Factory Audits Explained: Types, Process, Checklist & How ...
+
+GTsetu
+https://gtsetu.com › Blog › Factory Audits Explained
+5 days ago — Factory name, address, legal registration, business licence, and confirmation that the entity being audited matches the entity on the buyer's ...Read more
+People also ask
+What are the 7 elements of an audit report?
+What are the 5 C's of audit?
+What should be included in documented audit findings when specified by the audit plan?
+What are the 7 parts of standard unqualified audit report?
+Web results
+Factory Audit: Process, Report & Meaning
+
+Tetra Inspection
+https://tetrainspection.com › Quality Control Services
+27 Mar 2026 — An audit before your first purchase order gives you objective data to make a go/no-go sourcing decision. It can save you from committing capital ...Read more
+Factory Audit Checklist 2026: What Quality Audits Cover
+
+TradeAider
+https://www.tradeaiders.com › factory-audit-checklist-20...
+30 Apr 2026 — A professional factory audit report should include: a scoring summary for each of the 7 pillars, detailed findings for each non-conformity ...
+How to Audit Manufacturing Suppliers Before Ordering
+
+Maple Sourcing
+https://www.maplesourcing.com › Resources
+13 May 2026 — A useful report should drive procurement decisions, not sit in a folder. Structure findings by severity: critical, major, and minor ...
+Factory Audit: How to Evaluate Your Suppliers in 7 Steps
+
+usetorg.com
+https://usetorg.com › blog › factory-audit
+24 Mar 2026 — It often includes photographic records, test results, and a risk rating to guide sourcing and supplier
+How to Conduct a Factory Audit: A Guide for Buyers
+
+LinkedIn · EJET
+1 year ago
+A factory audit is a crucial step to ensure quality, compliance, and ethical standards before placing an order.Read more
+Remote Factory Audit: Complete Guide for Asia Buyers
+
+qcadvisor
+https://www.qcadvisor.com › blog › remote-factory-audit
+6 Apr 2026 — This includes business licenses, export certifications, ISO certificates, quality management manuals, and any relevant test reports. A credible ...
+Missing: so ‎Australian
+AUS 808
+
+Auditing and Assurance Standards Board
+https://www.auasb.gov.au › file › AUS808_10-95
+PDF
+The auditor would consider such factors as materiality, risk and auditability when establishing or assessing the audit scope.
+18 pages
+Missing: factory ‎buyer ‎sourcing
+Proven 7 Factory Audit Checklist: Your Supplier Safety Guide
+
+LeelineGroup
+https://www.leelinegroup.com › factory-audit-checklist
+6 May 2026 — Use a proven factory audit checklist to catch hidden issues early – improve quality control and reduce sourcing risks.
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms

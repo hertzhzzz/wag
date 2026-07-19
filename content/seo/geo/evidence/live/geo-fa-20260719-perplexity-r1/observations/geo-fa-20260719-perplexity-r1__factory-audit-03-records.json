@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-03-records",
+  "platform": "perplexity",
+  "questionId": "factory-audit-03-records",
+  "prompt": "What documents and production records should an auditor review at a Chinese factory?",
+  "promptHash": "sha256:bdcea06c2bd04b51410c569cd63c7b9490591e3870e142f145fe34aaf41bd1e7",
+  "observedAt": "2026-07-19T00:40:50.133Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.scribd.com/document/872495657/List-of-Documents",
+      "title": "scribd",
+      "domain": "scribd.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://sinospect.com/resources/china-factory-audit-checklist",
+      "title": "sinospect",
+      "domain": "sinospect.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://eliteglobaltrade.co/china-factory-audit-complete-guide",
+      "title": "eliteglobaltrade",
+      "domain": "eliteglobaltrade.co"
+    },
+    {
+      "rank": 4,
+      "url": "https://cantonbuyingdesk.com/blog/factory-audit-china-checklist",
+      "title": "cantonbuyingdesk",
+      "domain": "cantonbuyingdesk.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://chinamakershub.com/journal/china-factory-audit-report-explained/",
+      "title": "chinamakershub",
+      "domain": "chinamakershub.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://chinamakershub.com/journal/china-factory-audit-checklist",
+      "title": "chinamakershub",
+      "domain": "chinamakershub.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.qcadvisor.com/blog/factory-audit-china/",
+      "title": "qcadvisor\nFactory Audit China - QCADVISOR\nIf you’ve ever tried sourcing from China, you already know it’s not just about finding a supplier, it’s about finding the right one. On the surface, many",
+      "domain": "qcadvisor.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.pearlsourcehub.com/resources/china-factory-audit-checklist-for-importers",
+      "title": "pearlsourcehub\nThe Ultimate China Factory Audit Checklist for Importers | PearlSourceHub\nUse this China factory audit checklist to verify supplier legitimacy, production capability, quality systems, c",
+      "domain": "pearlsourcehub.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://jingsourcing.com/b-factory-audit/",
+      "title": "jingsourcing\nChina Factory Audit: Checks, Costs and Better Options\nExplore what standard factory audit checks & costs look like in China, and why JingSourcing delivers real insights into China factori",
+      "domain": "jingsourcing.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://qualitysourcingfromchina.com/guides/factory-audit-checklist-complete",
+      "title": "qualitysourcingfromchina\nFactory Audit Checklist: 60-Point China Factory Audit Template\nThe 60-point factory audit checklist we use on every China factory visit. Legal, capability, quality, ethical, s",
+      "domain": "qualitysourcingfromchina.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-03-records.txt",
+    "hash": "sha256:b040020fa34cb78ccad97a1c0ec2025d3e02e2679e950aec563d22a69fc3dfd3",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/d932009f-587d-4f45-b1a9-acc38be374c1. Account Zhe He Free."
+}

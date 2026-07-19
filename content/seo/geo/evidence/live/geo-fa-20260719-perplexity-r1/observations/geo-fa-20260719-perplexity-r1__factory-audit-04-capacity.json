@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-04-capacity",
+  "platform": "perplexity",
+  "questionId": "factory-audit-04-capacity",
+  "prompt": "How can an audit test whether a factory has enough capacity for an Australian buyer's delivery schedule?",
+  "promptHash": "sha256:83365e3b021e56b0ef429a6077a0450625762c67fa9c1cb69b67182b21e644e8",
+  "observedAt": "2026-07-19T00:41:12.132Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://qualityinspection.org/how-to-validate-your-suppliers-factorys-production-capacity-from-abroad-podcast/",
+      "title": "qualityinspection",
+      "domain": "qualityinspection.org"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.youtube.com/watch?v=giS4M0XLeBw",
+      "title": "youtube",
+      "domain": "youtube.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.tradeaiders.com/assess-factory-capacity-a-guide-to-preventing-production-delays.html",
+      "title": "tradeaiders",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://aqmbd.com/quality-control/factory-audit.php",
+      "title": "aqmbd\nFactory Audit & Supplier Assessment | AQM BD\nProfessional factory audits across 7 countries. Evaluate supplier capability, compliance, and capacity. ISO-standard assessments with AQM BD.",
+      "domain": "aqmbd.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.maplesourcing.com/how-to-audit-manufacturing-suppliers-before-ordering.html",
+      "title": "maplesourcing\nHow to Audit Manufacturing Suppliers Before Ordering\nHow confident are you in a manufacturing supplier before your first purchase order is placed? That question sits at the center of sma",
+      "domain": "maplesourcing.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://tetrainspection.com/factory-audit/",
+      "title": "tetrainspection\nFactory Audit: Process, Report & Meaning\nFactory audit explained: what it means, the step-by-step factory audit process, and what a factory audit report includes. ISO 9001-aligned scor",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.egowaterbottle.com/news/factories-to-consider-when-auditing-a-supplier-for-wholesale-thermos-cups/",
+      "title": "egowaterbottle\nFactories to Consider When Auditing a Supplier for Wholesale ...\nDiscover key factors for auditing suppliers of wholesale thermos cups to ensure quality, reliability, and compliance. Op",
+      "domain": "egowaterbottle.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://importivity.com/blog/factory-audit-checklist/",
+      "title": "importivity\nThe Complete Factory Audit Checklist for Vetting a Supplier Before You Order\nThe four audit types, a section-by-section factory audit checklist, how to choose between remote and on-site au",
+      "domain": "importivity.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://tetrainspection.com/supplier-verification-audit/",
+      "title": "tetrainspection\nSupplier Verification Audit: Process, Checks & Red Flags | Tetra Inspection\nSupplier verification audit explained: what it checks, the on-site process, and the red flags that expose tr",
+      "domain": "tetrainspection.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.soleforgefootwear.com/blog/factory-audits-for-footwear-buyers-social-quality-and-capacity-checks",
+      "title": "soleforgefootwear\nFactory Audits for Footwear Buyers: Social, Quality and Capacity Checks | SoleForge\nFootwear factory audit for China buyers: verify social compliance, quality systems, supplier legit",
+      "domain": "soleforgefootwear.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-04-capacity.txt",
+    "hash": "sha256:0edf33f8d8ecc784cdb975b383883ae958cc72f658705a6a4f4bc4bd5c727f37",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/d5a33381-f031-4558-983e-3d6d51046fb9. Account Zhe He Free."
+}

@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-06-quality-system",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-06-quality-system",
+  "prompt": "How should an Australian importer assess a Chinese factory's quality management system?",
+  "promptHash": "sha256:67af1a4f64ecb703a0d94f8452e583148e5c5536e69f882e5ba033d2ee7d68a6",
+  "observedAt": "2026-07-19T00:37:04.446Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-06-quality-system.txt",
+    "hash": "sha256:75ac3f4b99f6d85260cf700096d043a10d3840054db8f705b8aa3d29723213df",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1c22-8ca0-83ec-96e5-76fcd5ba2f11. Account Mark He Free."
+}

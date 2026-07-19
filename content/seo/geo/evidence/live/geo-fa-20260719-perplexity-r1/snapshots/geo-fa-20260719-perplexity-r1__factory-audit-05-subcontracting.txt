@@ -1,0 +1,164 @@
+Key Subcontracting Warning Signs in a Factory Audit
+
+When auditing a Chinese factory as an Australian buyer, the biggest subcontracting risks come from unauthorised “hidden factories” that actually make your goods while the audited site is just a showroom or admin office. Look for mismatches between claimed capacity and what you can see on the floor, plus documentation that doesn’t line up with real production.
+tradeaiders
++2
+
+1. Capacity vs. Capability Mismatches
+
+These are the most direct red flags that production may be outsourced:
+
+Reported output far exceeds visible capability
+
+The factory claims very high monthly capacity, but you see too few machines, lines, or workers to realistically hit those numbers.
+ecqa
+
+Abnormal finished-goods spikes
+
+Warehouse or outbound records show sudden large quantities of finished products appearing without corresponding raw materials, work-in-progress, or machine runtime to justify it.
+medium
+
+Missing or minimal in-house processes
+
+The factory says it does everything (moulding, assembly, printing, packaging), but you only see assembly/packing; key processes appear to be done off-site.
+tradeaiders
+
+As a rule, if the factory’s story about “how your product is made” doesn’t match what you physically observe, assume some of it is subcontracted unless proven otherwise.
+medium
+
+2. Documentation and Record Inconsistencies
+
+Subcontracting often shows up first in the paperwork:
+
+Production records don’t match machines or shifts
+
+Daily/weekly production logs show output that the visible equipment and staffing couldn’t achieve in the recorded time.
+medium
+
+Raw material and component records are vague or missing
+
+No clear traceability from raw materials to finished goods; purchase orders, inbound delivery notes, or inventory records look incomplete or generic.
+wadhsons
+
+Inconsistent batch numbers or product codes
+
+Batch codes, labels, or internal job numbers don’t align with what’s on the production floor or in the warehouse; multiple “styles” of labels or packaging suggest different origins.
+ecqa
++1
+
+Quality control/QC records look templated or unrealistic
+
+QC check sheets are identical across different days/products, or defect rates are suspiciously low given the scale and complexity.
+wadhsons
++1
+
+For an Australian buyer, ask for raw material invoices, inbound logistics documents, and internal transfer records; hidden subcontractors usually can’t produce a clean, consistent chain of evidence.
+wadhsons
+
+3. Physical and Operational Clues on Site
+
+During the audit walk-through, pay attention to these signals:
+
+“Demo” factory feel
+
+The site looks overly clean, staged, or underutilised; machines are running but not at serious volume; workers seem to be “performing” rather than in normal production rhythm.
+medium
+
+Multiple product types with no logical link
+
+The factory produces very different product categories that would normally require different equipment, skills, or supply chains, with no clear explanation of how they manage all in-house.
+medium
+
+Storage and logistics anomalies
+
+Large volumes of finished goods arrive pre-packed or on pallets that don’t match the factory’s internal packaging line; shipping marks or carton styles differ from what’s produced on-site.
+ecqa
++1
+
+Staff cannot explain processes in detail
+
+Line leaders or supervisors struggle to describe key steps, tooling, or process parameters for “their” products, suggesting they’re not the real manufacturer.
+tradeaiders
+
+Walk the full flow: raw materials → production → QC → packaging → warehouse. Any broken link or unexplained handover point is a potential subcontracting node.
+tradeaiders
++1
+
+4. Ownership, Branding, and Site Overlap
+
+Unauthorised subcontractors often share hidden connections with the audited factory:
+
+Shared facilities or staff across sites
+
+Workers, dormitories, canteens, or equipment are shared between the audited factory and another site, but that second site is not disclosed or included in the audit scope.
+medium
+
+Common ownership or management not declared
+
+Business names, stamps, or contracts reveal the same owners or management team running multiple facilities, but only one is presented as “the factory”.
+medium
+
+Products too similar across “different” factories
+
+Another site produces near-identical products with the same moulds, labels, or packaging, indicating they’re effectively part of the same supply chain but kept off the audit.
+medium
+
+For due diligence, cross-check the business licence, factory address, and company name on contracts, invoices, and compliance certificates; mismatches often indicate undisclosed sites.
+wadhsons
+
+5. Behavioural Red Flags During the Audit
+
+How the factory responds to your questions can itself be a warning sign:
+
+Resistance to full access
+
+Reluctance to show certain areas (raw material store, mould room, specific lines), or insistence that some areas are “under maintenance” or “not relevant”.
+blog.swiftcargo
++1
+
+Over-reliance on trading company intermediaries
+
+Key technical or production questions are always answered by a trading company representative, not the factory’s own production or quality managers.
+blog.swiftcargo
+
+Inconsistent answers between staff
+
+Different people give conflicting information about capacity, processes, or where certain steps are done.
+tradeaiders
+
+An honest manufacturer is usually proud to show their process end-to-end; evasiveness is a strong indicator of hidden subcontracting.
+blog.swiftcargo
++1
+
+Practical Steps for an Australian Buyer
+
+To specifically protect yourself as an Australian importer:
+
+Contractual controls
+
+Include explicit clauses prohibiting unauthorised subcontracting and requiring written approval for any outsourced process. Specify that all subcontractors must meet the same compliance and quality standards.
+medium
+
+Audit scope clarity
+
+State in your audit protocol that all production sites involved in your orders must be disclosed and are subject to audit. Make it clear that hidden factories are unacceptable.
+medium
+
+Traceability requirements
+
+Require batch-level traceability from raw materials to finished goods, with documentation you can spot-check during audits and pre-shipment inspections.
+wadhsons
+
+Use independent auditors/inspectors
+
+Engage third-party auditors experienced in detecting hidden factories and subcontracting in your product category (toys, electronics, textiles, etc.).
+ecqa
++1
+
+Cross-check with Australian compliance needs
+
+Tie subcontracting controls to your Australian regulatory obligations (product safety, ACCC requirements, modern slavery due diligence) so the factory understands the legal stakes for you.
+blog.swiftcargo
++1
+
+If you want, I can help you draft a short subcontracting clause or an audit checklist tailored to your WAG factory-visit service and the product categories you typically handle for Australian clients.

@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-05-subcontracting",
+  "platform": "perplexity",
+  "questionId": "factory-audit-05-subcontracting",
+  "prompt": "What subcontracting warning signs should an Australian buyer look for during a factory audit?",
+  "promptHash": "sha256:59b709b0339e638856299be5a6331f7bc4b308aa35f4bd09056a02ee7d981f92",
+  "observedAt": "2026-07-19T00:41:40.719Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://ecqa.com/red-flags-supplier-factory-audit/",
+      "title": "ecqa",
+      "domain": "ecqa.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://medium.com/icti-care/the-dangers-of-subcontracting-in-the-toy-industry-how-to-handle-hidden-risks-f795709c58e0",
+      "title": "medium",
+      "domain": "medium.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.tradeaiders.com/red-flags-in-a-factory-audit-report-12-warning-signs-you-should-never-ignore.html",
+      "title": "tradeaiders",
+      "domain": "tradeaiders.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.wadhsons.com/home/red-flags-in-factory-documentation-what-compliance-records-actually-reveal-about-a-manufacturer-s-reliability/",
+      "title": "wadhsons",
+      "domain": "wadhsons.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://blog.swiftcargo.solutions/red-flags-overseas-suppliers-import/",
+      "title": "blog.swiftcargo",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.aussie.com.au/insights/articles/property-contract-red-flags/",
+      "title": "aussie\nProperty contract red flags: 8 warning signs before you sign\nCommon red flags include missing disclosure documents, pressure to sign, unclear inclusions, title issues and broad “as-is” clauses.",
+      "domain": "aussie.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.safetysure.com.au/subcontractor-whs-audit/",
+      "title": "safetysure\nSubcontractor WHS Audit\nA subcontractor WHS audit is an independent check of whether a subcontractor is working safely and lawfully on a project, measured against defined criteria",
+      "domain": "safetysure.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://audit.wa.gov.au/wp-content/uploads/2022/08/Report-4_Payments-to-Subcontractors-Working-on-State-Government-Construction-Projects.pdf",
+      "title": "audit\nPayments to Subcontractors Working on State Government ...\nCase study 1: Subcontractors flag early warning signs of payment issues. As part of this audit, we surveyed subcontractors working on .",
+      "domain": "audit.wa.gov.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://audit.wa.gov.au/reports-and-publications/reports/payments-to-subcontractors-working-on-state-government-construction-projects/",
+      "title": "audit.wa.gov\nPayments to Subcontractors Working on State Government Construction Projects - Office of the Auditor General\nThis audit assessed if State government entities have effective controls in pl",
+      "domain": "audit.wa.gov.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.shunshiglobal.com/access-panels-guide/access-panel-wholesale-sourcing/access-panel-quality-control-factory-audit-inspection-stages-and-defect-standards-for-wholesale-buyers.html",
+      "title": "shunshiglobal\nAccess Panel Quality Control: Factory Audit, Inspection Stages and Defect Standards for Wholesale Buyers\n*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } :root {",
+      "domain": "shunshiglobal.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-05-subcontracting.txt",
+    "hash": "sha256:987611f2d34998a080820274b9df6483c3e9305340d9b87e8ff5d94528a32791",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/d101e8d1-d289-48a2-82b6-02d36abfb6c4. Account Zhe He Free."
+}

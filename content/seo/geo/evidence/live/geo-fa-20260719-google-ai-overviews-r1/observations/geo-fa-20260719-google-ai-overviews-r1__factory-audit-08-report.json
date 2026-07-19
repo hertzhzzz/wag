@@ -1,0 +1,42 @@
+{
+  "observationId": "geo-fa-20260719-google-ai-overviews-r1__factory-audit-08-report",
+  "platform": "google-ai-overviews",
+  "questionId": "factory-audit-08-report",
+  "prompt": "What should a factory audit report include so an Australian buyer can make a sourcing decision?",
+  "promptHash": "sha256:76b264740e75964f5a71aca282d1d738e4d37f2bd605fa31a997f3ff5ca20e21",
+  "observedAt": "2026-07-19T01:03:21.145Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-surface-absent",
+  "statusReason": "No AI Overview generative answer block present on SERP for exact prompt; organic results only.",
+  "surface": "google-search-serp-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "gtsetu.com",
+    "farahatco.com",
+    "pillarmanagement.com",
+    "scribd.com",
+    "tetrainspection.com",
+    "tradeaiders.com",
+    "maplesourcing.com",
+    "usetorg.com"
+  ],
+  "citations": [],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-google-ai-overviews-r1/snapshots/geo-fa-20260719-google-ai-overviews-r1__factory-audit-08-report.txt",
+    "hash": "sha256:bf2294692f2e7083c4366531701c9f60f23cd55a54f4a51d4523ecead55f144e",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Google SERP en-AU (hl=en-AU&gl=au). Auth signed-out. Exact prompt as query. Observation-only."
+}

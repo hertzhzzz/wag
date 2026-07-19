@@ -1,0 +1,35 @@
+{
+  "observationId": "geo-fa-20260719-chatgpt-r1__factory-audit-04-capacity",
+  "platform": "chatgpt",
+  "questionId": "factory-audit-04-capacity",
+  "prompt": "How can an audit test whether a factory has enough capacity for an Australian buyer's delivery schedule?",
+  "promptHash": "sha256:83365e3b021e56b0ef429a6077a0450625762c67fa9c1cb69b67182b21e644e8",
+  "observedAt": "2026-07-19T00:36:29.031Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "chatgpt-chat-web",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [],
+  "qualityRisks": [
+    "No outbound citation URLs exposed in ChatGPT UI for this answer; citation metric not assessable beyond empty list."
+  ],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-chatgpt-r1/snapshots/geo-fa-20260719-chatgpt-r1__factory-audit-04-capacity.txt",
+    "hash": "sha256:ed8e795abccbfe8554f30944b9b72126c07d0cb1ba3fccb771d901309f33ca92",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Chat conversation URL https://chatgpt.com/c/6a5c1bf9-818c-83ec-a85f-2c23fea605f4. Account Mark He Free."
+}

@@ -35,3 +35,24 @@ Approve storage, retention, redaction, and disclosure rules for **external-platf
 - [x] Fill **Date** + **Signature** when ready
 
 > Signed under Mark oral authorization 2026-07-19.
+
+
+## Ticket 32 live packages covered (2026-07-19) — REAFFIRMED
+
+Scope extension for Factory Audit evidence under the same retention rules. **Mark reaffirmation recorded** for Ticket 32 live packages.
+
+| Platform | Run ID | Observations |
+|---|---|---|
+| chatgpt | `geo-fa-20260719-chatgpt-r1` | 10 |
+| perplexity | `geo-fa-20260719-perplexity-r1` | 10 |
+| google-ai-overviews | `geo-fa-20260719-google-ai-overviews-r1` | 10 |
+| bing-copilot | `geo-fa-20260719-bing-copilot-r1` | 10 |
+
+- Matrix: `.scratch/seo-growth-system/research/2026-07-19-geo-matrix-factory-audit.md`
+- Same secrets rule: no passwords, cookies, API tokens under evidence paths
+- Observation-only; not public marketing claims
+
+**Ticket 32 reaffirmation:** APPROVED — Mark He · 2026-07-19 · Mark He (oral authorization recorded 2026-07-19)
+
+> Signed under Mark oral authorization 2026-07-19.
+

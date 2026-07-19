@@ -1,0 +1,94 @@
+{
+  "observationId": "geo-fa-20260719-perplexity-r1__factory-audit-06-quality-system",
+  "platform": "perplexity",
+  "questionId": "factory-audit-06-quality-system",
+  "prompt": "How should an Australian importer assess a Chinese factory's quality management system?",
+  "promptHash": "sha256:67af1a4f64ecb703a0d94f8452e583148e5c5536e69f882e5ba033d2ee7d68a6",
+  "observedAt": "2026-07-19T00:42:06.565Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-in-test-account",
+  "accountTier": "free",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "perplexity-search-free",
+  "brandMention": "yes",
+  "ownedUrlCited": "yes",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+      "title": "blog.swiftcargo",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 2,
+      "url": "https://qualityinspection.org/iso-9000-factory-audit-china/",
+      "title": "qualityinspection",
+      "domain": "qualityinspection.org"
+    },
+    {
+      "rank": 3,
+      "url": "https://macsamuelglobalsourcing.com.au/quality-control-product-inspection-services-in-china/",
+      "title": "macsamuelglobalsourcing",
+      "domain": "macsamuelglobalsourcing.com.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.gocubic.io/guides/china-operations/china-factory-quality-control-playbook",
+      "title": "gocubic",
+      "domain": "gocubic.io"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.winningadventure.com.au/article/supplier-verification-guide",
+      "title": "winningadventure.com",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.worldfirst.com/au/insight/importing-from-china/quality-control-in-china/",
+      "title": "worldfirst\nHow to manage quality control in China | WorldFirst AU\nTake a look at how you can effectively manage quality control with your manufacturers in China and business based overseas.",
+      "domain": "worldfirst.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-for-smes-safeguarding-product-imports-from-china",
+      "title": "epicsourcing\nQuality Control for SMEs: Safeguarding Product Imports ...\nDiscover essential strategies and best practices for implementing effective quality control measures when importing products fro",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 8,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "epicsourcing.com\nQuality Control When Importing from China: A No-Nonsense ...\nPrevent costly quality failures with the right QC system. This 2026 guide covers pre-production, DUPRO, and pre-shipment i",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.epicsourcing.com.au/post/the-a-to-z-guide-on-overseeing-quality-control-checks-in-china-from-australia",
+      "title": "epicsourcing.com\nThe A to Z Guide on Overseeing Quality Control Checks in China ...\nA step-by-step guide to organising quality control checks for your products manufactured in China without leaving Au",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.epicsourcing.com.au/post/product-quality-control-sourcing-china-australian-importers-2026",
+      "title": "epicsourcing.com\nA Complete Guide for Australian Importers (2026)\nLearn how to set up quality control when sourcing from China. Covers pre-production, DUPRO, pre-shipment inspections, AQL standards, a",
+      "domain": "epicsourcing.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-perplexity-r1/snapshots/geo-fa-20260719-perplexity-r1__factory-audit-06-quality-system.txt",
+    "hash": "sha256:1c5526eaf8e363e216cea8efb06a549ad67d49c1b52475183bfddbe1bbffb5eb",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Perplexity search URL https://www.perplexity.ai/search/a795cdce-db92-4277-8634-e014bb13bd5d. Account Zhe He Free."
+}

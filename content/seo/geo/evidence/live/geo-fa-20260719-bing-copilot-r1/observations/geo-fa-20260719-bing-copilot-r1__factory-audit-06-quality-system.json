@@ -1,0 +1,105 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-06-quality-system",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-06-quality-system",
+  "prompt": "How should an Australian importer assess a Chinese factory's quality management system?",
+  "promptHash": "sha256:67af1a4f64ecb703a0d94f8452e583148e5c5536e69f882e5ba033d2ee7d68a6",
+  "observedAt": "2026-07-19T01:07:46.722Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "epicsourcing.com.au",
+    "blog.swiftcargo.solutions",
+    "donesafe.com",
+    "intertekinform.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "Verify Supplier Registration: Confirm that the supplier is a legally registered entity with the correct business scope for manufacturing. This can be done through China's National Enterprise Credit In",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.epicsourcing.com.au/post/quality-control-importing-from-china-guide-australian-businesses-2026",
+      "title": "1",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.epicsourcing.com.au/post/product-quality-control-sourcing-china-australian-importers-2026",
+      "title": "Conduct Pre-Shipment Inspection (PSI): This is the most important checkpoint to catch problems before goods leave China. A professional inspector will inspect the goods and provide a report. ",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.epicsourcing.com.au/post/product-quality-control-sourcing-china-australian-importers-2026",
+      "title": "1",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 5,
+      "url": "https://www.epicsourcing.com.au/post/product-quality-control-sourcing-china-australian-importers-2026",
+      "title": "Container Loading Supervision (CLS): Ensure that the quantities match the packing list, the goods loaded match what was inspected, and the container is loaded correctly to prevent transit damage. ",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.epicsourcing.com.au/post/product-quality-control-sourcing-china-australian-importers-2026",
+      "title": "1",
+      "domain": "epicsourcing.com.au"
+    },
+    {
+      "rank": 7,
+      "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+      "title": "Factory Audit: Conduct a factory audit to verify production capabilities and processes. This should include a review of submitted documents, testing reports, and a review of the factory's management s",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 8,
+      "url": "https://blog.swiftcargo.solutions/verify-supplier-china-australia/",
+      "title": "1",
+      "domain": "blog.swiftcargo.solutions"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "Quality Control Checks: Implement quality control checks before, during, and after the purchase order to ensure that the product meets the required specifications and standards. ",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 10,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "3",
+      "domain": "winningadventure.com.au"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.winningadventure.com.au/article/verify-chinese-supplier",
+      "title": "\nBy following these steps, an Australian importer can ensure that the Chinese factory's quality management system is robust and capable of delivering products that meet the required standards. ",
+      "domain": "winningadventure.com.au"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-06-quality-system.txt",
+    "hash": "sha256:ae42afe49f3bca92d1991114a647559604a784203770420eec8a7171f40fba97",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

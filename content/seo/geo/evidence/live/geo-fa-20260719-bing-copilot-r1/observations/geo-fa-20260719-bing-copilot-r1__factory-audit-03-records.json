@@ -1,0 +1,109 @@
+{
+  "observationId": "geo-fa-20260719-bing-copilot-r1__factory-audit-03-records",
+  "platform": "bing-copilot",
+  "questionId": "factory-audit-03-records",
+  "prompt": "What documents and production records should an auditor review at a Chinese factory?",
+  "promptHash": "sha256:bdcea06c2bd04b51410c569cd63c7b9490591e3870e142f145fe34aaf41bd1e7",
+  "observedAt": "2026-07-19T01:07:27.382Z",
+  "locale": "en-AU",
+  "device": "desktop",
+  "auth": "signed-out",
+  "accountTier": "not-applicable",
+  "status": "observed-answer",
+  "statusReason": null,
+  "surface": "bing-serp-generative-answer-en-AU",
+  "brandMention": "no",
+  "ownedUrlCited": "no",
+  "accuracy": "not-assessable",
+  "completeness": "not-assessable",
+  "competitors": [
+    "intertekinform.com",
+    "allforsourcing.com",
+    "qualitysourcingfromchina.com",
+    "stellarchinese.com",
+    "easyimex.com",
+    "china-sourcing-agents.com",
+    "chinalegals.com",
+    "tetrainspection.com"
+  ],
+  "citations": [
+    {
+      "rank": 1,
+      "url": "https://www.allforsourcing.com/verify/china-factory-audit-checklist/",
+      "title": "Compliance Documentation: Ensure the factory maintains documentation that complies with local and international regulations.\nThese documents and records are essential for an auditor to assess the fact",
+      "domain": "allforsourcing.com"
+    },
+    {
+      "rank": 2,
+      "url": "https://www.allforsourcing.com/verify/china-factory-audit-checklist/",
+      "title": "6",
+      "domain": "allforsourcing.com"
+    },
+    {
+      "rank": 3,
+      "url": "https://www.allforsourcing.com/verify/china-factory-audit-checklist/",
+      "title": "6",
+      "domain": "allforsourcing.com"
+    },
+    {
+      "rank": 4,
+      "url": "https://www.allforsourcing.com/verify/china-factory-audit-checklist/",
+      "title": "allforsourcing.com\nChina Factory Audit Checklist: What to Inspect, Document, and Verify\nBoundary: This checklist does not select an auditor, certify a factory, establish labour or product compliance, ",
+      "domain": "allforsourcing.com"
+    },
+    {
+      "rank": 5,
+      "url": "https://qualitysourcingfromchina.com/guides/factory-audit-checklist-complete",
+      "title": "qualitysourcingfromchina.com\nFactory Audit Checklist: 60-Point China Factory Audit Template ...\nWhat an actual factory audit covers — sixty specific points across legal, capability, quality, ethical a",
+      "domain": "qualitysourcingfromchina.com"
+    },
+    {
+      "rank": 6,
+      "url": "https://www.stellarchinese.com/factory-audit-china/",
+      "title": "stellarchinese.com",
+      "domain": "stellarchinese.com"
+    },
+    {
+      "rank": 7,
+      "url": "https://easyimex.com/blog/china-factory-audit-checklist/",
+      "title": "easyimex.com",
+      "domain": "easyimex.com"
+    },
+    {
+      "rank": 8,
+      "url": "https://china-sourcing-agents.com/guides/factory-audit-checklist/",
+      "title": "china-sourcing-agents.com",
+      "domain": "china-sourcing-agents.com"
+    },
+    {
+      "rank": 9,
+      "url": "https://www.allforsourcing.com/verify/china-factory-audit-checklist/",
+      "title": "allforsourcing.comChina Factory Audit Checklist: What to Inspect, Document, and VerifyBoundary: This checklist does not select an auditor, certify a factory, establish labour or product compliance, va",
+      "domain": "allforsourcing.com"
+    },
+    {
+      "rank": 10,
+      "url": "https://qualitysourcingfromchina.com/guides/factory-audit-checklist-complete",
+      "title": "qualitysourcingfromchina.comFactory Audit Checklist: 60-Point China Factory Audit Template ...What an actual factory audit covers — sixty specific points across legal, capability, quality, ethical and",
+      "domain": "qualitysourcingfromchina.com"
+    },
+    {
+      "rank": 11,
+      "url": "https://www.stellarchinese.com/factory-audit-china/",
+      "title": "stellarchinese.comFactory Audit in China: Cost, Checklist & When to Skip It (2026)Most buyers do not start by searching for a factory audit. Usually the process begins much earlier. First comes the pr",
+      "domain": "stellarchinese.com"
+    }
+  ],
+  "qualityRisks": [],
+  "snapshot": {
+    "path": "content/seo/geo/evidence/live/geo-fa-20260719-bing-copilot-r1/snapshots/geo-fa-20260719-bing-copilot-r1__factory-audit-03-records.txt",
+    "hash": "sha256:d62509b2e3cfa015b1d74d60bc722ebaeec695ef4dcebdc78cd47f6396af7f75",
+    "mimeType": "text/plain",
+    "capture": "text"
+  },
+  "provenance": "external-platform-observation",
+  "fixtureOnly": false,
+  "claimMode": "observation-only",
+  "operator": "codex-chrome-capture",
+  "notes": "Surface is Bing SERP generative answer (en-AU). Full Copilot chat not required when SERP generative block is present; if absent, status is observed-surface-absent. Observation-only."
+}

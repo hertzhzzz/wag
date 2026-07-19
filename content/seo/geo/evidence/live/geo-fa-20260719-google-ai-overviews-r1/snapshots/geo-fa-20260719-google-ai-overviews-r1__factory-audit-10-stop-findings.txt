@@ -1,0 +1,133 @@
+PLATFORM: google-ai-overviews
+URL: https://www.google.com/search?q=Which%20factory%20audit%20findings%20should%20be%20resolved%20before%20approving%20a%20Chinese%20factory%20for%20production%3F&hl=en-AU&gl=au
+TITLE: Which factory audit findings should be resolved before approving a Chinese factory for production? - Google Search
+OBSERVED_AT: 2026-07-19T01:03:32.027Z
+AUTH: signed-out
+SURFACE: google-search-serp-en-AU
+PROMPT: Which factory audit findings should be resolved before approving a Chinese factory for production?
+STATUS: observed-surface-absent
+brandMention: no
+ownedUrlCited: no
+---
+No AI Overview generative answer block present; organic results only.
+
+ORGANIC:
+1. Factory Audit in China: A Comprehensive Guide to ... | https://www.epicsourcing.com.au/post/factory-audit-in-china-a-comprehensive-guide-to-ensuring-quality-and-compliance
+2. China Factory Selection, Audit & Quality Control | https://hornetgroup.com.au/import-services/factory-audits-product-quality-assurance-check/
+3. Ultimate Guide to Conducting an Accurate Factory Audit in ... | https://www.china2west.com/the-ultimate-guide-to-conducting-an-accurate-factory-audit-in-china/
+4. The elements of an audit finding - Yellowbook-CPE.com | https://yellowbook-cpe.com/questions-answered-by-the-elements-of-an-audit-finding.html
+5. Factory Audit: Process, Report & Meaning - Tetra Inspection | https://tetrainspection.com/factory-audit/#:~:text=A%20factory%20audit%20is%20an,standards%20such%20as%20ISO%209001.
+6. Section 1: Quiz 5 - Risk Based Audit Planning Flashcards | Quizlet | https://quizlet.com/662574123/section-1-quiz-5-risk-based-audit-planning-flash-cards/#:~:text=Explanation%3A%20The%20identification%20of%20high,accordance%20with%20high%2Drisk%20areas.
+7. 6.4 Conducting audit activities - Pillar Management Associates | https://pillarmanagement.com/training-courses/resouces/audit-process-descriptions/65-6-4-conducting-audit-activities#:~:text=When%20specified%20by%20the%20audit,audit%20evidence%20should%20be%20recorded.
+8. ISO 9000 factory audits for your China suppliers | https://qualityinspection.org/iso-9000-factory-audit-china/
+9. Audits or Quality Inspections in China | https://www.hqts.com/china-quality-inspection-audits/
+10. Factory Audit in China: An Introduction | https://themoonbaygroup.com/factory-audit-in-china-an-introduction/
+11. Factory Audit Checklist for Beginners — China Sourcing HK | https://eliteglobaltrade.co/blog/china-factory-audit-checklist-for-beginners
+12. Factory Audit China | On-Site Verification - CheapBulk | https://cheapbulk.com/factory-audit-china
+13. Performing a Factory Audit in China: Know Your Objectives ... | https://www.qualitydigest.com/inside/standards-article/performing-factory-audit-china-know-your-objectives-and-needs-091310.html
+
+SERP_TEXT_SNIPPET:
+Skip to main content
+Accessibility help
+AI Mode
+All
+Short videos
+Forums
+Shopping
+Images
+Videos
+More
+Tools
+Search Results
+Web results
+Factory Audit in China: A Comprehensive Guide to ...
+
+Epic Sourcing
+https://www.epicsourcing.com.au › post › factory-audit...
+Shortlist the Factories: Evaluate the suppliers based on factors such as product quality, price, lead times, location, communication, and experience.
+Missing: approving ‎| Show results with: approving
+China Factory Selection, Audit & Quality Control
+
+Hornet Group
+https://hornetgroup.com.au › import-services › factory-a...
+A factory audit is required before any final decision is made. This allows 'on the ground' verification of production capabilities and processes.
+Missing: resolved ‎approving
+Ultimate Guide to Conducting an Accurate Factory Audit in ...
+
+China 2 West Services
+https://www.china2west.com › Blog
+2 Apr 2024 — A comprehensive factory audit in China should include an evaluation of the factory's adherence to both local and international laws and ...Read more
+Missing: resolved ‎approving
+People also ask
+When reporting an audit finding, which element is required to be included?
+What is the standard of factory audit?
+Which of the following is a critical step that should be performed during auditing?
+What should individual audit findings include when specified by the audit plan?
+Web results
+ISO 9000 factory audits for your China suppliers
+
+QualityInspection.org
+https://qualityinspection.org › Sourcing New Suppliers
+3 Jan 2011 — Factory audits in China and other Asian countries are often (loosely) based on a checklist inspired by the ISO 9000 series.Read more
+Missing: resolved ‎| Show results with: resolved
+Audits or Quality Inspections in China
+
+HQTS
+https://www.hqts.com › Blog
+28 Oct 2022 — A supplier audit determines whether the Chinese supplier is legitimate, has adequate business licenses and experience, and collects the intended factory's base ...Read more
+Missing: resolved ‎| Show results with: resolved
+Factory Audit in China: An Introduction
+
+MoonBay Group
+https://themoonbaygroup.com › Quality Assurance
+28 June 2021 — A factory audit is an on-site evaluation of a factory. It allows you to verify whether a manufacturer can produce an order according to your requirements.Read more
+Factory Audit Checklist for Beginners — China Sourcing HK
+
+Elite Global Trade
+https://eliteglobaltrade.co › Blog
+Simple China factory audit checklist for first-time importers. Learn what to check, red flags to watch for and how to verify a factory.
+Factory Audit China | On-Site Verification - CheapBulk
+
+cheapbulk.com
+https://cheapbulk.com › factory-audit-china
+Common findings from first-time audits include: trading companies posing as factories, severely outdated equipment, non-functional quality systems
+Missing: resolved ‎approving
+Performing a Factory Audit in China: Know Your Objectives ...
+
+Quality Digest
+https://www.qualitydigest.com › inside › standards-article
+In general, the objective of any supplier-identification process (which often includes factory audit) is to identify a suitable manufacturing partner in China.Read more
+Missing: resolved ‎| Show results with: resolved
+Page navigation
+	
+1	
+2
+	
+3
+	
+4
+	
+5
+	
+6
+	
+7
+	
+8
+	
+9
+	
+10
+	
+Next
+Footer links
+Results are personalised
+-
+Try without personalisation
+Australia
+Adelaide, South Australia - Based on your places (Home)
+ - Update location
+Help
+Send feedback
+Privacy
+Terms
