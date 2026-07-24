@@ -159,8 +159,9 @@ export default async function ChinaSourcingAgentPage() {
             className="object-cover z-0"
             sizes="100vw"
           />
+          {/* Use theme navy/* tokens (not arbitrary #0F2D5E/92) so Tailwind emits overlay CSS in prod */}
           <div
-            className="absolute inset-0 bg-gradient-to-br from-[#0F2D5E]/92 via-[#0F2D5E]/85 to-[#0F2D5E]/75 z-[1]"
+            className="absolute inset-0 bg-gradient-to-br from-navy/90 via-navy/80 to-navy/70 z-[1]"
             aria-hidden="true"
           />
           <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 md:px-12 py-12 md:py-16">
