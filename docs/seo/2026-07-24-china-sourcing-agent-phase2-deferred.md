@@ -10,6 +10,13 @@
 - MDX internal link fix: `factory-vs-trading-company-china-guide.mdx` service link → `/china-sourcing-agent`.
 - Gap brief queue (not drafted articles): see `2026-07-24-china-sourcing-agent-content-gap-briefs.md`.
 
+### Post-commit hygiene pass (same day, no new articles)
+
+- Additional MDX agent-intent links → `/china-sourcing-agent`: `verify-chinese-supplier`, `china-sourcing-risks`, `importing-from-china-australia-guide`, `china-factory-visit-agent-australia`, `importing-electronics-from-china-to-australia`, `new-zealand-vs-china-sourcing`.
+- Legacy `app/(public)/article/china-sourcing-agent/page.tsx`: header comment points to commercial root + 301.
+- GSC weekly script page filters: exact URL equals (avoids false root metrics from vs-direct).
+- Post-commit GSC note: `2026-07-24-china-sourcing-agent-gsc-baseline-post-commit.md`.
+
 ## Explicitly deferred (need separate approval)
 
 | Item | Why deferred |
