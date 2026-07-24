@@ -5,7 +5,7 @@
 **Auth:** `~/.claude/gsc-service-account.json` (Owner on `sc-domain:winningadventure.com.au`)  
 **Property:** `sc-domain:winningadventure.com.au`  
 **Window:** 2026-06-24 → 2026-07-21 (28d, end lag-adjusted by script)  
-**Code state:** commercial root committed as `626fb09`; **not** production-deployed at measurement time.
+**Code state:** commercial root committed as `626fb09`; hygiene follow-ups on `cc18a4c` / `f9c5f54`; **not** production-deployed at measurement time.
 
 ## Query cluster (equals)
 
