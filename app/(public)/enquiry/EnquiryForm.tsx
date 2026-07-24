@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation'
 import { CheckCircle, MapPin, Mail, DollarSign, Building2 } from 'lucide-react'
 import { KeyboardAwareInput } from './components/KeyboardAwareInput'
 import { KeyboardAwareTextarea } from './components/KeyboardAwareTextarea'
+import { useEnquiryFunnel } from '@/hooks/useEnquiryFunnel'
 import { useT } from '@/i18n/useT'
 import { trackFormSubmission, trackSuccessfulEnquiry } from '@/lib/analytics'
 import { readSuccessfulEnquiryId } from '@/lib/enquiry-response'
@@ -35,6 +36,36 @@ export default function EnquiryForm() {
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [submitting, setSubmitting] = useState(false)
+  const funnel = useEnquiryFunnel({
+    sourcePath: '/enquiry',
+    formSurface: 'enquiry_page',
+    formVersion: 'legacy_baseline',
+    industry: formData.industry,
+  })
+
+  const trackValidationError = (field: string) => {
+    if (field === 'fullName') {
+      funnel.error({ step: 'submission', fieldKey: 'full_name', errorType: 'required' })
+    } else if (field === 'email') {
+      funnel.error({
+        step: 'submission',
+        fieldKey: 'email',
+        errorType: formData.email.trim() ? 'invalid_format' : 'required',
+      })
+    } else if (field === 'company') {
+      funnel.error({
+        step: 'submission',
+        fieldKey: 'company',
+        errorType: formData.company.trim() ? 'too_short' : 'required',
+      })
+    } else if (field === 'pathIntent') {
+      funnel.error({ step: 'qualification', fieldKey: 'path_intent', errorType: 'required' })
+    } else if (field === 'timeline') {
+      funnel.error({ step: 'qualification', fieldKey: 'timeline', errorType: 'required' })
+    } else if (field === 'lookingFor') {
+      funnel.error({ step: 'submission', fieldKey: 'looking_for', errorType: 'required' })
+    }
+  }
 
   const handleBlur = (field: string) => {
     setTouched({ ...touched, [field]: true })
@@ -63,11 +94,24 @@ export default function EnquiryForm() {
     if (field === 'timeline' && !formData.timeline) {
       newErrors.timeline = t('form.enq.field.timeline.error')
     }
+    if (newErrors[field]) trackValidationError(field)
     setErrors((prev) => ({ ...prev, ...newErrors }))
   }
 
-  const handleChange = (field: string, value: string) => {
-    setFormData({ ...formData, [field]: value })
+  const handleChange = (field: keyof typeof formData, value: string) => {
+    const nextForm = { ...formData, [field]: value } as typeof formData
+    if (field === 'pathIntent') funnel.start()
+    if (
+      (field === 'pathIntent' || field === 'timeline')
+      && isSubmittedPathIntent(nextForm.pathIntent)
+      && isTimeline(nextForm.timeline)
+    ) {
+      funnel.stepComplete({
+        pathIntent: nextForm.pathIntent,
+        timeline: nextForm.timeline,
+      })
+    }
+    setFormData(nextForm)
     if (errors[field]) {
       setErrors((prev) => {
         const next = { ...prev }
@@ -109,6 +153,8 @@ export default function EnquiryForm() {
     e.preventDefault()
     const submitErrors = validateAll()
     if (Object.keys(submitErrors).length > 0) {
+      const firstInvalidField = Object.keys(submitErrors)[0]
+      if (firstInvalidField) trackValidationError(firstInvalidField)
       setErrors(submitErrors)
       setTouched({
         fullName: true,
@@ -129,6 +175,7 @@ export default function EnquiryForm() {
     setErrors({})
     const pagePath = '/enquiry'
     const industry = normalizeIndustry(formData.industry)
+    let responseFailureTracked = false
     try {
       const res = await fetch('/api/enquiry', {
         method: 'POST',
@@ -164,6 +211,12 @@ export default function EnquiryForm() {
           : '/enquiry/thank-you'
         router.push(thankYou)
       } else {
+        responseFailureTracked = true
+        funnel.error({
+          step: 'submission',
+          fieldKey: 'form',
+          errorType: res.status === 429 ? 'rate_limited' : 'server',
+        })
         const data = await res.json()
         const errorMsg = data.details
           ? Object.values(data.details).flat().join(', ')
@@ -171,6 +224,9 @@ export default function EnquiryForm() {
         setErrors({ submit: errorMsg || t('form.enq.error.submission_failed') })
       }
     } catch {
+      if (!responseFailureTracked) {
+        funnel.error({ step: 'submission', fieldKey: 'form', errorType: 'network' })
+      }
       setErrors({ submit: t('form.enq.error.network') })
     } finally {
       setSubmitting(false)
@@ -228,7 +284,7 @@ export default function EnquiryForm() {
                   {t('form.enq.label.submit_enquiry')}
                 </h2>
 
-                <form onSubmit={handleSubmit} noValidate>
+                <form ref={funnel.formRef} onSubmit={handleSubmit} noValidate>
                   <div className="flex flex-col gap-5">
                     <KeyboardAwareInput
                       id="fullName"
@@ -404,7 +460,8 @@ export default function EnquiryForm() {
                       type="submit"
                       disabled={submitting}
                       aria-busy={submitting || undefined}
-                      className="w-full py-4 md:py-3.5 px-6 bg-navy text-white font-semibold hover:bg-navy-dark active:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/40 focus-visible:ring-offset-2 transition-colors duration-200 ease-out disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                      aria-label={submitting ? t('form.enq.button.submitting') : t('form.enq.button.submit')}
+                      className="w-full py-4 md:py-3.5 px-6 min-h-11 bg-navy text-white font-semibold hover:bg-navy-dark active:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/40 focus-visible:ring-offset-2 transition-colors duration-200 ease-out disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                       {submitting ? t('form.enq.button.submitting') : t('form.enq.button.submit')}
                     </button>
@@ -413,7 +470,8 @@ export default function EnquiryForm() {
                       href="https://calendly.com/mark-winningadventure/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full py-3 px-6 text-sm font-semibold text-navy border border-navy bg-transparent hover:bg-navy hover:text-white active:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/40 focus-visible:ring-offset-2 transition-colors duration-200 ease-out text-center mt-3"
+                      className="block w-full py-3 px-6 min-h-11 text-sm font-semibold text-navy border border-navy bg-transparent hover:bg-navy hover:text-white active:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber/40 focus-visible:ring-offset-2 transition-colors duration-200 ease-out text-center mt-3 flex items-center justify-center"
+                      aria-label={t('form.enq.button.book_call')}
                     >
                       {t('form.enq.button.book_call')}
                     </a>

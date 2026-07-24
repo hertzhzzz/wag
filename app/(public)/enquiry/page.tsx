@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'Winning Adventure Global',
     images: [
       {
-        url: 'https://www.winningadventure.com.au/og-image.jpg',
+        url: 'https://www.winningadventure.com.au/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'Winning Adventure Global - China Sourcing Experts',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Winning Adventure Global',
     description: 'Get expert China sourcing help. Book your discovery call.',
-    images: ['https://www.winningadventure.com.au/og-image.jpg'],
+    images: ['https://www.winningadventure.com.au/og-image.webp'],
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/enquiry',

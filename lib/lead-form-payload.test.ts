@@ -77,6 +77,13 @@ describe('buildLeadFormPayload', () => {
     expect(payload.industry).toBe('not_provided')
     expect(JSON.stringify(payload)).not.toContain('Supplier Verification')
   })
+
+  it('sanitizes dirty absolute URL sourcePath segments', () => {
+    const payload = buildLeadFormPayload(form, {
+      sourcePath: '/enquiry/https:/www.winningadventure.com.au/services',
+    })
+    expect(payload.sourcePath).toBe('/enquiry')
+  })
 })
 
 import { buildEnquiryPagePayload } from './lead-form-payload'

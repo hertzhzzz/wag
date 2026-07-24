@@ -21,20 +21,21 @@ export async function generateMetadata(
   const loc = getLocation(city)
   if (!loc) return {}
   const url = `${BASE}/locations/${loc.slug}`
-  const title = `China Sourcing Agent for ${loc.city} Importers | ${loc.stateAbbr}`
-  const description = `Australia-based China sourcing agent for ${loc.city} (${loc.state}) importers. We verify factories, audit capability, and inspect goods in China — serving businesses importing through ${loc.portName}. Book a free consult.`
+  // Geo support pages: avoid national money title "China Sourcing Agent for {City}"
+  // so commercial root /china-sourcing-agent owns the agent query.
+  const title = `China Sourcing for ${loc.city} Importers | ${loc.stateAbbr}`
+  const description = `China sourcing support for ${loc.city} (${loc.state}) importers. We verify factories, audit capability, and inspect goods in China — serving businesses importing through ${loc.portName}. Book a free consult.`
   return {
     title: { absolute: title },
     description,
     keywords: [
-      `china sourcing agent ${loc.city.toLowerCase()}`,
       `china sourcing ${loc.city.toLowerCase()}`,
       `supplier verification ${loc.city.toLowerCase()}`,
       `importing from china ${loc.city.toLowerCase()}`,
-      `china import agent ${loc.stateAbbr.toLowerCase()}`,
+      `china procurement ${loc.stateAbbr.toLowerCase()}`,
     ],
     openGraph: {
-      title: `China Sourcing Agent for ${loc.city} Importers | Winning Adventure Global`,
+      title: `China Sourcing for ${loc.city} Importers | Winning Adventure Global`,
       description,
       url,
       siteName: 'Winning Adventure Global',
@@ -59,11 +60,11 @@ export default async function LocationPage(
   return (
     <>
       <ServiceSchema
-        name={`China Sourcing Agent for ${loc.city} Importers`}
-        serviceType="China Sourcing Agent"
+        name={`China Sourcing Support for ${loc.city} Importers`}
+        serviceType="China Sourcing Support"
         url={url}
         areaServed={{ '@type': 'City', name: `${loc.city}, ${loc.state}` }}
-        description={`Australia-based China sourcing, supplier verification, factory audit, and quality inspection for importers in ${loc.city}, ${loc.state}.`}
+        description={`Local China sourcing support for importers in ${loc.city}, ${loc.state}: supplier verification, factory audit, and quality inspection coordination.`}
       />
       <Navbar />
       <BreadcrumbSchema

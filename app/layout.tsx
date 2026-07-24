@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import ScrollTracker from './components/ScrollTracker'
+import GaPageView from './components/GaPageView'
 import { buildOrganizationSchema } from '@/lib/schema'
 
 
@@ -27,7 +29,14 @@ export const metadata: Metadata = {
     default: 'China Sourcing for Australian Businesses | Winning Adventure Global',
   },
   description: 'Australia-based China sourcing for Australian businesses: find and vet new suppliers, or visit and verify an existing factory. Factory tours and verification remain secondary-path support.',
-  keywords: ['china sourcing australia', 'china sourcing agent australia', 'find china suppliers', 'australian business china sourcing', 'supplier verification china', 'factory visit china', 'china procurement support'],
+  keywords: [
+    'china sourcing australia',
+    'find china suppliers',
+    'australian business china sourcing',
+    'supplier verification china',
+    'factory visit china',
+    'china procurement support',
+  ],
   authors: [{ name: 'Andy Liu' }],
   creator: 'Winning Adventure Global',
   publisher: 'Winning Adventure Global',
@@ -39,7 +48,8 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
+      // Cap SERP/AI Overview snippet length (product decision: 150, not unlimited -1)
+      'max-snippet': 150,
     },
   },
   openGraph: {
@@ -51,7 +61,7 @@ export const metadata: Metadata = {
     description: 'Find and vet China suppliers for Australian businesses — or visit and verify an existing factory. Verification remains a secondary path.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'Winning Adventure Global - China Factory Tours',
@@ -105,12 +115,12 @@ export default function RootLayout({
             which injects the correct preload for THAT page. A global hero preload here
             would force every sub-page to high-priority-fetch the homepage poster it never
             shows, stealing priority from its own hero. */}
-        <link rel="alternate" hrefLang="en-AU" href="https://www.winningadventure.com.au/" />
-        <link rel="alternate" hrefLang="en-US" href="https://www.winningadventure.com.au/" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.winningadventure.com.au/" />
+        {/* hreflang: set per-page via metadata.alternates.languages only.
+            Do not hardcode homepage-only global alternates here — they conflict with page self-signals. */}
         {/* Google tag — raw <script> so Google Ads bot can detect it in server-rendered HTML */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18216448449"></script>
-        <script dangerouslySetInnerHTML={{__html:`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18216448449');gtag('config','G-VEGJ1YL8YR');`}} />
+        {/* send_page_view true on first load; GaPageView covers App Router soft navigations */}
+        <script dangerouslySetInnerHTML={{__html:`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-18216448449');gtag('config','G-VEGJ1YL8YR',{send_page_view:true,anonymize_ip:true});`}} />
         <Script id="meta-pixel" strategy="lazyOnload" dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)
@@ -146,6 +156,9 @@ export default function RootLayout({
         {children}
       </main>
       <ScrollTracker />
+      <Suspense fallback={null}>
+        <GaPageView />
+      </Suspense>
       <Analytics />
     </body>
     </html>

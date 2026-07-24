@@ -1,4 +1,48 @@
-import { trackSuccessfulEnquiry, type SuccessfulEnquiry } from './analytics'
+import {
+  createEnquiryFunnelTracker,
+  normalizeAnalyticsPagePath,
+  trackEnquiryFormError,
+  trackEnquiryFormStart,
+  trackEnquiryFormStepComplete,
+  trackEnquiryFormView,
+  trackFormSubmission,
+  trackSuccessfulEnquiry,
+  type EnquiryFunnelContext,
+  type SuccessfulEnquiry,
+} from './analytics'
+
+describe('normalizeAnalyticsPagePath', () => {
+  it('keeps clean site paths', () => {
+    expect(normalizeAnalyticsPagePath('/enquiry')).toBe('/enquiry')
+    expect(normalizeAnalyticsPagePath('/china-sourcing-agent')).toBe('/china-sourcing-agent')
+    expect(normalizeAnalyticsPagePath('/')).toBe('/')
+  })
+
+  it('strips query and hash', () => {
+    expect(normalizeAnalyticsPagePath('/enquiry?utm_source=x#form')).toBe('/enquiry')
+  })
+
+  it('extracts pathname from absolute URLs', () => {
+    expect(normalizeAnalyticsPagePath('https://www.winningadventure.com.au/enquiry')).toBe('/enquiry')
+    expect(normalizeAnalyticsPagePath('//www.winningadventure.com.au/services')).toBe('/services')
+  })
+
+  it('collapses dirty concatenated enquiry paths', () => {
+    expect(
+      normalizeAnalyticsPagePath('/enquiry/https:/www.winningadventure.com.au/china-sourcing-agent'),
+    ).toBe('/enquiry')
+    expect(
+      normalizeAnalyticsPagePath('/enquiry/https://evil.example/path'),
+    ).toBe('/enquiry')
+  })
+
+  it('rejects protocol junk and empty values', () => {
+    expect(normalizeAnalyticsPagePath('https:')).toBe('not_provided')
+    expect(normalizeAnalyticsPagePath('')).toBe('not_provided')
+    expect(normalizeAnalyticsPagePath(null)).toBe('not_provided')
+    expect(normalizeAnalyticsPagePath(undefined)).toBe('not_provided')
+  })
+})
 
 function createSessionStorage() {
   const values = new Map<string, string>()
@@ -83,6 +127,26 @@ describe('trackSuccessfulEnquiry', () => {
       currency: 'AUD',
       transaction_id: 'enq_123',
     })
+  })
+
+  it('sanitizes dirty pagePath before generate_lead', () => {
+    const { gtag } = installBrowser()
+    expect(trackSuccessfulEnquiry({
+      ...enquiry,
+      enquiryId: 'enq_dirty',
+      pagePath: '/enquiry/https://www.winningadventure.com.au/services',
+    })).toBe(true)
+    expect(gtag).toHaveBeenNthCalledWith(1, 'event', 'generate_lead', expect.objectContaining({
+      page_path: '/enquiry',
+    }))
+  })
+
+  it('sanitizes dirty pagePath on form_submit', () => {
+    const { gtag } = installBrowser()
+    trackFormSubmission('enquiry_page', '/enquiry/https:/example.com/x')
+    expect(gtag).toHaveBeenCalledWith('event', 'form_submit', expect.objectContaining({
+      page_path: '/enquiry',
+    }))
   })
 
   it('supports embedded form_type and find_new path_intent', () => {
@@ -283,5 +347,155 @@ describe('trackSuccessfulEnquiry', () => {
       content_category: 'enquiry_page',
       content_name: 'av-lighting',
     })
+  })
+})
+
+describe('enquiry funnel baseline analytics', () => {
+  const context: EnquiryFunnelContext = {
+    sourcePath: '/enquiry?utm_source=private#form',
+    formSurface: 'enquiry_page',
+    formVersion: 'legacy_baseline',
+    industry: '',
+  }
+
+  afterEach(() => {
+    Reflect.deleteProperty(globalThis, 'window')
+    jest.restoreAllMocks()
+  })
+
+  it('emits the allowlisted common dimensions and strips query and hash data', () => {
+    const { gtag } = installBrowser()
+
+    expect(trackEnquiryFormView(context)).toBe(true)
+    expect(trackEnquiryFormStart(context)).toBe(true)
+
+    expect(gtag).toHaveBeenNthCalledWith(1, 'event', 'form_view', {
+      source_path: '/enquiry',
+      form_surface: 'enquiry_page',
+      form_version: 'legacy_baseline',
+      industry: 'not_provided',
+    })
+    expect(gtag).toHaveBeenNthCalledWith(2, 'event', 'form_start', {
+      source_path: '/enquiry',
+      form_surface: 'enquiry_page',
+      form_version: 'legacy_baseline',
+      industry: 'not_provided',
+    })
+  })
+
+  it('adds only qualification dimensions to form_step_complete', () => {
+    const { gtag } = installBrowser()
+
+    expect(trackEnquiryFormStepComplete(context, {
+      pathIntent: 'verify_existing',
+      timeline: '0-3_months',
+    })).toBe(true)
+
+    expect(gtag).toHaveBeenCalledWith('event', 'form_step_complete', {
+      source_path: '/enquiry',
+      form_surface: 'enquiry_page',
+      form_version: 'legacy_baseline',
+      industry: 'not_provided',
+      path_intent: 'verify_existing',
+      timeline: '0-3_months',
+    })
+  })
+
+  it('emits allowlisted error diagnostics without field values', () => {
+    const { gtag } = installBrowser()
+
+    expect(trackEnquiryFormError(context, {
+      step: 'submission',
+      fieldKey: 'email',
+      errorType: 'invalid_format',
+    })).toBe(true)
+
+    expect(gtag).toHaveBeenCalledWith('event', 'form_error', {
+      source_path: '/enquiry',
+      form_surface: 'enquiry_page',
+      form_version: 'legacy_baseline',
+      industry: 'not_provided',
+      step: 'submission',
+      field_key: 'email',
+      error_type: 'invalid_format',
+    })
+  })
+
+  it('deduplicates one-shot events per tracker while keeping errors repeatable', () => {
+    const { gtag } = installBrowser()
+    const tracker = createEnquiryFunnelTracker(context)
+
+    expect(tracker.view()).toBe(true)
+    expect(tracker.view()).toBe(false)
+    expect(tracker.start()).toBe(true)
+    expect(tracker.start()).toBe(false)
+    expect(tracker.stepComplete({
+      pathIntent: 'find_new',
+      timeline: 'exploring',
+    })).toBe(true)
+    expect(tracker.stepComplete({
+      pathIntent: 'verify_existing',
+      timeline: '0-3_months',
+    })).toBe(false)
+    expect(tracker.error({
+      step: 'submission',
+      fieldKey: 'form',
+      errorType: 'network',
+    })).toBe(true)
+    expect(tracker.error({
+      step: 'submission',
+      fieldKey: 'form',
+      errorType: 'server',
+    })).toBe(true)
+
+    expect(gtag.mock.calls.map((call) => call[1])).toEqual([
+      'form_view',
+      'form_start',
+      'form_step_complete',
+      'form_error',
+      'form_error',
+    ])
+  })
+
+  it('reads the latest context without sending extra properties or PII', () => {
+    const { gtag } = installBrowser()
+    const mutableContext = {
+      ...context,
+      industry: 'construction',
+      name: 'Jane Smith',
+      email: 'jane@example.com',
+      requirements: 'Private product specification',
+    }
+    const tracker = createEnquiryFunnelTracker(() => mutableContext)
+
+    tracker.start()
+    mutableContext.industry = 'engineering'
+    tracker.error({
+      step: 'submission',
+      fieldKey: 'form',
+      errorType: 'server',
+    })
+
+    expect(gtag).toHaveBeenNthCalledWith(1, 'event', 'form_start', expect.objectContaining({
+      industry: 'construction',
+    }))
+    expect(gtag).toHaveBeenNthCalledWith(2, 'event', 'form_error', expect.objectContaining({
+      industry: 'engineering',
+    }))
+    const analyticsPayloads = gtag.mock.calls.map((call) => JSON.stringify(call)).join(' ')
+    expect(analyticsPayloads).not.toContain('Jane Smith')
+    expect(analyticsPayloads).not.toContain('jane@example.com')
+    expect(analyticsPayloads).not.toContain('Private product specification')
+  })
+
+  it('returns safely server-side or when gtag is unavailable', () => {
+    expect(trackEnquiryFormView(context)).toBe(false)
+
+    installBrowser({ withGtag: false })
+    expect(trackEnquiryFormError(context, {
+      step: 'submission',
+      fieldKey: 'form',
+      errorType: 'server',
+    })).toBe(false)
   })
 })

@@ -2,8 +2,9 @@
 
 import { useState } from 'react'
 import { CheckCircle2, ShieldCheck } from 'lucide-react'
+import { useEnquiryFunnel } from '@/hooks/useEnquiryFunnel'
 import { useT } from '@/i18n/useT'
-import { trackFormSubmission, trackSuccessfulEnquiry } from '@/lib/analytics'
+import { normalizeAnalyticsPagePath, trackFormSubmission, trackSuccessfulEnquiry } from '@/lib/analytics'
 import { readSuccessfulEnquiryId } from '@/lib/enquiry-response'
 import { buildLeadFormPayload, normalizeIndustry } from '@/lib/lead-form-payload'
 
@@ -36,15 +37,37 @@ export default function LeadForm({
   const actualSubcopy = subcopy ?? t('form.lead.defaultSubcopy')
   const [form, setForm] = useState({ fullName: '', email: '', lookingFor: '' })
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const pagePath = typeof window !== 'undefined'
+    ? normalizeAnalyticsPagePath(window.location.pathname)
+    : 'not_provided'
+  const funnel = useEnquiryFunnel({
+    sourcePath: pagePath,
+    formSurface: 'embedded_general',
+    formVersion: 'legacy_baseline',
+    industry,
+  })
+
+  const setField = (field: 'fullName' | 'email' | 'lookingFor', value: string) => {
+    funnel.start()
+    setForm((prev) => ({ ...prev, [field]: value }))
+  }
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!form.fullName.trim() || !form.email.trim() || !form.lookingFor.trim()) {
+    const missingField = !form.fullName.trim()
+      ? 'full_name'
+      : !form.email.trim()
+        ? 'email'
+        : !form.lookingFor.trim()
+          ? 'looking_for'
+          : null
+    if (missingField) {
+      funnel.error({ step: 'legacy', fieldKey: missingField, errorType: 'required' })
       setStatus('error')
       return
     }
     setStatus('submitting')
-    const pagePath = typeof window !== 'undefined' ? window.location.pathname : 'not_provided'
+    let responseFailureTracked = false
     try {
       const res = await fetch('/api/enquiry', {
         method: 'POST',
@@ -54,7 +77,15 @@ export default function LeadForm({
           industry,
         })),
       })
-      if (!res.ok) throw new Error()
+      if (!res.ok) {
+        responseFailureTracked = true
+        funnel.error({
+          step: 'submission',
+          fieldKey: 'form',
+          errorType: res.status === 429 ? 'rate_limited' : 'server',
+        })
+        throw new Error('submit_failed')
+      }
 
       const enquiryId = await readSuccessfulEnquiryId(res)
       if (enquiryId) {
@@ -69,6 +100,9 @@ export default function LeadForm({
       trackFormSubmission('embedded', pagePath)
       setStatus('success')
     } catch {
+      if (!responseFailureTracked) {
+        funnel.error({ step: 'submission', fieldKey: 'form', errorType: 'network' })
+      }
       setStatus('error')
     }
   }
@@ -87,6 +121,7 @@ export default function LeadForm({
 
   return (
     <form
+      ref={funnel.formRef}
       id={id}
       onSubmit={submit}
       noValidate
@@ -109,7 +144,7 @@ export default function LeadForm({
             autoComplete="name"
             placeholder={t('form.lead.placeholderName')}
             value={form.fullName}
-            onChange={(e) => setForm({ ...form, fullName: e.target.value })}
+            onChange={(e) => setField('fullName', e.target.value)}
             className={inputClass}
           />
         </div>
@@ -123,7 +158,7 @@ export default function LeadForm({
             autoComplete="email"
             placeholder={t('form.lead.placeholderEmail')}
             value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            onChange={(e) => setField('email', e.target.value)}
             className={inputClass}
           />
         </div>
@@ -136,7 +171,7 @@ export default function LeadForm({
             rows={3}
             placeholder={t('form.lead.placeholderNeed')}
             value={form.lookingFor}
-            onChange={(e) => setForm({ ...form, lookingFor: e.target.value })}
+            onChange={(e) => setField('lookingFor', e.target.value)}
             className={`${inputClass} resize-none`}
           />
         </div>
@@ -154,7 +189,8 @@ export default function LeadForm({
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="w-full bg-amber text-navy font-semibold py-3.5 hover:bg-navy hover:text-white transition-colors disabled:opacity-60"
+          className="w-full bg-amber text-navy font-semibold py-3.5 min-h-11 hover:bg-navy hover:text-white transition-colors disabled:opacity-60"
+          aria-label={cta ?? t('form.lead.submit')}
         >
           {status === 'submitting' ? t('form.lead.submitting') : (cta ?? t('form.lead.submit'))}
         </button>

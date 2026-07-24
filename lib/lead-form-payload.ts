@@ -3,6 +3,7 @@
  * industry = industry attribution slug, never a service name.
  */
 
+import { normalizeAnalyticsPagePath } from './analytics'
 import type { SubmittedPathIntent, Timeline } from './enquiry-qualification'
 
 export type LeadFormValues = {
@@ -46,7 +47,7 @@ export function buildLeadFormPayload(form: LeadFormValues, context: LeadFormCont
     ...(form.phone ? { phone: form.phone } : {}),
     ...(form.company ? { company: form.company } : {}),
     industry: normalizeIndustry(context.industry),
-    sourcePath: context.sourcePath || 'not_provided',
+    sourcePath: normalizeAnalyticsPagePath(context.sourcePath),
   }
 }
 
@@ -68,6 +69,6 @@ export function buildEnquiryPagePayload(
     timeline: form.timeline,
     ...(phone ? { phone } : {}),
     industry: normalizeIndustry(context.industry),
-    sourcePath: context.sourcePath || 'not_provided',
+    sourcePath: normalizeAnalyticsPagePath(context.sourcePath),
   }
 }

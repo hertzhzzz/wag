@@ -30,8 +30,7 @@ export default function Hero() {
             src="/hero-cargo-mobile.webp"
             alt="Container ship carrying freight from China to Australia"
             fill
-            priority={true}
-            unoptimized
+            priority
             loading="eager"
             fetchPriority="high"
             quality={75}
@@ -43,8 +42,7 @@ export default function Hero() {
             src="/hero-video-first-frame.webp"
             alt="Chinese manufacturing facility with Australian business team"
             fill
-            priority={true}
-            unoptimized
+            priority
             loading="eager"
             fetchPriority="high"
             quality={80}

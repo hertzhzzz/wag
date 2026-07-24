@@ -18,6 +18,15 @@ export function FactoryDirectory({
 }) {
   const [search, setSearch] = useState("")
   const [category, setCategory] = useState("")
+  // Only mount hero video on desktop — CSS hide still downloads autoplay sources on mobile.
+  const [isDesktop, setIsDesktop] = useState(false)
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)")
+    setIsDesktop(mq.matches)
+    const onChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches)
+    mq.addEventListener("change", onChange)
+    return () => mq.removeEventListener("change", onChange)
+  }, [])
   const [province, setProvince] = useState("")
   const [activeChip, setActiveChip] = useState<string | null>(null)
   const [page, setPage] = useState(1)
@@ -51,9 +60,19 @@ export function FactoryDirectory({
       {/* Hero — video bg overlay, same as landing page */}
       <section className="relative min-h-[50vh] md:min-h-[540px] flex items-center overflow-hidden">
         <div className="absolute inset-0" aria-hidden="true">
-          <video autoPlay muted loop playsInline preload="metadata" className="w-full h-full object-cover">
-            <source src="/hero_vid_compressed.mp4" type="video/mp4" />
-          </video>
+          {/* Desktop-only video mount — mobile keeps navy gradient (no ~1MB download) */}
+          {isDesktop && (
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              className="w-full h-full object-cover"
+            >
+              <source src="/hero_vid_compressed.mp4" type="video/mp4" />
+            </video>
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-navy/20" />
         </div>

@@ -59,6 +59,15 @@ describe('buildIndustryQualifiedIntake', () => {
     expect(JSON.stringify(result)).not.toContain('Supplier Verification')
   })
 
+  it('sanitizes dirty sourcePath for request and conversion', () => {
+    const result = buildIndustryQualifiedIntake(form, {
+      sourcePath: '/enquiry/https://www.example.com/x',
+      industry: 'construction',
+    })
+    expect(result.requestBody.sourcePath).toBe('/enquiry')
+    expect(result.conversion.pagePath).toBe('/enquiry')
+  })
+
   it('exposes the industry primary CTA label', () => {
     expect(buildIndustryQualifiedIntake.defaultCta).toBe('Discuss Your Sourcing Project')
   })

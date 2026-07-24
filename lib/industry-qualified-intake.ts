@@ -4,6 +4,7 @@
  */
 
 import type { PathIntent } from './analytics'
+import { normalizeAnalyticsPagePath } from './analytics'
 import type { EnquiryPageFormValues } from './lead-form-payload'
 import { buildEnquiryPagePayload, normalizeIndustry } from './lead-form-payload'
 
@@ -31,8 +32,9 @@ function buildIndustryQualifiedIntake(
   form: IndustryQualifiedFormValues,
   context: IndustryQualifiedContext,
 ): IndustryQualifiedIntake {
+  const sourcePath = normalizeAnalyticsPagePath(context.sourcePath)
   const requestBody = buildEnquiryPagePayload(form, {
-    sourcePath: context.sourcePath,
+    sourcePath,
     industry: context.industry,
   })
 
@@ -40,7 +42,7 @@ function buildIndustryQualifiedIntake(
     requestBody,
     conversion: {
       formType: 'embedded',
-      pagePath: context.sourcePath || 'not_provided',
+      pagePath: sourcePath,
       industry: normalizeIndustry(context.industry),
       pathIntent: form.pathIntent,
       timeline: form.timeline,

@@ -64,7 +64,7 @@ export const LOCATIONS: LocationData[] = [
     stateAbbr: 'SA',
     live: true,
     heroTagline: 'Australia-based · Headquartered in Adelaide',
-    heroHeading: 'China Sourcing Agent for Adelaide Importers',
+    heroHeading: 'China Sourcing for Adelaide Importers',
     heroIntro:
       'We are based in North Adelaide — not a call centre, not an overseas reseller. We verify factories in China on the ground and report back to you here in South Australia. Book a free consult and tell us what you are sourcing.',
     portName: 'Port Adelaide (Outer Harbor)',
@@ -122,7 +122,7 @@ export const LOCATIONS: LocationData[] = [
     stateAbbr: 'NSW',
     live: true,
     heroTagline: 'Australia-based · Serving Sydney & NSW importers',
-    heroHeading: 'China Sourcing Agent for Sydney Importers',
+    heroHeading: 'China Sourcing for Sydney Importers',
     heroIntro:
       'Sydney is Australia\'s busiest import gateway — and the fastest shipping lane from China. We verify factories on the ground in China and report back to you in NSW, so you can buy direct with confidence. Book a free consult and tell us your supplier.',
     portName: 'Port Botany',
@@ -180,7 +180,7 @@ export const LOCATIONS: LocationData[] = [
     stateAbbr: 'VIC',
     live: true,
     heroTagline: 'Australia-based · Serving Melbourne & VIC importers',
-    heroHeading: 'China Sourcing Agent for Melbourne Importers',
+    heroHeading: 'China Sourcing for Melbourne Importers',
     heroIntro:
       'Melbourne is Australia\'s largest container port and its biggest manufacturing and logistics hub. We verify factories on the ground in China and report back to you in Victoria, so you can source direct with confidence. Book a free consult and tell us your supplier.',
     portName: 'Port of Melbourne',
@@ -253,7 +253,7 @@ export const LOCATIONS: LocationData[] = [
     stateAbbr: 'QLD',
     live: true,
     heroTagline: 'Australia-based · Serving Brisbane & QLD importers',
-    heroHeading: 'China Sourcing Agent for Brisbane Importers',
+    heroHeading: 'China Sourcing for Brisbane Importers',
     heroIntro:
       'Brisbane is Australia\'s fastest-growing container gateway — and one of the smoothest for customs clearance. We verify factories on the ground in China and report back to you in Queensland, so you can source direct with confidence. Book a free consult and tell us your supplier.',
     portName: 'Port of Brisbane',
@@ -311,7 +311,7 @@ export const LOCATIONS: LocationData[] = [
     stateAbbr: 'WA',
     live: true,
     heroTagline: 'Australia-based · Serving Perth & WA importers',
-    heroHeading: 'China Sourcing Agent for Perth Importers',
+    heroHeading: 'China Sourcing for Perth Importers',
     heroIntro:
       'Fremantle is the fastest Australian port from southern China — and the only sensible gateway for Western Australia. We verify factories on the ground in China and report back to you in WA, so you can source direct with confidence. Book a free consult and tell us your supplier.',
     portName: 'Port of Fremantle',

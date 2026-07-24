@@ -68,7 +68,7 @@ export function ArticlePageContent({
       <BackToTopButton />
 
       {/* Mobile persistent CTA — desktop gets this via SidebarRail instead */}
-      <MobileCTABar />
+      <MobileCTABar location="article-mobile-bar" />
 
       {/* SEO Schemas */}
       <ArticleSchema

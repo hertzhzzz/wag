@@ -9,6 +9,7 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import HomeCaseStudy from '@/components/HomeCaseStudy'
 import PriorityIndustryLinks from '@/components/PriorityIndustryLinks'
 import HomeAgentLink from '@/components/HomeAgentLink'
+import MobileCTABar from '@/components/MobileCTABar'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { Metadata } from 'next'
@@ -60,6 +61,9 @@ export default function Home() {
       <CTABand />
       <BlogPreview />
       <Footer />
+      {/* Bottom padding so sticky mobile CTA does not cover footer links */}
+      <div className="md:hidden h-20" aria-hidden="true" />
+      <MobileCTABar location="home-mobile-sticky" />
     </>
   )
 }

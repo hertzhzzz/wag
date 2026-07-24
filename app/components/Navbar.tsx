@@ -93,15 +93,25 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
           )}
         </div>
 
-        <button
-          className="md:hidden ml-auto border-0 cursor-pointer min-h-11 min-w-11 flex items-center justify-center rounded-lg bg-white text-navy shadow-sm"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle navigation menu"
-          aria-expanded={mobileMenuOpen}
-          aria-controls="mobile-menu"
-        >
-          <Menu size={22} />
-        </button>
+        <div className="md:hidden ml-auto flex items-center gap-2 pr-2">
+          <Link
+            href="/enquiry"
+            className="inline-flex items-center justify-center min-h-11 px-3.5 text-[13px] font-semibold text-white bg-navy whitespace-nowrap"
+            onClick={() => trackCTAClick('Enquiry', 'navbar-mobile-header')}
+            aria-label={t('nav.bookConsult')}
+          >
+            {t('nav.enquiry')}
+          </Link>
+          <button
+            className="border-0 cursor-pointer min-h-11 min-w-11 flex items-center justify-center rounded-lg bg-white text-navy shadow-sm"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+          >
+            <Menu size={22} />
+          </button>
+        </div>
       </div>
 
       {/* Desktop mega menu */}
@@ -212,6 +222,16 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
               onClick={() => { handleLinkClick(); trackCTAClick('Enquiry Nav Link', 'navbar-mobile') }}
             >
               {t('nav.enquiry')}
+            </Link>
+          </li>
+          <li className="px-4 pt-2">
+            <Link
+              href="/enquiry"
+              className="flex items-center justify-center min-h-11 px-4 text-[13px] font-semibold text-white bg-navy"
+              onClick={() => { handleLinkClick(); trackCTAClick('Book Consult', 'navbar-mobile-menu-cta') }}
+              aria-label={t('nav.bookConsult')}
+            >
+              {t('nav.bookConsult')}
             </Link>
           </li>
           <li className="px-4 pt-3 mt-2 border-t border-gray-200">

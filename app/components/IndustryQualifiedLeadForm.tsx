@@ -9,8 +9,9 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { ShieldCheck } from 'lucide-react'
+import { useEnquiryFunnel } from '@/hooks/useEnquiryFunnel'
 import { useT } from '@/i18n/useT'
-import { trackFormSubmission, trackSuccessfulEnquiry } from '@/lib/analytics'
+import { normalizeAnalyticsPagePath, trackFormSubmission, trackSuccessfulEnquiry } from '@/lib/analytics'
 import { readSuccessfulEnquiryId } from '@/lib/enquiry-response'
 import {
   isSubmittedPathIntent,
@@ -69,9 +70,30 @@ export default function IndustryQualifiedLeadForm({
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [status, setStatus] = useState<'idle' | 'submitting' | 'error'>('idle')
+  const pagePath = typeof window !== 'undefined'
+    ? normalizeAnalyticsPagePath(window.location.pathname)
+    : normalizeAnalyticsPagePath(`/industries/${industry}`)
+  const funnel = useEnquiryFunnel({
+    sourcePath: pagePath,
+    formSurface: 'embedded_industry',
+    formVersion: 'legacy_baseline',
+    industry,
+  })
 
   const setField = <K extends keyof FormState>(field: K, value: FormState[K]) => {
-    setForm((prev) => ({ ...prev, [field]: value }))
+    const nextForm = { ...form, [field]: value }
+    if (field === 'pathIntent') funnel.start()
+    if (
+      (field === 'pathIntent' || field === 'timeline')
+      && isSubmittedPathIntent(nextForm.pathIntent)
+      && isTimeline(nextForm.timeline)
+    ) {
+      funnel.stepComplete({
+        pathIntent: nextForm.pathIntent,
+        timeline: nextForm.timeline,
+      })
+    }
+    setForm(nextForm)
     if (errors[field]) {
       setErrors((prev) => {
         const next = { ...prev }
@@ -97,10 +119,35 @@ export default function IndustryQualifiedLeadForm({
     return next
   }
 
+  const trackFirstValidationError = (validationErrors: Record<string, string>) => {
+    if (validationErrors.fullName) {
+      funnel.error({ step: 'submission', fieldKey: 'full_name', errorType: 'required' })
+    } else if (validationErrors.email) {
+      funnel.error({
+        step: 'submission',
+        fieldKey: 'email',
+        errorType: form.email.trim() ? 'invalid_format' : 'required',
+      })
+    } else if (validationErrors.company) {
+      funnel.error({
+        step: 'submission',
+        fieldKey: 'company',
+        errorType: form.company.trim() ? 'too_short' : 'required',
+      })
+    } else if (validationErrors.pathIntent) {
+      funnel.error({ step: 'qualification', fieldKey: 'path_intent', errorType: 'required' })
+    } else if (validationErrors.timeline) {
+      funnel.error({ step: 'qualification', fieldKey: 'timeline', errorType: 'required' })
+    } else if (validationErrors.lookingFor) {
+      funnel.error({ step: 'submission', fieldKey: 'looking_for', errorType: 'required' })
+    }
+  }
+
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
     const validationErrors = validate()
     if (Object.keys(validationErrors).length > 0) {
+      trackFirstValidationError(validationErrors)
       setErrors(validationErrors)
       return
     }
@@ -110,7 +157,7 @@ export default function IndustryQualifiedLeadForm({
 
     setStatus('submitting')
     setErrors({})
-    const pagePath = typeof window !== 'undefined' ? window.location.pathname : `/industries/${industry}`
+    let responseFailureTracked = false
 
     try {
       const intake = buildIndustryQualifiedIntake({
@@ -131,7 +178,15 @@ export default function IndustryQualifiedLeadForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(intake.requestBody),
       })
-      if (!res.ok) throw new Error('submit_failed')
+      if (!res.ok) {
+        responseFailureTracked = true
+        funnel.error({
+          step: 'submission',
+          fieldKey: 'form',
+          errorType: res.status === 429 ? 'rate_limited' : 'server',
+        })
+        throw new Error('submit_failed')
+      }
 
       const enquiryId = await readSuccessfulEnquiryId(res)
       if (enquiryId) {
@@ -147,6 +202,9 @@ export default function IndustryQualifiedLeadForm({
         : '/enquiry/thank-you'
       router.push(thankYou)
     } catch {
+      if (!responseFailureTracked) {
+        funnel.error({ step: 'submission', fieldKey: 'form', errorType: 'network' })
+      }
       setStatus('error')
       setErrors({ submit: t('form.lead.errorText') })
     }
@@ -176,6 +234,7 @@ export default function IndustryQualifiedLeadForm({
 
   return (
     <form
+      ref={funnel.formRef}
       id={id}
       onSubmit={submit}
       noValidate
