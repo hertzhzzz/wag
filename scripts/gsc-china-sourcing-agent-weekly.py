@@ -41,12 +41,14 @@ QUERIES = [
     "sourcing agent",
 ]
 
+# Prefer equals/exact host paths so "/china-sourcing-agent" does not match
+# "/article/china-sourcing-agent-vs-direct" via substring contains.
 PAGE_FILTERS = [
-    ("/china-sourcing-agent", "contains", "/china-sourcing-agent"),
+    ("/china-sourcing-agent (root)", "equals", "https://www.winningadventure.com.au/china-sourcing-agent"),
     ("/", "equals", "https://www.winningadventure.com.au/"),
-    ("/article/sourcing-agent-australia", "contains", "/article/sourcing-agent-australia"),
-    ("/article/china-sourcing-agent-vs-direct", "contains", "/article/china-sourcing-agent-vs-direct"),
-    ("/services", "contains", "/services"),
+    ("/article/sourcing-agent-australia", "equals", "https://www.winningadventure.com.au/article/sourcing-agent-australia"),
+    ("/article/china-sourcing-agent-vs-direct", "equals", "https://www.winningadventure.com.au/article/china-sourcing-agent-vs-direct"),
+    ("/services", "equals", "https://www.winningadventure.com.au/services"),
     ("/article/china-sourcing-agent (legacy)", "equals", "https://www.winningadventure.com.au/article/china-sourcing-agent"),
 ]
 

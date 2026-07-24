@@ -1,3 +1,6 @@
+// LEGACY commercial article route. Production equity transfers via next.config.js
+// permanent redirect: /article/china-sourcing-agent → /china-sourcing-agent.
+// Do not expand this page; edit app/(public)/china-sourcing-agent/ instead.
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
