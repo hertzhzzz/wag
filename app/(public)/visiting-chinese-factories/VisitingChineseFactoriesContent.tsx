@@ -2,6 +2,7 @@
 import { useT } from '@/i18n/useT'
 import Image from 'next/image'
 import { Search, ShieldCheck, Building2, ClipboardCheck, MapPin, AlertTriangle, Check, Camera, Users, Factory, Award, Quote } from 'lucide-react'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FAQ from '@/components/FAQ'
@@ -424,6 +425,23 @@ export default function VisitingChineseFactoriesContent() {
                 </div>
               </ScrollReveal>
             </div>
+          </div>
+        </section>
+
+        {/* ============================================ Related commercial path ============================================ */}
+        <section className="border-t border-navy/10 bg-navy/[0.02]">
+          <div className="max-w-[900px] mx-auto px-6 py-12 md:py-14 text-center">
+            <p className="text-navy/70 text-base leading-relaxed mb-4 max-w-[640px] mx-auto">
+              Need full-service support beyond a single factory visit? Our{' '}
+              <Link
+                href="/china-sourcing-agent"
+                className="text-navy font-semibold underline hover:text-amber transition-colors"
+              >
+                China sourcing agent service
+              </Link>{' '}
+              covers shortlisting, on-ground verification, quality control, and shipment
+              coordination for Australian importers.
+            </p>
           </div>
         </section>
 

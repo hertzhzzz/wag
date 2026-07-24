@@ -69,7 +69,7 @@ export default async function LocationPage(
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: BASE },
-          { name: 'Services', url: `${BASE}/services` },
+          { name: 'China Sourcing Agent', url: `${BASE}/china-sourcing-agent` },
           { name: loc.city, url },
         ]}
       />

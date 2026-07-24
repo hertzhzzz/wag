@@ -40,8 +40,9 @@ export default function SecondaryPathSupportNav({
         </h2>
         <p className="text-navy/70 text-base leading-relaxed max-w-[760px] mb-3">
           Primary path for Australian businesses is finding and vetting new suppliers in China.
-          Use this page when you already have a factory contact to assess. For full dual-path
-          sourcing projects, start on services or a priority industry page.
+          Use this page when you already have a factory contact to assess. For end-to-end agent
+          support (shortlist through shipment), use the China sourcing agent service. For multi-service
+          comparison, start on services or a priority industry page.
         </p>
         <p className="text-sm text-navy/55 mb-8">
           <span className="font-semibold text-navy">{SITE_PRIMARY_PATH_LABEL}</span>
@@ -49,7 +50,21 @@ export default function SecondaryPathSupportNav({
           <span>{SITE_SECONDARY_PATH_LABEL}</span>
         </p>
 
-        <div className="grid md:grid-cols-2 gap-4 mb-6">
+        <div className="grid md:grid-cols-3 gap-4 mb-6">
+          <Link
+            href="/china-sourcing-agent"
+            className="group flex flex-col border border-navy/15 bg-navy/[0.02] p-5 no-underline transition-colors hover:border-amber/50 hover:bg-white"
+          >
+            <span className="font-semibold text-navy text-[15px] mb-2">China sourcing agent</span>
+            <span className="text-navy/65 text-sm leading-relaxed flex-1 mb-3">
+              Full-service commercial path: factory shortlisting, on-ground verification, quality
+              control, and shipment coordination for Australian importers.
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
+              View agent service
+              <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </Link>
           <Link
             href="/"
             className="group flex flex-col border border-navy/15 bg-navy/[0.02] p-5 no-underline transition-colors hover:border-amber/50 hover:bg-white"

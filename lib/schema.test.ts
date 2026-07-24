@@ -60,7 +60,7 @@ describe('schema builders', () => {
       'app/(public)/quality-inspection-china/page.tsx',
       'app/(public)/locations/[city]/page.tsx',
       'app/(public)/industries/[industry]/page.tsx',
-      'app/(public)/article/china-sourcing-agent/page.tsx',
+      'app/(public)/china-sourcing-agent/page.tsx',
     ]
 
     for (const file of files) {

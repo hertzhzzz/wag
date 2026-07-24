@@ -47,7 +47,8 @@ describe('C4 verification pages demotion', () => {
     expect(supportNav).toMatch(/not the primary commercial offer/)
   })
 
-  it('links verification support pages back to home, services, and three priority industries', () => {
+  it('links verification support pages back to commercial root, home, services, and three priority industries', () => {
+    expect(supportNav).toContain('href="/china-sourcing-agent"')
     expect(supportNav).toContain('href="/"')
     expect(supportNav).toContain('href="/services"')
     expect(supportNav).toMatch(/PRIORITY_INDUSTRY_LINKS/)

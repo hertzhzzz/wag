@@ -8,6 +8,7 @@ import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import HomeCaseStudy from '@/components/HomeCaseStudy'
 import PriorityIndustryLinks from '@/components/PriorityIndustryLinks'
+import HomeAgentLink from '@/components/HomeAgentLink'
 
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { Metadata } from 'next'
@@ -16,7 +17,7 @@ import { buildWebSiteSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: { absolute: 'China Sourcing for Australian Businesses | Winning Adventure Global' },
   description: 'Australia-based China sourcing for Australian businesses: find and vet new suppliers, or visit and verify an existing factory. Priority industries: AV & lighting, construction materials, agricultural machinery.',
-  keywords: ['china sourcing australia', 'china sourcing agent australia', 'find china suppliers australia', 'av lighting sourcing china', 'construction materials china sourcing', 'agricultural machinery china sourcing', 'supplier verification china', 'factory visit china'],
+  keywords: ['china sourcing australia', 'find china suppliers australia', 'av lighting sourcing china', 'construction materials china sourcing', 'agricultural machinery china sourcing', 'supplier verification china', 'factory visit china'],
   openGraph: {
     locale: 'en_AU',
     alternateLocale: 'en_US',
@@ -51,6 +52,7 @@ export default function Home() {
       ]} />
       <Hero />
       <TwoWaysAccess />
+      <HomeAgentLink />
       <PriorityIndustryLinks source="homepage" />
       <HowItWorks />
       <HomeCaseStudy />

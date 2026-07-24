@@ -39,12 +39,12 @@ export default function Footer() {
             </h4>
             <ul className="list-none space-y-3">
               <li>
-                <Link href="/#capabilities" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/china-sourcing-agent" className="text-white/70 text-sm hover:text-white transition-colors">
                   {t('footer.linkSourcingAgent')}
                 </Link>
               </li>
               <li>
-                <Link href="/#factory-visit" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/visiting-chinese-factories" className="text-white/70 text-sm hover:text-white transition-colors">
                   {t('footer.linkFactoryTours')}
                 </Link>
               </li>
@@ -54,7 +54,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#capabilities" className="text-white/70 text-sm hover:text-white transition-colors">
+                <Link href="/article/importing-from-china-australia-guide" className="text-white/70 text-sm hover:text-white transition-colors">
                   {t('footer.linkSourcingGuide')}
                 </Link>
               </li>

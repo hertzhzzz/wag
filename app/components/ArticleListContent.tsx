@@ -173,9 +173,9 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
             </p>
           </Link>
           <Link
-            href="/article/china-sourcing-agent"
+            href="/china-sourcing-agent"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
-            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/article/china-sourcing-agent', t('article.list.explore.sourcingAgent.title'))}
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/china-sourcing-agent', t('article.list.explore.sourcingAgent.title'))}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
               {t('article.list.explore.sourcingAgent.label')}
@@ -188,9 +188,9 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
             </p>
           </Link>
           <Link
-            href="/article/china-sourcing-agent"
+            href="/china-sourcing-agent"
             className="block bg-amber/10 border border-amber/20 p-7 hover:bg-amber/20 transition-colors"
-            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/article/china-sourcing-agent', t('article.list.explore.sourcingAgent.title'))}
+            onClick={() => trackInternalLink(typeof window !== 'undefined' ? window.location.pathname : '', '/china-sourcing-agent', t('article.list.explore.sourcingAgent.title'))}
           >
             <span className="text-[0.65rem] font-semibold tracking-[0.12em] uppercase text-navy bg-navy/10 px-2.5 py-1 w-fit block mb-4">
               {t('article.list.explore.sourcingAgent.label')}

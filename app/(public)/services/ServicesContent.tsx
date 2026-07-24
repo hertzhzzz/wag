@@ -318,7 +318,13 @@ export default function ServicesContent() {
         <section id="sourcing-agent" className="py-12 md:py-16 px-4 md:px-8 bg-white">
           <div className="max-w-[1100px] mx-auto">
             <h2 className="font-serif text-3xl text-navy mb-4">
-              China Sourcing for Australian Businesses
+              <Link
+                href="/china-sourcing-agent"
+                className="hover:text-amber transition-colors"
+                onClick={() => trackCTAClick('China Sourcing Agent heading', 'services-sourcing-agent-section')}
+              >
+                China Sourcing Agent for Australian Businesses
+              </Link>
             </h2>
             <p className="text-gray-600 mb-4 max-w-[720px] leading-relaxed">
               Primary path: find and vet new suppliers in China — shortlist factories, due diligence, visit
@@ -327,23 +333,25 @@ export default function ServicesContent() {
             </p>
             <p className="text-gray-600 mb-6 max-w-[720px] leading-relaxed">
               Service tiers change how deeply we are involved and whether you travel. They do not change the
-              offer: China sourcing for Australian businesses, not verification-as-the-product.
+              offer: China sourcing for Australian businesses, not verification-as-the-product. Full detail lives
+              on our dedicated China sourcing agent page.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/enquiry"
+                href="/china-sourcing-agent"
                 className="inline-block bg-navy text-white py-3 px-8 text-sm font-semibold hover:bg-navy/90 transition-colors min-h-11"
+                aria-label="China Sourcing Agent service"
+                onClick={() => trackCTAClick('China Sourcing Agent service', 'services-sourcing-agent-section')}
+              >
+                China Sourcing Agent Service &rarr;
+              </Link>
+              <Link
+                href="/enquiry"
+                className="inline-block border border-navy/20 text-navy py-3 px-8 text-sm font-semibold hover:border-navy transition-colors min-h-11"
                 aria-label="Discuss Your Sourcing Project"
                 onClick={() => trackCTAClick('Discuss Your Sourcing Project', 'services-sourcing-agent-section')}
               >
-                Discuss Your Sourcing Project &rarr;
-              </Link>
-              <Link
-                href="/article/importing-from-china-australia-guide"
-                className="inline-block border border-navy/20 text-navy py-3 px-8 text-sm font-semibold hover:border-navy transition-colors min-h-11"
-                aria-label="How It Works"
-              >
-                How It Works
+                Discuss Your Sourcing Project
               </Link>
             </div>
           </div>

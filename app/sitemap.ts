@@ -21,11 +21,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: baseUrl, lastModified: new Date() },
     { url: `${baseUrl}/services`, lastModified: new Date() },
+    // /china-sourcing-agent enters via liveNavLinks() (By service menu)
     ...navUrls,
     { url: `${baseUrl}/about`, lastModified: new Date() },
     { url: `${baseUrl}/article`, lastModified: new Date() },
     { url: `${baseUrl}/enquiry`, lastModified: new Date() },
-    { url: `${baseUrl}/solutions`, lastModified: new Date() },
     { url: `${baseUrl}/article/faq`, lastModified: new Date() },
     { url: `${baseUrl}/privacy`, lastModified: new Date() },
     { url: `${baseUrl}/terms`, lastModified: new Date() },

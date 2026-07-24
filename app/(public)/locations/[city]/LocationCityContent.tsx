@@ -60,6 +60,12 @@ export default function LocationCityContent({ loc }: Props) {
 
   const SERVICES = [
     {
+      href: '/china-sourcing-agent',
+      icon: Ship,
+      title: t('page.loc.serviceSourcingAgentTitle'),
+      body: t('page.loc.serviceSourcingAgentBody'),
+    },
+    {
       href: '/supplier-verification',
       icon: ShieldCheck,
       title: t('page.loc.serviceSupplierVerificationTitle'),
@@ -256,7 +262,7 @@ export default function LocationCityContent({ loc }: Props) {
               {t('page.loc.servicesSubheading')}
             </p>
           </ScrollReveal>
-          <div className="grid md:grid-cols-3 gap-6 mb-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {SERVICES.map((s) => (
               <ScrollReveal key={s.href}>
                 <Link

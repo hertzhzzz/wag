@@ -11,15 +11,20 @@ const nextConfig = {
   async redirects() {
     return [
       ...cleanupRedirects,
-      // ponytail: 3 landing pages merged into homepage — 301 to preserve SEO
+      // China Sourcing Agent commercial root + legacy equity transfer
       {
         source: '/china-sourcing-agent-australia',
-        destination: '/#capabilities',
+        destination: '/china-sourcing-agent',
+        permanent: true,
+      },
+      {
+        source: '/article/china-sourcing-agent',
+        destination: '/china-sourcing-agent',
         permanent: true,
       },
       {
         source: '/china-sourcing-guide-australia',
-        destination: '/#capabilities',
+        destination: '/article/importing-from-china-australia-guide',
         permanent: true,
       },
       // Blog slug redirects
