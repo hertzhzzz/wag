@@ -40,7 +40,8 @@ export default function Navbar({ rightContent }: { rightContent?: React.ReactNod
     >
       <div className="max-w-[1400px] mx-auto w-full flex items-center">
         <Link href="/" className="flex-shrink-0 h-10 w-[200px] md:h-12 md:w-[240px] relative">
-          <Image src="/logos/logo-nav-trans.png" alt="Winning Adventure Global" fill sizes="(max-width: 768px) 200px, 240px" className="object-contain" priority />
+          {/* No priority: homepage LCP is the hero poster; logo must not steal preload bandwidth. */}
+          <Image src="/logos/logo-nav-trans.png" alt="Winning Adventure Global" fill sizes="(max-width: 768px) 200px, 240px" className="object-contain" />
         </Link>
 
         <ul className="hidden md:flex gap-9 list-none flex-1 justify-center">

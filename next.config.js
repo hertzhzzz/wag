@@ -5,15 +5,15 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 const cleanupRedirects = require('./redirects')
 const {
-  shouldNoindexNonProduction,
-  NON_PRODUCTION_ROBOTS_TAG,
-} = require('./lib/noindex-env.cjs')
+  shouldNoindexAtBuildTime,
+  NOINDEX_ROBOTS_TAG,
+} = require('./lib/non-production-robots.cjs')
 
-// Build-time env on Vercel: production | preview | development.
-// Host-based *.vercel.app guard lives in proxy.ts (request-time).
-const buildTimeNoindex = shouldNoindexNonProduction({
-  vercelEnv: process.env.VERCEL_ENV,
-})
+// Build-time: VERCEL_ENV !== production → X-Robots-Tag on all routes.
+// Request-time host guard (*.vercel.app) lives in proxy.ts.
+const nonProdRobotsHeader = shouldNoindexAtBuildTime(process.env.VERCEL_ENV)
+  ? [{ key: 'X-Robots-Tag', value: NOINDEX_ROBOTS_TAG }]
+  : []
 
 const securityHeaders = [
   { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
@@ -141,7 +141,8 @@ const nextConfig = {
     ]
   },
   images: {
-    qualities: [75, 80],
+    // Hero uses quality 70/72 for smaller LCP payloads
+    qualities: [70, 72, 75, 80],
     remotePatterns: [
       {
         protocol: 'https',
@@ -162,48 +163,37 @@ const nextConfig = {
     ],
   },
   async headers() {
-    // Build-time: Vercel preview deployments must not be indexed (complements proxy.ts host checks).
-    const previewNoIndex =
-      process.env.VERCEL_ENV === 'preview'
-        ? [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }]
-        : []
-
     if (process.env.NODE_ENV === 'development') {
       return [
         {
           source: '/:path*',
           headers: [
-            { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
-            { key: 'X-Frame-Options', value: 'DENY' },
-            { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.facebook.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.winningadventure.com.au https://images.unsplash.com https://images.pexels.com https://cdn.pixabay.com https://www.facebook.com https://connect.facebook.net https://img.alicdn.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://www.googleadservices.com; media-src 'self' https://pub-543b90f0e56147e5bdd93d5e7cc36c10.r2.dev; frame-src 'self' https://www.facebook.com https://www.google.com https://maps.google.com https://maps.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.googleadservices.com https://ad.doubleclick.net https://www.google.com https://www.facebook.com https://connect.facebook.net;" },
-          ...previewNoIndex,
-          ]
-        }
+            ...securityHeaders,
+            ...nonProdRobotsHeader,
+            { key: 'Content-Security-Policy', value: cspDev },
+          ],
+        },
       ]
     }
+
     return [
+      // Always noindex the client portal (production + preview)
       {
         source: '/client/:path*',
         headers: [
-          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
-        ]
+          { key: 'X-Robots-Tag', value: NOINDEX_ROBOTS_TAG },
+        ],
       },
       {
         source: '/:path*',
         headers: [
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.facebook.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.winningadventure.com.au https://images.unsplash.com https://images.pexels.com https://cdn.pixabay.com https://www.facebook.com https://connect.facebook.net https://img.alicdn.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://www.googleadservices.com; media-src 'self' https://pub-543b90f0e56147e5bdd93d5e7cc36c10.r2.dev; frame-src 'self' https://www.facebook.com https://www.google.com https://maps.google.com https://maps.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.googleadservices.com https://ad.doubleclick.net https://www.google.com https://www.facebook.com https://connect.facebook.net;" },
-          ...previewNoIndex,
-        ]
-      }
+          ...securityHeaders,
+          ...nonProdRobotsHeader,
+          { key: 'Content-Security-Policy', value: cspProd },
+        ],
+      },
     ]
-  }
+  },
 }
 
 module.exports = withBundleAnalyzer(nextConfig)

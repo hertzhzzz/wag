@@ -45,10 +45,11 @@ export const metadata: Metadata = {
   authors: [{ name: 'Andy Liu' }],
   creator: 'Winning Adventure Global',
   publisher: 'Winning Adventure Global',
-  // Preview builds: meta robots noindex (complements X-Robots-Tag + robots.ts).
-  // Production: fully indexable — VERCEL_ENV is "production" only on prod deploys.
+  // Non-production Vercel deploys: meta robots noindex (complements X-Robots-Tag + robots.ts).
+  // Production (VERCEL_ENV=production or unset local): fully indexable.
+  // Host-based *.vercel.app guard is request-time in proxy.ts.
   robots:
-    process.env.VERCEL_ENV === 'preview'
+    process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production'
       ? { index: false, follow: false }
       : {
           index: true,
@@ -104,7 +105,6 @@ export const metadata: Metadata = {
 
 export const links = () => [
   { rel: 'preconnect', href: 'https://www.winningadventure.com.au' },
-  { rel: 'preload', href: '/logos/logo-nav-trans.png', as: 'image' },
 ]
 
 export const viewport = {

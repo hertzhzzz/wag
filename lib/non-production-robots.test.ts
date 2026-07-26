@@ -1,22 +1,31 @@
 import { describe, expect, it } from "vitest"
 import {
+  isNonProductionDeployEnv,
   isNonProductionHostname,
-  isPreviewDeployEnv,
+  NOINDEX_ROBOTS_TAG,
+  shouldNoindexAtBuildTime,
   shouldSendNoIndexRobotsTag,
 } from "./non-production-robots"
 
 describe("non-production robots guards", () => {
-  it("treats Vercel preview env as noindex", () => {
-    expect(isPreviewDeployEnv("preview")).toBe(true)
-    expect(isPreviewDeployEnv("production")).toBe(false)
-    expect(isPreviewDeployEnv(undefined)).toBe(false)
+  it("treats preview and development as non-production; production is not", () => {
+    expect(isNonProductionDeployEnv("preview")).toBe(true)
+    expect(isNonProductionDeployEnv("development")).toBe(true)
+    expect(isNonProductionDeployEnv("production")).toBe(false)
+    expect(isNonProductionDeployEnv(undefined)).toBe(false)
+    expect(isNonProductionDeployEnv(null)).toBe(false)
+    expect(isNonProductionDeployEnv("")).toBe(false)
   })
 
-  it("flags vercel.app and localhost hosts", () => {
+  it("flags vercel.app and localhost hosts; never brand production host", () => {
     expect(isNonProductionHostname("wag-frontend-git-main-xxx.vercel.app")).toBe(true)
+    expect(isNonProductionHostname("vercel.app")).toBe(true)
     expect(isNonProductionHostname("localhost")).toBe(true)
+    expect(isNonProductionHostname("127.0.0.1")).toBe(true)
     expect(isNonProductionHostname("www.winningadventure.com.au")).toBe(false)
     expect(isNonProductionHostname("winningadventure.com.au")).toBe(false)
+    // Suffix trap: must not match evil-vercel.app.example.com
+    expect(isNonProductionHostname("evil-vercel.app.example.com")).toBe(false)
   })
 
   it("never noindexes production host with production env", () => {
@@ -28,10 +37,16 @@ describe("non-production robots guards", () => {
     ).toBe(false)
   })
 
-  it("noindexes preview env even on brand host (misconfig safety)", () => {
+  it("noindexes preview/dev env even on brand host (misconfig safety)", () => {
     expect(
       shouldSendNoIndexRobotsTag({
         vercelEnv: "preview",
+        hostname: "www.winningadventure.com.au",
+      }),
+    ).toBe(true)
+    expect(
+      shouldSendNoIndexRobotsTag({
+        vercelEnv: "development",
         hostname: "www.winningadventure.com.au",
       }),
     ).toBe(true)
@@ -44,5 +59,15 @@ describe("non-production robots guards", () => {
         hostname: "wag-frontend-abc123.vercel.app",
       }),
     ).toBe(true)
+  })
+
+  it("build-time helper only looks at env (production stays indexable)", () => {
+    expect(shouldNoindexAtBuildTime("production")).toBe(false)
+    expect(shouldNoindexAtBuildTime("preview")).toBe(true)
+    expect(shouldNoindexAtBuildTime(undefined)).toBe(false)
+  })
+
+  it("exports standard robots tag", () => {
+    expect(NOINDEX_ROBOTS_TAG).toBe("noindex, nofollow")
   })
 })

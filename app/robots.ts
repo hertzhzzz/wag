@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next"
+import { isNonProductionDeployEnv } from "@/lib/non-production-robots"
 
 /**
- * Dynamic robots.txt (overrides public/robots.txt when present).
- * - Production: open crawl + client disallow + CCBot block + sitemap
- * - Preview (VERCEL_ENV=preview): disallow all
+ * Dynamic robots.txt (replaces static public/robots.txt).
+ * - Production: open crawl + /client/ disallow + CCBot block + sitemap
+ * - Non-production Vercel deploys: disallow all (preview/dev safety)
+ * - Does NOT include /factory in sitemap (factory stays out of sitemap elsewhere)
  */
 export default function robots(): MetadataRoute.Robots {
-  if (process.env.VERCEL_ENV === "preview") {
+  if (isNonProductionDeployEnv(process.env.VERCEL_ENV)) {
     return {
       rules: {
         userAgent: "*",
