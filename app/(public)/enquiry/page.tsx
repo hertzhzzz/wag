@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/enquiry',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/enquiry',
+      'x-default': 'https://www.winningadventure.com.au/enquiry',
+    },
   },
 }
 

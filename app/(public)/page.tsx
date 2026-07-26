@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://www.winningadventure.com.au/',
+    languages: {
+      'en-AU': 'https://www.winningadventure.com.au/',
+      'x-default': 'https://www.winningadventure.com.au/',
+    },
   },
 }
 
@@ -45,22 +49,13 @@ function WebsiteSchema() {
 export default function Home() {
   return (
     <>
-      {/* Homepage mobile LCP only — desktop poster is not priority (video deferred). */}
-      <link
-        rel="preload"
-        as="image"
-        href="/hero-cargo-mobile.webp"
-        type="image/webp"
-        media="(max-width: 767px)"
-        // @ts-expect-error fetchPriority is valid on HTMLLinkElement in modern browsers
-        fetchPriority="high"
-      />
       <Navbar />
       <WebsiteSchema />
       {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}
       <BreadcrumbSchema items={[
         { name: 'Home', url: 'https://www.winningadventure.com.au' }
       ]} />
+      {/* Hero owns mobile LCP (priority poster). Desktop video is deferred in Hero.tsx. */}
       <Hero />
       <TwoWaysAccess />
       <HomeAgentLink />
