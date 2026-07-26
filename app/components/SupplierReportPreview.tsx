@@ -143,7 +143,14 @@ export default function SupplierReportPreview() {
                     {auditImages.map((img, i) => (
                       <div key={i} className="flex-shrink-0 w-12 h-9 rounded overflow-hidden border border-navy/5 bg-navy/5">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={img.src} alt={t(img.label)} className="w-full h-full object-cover blur-[2px]" />
+                        <img
+                          src={img.src}
+                          alt={t(img.label)}
+                          className="w-full h-full object-cover blur-[2px]"
+                          loading="lazy"
+                          decoding="async"
+                          fetchPriority="low"
+                        />
                       </div>
                     ))}
                   </div>
@@ -211,7 +218,14 @@ export default function SupplierReportPreview() {
                         {auditImages.map((img, i) => (
                           <div key={i} className="border border-navy/10 rounded-lg overflow-hidden bg-navy/5">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={img.src} alt={t(img.label)} className="w-full aspect-[4/3] object-cover blur-[2px]" />
+                            <img
+                              src={img.src}
+                              alt={t(img.label)}
+                              className="w-full aspect-[4/3] object-cover blur-[2px]"
+                              loading="lazy"
+                              decoding="async"
+                              fetchPriority="low"
+                            />
                             <p className="text-[10px] text-navy/60 px-2 py-1">{t(img.label)}</p>
                           </div>
                         ))}
