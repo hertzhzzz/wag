@@ -1,10 +1,27 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 import { getBlogRedirectTarget, isBlogGoneSlug, isGonePath } from "@/lib/gone-paths"
+import {
+  NOINDEX_ROBOTS_TAG,
+  shouldSendNoIndexRobotsTag,
+} from "@/lib/non-production-robots"
 
 // Render the branded /gone page (reuses real Navbar/Footer) with a true 410 status.
 function goneResponse(request: NextRequest): NextResponse {
-  return NextResponse.rewrite(new URL("/gone", request.url), { status: 410 })
+  return applyNoIndexIfNeeded(request, NextResponse.rewrite(new URL("/gone", request.url), { status: 410 }))
+}
+
+/** Preview / *.vercel.app: never allow indexing. Production brand host stays indexable. */
+function applyNoIndexIfNeeded(request: NextRequest, response: NextResponse): NextResponse {
+  if (
+    shouldSendNoIndexRobotsTag({
+      hostname: request.nextUrl.hostname,
+      vercelEnv: process.env.VERCEL_ENV,
+    })
+  ) {
+    response.headers.set("X-Robots-Tag", NOINDEX_ROBOTS_TAG)
+  }
+  return response
 }
 
 const PROTECTED_PATHS = ["/client"]
@@ -41,7 +58,10 @@ export function proxy(request: NextRequest) {
     // resource- 旧版文章 301 → canonical 新版（传递权重）
     const articleRedirect = getBlogRedirectTarget(articleSlug)
     if (articleRedirect) {
-      return NextResponse.redirect(new URL(articleRedirect, request.url), 301)
+      return applyNoIndexIfNeeded(
+        request,
+        NextResponse.redirect(new URL(articleRedirect, request.url), 301),
+      )
     }
   }
 
@@ -52,7 +72,10 @@ export function proxy(request: NextRequest) {
     }
 
     const redirectTarget = getBlogRedirectTarget(resourceSlug) || `/article/${resourceSlug}`
-    return NextResponse.redirect(new URL(redirectTarget, request.url), 301)
+    return applyNoIndexIfNeeded(
+      request,
+      NextResponse.redirect(new URL(redirectTarget, request.url), 301),
+    )
   }
 
   if (isGonePath(pathname)) {
@@ -61,7 +84,10 @@ export function proxy(request: NextRequest) {
 
   // Block /factory in production (local dev only for now)
   if (pathname.startsWith("/factory") && !hostname.includes("localhost") && !hostname.includes("127.0.0.1")) {
-    return new NextResponse("Not Found", { status: 404 })
+    return applyNoIndexIfNeeded(
+      request,
+      new NextResponse("Not Found", { status: 404 }),
+    )
   }
 
   const isProtected = PROTECTED_PATHS.some((prefix) => pathname.startsWith(prefix))
@@ -72,29 +98,40 @@ export function proxy(request: NextRequest) {
     return handleClientAuth(request)
   }
 
-  return NextResponse.next()
+  return applyNoIndexIfNeeded(request, NextResponse.next())
 }
 
 function handleClientAuth(request: NextRequest): NextResponse {
   const { pathname } = request.nextUrl
   const segments = pathname.split("/").filter(Boolean)
-  if (segments.length <= 2) return NextResponse.next()
+  if (segments.length <= 2) {
+    return applyNoIndexIfNeeded(request, NextResponse.next())
+  }
   const slug = segments[1]
   const sessionCookie = request.cookies.get(`client_auth_${slug}`)
   if (!sessionCookie?.value) {
     const loginUrl = new URL(`/client/${slug}`, request.url)
     loginUrl.searchParams.set("from", request.nextUrl.pathname)
-    return NextResponse.redirect(loginUrl, 302)
+    return applyNoIndexIfNeeded(request, NextResponse.redirect(loginUrl, 302))
   }
-  return NextResponse.next()
+  return applyNoIndexIfNeeded(request, NextResponse.next())
 }
 
 export const config = {
   matcher: [
+    // Non-production noindex header on all document routes (excludes static assets)
+    "/((?!_next/static|_next/image|.*\\..*).*)",
     "/factory/:path*",
-    "/client/:path*", "/api/client/:path*",
-    "/case-studies/:path*", "/adelaide", "/perth", "/brisbane", "/melbourne", "/sydney",
-    "/china-vs-alibaba", "/china-supplier-verification",
+    "/client/:path*",
+    "/api/client/:path*",
+    "/case-studies/:path*",
+    "/adelaide",
+    "/perth",
+    "/brisbane",
+    "/melbourne",
+    "/sydney",
+    "/china-vs-alibaba",
+    "/china-supplier-verification",
     "/article/:slug*",
     "/resources/:slug*",
   ],

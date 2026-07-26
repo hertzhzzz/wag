@@ -45,6 +45,16 @@ function WebsiteSchema() {
 export default function Home() {
   return (
     <>
+      {/* Homepage mobile LCP only — desktop poster is not priority (video deferred). */}
+      <link
+        rel="preload"
+        as="image"
+        href="/hero-cargo-mobile.webp"
+        type="image/webp"
+        media="(max-width: 767px)"
+        // @ts-expect-error fetchPriority is valid on HTMLLinkElement in modern browsers
+        fetchPriority="high"
+      />
       <Navbar />
       <WebsiteSchema />
       {/* FAQ content preserved as static HTML — Google deprecated FAQ rich results May 2026 */}

@@ -11,7 +11,9 @@ export default function Hero() {
   const [videoPlaying, setVideoPlaying] = useState(false)
   // Only mount the background video on desktop. autoPlay forces a download even when
   // the element is display:none, so CSS hiding alone still costs mobile ~1MB LCP weight.
+  // Defer mount until after first paint + idle so the poster remains the LCP candidate.
   const [isDesktop, setIsDesktop] = useState(false)
+  const [allowVideo, setAllowVideo] = useState(false)
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 768px)')
     setIsDesktop(mq.matches)
@@ -19,13 +21,40 @@ export default function Hero() {
     mq.addEventListener('change', onChange)
     return () => mq.removeEventListener('change', onChange)
   }, [])
+  useEffect(() => {
+    if (!isDesktop) {
+      setAllowVideo(false)
+      return
+    }
+    let cancelled = false
+    let idleId: number | undefined
+    const enable = () => {
+      if (!cancelled) setAllowVideo(true)
+    }
+    // Wait for LCP window (~1.5s) then idle; never compete with poster on first paint.
+    const timeoutId = setTimeout(() => {
+      if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+        idleId = window.requestIdleCallback(enable, { timeout: 2000 })
+      } else {
+        enable()
+      }
+    }, 1500)
+    return () => {
+      cancelled = true
+      if (timeoutId) clearTimeout(timeoutId)
+      if (idleId !== undefined && 'cancelIdleCallback' in window) {
+        window.cancelIdleCallback(idleId)
+      }
+    }
+  }, [isDesktop])
 
   return (
     <section className="relative min-h-[60vh] md:min-h-[720px] flex items-center overflow-hidden">
       {/* Poster Image - fades out when video starts playing on all devices */}
       {!videoPlaying && (
         <div className="absolute inset-0">
-          {/* Mobile: container ship (commercial-licensed, replaces the heavy hero video) */}
+          {/* Mobile LCP only: single priority image. Desktop poster is low-priority so it
+              does not steal preload bandwidth from the mobile LCP candidate. */}
           <Image
             src="/hero-cargo-mobile.webp"
             alt="Container ship carrying freight from China to Australia"
@@ -33,20 +62,19 @@ export default function Hero() {
             priority
             loading="eager"
             fetchPriority="high"
-            quality={75}
-            sizes="(max-width: 767px) 100vw, 0px"
+            quality={70}
+            sizes="(max-width: 767px) 100vw, 1px"
             className="object-cover md:hidden"
           />
-          {/* Desktop: factory first-frame (poster for the background video) */}
+          {/* Desktop: factory first-frame (poster until video loads). No priority — avoids dual preloads. */}
           <Image
             src="/hero-video-first-frame.webp"
             alt="Chinese manufacturing facility with Australian business team"
             fill
-            priority
             loading="eager"
-            fetchPriority="high"
-            quality={80}
-            sizes="1200px"
+            fetchPriority="low"
+            quality={72}
+            sizes="(min-width: 768px) 100vw, 1px"
             className="object-cover hidden md:block"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/40" />
@@ -54,8 +82,8 @@ export default function Hero() {
         </div>
       )}
 
-      {/* Video Background - desktop only (mobile shows the poster image to keep LCP fast) */}
-      {isDesktop && (
+      {/* Video Background - desktop only, deferred after LCP (mobile keeps poster only) */}
+      {isDesktop && allowVideo && (
         <div className="absolute inset-0" aria-hidden="true">
           <video
             autoPlay

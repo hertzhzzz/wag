@@ -13,6 +13,8 @@ const ibmPlexSans = IBM_Plex_Sans({
   weight: ['400', '600'],
   subsets: ['latin'],
   variable: '--font-ibm-plex-sans',
+  display: 'swap',
+  preload: true,
 })
 
 const ibmPlexSerif = IBM_Plex_Serif({
@@ -20,6 +22,9 @@ const ibmPlexSerif = IBM_Plex_Serif({
   style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-ibm-plex-serif',
+  display: 'swap',
+  // Serif is used in hero H1 — keep preload so LCP text is not late-swapped
+  preload: true,
 })
 
 export const metadata: Metadata = {
@@ -40,18 +45,23 @@ export const metadata: Metadata = {
   authors: [{ name: 'Andy Liu' }],
   creator: 'Winning Adventure Global',
   publisher: 'Winning Adventure Global',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      // Cap SERP/AI Overview snippet length (product decision: 150, not unlimited -1)
-      'max-snippet': 150,
-    },
-  },
+  // Preview builds: meta robots noindex (complements X-Robots-Tag + robots.ts).
+  // Production: fully indexable — VERCEL_ENV is "production" only on prod deploys.
+  robots:
+    process.env.VERCEL_ENV === 'preview'
+      ? { index: false, follow: false }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            // Cap SERP/AI Overview snippet length (product decision: 150, not unlimited -1)
+            'max-snippet': 150,
+          },
+        },
   openGraph: {
     type: 'website',
     locale: 'en_AU',
@@ -135,7 +145,7 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `
         }} />
-        <Script async src="https://analytics.ahrefs.com/analytics.js" data-key="jnLQ8HPV22LB0X0XwFMCxw" strategy="afterInteractive" type="text/partytown" />
+        <Script async src="https://analytics.ahrefs.com/analytics.js" data-key="jnLQ8HPV22LB0X0XwFMCxw" strategy="lazyOnload" type="text/partytown" />
         <Script id="partytown-config" type="text/partytown">
           {`partytown = { lib: "/~partytown/", forward: ["dataLayer.push", "gtag"] }`}
         </Script>
