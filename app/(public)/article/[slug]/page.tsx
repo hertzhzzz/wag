@@ -31,14 +31,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const tagKeywords = Array.isArray(fm.tags) ? fm.tags : []
   const categoryKeyword = fm.category ? [fm.category] : []
   const dynamicKeywords = [...categoryKeyword, ...tagKeywords]
+  // SERP title: prefer the short `seoTitle` and use `absolute` so the root
+  // title.template does not append 27 more chars. The on-page H1 keeps fm.title.
+  const seoTitle = fm.seoTitle || fm.title
 
   return {
-    title: fm.title,
+    title: { absolute: seoTitle },
     description: fm.description,
     keywords: dynamicKeywords.length > 0 ? dynamicKeywords : ['China factory tour', 'factory visit China', 'Australian business China sourcing', 'supplier verification'],
     authors: [{ name: fm.author }],
     openGraph: {
-      title: fm.title,
+      title: seoTitle,
       description: fm.description,
       type: 'article',
       publishedTime: fm.date,
@@ -48,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: fm.title,
+      title: seoTitle,
       description: fm.description,
       images: fm.coverImage ? [fm.coverImage] : [],
     },

@@ -73,8 +73,9 @@ export type IndustryIntentPage = {
   sections: IndustryIntentSections
 }
 
+// Keep under 60 chars so SERP titles are not truncated (see lib/seo-metadata-length.test.ts).
 export function buildIndustryPageTitle(industryDisplayName: string): string {
-  return `${industryDisplayName} China Sourcing for Australian Businesses`
+  return `${industryDisplayName} China Sourcing for Australia`
 }
 
 const AV_LIGHTING: IndustryIntentPage = {
@@ -84,7 +85,7 @@ const AV_LIGHTING: IndustryIntentPage = {
   title: buildIndustryPageTitle('AV & Lighting'),
   h1: 'Find and Vet AV & Lighting Suppliers in China',
   metaDescription:
-    'Australia-based China sourcing for AV and lighting: find and shortlist suppliers, due diligence, visit planning, and on-ground coordination. RCM, EESS, GEMS and EMC evidence checked before you commit.',
+    'Australia-based China sourcing for AV and lighting: find and vet suppliers, with RCM, EESS, GEMS and EMC evidence checked before you commit.',
   heroTagline: 'Australia-based · AV & lighting China sourcing',
   heroIntro:
     'For Australian integrators, distributors, and project buyers who need reliable AV and lighting supply from China — not a generic factory list. Primary path: find and vet new suppliers. Secondary path: visit or verify a factory you already know.',
@@ -245,7 +246,7 @@ const CONSTRUCTION: IndustryIntentPage = {
   title: buildIndustryPageTitle('Construction Materials'),
   h1: 'Source Building Materials from China Without Compliance Surprises',
   metaDescription:
-    'Australia-based China sourcing for construction materials: find and shortlist factories, due diligence, visit planning, and on-ground coordination. AS/NZS, NCC, WaterMark and steel duty risks checked before you commit.',
+    'Australia-based China sourcing for construction materials: find and vet factories, with AS/NZS, NCC, WaterMark and steel duty risks checked first.',
   heroTagline: 'Australia-based · Construction materials China sourcing',
   heroIntro:
     'For Australian builders, developers, merchants, and project buyers who need China supply they can install under the NCC — not a catalogue of unverified factories. Primary path: find and vet new suppliers. Secondary path: visit or verify a factory you already know.',
@@ -407,7 +408,7 @@ const AGRICULTURAL_MACHINERY: IndustryIntentPage = {
   title: buildIndustryPageTitle('Agricultural Machinery'),
   h1: 'Find and Vet Farm Machinery Suppliers That Clear Australian Biosecurity',
   metaDescription:
-    'Australia-based China sourcing for agricultural machinery: find and shortlist factories, due diligence, visit planning, and on-ground coordination. Biosecurity, BICON, WHS and cleaning evidence checked before you commit.',
+    'Australia-based China sourcing for agricultural machinery: find and vet factories, with biosecurity, BICON, WHS and cleaning evidence checked first.',
   heroTagline: 'Australia-based · Agricultural machinery China sourcing',
   heroIntro:
     'For Australian farmers, dealers, co-ops, and equipment buyers who need China-built implements and components that can actually clear DAFF biosecurity — not a generic factory list. Primary path: find and vet new suppliers. Secondary path: visit or verify a factory you already know.',

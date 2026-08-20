@@ -4,9 +4,9 @@ import SupplierVerificationContent from './SupplierVerificationContent'
 import ServiceSchema from '@/components/ServiceSchema'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Supplier Verification in China | Secondary Path for Australian Buyers' },
+  title: { absolute: 'Supplier Verification in China for Australian Buyers' },
   description:
-    'Secondary path in China sourcing: verify an existing Chinese supplier before you commit. License authentication, capability checks, and quality support for Australian businesses — not the primary find-and-vet offer.',
+    'Secondary path: verify an existing Chinese supplier before you commit — license authentication, capability checks, and quality support.',
   keywords: [
     'supplier verification china',
     'verify chinese manufacturer',

@@ -21,6 +21,7 @@ function toFrontmatter(article: ValidatedArticle): Frontmatter {
   const fm = article.frontmatter
   return {
     title: fm.title,
+    seoTitle: fm.seoTitle,
     date: String(fm.date),
     description: fm.description,
     author: fm.author,

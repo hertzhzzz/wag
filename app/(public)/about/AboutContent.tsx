@@ -42,9 +42,9 @@ export default function AboutContent() {
 
       {/* Founder's Story + Values */}
       <section className="py-10 md:py-[60px] px-4 md:px-[72px] max-w-[860px] mx-auto scroll-mt-20" id="founder">
-        <h2 className="font-serif text-[clamp(1.5rem,3.5vw,2.25rem)] font-semibold leading-tight mb-7">
+        <h1 className="font-serif text-[clamp(1.5rem,3.5vw,2.25rem)] font-semibold leading-tight mb-7">
           {t('page.about.founder_story_headline')}
-        </h2>
+        </h1>
         <p className="text-base leading-relaxed text-navy/70 mb-5">
           {t('page.about.founder_story_p1')}
         </p>

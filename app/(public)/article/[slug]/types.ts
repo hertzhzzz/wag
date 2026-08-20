@@ -9,6 +9,12 @@ export interface FAQItem {
 
 export interface Frontmatter {
   title: string
+  /**
+   * Optional short title used only for the <title> tag / SERP snippet.
+   * The on-page H1 always uses `title`. Keep under 60 chars so Google
+   * does not truncate it (enforced by lib/seo-metadata-length.test.ts).
+   */
+  seoTitle?: string
   date: string
   description: string
   author: string

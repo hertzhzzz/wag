@@ -23,9 +23,9 @@ export default function ServicesMegaMenu({ onNavigate }: { onNavigate?: () => vo
                 key={col.heading}
                 className={`px-8 ${idx > 0 ? 'border-l border-navy/10' : 'pl-0'}`}
               >
-                <h3 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-navy/40 mb-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-navy/40 mb-4">
                   {t(col.heading as TKey)}
-                </h3>
+                </p>
                 <ul className="flex flex-col list-none">
                   {live.map((l) => (
                     <li key={l.href}>

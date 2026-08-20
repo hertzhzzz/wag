@@ -34,9 +34,9 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
+            <h2 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
               {t('footer.sectionSolutions')}
-            </h4>
+            </h2>
             <ul className="list-none space-y-3">
               <li>
                 <Link href="/china-sourcing-agent" className="text-white/70 text-sm hover:text-white transition-colors">
@@ -63,9 +63,9 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
+            <h2 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
               {t('footer.sectionIndustries')}
-            </h4>
+            </h2>
             <ul className="list-none space-y-3">
               <li>
                 <Link href="/services" className="text-white/70 text-sm hover:text-white transition-colors">
@@ -102,9 +102,9 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
+            <h2 className="text-xs font-semibold tracking-[0.15em] uppercase text-amber mb-6">
               {t('footer.sectionCompany')}
-            </h4>
+            </h2>
             <ul className="list-none space-y-3 mb-8">
               <li>
                 <Link href="/about" className="text-white/70 text-sm hover:text-white transition-colors">

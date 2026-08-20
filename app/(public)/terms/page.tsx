@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms of Service for Winning Adventure Global — governing your use of our factory sourcing, supplier verification, and business travel services in China.',
-  keywords: ['terms of service winning adventure global', 'WAG terms', 'china sourcing service terms'],
+  keywords: ['terms of service winning adventure global', 'china sourcing service terms'],
   openGraph: {
     title: 'Terms of Service | Winning Adventure Global',
     description: 'Terms governing your use of our factory sourcing and China business travel services.',
@@ -19,7 +21,9 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-white">
       {/* Header */}
       <section className="bg-navy py-16 px-4">
         <div className="max-w-[900px] mx-auto">
@@ -107,6 +111,8 @@ export default function TermsPage() {
 
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </>
   )
 }

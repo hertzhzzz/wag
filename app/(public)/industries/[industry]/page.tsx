@@ -32,7 +32,7 @@ export async function generateMetadata(
   const title = dual?.title ?? buildIndustryPageTitle(displayName)
   const description =
     dual?.metaDescription ??
-    `Australia-based China sourcing for ${displayName.toLowerCase()}: find and vet suppliers, due diligence, visit planning, and on-ground coordination for Australian businesses.`
+    `Australia-based China sourcing for ${displayName.toLowerCase()}: find and vet suppliers, due diligence, visit planning, and on-ground coordination.`
 
   return {
     title: { absolute: title },
@@ -45,7 +45,7 @@ export async function generateMetadata(
       `${navLabel.toLowerCase()} sourcing agent australia`,
     ],
     openGraph: {
-      title: `${title} | Winning Adventure Global`,
+      title,
       description,
       url,
       siteName: 'Winning Adventure Global',

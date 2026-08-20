@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import ServicesContent from './ServicesContent'
 
 export const metadata: Metadata = {
-  title: { absolute: 'China Sourcing Services for Australian Businesses | Find & Vet Suppliers' },
-  description: 'Find and vet new China suppliers for Australian businesses, or visit and verify an existing factory. Dual-path sourcing across AV & lighting, construction materials, and agricultural machinery.',
+  title: { absolute: 'China Sourcing Services for Australian Businesses' },
+  description: 'Find and vet new China suppliers, or visit and verify an existing factory. Dual-path sourcing for AV & lighting, construction, and agricultural machinery.',
   keywords: ['china sourcing services australia', 'find china suppliers', 'supplier verification china', 'factory visit china', 'av lighting sourcing', 'construction materials china', 'agricultural machinery china'],
   openGraph: {
     title: 'China Sourcing Services | Winning Adventure Global',

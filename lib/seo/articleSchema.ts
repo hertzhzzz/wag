@@ -86,6 +86,8 @@ const dateLike = z.union([
 /** Display fields used by the public article shell today. */
 export const articleDisplayFieldsSchema = z.object({
   title: nonEmptyString,
+  /** Short title for the <title> tag only; the on-page H1 always uses `title`. */
+  seoTitle: optionalString,
   date: dateLike,
   description: nonEmptyString,
   author: nonEmptyString,

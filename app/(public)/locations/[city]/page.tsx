@@ -24,7 +24,8 @@ export async function generateMetadata(
   // Geo support pages: avoid national money title "China Sourcing Agent for {City}"
   // so commercial root /china-sourcing-agent owns the agent query.
   const title = `China Sourcing for ${loc.city} Importers | ${loc.stateAbbr}`
-  const description = `China sourcing support for ${loc.city} (${loc.state}) importers. We verify factories, audit capability, and inspect goods in China — serving businesses importing through ${loc.portName}. Book a free consult.`
+  // Keep under 160 chars so search results are not truncated (see lib/seo-metadata-length.test.ts).
+  const description = `China sourcing for ${loc.city} importers: we verify factories, audit capability, and inspect goods in China. Importing via ${loc.portName}.`
   return {
     title: { absolute: title },
     description,
@@ -35,7 +36,7 @@ export async function generateMetadata(
       `china procurement ${loc.stateAbbr.toLowerCase()}`,
     ],
     openGraph: {
-      title: `China Sourcing for ${loc.city} Importers | Winning Adventure Global`,
+      title,
       description,
       url,
       siteName: 'Winning Adventure Global',

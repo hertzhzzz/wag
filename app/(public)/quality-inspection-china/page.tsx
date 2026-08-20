@@ -4,9 +4,9 @@ import QualityInspectionContent from './QualityInspectionContent'
 import ServiceSchema from '@/components/ServiceSchema'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Quality Inspection in China | Secondary Path Support for Australian Buyers' },
+  title: { absolute: 'Quality Inspection in China for Australian Buyers' },
   description:
-    'Secondary path in China sourcing: pre-shipment quality inspection for an order already placed. AQL sampling, functional checks, and packaging verification for Australian businesses — not the primary find-and-vet offer.',
+    'Secondary path: pre-shipment inspection for an order already placed — AQL sampling, functional checks, and packaging verification.',
   keywords: [
     'quality inspection china',
     'pre-shipment inspection china',

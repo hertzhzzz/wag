@@ -6,7 +6,7 @@ import ServiceSchema from '@/components/ServiceSchema'
 export const metadata: Metadata = {
   title: { absolute: 'Factory Tours & Visits in China for Australian Buyers' },
   description:
-    'Guided China factory tours for Australian businesses. We shortlist and verify factories, arrange the meetings, and accompany you on the ground with a bilingual guide to audit production in person. Book a free consult.',
+    'Guided China factory tours for Australian businesses: we shortlist and verify factories, arrange meetings, and accompany you with a bilingual guide.',
   keywords: [
     'visiting chinese factories',
     'china factory tour',

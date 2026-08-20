@@ -8,7 +8,7 @@ import { faqs } from '@/data/faqs'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
-  title: 'China Sourcing FAQ | Factory Visit Questions Answered',
+  title: { absolute: 'China Sourcing FAQ | Factory Visit Questions Answered' },
   description: 'Expert answers to 18 common questions about sourcing from China, visiting factories, and working with manufacturers. Includes guide on supplier verification.',
   keywords: 'china sourcing faq, factory visit questions, chinese supplier guide, australia china trade',
   openGraph: {

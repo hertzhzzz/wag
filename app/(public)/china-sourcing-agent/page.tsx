@@ -62,7 +62,7 @@ const comparisonRows = [
 export const metadata: Metadata = {
   title: { absolute: 'China Sourcing Agent Australia | Winning Adventure Global' },
   description:
-    'Australia-based China sourcing agent for Australian businesses: factory verification, quality control, and end-to-end procurement support with an on-ground team in China.',
+    'Australia-based China sourcing agent: factory verification, quality control, and end-to-end procurement support with an on-ground team in China.',
   keywords: [
     'china sourcing agent australia',
     'china sourcing agent',

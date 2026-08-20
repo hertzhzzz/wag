@@ -221,7 +221,7 @@ function KeyTakeaways({ items, t }: { items: string[]; t: TFn }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
-        <h3 className="font-serif font-bold text-lg text-[#0F2D5E]">{t('article.page.key_takeaways.label')}</h3>
+        <h2 className="font-serif font-bold text-lg text-[#0F2D5E]">{t('article.page.key_takeaways.label')}</h2>
       </div>
       <ul className="space-y-2">
         {items.map((item, i) => (

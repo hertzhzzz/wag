@@ -9,10 +9,10 @@ import {
 describe('buildIndustryPageTitle', () => {
   it('follows the shared title skeleton', () => {
     expect(buildIndustryPageTitle('AV & Lighting')).toBe(
-      'AV & Lighting China Sourcing for Australian Businesses',
+      'AV & Lighting China Sourcing for Australia',
     )
     expect(buildIndustryPageTitle('Construction Materials')).toBe(
-      'Construction Materials China Sourcing for Australian Businesses',
+      'Construction Materials China Sourcing for Australia',
     )
   })
 })
@@ -26,7 +26,7 @@ describe('AV industry intent page model', () => {
   })
 
   it('uses the shared title skeleton and a differentiated H1', () => {
-    expect(av?.title).toBe('AV & Lighting China Sourcing for Australian Businesses')
+    expect(av?.title).toBe('AV & Lighting China Sourcing for Australia')
     expect(av?.h1).toBeTruthy()
     expect(av?.h1).not.toBe(av?.title)
     expect(av?.h1.toLowerCase()).not.toContain('for australian businesses')
@@ -86,7 +86,7 @@ describe('construction industry intent page model', () => {
 
   it('uses the shared title skeleton and a differentiated H1', () => {
     expect(construction?.title).toBe(
-      'Construction Materials China Sourcing for Australian Businesses',
+      'Construction Materials China Sourcing for Australia',
     )
     expect(construction?.h1).toBeTruthy()
     expect(construction?.h1).not.toBe(construction?.title)
@@ -146,7 +146,7 @@ describe('agricultural machinery industry intent page model', () => {
 
   it('uses the shared title skeleton and a differentiated H1', () => {
     expect(ag?.title).toBe(
-      'Agricultural Machinery China Sourcing for Australian Businesses',
+      'Agricultural Machinery China Sourcing for Australia',
     )
     expect(ag?.h1).toBeTruthy()
     expect(ag?.h1).not.toBe(ag?.title)

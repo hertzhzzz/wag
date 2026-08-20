@@ -8,7 +8,7 @@ import TrackedEnquiryLink from '@/components/TrackedEnquiryLink'
 export const metadata: Metadata = {
   title: 'China Sourcing Options Compared | Winning Adventure Global',
   description:
-    'Compare direct factory sourcing, Alibaba, and using a procurement agent. Australian businesses benefit from understanding the real trade-offs before importing from China.',
+    'Compare direct factory sourcing, Alibaba, and using a procurement agent: the real trade-offs for Australian businesses importing from China.',
   keywords: [
     'china sourcing comparison',
     'alibaba vs sourcing agent',

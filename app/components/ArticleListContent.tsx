@@ -127,9 +127,9 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
                   <p className="text-[11px] text-gray-400 uppercase tracking-widest mb-2">
                     {article.date} · {article.readTime}
                   </p>
-                  <h3 className="font-serif text-[16px] font-semibold text-[#0F2D5E] leading-snug mb-3 hover:text-[#F59E0B] transition-colors">
+                  <h2 className="font-serif text-[16px] font-semibold text-[#0F2D5E] leading-snug mb-3 hover:text-[#F59E0B] transition-colors">
                     {article.title}
-                  </h3>
+                  </h2>
                   <p className="text-[13px] text-gray-600 leading-relaxed">
                     {article.desc || article.description}
                   </p>

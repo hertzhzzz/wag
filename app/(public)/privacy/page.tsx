@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'Privacy Policy for Winning Adventure Global — how we collect, use, and protect your personal information when you use our China factory tours and sourcing services.',
-  keywords: ['privacy policy winning adventure global', 'WAG privacy', 'china sourcing service privacy'],
+  description: 'How Winning Adventure Global collects, uses, and protects your personal information when you use our China sourcing and factory tour services.',
+  keywords: ['privacy policy winning adventure global', 'china sourcing service privacy'],
   openGraph: {
     title: 'Privacy Policy | Winning Adventure Global',
     description: 'How we collect, use, and protect your personal information.',
@@ -19,7 +21,9 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-white">
       {/* Header */}
       <section className="bg-navy py-16 px-4">
         <div className="max-w-[900px] mx-auto">
@@ -106,6 +110,8 @@ export default function PrivacyPage() {
 
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </>
   )
 }

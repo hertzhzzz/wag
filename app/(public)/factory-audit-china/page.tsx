@@ -3,9 +3,9 @@ import { Metadata } from 'next'
 import FactoryAuditContent from './FactoryAuditContent'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Factory Audit in China | Secondary Path Support for Australian Buyers' },
+  title: { absolute: 'Factory Audit in China for Australian Buyers' },
   description:
-    'Secondary path in China sourcing: on-site factory audit for an existing supplier. Capability, quality systems, documentation, and compliance screening for Australian businesses — not the primary find-and-vet offer.',
+    'Secondary path: on-site audit of an existing Chinese supplier — capability, quality systems, documentation, and compliance screening.',
   keywords: [
     'factory audit china',
     'supplier audit china',

@@ -2,9 +2,9 @@ import { Metadata } from 'next'
 import EnquiryPageContent from './EnquiryPageContent'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Book a Discovery Call',
-  description: 'Get in touch for China sourcing consultation. Factory tours, supplier verification, and bulk procurement support for Australian businesses. Book your discovery call today.',
-  keywords: ['china sourcing consultation', 'factory tour enquiry', 'australian business china', 'contact wag', 'supplier verification quote', 'china procurement help'],
+  title: { absolute: 'Contact Us | Book a China Sourcing Discovery Call' },
+  description: 'Get in touch for a China sourcing consultation: factory tours, supplier verification, and bulk procurement support for Australian businesses.',
+  keywords: ['china sourcing consultation', 'factory tour enquiry', 'australian business china', 'supplier verification quote', 'china procurement help'],
   openGraph: {
     title: 'Contact Winning Adventure Global',
     description: 'Get expert China sourcing help. Book your discovery call.',

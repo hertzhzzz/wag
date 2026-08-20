@@ -412,7 +412,7 @@ export default function ServicesContent() {
                   <div key={tier.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden">
                     <div className={`px-6 py-4 flex items-center gap-3 ${tier.highlighted ? 'bg-amber/10 border-b border-amber/20' : 'bg-gray-50 border-b border-gray-100'}`}>
                       <Icon size={20} className={tier.highlighted ? 'text-amber' : 'text-navy'} strokeWidth={1.5} />
-                      <h4 className="font-bold text-navy">{tier.title}</h4>
+                      <h3 className="font-bold text-navy">{tier.title}</h3>
                       {tier.highlighted && <span className="text-xs bg-amber text-navy px-2 py-0.5 rounded-full font-semibold ml-auto">Popular</span>}
                     </div>
                     <div className="divide-y divide-gray-100">
@@ -529,7 +529,7 @@ export default function ServicesContent() {
                       <div className="w-2 h-2 border-t-2 border-r-2 border-amber/30 rotate-45 -mr-[1px]" />
                     </div>
                     <p className="text-xs text-amber font-bold mb-2">STEP {step.num}</p>
-                    <h4 className="font-bold text-navy mb-2">{step.title}</h4>
+                    <h3 className="font-bold text-navy mb-2">{step.title}</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">{step.desc}</p>
                   </div>
                 )
