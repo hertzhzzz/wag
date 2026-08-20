@@ -82,8 +82,12 @@ export function proxy(request: NextRequest) {
     return goneResponse(request)
   }
 
-  // Block /factory in production (local dev only for now)
-  if (pathname.startsWith("/factory") && !hostname.includes("localhost") && !hostname.includes("127.0.0.1")) {
+  // Block the factory wiki in production (local dev only for now).
+  // Match the /factory route segment exactly — a bare startsWith("/factory")
+  // also swallows sibling routes like /factory-audit-china, which 404'd in
+  // production for weeks while working fine on localhost.
+  const isFactoryWiki = pathname === "/factory" || pathname.startsWith("/factory/")
+  if (isFactoryWiki && !hostname.includes("localhost") && !hostname.includes("127.0.0.1")) {
     return applyNoIndexIfNeeded(
       request,
       new NextResponse("Not Found", { status: 404 }),
