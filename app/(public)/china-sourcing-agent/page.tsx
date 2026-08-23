@@ -11,6 +11,7 @@ import ServiceSchema from '@/components/ServiceSchema'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import TrackedEnquiryLink from '@/components/TrackedEnquiryLink'
 import MobileCTABar from '@/components/MobileCTABar'
+import LeadForm from '@/components/LeadForm'
 import { getServerT } from '@/i18n/getServerT'
 import ChinaSourcingAgentFAQ from './ChinaSourcingAgentFAQ'
 
@@ -380,21 +381,15 @@ export default async function ChinaSourcingAgentPage() {
         </section>
 
         {/* Bottom CTA */}
-        <section className="bg-[#F59E0B] py-12 px-4 text-center">
-          <div className="max-w-[760px] mx-auto">
-            <h2 className="font-serif text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-[#0F2D5E] mb-4">
-              {t('page.csa.ctaHeading')}
-            </h2>
-            <p className="text-[#0F2D5E]/70 mb-6 leading-relaxed">{t('page.csa.ctaBody')}</p>
-            <TrackedEnquiryLink
-              buttonName="Book a Consultation"
-              location="china-sourcing-agent-bottom-cta"
-              className="inline-flex items-center justify-center bg-[#0F2D5E] text-white py-3.5 px-8 text-base font-semibold transition-colors hover:bg-[#1a4080] min-h-11"
-              ariaLabel={t('page.csa.consultButton')}
-            >
-              {t('page.csa.consultButton')}{' '}
-              <ArrowRight className="inline ml-2" size={16} aria-hidden="true" />
-            </TrackedEnquiryLink>
+        <section className="bg-[#F59E0B] py-16 px-4">
+          <div className="max-w-[560px] mx-auto">
+            <div className="text-center">
+              <h2 className="font-serif text-[clamp(1.4rem,2.5vw,2rem)] font-bold text-[#0F2D5E] mb-4">
+                {t('page.csa.ctaHeading')}
+              </h2>
+              <p className="text-[#0F2D5E]/70 mb-6 leading-relaxed">{t('page.csa.ctaBody')}</p>
+            </div>
+            <LeadForm id="book" cta={t('page.csa.consultButton')} />
           </div>
         </section>
       </main>

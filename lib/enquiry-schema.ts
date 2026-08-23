@@ -1,10 +1,11 @@
 import { z } from 'zod'
-import { PATH_INTENTS, TIMELINES } from './enquiry-qualification'
+import { BUDGET_RANGES, ORDER_TYPES, PATH_INTENTS, TIMELINES } from './enquiry-qualification'
 
 /**
  * Shared request schema for POST /api/enquiry.
- * Lead Form: company/pathIntent/timeline may be absent.
- * Enquiry Page Form: client requires them; if present server allowlists enums.
+ * Every form now requires phone/company/budget/orderType in the UI; the server keeps
+ * them optional so a stale cached bundle still delivers the lead instead of 400-ing.
+ * When present, enum fields are allowlisted.
  */
 export const enquirySchema = z.object({
   fullName: z.string().min(1, 'Name is required').max(100),
@@ -16,6 +17,8 @@ export const enquirySchema = z.object({
   sourcePath: z.string().max(500).optional(),
   pathIntent: z.enum(PATH_INTENTS).optional(),
   timeline: z.enum(TIMELINES).optional(),
+  budget: z.enum(BUDGET_RANGES).optional(),
+  orderType: z.enum(ORDER_TYPES).optional(),
 })
 
 export type EnquiryRequestBody = z.infer<typeof enquirySchema>

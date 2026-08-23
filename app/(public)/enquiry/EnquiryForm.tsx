@@ -3,7 +3,7 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { CheckCircle, MapPin, Mail, DollarSign, Building2 } from 'lucide-react'
 import { KeyboardAwareInput } from './components/KeyboardAwareInput'
@@ -16,9 +16,12 @@ import { buildEnquiryPagePayload, normalizeIndustry } from '@/lib/lead-form-payl
 import {
   isSubmittedPathIntent,
   isTimeline,
+  type BudgetRange,
+  type OrderType,
   type SubmittedPathIntent,
   type Timeline,
 } from '@/lib/enquiry-qualification'
+import { BUDGET_OPTIONS, ORDER_TYPE_OPTIONS } from '@/components/enquiry-options'
 
 export default function EnquiryForm() {
   const t = useT()
@@ -30,12 +33,17 @@ export default function EnquiryForm() {
     company: '',
     industry: '',
     lookingFor: '',
+    budget: '' as '' | BudgetRange,
+    orderType: '' as '' | OrderType,
     pathIntent: '' as '' | SubmittedPathIntent,
     timeline: '' as '' | Timeline,
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [submitting, setSubmitting] = useState(false)
+  // Synchronous guard: React state updates are async, so `disabled` alone
+  // cannot stop a fast double-click from firing two requests.
+  const inFlightRef = useRef(false)
   const funnel = useEnquiryFunnel({
     sourcePath: '/enquiry',
     formSurface: 'enquiry_page',
@@ -58,6 +66,12 @@ export default function EnquiryForm() {
         fieldKey: 'company',
         errorType: formData.company.trim() ? 'too_short' : 'required',
       })
+    } else if (field === 'phone') {
+      funnel.error({ step: 'submission', fieldKey: 'phone', errorType: 'required' })
+    } else if (field === 'budget') {
+      funnel.error({ step: 'qualification', fieldKey: 'budget', errorType: 'required' })
+    } else if (field === 'orderType') {
+      funnel.error({ step: 'qualification', fieldKey: 'order_type', errorType: 'required' })
     } else if (field === 'pathIntent') {
       funnel.error({ step: 'qualification', fieldKey: 'path_intent', errorType: 'required' })
     } else if (field === 'timeline') {
@@ -84,6 +98,15 @@ export default function EnquiryForm() {
       const company = formData.company.trim()
       if (!company) newErrors.company = t('form.enq.field.company.error')
       else if (company.length < 2) newErrors.company = t('form.enq.field.company.error.short')
+    }
+    if (field === 'phone' && !formData.phone.trim()) {
+      newErrors.phone = t('form.enq.field.phone.error')
+    }
+    if (field === 'budget' && !formData.budget) {
+      newErrors.budget = t('form.enq.field.budget.error')
+    }
+    if (field === 'orderType' && !formData.orderType) {
+      newErrors.orderType = t('form.enq.field.order_type.error')
     }
     if (field === 'lookingFor' && !formData.lookingFor.trim()) {
       newErrors.lookingFor = t('form.enq.field.looking_for.error')
@@ -143,6 +166,9 @@ export default function EnquiryForm() {
     const company = formData.company.trim()
     if (!company) submitErrors.company = t('form.enq.field.company.error')
     else if (company.length < 2) submitErrors.company = t('form.enq.field.company.error.short')
+    if (!formData.phone.trim()) submitErrors.phone = t('form.enq.field.phone.error')
+    if (!formData.budget) submitErrors.budget = t('form.enq.field.budget.error')
+    if (!formData.orderType) submitErrors.orderType = t('form.enq.field.order_type.error')
     if (!formData.pathIntent) submitErrors.pathIntent = t('form.enq.field.path_intent.error')
     if (!formData.timeline) submitErrors.timeline = t('form.enq.field.timeline.error')
     if (!formData.lookingFor.trim()) submitErrors.lookingFor = t('form.enq.field.looking_for.error')
@@ -151,6 +177,7 @@ export default function EnquiryForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    if (inFlightRef.current) return
     const submitErrors = validateAll()
     if (Object.keys(submitErrors).length > 0) {
       const firstInvalidField = Object.keys(submitErrors)[0]
@@ -160,6 +187,9 @@ export default function EnquiryForm() {
         fullName: true,
         email: true,
         company: true,
+        phone: true,
+        budget: true,
+        orderType: true,
         pathIntent: true,
         timeline: true,
         lookingFor: true,
@@ -170,7 +200,10 @@ export default function EnquiryForm() {
     if (!isSubmittedPathIntent(formData.pathIntent) || !isTimeline(formData.timeline)) {
       return
     }
+    // Narrowed by validateAll(): both selects are non-empty past this point.
+    if (!formData.budget || !formData.orderType) return
 
+    inFlightRef.current = true
     setSubmitting(true)
     setErrors({})
     const pagePath = '/enquiry'
@@ -188,6 +221,8 @@ export default function EnquiryForm() {
           pathIntent: formData.pathIntent,
           timeline: formData.timeline,
           phone: formData.phone,
+          budget: formData.budget,
+          orderType: formData.orderType,
         }, {
           sourcePath: pagePath,
           industry: formData.industry,
@@ -229,6 +264,7 @@ export default function EnquiryForm() {
       }
       setErrors({ submit: t('form.enq.error.network') })
     } finally {
+      inFlightRef.current = false
       setSubmitting(false)
     }
   }
@@ -392,17 +428,69 @@ export default function EnquiryForm() {
                       )}
                     </fieldset>
 
+                    {/* budget + order type — required qualification fields */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label
+                          htmlFor="budget"
+                          className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
+                        >
+                          {t('form.enq.field.budget.label')} <span className="text-red-500">*</span>
+                        </label>
+                        <select
+                          id="budget"
+                          value={formData.budget}
+                          onChange={(e) => handleChange('budget', e.target.value)}
+                          onBlur={() => handleBlur('budget')}
+                          className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-navy outline-none focus:border-navy transition-colors bg-white"
+                        >
+                          <option value="">{t('form.enq.field.budget.placeholder')}</option>
+                          {BUDGET_OPTIONS.map((opt) => (
+                            <option key={opt.value} value={opt.value}>{t(opt.labelKey)}</option>
+                          ))}
+                        </select>
+                        {touched.budget && errors.budget && (
+                          <p className="mt-1.5 text-sm text-red-600" role="alert">{errors.budget}</p>
+                        )}
+                      </div>
+
+                      <div>
+                        <label
+                          htmlFor="orderType"
+                          className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5"
+                        >
+                          {t('form.enq.field.order_type.label')} <span className="text-red-500">*</span>
+                        </label>
+                        <select
+                          id="orderType"
+                          value={formData.orderType}
+                          onChange={(e) => handleChange('orderType', e.target.value)}
+                          onBlur={() => handleBlur('orderType')}
+                          className="w-full py-3 px-4 border border-gray-200 rounded text-[0.9375rem] text-navy outline-none focus:border-navy transition-colors bg-white"
+                        >
+                          <option value="">{t('form.enq.field.order_type.placeholder')}</option>
+                          {ORDER_TYPE_OPTIONS.map((opt) => (
+                            <option key={opt.value} value={opt.value}>{t(opt.labelKey)}</option>
+                          ))}
+                        </select>
+                        {touched.orderType && errors.orderType && (
+                          <p className="mt-1.5 text-sm text-red-600" role="alert">{errors.orderType}</p>
+                        )}
+                      </div>
+                    </div>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <KeyboardAwareInput
                         id="phone"
                         type="tel"
                         label={t('form.enq.field.phone.label')}
-                        optional
+                        required
                         value={formData.phone}
                         onChange={(e) => handleChange('phone', e.target.value)}
-                        onBlur={() => handleBlurExtra('phone')}
+                        onBlur={() => handleBlur('phone')}
                         placeholder={t('form.enq.field.phone.placeholder')}
                         autoComplete="tel"
+                        error={touched.phone ? errors.phone : undefined}
                       />
 
                       <div>

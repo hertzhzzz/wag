@@ -27,7 +27,10 @@ export type EnquiryFormStep = 'legacy' | 'qualification' | 'submission'
 export type EnquiryFormFieldKey =
   | 'full_name'
   | 'email'
+  | 'phone'
   | 'company'
+  | 'budget'
+  | 'order_type'
   | 'path_intent'
   | 'timeline'
   | 'looking_for'
@@ -149,14 +152,27 @@ function trackEnquiryFunnelEvent(
   context: EnquiryFunnelContext,
   details: Record<string, string> = {},
 ): boolean {
-  if (typeof window === 'undefined' || !window.gtag) return false
+  if (typeof window === 'undefined') return false
 
   try {
-    window.gtag('event', eventName, {
-      ...funnelDimensions(context),
-      ...details,
-    })
-    return true
+    if (window.gtag) {
+      window.gtag('event', eventName, {
+        ...funnelDimensions(context),
+        ...details,
+      })
+      return true
+    }
+    // gtag not loaded yet (e.g. consent pending, script still loading) — fall back
+    // to pushing straight onto dataLayer so the event isn't silently dropped.
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: eventName,
+        ...funnelDimensions(context),
+        ...details,
+      })
+      return true
+    }
+    return false
   } catch {
     return false
   }

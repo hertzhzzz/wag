@@ -67,4 +67,40 @@ describe('enquirySchema', () => {
       lookingFor: 'Need help',
     }).success).toBe(false)
   })
+
+  it('accepts payloads with valid budget and orderType', () => {
+    const result = enquirySchema.safeParse({
+      ...validEnquiryPage,
+      budget: '10k_50k',
+      orderType: 'one_time',
+    })
+    expect(result.success).toBe(true)
+    if (result.success) {
+      expect(result.data.budget).toBe('10k_50k')
+      expect(result.data.orderType).toBe('one_time')
+    }
+  })
+
+  it('rejects budget outside the allowlist', () => {
+    expect(enquirySchema.safeParse({
+      ...validLead,
+      budget: '1m',
+    }).success).toBe(false)
+  })
+
+  it('rejects orderType outside the allowlist', () => {
+    expect(enquirySchema.safeParse({
+      ...validLead,
+      orderType: 'rental',
+    }).success).toBe(false)
+  })
+
+  it('still accepts payloads missing budget/orderType (server keeps them optional)', () => {
+    const result = enquirySchema.safeParse(validLead)
+    expect(result.success).toBe(true)
+    if (result.success) {
+      expect(result.data.budget).toBeUndefined()
+      expect(result.data.orderType).toBeUndefined()
+    }
+  })
 })

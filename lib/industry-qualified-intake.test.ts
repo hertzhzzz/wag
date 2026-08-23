@@ -4,7 +4,10 @@ describe('buildIndustryQualifiedIntake', () => {
   const form = {
     fullName: 'Alex Example',
     email: 'alex@example.com',
+    phone: '0400000000',
     company: 'Example Pty Ltd',
+    budget: '10k_50k' as const,
+    orderType: 'one_time' as const,
     lookingFor: 'Need AV suppliers in China for a 200-unit install',
     pathIntent: 'find_new' as const,
     timeline: '0-3_months' as const,
@@ -19,7 +22,10 @@ describe('buildIndustryQualifiedIntake', () => {
     expect(requestBody).toEqual({
       fullName: 'Alex Example',
       email: 'alex@example.com',
+      phone: '0400000000',
       company: 'Example Pty Ltd',
+      budget: '10k_50k',
+      orderType: 'one_time',
       lookingFor: 'Need AV suppliers in China for a 200-unit install',
       pathIntent: 'find_new',
       timeline: '0-3_months',

@@ -1,7 +1,16 @@
 import { NextResponse } from 'next/server'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { enquirySchema } from '@/lib/enquiry-schema'
-import { pathIntentLabel, timelineLabel, isSubmittedPathIntent, isTimeline } from '@/lib/enquiry-qualification'
+import {
+  pathIntentLabel,
+  timelineLabel,
+  isSubmittedPathIntent,
+  isTimeline,
+  budgetRangeLabel,
+  orderTypeLabel,
+  isBudgetRange,
+  isOrderType,
+} from '@/lib/enquiry-qualification'
 import { randomUUID } from 'crypto'
 
 // CORS configuration
@@ -101,6 +110,8 @@ export async function POST(request: Request) {
     sourcePath,
     pathIntent,
     timeline,
+    budget,
+    orderType,
   } = parseResult.data
   const enquiryId = `enq_${randomUUID()}`
 
@@ -109,6 +120,12 @@ export async function POST(request: Request) {
     : ''
   const timelineDisplay = isTimeline(timeline)
     ? timelineLabel(timeline)
+    : ''
+  const budgetDisplay = isBudgetRange(budget)
+    ? budgetRangeLabel(budget)
+    : ''
+  const orderTypeDisplay = isOrderType(orderType)
+    ? orderTypeLabel(orderType)
     : ''
 
   // Escape all user inputs for HTML display
@@ -122,6 +139,8 @@ export async function POST(request: Request) {
   const safeEnquiryId = escapeHtml(enquiryId)
   const safePathIntent = escapeHtml(pathIntentDisplay)
   const safeTimeline = escapeHtml(timelineDisplay)
+  const safeBudget = escapeHtml(budgetDisplay)
+  const safeOrderType = escapeHtml(orderTypeDisplay)
 
   try {
     const transporter = await getTransporter()
@@ -157,6 +176,14 @@ export async function POST(request: Request) {
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Company</td>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safeCompany || '—'}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Budget</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safeBudget || '—'}</td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Order Type</td>
+                <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:14px;">${safeOrderType || '—'}</td>
               </tr>
               <tr>
                 <td style="padding:10px 0;border-bottom:1px solid #f3f4f6;color:#6b7280;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Industry</td>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import FAQ from '@/components/FAQ'
 import ScrollReveal from '@/components/ScrollReveal'
-import IndustryQualifiedLeadForm from '@/components/IndustryQualifiedLeadForm'
+import LeadForm from '@/components/LeadForm'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { useT } from '@/i18n/useT'
@@ -152,7 +152,7 @@ export default function IndustryContent({ ind }: { ind: IndustryData }) {
             </div>
 
             <div className="lg:pl-4">
-              <IndustryQualifiedLeadForm id="book" industry={ind.slug} />
+              <LeadForm id="book" industry={ind.slug} qualify />
             </div>
           </div>
         </section>
@@ -372,7 +372,7 @@ export default function IndustryContent({ ind }: { ind: IndustryData }) {
               </ul>
             </div>
             <div>
-              <IndustryQualifiedLeadForm industry={ind.slug} />
+              <LeadForm industry={ind.slug} qualify />
             </div>
           </div>
         </section>

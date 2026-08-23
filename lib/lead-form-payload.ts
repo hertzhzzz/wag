@@ -4,14 +4,17 @@
  */
 
 import { normalizeAnalyticsPagePath } from './analytics'
-import type { SubmittedPathIntent, Timeline } from './enquiry-qualification'
+import type { BudgetRange, OrderType, SubmittedPathIntent, Timeline } from './enquiry-qualification'
 
+/** Every field is required in the UI — phone/company/budget/orderType included. */
 export type LeadFormValues = {
   fullName: string
   email: string
+  phone: string
+  company: string
+  budget: BudgetRange
+  orderType: OrderType
   lookingFor: string
-  phone?: string
-  company?: string
 }
 
 export type LeadFormContext = {
@@ -24,11 +27,13 @@ export type LeadFormContext = {
 export type EnquiryPageFormValues = {
   fullName: string
   email: string
+  phone: string
   company: string
+  budget: BudgetRange
+  orderType: OrderType
   lookingFor: string
   pathIntent: SubmittedPathIntent
   timeline: Timeline
-  phone?: string
 }
 
 export function normalizeIndustry(industry?: string): string {
@@ -43,9 +48,11 @@ export function buildLeadFormPayload(form: LeadFormValues, context: LeadFormCont
   return {
     fullName: form.fullName,
     email: form.email,
+    phone: form.phone.trim(),
+    company: form.company.trim(),
+    budget: form.budget,
+    orderType: form.orderType,
     lookingFor: form.lookingFor,
-    ...(form.phone ? { phone: form.phone } : {}),
-    ...(form.company ? { company: form.company } : {}),
     industry: normalizeIndustry(context.industry),
     sourcePath: normalizeAnalyticsPagePath(context.sourcePath),
   }
@@ -53,21 +60,22 @@ export function buildLeadFormPayload(form: LeadFormValues, context: LeadFormCont
 
 /**
  * Payload for Enquiry Page Form (qualified intake).
- * Caller must already enforce required pathIntent/timeline/company in the UI.
+ * Caller must already enforce every required field in the UI.
  */
 export function buildEnquiryPagePayload(
   form: EnquiryPageFormValues,
   context: LeadFormContext,
 ) {
-  const phone = form.phone?.trim()
   return {
     fullName: form.fullName,
     email: form.email,
+    phone: form.phone.trim(),
     company: form.company.trim(),
+    budget: form.budget,
+    orderType: form.orderType,
     lookingFor: form.lookingFor,
     pathIntent: form.pathIntent,
     timeline: form.timeline,
-    ...(phone ? { phone } : {}),
     industry: normalizeIndustry(context.industry),
     sourcePath: normalizeAnalyticsPagePath(context.sourcePath),
   }

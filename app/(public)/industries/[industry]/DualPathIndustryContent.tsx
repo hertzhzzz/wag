@@ -11,7 +11,7 @@ import Link from 'next/link'
 import { Check, ArrowRight, AlertTriangle, Building2, FileCheck2, Boxes } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import IndustryQualifiedLeadForm from '@/components/IndustryQualifiedLeadForm'
+import LeadForm from '@/components/LeadForm'
 import ScrollReveal from '@/components/ScrollReveal'
 import type { IndustryIntentPage } from '@/lib/industry-intent-content'
 import { trackInternalLink } from '@/lib/analytics'
@@ -86,12 +86,13 @@ export default function DualPathIndustryContent({ page }: { page: IndustryIntent
               </ul>
             </div>
             <div className="lg:pl-4">
-              <IndustryQualifiedLeadForm
+              <LeadForm
                 id="book"
                 industry={page.slug}
                 heading={s.finalCta.heading}
                 subcopy={s.finalCta.body}
                 cta={s.finalCta.ctaLabel}
+                qualify
               />
             </div>
           </div>
@@ -338,11 +339,12 @@ export default function DualPathIndustryContent({ page }: { page: IndustryIntent
               </ul>
             </div>
             <div>
-              <IndustryQualifiedLeadForm
+              <LeadForm
                 industry={page.slug}
                 heading={s.finalCta.heading}
                 subcopy={s.finalCta.body}
                 cta={s.finalCta.ctaLabel}
+                qualify
               />
             </div>
           </div>

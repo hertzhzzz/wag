@@ -22,6 +22,10 @@ describe('buildLeadFormPayload', () => {
   const form = {
     fullName: 'Alex Example',
     email: 'alex@example.com',
+    phone: '0400000000',
+    company: 'Example Pty Ltd',
+    budget: '10k_50k' as const,
+    orderType: 'one_time' as const,
     lookingFor: 'Need AV suppliers in China',
   }
 
@@ -32,6 +36,10 @@ describe('buildLeadFormPayload', () => {
     })).toEqual({
       fullName: 'Alex Example',
       email: 'alex@example.com',
+      phone: '0400000000',
+      company: 'Example Pty Ltd',
+      budget: '10k_50k',
+      orderType: 'one_time',
       lookingFor: 'Need AV suppliers in China',
       industry: 'av-lighting',
       sourcePath: '/industries/av-lighting',
@@ -44,29 +52,40 @@ describe('buildLeadFormPayload', () => {
     })).toEqual({
       fullName: 'Alex Example',
       email: 'alex@example.com',
+      phone: '0400000000',
+      company: 'Example Pty Ltd',
+      budget: '10k_50k',
+      orderType: 'one_time',
       lookingFor: 'Need AV suppliers in China',
       industry: 'not_provided',
       sourcePath: 'not_provided',
     })
   })
 
-  it('includes optional phone and company when present', () => {
-    expect(buildLeadFormPayload({
+  it('trims phone and company whitespace', () => {
+    const payload = buildLeadFormPayload({
       ...form,
-      phone: '0400000000',
-      company: 'Example Pty Ltd',
+      phone: '  0400000000  ',
+      company: '  Example Pty Ltd  ',
     }, {
       sourcePath: '/enquiry',
       industry: 'construction',
-    })).toEqual({
-      fullName: 'Alex Example',
-      email: 'alex@example.com',
-      lookingFor: 'Need AV suppliers in China',
-      phone: '0400000000',
-      company: 'Example Pty Ltd',
-      industry: 'construction',
-      sourcePath: '/enquiry',
     })
+    expect(payload.phone).toBe('0400000000')
+    expect(payload.company).toBe('Example Pty Ltd')
+  })
+
+  it('passes through budget and orderType unchanged', () => {
+    const payload = buildLeadFormPayload({
+      ...form,
+      budget: 'over_500k',
+      orderType: 'ongoing_supply',
+    }, {
+      sourcePath: '/enquiry',
+      industry: 'construction',
+    })
+    expect(payload.budget).toBe('over_500k')
+    expect(payload.orderType).toBe('ongoing_supply')
   })
 
   it('never hardcodes Supplier Verification as industry', () => {
@@ -92,7 +111,10 @@ describe('buildEnquiryPagePayload', () => {
   const form = {
     fullName: 'Alex Example',
     email: 'alex@example.com',
+    phone: '0400000000',
     company: 'Example Pty Ltd',
+    budget: '50k_100k' as const,
+    orderType: 'one_time' as const,
     lookingFor: 'Need AV suppliers in China',
     pathIntent: 'find_new' as const,
     timeline: '0-3_months' as const,
@@ -105,7 +127,10 @@ describe('buildEnquiryPagePayload', () => {
     })).toEqual({
       fullName: 'Alex Example',
       email: 'alex@example.com',
+      phone: '0400000000',
       company: 'Example Pty Ltd',
+      budget: '50k_100k',
+      orderType: 'one_time',
       lookingFor: 'Need AV suppliers in China',
       pathIntent: 'find_new',
       timeline: '0-3_months',
@@ -114,16 +139,16 @@ describe('buildEnquiryPagePayload', () => {
     })
   })
 
-  it('omits empty optional phone and normalizes empty industry', () => {
-    expect(buildEnquiryPagePayload({
-      ...form,
-      phone: '  ',
-    }, {
+  it('normalizes empty industry', () => {
+    expect(buildEnquiryPagePayload(form, {
       sourcePath: '/enquiry',
     })).toEqual({
       fullName: 'Alex Example',
       email: 'alex@example.com',
+      phone: '0400000000',
       company: 'Example Pty Ltd',
+      budget: '50k_100k',
+      orderType: 'one_time',
       lookingFor: 'Need AV suppliers in China',
       pathIntent: 'find_new',
       timeline: '0-3_months',
@@ -132,15 +157,30 @@ describe('buildEnquiryPagePayload', () => {
     })
   })
 
-  it('includes optional phone when present', () => {
+  it('trims phone and company whitespace', () => {
     const payload = buildEnquiryPagePayload({
       ...form,
-      phone: '0400000000',
+      phone: '  0400000000  ',
+      company: '  Example Pty Ltd  ',
     }, {
       sourcePath: '/enquiry',
       industry: 'av-audio-visual',
     })
     expect(payload.phone).toBe('0400000000')
+    expect(payload.company).toBe('Example Pty Ltd')
+  })
+
+  it('passes through budget and orderType unchanged', () => {
+    const payload = buildEnquiryPagePayload({
+      ...form,
+      budget: 'under_10k',
+      orderType: 'ongoing_supply',
+    }, {
+      sourcePath: '/enquiry',
+      industry: 'av-audio-visual',
+    })
+    expect(payload.budget).toBe('under_10k')
+    expect(payload.orderType).toBe('ongoing_supply')
   })
 })
 
@@ -149,7 +189,10 @@ describe('buildEnquiryPagePayload for industry qualified embedded intake', () =>
   const form = {
     fullName: 'Alex Example',
     email: 'alex@example.com',
+    phone: '0400000000',
     company: 'Example Pty Ltd',
+    budget: '100k_250k' as const,
+    orderType: 'ongoing_supply' as const,
     lookingFor: 'Need AV suppliers in China for a 200-unit install',
     pathIntent: 'find_new' as const,
     timeline: '0-3_months' as const,
@@ -162,7 +205,10 @@ describe('buildEnquiryPagePayload for industry qualified embedded intake', () =>
     })).toEqual({
       fullName: 'Alex Example',
       email: 'alex@example.com',
+      phone: '0400000000',
       company: 'Example Pty Ltd',
+      budget: '100k_250k',
+      orderType: 'ongoing_supply',
       lookingFor: 'Need AV suppliers in China for a 200-unit install',
       pathIntent: 'find_new',
       timeline: '0-3_months',
@@ -181,7 +227,7 @@ describe('buildEnquiryPagePayload for industry qualified embedded intake', () =>
     expect(payload.timeline).toBe('0-3_months')
   })
 
-  it('includes optional phone for industry verify_existing path', () => {
+  it('includes phone for industry verify_existing path', () => {
     expect(buildEnquiryPagePayload({
       ...form,
       pathIntent: 'verify_existing',
@@ -193,11 +239,13 @@ describe('buildEnquiryPagePayload for industry qualified embedded intake', () =>
     })).toEqual({
       fullName: 'Alex Example',
       email: 'alex@example.com',
+      phone: '0400111222',
       company: 'Example Pty Ltd',
+      budget: '100k_250k',
+      orderType: 'ongoing_supply',
       lookingFor: 'Need AV suppliers in China for a 200-unit install',
       pathIntent: 'verify_existing',
       timeline: '3-6_months',
-      phone: '0400111222',
       industry: 'agricultural-machinery',
       sourcePath: '/industries/agricultural-machinery',
     })
