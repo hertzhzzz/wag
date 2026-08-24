@@ -147,6 +147,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: `"Winning Adventure Global Pty Ltd" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
+      cc: 'andy@winningadventure.com.au',
       replyTo: email,
       subject: `New Sourcing Enquiry — ${safeFullName}`,
       html: `
@@ -214,6 +215,45 @@ export async function POST(request: Request) {
         </div>
       `,
     })
+
+    // Auto-reply to customer — failure does not block the main response
+    try {
+      await transporter.sendMail({
+        from: `"Winning Adventure Global Pty Ltd" <${process.env.GMAIL_USER}>`,
+        to: email,
+        subject: `Thank you for your enquiry — Winning Adventure Global`,
+        html: `
+          <div style="font-family:sans-serif;max-width:600px;margin:0 auto;color:#0F2D5E">
+            <div style="background:#0F2D5E;padding:24px 32px;">
+              <p style="color:#F59E0B;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin:0 0 4px">Enquiry Received</p>
+              <h1 style="color:#fff;font-size:22px;margin:0">Winning Adventure Global Pty Ltd</h1>
+            </div>
+            <div style="padding:32px;border:1px solid #e5e7eb;border-top:none;">
+              <p style="font-size:15px;line-height:1.7;margin:0 0 16px;">Hi ${safeFullName},</p>
+              <p style="font-size:15px;line-height:1.7;margin:0 0 16px;">Thank you for reaching out to Winning Adventure Global.</p>
+              <p style="font-size:15px;line-height:1.7;margin:0 0 16px;">We have received your sourcing enquiry <span style="font-family:monospace;font-size:13px;background:#f3f4f6;padding:2px 6px;border-radius:3px;">${safeEnquiryId}</span> and a member of our team will be in touch <strong>within 4 hours</strong> during business hours (ACST, Mon–Fri).</p>
+              <p style="font-size:15px;line-height:1.7;margin:0 0 16px;">In the meantime, if you have any additional details or documents to share, feel free to reply directly to this email.</p>
+              <p style="font-size:15px;line-height:1.7;margin:0 0 24px;">If you'd like to schedule a call, you're welcome to book a time directly:</p>
+              <div style="margin-bottom:28px;">
+                <a href="https://calendly.com/winningadventure/30min" style="display:inline-block;background:#0F2D5E;color:#fff;padding:10px 24px;font-size:13px;font-weight:600;text-decoration:none;">Book a Call →</a>
+              </div>
+              <div style="border-top:1px solid #e5e7eb;padding-top:20px;font-size:14px;line-height:1.6;">
+                <p style="margin:0;">Kind regards,</p>
+                <p style="margin:4px 0 0;"><strong>Mark He</strong> (Zhe He）</p>
+                <p style="margin:2px 0 0;font-style:italic;">Managing Director — Australia Office</p>
+                <p style="margin:2px 0 0;">M: 0416 588 198</p>
+                <p style="margin:2px 0 0;">E: <a href="mailto:mark@winningadventure.com.au" style="color:#0F2D5E;">mark@winningadventure.com.au</a></p>
+                <p style="margin:2px 0 0;">W: <a href="https://www.winningadventure.com.au" style="color:#0F2D5E;">www.winningadventure.com.au</a></p>
+                <p style="margin:8px 0 0;"><img src="https://ci3.googleusercontent.com/mail-sig/AIorK4yl18HxgQm-cX3JfvZ5zWLINXcxJIIWZ76wqsD8g0LPM4PD8ZSA7wklu2F26FdeF8pJ_WqDrVO-xKDL" width="200" height="40" alt="Winning Adventure Global" style="display:block;" /></p>
+              </div>
+            </div>
+            <p style="font-size:11px;color:#9ca3af;text-align:center;padding:16px;">Winning Adventure Global · 5/54 Melbourne St, North Adelaide SA 5006</p>
+          </div>
+        `,
+      })
+    } catch (autoReplyError) {
+      console.error('Auto-reply email error:', autoReplyError instanceof Error ? autoReplyError.message : autoReplyError)
+    }
 
     const response = NextResponse.json({ ok: true, enquiryId })
     return addCorsHeaders(response, origin)
