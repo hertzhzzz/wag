@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "git": {
-    "deploymentEnabled": false
+    "deploymentEnabled": true
   },
   "redirects": [
     {

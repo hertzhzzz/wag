@@ -50,7 +50,7 @@ frontend/
 3. Obtain separate, explicit production release approval.
 4. Only after approval, push the reviewed commit, run `vercel --prod`, and verify with `curl -sI https://www.winningadventure.com.au`.
 
-`git push origin master` does not deploy while `vercel.json` sets `git.deploymentEnabled=false`. `vercel --prod` is a production deployment command; never use it as a local validation step.
+`git push origin master` triggers a Vercel production deployment automatically (`vercel.json` `git.deploymentEnabled=true`). `vercel --prod` can still be used for manual deployments but is rarely needed.
 
 **No drains configured** — production errors won't be forwarded. Set up Vercel drains or Sentry.
 
