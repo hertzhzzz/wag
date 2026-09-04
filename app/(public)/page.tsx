@@ -6,7 +6,6 @@ import BlogPreview from '@/components/BlogPreview'
 import HowItWorks from '@/components/HowItWorks'
 import TwoWaysAccess from '@/components/TwoWaysAccess'
 import WhyChooseUs from '@/components/WhyChooseUs'
-import HomeCaseStudy from '@/components/HomeCaseStudy'
 import PriorityIndustryLinks from '@/components/PriorityIndustryLinks'
 import HomeAgentLink from '@/components/HomeAgentLink'
 import MobileCTABar from '@/components/MobileCTABar'
@@ -61,7 +60,6 @@ export default function Home() {
       <HomeAgentLink />
       <PriorityIndustryLinks source="homepage" />
       <HowItWorks />
-      <HomeCaseStudy />
       <WhyChooseUs />
       <CTABand />
       <BlogPreview />
