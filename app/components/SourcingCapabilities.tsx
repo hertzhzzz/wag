@@ -29,7 +29,7 @@ export default function SourcingCapabilities() {
 
         {/* Stat badges */}
         <div className="flex flex-wrap gap-x-12 gap-y-5 mb-14 pb-10 border-b border-gray-100">
-          {[['50+', 'Industries served'], ['120+', 'Factories visited'], ['3–7 days', 'To shortlist 2–3 factories']].map(([n, l]) => (
+          {[['50+', 'Industries served'], ['60+', 'Factories visited'], ['3–7 days', 'To shortlist 2–3 factories']].map(([n, l]) => (
             <div key={l}>
               <div className="font-serif text-3xl md:text-4xl font-bold text-navy leading-none">{n}</div>
               <div className="text-xs text-gray-500 uppercase tracking-wide mt-2">{l}</div>

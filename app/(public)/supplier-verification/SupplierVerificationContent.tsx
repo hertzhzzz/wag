@@ -10,7 +10,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import LeadForm from '@/components/LeadForm'
 import SecondaryPathSupportNav from '@/components/SecondaryPathSupportNav'
 
-const statValues = ['1,200+', '25+', '1,000+', '180+']
+const statValues = ['1,200+', '25+', '1,000+', '90+']
 
 // SEO content — FAQ entries kept in English, not translated
 const verificationFaqs = [

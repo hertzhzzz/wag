@@ -236,7 +236,7 @@ export default function LocationCityContent({ loc }: Props) {
             </div>
             <div className="grid grid-cols-2 gap-x-10 gap-y-6 flex-shrink-0">
               {[
-                { value: '120+', label: t('page.loc.credibilityStat1Label') },
+                { value: '60+', label: t('page.loc.credibilityStat1Label') },
                 { value: '50+',  label: t('page.loc.credibilityStat2Label') },
                 { value: '12-point', label: t('page.loc.credibilityStat3Label') },
                 { value: '24hr', label: t('page.loc.credibilityStat4Label') },
