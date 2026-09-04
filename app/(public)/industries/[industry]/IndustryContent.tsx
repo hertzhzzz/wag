@@ -92,7 +92,7 @@ export default function IndustryContent({ ind }: { ind: IndustryData }) {
   ]
 
   const CREDIBILITY_STATS = [
-    { value: '120+', label: t('page.ind.credibilityStat1Label') },
+    { value: '60+', label: t('page.ind.credibilityStat1Label') },
     { value: '50+',  label: t('page.ind.credibilityStat2Label') },
     { value: '12-point', label: t('page.ind.credibilityStat3Label') },
     { value: '24hr', label: t('page.ind.credibilityStat4Label') },

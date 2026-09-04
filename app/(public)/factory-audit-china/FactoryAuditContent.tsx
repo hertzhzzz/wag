@@ -63,7 +63,7 @@ export default function FactoryAuditContent() {
   const stats = [
     { value: '1,200+', label: t('page.fa.statPrescreenedLabel') },
     { value: '4',      label: t('page.fa.statAuditDimensionsLabel') },
-    { value: '160+',   label: t('page.fa.statFactoriesOnRecordLabel') },
+    { value: '80+',    label: t('page.fa.statFactoriesOnRecordLabel') },
     { value: '25+',    label: t('page.fa.statProvincesLabel') },
   ]
 
