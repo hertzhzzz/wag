@@ -115,7 +115,6 @@ export default function SupplierVerificationContent() {
             alt=""
             fill
             priority
-            unoptimized
             className="object-cover z-0"
             sizes="100vw"
           />

@@ -131,7 +131,6 @@ export default function QualityInspectionContent() {
             alt=""
             fill
             priority
-            unoptimized
             className="object-cover z-0"
             sizes="100vw"
           />

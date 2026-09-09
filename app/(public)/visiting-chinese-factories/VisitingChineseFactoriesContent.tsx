@@ -135,7 +135,6 @@ export default function VisitingChineseFactoriesContent() {
             alt=""
             fill
             priority
-            unoptimized
             className="object-cover z-0"
             sizes="100vw"
           />

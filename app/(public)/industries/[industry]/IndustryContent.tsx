@@ -110,7 +110,6 @@ export default function IndustryContent({ ind }: { ind: IndustryData }) {
             alt=""
             fill
             priority
-            unoptimized
             className="object-cover z-0"
             sizes="100vw"
           />

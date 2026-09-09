@@ -61,7 +61,6 @@ export default function DualPathIndustryContent({ page }: { page: IndustryIntent
             alt=""
             fill
             priority
-            unoptimized
             className="object-cover z-0"
             sizes="100vw"
           />

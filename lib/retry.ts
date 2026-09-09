@@ -1,3 +1,5 @@
+import fs from 'fs'
+
 export interface RetryOptions {
   maxRetries?: number;
   baseDelayMs?: number;
@@ -38,7 +40,6 @@ export async function retryWithBackoff<T>(
 
 export function createRetryLogger(logPath: string): (attempt: number, error: Error) => void {
   return (attempt: number, error: Error) => {
-    const fs = require('fs');
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] Retry ${attempt}: ${error.message}\n`;
     fs.appendFileSync(logPath, logEntry);

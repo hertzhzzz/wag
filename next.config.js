@@ -31,6 +31,9 @@ const cspProd =
 const nextConfig = {
   transpilePackages: ['@builder.io/partytown'],
   reactStrictMode: true,
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
   async redirects() {
     return [
       ...cleanupRedirects,
@@ -141,6 +144,8 @@ const nextConfig = {
     ]
   },
   images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 2592000,
     // Hero uses quality 70/72 for smaller LCP payloads
     qualities: [70, 72, 75, 80],
     remotePatterns: [
@@ -163,8 +168,30 @@ const nextConfig = {
     ],
   },
   async headers() {
+    const staticAssetHeaders = [
+      {
+        source: '/:path*\\.(svg|jpg|jpeg|png|webp|avif|ico|mp4|webm)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate=604800',
+          },
+        ],
+      },
+      {
+        source: '/~partytown/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=604800, stale-while-revalidate=86400',
+          },
+        ],
+      },
+    ]
+
     if (process.env.NODE_ENV === 'development') {
       return [
+        ...staticAssetHeaders,
         {
           source: '/:path*',
           headers: [
@@ -177,6 +204,7 @@ const nextConfig = {
     }
 
     return [
+      ...staticAssetHeaders,
       // Always noindex the client portal (production + preview)
       {
         source: '/client/:path*',

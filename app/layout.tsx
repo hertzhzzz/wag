@@ -103,10 +103,6 @@ export const metadata: Metadata = {
   },
 }
 
-export const links = () => [
-  { rel: 'preconnect', href: 'https://www.winningadventure.com.au' },
-]
-
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -121,6 +117,7 @@ export default function RootLayout({
   return (
     <html lang="en-AU" data-scroll-behavior="smooth" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
       <head>
+        <link rel="preconnect" href="https://www.winningadventure.com.au" />
         {/* Hero preloading is per-page: each page's hero uses next/image `priority`,
             which injects the correct preload for THAT page. A global hero preload here
             would force every sub-page to high-priority-fetch the homepage poster it never

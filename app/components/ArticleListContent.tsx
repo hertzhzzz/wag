@@ -99,7 +99,7 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
 
         {/* Article cards - Vertical Masonry */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {visibleArticles.map((article) => (
+            {visibleArticles.map((article, index) => (
               <Link
                 key={article.slug}
                 href={`/article/${article.slug}`}
@@ -113,6 +113,7 @@ export default function ArticleListContent({ articles }: ArticleListContentProps
                       width={400}
                       height={200}
                       alt={article.title}
+                      priority={index === 0}
                       className="w-full object-cover opacity-60 group-hover:opacity-50 transition-opacity"
                     />
                   ) : (
